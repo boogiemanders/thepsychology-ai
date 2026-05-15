@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The stem is concise, and the distractors are symptoms associated with ODD, except the correct option which is from a related but distinct disorder, making it a good discriminating item.",
       "lessonExcerpt": "To diagnose ODD, you need at least **four symptoms** from these categories: Angry/Irritable Mood (often loses temper, is angry and resentful), Argumentative/Defiant Behavior (often argues with authority, deliberately annoys others), Vindictiveness",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Oppositional Defiant Disorder (ODD): More Than Just Being Difficult"
+      ]
     },
     {
       "stem": "Which subtype of conduct disorder (CD) is associated with a higher risk of developing antisocial personality disorder in adulthood?",
@@ -32,7 +35,10 @@
       "difficulty": "medium",
       "quality_comment": "Stem is clear and the answer choices are plausible; the correct option aligns well with diagnostic specifiers, enhancing clinical relevance.",
       "lessonExcerpt": "**Childhood-Onset Type:** At least one symptom appears before age 10. This subtype carries worse outcomes. Higher aggressiveness, greater risk for future Antisocial Personality Disorder, and increased likelihood of substance-related disorders.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Conduct Disorder (CD): When Behavior Violates Rights and Rules"
+      ]
     },
     {
       "stem": "Which of the following is an evidence-based parent-focused intervention designed to replace coercive parenting practices with positive reinforcement in children with conduct disorder?",
@@ -49,7 +55,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are other empirically supported treatments for conduct disorder, which adds complexity, while the stem clearly focuses on parental coercion replacement.",
       "lessonExcerpt": "**Parent Management Training – Oregon Model (PMTO)** assumes that aggressive and antisocial behaviors result from escalating cycles of coercive interactions. The training helps parents replace coercive practices with: Positive reinforcement, Non-coercive discipline",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Parent-Focused Interventions"
+      ]
     },
     {
       "stem": "According to Moffitt’s developmental taxonomy, which type of antisocial behavior is characterized by a temporary pattern related to a 'maturity gap' during adolescence?",
@@ -66,7 +75,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include related but incorrect options which require understanding Moffitt’s theory, making this question effective for EPPP-level testing.",
       "lessonExcerpt": "**Adolescence-Limited Type:** Temporary, situational antisocial behavior Emerges during adolescence Attributed to a \"maturity gap\"",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Conduct Disorder (CD): When Behavior Violates Rights and Rules"
+      ]
     },
     {
       "stem": "Which physiological finding has been associated with conduct disorder in children?",
@@ -83,7 +95,10 @@
       "difficulty": "hard",
       "quality_comment": "The distractors include physiological responses that are plausible but incorrect, increasing item difficulty and discriminability.",
       "lessonExcerpt": "children with CD show **lower physiological reactions to stress**. Research consistently finds: Lower resting heart rate (a known risk factor) Reduced skin conductance responses to aversive stimuli",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Conduct Disorder (CD): When Behavior Violates Rights and Rules"
+      ]
     },
     {
       "stem": "Which of the following statements regarding intermittent explosive disorder (IED) is TRUE?",
@@ -100,7 +115,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include common misconceptions and diagnostic nuances, effectively assessing detailed knowledge of IED diagnostic criteria.",
       "lessonExcerpt": "**Pattern A:** Verbal or physical aggression occurring on average **twice weekly for at least three months**, without resulting in property damage or physical injury.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Intermittent Explosive Disorder (IED): When Aggression Explodes"
+      ]
     },
     {
       "stem": "Which of the following best characterizes Problem-Solving Skills Training (PSST) used in children with conduct disorder?",
@@ -117,7 +135,10 @@
       "difficulty": "medium",
       "quality_comment": "The options are clearly differentiated and reflect distinct intervention approaches, aiding precise assessment of treatment knowledge.",
       "lessonExcerpt": "PSST targets the cognitive processes underlying problematic behaviors. It teaches children and adolescents to: Accurately perceive others' feelings Understand consequences of their actions Identify prosocial ways to resolve conflicts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Child-Focused Interventions"
+      ]
     },
     {
       "stem": "Which of these is a commonly noted risk factor in the etiology of conduct disorder as supported by family and twin studies?",
@@ -134,7 +155,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible but incorrect, and the stem is clear, resulting in an effective question on etiology.",
       "lessonExcerpt": "Parental criminality or substance abuse",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Conduct Disorder (CD): When Behavior Violates Rights and Rules"
+      ]
     },
     {
       "stem": "Which intervention is an intensive, community-based program targeting adolescents with conduct disorder at risk for out-of-home placement, based on ecological theory?",
@@ -151,7 +175,10 @@
       "difficulty": "medium",
       "quality_comment": "Options are all evidence-based interventions; however, only MST uniquely fits the ecological, intensive community model stated, creating a fair test of applied knowledge.",
       "lessonExcerpt": "MST is intensive, community-based intervention for adolescents ages 12-18 at imminent risk for out-of-home placement due to serious antisocial behaviors, substance use, or psychiatric problems. Based on Bronfenbrenner's ecological theory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Multimodal Interventions: The Heavy Artillery"
+      ]
     },
     {
       "stem": "Research investigating \"Scared Straight\" programs for youth with conduct disorder has generally found that these programs:",
@@ -168,7 +195,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors represent common assumptions and recommendations, highlighting the importance of research evidence and making this a good item.",
       "lessonExcerpt": "Research consistently shows that Scared Straight programs (where juvenile offenders meet with inmates who confront them about prison life) actually **increase** the likelihood of future criminal behavior.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Multimodal Interventions: The Heavy Artillery"
+      ]
     },
     {
       "stem": "Which of the following is TRUE regarding the sex distribution of oppositional defiant disorder (ODD)?",
@@ -185,7 +215,10 @@
       "difficulty": "easy",
       "quality_comment": "Options provide clear contrasts highlighting sex differences across developmental stages, making it straightforward yet important.",
       "lessonExcerpt": "In young children, ODD appears more commonly in boys. However, by adolescence, the gender distribution evens out. Males and females are affected about equally.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Oppositional Defiant Disorder (ODD): More Than Just Being Difficult"
+      ]
     },
     {
       "stem": "Which theory best explains the difference between life-course-persistent and adolescence-limited types of conduct disorder in terms of their underlying causes and developmental pathways?",
@@ -202,7 +235,10 @@
       "difficulty": "medium",
       "quality_comment": "Options reflect prominent theories, requiring examinees to correctly identify Moffitt’s specific developmental model, making it a strong conceptual item.",
       "lessonExcerpt": "**Life-Course-Persistent Type:** ... Caused by neuropsychological deficits (affecting temperament and cognitive abilities) combined with adverse child-rearing **Adolescence-Limited Type:** ... Attributed to a \"maturity gap\"",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Conduct Disorder (CD): When Behavior Violates Rights and Rules"
+      ]
     },
     {
       "stem": "Which of the following behaviors is NOT typically associated with conduct disorder?",
@@ -224,7 +260,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "| Argumentative/Defiant Behavior | Often argues with authority figures, actively defies rules, deliberately annoys others |",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Conduct Disorder (CD): When Behavior Violates Rights and Rules"
+      ]
     },
     {
       "stem": "In the context of disruptive behavior disorders, which of the following symptoms would be indicative of a diagnosis of conduct disorder rather than oppositional defiant disorder?",
@@ -246,7 +285,11 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "| Aggression to People/Animals | Bullying, fighting, using weapons, physical cruelty, forced sexual activity |",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Conduct Disorder (CD): When Behavior Violates Rights and Rules",
+        "Oppositional Defiant Disorder (ODD): More Than Just Being Difficult"
+      ]
     }
   ]
 }

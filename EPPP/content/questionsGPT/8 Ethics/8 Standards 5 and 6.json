@@ -19,7 +19,10 @@
       "lessonExcerpt": "Standard 6.07 states that referral fees must be 'based on the services provided' and not 'on the referral itself.' Prohibited: Paying a colleague $50 for each client they refer to you, regardless of what they did.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     },
     {
       "stem": "Dr. Park recently opened a private practice and asks several of her current therapy clients to write positive reviews on her practice's website to attract new clients. She explains that participation is voluntary and that it will not affect their treatment. According to APA Standard 5.05, this action is:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Standard 5.05 prohibits soliciting testimonials from current therapy clients or other vulnerable individuals... Because the therapeutic relationship involves a power imbalance. Clients might feel pressured to provide positive feedback even if that's not their genuine experience.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "A doctoral student in clinical psychology who has not yet completed her dissertation is developing a website for her supervised practice placement. She lists herself as 'Dr. Jane Smith, Clinical Psychologist' and advertises her fee of $150 per session. Which aspect of this advertisement is most clearly problematic under APA Standard 5.01?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "You can only claim degrees as credentials for mental health services if they meet specific requirements. According to Standard 5.01, acceptable degrees are either: Doctoral degrees in psychology from regionally accredited institutions, OR Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "A psychologist's client has an insurance plan that does not cover adjustment disorders. The client's presenting problem is clearly an adjustment disorder with depressed mood. The psychologist considers assigning a major depressive disorder diagnosis instead so the client can receive insurance coverage. According to APA Standard 6.06, which of the following best describes the consequences of this action?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "Assigning inaccurate diagnosis for insurance coverage: Misrepresents the client's condition; insurance fraud... These practices are both unethical and illegal (fraud).",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     },
     {
       "stem": "A clinical social worker who completed a doctoral program from a non-regionally accredited institution wants to advertise herself as a 'professional psychologist' in private practice. Under which condition would this be permissible?",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "Acceptable degrees are either: 1. Doctoral degrees in psychology from regionally accredited institutions, OR 2. Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "Dr. Kim is starting a new private practice and considers offering a free initial consultation to prospective clients. According to APA ethical guidelines, which of the following is the MOST important consideration when offering such free sessions?",
@@ -124,7 +139,11 @@
       "lessonExcerpt": "Some psychologists offer free initial consultations. This isn't explicitly prohibited, but requires caution: Clearly explain the limited purpose (helping both parties determine if it's a good fit), Inform the person of future session fees beforehand, Document the agreement, Be cautious about creating expectations you can't meet.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements",
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "A psychologist in independent practice needs to transmit client billing information electronically to an insurance company. According to APA ethical standards, what is the MOST appropriate way to protect confidentiality during this transmission?",
@@ -145,7 +164,10 @@
       "lessonExcerpt": "Standard 6.02(b) requires using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees"
+      ]
     },
     {
       "stem": "Under what circumstances can a psychologist disclose confidential information without client consent?",
@@ -166,7 +188,10 @@
       "lessonExcerpt": "Assert psychotherapist-patient privilege on behalf of your client.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "What ethical consideration must psychologists keep in mind when discussing co-payments with clients?",
@@ -187,7 +212,10 @@
       "lessonExcerpt": "Standard 6.04 requires reaching agreement with clients about fees \"as early as feasible\". Ideally during your initial contact or first session.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     },
     {
       "stem": "What is a key ethical consideration for psychologists when promoting their services through media?",
@@ -208,7 +236,10 @@
       "lessonExcerpt": "Psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "Which of the following best describes the ethical considerations involved in marketing psychological services?",
@@ -229,7 +260,10 @@
       "lessonExcerpt": "Standard 5.01 establishes the foundation: psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work. This applies to everything. Your website, your LinkedIn profile, what you say in a lecture, your resume, even your listing in a directory.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "What ethical principle governs the release of psychological test data to third parties?",
@@ -250,7 +284,10 @@
       "lessonExcerpt": "Psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "What is an important factor psychologists should discuss with managed care patients?",
@@ -271,7 +308,11 @@
       "lessonExcerpt": "Insurance or institutional policies may differ - The nature of services may warrant longer retention (like forensic work) ## The Money Talk: Fees and Financial Arrangements",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements",
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "When reporting diagnoses to insurance companies, what ethical consideration must psychologists keep in mind?",
@@ -292,7 +333,10 @@
       "lessonExcerpt": "Standard 6.06 requires providing accurate information to whoever pays for services. Whether that's the client, an insurance company, or another third party. This means accurately reporting: Diagnosis codes...",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 27
+      "inspirationIndex": 27,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "What must a psychologist ensure when obtaining consent for psychological testing?",
@@ -313,7 +357,10 @@
       "lessonExcerpt": "You need enough information to support your conclusions.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "When providing advice in public settings, what is a key ethical boundary psychologists must maintain?",
@@ -334,7 +381,10 @@
       "lessonExcerpt": "When you respond to someone's comment on your psychology blog or answer a question on social media, you must make it clear that this interaction doesn't establish a therapist-client relationship.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 27
+      "inspirationIndex": 27,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "Dr. Patel refers a client to a colleague for neuropsychological testing. The colleague offers to pay Dr. Patel a percentage of the testing fee as a thank-you for the referral. According to APA ethical standards, Dr. Patel should:",
@@ -355,7 +405,11 @@
       "lessonExcerpt": "Standard 6.07 states that referral fees must be \"based on the services provided\" and not \"on the referral itself.\"",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees",
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     },
     {
       "stem": "Dr. Nguyen recently opened a private practice and wants to build an online presence. She asks several current therapy clients if they would be willing to write positive reviews on Google. According to APA Ethics Code Standard 5.05, this practice is:",
@@ -376,7 +430,10 @@
       "lessonExcerpt": "Standard 5.05 prohibits soliciting testimonials from current therapy clients or other vulnerable individuals. This one's straightforward but important: don't ask your current clients for reviews or testimonials. Why? Because the therapeutic relationship involves a power imbalance. Clients might feel pressured to provide positive feedback even if that's not their genuine experience.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "Dr. Reeves is completing her doctoral dissertation and plans to begin seeing clients under supervision. She creates a website that lists her name followed by 'Doctoral Candidate in Clinical Psychology' and includes her fee schedule. According to APA ethical standards on advertising, this practice is:",
@@ -397,7 +454,10 @@
       "lessonExcerpt": "Standard 5.01 establishes the foundation: psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work. This applies to everything. Your website, your LinkedIn profile, what you say in a lecture, your resume, even your listing in a directory.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "A graduate student who earned a master's degree in counseling psychology from a prestigious international university that is not regionally accredited in the United States wants to advertise mental health services using that degree as a credential. According to Standard 5.01 of the APA Ethics Code, under which circumstance would this be permissible?",
@@ -418,7 +478,10 @@
       "lessonExcerpt": "According to Standard 5.01, acceptable degrees are either: 1. Doctoral degrees in psychology from regionally accredited institutions, OR 2. Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "Dr. Huang is considering offering a free initial therapy session to prospective clients as a way to attract new business. According to APA Ethics Code Standard 5.06, which of the following considerations is MOST relevant to the ethical permissibility of this practice?",
@@ -439,7 +502,10 @@
       "lessonExcerpt": "Standard 5.06 addresses uninvited in-person solicitation of business from vulnerable",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "A psychologist in private practice submits insurance claims electronically and wants to ensure compliance with ethical standards for protecting client confidentiality during billing transmissions. Which of the following practices BEST addresses this obligation?",
@@ -460,7 +526,10 @@
       "lessonExcerpt": "Encryption | Scrambles data so only authorized users can read it | Encrypting all client files on your computer. HIPAA-compliant cloud storage | Ensures storage providers meet legal requirements",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees"
+      ]
     },
     {
       "stem": "How should psychologists describe their credentials in public statements?",
@@ -478,7 +547,10 @@
       "quality_comment": "The question clearly targets an important ethical standard with plausible distractors that reflect common misunderstandings about credential representation.",
       "lessonExcerpt": "According to Standard 5.01, acceptable degrees are either: Doctoral degrees in psychology from regionally accredited institutions, OR Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "What is an unethical way to use client testimonials in advertising therapy services?",
@@ -496,7 +568,11 @@
       "quality_comment": "The options are concise and the correct answer is clearly supported by the Ethics Code, making it a solid question for EPPP preparation.",
       "lessonExcerpt": "Standard 5.05 prohibits soliciting testimonials from current therapy clients or other vulnerable individuals.",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements",
+        "Standard 6: Record Keeping and Fees"
+      ]
     },
     {
       "stem": "When storing confidential information in a database, how should a psychologist protect client identity?",
@@ -514,7 +590,10 @@
       "quality_comment": "The distractors are relatively plausible and the correct answer is directly taken from the ethics code, facilitating clear understanding of confidentiality requirements.",
       "lessonExcerpt": "Standard 6.02(b) requires using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees"
+      ]
     },
     {
       "stem": "What is the ethical approach to discussing fees and financial arrangements with clients?",
@@ -532,7 +611,10 @@
       "quality_comment": "The question is straightforward with clearly distinguishable distractors, making it an effective and accessible item for exam takers.",
       "lessonExcerpt": "Standard 6.04 requires reaching agreement with clients about fees \"as early as feasible\". Ideally during your initial contact or first session.",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     },
     {
       "stem": "Which billing practice would be fraudulent?",
@@ -550,7 +632,10 @@
       "quality_comment": "Distractors are realistic and closely related, challenging examinees to distinguish ethical from unethical billing practices.",
       "lessonExcerpt": "Assigning inaccurate diagnosis for insurance coverage | Misrepresents the client's condition; insurance fraud",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     },
     {
       "stem": "What type of in-person solicitation is off-limits for psychologists?",
@@ -568,7 +653,10 @@
       "quality_comment": "The question clearly tests an important ethical restriction with plausible exceptions, supporting higher-order reasoning about professional boundaries.",
       "lessonExcerpt": "Standard 5.06 addresses uninvited in-person solicitation of business from vulnerable individuals. You cannot show up at someone's door or approach them in person to solicit therapy services when they're in vulnerable circumstances.",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "Why must psychologists maintain thorough professional records?",
@@ -586,7 +674,12 @@
       "quality_comment": "Options are balanced and the correct answer reflects foundational ethical record-keeping practices, reinforcing important clinical documentation guidelines.",
       "lessonExcerpt": "Facilitating continuity of care if services transfer to another provider; Ensuring accurate billing and documentation; Complying with legal requirements; Protecting both the psychologist and client if disputes arise",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees",
+        "The Money Talk: Fees and Financial Arrangements",
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "When is it acceptable to divide or pay fees related to client referrals?",
@@ -604,7 +697,10 @@
       "quality_comment": "The scenario-based item creates plausible alternatives, strengthening the item’s ability to discriminate knowledge of nuanced ethical guidance.",
       "lessonExcerpt": "This standard doesn't prohibit: Paying legitimate psychology referral services; Fee-splitting when multiple professionals provide services to the same client; Paying employees a percentage of fees as part of their compensation",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     },
     {
       "stem": "Which statement reflects ethical bartering for services?",
@@ -622,7 +718,11 @@
       "quality_comment": "The question presents nuanced options requiring detailed knowledge of ethical standards and professional discretion, suitable for higher-level cognitive processing.",
       "lessonExcerpt": "Standard 6.05 defines barter as accepting goods, services, or other non-monetary payment for psychological services. It's allowed when: Not clinically contraindicated; Not exploitative",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements",
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "Regarding maintenance and storage of professional records, APA’s Record Keeping Guidelines recommend retaining client records for at least how long if no legal requirement supersedes?",
@@ -640,7 +740,10 @@
       "quality_comment": "The question is clearly stated and answer options are comparably detailed, helping to prevent guessing based on option length.",
       "lessonExcerpt": "For adults: 7 years after the last service date. For minors: Until 3 years after they reach the age of majority (typically 21 in most states)",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees"
+      ]
     },
     {
       "stem": "Which of the following security measures is explicitly recommended by the APA Ethics Code and APA Record Keeping Guidelines for protecting client confidentiality in digital records?",
@@ -658,7 +761,10 @@
       "quality_comment": "The question addresses practical application of ethical standards in digital confidentiality, balancing technical and ethical knowledge with plausible distractors.",
       "lessonExcerpt": "Encryption | Scrambles data so only authorized users can read it; HIPAA-compliant cloud storage | Ensures storage providers meet legal requirements",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees"
+      ]
     },
     {
       "stem": "If a psychologist plans to retire or close a practice, what should they arrange for client records?",
@@ -676,7 +782,10 @@
       "quality_comment": "The vignette format clarifies complex ethical responsibilities around records management, offering realistic choices to inform clinical decision making.",
       "lessonExcerpt": "Standard 6.02(c) requires having a plan for what happens to client records if you can no longer practice. This is called a \"professional will.\" Your plan might include: Designating a trusted colleague to manage records",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees"
+      ]
     },
     {
       "stem": "Which of the following is TRUE regarding the ethical use of sliding fee scales and free initial sessions according to APA Ethics Code standards and commentary?",
@@ -694,7 +803,10 @@
       "quality_comment": "The question integrates ethical guidance with interpretive commentary, challenging test-takers to apply standards thoughtfully.",
       "lessonExcerpt": "Sliding fee scales based on income are generally considered acceptable when: Applied consistently and equitably; Compliant with state laws and insurance contracts; Clearly explained to clients. Free First Sessions: Some psychologists offer free initial consultations.",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     },
     {
       "stem": "Which of the following best reflects an emerging social and ethical issue in psychological practice related to digital data storage and communication?",
@@ -712,7 +824,8 @@
       "quality_comment": "The question is current and relevant, requiring knowledge of ethics as they apply to evolving technological practices in psychology.",
       "lessonExcerpt": "Modern protection strategies include: Encryption; HIPAA-compliant cloud storage; Two-factor authentication; Air-gapped computers",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "In what manner should psychologists disclose their affiliations in professional communications?",
@@ -735,7 +848,10 @@
       ],
       "lessonExcerpt": "Once you put information out there for others to see, you're accountable for its accuracy. This includes statements about: Your training and education; Your experience and expertise; Your credentials and licenses; The services you offer; Your fees; The organizations you're affiliated with",
       "suggestedLesson": "8-standards-5-6",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 5: Advertising and Other Public Statements"
+      ]
     },
     {
       "stem": "According to the APA Ethics Code, what is the primary purpose of maintaining accurate records in psychological practice?",
@@ -756,7 +872,10 @@
       "lessonExcerpt": "Standard 6.01 requires psychologists to create, maintain, and eventually dispose of records appropriately. The reasons are practical: Facilitating continuity of care if services transfer to another provider",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Standard 6: Record Keeping and Fees"
+      ]
     },
     {
       "stem": "What is the primary ethical concern regarding referral fees in therapy?",
@@ -777,7 +896,10 @@
       "lessonExcerpt": "Standard 6.07 states that referral fees must be \"based on the services provided\" and not \"on the referral itself.\"",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Money Talk: Fees and Financial Arrangements"
+      ]
     }
   ]
 }

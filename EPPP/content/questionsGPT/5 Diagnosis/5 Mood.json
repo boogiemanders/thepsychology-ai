@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The distractors are plausible and test the nuances of diagnostic criteria, making it suitable for EPPP preparation.",
       "lessonExcerpt": "A **hypomanic episode** looks similar but less intense. Same elevated or irritable mood, same symptoms, but only needs to last four consecutive days. The crucial difference? No severe impairment, no hospitalization needed, and no psychotic features.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three Building Blocks: Understanding Mood Episodes"
+      ]
     },
     {
       "stem": "Which bipolar disorder diagnosis requires the presence of at least one hypomanic episode and at least one major depressive episode?",
@@ -32,7 +35,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear and straightforward question with plausible distractors; appropriate for foundational understanding.",
       "lessonExcerpt": "**Bipolar II** | At least one hypomanic AND one major depressive episode | 4 days (hypomania) + 2 weeks (depression) | Never had full manic episode; depression is primary problem",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Bipolar Disorders: Different Combinations, Different Diagnoses"
+      ]
     },
     {
       "stem": "Which of the following environmental factors has NOT been identified as a risk factor for bipolar disorder?",
@@ -49,7 +55,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are credible; the question tests etiological knowledge effectively.",
       "lessonExcerpt": "But genes aren't destiny. Environmental risk factors include: Early parental loss or childhood maltreatment (especially emotional abuse) Medical conditions like irritable bowel syndrome, asthma, or migraines Substance use (cannabis, cocaine, and others) Highly stressful life events",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Where Do Bipolar Disorders Come From?"
+      ]
     },
     {
       "stem": "When differentiating adult mania from adult ADHD, which symptom is more characteristic of mania than ADHD?",
@@ -66,7 +75,10 @@
       "difficulty": "medium",
       "quality_comment": "Options are balanced and touch on overlapping symptoms, enhancing the question's discriminative value.",
       "lessonExcerpt": "| Self-esteem | Increased or grandiose | Reduced |",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Tricky Diagnosis: Bipolar vs. ADHD"
+      ]
     },
     {
       "stem": "Which pharmacological treatment is typically most effective for the \"classic bipolar disorder\" subtype characterized by episodic mood states and onset in late adolescence?",
@@ -83,7 +95,10 @@
       "difficulty": "medium",
       "quality_comment": "Clear and focused stem with options that reflect common treatments, testing specific clinical application.",
       "lessonExcerpt": "**Classic bipolar disorder** (best treated with lithium): Low likelihood of mixed mood states and rapid cycling Long recovery periods between episodes Onset between 15-19 years",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Treating Bipolar Disorder: A Combination Approach"
+      ]
     },
     {
       "stem": "A patient has experienced numerous periods of hypomanic and depressive symptoms for the past two years, but never meets full criteria for episodes. Which diagnosis fits best?",
@@ -100,7 +115,10 @@
       "difficulty": "medium",
       "quality_comment": "Options are clinically relevant and plausible, enhancing differentiation of related diagnoses.",
       "lessonExcerpt": "**Cyclothymic Disorder** | Multiple periods of hypomanic symptoms + depressive symptoms | 2 years (adults) or 1 year (children/adolescents) | Symptoms don't meet full criteria for episodes; chronic but less severe",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Bipolar Disorders: Different Combinations, Different Diagnoses"
+      ]
     },
     {
       "stem": "Which theory of depression attributes the disorder to decreased response-contingent social reinforcement leading to social isolation and low self-esteem?",
@@ -117,7 +135,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are well chosen as they represent other important depression theories, encouraging careful recall.",
       "lessonExcerpt": "**Lewinsohn's Social Reinforcement Theory**: Depression results from low rates of positive reinforcement for social behaviors. This could be due to lack of environmental reinforcement or poor social skills.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Causes Major Depressive Disorder?"
+      ]
     },
     {
       "stem": "Which of the following brain activity patterns is typically associated with depression, as opposed to its remission following effective treatment?",
@@ -134,7 +155,10 @@
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses detailed neurobiological knowledge with balanced and plausible options.",
       "lessonExcerpt": "**Ventromedial prefrontal cortex (vmPFC)**: Abnormally HIGH activity during depression **Dorsolateral prefrontal cortex (dlPFC)**: Abnormally LOW activity during depression When treatment works (therapy or medication), this pattern reverses",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Causes Major Depressive Disorder?"
+      ]
     },
     {
       "stem": "Which of the following treatment approaches has the highest response and remission rates and the fastest time to remission for severe major depressive disorder?",
@@ -151,7 +175,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors represent common treatments, making this clinically relevant and well-targeted.",
       "lessonExcerpt": "**Electroconvulsive Therapy (ECT)**: The heavy hitter for severe depression. Response rates: ~80% Remission rates: ~70% Time to remission: 1-3 weeks",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Treating Major Depressive Disorder"
+      ]
     },
     {
       "stem": "Which factor is most associated with increasing depression risk in older adults, as opposed to younger adults?",
@@ -168,7 +195,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible risk factors for other age groups, increasing question discrimination.",
       "lessonExcerpt": "**Older adults**: Chronic medical illness is one of the strongest risk factors, especially when it limits physical functioning and creates social isolation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Age and Cultural Considerations"
+      ]
     },
     {
       "stem": "A client reports severe temper outbursts occurring three or more times per week and a persistently irritable mood most days for over a year, starting in childhood. Which diagnosis fits best?",
@@ -185,7 +215,10 @@
       "difficulty": "medium",
       "quality_comment": "Options are all mood-related disorders, appropriately challenging differential diagnosis skills.",
       "lessonExcerpt": "Severe, recurrent temper outbursts (verbal or behavioral) that are way out of proportion, occurring three or more times weekly Persistent irritable or angry mood between outbursts, observable most of the day, nearly every day Must be present for at least 12 months",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Depressive Disorders: When Sadness Becomes Clinical"
+      ]
     },
     {
       "stem": "Which of the following statements about suicide risk is accurate based on recent epidemiological data in the United States?",
@@ -202,7 +235,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors reflect common misconceptions, making this a useful test of epidemiological knowledge.",
       "lessonExcerpt": "**Veterans**: Suicide rate of 34.7 per 100,000 vs. 17.1 for non-veterans",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Suicide: The Critical Risk Factor"
+      ]
     },
     {
       "stem": "Which of the following is a validated, evidence-based psychotherapy recommended for preventing and treating peripartum major depressive disorder?",
@@ -219,7 +255,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear question with plausible options, suitable for testing clinical treatment knowledge.",
       "lessonExcerpt": "Effective treatments include CBT, interpersonal therapy, and antidepressants (especially sertraline).",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Special Circumstances in Depression"
+      ]
     },
     {
       "stem": "Which neurotransmitter abnormalities have been linked to major depressive disorder?",
@@ -236,7 +275,10 @@
       "difficulty": "medium",
       "quality_comment": "Options are well balanced and test neurochemical etiology knowledge relevant to the EPPP.",
       "lessonExcerpt": "Low levels of serotonin, dopamine, and norepinephrine are associated with depression.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Causes Major Depressive Disorder?"
+      ]
     },
     {
       "stem": "Which cognitive theory of depression emphasizes the role of negative thoughts about oneself, the world, and the future?",
@@ -253,7 +295,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear stem with distinct and well-known theoretical options, ideal for exam preparation.",
       "lessonExcerpt": "**Beck's Cognitive Theory**: Depression stems from a negative cognitive triad: 1. Negative thoughts about oneself 2. Negative thoughts about the world 3. Negative thoughts about the future",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Causes Major Depressive Disorder?"
+      ]
     },
     {
       "stem": "Which of the following is a key characteristic that differentiates major depressive disorder from persistent depressive disorder (dysthymia) according to DSM-5-TR criteria?",
@@ -275,7 +320,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Requires five or more depressive symptoms for at least two weeks, with at least one being depressed mood or loss of interest/pleasure. ... A depressed mood plus two or more symptoms lasting at least two years (adults) or one year (children/adolescents).",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Depressive Disorders: When Sadness Becomes Clinical"
+      ]
     }
   ]
 }

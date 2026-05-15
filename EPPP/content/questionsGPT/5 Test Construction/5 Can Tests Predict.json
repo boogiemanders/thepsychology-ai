@@ -19,7 +19,10 @@
       "lessonExcerpt": "The standard error ranges from 0 (when r = ±1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Predicting Individual Scores: Standard Error of Estimate"
+      ]
     },
     {
       "stem": "A psychologist is using a screening instrument for alcohol use disorder in a primary care setting. The current cutoff score produces high specificity but low sensitivity. If the psychologist LOWERS the cutoff score, which of the following outcomes is MOST likely?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "More true positives (catch more good candidates), More false positives (accidentally accept more bad candidates), Fewer true negatives (reject fewer people correctly), Fewer false negatives (miss fewer good candidates).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "A psychologist uses a selection test with a validity coefficient of .60 to predict job performance. The criterion measure (supervisor ratings) has a standard deviation of 8. If the validity coefficient were increased to .80 while the criterion SD remained the same, what would happen to the standard error of estimate?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "Here's the formula: Standard Error = SD of criterion × √(1 - validity coefficient²)... Example calculation: Your job performance measure has a standard deviation of 5, and your hiring test has a validity coefficient of .60. Step 1: Square the coefficient: .60² = .36. Step 2: Subtract from 1: 1 - .36 = .64. Step 3: Take the square root: √.64 = .8. Step 4: Multiply by criterion SD: 5 × .8 = 4.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Predicting Individual Scores: Standard Error of Estimate"
+      ]
     },
     {
       "stem": "Which of the following scenarios best exemplifies the use of predictive validity in a criterion-related validity study?",
@@ -79,7 +88,10 @@
       "quality_comment": "The stem clearly differentiates predictive validity from concurrent validity; the distractors are plausible and test discriminative knowledge about timing of measurements.",
       "lessonExcerpt": "Predictive validity means we collect predictor scores first, then wait to collect criterion scores later. We use this when we want to estimate someone's future status.",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Two Types: Concurrent vs. Predictive Validity"
+      ]
     },
     {
       "stem": "If a job knowledge test has a criterion-related validity coefficient of .70, approximately what percentage of variance in job performance can be explained by job knowledge according to this coefficient?",
@@ -97,7 +109,11 @@
       "quality_comment": "The question requires a straightforward calculation; the incorrect options represent common miscalculations, enhancing discriminability.",
       "lessonExcerpt": "Let's say a job knowledge test has a validity coefficient of .70 with job performance. Square that: .70 x .70 = .49, or 49%. This means the knowledge test explains 49% of why some employees perform better than others.",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "What happens to the criterion-related validity coefficient when a predictor test is cross-validated on a new sample?",
@@ -115,7 +131,11 @@
       "quality_comment": "The stem is clear and the distractors are plausible misconceptions, offering a solid test of understanding of cross-validation effects.",
       "lessonExcerpt": "When you test your predictor on a new sample (called cross-validation), those chance factors aren't present anymore, and your validity coefficient gets smaller. It \"shrinks.\"",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "Which of the following describes the standard error of estimate (SEE) in a criterion-related validity study?",
@@ -133,7 +153,10 @@
       "quality_comment": "The distractors represent related but distinct concepts, making the question both clear and challenging for EPPP candidates.",
       "lessonExcerpt": "Unless your validity coefficient is exactly +1.0 or -1.0 (which never happens in real life), there's going to be error in your predictions. The standard error of estimate tells you how much error to expect.",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Predicting Individual Scores: Standard Error of Estimate"
+      ]
     },
     {
       "stem": "When the reliability of the predictor and/or the criterion measure decreases, what is the effect on the criterion-related validity coefficient if uncorrected for attenuation?",
@@ -151,7 +174,12 @@
       "quality_comment": "The stem clearly presents a common pitfall; the distractors test common misunderstandings about relationships between reliability and validity.",
       "lessonExcerpt": "The reliability of both your predictor and criterion affects the validity coefficient you can obtain. When either measure has low reliability, measurement error reduces (attenuates) the validity coefficient you observe.",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Correction for Attenuation: Reliability's Role",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "In a predictive validity study investigating a new hiring test, which of the following is true about raising the predictor cutoff score?",
@@ -169,7 +197,10 @@
       "quality_comment": "The question is well-constructed with plausible alternatives that require conceptual understanding of cutoff adjustments and their impact.",
       "lessonExcerpt": "Raising the cutoff (making it harder to \"pass\"): Fewer people selected, Fewer true positives, Fewer false positives, More true negatives, More false negatives",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "What does incremental validity refer to in the context of test utility?",
@@ -187,7 +218,10 @@
       "quality_comment": "The stem is straightforward, and the distractors are reasonable but clearly different constructs, making this accessible yet informative.",
       "lessonExcerpt": "Incremental validity asks: Does this new predictor improve prediction accuracy beyond what we already have?",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "In diagnostic efficiency studies, which formula correctly calculates the sensitivity of a screening test?",
@@ -205,7 +239,10 @@
       "quality_comment": "The question is clear with well-constructed distractors involving related but incorrect ratios, promoting solid understanding.",
       "lessonExcerpt": "Sensitivity = True Positives / (True Positives + False Negatives)",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "How do changes in prevalence of a disorder in different settings affect the positive predictive value of a screening test?",
@@ -223,7 +260,10 @@
       "quality_comment": "The question probes understanding of an important but often misunderstood aspect of diagnostic statistics, with plausible distractors.",
       "lessonExcerpt": "When prevalence is high (lots of people have the condition): Positive predictive value increases (positive results are more trustworthy), Negative predictive value decreases.",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "A test has a reliability coefficient of .81. According to the relationship between reliability and validity, what is the highest possible criterion-related validity coefficient this test can achieve?",
@@ -241,7 +281,11 @@
       "quality_comment": "The question effectively tests candidate knowledge of mathematical relationships between reliability and validity, with well-balanced answer options.",
       "lessonExcerpt": "A predictor's validity coefficient cannot exceed its reliability index, which equals the square root of its reliability coefficient. If a test has reliability of .81: Reliability index = sqrt(.81) = .90, Maximum possible validity = .90",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "When constructing confidence intervals around predicted criterion scores, which of the following increases the width of the interval?",
@@ -259,7 +303,10 @@
       "quality_comment": "The question tests subtle understanding of statistical error and impacts of validity coefficient on prediction precision, with well-matched options.",
       "lessonExcerpt": "The standard error ranges from 0 (when r = +/-1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Predicting Individual Scores: Standard Error of Estimate"
+      ]
     },
     {
       "stem": "What effect does cross-validation typically have on the multiple correlation coefficient when additional predictors are included in a criterion-related validity study?",
@@ -277,7 +324,11 @@
       "quality_comment": "The question differentiates key concepts of shrinkage influenced by sample size and predictors, offering a challenging but fair item.",
       "lessonExcerpt": "Shrinkage is worst when: Your initial sample size is small, You're using many predictors (creating a complex prediction formula)",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "Which of the following best illustrates the concept of concurrent validity in a criterion-related validity study?",
@@ -300,7 +351,11 @@
       ],
       "lessonExcerpt": "Concurrent validity means we collect predictor and criterion scores at roughly the same time. We use this when we want to estimate someone's current status.",
       "suggestedLesson": "5-can-tests-predict",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Two Types: Concurrent vs. Predictive Validity",
+        "Predicting Individual Scores: Standard Error of Estimate"
+      ]
     },
     {
       "stem": "In which scenario would you be assessing the construct validity of a new psychological test?",
@@ -320,6 +375,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
+      ],
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Clinical Utility: Does This Test Actually Help?"
       ]
     },
     {
@@ -341,7 +400,12 @@
       "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Clinical Utility: Does This Test Actually Help?",
+        "The Foundation: What Is Criterion-Related Validity?",
+        "The Reliability-Validity Relationship"
+      ]
     },
     {
       "stem": "A researcher validates two cognitive screening tests against the same criterion (clinician-rated functional impairment, SD = 12). Test A has a validity coefficient of .80 and a standard error of estimate of 7.2. Test B has a validity coefficient of .00 and a standard error of estimate of 12.0. Which of the following best explains the difference in these standard errors of estimate?",
@@ -362,7 +426,10 @@
       "lessonExcerpt": "The standard error ranges from 0 (when r = +/-1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Predicting Individual Scores: Standard Error of Estimate"
+      ]
     },
     {
       "stem": "A psychologist is explaining the properties of the standard error of measurement (SEM) to an intern. She notes that regardless of the test being used, the SEM always falls within a predictable range relative to the test's standard deviation (SD). Which of the following most accurately describes the boundaries of this range?",
@@ -383,7 +450,11 @@
       "lessonExcerpt": "Predictive values** change with prevalence; they're not stable test properties - **Reliability sets the ceiling** for validity; maximum validity equals the square root of reliability Understanding criterion-related validity helps you choose appropriate tests, interpret scores with appropriate humility, set reasonable expectations, and explain both the power and limitations of psychological assessment to clients, colleagues, and courts.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Clinical Utility: Does This Test Actually Help?",
+        "Predicting Individual Scores: Standard Error of Estimate"
+      ]
     },
     {
       "stem": "What is criterion contamination in the context of psychological assessments?",
@@ -404,7 +475,11 @@
       "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "What is a key diagnostic criterion for narcolepsy related to cataplexy?",
@@ -425,7 +500,11 @@
       "lessonExcerpt": "Episodes of cataplexy (loss of muscle tone)",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "What is the estimated prevalence of ADHD among children in the United States?",
@@ -446,7 +525,12 @@
       "lessonExcerpt": "These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "The Foundation: What Is Criterion-Related Validity?",
+        "Predicting Individual Scores: Standard Error of Estimate",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "Which of the following is NOT a criterion for diagnosing autism spectrum disorder (ASD)?",
@@ -467,7 +551,10 @@
       "lessonExcerpt": "Criteria for diagnosing autism spectrum disorder include persistent deficits in social communication and interaction, and restricted, repetitive patterns of behavior.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     },
     {
       "stem": "How does the standard error of estimate relate to the validity of a psychological test?",
@@ -488,7 +575,11 @@
       "lessonExcerpt": "| Perceptual Reasoning (PRI) | Block Design, Matrix Reasoning, Visual Puzzles | Nonverbal reasoning, spatial processing |",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Predicting Individual Scores: Standard Error of Estimate",
+        "Clinical Utility: Does This Test Actually Help?"
+      ]
     }
   ]
 }

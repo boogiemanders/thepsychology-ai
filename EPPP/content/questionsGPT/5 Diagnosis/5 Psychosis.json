@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The stem is clear and options reflect durations from related disorders, enhancing the plausibility of distractors and testing precise knowledge.",
       "lessonExcerpt": "**Brief Psychotic Disorder**: Symptoms last 1 day to less than 1 month",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which of the following pairs of symptoms must be present for at least two weeks without mood symptoms to diagnose schizoaffective disorder?",
@@ -32,7 +35,10 @@
       "difficulty": "hard",
       "quality_comment": "Distractors contain recognizable schizophrenia symptoms but only the correct option specifies symptoms required independent of mood symptoms, making it challenging.",
       "lessonExcerpt": "BUT there must be a period of at least 2 weeks where delusions or hallucinations occur without mood symptoms",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which subtype of delusional disorder is characterized by the belief that one’s spouse or partner is unfaithful?",
@@ -49,7 +55,10 @@
       "difficulty": "medium",
       "quality_comment": "Options represent common delusional disorder subtypes, making distractors plausible and testing detailed diagnostic knowledge clearly.",
       "lessonExcerpt": "| Jealous | Their partner is unfaithful |",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which neurotransmitter abnormality is associated with positive symptoms of schizophrenia according to the revised dopamine hypothesis?",
@@ -66,7 +75,10 @@
       "difficulty": "medium",
       "quality_comment": "The question clearly differentiates related neurotransmitter hypotheses with realistic distractors that test understanding of neurochemical models.",
       "lessonExcerpt": "**Positive symptoms** (hallucinations, delusions): caused by dopamine *hyperactivity* in subcortical regions (especially the striatum)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which of the following factors is associated with a better prognosis in schizophrenia?",
@@ -83,7 +95,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include well-known negative prognostic factors, making the question balanced and testing clinical prognostic knowledge well.",
       "lessonExcerpt": "**Better Prognosis Associated With:** Female gender Acute and late onset (rather than gradual, early onset)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Course, Onset, and Prognosis: The Timeline"
+      ]
     },
     {
       "stem": "Which antipsychotic medication is considered the most effective for treatment-resistant schizophrenia?",
@@ -100,7 +115,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include common antipsychotics, but only clozapine is well-established for treatment resistance, providing a clear correct choice.",
       "lessonExcerpt": "**Clozapine** (an SGA) is the most effective for treatment-resistant schizophrenia.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Treatment: A Multimodal Approach"
+      ]
     },
     {
       "stem": "A 23-year-old man experiences hallucinations and delusions lasting for four months with prominent negative symptoms and marked impairment in functioning. He meets criteria for which diagnosis?",
@@ -117,7 +135,10 @@
       "difficulty": "medium",
       "quality_comment": "Clinical vignette format promotes application of diagnostic criteria and contrasts similar disorders, suitable for EPPP clinical reasoning.",
       "lessonExcerpt": "Schizophreniform | 2 of 5 symptoms | Delusions, hallucinations, OR disorganized speech | 1 month to <6 months",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which of the following statements accurately describes the heritability of schizophrenia based on twin studies?",
@@ -134,7 +155,10 @@
       "difficulty": "medium",
       "quality_comment": "The question includes realistic but incorrect percentages and tests precise knowledge of familial risk and genetic influence.",
       "lessonExcerpt": "Dizygotic (fraternal) twin | 17% ... Monozygotic (identical) twin | 48%",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which term describes the phase in schizophrenia characterized by lower-than-normal activity in the prefrontal cortex, contributing to negative and cognitive symptoms?",
@@ -151,7 +175,10 @@
       "difficulty": "medium",
       "quality_comment": "The distractors are plausible neuropsychiatric terms but distinct enough to effectively assess knowledge of brain function in schizophrenia.",
       "lessonExcerpt": "**Hypofrontality**: Reduced activity in the prefrontal cortex, contributing to negative and cognitive symptoms",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which psychosocial intervention for schizophrenia specifically helps patients develop skills to manage illness by processing triggers and challenging self-stigmatizing beliefs?",
@@ -168,7 +195,10 @@
       "difficulty": "hard",
       "quality_comment": "The question requires detailed knowledge of specific psychosocial methods, differentiating among multiple evidence-based interventions.",
       "lessonExcerpt": "Individual resiliency training (based on CBTp)... The resiliency training helps patients understand their psychotic episode triggers, challenge self-stigmatizing beliefs, and strengthen positive feelings, thoughts, and behaviors.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Treatment: A Multimodal Approach"
+      ]
     },
     {
       "stem": "Which of the following best describes the concordance rate pattern for schizophrenia in offspring of discordant monozygotic twins?",
@@ -185,7 +215,10 @@
       "difficulty": "hard",
       "quality_comment": "The question tests nuanced interpretation of twin study findings, with carefully written options to distinguish genetic liability concepts.",
       "lessonExcerpt": "When studying identical twins where only one has schizophrenia, the offspring of both twins (affected and unaffected) show similar increased risk.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which model explains the coexistence of positive and negative symptoms in schizophrenia by implicating dysfunction in cortical and subcortical brain regions?",
@@ -202,7 +235,10 @@
       "difficulty": "medium",
       "quality_comment": "The distractors are plausible but mostly unrelated terms, focusing test-takers on understanding neuroanatomical models.",
       "lessonExcerpt": "One comprehensive model suggests dysfunction in the temporal-limbic-frontal network causes negative symptoms and disinhibits subcortical areas, which then release excess dopamine in the striatum, causing positive symptoms.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "Which of the following biases refers to the tendency to overestimate the likelihood of rare but dramatic outcomes when interpreting assessment data for schizophrenia?",
@@ -220,7 +256,8 @@
       "quality_comment": "The question effectively tests conceptual understanding of heuristics with commonly confused terms as distractors.",
       "lessonExcerpt": "Availability Heuristic: How Easily Can I Think of Examples? The **availability heuristic** involves judging the frequency or likelihood of events based on how easily we can recall examples.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Which early intervention program for first-episode psychosis includes team-based treatment, family education, and supported employment?",
@@ -237,7 +274,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include real programs but only NAVIGATE matches the described multidisciplinary, early psychosis model.",
       "lessonExcerpt": "Programs like **NAVIGATE** target people experiencing their first psychotic episode. Components include: Family education Individual resiliency training (based on CBTp) Supported employment and education Individualized medication treatment",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Treatment: A Multimodal Approach"
+      ]
     },
     {
       "stem": "What is the minimum duration of symptoms required for a diagnosis of schizophreniform disorder according to DSM-5-TR?",
@@ -259,7 +299,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Duration: at least 1 month but less than 6 months",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     },
     {
       "stem": "In diagnosing schizoaffective disorder, what is the required duration of mood episode symptoms in relation to psychotic symptoms according to DSM-5-TR?",
@@ -281,7 +324,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "BUT there must be a period of at least 2 weeks where delusions or hallucinations occur without mood symptoms",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Disorders: Understanding Each One"
+      ]
     }
   ]
 }

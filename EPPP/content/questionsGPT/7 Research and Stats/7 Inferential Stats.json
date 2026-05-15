@@ -18,7 +18,10 @@
       "suggestedParagraph": "## Statistical Power: Your Ability to Detect Real Effects",
       "lessonExcerpt": "Larger samples increase power substantially.",
       "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS"
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "Which statement correctly distinguishes a 95% Bayesian credibility interval from a 95% frequentist confidence interval?",
@@ -38,7 +41,10 @@
       "suggestedParagraph": "### Confidence Intervals vs. Credibility Intervals",
       "lessonExcerpt": "95% Bayesian Credibility Interval: There's a 95% probability that the true population mean falls within this specific interval.",
       "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS"
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "relatedSections": [
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     },
     {
       "stem": "A researcher decides to change the significance level from .05 to .01 while keeping the sample, effect size, and statistical test the same. What is the most likely result of this decision?",
@@ -58,7 +64,10 @@
       "suggestedParagraph": "## Statistical Power: Your Ability to Detect Real Effects",
       "lessonExcerpt": "Increasing alpha increases power. If you use alpha = .10 instead of alpha = .05, you're more likely to detect effects. However, this also increases your Type I error risk.",
       "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS"
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "A researcher draws random samples from a population with a standard deviation of 20. If she increases her sample size from 25 to 100, what will happen to the standard error of the mean?",
@@ -79,7 +88,11 @@
       "lessonExcerpt": "The standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Foundation: Sampling Distributions and Probability",
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "A researcher draws random samples from a population with a standard deviation of 20. She wants to reduce the standard error of the mean from 4.0 to 2.0. What must she do to her sample size?",
@@ -100,7 +113,11 @@
       "lessonExcerpt": "The standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Foundation: Sampling Distributions and Probability",
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "In the context of Bayes' Theorem, what does the term 'prior probability' refer to?",
@@ -121,7 +138,12 @@
       "lessonExcerpt": "**Prior** | Your probability distribution for a parameter BEFORE seeing new data | Previous research, expert opinion, or theoretical assumptions",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "A Modern Alternative: Bayesian Statistics",
+        "The Foundation: Sampling Distributions and Probability",
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "What is the primary consequence of conducting research with low statistical power?",
@@ -142,7 +164,10 @@
       "lessonExcerpt": "The probability of making a Type II error is beta (β). However, you can reduce it by increasing your study's statistical power.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "What is the primary way to increase the statistical power of a study?",
@@ -163,7 +188,10 @@
       "lessonExcerpt": "This is the most practical factor you can control. Larger samples increase power substantially.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "What distinguishes statistical significance from practical significance in research findings?",
@@ -184,7 +212,10 @@
       "lessonExcerpt": "Misconception 2: \"Statistical significance means practical importance.\" Reality: With large enough samples, even tiny, meaningless effects can be statistically significant. Always consider effect size, not just p-values.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "A researcher draws random samples from a population with a standard deviation of 20. If the researcher increases the sample size from 25 to 100, the standard error of the mean will:",
@@ -205,7 +236,11 @@
       "lessonExcerpt": "The standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Foundation: Sampling Distributions and Probability",
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "According to the central limit theorem, which of the following is true about the sampling distribution of the mean as sample size increases?",
@@ -223,7 +258,11 @@
       "quality_comment": "The question clearly targets a central statistical concept with distractors that reflect common misconceptions, making it suitable for the EPPP level.",
       "lessonExcerpt": "**Shape**: As your sample size increases, the distribution of sample means will look increasingly normal (bell-curved), even if your original population distribution is weird and skewed.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Sampling Distributions and Probability",
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "What does a Type I error represent in hypothesis testing?",
@@ -241,7 +280,10 @@
       "quality_comment": "This is a straightforward question testing a fundamental concept; distractors are clear and plausible, appropriate for entry-level statistics knowledge.",
       "lessonExcerpt": "A **Type I error** happens when you reject a true null hypothesis.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "Which of the following factors increases the statistical power of a study?",
@@ -259,7 +301,10 @@
       "quality_comment": "Distractors are plausible, but only one correctly identifies a factor that increases power, making this question effective for EPPP preparation.",
       "lessonExcerpt": "This is about how strong the independent variable's effect actually is.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "In Bayesian statistics, what does the 'prior' represent?",
@@ -277,7 +322,10 @@
       "quality_comment": "The question is clearly worded, and options reflect common Bayesian terms to challenge test takers’ comprehension effectively.",
       "lessonExcerpt": "**Prior** | Your probability distribution for a parameter BEFORE seeing new data | Previous research, expert opinion, or theoretical assumptions",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     },
     {
       "stem": "Which of the following best describes the difference between frequentist confidence intervals and Bayesian credibility intervals?",
@@ -295,7 +343,11 @@
       "quality_comment": "The distractors include common misconceptions, which strengthens the question’s ability to distinguish between novice and advanced understanding.",
       "lessonExcerpt": "**95% Frequentist Confidence Interval**: If we repeated this study many times and calculated a confidence interval each time, 95% of those intervals would contain the true population mean.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     },
     {
       "stem": "Which of the following statements about the null and alternative hypotheses in inferential statistics is TRUE?",
@@ -313,7 +365,11 @@
       "quality_comment": "The question is clear and the distractors are plausible misunderstandings, helping to reinforce correct hypothesis formulation knowledge.",
       "lessonExcerpt": "**The alternative hypothesis (H₁)**: This is usually what you actually believe. That your independent variable DOES have a real effect.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "Setting Up Your Statistical Test: Hypotheses"
+      ]
     },
     {
       "stem": "If a researcher sets alpha at .05, what is the implication for making a Type I error?",
@@ -331,7 +387,11 @@
       "quality_comment": "The question is straightforward with well-distinguished distractors, ideal for confirming foundational understanding.",
       "lessonExcerpt": "If α = .05, you're accepting a 5% chance of a false positive.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "Making Decisions: The Four Possible Outcomes"
+      ]
     },
     {
       "stem": "Which factor is NOT controllable by the researcher to increase statistical power?",
@@ -349,7 +409,10 @@
       "quality_comment": "Distractors are plausible active research decisions, while the correct answer highlights an uncontrollable factor, demanding good conceptual clarity.",
       "lessonExcerpt": "However, unlike the other factors, you can't control this. It's just a characteristic of what you're studying.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "Which of the following best describes sampling error in the context of inferential statistics?",
@@ -367,7 +430,11 @@
       "quality_comment": "Distractors contrast measurement and treatment effects effectively against the correct statistical definition, making the question clear and instructive.",
       "lessonExcerpt": "Some would be higher than the true population mean, some lower, not because anything actually changed, but because of **sampling error**. Random variation that happens when you select different people.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     },
     {
       "stem": "What is the relationship between beta and statistical power in hypothesis testing?",
@@ -385,7 +452,10 @@
       "quality_comment": "Answer choices provide a balanced set of plausible errors, reinforcing distinctions between error types and power clearly.",
       "lessonExcerpt": "The probability of making a Type II error is **beta (β)**. Unlike alpha, you don't directly set beta. However, you can reduce it by increasing your study's **statistical power**.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "In the context of inferential statistics, what does the standard error of the mean represent?",
@@ -403,7 +473,12 @@
       "quality_comment": "Distractors test knowledge of related formulas and concepts, helping to clarify a key statistical term effectively.",
       "lessonExcerpt": "**Spread**: The standard deviation of this sampling distribution (called the **standard error**) equals the population standard deviation divided by the square root of your sample size.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "A Modern Alternative: Bayesian Statistics",
+        "The Foundation: Sampling Distributions and Probability"
+      ]
     },
     {
       "stem": "Bayesian analysis differs from frequentist analysis primarily in which way?",
@@ -421,7 +496,10 @@
       "quality_comment": "Options target common confusions about Bayesian concepts, making this a high-quality question on a complex topic.",
       "lessonExcerpt": "**Bayesian approach**: You combine what's already known (previous research) with your current data to get updated knowledge. It's cumulative and collaborative.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     },
     {
       "stem": "What is the most accurate interpretation of a 95% frequentist confidence interval around a sample mean?",
@@ -439,7 +517,12 @@
       "quality_comment": "Distractors include common misinterpretations, offering a useful challenge for EPPP candidates.",
       "lessonExcerpt": "**95% Frequentist Confidence Interval**: If we repeated this study many times and calculated a confidence interval each time, 95% of those intervals would contain the true population mean.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "A Modern Alternative: Bayesian Statistics",
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "Making Decisions: The Four Possible Outcomes"
+      ]
     },
     {
       "stem": "Which of the following describes the role of alpha in hypothesis testing?",
@@ -457,7 +540,11 @@
       "quality_comment": "The question clearly distinguishes among common misconceptions about alpha and error probabilities, providing an effective test of fundamental statistical knowledge.",
       "lessonExcerpt": "The probability of making a Type I error is **alpha (α)**, also called your **significance level**. Researchers typically set this at .05 or .01 before collecting data.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "Making Decisions: The Four Possible Outcomes"
+      ]
     },
     {
       "stem": "Which of the following best explains why parametric tests are generally more powerful than nonparametric tests?",
@@ -475,7 +562,10 @@
       "quality_comment": "The distractors help clarify critical distinctions between parametric and nonparametric tests, supporting mastery of test selection principles.",
       "lessonExcerpt": "However, parametric tests require:\n- Interval or ratio data (not just categories)\n- Certain assumptions about your data (like normal distribution)",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "In inferential statistics, the standard error of the mean decreases when which of the following occurs?",
@@ -493,7 +583,11 @@
       "quality_comment": "Distractors are plausible and test comprehension of how key parameters influence sampling variability, reinforcing key sampling distribution concepts.",
       "lessonExcerpt": "the standard error gets smaller as sample size increases, meaning your sample means cluster more tightly around the true population mean.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     },
     {
       "stem": "What is the main advantage of Bayesian hypothesis testing over frequentist approaches?",
@@ -511,7 +605,10 @@
       "quality_comment": "Distractors represent common misunderstandings about Bayesian advantages, making this question a good diagnostic tool for advanced conceptual understanding.",
       "lessonExcerpt": "**Direct hypothesis testing**: You can directly assess evidence for your research hypothesis, not just against the null",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     },
     {
       "stem": "Which of the following statements best describes the effect of increasing sample size on the variability of the sampling distribution of the mean?",
@@ -534,7 +631,11 @@
       ],
       "lessonExcerpt": "the standard error gets smaller as sample size increases, meaning your sample means cluster more tightly around the true population mean.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Sampling Distributions and Probability",
+        "Statistical Power: Your Ability to Detect Real Effects"
+      ]
     },
     {
       "stem": "In a study examining the impact of sample size on the distribution of sample means, which of the following outcomes is expected as the sample size becomes very large?",
@@ -557,7 +658,12 @@
       ],
       "lessonExcerpt": "**Shape**: As your sample size increases, the distribution of sample means will look increasingly normal (bell-curved), even if your original population distribution is weird and skewed.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Sampling Distributions and Probability",
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     },
     {
       "stem": "In a meta-analysis, which of the following is primarily calculated to combine study results?",
@@ -578,7 +684,11 @@
       "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Statistical Power: Your Ability to Detect Real Effects",
+        "A Modern Alternative: Bayesian Statistics"
+      ]
     }
   ]
 }

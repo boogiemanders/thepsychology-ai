@@ -15,7 +15,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear stem and well-defined options, with distractors plausible but incorrect, ideal for foundational knowledge assessment.",
       "lessonExcerpt": "**Substance-Use Disorders** are the ongoing patterns. ... The pattern continues for at least 12 months and involves at least two symptoms from a list of criteria.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Substance-Use Disorders"
+      ]
     },
     {
       "stem": "Which symptom is NOT one of the criteria for Alcohol Intoxication in DSM-5-TR?",
@@ -32,7 +35,11 @@
       "difficulty": "medium",
       "quality_comment": "Good focus on differential diagnosis with strong distractors from related substance intoxications, enhancing discrimination.",
       "lessonExcerpt": "**Alcohol Intoxication** ... plus at least one physical sign: slurred speech, poor coordination, unsteady walking, nystagmus (involuntary eye movements), problems with attention or memory, or stupor/coma.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Substance-Induced Disorders You Need to Know",
+        "A Quick Reference Table for Intoxication and Withdrawal"
+      ]
     },
     {
       "stem": "Korsakoff syndrome, associated with alcohol use, is characterized clinically by:",
@@ -49,7 +56,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include symptoms from other alcohol-related disorders, providing strong distractors; question tests clinical knowledge of neurological sequelae.",
       "lessonExcerpt": "**Korsakoff syndrome**. This one's caused by thiamine deficiency (vitamin B1) and involves severe memory problems (both anterograde (can't form new memories) and retrograde (can't recall old memories). People with Korsakoff syndrome often confabulate",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Substance-Induced Disorders You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following symptoms is required for the diagnosis of Opioid Intoxication?",
@@ -66,7 +76,11 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include symptoms of other substances' intoxication or withdrawal, appropriately challenging test-takers.",
       "lessonExcerpt": "**Opioid Intoxication** involves problematic behavioral or psychological changes ... plus pupillary constriction (pinpoint pupils ... and at least one of: drowsiness or coma, slurred speech, or impaired attention/memory.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Substance-Induced Disorders You Need to Know",
+        "A Quick Reference Table for Intoxication and Withdrawal"
+      ]
     },
     {
       "stem": "Which of the following interventions focuses primarily on arranging an individual’s lifestyle so that healthy, drug-free living is more rewarding than substance use?",
@@ -83,7 +97,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are all relevant substance use interventions, which requires discrimination and understanding different treatment foci.",
       "lessonExcerpt": "CRA is based on operant conditioning principles. The core idea: Make healthy, drug-free living more rewarding than substance use.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "Voucher-Based Reinforcement Therapy (VBRT) primarily utilizes which behavioral principle to promote abstinence?",
@@ -100,7 +117,10 @@
       "difficulty": "medium",
       "quality_comment": "Options represent varied intervention strategies, compelling the examinee to know the core principle of VBRT.",
       "lessonExcerpt": "This is contingency management in action. Clients receive vouchers they can exchange for goods and services when they meet treatment goals.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "Personalized Normative Feedback (PNF) reduces problematic substance use primarily by:",
@@ -117,7 +137,10 @@
       "difficulty": "easy",
       "quality_comment": "Distractors are plausible but clearly different interventions, enabling assessment of conceptual understanding.",
       "lessonExcerpt": "Here's the assumption behind PNF: People overestimate how much others use substances, and this misperception influences their own use. Correct the misperception, and behavior should change.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "Relapse Prevention Therapy (RPT) conceptualizes a lapse in substance use as most likely to become a full relapse when the individual:",
@@ -134,7 +157,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors describe elements from other treatments making the question a solid test of RPT-specific conceptual knowledge.",
       "lessonExcerpt": "A lapse is most likely to become a full relapse when someone has poor coping skills, low self-efficacy, high expectations about positive substance effects, and experiences an \"abstinence violation effect.\"",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "Which of the following characterizes Tobacco Withdrawal according to the DSM-5-TR?",
@@ -151,7 +177,11 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include symptoms diagnostic for other substances, enhancing item plausibility and preventing cueing.",
       "lessonExcerpt": "**Tobacco Withdrawal** requires at least four of seven symptoms developing within 24 hours of stopping or reducing tobacco use: irritability, anger or anxiety, impaired concentration, increased appetite, restlessness, depressed mood, or insomnia.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Substance-Induced Disorders You Need to Know",
+        "A Quick Reference Table for Intoxication and Withdrawal"
+      ]
     },
     {
       "stem": "In Project MATCH, which treatment showed a slight advantage in reducing drinking in clients diagnosed with alcohol dependence or abuse at one- and three-year follow-up?",
@@ -168,7 +198,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include well-known treatments in the field; this item requires recall of specific research findings, suitable for EPPP context.",
       "lessonExcerpt": "Results: All three treatments significantly reduced drinking at one-year and three-year follow-ups, with twelve-step facilitation having a slight edge.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "Hallucinogen Persisting Perception Disorder is best described as:",
@@ -185,7 +218,10 @@
       "difficulty": "medium",
       "quality_comment": "Includes subtle distinctions related to psychotic symptoms and reality testing, requiring knowledge of diagnostic conceptualization.",
       "lessonExcerpt": "After using LSD or other hallucinogens, some people re-experience perceptual symptoms days, weeks, months, or even years later. ... The key diagnostic feature: Reality testing remains intact.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Substance-Induced Disorders You Need to Know"
+      ]
     },
     {
       "stem": "Which theoretical model underlies the Community Reinforcement Approach (CRA) to substance use treatment?",
@@ -202,7 +238,10 @@
       "difficulty": "medium",
       "quality_comment": "The question introduces theoretical foundations, clearly distinct from existing items, with credible and comparable distractors.",
       "lessonExcerpt": "CRA is based on operant conditioning principles. The core idea: Make healthy, drug-free living more rewarding than substance use.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "Which of the following cognitive biases is most relevant to relapse in substance use disorders as described in Relapse Prevention Therapy?",
@@ -219,7 +258,10 @@
       "difficulty": "medium",
       "quality_comment": "The question adds nuanced content about cognitive biases impacting relapse, complementing existing treatment-focused items.",
       "lessonExcerpt": "experiences an \"abstinence violation effect.\" That's when someone has one drink after months of sobriety and thinks, \"I've completely failed. I'm a terrible person. I might as well keep drinking.\"",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "How does text-message intervention support treatment for substance use disorders?",
@@ -236,7 +278,10 @@
       "difficulty": "easy",
       "quality_comment": "This item introduces technology use in treatment complementing existing intervention questions without overlap.",
       "lessonExcerpt": "Text messages serve four major functions in mental health treatment: appointment and medication reminders, health information, support, and self-monitoring tools.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "Which of the following best summarizes the treatment outcome finding for combining therapy and medication in tobacco use disorder?",
@@ -253,7 +298,10 @@
       "difficulty": "medium",
       "quality_comment": "A clear clinically relevant item about intervention efficacy that broadens assessment coverage in outcome measurement.",
       "lessonExcerpt": "text messaging plus other interventions produces better quit rates than those other interventions alone.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Evidence-Based Treatments That Actually Work"
+      ]
     },
     {
       "stem": "Which of the following symptoms is NOT a criterion for Opioid Intoxication according to DSM-5-TR?",
@@ -275,7 +323,11 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "**Opioid Intoxication** involves problematic behavioral or psychological changes (initial euphoria followed by apathy or dysphoria, impaired judgment) plus pupillary constriction (pinpoint pupils ... and at least one of: drowsiness or coma, slurred speech, or impaired attention/memory.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Substance-Induced Disorders You Need to Know",
+        "A Quick Reference Table for Intoxication and Withdrawal"
+      ]
     }
   ]
 }

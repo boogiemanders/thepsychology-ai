@@ -19,7 +19,10 @@
       "lessonExcerpt": "**When using interpreters**: Get informed consent for the interpreter's involvement, ensure confidentiality and test security are maintained, and note any limitations resulting from interpretation in ",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "An attorney requests that Dr. Nguyen release raw test data from a neuropsychological evaluation of a client involved in a personal injury lawsuit. The client has signed a valid release authorizing disclosure to the attorney. According to APA ethical standards, Dr. Nguyen should:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "**Test data** (Standard 9.04): Raw scores, scaled scores, client responses, and your notes about behavior during testing. You ordinarily release this to clients or their authorized representatives, bu",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "Dr. Nguyen terminated therapy with a client two and a half years ago. The therapy lasted 18 months and focused on the client's severe childhood trauma and attachment difficulties. The former client has now asked Dr. Nguyen on a date. According to APA Standard 10.08, what is the most accurate statement about this situation?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "No sexual intimacies with former clients for at least two years after termination. After two years, it's still prohibited except in the 'most unusual circumstances,' and you bear the burden of proving the relationship isn't exploitative.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "A psychologist receives a request from another provider to release treatment records for a client she treated 12 years ago. The records contain assessment results from a test version that has since been replaced by a newer edition with updated norms. What is the MOST appropriate course of action?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "Standards 9.08(a) and (b) prohibit using test results or tests that are outdated or obsolete 'for the current purpose.' That last part is crucial. It's context-dependent.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "What ethical consideration must psychologists address when conducting research involving individuals with conservators?",
@@ -103,7 +115,11 @@
       "lessonExcerpt": "You must obtain informed consent from participants.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)",
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "What ethical considerations must psychologists keep in mind when administering psychological tests?",
@@ -124,7 +140,10 @@
       "lessonExcerpt": "You need enough information to support your conclusions.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "A graduate student asks Dr. Rivera to share the actual test items from the WISC-V so the student can study intelligence testing for a class assignment. Dr. Rivera should:",
@@ -145,7 +164,10 @@
       "lessonExcerpt": "**Misconception 5**: \"I can't discuss specific test items with clients because of test security.\"",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "An attorney requests that Dr. Chen release the raw test data and scores from a psychological evaluation of the attorney's client. The client has signed an authorization for release. According to APA ethical standards, Dr. Chen should:",
@@ -166,7 +188,10 @@
       "lessonExcerpt": "**Test data** (Standard 9.04): Raw scores, scaled scores, client responses, and your notes about behavior during testing. You ordinarily release this to clients or their authorized representatives, bu",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "Dr. Torres terminated therapy with a client 18 months ago. The former client has now contacted Dr. Torres expressing romantic interest. According to APA Ethics Code Standard 10.08, which of the following is MOST accurate regarding the permissibility of a sexual relationship?",
@@ -187,7 +212,10 @@
       "lessonExcerpt": "post-therapy friendships... These relationships still count as problematic because they prevent the former client from returning to therapy",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "A psychologist receives a request from another provider to release treatment records for a former client who was seen 12 years ago. The psychologist reviews the records and finds that some assessment interpretations and diagnostic impressions may be outdated given current diagnostic criteria. What is the psychologist's BEST course of action?",
@@ -208,7 +236,10 @@
       "lessonExcerpt": "Standards 9.08(a) and (b) prohibit using test results or tests that are outdated or obsolete \"for the current purpose.\" That last part is crucial. It's context-dependent.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "A psychologist has to base part of an evaluation on test results from another clinician because they cannot assess the person directly. How should they frame their conclusions?",
@@ -226,7 +257,11 @@
       "quality_comment": "The question is clearly worded and tests a key ethical responsibility with plausible distractors related to use of external data.",
       "lessonExcerpt": "When you can't examine someone directly, you're still allowed to offer opinions, but you must clearly explain the limitations.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "A psychologist uses a test with a population for whom it lacks solid validity evidence. What should they include when they share the results?",
@@ -244,7 +279,11 @@
       "quality_comment": "Distractors reflect common misconceptions and the correct answer emphasizes responsible, transparent test use, matching EPPP ethical standards.",
       "lessonExcerpt": "When that happens, you don't just avoid testing. You proceed with caution and clearly describe the limitations in your reports.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "Which of the following best describes a test modification, as opposed to an accommodation, according to the Standards for Educational and Psychological Testing?",
@@ -262,7 +301,11 @@
       "quality_comment": "Options distinguish between accommodations and modifications clearly; distractors are plausible, enhancing discriminative value.",
       "lessonExcerpt": "Modification | Changes that alter what the test actually measures | Scores have different meaning than standard test | Using a screen reader for a reading comprehension test (changes what's being measured)",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "At the start of therapy, what information should a psychologist review with a new client to ensure true informed consent?",
@@ -280,7 +323,11 @@
       "quality_comment": "The question is clear and tests a fundamental ethical requirement with realistic distractors, suitable for basic EPPP knowledge.",
       "lessonExcerpt": "Standard 10.01(a) requires informed consent \"as early as feasible\" in therapy. Cover these topics: Nature and anticipated course of therapy; Fees; Third-party involvement; Confidentiality limits; Opportunity for questions",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)",
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "If a psychologist switches a client from in-person therapy to telepsychology, what ethical practice is recommended according to APA Guidelines for the Practice of Telepsychology?",
@@ -298,7 +345,11 @@
       "quality_comment": "The question addresses contemporary ethical issues with plausible options reflecting common misconceptions, enhancing its relevance.",
       "lessonExcerpt": "Many experts recommend a \"dual consent approach\". One consent form for in-person services and another addressing telepsychology-specific issues.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)",
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "In what situation may a psychologist end therapy without offering pretermination counseling or referrals?",
@@ -316,7 +367,11 @@
       "quality_comment": "The distractors are plausible but less defensible ethically, making this a fair question assessing important termination considerations.",
       "lessonExcerpt": "Emergency exception: You may terminate immediately without counseling or referrals if you're threatened or endangered by the client or someone close to the client.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)",
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "A trainee wants to practice administering assessments. Under what circumstance is it acceptable for them to use test materials?",
@@ -334,7 +389,11 @@
       "quality_comment": "Clear stem and well-constructed distractors provide a straightforward test of an important ethical standard.",
       "lessonExcerpt": "Standard 9.07 is straightforward: don't let unqualified people use psychological assessment techniques. The exception? Training situations with proper supervision.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "When a client asks for their test data, when can a psychologist decline to release it?",
@@ -352,7 +411,10 @@
       "quality_comment": "Answer choices are balanced and represent common client data release scenarios, enhancing the question’s relevance and difficulty.",
       "lessonExcerpt": "Test data (Standard 9.04): Raw scores, scaled scores, client responses, and your notes about behavior during testing. You ordinarily release this to clients or their authorized representatives, but you can withhold it to prevent harm or misuse (when legally permitted).",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "If an interpreter was used during a psychological evaluation, what should the psychologist note in the report?",
@@ -370,7 +432,11 @@
       "quality_comment": "Distractors reflect common misunderstandings about interpreter use; the correct answer emphasizes transparency in reporting.",
       "lessonExcerpt": "When using interpreters: Get informed consent for the interpreter's involvement, ensure confidentiality and test security are maintained, and note any limitations resulting from interpretation in your reports.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "What is the ethical boundary around sexual relationships with current or former therapy clients?",
@@ -388,7 +454,10 @@
       "quality_comment": "The options clearly differentiate the nuanced time-based restrictions, making it a strong ethics-based question.",
       "lessonExcerpt": "Standard 10.05: No sexual intimacies with current clients. Standard 10.08: No sexual intimacies with former clients for at least two years after termination. After two years, it's still prohibited except in the \"most unusual circumstances\"",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "Which ethical principle guides psychologists to consult or refer clients to other professionals when needed to serve the best interests of the client?",
@@ -406,7 +475,10 @@
       "quality_comment": "While brief, the question targets important ethical decision-making principles with plausible distractors based on APA Ethics Code.",
       "lessonExcerpt": "The aspirational Principle B makes clear that referral decisions should prioritize the client's welfare above all other considerations.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "When might using an older or out-of-print test still be ethical?",
@@ -424,7 +496,11 @@
       "quality_comment": "The distractors contrast unethical and inflexible perspectives against the nuanced ethical flexibility described in the standard.",
       "lessonExcerpt": "When the older version might be better: If the new version doesn't yet have norms for your client's racial or ethnic group, but the previous version does, using the older version might actually provide more valid results.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "During a court-ordered or employment evaluation, when is it acceptable to decline explaining assessment results to the examinee?",
@@ -442,7 +518,11 @@
       "quality_comment": "This item focuses on nuanced ethical exceptions and requires understanding of informed consent limitations, contributing valuable content.",
       "lessonExcerpt": "Standard 9.10 requires you to explain assessment results to clients unless there's a valid reason not to (like employment screening or forensic evaluations). Even in those exceptions, you should explain beforehand why you won't be providing feedback.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "When offering a treatment with little established evidence, what should the psychologist tell the client?",
@@ -460,7 +540,11 @@
       "quality_comment": "The question tests critical components of informed consent with distractors reflecting common misunderstandings, effectively assessing ethical knowledge.",
       "lessonExcerpt": "Experimental treatments (Standard 10.01(b)): When using treatments without established procedures, inform clients about: The developing nature of the treatment; Potential risks; Alternative treatments available; Voluntary nature of their participation",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)",
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "What is the ethical obligation for safeguarding test manuals, protocols, and items?",
@@ -478,7 +562,10 @@
       "quality_comment": "Distractors are plausible but incorrect extremes; the item is well-aligned with test security and ethical practice content.",
       "lessonExcerpt": "Test materials (Standard 9.11): Manuals, instruments, protocols, actual test questions. You must protect these to maintain test security and integrity.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "A psychologist is preparing a report that includes findings from a previous assessment conducted by another clinician. What is the most ethical way to present this information?",
@@ -501,7 +588,10 @@
       ],
       "lessonExcerpt": "When you can't examine someone directly, you're still allowed to offer opinions, but you must clearly explain the limitations. Document why you relied on that evaluation and how it might affect your conclusions.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     },
     {
       "stem": "Regarding minority influence in groups, Moscovici proposed that minorities are most effective at persuading the majority when they:",
@@ -519,7 +609,10 @@
       "quality_comment": "The stem and options clearly address a nuanced aspect of social influence with plausible but conceptually distinct distractors.",
       "lessonExcerpt": "When to terminate**: End therapy when the client no longer needs it or isn't benefiting from it. This doesn't mean you must terminate the moment progress slows.",
       "suggestedLesson": "8-standards-9-10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "Who is ultimately responsible for errors in test interpretation?",
@@ -540,7 +633,11 @@
       "lessonExcerpt": "You can use these services, but remember: you retain full responsibility for the appropriate application and interpretation of the results.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "According to ethical guidelines, what is the primary purpose of providing feedback after an evaluation?",
@@ -561,7 +658,11 @@
       "lessonExcerpt": "Standard 9.10 requires you to explain assessment results to clients unless there's a valid reason not to (like employment screening or forensic evaluations).",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)",
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "What should a psychologist disclose to clients regarding supervision in their practice?",
@@ -582,7 +683,10 @@
       "lessonExcerpt": "Trainee therapists (Standard 10.01(c)): Clients must know if their therapist is in training, that they're supervised, and who the supervisor is.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "What is the ethical stance on sexual relationships with former clients according to the APA Ethics Code?",
@@ -603,7 +707,10 @@
       "lessonExcerpt": "Standard 10.08: No sexual intimacies with former clients for at least two years after termination. After two years, it's still prohibited except in the \"most unusual circumstances,\" and you bear the burden of proving the relationship isn't exploitative.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": [
+        "Standard 10: Therapy (Navigating the Therapeutic Relationship)"
+      ]
     },
     {
       "stem": "How should a psychologist respond if a client expresses concerns about the testing process?",
@@ -624,7 +731,10 @@
       "lessonExcerpt": "Standard 9.03 outlines what clients need to know before assessment: The nature and purpose of the assessment; Fees involved; Whether third parties will be involved; Limits of confidentiality; Opportunity to ask questions",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Standard 9: Assessment (Getting It Right)"
+      ]
     }
   ]
 }

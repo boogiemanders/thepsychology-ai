@@ -18,7 +18,10 @@
       "suggestedParagraph": "### Theory #3: Herzberg's Two-Factor Theory",
       "lessonExcerpt": "Hygiene factors (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "A high-performing employee is offered a promotion. She believes she could succeed in the role and trusts that the company would follow through on the offer, but she has no interest in relocating and does not want the new position. In Vroom's model, which component is most clearly limiting her motivation?",
@@ -38,7 +41,10 @@
       "suggestedParagraph": "### Theory #6: Expectancy Theory (VIE Theory)",
       "lessonExcerpt": "All three must be positive for high motivation. If any single factor is zero or negative, motivation plummets.",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "A manager notices that one employee routinely volunteers for projects with a moderate chance of success, prefers to be personally responsible for the outcome, and asks for frequent performance feedback. McClelland would say this employee is high in need for:",
@@ -58,7 +64,10 @@
       "suggestedParagraph": "### Theory #1: McClelland's Acquired Needs Theory",
       "lessonExcerpt": "They want personal responsibility, prefer moderate risk, and crave frequent feedback about their performance.",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "A hospital administrator implements a new policy that significantly increases nurses' salaries and improves break room facilities, yet six months later, employee surveys show no change in work motivation or job satisfaction. Which theory best explains this finding?",
@@ -79,7 +88,10 @@
       "lessonExcerpt": "Hygiene Factors (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "Alderfer's ERG theory departs from Maslow's hierarchy in several important ways. According to ERG theory, when a person is frustrated in attempts to satisfy higher-level growth needs, the person will:",
@@ -100,7 +112,10 @@
       "lessonExcerpt": "The key concept: The lowest unsatisfied need is \"prepotent\". It dominates motivation.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Maslow's need hierarchy theory, which of the following BEST distinguishes self-actualization from the four lower-level needs?",
@@ -121,7 +136,10 @@
       "lessonExcerpt": "The exception? Self-actualization never gets fully satisfied. There's always room for more growth and development.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "An employee discovers that a coworker with the same job title and similar qualifications earns significantly more per hour. According to Adams' equity theory, the employee experiencing underpayment inequity is MOST likely to:",
@@ -142,7 +160,10 @@
       "lessonExcerpt": "Underpayment Inequity: Your ratio is worse than others' (more work for less pay). This motivates you to decrease quality/quantity or seek better outcomes.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "A consulting psychologist recommends that a manufacturing company redesign assembly-line positions to include more decision-making authority, skill variety, and opportunities for advancement. Several months later, the company finds that younger, college-educated employees show significant increases in motivation, while older employees with less education show minimal change. Which concept best accounts for these differential outcomes?",
@@ -163,7 +184,10 @@
       "lessonExcerpt": "Job Enrichment emerged from this theory. It's about redesigning jobs to include more motivator factors, adding meaningful challenges, autonomy, and responsibility. This works best for younger, well-educated workers and those with high achievement needs.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "A consulting psychologist is designing a leadership development program for mid-career professionals. According to McClelland's acquired needs theory, which of the following statements best reflects a core premise of this theory?",
@@ -184,7 +208,10 @@
       "lessonExcerpt": "David McClelland focused on psychological needs that develop through life experience rather than being hardwired from birth.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "An industrial-organizational psychologist is advising a company whose employees report low morale despite receiving competitive salaries and excellent benefits. According to Herzberg's two-factor theory, the most likely explanation for this situation is that:",
@@ -205,7 +232,10 @@
       "lessonExcerpt": "**Hygiene Factors** (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Herzberg's two-factor theory, a hospital administrator notices that nursing staff frequently complain about inadequate pay, poor scheduling, and interpersonal conflicts with supervisors. She implements salary increases, adopts flexible scheduling, and offers conflict-resolution workshops. Several months later, complaints decrease but employee motivation and engagement remain unchanged. Herzberg would most likely explain this outcome by noting that:",
@@ -226,7 +256,10 @@
       "lessonExcerpt": "**Hygiene Factors** (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "A human resources consultant is advising a technology company on strategies to improve employee motivation. She recommends redesigning several positions to include greater decision-making authority, project ownership, and opportunities for professional growth. A colleague suggests instead that the company simply assign additional tasks at the same skill level to keep employees busier. The consultant's recommendation reflects which approach, and how does it differ from her colleague's suggestion?",
@@ -247,7 +280,10 @@
       "lessonExcerpt": "Job Enrichment emerged from this theory. It's about redesigning jobs to include more motivator factors, adding meaningful challenges, autonomy, and responsibility. Don't confuse job enrichment with job enlargement. Job enlargement just means piling on more tasks at the same level.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 27
+      "inspirationIndex": 27,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Hull’s drive-reduction theory, what primarily motivates human behavior?",
@@ -265,7 +301,10 @@
       "quality_comment": "Clear stem with plausible distractors representing other motivation concepts; assesses basic theory knowledge effectively.",
       "lessonExcerpt": "Clark Hull introduced drive-reduction theory in 1943, arguing that humans are basically motivated to maintain balance. What he called homeostasis.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Drive-Reduction Theory"
+      ]
     },
     {
       "stem": "Which type of need, according to McClelland’s Acquired Needs Theory, best describes a person motivated by seeking status and influence over others?",
@@ -283,7 +322,10 @@
       "quality_comment": "Options are closely related psychological needs, making distractors plausible and the correct answer appropriately targeted.",
       "lessonExcerpt": "**Need for Power (nPow):** These people are energized by influence, control, and recognition. They're drawn to leadership positions and situations where they can impact others' decisions or gain status.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "In Maslow’s Need Hierarchy Theory, which need is considered never fully satisfied and remains a continual motivator?",
@@ -301,7 +343,10 @@
       "quality_comment": "Distractors are common hierarchical needs, increasing the challenge and relevance of the correct choice.",
       "lessonExcerpt": "The exception? Self-actualization never gets fully satisfied. There's always room for more growth and development.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Herzberg’s Two-Factor Theory, what is the effect of improving hygiene factors like pay and working conditions on worker motivation?",
@@ -319,7 +364,10 @@
       "quality_comment": "The options are nuanced and reflect common misconceptions, effectively testing discriminative understanding.",
       "lessonExcerpt": "**Hygiene Factors** (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "Which core job characteristic in the Job Characteristics Model primarily leads to employees experiencing their work as meaningful?",
@@ -337,7 +385,10 @@
       "quality_comment": "The question is clear but challenging, as all options relate to meaningfulness; it demands application of detailed model knowledge.",
       "lessonExcerpt": "- **Experienced Meaningfulness**: The work feels worthwhile (from variety, identity, and significance)",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "In Adams’ Equity Theory, how does underpayment inequity influence a worker’s motivation and behavior?",
@@ -355,7 +406,10 @@
       "quality_comment": "Distractors include both accurate and inaccurate statements, solidly testing comprehension of equity theory.",
       "lessonExcerpt": "**Underpayment Inequity**: Your ratio is worse than others' (more work for less pay). This motivates you to decrease quality/quantity or seek better outcomes.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Expectancy Theory, a worker will have high motivation only if which combination of beliefs is held?",
@@ -373,7 +427,10 @@
       "quality_comment": "Answer choices carefully address critical components, requiring integrative understanding rather than rote recall.",
       "lessonExcerpt": "Here's the critical part for the exam: **All three must be positive for high motivation.** If any single factor is zero or negative, motivation plummets.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "Goal-Setting Theory emphasizes that worker commitment to a goal is maximized when the goals are:",
@@ -391,7 +448,10 @@
       "quality_comment": "This is a straightforward question with well-constructed distractors, ideal for confirming fundamental theory knowledge.",
       "lessonExcerpt": "Research shows goal acceptance and commitment are maximized when goals are:\n- **Specific** (not vague)\n- **Moderately difficult** (challenging but achievable)\n- **Accompanied by immediate feedback**",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Hackman and Oldham’s Job Characteristics Model, which worker trait moderates how strongly the five core job characteristics affect job outcomes?",
@@ -409,7 +469,10 @@
       "quality_comment": "Distractors are relevant needs but only one is a moderator in this model, testing detailed theoretical understanding.",
       "lessonExcerpt": "The moderating factor? **Growth-need strength**. Workers who seek to fulfill higher-order needs respond more positively to jobs with these five characteristics.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "Which of the following statements about McClelland’s need for achievement is correct?",
@@ -427,7 +490,10 @@
       "quality_comment": "Distractors reflect common misconceptions or other needs, making this a well-crafted question on key concept differentiation.",
       "lessonExcerpt": "**Need for Achievement (nAch):** These individuals are motivated by success and accomplishment. {{M}}Picture someone who chooses to lead a challenging project with a 50/50 success rate rather than taking the safe, boring assignment everyone else wants.{{/M}} They want personal responsibility (they won't delegate much), prefer moderate risk (not too easy, not impossible), and crave frequent feedback about their performance.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "Which of the following best describes job enrichment, according to Herzberg’s theory?",
@@ -445,7 +511,10 @@
       "quality_comment": "Distractors include common job design terms, requiring test takers to discriminate closely related concepts.",
       "lessonExcerpt": "**Job Enrichment** emerged from this theory. It's about redesigning jobs to include more motivator factors, adding meaningful challenges, autonomy, and responsibility.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "Which of the following is a primary assumption of the drive-reduction theory of motivation?",
@@ -463,7 +532,10 @@
       "quality_comment": "Well-constructed with plausible distractors representing other motivation perspectives; tests key conceptual understanding.",
       "lessonExcerpt": "When you're hungry (imbalance), you feel uncomfortable, which creates a drive to eat (behavior), which satisfies the need and restores balance.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Drive-Reduction Theory"
+      ]
     },
     {
       "stem": "According to Equity Theory, what is the most likely reaction of a worker who perceives overpayment inequity?",
@@ -481,7 +553,10 @@
       "quality_comment": "The options are balanced and test application of theory to worker behavior, enhancing conceptual learning.",
       "lessonExcerpt": "**Overpayment Inequity**: Your ratio is better than others' (less work for more pay). This motivates you to increase quality or quantity of work to restore fairness.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "In McClelland’s Acquired Needs Theory, which need is primarily focused on forming close relationships and being accepted by others?",
@@ -504,7 +579,10 @@
       ],
       "lessonExcerpt": "**Need for Affiliation (nAff):** These individuals prioritize relationships and social acceptance. They're motivated by opportunities to connect with others and be liked by their colleagues.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to McClelland’s Acquired Needs Theory, which need is associated with the desire to excel and achieve personal goals?",
@@ -527,7 +605,10 @@
       ],
       "lessonExcerpt": "**Need for Achievement (nAch):** These individuals are motivated by success and accomplishment.",
       "suggestedLesson": "2-work-motivation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Acquired Needs Theory, which of the following statements best describes the stability of work-related needs over time?",
@@ -548,7 +629,10 @@
       "lessonExcerpt": "Theory #1: McClelland's Acquired Needs Theory David McClelland focused on psychological needs that develop through life experience rather than being hardwired from birth.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "Expectancy in motivational theories primarily refers to which of the following?",
@@ -569,7 +653,10 @@
       "lessonExcerpt": "Theory #6: Expectancy Theory (VIE Theory) Vroom's expectancy theory says motivation is a calculation based on three factors:",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "A human resources consultant recommends two separate interventions to a manufacturing company. The first involves adding several assembly steps to each worker's role so that employees rotate through a broader set of tasks, all at the same complexity level. The second involves redesigning positions to include planning, quality inspection, and scheduling responsibilities that were previously handled exclusively by supervisors. Which statement correctly distinguishes job enlargement from job enrichment as illustrated in this scenario?",
@@ -590,7 +677,11 @@
       "lessonExcerpt": "Misconception #2**: \"Job enlargement and job enrichment are the same thing.\" **Reality**: Enlargement adds more tasks at the same level (horizontal loading). Enrichment adds depth, meaning, and responsibility (vertical loading).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 27
+      "inspirationIndex": 27,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP",
+        "Common Misconceptions Students Often Have"
+      ]
     },
     {
       "stem": "Which statement best summarizes the ERG theory's expansion of Maslow's hierarchy of needs?",
@@ -611,7 +702,10 @@
       "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "In Maslow's hierarchy of needs, which of the following best describes deficiency needs?",
@@ -632,7 +726,10 @@
       "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Equity Theory, what prediction can be made about an individual's performance when they perceive inequity in their work environment?",
@@ -653,7 +750,10 @@
       "lessonExcerpt": "The smart approach to applying these interventions starts with a functional behavioral assessment (FBA).",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "According to Herzberg's theory, which of the following factors is considered a hygiene factor in job motivation?",
@@ -674,7 +774,10 @@
       "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses. This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     },
     {
       "stem": "What is the primary effect of job enrichment on workers according to motivation theories?",
@@ -695,7 +798,10 @@
       "lessonExcerpt": "This fascinating prediction says: if you're externally rewarded for doing something you already enjoy intrinsically, your intrinsic motivation decreases. **Classic Study**: Children who enjoyed drawing with markers were either rewarded or not rewarded for drawing during a play period.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Big Seven: Theories You'll See on the EPPP"
+      ]
     }
   ]
 }

@@ -19,7 +19,10 @@
       "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history – any one-time event that happens to coincide with treatment.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough"
+      ]
     },
     {
       "stem": "A researcher conducts a 3 × 2 factorial ANOVA examining the effects of therapy type (CBT, ACT, IPT) and session frequency (weekly, biweekly) on depression scores. The results reveal a significant interaction effect but non-significant main effects for both therapy type and session frequency. Which of the following is the BEST interpretation?",
@@ -40,7 +43,12 @@
       "lessonExcerpt": "Interaction only: Neither therapy nor medication matters alone, but specific combinations work",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Factorial Designs: Testing Multiple Variables at Once",
+        "Single-Subject Designs: When One Person Is Enough",
+        "Quantitative Research: Three Main Types"
+      ]
     },
     {
       "stem": "A behavior analyst uses an ABAB reversal design to evaluate a token economy for reducing aggressive behavior in a child with conduct disorder. During both treatment phases, aggressive behavior decreases substantially. However, during the second baseline phase, aggressive behavior does NOT return to original baseline levels. What is the MOST likely methodological concern?",
@@ -61,7 +69,10 @@
       "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough"
+      ]
     },
     {
       "stem": "A clinical psychologist systematically tracks a single client's depressive symptoms across baseline and treatment phases, collecting repeated measurements and analyzing the data by visual inspection of graphed results. This approach is BEST classified as:",
@@ -82,7 +93,11 @@
       "lessonExcerpt": "Single-subject designs are powerful tools for clinical practice. They share key features: at least two phases: baseline (A) and treatment (B), multiple measurements during each phase, you don't start treatment until baseline is stable.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough",
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "A researcher is evaluating a new behavioral intervention for a single client using an AB design. During the treatment phase, a natural disaster occurs in the client's community, leading to a noticeable increase in stress-related behaviors. Which threat to internal validity is MOST relevant in this scenario, and why is this design particularly vulnerable to it?",
@@ -103,7 +118,10 @@
       "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history – any one-time event that happens to coincide with treatment.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough"
+      ]
     },
     {
       "stem": "A researcher conducts a 2 × 3 factorial ANOVA examining the effects of therapy type (CBT vs. psychodynamic) and session frequency (weekly, biweekly, monthly) on depression scores. The results reveal a significant interaction effect but NO significant main effects. Which interpretation is MOST appropriate?",
@@ -124,7 +142,11 @@
       "lessonExcerpt": "When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Factorial Designs: Testing Multiple Variables at Once",
+        "Single-Subject Designs: When One Person Is Enough"
+      ]
     },
     {
       "stem": "A clinician uses an ABAB withdrawal design to evaluate a token economy intervention for reducing aggressive outbursts in a child with conduct disorder. During the second baseline phase (second A), the child's aggressive behavior does NOT return to the original baseline level but remains partially reduced. What is the MOST likely methodological concern?",
@@ -145,7 +167,10 @@
       "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough"
+      ]
     },
     {
       "stem": "Single-subject experimental designs, such as the AB and ABAB designs, are considered examples of which methodological approach?",
@@ -166,7 +191,10 @@
       "lessonExcerpt": "- **Single-subject designs** (AB, ABAB, multiple baseline) are powerful for evaluating individual treatment effects",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough"
+      ]
     },
     {
       "stem": "In an ABAB design, what is the primary purpose of the sequential treatment phases?",
@@ -187,7 +215,12 @@
       "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough",
+        "The Big Picture: Qualitative vs. Quantitative",
+        "Quantitative Research: Three Main Types"
+      ]
     },
     {
       "stem": "In an ABAB design, what is the primary purpose of returning to the baseline phase after the intervention phase?",
@@ -208,7 +241,12 @@
       "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough",
+        "The Big Picture: Qualitative vs. Quantitative",
+        "Quantitative Research: Three Main Types"
+      ]
     },
     {
       "stem": "Which of the following is a common challenge faced in single-subject research design?",
@@ -229,7 +267,12 @@
       "lessonExcerpt": "**Single-subject designs** (AB, ABAB, multiple baseline) are powerful for evaluating individual treatment effects",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough",
+        "Quantitative Research: Three Main Types",
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "A 3 × 2 factorial ANOVA examining the effects of therapy type (CBT, ACT, IPT) and session frequency (weekly vs. biweekly) on depression scores yields a significant interaction effect but no significant main effects. Which of the following is the MOST appropriate interpretation?",
@@ -250,7 +293,12 @@
       "lessonExcerpt": "When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Factorial Designs: Testing Multiple Variables at Once",
+        "Single-Subject Designs: When One Person Is Enough",
+        "Quantitative Research: Three Main Types"
+      ]
     },
     {
       "stem": "A clinician uses an ABAB (withdrawal/reversal) design to evaluate a token economy system for reducing aggressive outbursts in a child. After the first treatment phase (B), the child's aggressive behavior decreases substantially. When the treatment is withdrawn for the second baseline phase (A), aggressive outbursts do NOT return to original baseline levels. The MOST likely explanation for this finding is:",
@@ -271,7 +319,10 @@
       "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough"
+      ]
     },
     {
       "stem": "A behavioral psychologist tracks a single client's frequency of panic attacks across baseline and treatment phases using an ABAB design. A colleague argues that the findings are limited because they cannot be generalized to a broader population. The behavioral psychologist's BEST response would be that single-subject designs:",
@@ -292,7 +343,10 @@
       "lessonExcerpt": "Single-subject designs are powerful tools for clinical practice. They share key features: at least two phases: baseline (A) and treatment (B), multiple measurements during each phase, you don't start treatment until baseline is stable.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough"
+      ]
     },
     {
       "stem": "Which qualitative research approach aims primarily to develop a general, abstract theory grounded in participants’ views through methods like interviews and observations?",
@@ -310,7 +364,11 @@
       "quality_comment": "The question clearly differentiates among qualitative approaches with plausible distractors, challenging test-takers to distinguish based on key goals and data collection methods.",
       "lessonExcerpt": "**Grounded Theory**: Researchers develop a theory by deeply listening to participants' experiences.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Picture: Qualitative vs. Quantitative",
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "A researcher is conducting a study comparing depressive symptoms following low, moderate, and high doses of an antidepressant, assigning different participants to each dose group randomly. Which research design is being used?",
@@ -328,7 +386,10 @@
       "quality_comment": "The scenario is clearly described and distractors are plausible but distinct, providing good discrimination of group design knowledge.",
       "lessonExcerpt": "Different groups get different treatments. Each person experiences only one condition.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "Which of the following triangulation types involves using multiple methods like interviews, questionnaires, and observations to collect data in order to increase the credibility of qualitative research findings?",
@@ -346,7 +407,10 @@
       "quality_comment": "Distractors represent real triangulation types, requiring test-takers to carefully differentiate their definitions, making this a challenging but fair item.",
       "lessonExcerpt": "| Methodological | Use multiple methods | Combine interviews, surveys, and observations of workplace stress |",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Quantitative Research: Three Main Types"
+      ]
     },
     {
       "stem": "In a multiple baseline design across behaviors, what is the main advantage compared to a reversal design?",
@@ -364,7 +428,11 @@
       "quality_comment": "The options contrast features of experimental designs well, ensuring test-takers must understand the practical advantages of design differences.",
       "lessonExcerpt": "Instead of withdrawing treatment, you apply it sequentially to different baselines (different behaviors, settings, or people).",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough",
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "Which developmental research design measures cognitive functioning in individuals aged 40, 50, 60, 70, and 80 years at one specific point in time?",
@@ -382,7 +450,12 @@
       "quality_comment": "Clear and straightforward, this question assesses a fundamental difference in developmental designs with plausible but distinguishable options.",
       "lessonExcerpt": "**Cross-sectional**: Compare different age groups at one time point.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Special Research Approaches",
+        "Single-Subject Designs: When One Person Is Enough",
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "Regarding probability sampling methods, which sampling technique involves dividing the population into subgroups based on relevant characteristics and then randomly sampling from each subgroup?",
@@ -400,7 +473,10 @@
       "quality_comment": "Options represent common probability sampling methods with clear definitions; the question is well-constructed to test precise knowledge.",
       "lessonExcerpt": "**Stratified random sampling**: {{M}}Imagine you're selecting participants and want to ensure various age groups are represented. You divide your population into age categories (strata), then randomly select from each category.{{/M}}",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sampling: Who's in Your Study?"
+      ]
     },
     {
       "stem": "What is the primary goal of Community-Based Participatory Research (CBPR)?",
@@ -418,7 +494,10 @@
       "quality_comment": "The distractors clearly contrast with key CBPR principles, making the correct answer stand out while testing conceptual understanding.",
       "lessonExcerpt": "CBPR is action research that aims to improve social problems by involving community members as equal partners throughout the research process.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Community-Based Participatory Research (CBPR)"
+      ]
     },
     {
       "stem": "What is the major limitation of randomized controlled trials (RCTs) that affects the generalizability of their results?",
@@ -436,7 +515,12 @@
       "quality_comment": "The question requires knowledge of strengths and weaknesses of RCT methodology, with plausible but distinct distractors enhancing test quality.",
       "lessonExcerpt": "The random assignment increases internal validity (confidence that the treatment caused the effect) but the strict conditions can limit external validity (generalizability to real-world settings).",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Quantitative Research: Three Main Types",
+        "Group Designs: Between, Within, and Mixed",
+        "Sampling: Who's in Your Study?"
+      ]
     },
     {
       "stem": "In qualitative research, what is the primary purpose of thematic analysis?",
@@ -454,7 +538,11 @@
       "quality_comment": "The question is straightforward with clear options, providing good differentiation between qualitative and quantitative methods.",
       "lessonExcerpt": "**Thematic Analysis**: This is the method where researchers identify recurring patterns or themes in their data.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Group Designs: Between, Within, and Mixed",
+        "The Big Picture: Qualitative vs. Quantitative"
+      ]
     },
     {
       "stem": "Which type of observation involves recording whether or not a behavior occurred during predefined intervals and is best suited for frequent behaviors without clear beginnings or ends?",
@@ -472,7 +560,10 @@
       "quality_comment": "Distractors include related but distinct observational methods, making this an effective test of detailed procedural knowledge.",
       "lessonExcerpt": "**Interval Recording** (also called time sampling): You divide observation time into chunks and note whether the behavior occurred in each chunk.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "Which sampling method involves selecting participants who are easiest to access, often leading to potential sampling bias?",
@@ -490,7 +581,10 @@
       "quality_comment": "The item clearly contrasts convenience sampling with other common sampling techniques, aiding differentiation and conceptual understanding.",
       "lessonExcerpt": "**Convenience sampling**: You use whoever's easily available.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sampling: Who's in Your Study?"
+      ]
     },
     {
       "stem": "What is a primary disadvantage of analogue research compared to naturalistic research settings?",
@@ -508,7 +602,11 @@
       "quality_comment": "The distractors reflect common research trade-off misconceptions, making the correct choice clear yet requiring understanding of validity concepts.",
       "lessonExcerpt": "**Disadvantage**: Worse external validity (findings may not generalize)",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Quantitative Research: Three Main Types",
+        "Factorial Designs: Testing Multiple Variables at Once"
+      ]
     },
     {
       "stem": "Which of the following is a key feature of cross-sequential developmental research design?",
@@ -526,7 +624,11 @@
       "quality_comment": "The item provides clear, distinct plausible options that require knowledge beyond basic developmental design definitions.",
       "lessonExcerpt": "**Cross-sequential**: Combine both approaches.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Single-Subject Designs: When One Person Is Enough",
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "Which qualitative research method focuses on understanding the lived experiences of individuals and often involves in-depth interviews?",
@@ -549,7 +651,11 @@
       ],
       "lessonExcerpt": "**Phenomenology**: This approach focuses on the lived experience of a phenomenon.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Picture: Qualitative vs. Quantitative",
+        "Quantitative Research: Three Main Types"
+      ]
     },
     {
       "stem": "In qualitative research, which method emphasizes the development of theories based on data collected from participants, often through iterative coding processes?",
@@ -572,7 +678,10 @@
       ],
       "lessonExcerpt": "**Grounded Theory**: Researchers develop a theory by deeply listening to participants' experiences.",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Group Designs: Between, Within, and Mixed"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies cluster sampling in research?",
@@ -593,7 +702,10 @@
       "lessonExcerpt": "**Cluster random sampling**: {{M}}Instead of randomly selecting individual users from all of Twitter (impossible), you randomly select specific hashtag communities, then sample from within those communities.{{/M}}",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Sampling: Who's in Your Study?"
+      ]
     },
     {
       "stem": "The Boston Process Approach differs from traditional neuropsychological batteries in that it:",
@@ -611,7 +723,10 @@
       "quality_comment": "Good differentiation between qualitative and quantitative assessment; distractors represent common misconceptions about standardized testing.",
       "lessonExcerpt": "Instead of just recording whether someone got the answer right, it focuses on *how* they arrived at their answer. This qualitative approach means you might modify standardized tests on the fly",
       "suggestedLesson": "7-research-designs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Picture: Qualitative vs. Quantitative"
+      ]
     }
   ]
 }

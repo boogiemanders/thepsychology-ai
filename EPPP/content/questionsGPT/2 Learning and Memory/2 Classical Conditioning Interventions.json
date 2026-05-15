@@ -19,7 +19,8 @@
       "lessonExcerpt": "Understanding these techniques will give you practical tools for treating anxiety disorders, phobias, PTSD, and addictive behaviors.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": null
     },
     {
       "stem": "What is the term for the process by which an individual becomes less responsive to a stimulus after repeated exposure?",
@@ -40,7 +41,10 @@
       "lessonExcerpt": "The response can be modified through new experiences.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "The Foundation: What Makes These Interventions Work"
+      ]
     },
     {
       "stem": "Which of the following best describes the importance of the therapeutic relationship in psychotherapy?",
@@ -61,7 +65,8 @@
       "lessonExcerpt": "Understanding these techniques will give you practical tools for treating anxiety disorders, phobias, PTSD, and addictive behaviors.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following environmental factors is most likely to influence eating behavior according to behavioral psychology?",
@@ -82,7 +87,10 @@
       "lessonExcerpt": "These aren't problems of logic or willpower. They're learned responses (automatic reactions the brain picked up through experience).",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Why Classical Conditioning Interventions Matter for Your Career"
+      ]
     },
     {
       "stem": "What distinguishes habituation from extinction in learning theories?",
@@ -103,7 +111,11 @@
       "lessonExcerpt": "Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "The Foundation: What Makes These Interventions Work",
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "Exposure with response prevention decreases anxiety by preventing the client from performing which of the following during exposure to the feared stimulus?",
@@ -121,7 +133,10 @@
       "quality_comment": "The question clearly targets a key mechanism in exposure therapy, and the distractors are related concepts, creating plausible distractors that test conceptual understanding.",
       "lessonExcerpt": "you expose the client to what they fear while preventing their usual escape or avoidance response.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "Which of the following best describes graded exposure in the context of exposure with response prevention?",
@@ -139,7 +154,10 @@
       "quality_comment": "Well-structured question with clear and distinct options to test understanding of graded exposure specifically.",
       "lessonExcerpt": "Graded Exposure | Start with mildly anxiety-provoking situations | Gradually work up to more challenging situations",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "In cue exposure therapy (CET) for substance use disorders, what is the primary process presumed to weaken the conditioned association between cues and substance use?",
@@ -157,7 +175,10 @@
       "quality_comment": "Options represent plausible interventions, requiring knowledge of CET's specific extinction mechanism, enhancing question quality.",
       "lessonExcerpt": "In cue exposure therapy, you expose your client to these triggers while preventing substance use.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "Implosive therapy differs from other exposure techniques primarily because it:",
@@ -175,7 +196,10 @@
       "quality_comment": "The distractors are distinct commonly used techniques, assisting discrimination and reinforcing conceptual clarity.",
       "lessonExcerpt": "This is flooding done in imagination with a psychodynamic twist. You have the client imagine their feared scenario but encourage them to exaggerate it to extreme levels.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "Which statement best summarizes current research findings regarding the role of rapid eye movements in Eye Movement Desensitization and Reprocessing (EMDR)?",
@@ -193,7 +217,10 @@
       "quality_comment": "This question effectively assesses nuanced understanding of the evidence regarding EMDR's mechanism, challenging but fair.",
       "lessonExcerpt": "Some studies find that eye movements add nothing, the benefit comes purely from repeated exposure to the traumatic memory - Other studies find eye movements do contribute to effectiveness",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Counterconditioning-Based Interventions: Creating New Connections"
+      ]
     },
     {
       "stem": "Systematic desensitization works by which primary classical conditioning mechanism according to Wolpe’s original description?",
@@ -211,7 +238,10 @@
       "quality_comment": "Clear and focused question with plausible distractors that test knowledge of key classical conditioning concepts.",
       "lessonExcerpt": "Wolpe believed this worked through reciprocal inhibition (his term for counterconditioning). You're replacing anxiety with relaxation by pairing the feared stimulus with something that produces calm.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Counterconditioning-Based Interventions: Creating New Connections"
+      ]
     },
     {
       "stem": "Research dismantling studies indicate that the effectiveness of systematic desensitization is largely due to which process?",
@@ -229,7 +259,10 @@
       "quality_comment": "The question highlights research nuance in treatment theory; distractors are conceptually related, increasing test rigor.",
       "lessonExcerpt": "However, dismantling studies (which test whether individual components are necessary) suggest it actually works through extinction.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Counterconditioning-Based Interventions: Creating New Connections"
+      ]
     },
     {
       "stem": "Which of the following statements about safety behaviors during exposure with response prevention is TRUE?",
@@ -247,7 +280,10 @@
       "quality_comment": "The question differentiates nuanced clinical application points; distractors include common misconceptions, enhancing discrimination.",
       "lessonExcerpt": "The client might think \"I only made it through because I had my water bottle\" rather than learning they can handle the situation on their own. This prevents full extinction of the fear response.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "Which of these best describes the difference between implosive therapy and systematic desensitization?",
@@ -265,7 +301,11 @@
       "quality_comment": "Cleverly juxtaposes two concepts with some overlapping features, requiring detailed knowledge for accurate selection.",
       "lessonExcerpt": "This is flooding done in imagination with a psychodynamic twist. You have the client imagine their feared scenario but encourage them to exaggerate it to extreme levels.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections",
+        "Counterconditioning-Based Interventions: Creating New Connections"
+      ]
     },
     {
       "stem": "Which of the following is a core assumption of the adaptive information processing (AIP) model upon which EMDR is based?",
@@ -283,7 +323,10 @@
       "quality_comment": "Well-formulated question testing understanding of a model underlying an intervention, with plausible and distinct distractors.",
       "lessonExcerpt": "EMDR is based on Shapiro's adaptive information processing model, which says trauma causes problems when the brain can't fully process or adaptively integrate traumatic experiences.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Counterconditioning-Based Interventions: Creating New Connections"
+      ]
     },
     {
       "stem": "In cue exposure therapy for substance use disorders, adding coping skills training primarily enhances treatment by:",
@@ -301,7 +344,10 @@
       "quality_comment": "The question connects theoretical mechanism with practical clinical enhancement, offering clear but nuanced options.",
       "lessonExcerpt": "The research shows this works better when combined with coping strategies. You're not just breaking the old connection; you're giving your client alternative responses.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "Which of the following best explains why graded exposure is generally preferred over flooding in clinical settings?",
@@ -319,7 +365,11 @@
       "quality_comment": "The question straightforwardly tests practical considerations in the application of classical conditioning interventions.",
       "lessonExcerpt": "Many clients refuse or drop out | Better completion rates",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections",
+        "Comparing the Major Approaches"
+      ]
     },
     {
       "stem": "In systematic desensitization, which response is inhibited to help reduce anxiety when a client is gradually exposed to a feared stimulus?",
@@ -342,7 +392,10 @@
       ],
       "lessonExcerpt": "Wolpe believed this worked through reciprocal inhibition (his term for counterconditioning). You're replacing anxiety with relaxation by pairing the feared stimulus with something that produces calm.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Counterconditioning-Based Interventions: Creating New Connections"
+      ]
     },
     {
       "stem": "During a cognitive-behavioral therapy session, a client is encouraged to confront their fears without engaging in safety behaviors. What is the primary goal of this approach?",
@@ -365,7 +418,10 @@
       ],
       "lessonExcerpt": "you expose the client to what they fear while preventing their usual escape or avoidance response.",
       "suggestedLesson": "2-classical-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "A clinical psychologist is comparing different theoretical models of addiction with a graduate student. How does the Alcoholics Anonymous (AA) model conceptualize the etiology of alcohol dependence?",
@@ -386,7 +442,8 @@
       "lessonExcerpt": "They also identify negative beliefs about themselves related to the trauma (\"I'm powerless\") and practice replacing these with adaptive beliefs (\"I did the best I could\"). **The controversy:** Does EMDR work because of the eye movements, or just because you're doing exposure in imagination?",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": null
     },
     {
       "stem": "A client with a severe blood-injection-injury phobia often becomes lightheaded and has nearly fainted during blood draws. In addition to exposure, which treatment component is especially indicated for this specific phobia subtype?",
@@ -406,7 +463,10 @@
       "suggestedParagraph": "### Special Case: Blood-Injection-Injury Type",
       "lessonExcerpt": "Treatment modification: Add applied tension to exposure. The person repeatedly tenses and relaxes large muscle groups to keep blood pressure elevated and prevent fainting.",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "relatedSections": [
+        "Counterconditioning-Based Interventions: Creating New Connections"
+      ]
     },
     {
       "stem": "A client with panic disorder says, \"The racing heart means I am about to die, so I avoid exercise, caffeine, and anything that makes my body feel activated.\" Which component of Panic Control Treatment would most directly target this fear?",
@@ -426,7 +486,10 @@
       "suggestedParagraph": "### Treatment: Panic Control Treatment",
       "lessonExcerpt": "Interoceptive exposure: Deliberately creating physical panic symptoms (running in place, spinning, breathing through a straw) to help the person learn these sensations aren't dangerous",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     },
     {
       "stem": "A graduate student is comparing different models of addiction. Which of the following best describes how Alcoholics Anonymous (AA) conceptualizes addiction?",
@@ -447,7 +510,8 @@
       "lessonExcerpt": "Research shows VBRT effectively promotes abstinence for cocaine, opiates, marijuana, and tobacco. But there's a catch: Effects often fade when vouchers stop.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": null
     },
     {
       "stem": "A psychologist is treating a client diagnosed with obsessive-compulsive disorder who engages in extensive hand-washing rituals triggered by contamination fears. The psychologist plans to use the most well-supported behavioral intervention for this condition. Which technique should the psychologist implement?",
@@ -468,7 +532,10 @@
       "lessonExcerpt": "Exposure with Response Prevention... is your workhorse intervention for anxiety disorders. The name tells you exactly what happens: you expose the client to what they fear while preventing their usual escape or avoidance response.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Extinction-Based Interventions: Breaking Old Connections"
+      ]
     }
   ]
 }

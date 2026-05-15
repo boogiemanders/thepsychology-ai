@@ -18,7 +18,10 @@
       "suggestedParagraph": "## Theory of Mind: Understanding Other Minds",
       "lessonExcerpt": "Theory of Mind (ToM) is the ability to attribute mental states (beliefs, desires, intentions) to others and use those attributions to predict behavior.",
       "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT"
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "relatedSections": [
+        "Theory of Mind: Understanding Other Minds"
+      ]
     },
     {
       "stem": "A child insists that a taller, narrower glass contains more juice than a shorter, wider glass even after watching the same amount of juice get poured from one glass into the other. Piaget would say the child's error is primarily due to:",
@@ -38,7 +41,10 @@
       "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
       "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others",
       "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT"
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A 14-year-old spends the entire school day convinced that everyone in class noticed a small ink stain on his sleeve and kept thinking about it. Piaget described this adolescent pattern as:",
@@ -58,7 +64,10 @@
       "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
       "lessonExcerpt": "Imaginary audience: Feeling like everyone's watching and judging you, like when you're convinced everyone at the meeting noticed your coffee stain when they probably didn't.",
       "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT"
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A 4-year-old child watches as a researcher pours water from a short, wide glass into a tall, narrow glass. The child insists that the tall glass now contains more water. This error is best explained by which characteristic of Piaget's preoperational stage?",
@@ -79,7 +88,10 @@
       "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others... The preoperational child will say the tall glass has more water because they focus on the water level, not the total amount.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A child who has learned the concept of \"dog\" by interacting with the family's golden retriever encounters a Labrador for the first time and immediately calls it a \"dog.\" According to Piaget, the child is engaging in the process of:",
@@ -100,7 +112,10 @@
       "lessonExcerpt": "**Assimilation** means fitting new information into existing mental frameworks (schemas).",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A 5-year-old child is shown two rows of eight pennies each, arranged identically. When the experimenter spreads out the pennies in one row so they cover a wider area, the child says that row now has \"more pennies.\" This error is BEST explained by Piaget's concept of:",
@@ -121,7 +136,10 @@
       "lessonExcerpt": "**Centration**: Focusing on one aspect while ignoring others",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A school psychologist is consulting with a second-grade teacher about a 7-year-old student who has recently begun organizing her rock collection by size, weight, and color simultaneously. She can also understand that rearranging the rocks in her collection does not change the total number. According to Piaget, this child's cognitive abilities are MOST consistent with the transition into which stage of development?",
@@ -142,7 +160,10 @@
       "lessonExcerpt": "Concrete Operational Stage (7 to 12 years) - Children can now use logical operations. Mental activities that allow logical thinking about concrete situations. They can: Classify objects by physical characteristics, Order items by quantitative dimensions, Perform mathematical operations, Conserve (finally!)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A 4-year-old child tells her father that the sun went to sleep because it was tired. This statement best illustrates which characteristic of preoperational thought?",
@@ -163,7 +184,10 @@
       "lessonExcerpt": "Animism: Attributing life to inanimate objects",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A child who insists that the wind is angry because it knocked over her bicycle is most likely in which of Piaget's stages of cognitive development?",
@@ -184,7 +208,10 @@
       "lessonExcerpt": "2. Preoperational Stage (2 to 7 years) ... Animism: Attributing life to inanimate objects",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A 72-year-old retired professor takes longer to recall names and learns new technology more slowly than before, but continues to lecture brilliantly on her area of expertise and maintains strong vocabulary skills. This pattern is MOST consistent with:",
@@ -205,7 +232,10 @@
       "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss. This process accelerates after age 60.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Cognition Across the Adult Lifespan"
+      ]
     },
     {
       "stem": "At what age do children typically begin to demonstrate operational thought according to Piaget's theory?",
@@ -226,7 +256,10 @@
       "lessonExcerpt": "Children can now use logical operations. Mental activities that allow logical thinking about concrete situations.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "At what stage of cognitive development, according to Piaget, do children begin to exhibit animistic thinking, where they attribute life to inanimate objects?",
@@ -247,7 +280,10 @@
       "lessonExcerpt": "2. Preoperational Stage (2 to 7 years) ... Animism: Attributing life to inanimate objects",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following is NOT one of Piaget's stages of cognitive development?",
@@ -268,7 +304,10 @@
       "lessonExcerpt": "Piaget proposed four universal stages that emerge in the same order for everyone.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "In Piaget's theory of cognitive development, what does the process of accommodation involve?",
@@ -289,7 +328,10 @@
       "lessonExcerpt": "Accommodation means changing your mental frameworks or creating new ones when the old ones don't work.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "What is a characteristic of egocentrism in Piaget's preoperational stage of cognitive development?",
@@ -310,7 +352,10 @@
       "lessonExcerpt": "Egocentrism: Difficulty understanding that others experience things differently.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "In Piaget's theory of cognitive development, which stage is characterized by the ability to perform operations mentally rather than physically?",
@@ -331,7 +376,10 @@
       "lessonExcerpt": "3. Concrete Operational Stage (7 to 12 years) Children can now use logical operations. Mental activities that allow logical thinking about concrete situations.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "What cognitive ability is primarily associated with the development of theory of mind in early childhood?",
@@ -352,7 +400,10 @@
       "lessonExcerpt": "Theory of Mind (ToM) is the ability to attribute mental states (beliefs, desires, intentions) to others and use those attributions to predict behavior.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Theory of Mind: Understanding Other Minds"
+      ]
     },
     {
       "stem": "According to Vygotsky's theory, what is the 'zone of proximal development'?",
@@ -373,7 +424,10 @@
       "lessonExcerpt": "The difference between what a child can do alone and what they can do with help.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "In Piaget's constructivist theory, what is the process called when a child modifies their existing schemas to incorporate new information?",
@@ -394,7 +448,10 @@
       "lessonExcerpt": "Accommodation means changing your mental frameworks or creating new ones when the old ones don't work.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "At what age do infants typically begin to demonstrate the understanding of object permanence, according to Piaget's theory?",
@@ -415,7 +472,10 @@
       "lessonExcerpt": "Object permanence begins around 8-12 months (substage 4).",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "During which stage of Piaget's cognitive development do children begin to engage in symbolic play and develop representational thought?",
@@ -436,7 +496,10 @@
       "lessonExcerpt": "2. Preoperational Stage (2 to 7 years) Representational thinking expands dramatically here. Children can think about the past and future, use language more complexly, and engage in sophisticated pretend play.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "In developmental psychology, what does the term 'decalage' refer to?",
@@ -457,7 +520,10 @@
       "lessonExcerpt": "Conservation skills emerge in a predictable sequence... This gradual emergence within a single stage is called horizontal decalage.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A developmental psychologist is evaluating a 5-year-old boy. She pours water from a short, wide container into a tall, narrow one and asks which has more. The child points to the tall container and says 'that one, it's higher.' The examiner also notes that the child insists his toy car 'feels sad' when it falls off the table and explains that it rained yesterday 'because I was mad.' According to Piaget, which stage is this child in and which combination of cognitive characteristics best explains these responses?",
@@ -478,7 +544,10 @@
       "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others. Irreversibility: Not understanding that actions can be undone. Animism: Attributing life to inanimate objects. The classic conservation test: Show a child two identical glasses with equal water. Pour one into a tall, narrow glass. The preoperational child will say the tall glass has more water because they focus on the water level, not the total amount.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A child who calls all round objects 'ball' encounters a globe for the first time. After her mother explains it is called a 'globe' and describes how it differs from a toy ball, the child creates a separate mental category for globe-like objects. According to Piaget, which cognitive process does this represent?",
@@ -499,7 +568,10 @@
       "lessonExcerpt": "Accommodation means changing your mental frameworks or creating new ones when the old ones don't work.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A 4-year-old watches as an experimenter pours water from a short, wide beaker into a tall, narrow cylinder and asks whether the amount of water changed. The child says 'there's more now because it's taller,' ignoring that the cylinder is narrower. According to Piaget, the specific cognitive limitation most directly responsible for this error is:",
@@ -520,7 +592,10 @@
       "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "According to Piaget's theory, what process occurs when a child modifies an existing cognitive schema to accommodate new information?",
@@ -538,7 +613,10 @@
       "quality_comment": "The question clearly tests a fundamental Piagetian concept, with distractors that are related but distinct, supporting effective assessment of understanding.",
       "lessonExcerpt": "Accommodation means changing your mental frameworks or creating new ones when the old ones don't work.",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "In Piaget's sensorimotor substages, which substage is characterized by the development of object permanence and intentional goal-directed behavior?",
@@ -556,7 +634,10 @@
       "quality_comment": "The distractors represent other substages in the sensorimotor period, making this question moderately challenging but fair.",
       "lessonExcerpt": "| Coordination of Secondary Reactions | 8-12 months | Combines actions intentionally to reach goals |",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which limitation of preoperational thought explains a child's difficulty understanding that the amount of liquid remains the same when poured into a differently shaped container?",
@@ -574,7 +655,10 @@
       "quality_comment": "Distractors are plausible Piagetian terms, enhancing the quality and discriminative power of the question.",
       "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others - Irreversibility: Not understanding that actions can be undone",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "According to Vygotsky's sociocultural theory, the 'zone of proximal development' refers to:",
@@ -592,7 +676,10 @@
       "quality_comment": "The stem is concise and the distractors are related but incorrect definitions, making it straightforward for exam-level learners.",
       "lessonExcerpt": "Zone of Proximal Development (ZPD): The gap between what someone can do independently and what they can do with assistance.",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following best describes the misinformation effect as it pertains to eyewitness testimony?",
@@ -610,7 +697,10 @@
       "quality_comment": "The choices include plausible memory-related concepts making it a well-constructed question testing important aspects of eyewitness reliability.",
       "lessonExcerpt": "The misinformation effect occurs when memories get altered by subsequent exposure to misleading information.",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Eyewitness Testimony: Memory's Fragility"
+      ]
     },
     {
       "stem": "In Piaget’s formal operational stage, which concept explains adolescents’ belief that they are the focus of everyone’s attention?",
@@ -628,7 +718,10 @@
       "quality_comment": "Distractors are related developmental concepts, but only one specifically describes this egocentric belief, making it a clear and fair question.",
       "lessonExcerpt": "Early formal operations bring renewed egocentrism: Imaginary audience: Feeling like everyone's watching and judging you",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies private speech as described by Vygotsky?",
@@ -646,7 +739,10 @@
       "quality_comment": "The distractors contrast with the concept of private speech, helping to test precise understanding of Vygotsky’s theory.",
       "lessonExcerpt": "Private speech is the verbal self-guidance children use aloud. Research confirms it's associated with better problem-solving and gradually becomes internal by age 7.",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following statements best describes 'horizontal decalage' in cognitive development?",
@@ -664,7 +760,10 @@
       "quality_comment": "The distractors are related cognitive concepts, increasing the complexity and making it appropriate for higher-difficulty assessment.",
       "lessonExcerpt": "This gradual emergence within a single stage is called horizontal decalage.",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following best describes the 'personal fable' in adolescent egocentrism?",
@@ -682,7 +781,10 @@
       "quality_comment": "Distractors are plausible adolescent concepts but clearly distinct from the personal fable, making it an accessible question.",
       "lessonExcerpt": "Personal fable: Believing you're uniquely special and invulnerable.",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which cognitive ability involves evaluating the logic of verbal statements without needing concrete examples and typically develops during Piaget’s formal operational stage?",
@@ -700,7 +802,10 @@
       "quality_comment": "The options contain related terms, requiring careful differentiation which enhances the question’s discriminative value.",
       "lessonExcerpt": "Use propositional thought: evaluating logical statements without concrete examples",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "Research on sex differences in cognitive abilities has consistently found which of the following patterns during adolescence?",
@@ -718,7 +823,10 @@
       "quality_comment": "The options are plausible but only one correctly states the consistent research findings, making it a quality question.",
       "lessonExcerpt": "| Verbal abilities | Girls score higher on speech fluency, reading, writing... | Visual-spatial abilities | Boys score higher, especially on mental rotation tasks |",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sex Differences in Cognitive Development"
+      ]
     },
     {
       "stem": "In which of Piaget's sensorimotor substages do infants begin to understand that objects continue to exist even when they cannot be seen?",
@@ -741,7 +849,10 @@
       ],
       "lessonExcerpt": "These sex differences aren't purely biological. They reflect social and cultural factors, including gender-role stereotypes that create self-fulfilling prophecies.",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "During which substage of Piaget's sensorimotor period do infants demonstrate the ability to combine actions to achieve a specific goal, reflecting an understanding of object permanence?",
@@ -764,7 +875,10 @@
       ],
       "lessonExcerpt": "Object permanence begins around 8-12 months (substage 4).",
       "suggestedLesson": "4-cognitive-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories You Need to Know"
+      ]
     },
     {
       "stem": "A parent asks their pediatric psychologist when they should begin toilet training their 14-month-old toddler. Based on developmental readiness research, the psychologist should advise that most children are physiologically ready for toilet training between:",
@@ -785,7 +899,8 @@
       "lessonExcerpt": "Six-month-olds remember information for about 24 hours; 20-month-olds for up to 12 months. But **childhood amnesia** blocks early memories.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": null
     }
   ]
 }

@@ -19,7 +19,11 @@
       "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Who Uses Mental Health Services? Understanding Utilization Patterns",
+        "Client-Therapist Matching: Does It Matter?"
+      ]
     },
     {
       "stem": "According to research on common factors in psychotherapy outcomes, which of the following contributes MOST to variance in therapy outcomes?",
@@ -40,7 +44,10 @@
       "lessonExcerpt": "Norcross and Lambert's research suggests this breakdown of what contributes to therapy outcomes: 30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "What Makes Therapy Work? The Common Factors Debate"
+      ]
     },
     {
       "stem": "A school psychologist consults with a teacher who consistently struggles to work effectively with students from a particular cultural background. The psychologist suspects the teacher's personal biases are interfering with her professional objectivity. According to Caplan's consultation model, this situation is BEST addressed through which type of consultation?",
@@ -61,7 +68,10 @@
       "lessonExcerpt": "Consultee-Centered Case Consultation shifts focus to building the consultee's skills... Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Mental Health Consultation: When Other Professionals Need Your Expertise"
+      ]
     },
     {
       "stem": "Dr. Okonkwo is reviewing the psychotherapy outcome literature to improve her clinical practice. According to Norcross and Lambert's research on common factors, which variable accounts for the largest identified portion of variance in therapy outcomes?",
@@ -82,7 +92,10 @@
       "lessonExcerpt": "Norcross and Lambert's research suggests this breakdown of what contributes to therapy outcomes: 30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method, 7% therapist characteristics, 3% other factors, 40% unexplained variance.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "What Makes Therapy Work? The Common Factors Debate"
+      ]
     },
     {
       "stem": "A psychologist is reviewing the literature on multicultural counseling to improve service delivery. Research on client-therapist ethnic matching indicates that matching has what pattern of effects?",
@@ -103,7 +116,10 @@
       "lessonExcerpt": "Matching has a moderate effect (.32) on how clients perceive their therapists but minimal effect (.09) on actual outcomes... cultural competence, compassion, and worldview alignment matter more than ethnic matching itself.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Client-Therapist Matching: Does It Matter?"
+      ]
     },
     {
       "stem": "A researcher is explaining the significance of Smith, Glass, and Miller's (1980) landmark meta-analysis to a class of graduate students. The average effect size of .85 found in their study indicates that:",
@@ -124,7 +140,11 @@
       "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Does Therapy Actually Work? The Evolution of Outcome Research",
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy"
+      ]
     },
     {
       "stem": "A psychiatry resident asks a clinical psychologist about the primary indication for electroconvulsive therapy (ECT). Based on current evidence, ECT is most commonly indicated as a treatment for:",
@@ -145,7 +165,12 @@
       "lessonExcerpt": "Electroconvulsive Therapy (ECT): The heavy hitter for severe depression. Response rates: ~80%. Remission rates: ~70%. Time to remission: 1-3 weeks.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "What Makes Therapy Work? The Common Factors Debate",
+        "Mental Health Consultation: When Other Professionals Need Your Expertise",
+        "Client-Therapist Matching: Does It Matter?"
+      ]
     },
     {
       "stem": "According to research on psychotherapy outcomes, which factor accounts for the largest identified proportion of variance in therapy outcomes?",
@@ -166,7 +191,11 @@
       "lessonExcerpt": "30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method, 7% therapist characteristics",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "What Makes Therapy Work? The Common Factors Debate",
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy"
+      ]
     },
     {
       "stem": "A school psychologist consults with a teacher who consistently believes that students from single-parent households are destined to fail academically, which interferes with her ability to effectively teach these students. According to Caplan's consultation model, this problem is best addressed through which type of consultation?",
@@ -187,7 +216,10 @@
       "lessonExcerpt": "Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Mental Health Consultation: When Other Professionals Need Your Expertise"
+      ]
     },
     {
       "stem": "According to research on common factors in psychotherapy outcomes, which therapist-related variable is most consistently identified as a significant predictor of positive therapeutic outcomes?",
@@ -208,7 +240,10 @@
       "lessonExcerpt": "These include the therapeutic alliance in individual, youth, and family psychotherapy; cohesion in group therapy; empathy; and collecting client feedback. Aspects deemed to be 'probably effective' included goal consensus, collaboration, and positive regard.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "What Makes Therapy Work? The Common Factors Debate"
+      ]
     },
     {
       "stem": "A clinical psychologist is reviewing research on ethnic matching in psychotherapy. According to the literature, what is the most accurate conclusion about matching clients and therapists by ethnicity?",
@@ -229,7 +264,10 @@
       "lessonExcerpt": "Matching has a moderate effect (.32) on how clients perceive their therapists but minimal effect (.09) on actual outcomes. Effects also vary by race/ethnicity, matching reduced premature termination for Asian, Hispanic, and European American clients but not African American clients, and only improved outcomes for Hispanic American clients.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Client-Therapist Matching: Does It Matter?"
+      ]
     },
     {
       "stem": "In Smith, Glass, and Miller's landmark 1980 meta-analysis of psychotherapy outcomes, what was the average effect size for psychotherapy compared to no treatment?",
@@ -250,7 +288,11 @@
       "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Does Therapy Actually Work? The Evolution of Outcome Research",
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy"
+      ]
     },
     {
       "stem": "A community mental health center establishes a halfway house program for individuals with severe mental illness who have completed inpatient psychiatric treatment. Residents receive social skills training, vocational rehabilitation, and ongoing medication management while gradually reintegrating into the community. This program is BEST classified as which level of prevention?",
@@ -271,7 +313,10 @@
       "lessonExcerpt": "Tertiary Prevention comes into play when someone already has a diagnosis. Your goal shifts to reducing severity, preventing relapse, and supporting rehabilitation. Social skills training for patients with schizophrenia, halfway houses for people transitioning from addiction treatment, and Alcoholics Anonymous meetings all fall under tertiary prevention.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "The Three Faces of Prevention: Stopping Problems Before They Start"
+      ]
     },
     {
       "stem": "A psychologist in a community health clinic is assigned a client who is HIV-positive, presents with moderate depression, and reports inconsistent adherence to antiretroviral therapy (ART). Which clinical consideration should most directly guide the structure of the psychologist's intervention?",
@@ -292,7 +337,12 @@
       "lessonExcerpt": "Whether you're dreaming of private practice, working in a hospital, or joining a community mental health center, this knowledge shapes how you'll help people every single day.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Understanding Prevention, Consultation, and Psychotherapy Research: Your Complete Guide",
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy",
+        "What Makes Therapy Work? The Common Factors Debate"
+      ]
     },
     {
       "stem": "A researcher reviewing meta-analytic studies on psychotherapy outcome finds that one category of variables consistently accounts for the largest proportion of outcome variance across treatment modalities. Which category does the literature most strongly identify as the primary predictor of psychotherapy success?",
@@ -313,7 +363,12 @@
       "lessonExcerpt": "- **Common factors matter more than technique**: Patient contributions (30%) and therapeutic relationship (12%) outweigh specific treatment method (8%) in predicting outcomes",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "What Makes Therapy Work? The Common Factors Debate",
+        "Client-Therapist Matching: Does It Matter?",
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy"
+      ]
     },
     {
       "stem": "A psychologist is consulting with a school counselor who consistently reports that students from homes with frequent parental conflict are 'destined to fail' and approaches these students with obvious pessimism, despite no objective evidence supporting this conclusion. The psychologist observes that this rigid belief undermines the counselor's clinical judgment specifically with this population. According to Caplan's consultation model, which type of consultation is indicated, and what is the primary obstacle requiring intervention?",
@@ -334,7 +389,10 @@
       "lessonExcerpt": "Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Mental Health Consultation: When Other Professionals Need Your Expertise"
+      ]
     },
     {
       "stem": "A client who recently began attending Alcoholics Anonymous states: 'I used to think I was just weak-willed and could stop if I really tried. Now I understand I have a condition — I literally cannot drink even one glass of wine without losing control. It's not about willpower.' This statement most directly reflects which foundational premise of AA's theoretical framework?",
@@ -355,7 +413,12 @@
       "lessonExcerpt": "Alcoholics Anonymous meetings all fall under tertiary prevention. You're managing an existing condition and preventing it from getting worse.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "The Three Faces of Prevention: Stopping Problems Before They Start",
+        "Client-Therapist Matching: Does It Matter?",
+        "Does Therapy Actually Work? The Evolution of Outcome Research"
+      ]
     },
     {
       "stem": "A first-year doctoral student is reviewing Smith, Glass, and Miller's seminal 1980 meta-analysis of psychotherapy outcome research. Her supervisor tells her: 'The average treated client in that study fared better than approximately 80 percent of untreated controls — a finding that established psychotherapy's overall efficacy beyond reasonable scientific doubt.' Which numerical effect size corresponds to this benchmark?",
@@ -376,7 +439,12 @@
       "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy",
+        "Does Therapy Actually Work? The Evolution of Outcome Research",
+        "Client-Therapist Matching: Does It Matter?"
+      ]
     },
     {
       "stem": "Following a six-month psychiatric hospitalization for treatment-resistant bipolar disorder, a patient is referred to a supported housing program where staff provide daily living skills coaching, facilitate gradual reintegration into community activities, and coordinate outpatient follow-up care. The treatment team explicitly emphasizes relapse prevention and functional rehabilitation as the program's goals. According to Caplan's classic prevention framework, this program is best classified as:",
@@ -397,7 +465,10 @@
       "lessonExcerpt": "Tertiary Prevention comes into play when someone already has a diagnosis. Your goal shifts to reducing severity, preventing relapse, and supporting rehabilitation. Social skills training for patients with schizophrenia, halfway houses for people transitioning from addiction treatment, and Alcoholics Anonymous meetings all fall under tertiary prevention.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "The Three Faces of Prevention: Stopping Problems Before They Start"
+      ]
     },
     {
       "stem": "According to Caplan's model of prevention, which type of prevention aims to reduce the occurrence of new cases of a disorder by targeting entire populations or groups regardless of risk status?",
@@ -415,7 +486,11 @@
       "quality_comment": "The stem is clear and the distractors are plausible but conceptually distinct, making this a solid question for assessing key prevention concepts.",
       "lessonExcerpt": "**Primary Prevention** targets everyone, not just people who are struggling. The goal is stopping new cases from developing in the first place. These programs cast a wide net.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three Faces of Prevention: Stopping Problems Before They Start",
+        "Who Uses Mental Health Services? Understanding Utilization Patterns"
+      ]
     },
     {
       "stem": "Which of the following describes client-centered case consultation as defined by Caplan?",
@@ -433,7 +508,12 @@
       "quality_comment": "Options are carefully crafted to represent different consultation types, requiring nuanced understanding of Caplan's consultation model.",
       "lessonExcerpt": "**Client-Centered Case Consultation** focuses on solving a problem with a specific client. You review the case and provide recommendations that will directly benefit that client. Your goal is giving the consultee a workable plan for this particular situation.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Mental Health Consultation: When Other Professionals Need Your Expertise",
+        "Who Uses Mental Health Services? Understanding Utilization Patterns",
+        "Understanding Prevention, Consultation, and Psychotherapy Research: Your Complete Guide"
+      ]
     },
     {
       "stem": "Which psychotherapy outcome model proposes three distinct phases: remoralization, remediation, and rehabilitation?",
@@ -451,7 +531,12 @@
       "quality_comment": "Distractors are plausible psychotherapy concepts, correctly assessing detailed knowledge of outcome models.",
       "lessonExcerpt": "The **Phase Model** describes therapy as moving through three stages: 1. **Remoralization** (first few sessions): Hope increases 2. **Remediation** (next 16 sessions): Symptoms decrease 3. **Rehabilitation** (later sessions)",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Does Therapy Actually Work? The Evolution of Outcome Research",
+        "What Makes Therapy Work? The Common Factors Debate",
+        "Modern Advances in Treatment Delivery and Monitoring"
+      ]
     },
     {
       "stem": "In Gordon's model of prevention, what type of prevention targets individuals who have minimal signs or symptoms of a disorder but have not yet received a diagnosis?",
@@ -469,7 +554,12 @@
       "quality_comment": "Clear presentation with distractors varying in prevention type and level of risk, effective for EPPP learners.",
       "lessonExcerpt": "**Indicated Prevention** goes even further. You're working with individuals showing early warning signs of a disorder but who don't meet full diagnostic criteria yet.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three Faces of Prevention: Stopping Problems Before They Start",
+        "What Makes Therapy Work? The Common Factors Debate",
+        "Who Uses Mental Health Services? Understanding Utilization Patterns"
+      ]
     },
     {
       "stem": "Which of the following statements best describes the findings of Smith, Glass, and Miller's meta-analysis on psychotherapy outcomes?",
@@ -487,7 +577,12 @@
       "quality_comment": "Stem is straightforward; distractors include common misconceptions that challenge examinees' knowledge of evidence-appraisal.",
       "lessonExcerpt": "Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Does Therapy Actually Work? The Evolution of Outcome Research",
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy",
+        "Modern Advances in Treatment Delivery and Monitoring"
+      ]
     },
     {
       "stem": "Routine outcome monitoring (ROM) in clinical practice primarily involves:",
@@ -505,7 +600,10 @@
       "quality_comment": "Good clarity with distractors that probe common misunderstandings about how ROM is practiced.",
       "lessonExcerpt": "ROM (also called feedback-informed treatment or measurement-based care) involves four components: 1. Regularly administered measures before each session 2. Practitioner reviews data 3. Patient reviews data 4. Collaborative treatment plan adjustments based on data",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Modern Advances in Treatment Delivery and Monitoring"
+      ]
     },
     {
       "stem": "Which economic evaluation method compares the costs and benefits of interventions by converting both into monetary terms?",
@@ -523,7 +621,12 @@
       "quality_comment": "Options are related economic terms, requiring precise knowledge of health economics terminology.",
       "lessonExcerpt": "**Cost-Benefit Analysis (CBA)** expresses both costs and benefits in monetary terms.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Economics of Therapy: Does It Save Money?",
+        "Does Therapy Actually Work? The Evolution of Outcome Research",
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy"
+      ]
     },
     {
       "stem": "Which of the following best describes the social model of disability?",
@@ -541,7 +644,12 @@
       "quality_comment": "Options clearly differentiate between models, testing knowledge of disability conceptual frameworks.",
       "lessonExcerpt": "**Social Model**: Views disabilities as differences, not deficiencies, caused primarily by societal barriers (negative attitudes, discrimination, architectural barriers).",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy",
+        "Models of Disability: Shifting Perspectives",
+        "What Makes Therapy Work? The Common Factors Debate"
+      ]
     },
     {
       "stem": "Research on client-therapist racial/ethnic matching suggests that:",
@@ -559,7 +667,10 @@
       "quality_comment": "The question incorporates nuanced research findings and distractors address related confounds.",
       "lessonExcerpt": "Matching has a moderate effect (.32) on how clients perceive their therapists but minimal effect (.09) on actual outcomes.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Client-Therapist Matching: Does It Matter?"
+      ]
     },
     {
       "stem": "Which of the following is a primary advantage of transdiagnostic treatments compared to diagnosis-specific interventions?",
@@ -577,7 +688,12 @@
       "quality_comment": "Distractors are plausible but incorrect, emphasizing key benefits of transdiagnostic approaches.",
       "lessonExcerpt": "These treatments target commonalities across multiple diagnoses rather than focusing on single disorders. The premise: shared mechanisms matter more than diagnostic differences. Benefits include reduced training costs and better handling of comorbidities.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Modern Advances in Treatment Delivery and Monitoring",
+        "What Makes Therapy Work? The Common Factors Debate",
+        "Client-Therapist Matching: Does It Matter?"
+      ]
     },
     {
       "stem": "Which model of stepped care for depression prioritizes the least restrictive but effective treatments first and systematically monitors treatment response to adjust care?",
@@ -595,7 +711,11 @@
       "quality_comment": "The stem clearly defines the model, and distractors represent other models for differentiation.",
       "lessonExcerpt": "Stepped care delivers the least restrictive treatment likely to produce significant benefit, with systematic monitoring and \"stepping up\" if needed.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Modern Advances in Treatment Delivery and Monitoring",
+        "Mental Health Consultation: When Other Professionals Need Your Expertise"
+      ]
     },
     {
       "stem": "In research assessing telepsychology for anxiety disorders, which statement is best supported?",
@@ -613,7 +733,12 @@
       "quality_comment": "Distractors probe common misconceptions about teletherapy, forcing examinees to recall empirical findings.",
       "lessonExcerpt": "**Anxiety Disorders**: Videoconference-delivered CBT shows effectiveness comparable to in-person therapy for panic disorder, generalized anxiety disorder, and social anxiety disorder.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Modern Advances in Treatment Delivery and Monitoring",
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy",
+        "Does Therapy Actually Work? The Evolution of Outcome Research"
+      ]
     },
     {
       "stem": "Eysenck’s 1952 review concluded that:",
@@ -631,7 +756,12 @@
       "quality_comment": "Question addresses a historical, controversial study with plausible distractors, requiring recall of detailed content.",
       "lessonExcerpt": "Hans Eysenck dropped a controversial paper claiming psychotherapy was not just ineffective but potentially harmful.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy",
+        "Does Therapy Actually Work? The Evolution of Outcome Research",
+        "Modern Advances in Treatment Delivery and Monitoring"
+      ]
     },
     {
       "stem": "What is the primary focus of treatment fidelity in psychotherapy research and practice?",
@@ -649,7 +779,11 @@
       "quality_comment": "The stem is clear and straightforward; distractors are related concepts but clearly distinct.",
       "lessonExcerpt": "Treatment fidelity measures how well a treatment is delivered as intended, affected by therapist adherence to protocols and competence.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Client-Therapist Matching: Does It Matter?",
+        "Modern Advances in Treatment Delivery and Monitoring"
+      ]
     },
     {
       "stem": "Which of the following best describes the WEIRD sampling bias in psychological research?",
@@ -667,7 +801,12 @@
       "quality_comment": "Distractors are plausible potential biases; the question requires specific knowledge of sampling biases.",
       "lessonExcerpt": "**WEIRD sampling bias** refers to over-reliance on samples from Western, Educated, Industrialized, Rich, and Democratic cultures. Research derived primarily from WEIRD samples may have limited generalizability.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Efficacy vs. Effectiveness: Two Ways to Study Therapy",
+        "Modern Advances in Treatment Delivery and Monitoring",
+        "Who Uses Mental Health Services? Understanding Utilization Patterns"
+      ]
     },
     {
       "stem": "Which of the following is an important benefit of interprofessional collaboration (IPC) in primary care settings?",
@@ -685,7 +824,11 @@
       "quality_comment": "Distractors include plausible but incorrect ideas about IPC, requiring examinees to understand nuanced research outcomes.",
       "lessonExcerpt": "IPC shows particular promise for older adults with complex healthcare needs (often called integrated care in this context). Evidence suggests integrated care increases access, boosts satisfaction, and reduces emergency visits, hospitalizations, and long-term care placements.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Mental Health Consultation: When Other Professionals Need Your Expertise",
+        "Interprofessional Collaboration: The Team Approach"
+      ]
     },
     {
       "stem": "Health promotion strategies in psychological interventions primarily aim to:",
@@ -703,7 +846,11 @@
       "quality_comment": "Distractors contrast stages of intervention to ensure understanding of health promotion's proactive nature.",
       "lessonExcerpt": "**Primary Prevention** targets everyone, not just people who are struggling. The goal is stopping new cases from developing in the first place.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three Faces of Prevention: Stopping Problems Before They Start",
+        "Who Uses Mental Health Services? Understanding Utilization Patterns"
+      ]
     },
     {
       "stem": "In the context of public health, which type of intervention is designed to prevent the onset of mental health disorders in the general population before any symptoms appear?",
@@ -726,7 +873,12 @@
       ],
       "lessonExcerpt": "**Universal Prevention** reaches everyone in a population without screening for risk.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Who Uses Mental Health Services? Understanding Utilization Patterns",
+        "The Three Faces of Prevention: Stopping Problems Before They Start",
+        "Mental Health Consultation: When Other Professionals Need Your Expertise"
+      ]
     },
     {
       "stem": "Which prevention strategy focuses on reducing the incidence of mental health disorders by implementing programs that target all individuals in a community, regardless of their risk factors?",
@@ -749,7 +901,12 @@
       ],
       "lessonExcerpt": "**Universal Prevention** reaches everyone in a population without screening for risk. A drug abuse prevention program delivered to every single high school student in a district? That's universal.",
       "suggestedLesson": "6-prevention-and-consultation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Who Uses Mental Health Services? Understanding Utilization Patterns",
+        "The Three Faces of Prevention: Stopping Problems Before They Start",
+        "What Makes Therapy Work? The Common Factors Debate"
+      ]
     },
     {
       "stem": "A psychologist is evaluating a 10-year-old boy referred for academic difficulties. Testing reveals average intelligence but significant reading deficits. Which of the following is MOST accurate regarding specific learning disorder with impairment in reading?",
@@ -770,7 +927,12 @@
       "lessonExcerpt": "About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder. The most common reading disorder is dyslexia, and the most common type of dys",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "What Makes Therapy Work? The Common Factors Debate",
+        "Models of Disability: Shifting Perspectives",
+        "Moderators of Therapy Outcomes: What Really Matters?"
+      ]
     }
   ]
 }

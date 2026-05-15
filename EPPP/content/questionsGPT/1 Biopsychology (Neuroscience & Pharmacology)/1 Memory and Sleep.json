@@ -19,7 +19,10 @@
       "lessonExcerpt": "The thalamus plays a role in memory processing, and damage here can cause both anterograde amnesia (inability to form new memories) and retrograde amnesia (loss of past memories).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Patient H.M. underwent bilateral removal of the hippocampus and surrounding medial temporal lobe structures to treat intractable seizures. Following surgery, which of the following patterns best characterizes his memory deficits?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Patient H.M. underwent bilateral removal of the hippocampus to treat severe seizures. Following surgery, which pattern of memory impairment was observed?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "A researcher is reviewing an EEG recording from a participant who is sitting quietly with their eyes closed but is awake and relaxed. Which brain wave pattern would be MOST prominent in this recording?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "This is that drowsy state when you're just nodding off. Your alpha waves (present when you're awake and relaxed) shift to theta waves.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "A 54-year-old man undergoes surgical resection of bilateral medial temporal lobe structures, including the hippocampi, to control intractable seizures. Following the procedure, neuropsychological testing reveals that he can carry on a normal conversation, learn to trace a figure while looking in a mirror, and recall childhood memories with reasonable accuracy. However, he is unable to remember the names of his new nurses or recall what he ate for breakfast. Which of the following best characterizes this patient's memory profile?",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "A sleep researcher is monitoring a participant's brain activity using EEG. The participant is sitting upright, actively solving complex math problems, and appears highly focused. Which type of brain wave pattern would the EEG MOST likely display?",
@@ -124,7 +139,10 @@
       "lessonExcerpt": "Stage R (REM sleep) is called **paradoxical sleep** for good reason. Your brain shows beta waves (normally associated with being awake and alert) and theta waves.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "A research participant is part of a sleep deprivation study in which she is selectively awakened each time polysomnography indicates she has entered REM sleep. After several nights of this protocol, what change in sleep architecture would MOST likely be observed when the participant is finally allowed to sleep without interruption?",
@@ -145,7 +163,10 @@
       "lessonExcerpt": "As the night progresses, your REM periods get longer and your N3 periods get shorter.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "A patient with narcolepsy reports experiencing vivid, dreamlike visual scenes of unfamiliar people in the room just as she begins to fall asleep each night. These experiences are MOST consistent with:",
@@ -166,7 +187,10 @@
       "lessonExcerpt": "Stage N1: The Transition Zone — This is that drowsy state when you're just nodding off.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "Clinical Relevance"
+      ]
     },
     {
       "stem": "How does interrupted sleep primarily affect the dreaming process?",
@@ -187,7 +211,11 @@
       "lessonExcerpt": "Total sleep time gradually decreases from those 14-16 hours in infancy to approximately 8 hours in adulthood. The proportion of REM sleep also decreases.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Sleep: More Than Just Rest",
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "What is a common change in sleep patterns observed in older adults?",
@@ -208,7 +236,10 @@
       "lessonExcerpt": "- Less time in deep (N3) sleep - More evenly distributed REM sleep throughout the night (rather than concentrated toward morning)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Sleep Across the Lifespan"
+      ]
     },
     {
       "stem": "How does REM sleep change across the lifespan?",
@@ -229,7 +260,10 @@
       "lessonExcerpt": "Newborns sleep 14-16 hours per day and spend much more time in REM sleep than adults do. Total sleep time gradually decreases from those 14-16 hours in infancy to approximately 8 hours in adulthood. The proportion of REM sleep also decreases.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Sleep Across the Lifespan"
+      ]
     },
     {
       "stem": "Following bilateral medial temporal lobe surgery that included removal of both hippocampi, a 27-year-old man can hold a brief conversation, recognize his family members, and improve his performance on a mirror-tracing task across daily sessions — yet he cannot recall meeting the hospital staff that morning. This dissociation most directly reflects the hippocampus's role in:",
@@ -250,7 +284,10 @@
       "lessonExcerpt": "the hippocampus serves as a consolidation hub. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "During a polysomnography study, a participant is asked to lie quietly with eyes closed before attempting sleep. The technician observes a regular, synchronized EEG pattern at approximately 10 Hz with moderate amplitude. The participant reports feeling calm and mentally relaxed without any tendency toward drowsiness. Which brain wave pattern is being recorded?",
@@ -271,7 +308,10 @@
       "lessonExcerpt": "This is that drowsy state when you're just nodding off. Your alpha waves (present when you're awake and relaxed) shift to theta waves.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "A 34-year-old patient undergoes bilateral medial temporal lobectomy to treat intractable seizures. Following surgery, neuropsychological testing reveals that he performs within normal limits on a digit span task and can acquire a new motor sequence through repeated practice sessions. However, despite meeting his neurologist three times per week for six months, he cannot recall her name, her face, or any details of their previous appointments. This dissociation in memory functioning MOST directly demonstrates which principle?",
@@ -292,7 +332,10 @@
       "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you… the hippocampus serves as a consolidation hub. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "A graduate student studies a dense chapter on neuroanatomy and then immediately goes to sleep. Her roommate studies the same material but stays awake watching television for several hours before going to bed. When both are tested the next morning, the student who slept immediately after studying performs significantly better. This finding is BEST explained by:",
@@ -313,7 +356,11 @@
       "lessonExcerpt": "Study before sleep: Memory consolidation happens during sleep, particularly during slow-wave sleep. Reviewing challenging material before bed may enhance retention.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "How Memories Get Made: The Neural Level",
+        "Sleep: More Than Just Rest"
+      ]
     },
     {
       "stem": "Which brain area is primarily responsible for the consolidation of long-term declarative memories and spatial memory?",
@@ -331,7 +378,10 @@
       "quality_comment": "The stem is straightforward with plausible distractors representing different memory-related brain structures, clearly testing memory system knowledge.",
       "lessonExcerpt": "This tragic case taught us that the hippocampus serves as a **consolidation hub**. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Damage to which brain area would most likely impair procedural memory and skill learning while leaving declarative memory mostly intact?",
@@ -349,7 +399,10 @@
       "quality_comment": "Distractors are relevant brain areas involved in other memory types, providing a challenging but clear test of procedural memory knowledge.",
       "lessonExcerpt": "While the hippocampus handles facts and events, the basal ganglia and cerebellum specialize in **procedural memories**, the \"how to do things\" memories that run automatically without conscious thought.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Which of the following best characterizes memory impairments seen in patient H.M. following bilateral medial temporal lobe resection?",
@@ -367,7 +420,10 @@
       "quality_comment": "The question is well-constructed and uses a classic clinical example with plausible distractors making it suitable for EPPP review.",
       "lessonExcerpt": "This tragic case taught us that the hippocampus serves as a **consolidation hub**. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Long-term potentiation (LTP), believed to underlie long-term memory formation, was first discovered in which brain region?",
@@ -385,7 +441,10 @@
       "quality_comment": "Distractors are relevant brain areas involved in memory but only one was where LTP was first discovered, providing a focused challenge.",
       "lessonExcerpt": "Researchers found similar processes in humans and called it **long-term potentiation (LTP)**. This phenomenon was first observed in glutamate receptors in the hippocampus but later found in other areas like the amygdala and entorhinal cortex.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Memories Get Made: The Neural Level"
+      ]
     },
     {
       "stem": "During which sleep stage are K-complexes and sleep spindles most prominently observed?",
@@ -403,7 +462,10 @@
       "quality_comment": "Options include all main sleep stages with specific EEG features, allowing test-takers to demonstrate detailed understanding.",
       "lessonExcerpt": "- **K-complexes**: Large, slow waves During N2, your muscles relax, body temperature drops, breathing slows, and heart rate decreases. This stage makes up the majority of your night's sleep.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "Which statement best describes REM sleep characteristics?",
@@ -421,7 +483,10 @@
       "quality_comment": "Each option correctly describes features of different sleep stages, making it a good discriminating question.",
       "lessonExcerpt": "Brain waves | High-amplitude, low-frequency (theta, delta) | Low-amplitude, high-frequency (beta, theta)",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "Which brain region is most implicated in attaching emotional significance to memories, such that damage here abolishes the enhanced recall of emotional over neutral experiences?",
@@ -439,7 +504,10 @@
       "quality_comment": "Distractors are other memory-related brain areas, enhancing the question’s specificity regarding emotion-memory interaction.",
       "lessonExcerpt": "The amygdala does something fascinating: it attaches emotional significance to your memories. Research shows that people with functioning amygdalas remember emotional experiences more vividly than neutral ones.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Which age-related change in sleep is correct?",
@@ -457,7 +525,10 @@
       "quality_comment": "Distractors include common misconceptions about sleep changes, making this a good item to test developmental sleep knowledge.",
       "lessonExcerpt": "- More difficulty falling asleep - Less time in deep (N3) sleep - More evenly distributed REM sleep throughout the night (rather than concentrated toward morning) - More frequent nighttime awakenings - **Advanced sleep phase** (also called circadian phase advance): Going to sleep earlier and waking ",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep Across the Lifespan"
+      ]
     },
     {
       "stem": "Which neurotransmitter was found by Kandel’s research on Aplysia to increase during short-term memory formation?",
@@ -475,7 +546,10 @@
       "quality_comment": "Options are plausible neurotransmitters involved in learning, offering a well-constructed question on neurobiology of memory.",
       "lessonExcerpt": "1. **Short-term storage** involved increased release of the neurotransmitter serotonin 2. **Long-term storage** involved actual physical changes. New synapses formed, and existing neurons changed structure",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Memories Get Made: The Neural Level"
+      ]
     },
     {
       "stem": "What effect does administering a drug that inhibits RNA synthesis around the time of training have on memory formation?",
@@ -493,7 +567,10 @@
       "quality_comment": "Clear stem and correct use of neuroscience terms make this a strong question on memory physiology.",
       "lessonExcerpt": "For long-term memory formation, your brain needs to synthesize RNA, which is necessary for creating proteins that build these new connections. Studies have shown that blocking RNA synthesis prevents long-term memory formation while leaving short-term memory intact.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Memories Get Made: The Neural Level"
+      ]
     },
     {
       "stem": "Which of the following best describes the transition and EEG activity in sleep stage N1?",
@@ -511,7 +588,10 @@
       "quality_comment": "Well-phrased with clear EEG characteristics, making it an effective question for basic sleep stage identification.",
       "lessonExcerpt": "Theta waves continue, but now they're interrupted by two distinctive features: - **Sleep spindles**: Sudden bursts of moderately fast waves - **K-complexes**: Large, slow waves",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "Which brain area is integral to working memory, item memory, and source memory, including remembering what happened and where/when it happened?",
@@ -529,7 +609,10 @@
       "quality_comment": "Distractors are involved in other memory functions, making the question appropriately challenging and focused on prefrontal-associated memory.",
       "lessonExcerpt": "**Practice retrieval, not just recognition**: Your prefrontal cortex manages working memory and strategic retrieval. Testing yourself (retrieval practice) strengthens memories more than simply rereading material.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Which sleep theory proposes that sleep’s primary function is to repair damage accumulated during waking hours?",
@@ -547,7 +630,10 @@
       "quality_comment": "Options include related theories with subtle differences, but the correct choice clearly fits the content, suitable for foundational sleep theory knowledge.",
       "lessonExcerpt": "1. **Recovery/restoration theories**: Sleep repairs damage from being awake 2. **Adaptive/evolutionary theories**: Sleep helps us conserve energy and stay safe from environmental threats",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep: More Than Just Rest"
+      ]
     },
     {
       "stem": "Which statement best describes the typical pattern of sleep stage duration changes across a single night?",
@@ -565,7 +651,10 @@
       "quality_comment": "Distractors are plausible but incorrect sleep pattern descriptions that require detailed sleep knowledge, enhancing discrimination.",
       "lessonExcerpt": "But here's the important detail for the EPPP: **As the night progresses, your REM periods get longer and your N3 periods get shorter**. Your first REM period might last only 10 minutes, while your final one could last 30-60 minutes.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "Which brain structure’s damage can cause both anterograde and retrograde amnesia due to its involvement in memory processing?",
@@ -583,7 +672,10 @@
       "quality_comment": "Good use of a less commonly tested memory-related brain region, which broadens knowledge evaluation beyond hippocampus and amygdala.",
       "lessonExcerpt": "The thalamus plays a role in memory processing, and damage here can cause both anterograde amnesia (inability to form new memories) and retrograde amnesia (loss of past memories).",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Which brain structure is essential for the formation of new long-term memories, particularly in learning contexts?",
@@ -606,7 +698,10 @@
       ],
       "lessonExcerpt": "This tragic case taught us that the hippocampus serves as a **consolidation hub**. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "In a study examining the effects of sleep on memory retention, which brain region would researchers focus on to understand the consolidation of spatial memories?",
@@ -629,7 +724,10 @@
       ],
       "lessonExcerpt": "This tragic case taught us that the hippocampus serves as a **consolidation hub**. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "Which type of brain wave activity is typically observed during focused cognitive tasks?",
@@ -650,7 +748,10 @@
       "lessonExcerpt": "Stage R (REM sleep) is called **paradoxical sleep** for good reason. Your brain shows beta waves (normally associated with being awake and alert) and theta waves.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "Which brain region is primarily involved in the interpretation of emotional stimuli?",
@@ -671,7 +772,10 @@
       "lessonExcerpt": "The amygdala does something fascinating: it attaches emotional significance to your memories.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "What phenomenon occurs during the transition from wakefulness to sleep, often involving vivid auditory or visual hallucinations?",
@@ -692,7 +796,10 @@
       "lessonExcerpt": "This processes sound. Damage can cause: - Auditory agnosia (hearing sounds but not recognizing what they are) - Auditory hallucinations - Cortical deafness (the ears work fine, but the brain can't process the signals)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "Clinical Relevance"
+      ]
     },
     {
       "stem": "Which brain structure, when lesioned, is most likely to disrupt the regulation of sleep, particularly REM sleep?",
@@ -713,7 +820,11 @@
       "lessonExcerpt": "The pons... regulates sleep, particularly deep sleep and REM sleep.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Sleep: More Than Just Rest",
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "Which subcortical forebrain structure plays a key role in transferring declarative memories from short-term to long-term storage and spatial memory?",
@@ -731,7 +842,10 @@
       "quality_comment": "Clear phrasing and well-differentiated answer choices make this suitable for foundational memory knowledge.",
       "lessonExcerpt": "- **Hippocampus = memory converter + spatial memory:** Transfers declarative memories to long-term storage. Damaged in Alzheimer's, affected by stress/cortisol, smaller in PTSD.",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Memory Department: Your Brain's Filing System"
+      ]
     },
     {
       "stem": "What phenomenon describes the creation of false memories due to confabulation?",
@@ -752,7 +866,10 @@
       "lessonExcerpt": "They can't save new files (anterograde amnesia), some old files got corrupted (retrograde amnesia), and when they can't find a file, their system automatically generates a plausible substitute that they can't distinguish from real memories (confabulation).{{/M}} **EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Clinical Relevance"
+      ]
     },
     {
       "stem": "A client regains consciousness after a moderate traumatic brain injury and can describe events from childhood and even details from the morning of the accident. However, throughout the next several days, the client repeatedly asks where he is and cannot retain new information from one conversation to the next. This pattern is most consistent with:",
@@ -772,7 +889,10 @@
       "suggestedParagraph": "### What Happens After TBI",
       "lessonExcerpt": "Anterograde amnesia (also called post-traumatic amnesia): Can't form new memories after the injury.",
       "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR"
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "relatedSections": [
+        "Clinical Relevance"
+      ]
     },
     {
       "stem": "Which memory type is most likely to show significant decline as adults age?",
@@ -790,7 +910,10 @@
       "quality_comment": "Distractors are all legitimate memory types, making this question effective for distinguishing knowledge of age-related memory effects.",
       "lessonExcerpt": "| Recent long-term (secondary) memory | Greatest decline |",
       "suggestedLesson": "1-memory-and-sleep",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep Across the Lifespan"
+      ]
     },
     {
       "stem": "Which environmental stressor is most likely to trigger a manic episode in individuals with bipolar I disorder?",
@@ -811,7 +934,10 @@
       "lessonExcerpt": "Sleep deprivation is a well-known trigger for manic episodes in individuals with bipolar I disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Sleep: More Than Just Rest"
+      ]
     },
     {
       "stem": "What is a common sleep disorder in children characterized by episodes of sudden arousal and fear during sleep?",
@@ -832,7 +958,10 @@
       "lessonExcerpt": "| | 16 PF | 16 primary traits from WORDS (lexical) | | EPPS | 15 NEEDS, forced-choice, IPSATIVE scores (no comparing people) | | MBTI | 4 dimensions, 16 TYPES, based on Jung | | NEO-PI-3 | Big Five (OCEAN), has FACETS, predicts cognitive decline | | Rorschach | INKBLOTS, Exner's system, color = emotion, confabulation = problems | | TAT | STORIES about pictures, identify hero's needs and press | **For the Rorschach scoring categories:** Use the acronym **L-D-C-F-P**: - **L**ocation -...",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Clinical Relevance"
+      ]
     },
     {
       "stem": "A 28-year-old patient presents with a chief complaint of suddenly falling asleep during conversations and at work, occurring approximately four times per week for the past six months. She also reports vivid, dream-like visual experiences just as she is waking up. Her sleep study reveals a REM sleep latency of 12 minutes. Which additional finding would be MOST consistent with a diagnosis of narcolepsy?",
@@ -853,7 +982,10 @@
       "lessonExcerpt": "Diagnosis Requires ONE of These: Episodes of cataplexy (loss of muscle tone), Hypocretin deficiency, REM sleep latency of 15 minutes or less on polysomnography... Because cataplexy is often triggered by strong emotions, people with narcolepsy may try to control their emotions to prevent sleep episodes.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Clinical Relevance"
+      ]
     },
     {
       "stem": "Which phenomenon is commonly observed during NREM sleep?",
@@ -874,7 +1006,10 @@
       "lessonExcerpt": "Non-REM Sleep Arousal Disorders: Sleepwalking and Sleep Terrors These disorders involve incomplete awakening from sleep, usually during Stage 3 or 4 sleep in the first third of a major sleep period.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "The Architecture of Your Night"
+      ]
     },
     {
       "stem": "A patient with a history of chronic alcohol dependence is asked what he did yesterday. He provides a detailed, coherent account of visiting his daughter at college, though his daughter confirms he was in the hospital all day. The patient appears to genuinely believe his account. This phenomenon is BEST described as:",
@@ -895,7 +1030,10 @@
       "lessonExcerpt": "People with Korsakoff syndrome often confabulate, meaning they fill in memory gaps with fabricated information. They're not lying) their brain is trying to make sense of missing information.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Clinical Relevance"
+      ]
     }
   ]
 }

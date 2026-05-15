@@ -16,7 +16,10 @@
       "quality_comment": "The question is clear and targets a fundamental concept from Super’s theory with plausible distractors representing other stages.",
       "lessonExcerpt": "| Establishment | 25 to 44 | Settling into a career, building stability |",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Super's Life-Space, Life-Span Career Theory: The Comprehensive View"
+      ]
     },
     {
       "stem": "In Holland's theory of career choice, what does a high degree of differentiation in an individual's self-directed search profile indicate?",
@@ -34,7 +37,10 @@
       "quality_comment": "Distractors are reasonable but clearly distinct, allowing test takers to apply knowledge of key terminology from Holland’s theory.",
       "lessonExcerpt": "**Differentiation** refers to how distinct your score pattern is. If you score very high on Social and low on everything else, you have high differentiation.",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Holland's Theory of Career Choice: Finding Your Match"
+      ]
     },
     {
       "stem": "According to Dawis and Lofquist's Theory of Work Adjustment, which two factors determine whether an employee remains employed in a job?",
@@ -52,7 +58,10 @@
       "quality_comment": "Options are similarly structured and plausible, enabling discrimination between those familiar and unfamiliar with the theory.",
       "lessonExcerpt": "| Satisfaction | Employee's job satisfaction | Employee's needs ↔ Job's reinforcers | Employee (stays or quits) |\n| Satisfactoriness | Employer's satisfaction with employee | Employee's skills ↔ Job's requirements | Employer (retains or fires) |",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Dawis and Lofquist's Theory of Work Adjustment: The Two-Way Street"
+      ]
     },
     {
       "stem": "Which of the following statements best describes the concept of 'life-space' in Super's career development theory?",
@@ -70,7 +79,10 @@
       "quality_comment": "Distractors are all related but only one captures the essence of life-space accurately, making this a fair knowledge check.",
       "lessonExcerpt": "Super used \"life-space\" to describe all the roles you juggle at different times: child, student, worker, partner, parent, citizen, and more.",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Super's Life-Space, Life-Span Career Theory: The Comprehensive View"
+      ]
     },
     {
       "stem": "In Krumboltz’s Social Learning Theory of Career Decision-Making, which factor reflects the skills and problem-solving abilities a person develops through their experiences?",
@@ -88,7 +100,10 @@
       "quality_comment": "Options represent distinct theory components, requiring examinees to carefully distinguish between related constructs.",
       "lessonExcerpt": "**4. Task Approach Skills**\nSkills you develop for handling career tasks: work habits, problem-solving abilities, performance standards, mental sets.",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Krumboltz's Social Learning Theory: The Multifactor Approach"
+      ]
     },
     {
       "stem": "Driver and Brousseau’s Career Concept Model describes a career type characterized by lateral movements across different occupations every two to four years, motivated by a desire for variety and independence. What is this career concept called?",
@@ -106,7 +121,10 @@
       "quality_comment": "Distractors are distinct and linked logically to the model’s concepts, making the question clear and testing precise knowledge.",
       "lessonExcerpt": "| Transitory | Variety, independence | Lateral moves across different fields | Every 2-4 years |",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Driver and Brousseau's Career Concept Model: Your Career Motives"
+      ]
     },
     {
       "stem": "Which of the following best describes Holland’s concept of vocational identity?",
@@ -124,7 +142,10 @@
       "quality_comment": "The question is straightforward with plausible alternatives that help differentiate understanding of key terms.",
       "lessonExcerpt": "**Vocational identity** means having \"a clear and stable picture of one's goals, interests, and talents.\"",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Holland's Theory of Career Choice: Finding Your Match"
+      ]
     },
     {
       "stem": "According to Tiedeman’s Career Decision-Making Model, the implementation phase of career decision-making includes which of the following stages?",
@@ -142,7 +163,10 @@
       "quality_comment": "Options use mixed terminology with overlapping terms, promoting critical thinking about model stages.",
       "lessonExcerpt": "**Implementation Phase** (after starting the job):\n- **Induction**: Beginning the job, learning the ropes\n- **Reformation**: Becoming proficient, asserting your individuality\n- **Integration**: Achieving balance between your needs and organizational demands",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Tiedeman's Career Decision-Making Model: The Process View"
+      ]
     },
     {
       "stem": "Which career development theory emphasizes the interaction between internal self-concept and external situational factors across multiple life roles and stages?",
@@ -160,7 +184,10 @@
       "quality_comment": "The question clearly distinguishes among prominent theories by focusing on defining conceptual elements, suitable for exam-level review.",
       "lessonExcerpt": "Self-concept – how you see yourself and your situation – sits at the heart of Super's theory. Your self-concept develops through interactions between who you are internally (personality, interests, values) and what you experience externally",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Super's Life-Space, Life-Span Career Theory: The Comprehensive View"
+      ]
     },
     {
       "stem": "In Holland’s RIASEC model, which two personality types are considered most dissimilar based on their hexagonal arrangement?",
@@ -178,7 +205,10 @@
       "quality_comment": "Distractors use plausible pairs from the model, effectively testing detailed knowledge of type relationships.",
       "lessonExcerpt": "Enterprising sits opposite Investigative – they're the most different from each other.",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Holland's Theory of Career Choice: Finding Your Match"
+      ]
     },
     {
       "stem": "Which concept in Driver and Brousseau’s Career Concept Model best describes a person motivated primarily by a desire for job security and expertise mastery, viewing their career as a lifelong commitment?",
@@ -196,7 +226,10 @@
       "quality_comment": "The options are similar in length and style, drawing on model terminology to ensure meaningful differentiation.",
       "lessonExcerpt": "| Expert | Security, expertise | Deepening knowledge in one field | Minimal (lifelong commitment) |",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Driver and Brousseau's Career Concept Model: Your Career Motives"
+      ]
     },
     {
       "stem": "According to Krumboltz’s Social Learning Theory of Career Decision-Making, what type of generalization involves beliefs about one’s own attitudes, values, and skills that influence career choices?",
@@ -214,7 +247,10 @@
       "quality_comment": "Distractors include plausible-sounding terms but only one correctly matches the theory’s terminology, enhancing discriminability.",
       "lessonExcerpt": "**Self-observation generalizations**: What you believe about your own attitudes, values, interests, and abilities.",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Krumboltz's Social Learning Theory: The Multifactor Approach"
+      ]
     },
     {
       "stem": "Which phase of Tiedeman’s Career Decision-Making Model includes exploration, crystallization, choice, and clarification stages?",
@@ -232,7 +268,10 @@
       "quality_comment": "The options use model-relevant terminology, encouraging examinees to distinguish among conceptual phases accurately.",
       "lessonExcerpt": "**Anticipation Phase** (before starting the job):\n- **Exploration**: Becoming familiar with different career options\n- **Crystallization**: Narrowing down choices to a manageable set\n- **Choice**: Selecting a specific option\n- **Clarification**: Planning how to implement that choice",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Tiedeman's Career Decision-Making Model: The Process View"
+      ]
     },
     {
       "stem": "In Super's Life-Space, Life-Span Career Theory, which stage is characterized by individuals in their early 20s exploring various career options before making a commitment?",
@@ -255,7 +294,10 @@
       ],
       "lessonExcerpt": "| Exploration | 15 to 24 | Trying out different options, narrowing choices |",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Super's Life-Space, Life-Span Career Theory: The Comprehensive View"
+      ]
     },
     {
       "stem": "Which stage of Super's Life-Space, Life-Span Career Theory is primarily focused on individuals aged 45 and older who seek to maintain their established careers and may also consider retirement planning?",
@@ -278,7 +320,10 @@
       ],
       "lessonExcerpt": "| Maintenance | 45 to 64 | Sustaining achievements, updating skills |",
       "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Super's Life-Space, Life-Span Career Theory: The Comprehensive View"
+      ]
     },
     {
       "stem": "Which of the following factors is most likely to contribute to higher employee turnover rates in an organization?",
@@ -299,7 +344,8 @@
       "lessonExcerpt": "TAT = Only storytelling ## Real-World Applications",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": null
     }
   ]
 }

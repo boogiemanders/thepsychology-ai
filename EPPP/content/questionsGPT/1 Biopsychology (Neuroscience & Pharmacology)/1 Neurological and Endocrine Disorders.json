@@ -18,7 +18,10 @@
       "suggestedParagraph": "### Focal Onset Seizures: Starting in One Location",
       "lessonExcerpt": "Frontal lobe: Often during sleep, brief (under 30 seconds); repetitive movements like kicking or bicycle pedaling; abnormal postures; explosive screams or laughter; speech problems with intact understanding.",
       "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR"
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "A 52-year-old client presents with depressed mood, lethargy, weight gain, cold intolerance, slowed heart rate, and difficulty concentrating. Before concluding that the client has a primary depressive disorder, which endocrine condition should be strongly considered?",
@@ -38,7 +41,10 @@
       "suggestedParagraph": "### Thyroid Disorders",
       "lessonExcerpt": "**Hypothyroidism** (too little thyroid hormone): - Decreased metabolism, lowered temperature, cold intolerance - Reduced appetite with weight gain - Slowed heart rate - Depression, lethargy, decreased libido - Confusion, impaired concentration and memory",
       "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR"
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "relatedSections": [
+        "Endocrine Disorders: When Hormones Go Wrong"
+      ]
     },
     {
       "stem": "A neurologist is evaluating a patient who experiences episodes characterized by an aura, altered consciousness, automatisms such as lip smacking and hand wringing, and confusion following each episode. These symptoms are MOST consistent with seizure activity originating in which brain region?",
@@ -59,7 +65,10 @@
       "lessonExcerpt": "Post-traumatic seizures (PTS) occur within the first week and usually respond well to medication.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "A physician tells a patient that they have been diagnosed with 'essential hypertension.' The patient asks you, as their psychologist, what 'essential' means in this context. Which of the following is the most accurate explanation of this medical terminology?",
@@ -80,7 +89,10 @@
       "lessonExcerpt": "Primary (essential) hypertension accounts for 90% of cases and has no known physiological cause. It's called the 'silent killer' because it often has no symptoms while silently damaging blood vessels and organs.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Hypertension: The Silent Killer"
+      ]
     },
     {
       "stem": "A 67-year-old male presents with resting tremor, muscle rigidity, and a shuffling gait. Neuroimaging reveals significant cell loss in a specific midbrain structure. Which brain region is most likely affected?",
@@ -101,7 +113,10 @@
       "lessonExcerpt": "Parkinson's disease results from both genetic and environmental factors. The core problem is degeneration of dopamine-producing cells in the substantia nigra, which reduces dopamine in the basal ganglia.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Movement Disorders: When Motor Control Breaks Down"
+      ]
     },
     {
       "stem": "A 67-year-old right-handed woman is brought to the emergency department after a sudden onset of left-sided weakness. Brain imaging reveals an ischemic stroke affecting the right middle cerebral artery territory. In addition to motor deficits, which of the following cognitive-perceptual impairments is this patient MOST likely to exhibit?",
@@ -122,7 +137,10 @@
       "lessonExcerpt": "Middle cerebral artery (most common): Weakness/paralysis on opposite side of body, vision loss in half the visual field, slurred speech, language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Strokes: When Blood Flow Gets Cut Off"
+      ]
     },
     {
       "stem": "A patient experiences a seizure that begins with involuntary twitching of the right index finger, progressively spreads to the hand, then the wrist, and finally the entire arm. Consciousness remains intact throughout the episode. This presentation is BEST classified as a:",
@@ -143,7 +161,10 @@
       "lessonExcerpt": "Jacksonian seizures are a type of simple partial frontal lobe seizure. They start with a localized motor seizure that 'marches' to adjacent areas. Example: starts in a finger, then spreads to the hand, then the whole arm.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "A genetic counselor explains to a couple that the husband has been diagnosed with Huntington's disease. When asked about the probability of their future children developing the condition, the counselor should explain that each child has a:",
@@ -164,7 +185,10 @@
       "lessonExcerpt": "Huntington's disease is a devastating hereditary condition caused by a mutated gene on chromosome 4. Because it's autosomal dominant, each child of an affected parent has a 50% chance of inheriting it.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "Movement Disorders: When Motor Control Breaks Down"
+      ]
     },
     {
       "stem": "Which type of seizure is characterized by sudden, brief lapses in attention and is often seen in children?",
@@ -185,7 +209,10 @@
       "lessonExcerpt": "4. **\"All seizures involve convulsions\"**: Focal onset aware seizures don't affect consciousness at all, and absence seizures just look like brief staring spells.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "Which type of seizure is characterized by sudden, brief lapses in attention or awareness, often mistaken for daydreaming?",
@@ -206,7 +233,10 @@
       "lessonExcerpt": "Absence seizures involve brief lapses in attention or awareness, often mistaken for daydreaming.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "What effect do neurological lesions typically have on motor function?",
@@ -227,7 +257,11 @@
       "lessonExcerpt": "**Middle cerebral artery** (most common) | Weakness/paralysis on opposite side of body, vision loss in half the visual field, slurred speech, language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Strokes: When Blood Flow Gets Cut Off",
+        "Traumatic Brain Injury: When the Brain Gets Shaken or Pierced"
+      ]
     },
     {
       "stem": "What psychological effects are commonly associated with cerebrovascular accidents (strokes)?",
@@ -248,7 +282,10 @@
       "lessonExcerpt": "When blood flow to part of the brain suddenly stops... communication stops, and things stop working properly.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Strokes: When Blood Flow Gets Cut Off"
+      ]
     },
     {
       "stem": "Which of the following symptoms is most commonly associated with post-concussion syndrome following a head injury?",
@@ -269,7 +306,10 @@
       "lessonExcerpt": "The classic symptoms of diabetes are the \"**Three P's**\": **P**olyuria (increased urination), **P**olydipsia (increased thirst), and **P**olyphagia (increased appetite).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Traumatic Brain Injury: When the Brain Gets Shaken or Pierced"
+      ]
     },
     {
       "stem": "What diagnostic test is primarily used to assess seizure activity in patients?",
@@ -290,7 +330,11 @@
       "lessonExcerpt": "The computer records electrical activity as brain waves showing frequency and amplitude. EEG is useful for:",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong",
+        "Diagnostic Tools: How We See Inside the Brain"
+      ]
     },
     {
       "stem": "Which type of headache is characterized by unilateral throbbing pain and often accompanied by nausea?",
@@ -311,7 +355,10 @@
       "lessonExcerpt": "**Migraines** involve intense, throbbing pain (usually one-sided) often with nausea/vomiting and sensitivity to light or other stimuli. They're linked to low serotonin and abnormalities in glutamate, dopamine, and norepinephrine.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Migraine Headaches: More Than Just Pain"
+      ]
     },
     {
       "stem": "What medical explanation is often considered when physical symptoms arise without a clear medical diagnosis?",
@@ -332,7 +379,10 @@
       "lessonExcerpt": "Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist who knows when symptoms point to a medical emergency rather than a mental health concern.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Endocrine Disorders: When Hormones Go Wrong"
+      ]
     },
     {
       "stem": "Which of the following is a significant risk factor for developing neurocognitive disorders?",
@@ -353,7 +403,11 @@
       "lessonExcerpt": "The number one risk factor is hypertension (high blood pressure).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Hypertension: The Silent Killer",
+        "Alzheimer's Disease: The Three Stages"
+      ]
     },
     {
       "stem": "Which of the following symptoms is most commonly associated with delirium following surgery?",
@@ -374,7 +428,10 @@
       "lessonExcerpt": "Delirium is characterized by disorientation and confusion, especially in post-surgical patients.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Traumatic Brain Injury: When the Brain Gets Shaken or Pierced"
+      ]
     },
     {
       "stem": "What is a common medical explanation for anxiety symptoms?",
@@ -395,7 +452,10 @@
       "lessonExcerpt": "Thyroid disorders are one of the first medical disorders to suspect when there are psychiatric symptoms. Hyperthyroidism mimics anxiety or mania. Hypothyroidism mimics depression.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Endocrine Disorders: When Hormones Go Wrong"
+      ]
     },
     {
       "stem": "What symptom is commonly associated with post-concussion syndrome that overlaps with acute stress disorder?",
@@ -416,7 +476,10 @@
       "lessonExcerpt": "**Posterior cerebral artery** | Opposite-side weakness and sensory loss, vision problems, memory loss, nausea/vomiting",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Traumatic Brain Injury: When the Brain Gets Shaken or Pierced"
+      ]
     },
     {
       "stem": "How can pseudodementia be differentiated from Alzheimer's disease?",
@@ -437,7 +500,10 @@
       "lessonExcerpt": "According to the 2011 NIA guidelines, Alzheimer's disease progresses through three stages:",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Alzheimer's Disease: The Three Stages"
+      ]
     },
     {
       "stem": "Which type of seizure is characterized by a sudden loss of consciousness and muscle rigidity followed by rhythmic jerking movements?",
@@ -458,7 +524,10 @@
       "lessonExcerpt": "- **Generalized convulsive SE**: Loss of consciousness with tonic-clonic seizures - **Non-convulsive SE**: Seizure activity on EEG without obvious motor symptoms; may involve altered consciousness, delusions, hallucinations, automatisms, or language problems",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "A 38-year-old graphic designer is referred for neurological evaluation after recurring stereotyped episodes. Each episode begins with a sudden, intense sense of déjà vu and a rising epigastric sensation, followed by approximately 90 seconds of unresponsiveness during which she smacks her lips and makes repetitive picking motions with her right hand. Afterward, she has no recollection of the episode. EEG reveals focal ictal discharge. Which brain lobe is the most probable origin of these seizures?",
@@ -479,7 +548,10 @@
       "lessonExcerpt": "**Temporal lobe** (most common focal type) | Aura with strange taste/smell, stomach rising sensation, intense fear, déjà vu or jamais vu; autonomic symptoms (sweating, dilated pupils, rapid heart rate); automatisms (lip-smacking, chewing, fidgeting); speech problems with impaired understanding",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "A neurologist's consultation report on a newly referred client describes the patient's progressive movement disorder as 'idiopathic in etiology.' When integrating this information into a biopsychosocial case conceptualization, a psychologist should interpret this term to mean the condition:",
@@ -500,7 +572,10 @@
       "lessonExcerpt": "Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist who knows when symptoms point to a medical emergency rather than a mental health concern.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Movement Disorders: When Motor Control Breaks Down"
+      ]
     },
     {
       "stem": "Which of the following is the most common type of stroke and typically results from a blockage in a cerebral artery due to a blood clot?",
@@ -518,7 +593,10 @@
       "quality_comment": "The question is clear, with plausible distractors focused on stroke types, making it suitable for testing neurovascular knowledge.",
       "lessonExcerpt": "**Ischemic strokes** (the most common type) occur when something blocks an artery: - **Thrombotic stroke**: A blood clot forms right in a brain artery - **Embolic stroke**: A clot forms elsewhere (like the heart) and travels to the brain",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Strokes: When Blood Flow Gets Cut Off"
+      ]
     },
     {
       "stem": "A patient with contralateral hemiparesis predominantly affecting the leg, urinary incontinence, impaired insight, and mutism most likely has a stroke involving which artery?",
@@ -536,7 +614,10 @@
       "quality_comment": "The clinical vignette is detailed and demands integration of symptom localization, providing an excellent challenge for advanced candidates.",
       "lessonExcerpt": "**Anterior cerebral artery** | Leg weakness especially, poor judgment, apathy, confusion, urinary incontinence",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Strokes: When Blood Flow Gets Cut Off"
+      ]
     },
     {
       "stem": "Which of the following symptoms is most characteristic of Huntington's disease?",
@@ -554,7 +635,10 @@
       "quality_comment": "Options are plausible movement disorders, making the correct answer a clear choice to those knowledgeable about Huntington’s.",
       "lessonExcerpt": "**Middle stage**: Short-term memory problems, poor concentration and judgment, **chorea** (jerky, uncontrollable movements in hands, face, limbs, and torso) 3.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Movement Disorders: When Motor Control Breaks Down"
+      ]
     },
     {
       "stem": "Which neurotransmitter deficiency is primarily responsible for the motor symptoms observed in Parkinson’s disease?",
@@ -572,7 +656,10 @@
       "quality_comment": "The options focus on neurotransmitters implicated in neurological conditions, making a clear, straightforward question.",
       "lessonExcerpt": "The core problem is degeneration of dopamine-producing cells in the **substantia nigra**, which reduces dopamine in the basal ganglia. But it's not just about dopamine. Low levels of acetylcholine, norepinephrine, and excessive glutamate activity also play roles in various symptoms.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Movement Disorders: When Motor Control Breaks Down"
+      ]
     },
     {
       "stem": "A patient presents with repeated brief loss of consciousness characterized by staring and rapid blinking but no convulsive movements. This presentation is most consistent with which type of seizure?",
@@ -590,7 +677,10 @@
       "quality_comment": "The clinical description is precise, and distractors are plausible seizure types, enhancing discrimination.",
       "lessonExcerpt": "**Generalized onset non-motor seizures** (absence seizures, petit mal): Very brief loss of consciousness with a blank stare, possibly rapid blinking. {{M}}From the outside, it might look like someone suddenly zoned out for a few seconds{{/M}}, but they've actually had a seizure.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "Which of the following best characterizes central diabetes insipidus?",
@@ -608,7 +698,10 @@
       "quality_comment": "Options contrast related endocrine disorders well, requiring specific knowledge of diabetes insipidus pathophysiology.",
       "lessonExcerpt": "The pituitary releases **antidiuretic hormone (ADH)**, which controls water excretion in urine. When ADH is too low (due to tumor, infection, stroke, or surgery), it causes **central diabetes insipidus** (different from diabetes mellitus).",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Endocrine Disorders: When Hormones Go Wrong"
+      ]
     },
     {
       "stem": "Which neuroimaging technique provides detailed three-dimensional images of brain structures and better detects microhemorrhages compared to CT scans?",
@@ -626,7 +719,10 @@
       "quality_comment": "The options include common neurodiagnostic tools providing plausible alternatives, enhancing test validity.",
       "lessonExcerpt": "**MRI (magnetic resonance imaging)**: - Uses magnetic fields and radio waves (no radiation) - More detailed three-dimensional images - Can detect microhemorrhages, contusions, and scarring that CT misses - Downsides: takes longer, requires staying very still, produces loud noise",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Diagnostic Tools: How We See Inside the Brain"
+      ]
     },
     {
       "stem": "The first-line medication for alleviating the bradykinesia symptoms of Parkinson’s disease, which is converted to dopamine in the brain, is:",
@@ -644,7 +740,10 @@
       "quality_comment": "Distractors include plausible neurological medications, challenging examinees’ knowledge of Parkinson’s treatment.",
       "lessonExcerpt": "**Medications:** - **Levodopa** (first-line treatment): Converts to dopamine in the brain; best for bradykinesia, may help rigidity and tremor - **Dopamine agonists**: Mimic dopamine at receptors; may delay progression and have fewer long-term side effects like dyskinesias",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Movement Disorders: When Motor Control Breaks Down"
+      ]
     },
     {
       "stem": "What is the main difference between post-traumatic seizures (PTS) and post-traumatic epilepsy (PTE) following traumatic brain injury?",
@@ -662,7 +761,11 @@
       "quality_comment": "Question requires specific knowledge of timing and classification of seizures post-TBI, good for discriminating advanced knowledge.",
       "lessonExcerpt": "**Provoked seizures** have a known cause (brain injury, infection, stroke, fever, alcohol withdrawal). **Unprovoked seizures** occur without an identifiable trigger. When unprovoked seizures recur, the diagnosis becomes **epilepsy**.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Traumatic Brain Injury: When the Brain Gets Shaken or Pierced",
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "Which of the following is a key risk factor for developing type 2 diabetes mellitus?",
@@ -680,7 +783,10 @@
       "quality_comment": "Options contrast type 1 and type 2 diabetes features well, facilitating clear understanding of disease epidemiology.",
       "lessonExcerpt": "**Type 1 diabetes**: Autoimmune disease destroying insulin-producing cells; genetic predisposition is the primary risk factor, can be triggered by viral infections",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Endocrine Disorders: When Hormones Go Wrong"
+      ]
     },
     {
       "stem": "A complex partial seizure (focal onset impaired awareness seizure) originating in the temporal lobe is most likely to include which of the following features?",
@@ -698,7 +804,10 @@
       "quality_comment": "Includes distinctive semiological features that differentiate temporal lobe seizures from other focal seizures.",
       "lessonExcerpt": "**Temporal lobe** (most common focal type) | Aura with strange taste/smell, stomach rising sensation, intense fear, déjà vu or jamais vu; autonomic symptoms (sweating, dilated pupils, rapid heart rate); automatisms (lip-smacking, chewing, fidgeting); speech problems with impaired understanding",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "Which of the following characterizes migraine headaches with aura?",
@@ -716,7 +825,10 @@
       "quality_comment": "Distractors are common headache misconceptions making the correct answer stand out for those familiar with migraine features.",
       "lessonExcerpt": "**Migraine with aura** (classic migraine): Preceded by warning signs like visual disturbances",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Migraine Headaches: More Than Just Pain"
+      ]
     },
     {
       "stem": "Status epilepticus is considered a medical emergency defined primarily by:",
@@ -734,7 +846,10 @@
       "quality_comment": "Clear and precise options with plausible seizure durations and types, improving reliability of candidate responses.",
       "lessonExcerpt": "**Status epilepticus (SE)** is when a seizure continues for 5+ minutes or multiple seizures occur without regaining consciousness between them. This is a true emergency.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "Which of the following best characterizes the role of electroencephalography (EEG) in neurological diagnosis?",
@@ -752,7 +867,11 @@
       "quality_comment": "The options contrast EEG’s function with other neurodiagnostic methods, providing a clear test of basic neurodiagnostic knowledge.",
       "lessonExcerpt": "**EEG** measures electrical impulses between neurons using small electrodes on the scalp. {{M}}It's like putting microphones on the outside of a concert hall to hear what's happening inside{{/M}}. You get information about groups of neurons near each electrode.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Diagnostic Tools: How We See Inside the Brain",
+        "Seizures: When Electrical Activity Goes Wrong"
+      ]
     },
     {
       "stem": "Regarding neuroimaging techniques, which method is uniquely used to assess the structural integrity of white matter tracts by tracking water molecule diffusion?",
@@ -770,7 +889,10 @@
       "quality_comment": "Options represent diverse neuroimaging types, making the correct identification of DTI a good measure of detailed knowledge.",
       "lessonExcerpt": "**DTI (diffusion tensor imaging)**: - MRI-based technique for examining white matter tracts (the brain's \"wiring\") - Detects abnormalities in how water molecules move along axons - Used for TBI, concussion, neurocognitive disorders, schizophrenia, autism, epilepsy, multiple sclerosis",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Diagnostic Tools: How We See Inside the Brain"
+      ]
     },
     {
       "stem": "Which of the following neurotransmitter abnormalities is implicated in the non-motor symptoms of Parkinson’s disease such as depression and sleep disturbances?",
@@ -788,7 +910,10 @@
       "quality_comment": "Includes plausible neurotransmitter options, requiring integration of neurochemical and clinical symptom knowledge.",
       "lessonExcerpt": "The core problem is degeneration of dopamine-producing cells in the **substantia nigra**, which reduces dopamine in the basal ganglia. But it's not just about dopamine. Low levels of acetylcholine, norepinephrine, and excessive glutamate activity also play roles in various symptoms.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Movement Disorders: When Motor Control Breaks Down"
+      ]
     },
     {
       "stem": "What type of stroke is characterized by bleeding in the brain, often due to a ruptured blood vessel?",
@@ -811,7 +936,10 @@
       ],
       "lessonExcerpt": "**Hemorrhagic strokes** happen when an artery ruptures and bleeds: - **Intracerebral hemorrhage**: Bleeding inside the brain tissue - **Subarachnoid hemorrhage**: Bleeding in the space around the brain",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Strokes: When Blood Flow Gets Cut Off"
+      ]
     },
     {
       "stem": "Which of the following conditions is a temporary episode of neurological dysfunction caused by a brief interruption of blood flow to the brain, often considered a warning sign for future strokes?",
@@ -834,7 +962,10 @@
       ],
       "lessonExcerpt": "There's also something called a **transient ischemic attack (TIA)**, which is like a warning shot. The blockage clears in less than five minutes, symptoms are temporary, but it's a serious sign that a major stroke could be coming. Always treat TIAs as medical emergencies.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Strokes: When Blood Flow Gets Cut Off"
+      ]
     },
     {
       "stem": "Which neuroimaging technique is primarily used to assess brain activity by measuring changes in blood flow?",
@@ -855,7 +986,10 @@
       "lessonExcerpt": "- **fMRI (functional MRI)**: Uses magnetic fields and radio waves to measure blood flow",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Diagnostic Tools: How We See Inside the Brain"
+      ]
     },
     {
       "stem": "Which imaging technique is most commonly used to visualize brain pathology?",
@@ -876,7 +1010,10 @@
       "lessonExcerpt": "Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist who knows when symptoms point to a medical emergency rather than a mental health concern.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Diagnostic Tools: How We See Inside the Brain"
+      ]
     },
     {
       "stem": "Which visual field deficit is most commonly associated with a stroke affecting the middle cerebral artery?",
@@ -897,7 +1034,10 @@
       "lessonExcerpt": "Weakness/paralysis on opposite side of body, vision loss in half the visual field, slurred speech, language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Strokes: When Blood Flow Gets Cut Off"
+      ]
     },
     {
       "stem": "Which of the following neurological features is commonly associated with Alzheimer's disease?",
@@ -918,7 +1058,10 @@
       "lessonExcerpt": "**Neurofibrillary tangles**: Abnormal tau protein accumulation inside neurons that creates twisted threads",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Alzheimer's Disease: The Three Stages"
+      ]
     }
   ]
 }

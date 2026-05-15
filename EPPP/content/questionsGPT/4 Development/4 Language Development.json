@@ -19,7 +19,10 @@
       "lessonExcerpt": "Overextension: Using a word too broadly - Calling all four-legged animals \"doggie\"",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Common Language Errors: Totally Normal Development"
+      ]
     },
     {
       "stem": "Which principle is central to Montessori education?",
@@ -40,7 +43,8 @@
       "lessonExcerpt": "This theory combines both biological readiness and social environment.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": null
     },
     {
       "stem": "According to Piaget, how does language influence thought during the preoperational stage of cognitive development?",
@@ -61,7 +65,10 @@
       "lessonExcerpt": "Language isn't just about words. It's the foundation of how we connect with others, process our experiences, and develop cognitively.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "The Big Three Theories: Understanding How We Learn to Talk"
+      ]
     },
     {
       "stem": "What are the primary milestones in language development during the first two years of life?",
@@ -82,7 +89,10 @@
       "lessonExcerpt": "Critical developmental sequence: Cooing (6-8 weeks) → Babbling (3-6 months) → First words (10-15 months) → Holophrastic speech (12-15 months) → Telegraphic speech (18-24 months) → Simple sentences (24-36 months)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Language Development Timeline: From Womb to Words"
+      ]
     },
     {
       "stem": "What does code-switching in bilingual individuals primarily refer to?",
@@ -103,7 +113,10 @@
       "lessonExcerpt": "Bilingual children as young as 20 months can code-switch appropriately, using French with their French-speaking parent and English with their English-speaking parent.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "Beyond Basic Language: Paralanguage and Code-Switching"
+      ]
     },
     {
       "stem": "Which component of language involves the rules for combining morphemes, the smallest units of meaning?",
@@ -121,7 +134,10 @@
       "quality_comment": "Clear question stem and options; distractors represent other language components but are easily distinguishable.",
       "lessonExcerpt": "Overextension: Using a word too broadly - Calling all four-legged animals \"doggie\"",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Building Blocks: Five Components of Language"
+      ]
     },
     {
       "stem": "Which theory of language development emphasizes the role of caregivers' use of child-directed speech in facilitating language acquisition?",
@@ -139,7 +155,10 @@
       "quality_comment": "Options provide a clear contrast among major theories; distractors are credible for graduate-level examinees.",
       "lessonExcerpt": "Social Interactionist Theory: It Takes a Village... One key piece of evidence is child-directed speech (also called \"parentese\")... Research shows this style actually facilitates language learning.",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories: Understanding How We Learn to Talk"
+      ]
     },
     {
       "stem": "At approximately what age do infants typically begin to use telegraphic speech characterized by two-word phrases?",
@@ -157,7 +176,10 @@
       "quality_comment": "The time frames are distinct and well chosen, making the question suitable for assessing milestone knowledge.",
       "lessonExcerpt": "He proposed the Language Acquisition Device (LAD), an inborn processor that helps children understand and produce rule-governed speech.",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Language Development Timeline: From Womb to Words"
+      ]
     },
     {
       "stem": "What is overregularization in children's language development?",
@@ -175,7 +197,10 @@
       "quality_comment": "Distractors are plausible linguistic errors, providing a good challenge for test-takers.",
       "lessonExcerpt": "| Morphology | Rules for morphemes (smallest meaning units) | \"Unspeakable\" = 1 free morpheme (speak) + 2 bound morphemes (un, able) |",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Common Language Errors: Totally Normal Development"
+      ]
     },
     {
       "stem": "Research on the critical period for language acquisition suggests that:",
@@ -193,7 +218,10 @@
       "quality_comment": "The question requires nuanced understanding of critical period research with subtle differences among options, suitable for advanced learners.",
       "lessonExcerpt": "Social Interactionist Theory: It Takes a Village... One key piece of evidence is child-directed speech (also called \"parentese\")... Research shows this style actually facilitates language learning.",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Critical Period: Use It or Lose It"
+      ]
     },
     {
       "stem": "Which term describes bilingual or multilingual speakers’ use of more than one language within a single conversation or interaction?",
@@ -211,7 +239,10 @@
       "quality_comment": "Options are all related to language concepts, making distractors plausible and enhancing question validity.",
       "lessonExcerpt": "| 18-24 months | Telegraphic speech | Two-word combinations: \"want juice,\" \"doggie gone\" |",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beyond Basic Language: Paralanguage and Code-Switching"
+      ]
     },
     {
       "stem": "What type of cry is characterized by a loud high-pitched cry followed by silence due to breath-holding and signals pain in a newborn?",
@@ -229,7 +260,10 @@
       "quality_comment": "Distractors reflect other known cry types ensuring differentiation but maintaining plausible confusion.",
       "lessonExcerpt": "Overregularization: Misapplying grammar rules - \"I goed to the store\" (applying regular past tense rule) - \"Two foots\" (applying regular plural rule)",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Language Development Timeline: From Womb to Words"
+      ]
     },
     {
       "stem": "Which aspect of language is primarily concerned with the appropriate use of language in social contexts, including nonverbal cues and conversational rules?",
@@ -247,7 +281,10 @@
       "quality_comment": "Clear differential among language components; distractors are other well-known categories but easily ruled out by knowledgeable students.",
       "lessonExcerpt": "Different language components have different critical periods - Grammar, syntax, and phonetics require early exposure",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Building Blocks: Five Components of Language"
+      ]
     },
     {
       "stem": "Language brokering within immigrant families is best described as:",
@@ -265,7 +302,10 @@
       "quality_comment": "Distractors relate to language or communication concepts and provide a reasonable level of challenge.",
       "lessonExcerpt": "Code-switching occurs when bilingual/multilingual speakers use multiple languages within a single conversation.",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beyond Basic Language: Paralanguage and Code-Switching"
+      ]
     },
     {
       "stem": "In studies of deaf infants exposed from birth to American Sign Language (ASL), what behavior emerges between 6 and 8 months of age similar to vocal babbling in hearing infants?",
@@ -283,7 +323,10 @@
       "quality_comment": "The question tests detailed knowledge of parallel language development modes in deaf infants, with plausible distractors.",
       "lessonExcerpt": "3. Loud high-pitched cry followed by silence = pain",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Language in Deaf and Hard-of-Hearing Children"
+      ]
     },
     {
       "stem": "Which feature of child-directed speech (parentese) facilitates language development in young children?",
@@ -301,7 +344,10 @@
       "quality_comment": "Distractors are realistic but distinct in features of speech directed at children vs. adults, sharpening test-taker discrimination.",
       "lessonExcerpt": "| Pragmatics | Using language appropriately in social contexts | Knowing to speak differently to your supervisor vs. your friend |",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories: Understanding How We Learn to Talk"
+      ]
     },
     {
       "stem": "Language development in deaf and hard-of-hearing (DHH) children is best supported by which of the following approaches according to current evidence?",
@@ -319,7 +365,10 @@
       "quality_comment": "The item tests applied knowledge of evidence-based practice for DHH children's language development, with credible distractors.",
       "lessonExcerpt": "Language brokering happens when children or adolescents translate for their immigrant parents and family members.",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Language in Deaf and Hard-of-Hearing Children"
+      ]
     },
     {
       "stem": "How does language brokering by children in immigrant families impact their psychosocial development?",
@@ -337,7 +386,10 @@
       "quality_comment": "The item probes nuanced understanding of cultural/language dynamics, offering balanced options that require careful reading.",
       "lessonExcerpt": "However, when deaf infants are exposed to sign language from birth, they exhibit manual babbling at 6-8 months. Repetitive hand movements that replicate components of American Sign Language.",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beyond Basic Language: Paralanguage and Code-Switching"
+      ]
     },
     {
       "stem": "Which concept describes the inherent ability in humans that facilitates the learning of complex grammar and language structures, according to Chomsky's theory?",
@@ -360,7 +412,10 @@
       ],
       "lessonExcerpt": "This is when caregivers naturally adjust their speech patterns (slowing down, using a higher pitch, simplifying sentences, and emphasizing key words.",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories: Understanding How We Learn to Talk"
+      ]
     },
     {
       "stem": "In the context of Chomsky's nativist perspective, which of the following best exemplifies the role of the language acquisition device (LAD) in language learning?",
@@ -383,7 +438,10 @@
       ],
       "lessonExcerpt": "Many professionals now advocate for the combined approach, noting: Cochlear implants aren't typically implanted until 12+ months; Infants can access sign language from birth",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Big Three Theories: Understanding How We Learn to Talk"
+      ]
     },
     {
       "stem": "Which explanation for childhood amnesia emphasizes the role of language in encoding memories?",
@@ -401,7 +459,8 @@
       "quality_comment": "Distractors include plausible but inaccurate theories, making this a well-balanced question.",
       "lessonExcerpt": "1. Language allows memory encoding, and very young children have limited language",
       "suggestedLesson": "4-language-development",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "A 32-year-old adult presents for neuropsychological evaluation requesting clarification of a diagnosis. Records show a DSM-IV-TR diagnosis of Asperger's Disorder made in 2009, documented by deficits in social reciprocity and restricted interests in the absence of clinically significant language or intellectual delays. The evaluating psychologist explains that DSM-5 eliminated Asperger's Disorder as a separate diagnostic category. Which of the following best describes how individuals previously diagnosed with Asperger's Disorder should be classified under DSM-5?",
@@ -422,7 +481,8 @@
       "lessonExcerpt": "NOT COVERED: The provided lesson files do not cover Autism Spectrum Disorder diagnosis or the DSM-IV to DSM-5 reclassification of Asperger's Disorder. A dedicated lesson on DSM-5 neurodevelopmental disorders is needed for this content. The file 5-clinical-tests.md does reference ASD in the context of WCST performance ('Poor performance connects to frontal lobe dysfunction and appears in autism spectrum disorder') but does not address diagnostic criteria or classification.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": null
     },
     {
       "stem": "A clinician observes that a patient with Tourette's disorder involuntarily repeats the last several words spoken by the examiner during a clinical interview. This phenomenon is best described as:",
@@ -443,7 +503,8 @@
       "lessonExcerpt": "A tic is a sudden, rapid, recurrent, nonrhythmic motor movement or vocalization. Motor tics include eye blinking, facial grimacing, shoulder shrugging, and echopraxia (imitating others' movements). Vocal tics include throat clearing, barking, and echolalia (repeating others' words).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": null
     },
     {
       "stem": "What is echolalia, and how does it manifest in child development?",
@@ -464,7 +525,8 @@
       "lessonExcerpt": "This disorder involves disturbed fluency and speech timing inappropriate for the person's age and language skills. Look for sound/syllable repetitions, sound prolongations, broken words, blocking, circumlocutions, excessive tension when speaking, or whole-word repetitions.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": null
     },
     {
       "stem": "In the context of psychological evaluations, how should psychologists address language barriers to ensure cultural competence?",
@@ -485,7 +547,8 @@
       "lessonExcerpt": "Use certified professional interpreters when possible (National Board of Certification for Medical Interpreters). Obtain client consent before bringing in an interpreter. Discuss confidentiality obligations with the interpreter",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": null
     }
   ]
 }

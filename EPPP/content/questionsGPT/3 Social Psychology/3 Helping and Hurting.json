@@ -19,7 +19,10 @@
       "lessonExcerpt": "The solution? Superordinate goals. Objectives that could only be achieved through cooperation between groups. When the water supply 'broke' and both groups had to work together to fix it, hostility decreased.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Reducing Conflict Through Cooperation"
+      ]
     },
     {
       "stem": "A woman collapses in a busy shopping mall food court during the lunch rush. Approximately 50 people are nearby, yet several minutes pass before anyone calls for help. According to the bystander intervention model proposed by Latané and Darley, the MOST likely explanation for why no one initially helps is:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Here's where the diffusion of responsibility kicks in. When multiple people are present, each person feels less personally responsible. The math is brutal: more bystanders = less likelihood of any single person helping.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "When Bad Things Happen: The Bystander Effect"
+      ]
     },
     {
       "stem": "Following a contentious community dispute over resource allocation, a mediator proposes a resolution in which each party receives resources proportional to their contributions to the community project. This resolution approach is MOST consistent with which type of justice?",
@@ -61,7 +67,8 @@
       "lessonExcerpt": "Sherif's famous Robbers Cave study (1966) showed how quickly groups can turn hostile. And how to fix it.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": null
     },
     {
       "stem": "A school psychologist implements the jigsaw classroom technique in a diverse elementary school. Research on this cooperative learning approach has demonstrated which of the following outcomes?",
@@ -82,7 +89,10 @@
       "lessonExcerpt": "Results were impressive: reduced prejudice, improved self-esteem and empathy for all students, and better academic performance for minority students without hurting majority students' performance.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Reducing Conflict Through Cooperation"
+      ]
     },
     {
       "stem": "In Sherif’s Robbers Cave study, which intervention was found to most effectively reduce intergroup hostility between competing groups?",
@@ -100,7 +110,10 @@
       "quality_comment": "This item is clear and has one well-supported correct answer with plausible distractors reflective of related constructs.",
       "lessonExcerpt": "Allport's contact hypothesis remains foundational. Simply putting different groups together isn't enough.",
       "suggestedLesson": "3-helping-and-hurting",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reducing Conflict Through Cooperation"
+      ]
     },
     {
       "stem": "Which of the following is an example of unintentional covert racism?",
@@ -118,7 +131,10 @@
       "quality_comment": "Distractors contrast intentionality and manifestation types, improving discrimination in specialized content.",
       "lessonExcerpt": "They avoid contact with minorities when possible and discriminate only when they can justify it on non-racial grounds.",
       "suggestedLesson": "3-helping-and-hurting",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Modern Racism: When Prejudice Goes Underground"
+      ]
     },
     {
       "stem": "In a situation where multiple witnesses observe a person in distress, which step in Latane and Darley's model refers to the bystander recognizing that help is needed?",
@@ -141,7 +157,10 @@
       ],
       "lessonExcerpt": "Step 2: Interpreting It as an Emergency - Even when you notice something unusual, you might misread the situation.",
       "suggestedLesson": "3-helping-and-hurting",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Bad Things Happen: The Bystander Effect"
+      ]
     },
     {
       "stem": "When a bystander feels a personal obligation to assist someone in need despite the presence of others, which step in Latane and Darley's model are they likely engaged in?",
@@ -164,7 +183,10 @@
       ],
       "lessonExcerpt": "Step 3: Taking Responsibility - Here's where the diffusion of responsibility kicks in.",
       "suggestedLesson": "3-helping-and-hurting",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Bad Things Happen: The Bystander Effect"
+      ]
     },
     {
       "stem": "A community mental health center serving a racially diverse urban population reviews its utilization data and finds that clients from racial and ethnic minority backgrounds are terminating services significantly earlier than non-minority clients with comparable presenting problems and insurance coverage. Which of the following most accurately characterizes what the empirical literature predicts about this pattern and its etiology?",
@@ -185,7 +207,8 @@
       "lessonExcerpt": "redlining | | **Institutional** | Organizational practices that marginalize racial groups | Zero-tolerance school policies that disproportionately suspend minority students | | **Interpersonal** | Individual behaviors that harm other racial groups | Microaggressions: subtle comments that communicate hostile or demeaning messages | | **Internalized** | Acceptance of negative stereotypes about one's own group | Colorism: minorities accepting negative beliefs about darker skin tones |...",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": null
     }
   ]
 }

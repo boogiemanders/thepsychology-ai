@@ -20,7 +20,8 @@
       "lessonExcerpt": "William James and Carl Lange proposed that emotions arise from physiological responses. You don't run because you're afraid; you're afraid because you run. The sequence: Stimulus → Physiological response → Emotion.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": null
     },
     {
       "stem": "In auditory tasks, what is the primary function of selective attention?",
@@ -41,7 +42,8 @@
       "lessonExcerpt": "This structure processes interoceptive awareness. Your perception of internal bodily states.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": null
     },
     {
       "stem": "Which factor is most commonly associated with job satisfaction according to motivation theories?",
@@ -62,7 +64,8 @@
       "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": null
     },
     {
       "stem": "According to equity theory, what motivates individuals to maintain their level of effort in a workplace?",
@@ -83,7 +86,8 @@
       "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": null
     },
     {
       "stem": "What is the impact of extrinsic rewards on intrinsic motivation according to motivation research?",
@@ -104,7 +108,8 @@
       "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": null
     },
     {
       "stem": "According to the James-Lange theory of emotion, how do individuals experience emotions?",
@@ -125,7 +130,10 @@
       "lessonExcerpt": "James-Lange Theory - The sequence: Stimulus → Physiological response → Emotion.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Emotion Theories You Need to Know"
+      ]
     },
     {
       "stem": "In a classic experiment, participants injected with epinephrine were placed in a room with a confederate acting either euphoric or angry. Despite receiving identical injections, participants reported emotions consistent with the confederate's behavior—happy in the euphoria condition and angry in the anger condition. This pattern of results is most consistent with which theory of emotion?",
@@ -146,7 +154,10 @@
       "lessonExcerpt": "Their famous epinephrine studies demonstrated this: participants injected with epinephrine (causing arousal) reported different emotions depending on whether they were with an angry or euphoric confederate.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Emotion Theories You Need to Know"
+      ]
     },
     {
       "stem": "According to the James-Lange theory of emotion, the experience of emotion is primarily the result of:",
@@ -164,7 +175,10 @@
       "quality_comment": "Options present common theories of emotion with plausible descriptions, requiring careful differentiation, making this a good challenge at EPPP level.",
       "lessonExcerpt": "James-Lange Theory - William James and Carl Lange proposed that emotions arise from physiological responses.",
       "suggestedLesson": "2-stress-and-emotion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Emotion Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following is a core assumption of Schachter and Singer's two-factor theory of emotion?",
@@ -182,7 +196,10 @@
       "quality_comment": "Distractors represent other prominent theories, making this an effective question to differentiate among candidates' understanding.",
       "lessonExcerpt": "Schachter-Singer Two-Factor Theory - Stanley Schachter and Jerome Singer proposed that emotion requires both physiological arousal AND cognitive interpretation.",
       "suggestedLesson": "2-stress-and-emotion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Emotion Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following best characterizes the resistance stage in Selye’s general adaptation syndrome model of stress?",
@@ -200,7 +217,11 @@
       "quality_comment": "Options reflect distinct stages of stress response, reinforcing key conceptual distinctions; concisely stated for clarity.",
       "lessonExcerpt": "James-Lange Theory - The sequence: Stimulus → Physiological response → Emotion.",
       "suggestedLesson": "2-stress-and-emotion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Chronic Stress: When The System Stays On",
+        "The Stress Response: From Perception to Action"
+      ]
     },
     {
       "stem": "Which statement accurately reflects Cannon-Bard theory of emotion?",
@@ -218,7 +239,10 @@
       "quality_comment": "Options contrast major theories well, requiring candidates to carefully distinguish Cannon-Bard theory, suitable for EPPP-level rigor.",
       "lessonExcerpt": "Their famous epinephrine studies demonstrated this: participants injected with epinephrine (causing arousal) reported different emotions depending on whether they were with an angry or euphoric confederate.",
       "suggestedLesson": "2-stress-and-emotion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Emotion Theories You Need to Know"
+      ]
     },
     {
       "stem": "Which brain area is implicated in regulating the physical signs of emotion through the autonomic nervous system and pituitary gland communication?",
@@ -236,7 +260,11 @@
       "quality_comment": "Simple and clear question addressing a key brain-emotion connection; distractors are related brain areas but serve to test specificity.",
       "lessonExcerpt": "James-Lange Theory - William James and Carl Lange proposed that emotions arise from physiological responses.",
       "suggestedLesson": "2-stress-and-emotion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Brain's Emotion Centers: Meet Your Neural Cast",
+        "The Autonomic Nervous System: Your Automatic Responders"
+      ]
     },
     {
       "stem": "Which of the following best describes the sequence of events according to the James-Lange theory of emotion?",
@@ -259,7 +287,10 @@
       ],
       "lessonExcerpt": "Schachter-Singer Two-Factor Theory - Stanley Schachter and Jerome Singer proposed that emotion requires both physiological arousal AND cognitive interpretation.",
       "suggestedLesson": "2-stress-and-emotion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Emotion Theories You Need to Know"
+      ]
     },
     {
       "stem": "A psychologist is providing parent education to the family of a child recently diagnosed with spastic cerebral palsy (CP). The parents ask when the brain injury that caused the diagnosis most likely occurred. Based on the established etiology of cerebral palsy, the psychologist should explain that the responsible brain damage most commonly occurs:",
@@ -280,7 +311,8 @@
       "lessonExcerpt": "**Psychoeducation**: Explaining the stress response normalizes symptoms. {{M}}When you tell a client that their racing heart during panic isn't dangerous (it's just their SAM system activating when there's no actual threat{{/M}}) you're providing cognitive restructuring material.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": null
     },
     {
       "stem": "What physiological response is typically observed during exposure to a phobic stimulus?",
@@ -301,7 +333,11 @@
       "lessonExcerpt": "The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "The Autonomic Nervous System: Your Automatic Responders",
+        "The Stress Response: From Perception to Action"
+      ]
     },
     {
       "stem": "According to the James-Lange theory of emotion, which of the following statements is true?",
@@ -322,7 +358,10 @@
       "lessonExcerpt": "Adams' equity theory is all about fairness through social comparison. Workers naturally compare their input/outcome ratio to others doing similar work:",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Emotion Theories You Need to Know"
+      ]
     }
   ]
 }

@@ -19,7 +19,11 @@
       "lessonExcerpt": "While norm-referenced scores compare people to each other, criterion-referenced scores evaluate whether someone has achieved a specific level of competence or mastery. The question shifts from 'How do you compare to others?' to 'Can you do what needs to be done?'",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     },
     {
       "stem": "A psychologist obtains a z-score of +1.5 on a standardized measure for a client. The psychologist needs to convert this to a T-score for reporting purposes. What is the equivalent T-score?",
@@ -40,7 +44,10 @@
       "lessonExcerpt": "T-scores have a mean of 50 and a standard deviation of 10. They're essentially z-scores that have been rescaled to avoid negative numbers and decimals.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "A client obtains a T-score of 70 on a standardized anxiety measure that has a normal distribution. What is the client's approximate percentile rank?",
@@ -61,7 +68,10 @@
       "lessonExcerpt": "| +2 SD | +2.0 | 70 | 130 | 9 | 98 |",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "A set of raw scores from an anxiety measure has a bimodal distribution. When each raw score is converted to a z-score using the formula z = (X – M)/SD, the resulting distribution of z-scores will be:",
@@ -82,7 +92,10 @@
       "lessonExcerpt": "converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "A child obtains an IQ score of 85 on a standardized intelligence test with a mean of 100 and standard deviation of 15. Assuming a normal distribution, which of the following is the BEST estimate of this child's percentile rank?",
@@ -103,7 +116,10 @@
       "lessonExcerpt": "| -1 SD | -1.0 | 40 | 85 | 3 | 16 |",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "A set of raw scores on a psychological test has a mean of 75 and a standard deviation of 10. When these scores are converted to z-scores, the resulting distribution will have:",
@@ -124,7 +140,10 @@
       "lessonExcerpt": "Unlike percentile ranks, converting raw scores to standard scores is a linear transformation — the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "Which of the following best describes a percentile rank score?",
@@ -142,7 +161,11 @@
       "quality_comment": "The distractors are conceptually distinct and the stem is straightforward, making the question accessible and effective for testing basic knowledge.",
       "lessonExcerpt": "A percentile rank tells you the percentage of people in the reference group who scored at or below a particular score.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     },
     {
       "stem": "An examinee obtains a T-score of 40 on a standardized test. Which of the following is the best interpretation of this score?",
@@ -160,7 +183,10 @@
       "quality_comment": "Clear and concise, the options are numerically close, requiring test-takers to apply knowledge rather than guess.",
       "lessonExcerpt": "T-scores have a mean of 50 and a standard deviation of 10. A T-score of 40 means one standard deviation below average.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "If an individual’s raw score on a test corresponds to a z-score of +2.0, what is the approximate percentile rank equivalent in a normal distribution?",
@@ -178,7 +204,11 @@
       "quality_comment": "Distractors represent common percentile ranks associated with standard deviations, making the question appropriately challenging.",
       "lessonExcerpt": "| +2 SD | +2.0 | 70 | 130 | 9 | 98 |",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "The Foundation: Raw Scores Need Context"
+      ]
     },
     {
       "stem": "Which of the following statements accurately describes stanines?",
@@ -196,7 +226,11 @@
       "quality_comment": "All options are plausible but only one accurately reflects stanine characteristics, improving item discrimination.",
       "lessonExcerpt": "Stanines (short for \"standard nine\") range from 1 to 9, with a mean of 5 and a standard deviation of 2. Each stanine represents about half a standard deviation, except for the extremes (1 and 9, which extend beyond).",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     },
     {
       "stem": "In which scenario is the use of criterion-referenced scores most appropriate?",
@@ -214,7 +248,11 @@
       "quality_comment": "The distractors contrast norm- and criterion-referenced uses well, reinforcing conceptual understanding.",
       "lessonExcerpt": "While norm-referenced scores compare people to each other, criterion-referenced scores evaluate whether someone has achieved a specific level of competence or mastery.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     },
     {
       "stem": "Which of the following best characterizes the use of banding in personnel selection?",
@@ -232,7 +270,11 @@
       "quality_comment": "Distractors reflect common selection methods, creating a realistic and challenging question format.",
       "lessonExcerpt": "Banding groups scores into ranges based on the test's standard error of measurement. All scores within a band are considered statistically equivalent.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Using Test Scores for Selection Decisions",
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "What is a key difference between expectancy tables and regression equations in predicting criterion scores from predictor test scores?",
@@ -250,7 +292,12 @@
       "quality_comment": "The options are nuanced and rely on subtle distinctions that require thorough understanding; distractors are credible.",
       "lessonExcerpt": "Expectancy tables bridge the gap between test scores and real-world outcomes. Instead of predicting a single outcome score (like a regression equation does), an expectancy table shows the distribution of outcomes for people at different score levels.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Using Test Scores for Selection Decisions",
+        "Criterion-Referenced Scores: Measuring Against a Standard",
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "An individual scores 85 on a Wechsler IQ test. Which of the following interpretations is accurate?",
@@ -268,7 +315,10 @@
       "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers’ knowledge.",
       "lessonExcerpt": "Full-scale IQ scores on tests like the Wechsler scales and Stanford-Binet have a mean of 100 and a standard deviation of 15. An IQ of 85 means one standard deviation below average.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "Why is the conversion of raw scores to percentile ranks considered a nonlinear transformation?",
@@ -286,7 +336,12 @@
       "quality_comment": "Options target common misconceptions about linearity versus nonlinearity, supporting effective differentiation.",
       "lessonExcerpt": "Percentile ranks use a nonlinear transformation. Every raw score distribution gets converted into a perfectly flat (rectangular) distribution. Why? Because exactly 1% of scores get assigned to each percentile rank.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "The Foundation: Raw Scores Need Context",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     },
     {
       "stem": "A hiring manager uses a cutoff score for a selection test linked to a criterion measure of job performance. Which is the BEST description of this approach?",
@@ -304,7 +359,12 @@
       "quality_comment": "The distractors represent other common selection methods, making this an applied and relevant question.",
       "lessonExcerpt": "With a cutoff approach, you set a minimum score and select everyone at or above that threshold. One method for determining the cutoff is to link test scores to criterion scores (like job performance ratings) and use the test score associated with the lowest acceptable performance as your cutoff.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Using Test Scores for Selection Decisions",
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     },
     {
       "stem": "Which of the following represents a linear transformation of raw test scores?",
@@ -322,7 +382,11 @@
       "quality_comment": "Distractors are well-chosen to test understanding of linear versus nonlinear transformations.",
       "lessonExcerpt": "Standard scores tell you how far someone's score falls from the average, measured in standard deviations. Unlike percentile ranks, converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     },
     {
       "stem": "What primary purpose do expectancy tables serve in test score interpretation?",
@@ -340,7 +404,11 @@
       "quality_comment": "The item effectively distinguishes expectancy tables from other score interpretations with plausible distractors.",
       "lessonExcerpt": "Expectancy tables bridge the gap between test scores and real-world outcomes. Instead of predicting a single outcome score (like a regression equation does), an expectancy table shows the distribution of outcomes for people at different score levels.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     },
     {
       "stem": "When using banding as a selection technique, what assumption about test scores is central to its application?",
@@ -358,7 +426,11 @@
       "quality_comment": "The distractors address common misunderstandings, requiring examinees to grasp measurement concepts underlying banding.",
       "lessonExcerpt": "The rationale is sound: Small score differences often reflect test unreliability rather than true ability differences.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Using Test Scores for Selection Decisions",
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "Which of the following is TRUE about the relationship between norm-referenced standard scores and the shape of the raw score distribution?",
@@ -376,7 +448,10 @@
       "quality_comment": "The options contrast key concepts well, requiring nuanced understanding of transformation effects.",
       "lessonExcerpt": "Converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "An examinee receives a T-score of 60 on a different standardized test. What is the best interpretation of this score?",
@@ -399,7 +474,10 @@
       ],
       "lessonExcerpt": "| +1 SD | +1.0 | 60 | 115 | 7 | 84 |",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "If an examinee has a T-score of 30 on a standardized test, how should this score be interpreted?",
@@ -422,7 +500,10 @@
       ],
       "lessonExcerpt": "| -2 SD | -2.0 | 30 | 70 | 1 | 2 |",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "How do you determine the score threshold for a specific percentile in a normal distribution?",
@@ -443,7 +524,11 @@
       "lessonExcerpt": "Z-Scores: The Foundation Z-scores have a mean of 0 and a standard deviation of 1.0.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Using Test Scores for Selection Decisions"
+      ]
     },
     {
       "stem": "When ranking scores based on percentiles, which of the following statements is true?",
@@ -464,7 +549,10 @@
       "lessonExcerpt": "A percentile rank tells you the percentage of people in the reference group who scored at or below a particular score. If your client receives a percentile rank of 82, it means 82% of people in the comparison group scored the same or lower.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "Which of the following statements best describes the interpretation of IQ and achievement test scores in relation to specific learning disorder?",
@@ -485,7 +573,10 @@
       "lessonExcerpt": "People with specific learning disorders typically have average to above-average IQ but elevated rates of other problems. ADHD is the most common comorbid psychiatric disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "The Foundation: Raw Scores Need Context"
+      ]
     },
     {
       "stem": "Which personnel selection method allows for a range of scores to be considered acceptable for hiring decisions?",
@@ -506,7 +597,11 @@
       "lessonExcerpt": "**Sleep Terrors:**\n- Abrupt arousal usually starting with panicky scream\n- Intense fear with autonomic arousal",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "The Foundation: Raw Scores Need Context",
+        "Using Test Scores for Selection Decisions"
+      ]
     },
     {
       "stem": "When interpreting the Halstead Impairment Index, what does a score of 0.6 indicate about an examinee's neuropsychological functioning?",
@@ -524,7 +619,10 @@
       "quality_comment": "This question is straightforward with clear cutoff ranges, useful for assessing interpretation skills of neuropsych test results.",
       "lessonExcerpt": "| 0.5 to 0.7 | Moderate impairment |",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Using Test Scores for Selection Decisions"
+      ]
     },
     {
       "stem": "A 72-year-old patient with suspected neurocognitive disorder obtains a score of 22 on the Mini-Mental State Exam (MMSE). How should this score be interpreted?",
@@ -542,7 +640,10 @@
       "quality_comment": "The question is direct and focused on interpreting a widely used tool, appropriate for foundational assessment knowledge.",
       "lessonExcerpt": "30 maximum points, with 24 as the typical cutoff. Below 24 suggests cognitive impairment, and lower scores indicate greater severity.",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Using Test Scores for Selection Decisions"
+      ]
     },
     {
       "stem": "The Glasgow Coma Scale (GCS) score of 7 in a patient with traumatic brain injury indicates:",
@@ -560,7 +661,10 @@
       "quality_comment": "Clear clinical relevance and straightforward scoring criteria make this question effective for exam preparation.",
       "lessonExcerpt": "| 8 or less | Coma/Severe injury |",
       "suggestedLesson": "5-interpreting-scores",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach"
+      ]
     },
     {
       "stem": "If a student scores in the 75th percentile on a standardized test, what does this indicate about their performance relative to their peers?",
@@ -581,7 +685,11 @@
       "lessonExcerpt": "The **p-value** tells you what percentage of test-takers got the item right. **Calculation:** Number who answered correctly ÷ Total number of test-takers",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Norm-Referenced Scores: The Comparison Approach",
+        "Criterion-Referenced Scores: Measuring Against a Standard"
+      ]
     }
   ]
 }

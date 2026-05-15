@@ -19,7 +19,10 @@
       "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses... This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "A client with social anxiety avoids making phone calls because doing so eliminates the distressing feelings of anticipatory anxiety. Over time, the client's avoidance behavior has increased significantly. This pattern is BEST explained by:",
@@ -40,7 +43,11 @@
       "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation. Note that the medication itself isn't the reinforcer, the removal of pain is what reinforces taking the medication.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "The Four Core Consequences",
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "In Skinner's classic pigeon experiment, food was delivered at fixed 15-second intervals regardless of the pigeons' behavior. Several pigeons developed ritualistic movements such as spinning or head-bobbing that they repeated consistently before each food delivery. This phenomenon is BEST explained as:",
@@ -61,7 +68,10 @@
       "lessonExcerpt": "Superstitious behavior develops when a behavior is accidentally reinforced, when reinforcement happens to follow the behavior by coincidence, not because the behavior caused it.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "Which of the following statements BEST captures Skinner's central contribution to the understanding of learning through operant conditioning?",
@@ -82,7 +92,11 @@
       "lessonExcerpt": "B. F. Skinner took this concept further in 1938, developing what we now call operant conditioning. He proposed that whether or not a voluntary behavior happens depends on how it 'operates' on the environment. Specifically, whether it produces reinforcement or punishment.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Where It All Started",
+        "Understanding Operant Conditioning: The Psychology of Consequences"
+      ]
     },
     {
       "stem": "A clinical psychologist is designing a token economy program for a residential treatment facility. After successfully establishing a target behavior using continuous reinforcement, she transitions to an intermittent schedule to maintain the behavior long-term. Which of the following schedules would produce the GREATEST resistance to extinction if the token system were eventually discontinued?",
@@ -103,7 +117,10 @@
       "lessonExcerpt": "Variable ratio schedules produce the highest response rates and strongest resistance to extinction. Variable schedules are more resistant to extinction than fixed schedules.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "A parent has been giving a toddler a cookie every time the child whines at the grocery store. The parent decides to stop providing cookies entirely. In the first few shopping trips after this change, the parent should expect the whining to:",
@@ -124,7 +141,10 @@
       "lessonExcerpt": "when you first stop the reinforcement, the behavior often *increases* temporarily. This is called an extinction burst.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "A client reports that she fastens her seatbelt every time she gets in the car because the annoying warning chime stops as soon as the belt clicks. Her seatbelt-fastening behavior is BEST maintained by:",
@@ -145,7 +165,10 @@
       "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "A therapist working with an adolescent who frequently uses profanity during sessions decides to implement a brief, firm verbal reprimand each time the behavior occurs. Over the next several sessions, the frequency of profanity decreases. Which operant conditioning principle best explains the reduction in the adolescent's behavior?",
@@ -166,7 +189,10 @@
       "lessonExcerpt": "Positive Punishment | Decreases | Something unpleasant is added | Pain",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "A behavioral consultant is asked why a teacher's repeated use of verbal reprimands for off-task behavior has become progressively less effective over the course of the school year. The consultant explains that the students' responsiveness to the reprimands has diminished through repeated exposure. This phenomenon is best described as:",
@@ -187,7 +213,11 @@
       "lessonExcerpt": "Habituation refers to a gradual decline in response over time. In operant conditioning contexts, this is particularly relevant to punishment. When punishment is used repeatedly, people often become accustomed to it, and it loses effectiveness.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP",
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "A client with social anxiety reports that she frequently makes excuses to leave parties early because doing so immediately reduces her feelings of distress. Over time, she has become increasingly likely to leave social events within the first few minutes. The maintenance of this early-departure behavior is best explained by:",
@@ -208,7 +238,11 @@
       "lessonExcerpt": "Escape conditioning: A behavior occurs because it allows you to get away from something unpleasant that's already happening.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "The Four Core Consequences",
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "E. L. Thorndike's puzzle box experiments with cats demonstrated that over successive trials, the time required to escape the box gradually decreased. Thorndike attributed this learning to the principle that behaviors producing satisfying outcomes are more likely to recur, while behaviors producing discomfort tend to diminish. This foundational principle is known as:",
@@ -229,7 +263,10 @@
       "lessonExcerpt": "This led to his law of effect: behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Where It All Started"
+      ]
     },
     {
       "stem": "A researcher is studying a pigeon that has been trained to peck a red key for food on a VI-30 schedule and a green key for food on a separate VI-30 schedule. When the researcher switches the green key to extinction while maintaining the red key schedule, the pigeon's rate of pecking on the red key increases significantly even though its reinforcement schedule has not changed. This phenomenon is called:",
@@ -250,7 +287,10 @@
       "lessonExcerpt": "Positive behavioral contrast: When you decrease reinforcement for Behavior A, Behavior B increases (even though its reinforcement stayed the same).",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "Which of the following best describes negative reinforcement in the context of behavior modification?",
@@ -271,7 +311,10 @@
       "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies positive punishment in a behavioral context?",
@@ -292,7 +335,10 @@
       "lessonExcerpt": "Positive Punishment | Decreases | Something unpleasant is added | Pain",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "Which of the following best describes the consequences of behavior in learning theory?",
@@ -313,7 +359,11 @@
       "lessonExcerpt": "What happens after a behavior determines whether that behavior increases or decreases.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Understanding Operant Conditioning: The Psychology of Consequences",
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "What is likely to happen to a behavior when reinforcement is no longer provided?",
@@ -334,7 +384,10 @@
       "lessonExcerpt": "When you stop reinforcing a previously reinforced behavior, it will eventually disappear. That's operant extinction.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "In operant conditioning, which schedule of reinforcement is characterized by providing reinforcement after a fixed amount of time has passed?",
@@ -355,7 +408,10 @@
       "lessonExcerpt": "Fixed Interval (FI): Reinforcement comes after a set period of time, regardless of how many responses occur.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "Which reinforcement schedule is characterized by providing reinforcement after a variable amount of time has passed?",
@@ -376,7 +432,10 @@
       "lessonExcerpt": "Variable Interval (VI): Reinforcement comes after varying, unpredictable time periods.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "In a two-component multiple schedule, a rat is reinforced on a variable-interval 30-second schedule during a green-light component (S1) and on a variable-interval 30-second schedule during a red-light component (S2). The experimenter then changes S2 to extinction while keeping S1 unchanged. The researcher observes that responding during S1 increases substantially above its pre-change baseline. This phenomenon is best described as:",
@@ -397,7 +456,10 @@
       "lessonExcerpt": "Behavioral contrast occurs when you're reinforcing two different behaviors (A and B), and you change the reinforcement for one behavior, which then affects the other behavior even though its reinforcement didn't change.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "A parent repeatedly nags a teenager about completing homework each evening. The teenager eventually shouts at the parent, who immediately leaves the room and stops nagging. Over the following month, the teenager's shouting behavior increases in frequency. Which operant conditioning process best accounts for the maintenance of the shouting behavior?",
@@ -418,7 +480,10 @@
       "lessonExcerpt": "Negative Reinforcement: Increases/maintains behavior. Something unpleasant is removed. 'You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.'",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "A spouse repeatedly asks her partner to put dishes in the dishwasher rather than leaving them in the sink. Each time the partner complies and places the dishes in the dishwasher, the spouse immediately stops asking. Over a period of weeks, the partner's dish-loading behavior increases substantially. According to operant conditioning principles, the partner's behavior is being maintained by:",
@@ -439,7 +504,10 @@
       "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses. This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "B.F. Skinner observed that pigeons placed in an operant chamber and given food deliveries on a fixed-time schedule — completely independent of their behavior — began to repeatedly perform whatever action happened to precede each delivery, such as turning in circles or bobbing their heads. Skinner termed this 'superstitious behavior.' Which mechanism most directly accounts for this phenomenon?",
@@ -460,7 +528,10 @@
       "lessonExcerpt": "But continuous schedules have problems: people get tired of the reward (satiation), and when reinforcement stops, the behavior disappears rapidly.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "A behavior analyst is beginning discrete trial training with a 3-year-old who has autism and has never produced any spontaneous verbal requests. During the first phase of intervention, the analyst delivers a preferred edible immediately every time the child produces the target vocalization, without exception. The analyst plans to transition to a less dense schedule only after the behavior is firmly established. Which schedule is being used in this initial phase, and what is its primary advantage for this clinical context?",
@@ -481,7 +552,10 @@
       "lessonExcerpt": "Initially, the fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs. That instant feedback helps you learn quickly.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "A behavioral psychologist wants to establish a new target behavior as quickly as possible during the initial acquisition phase of treatment. Which reinforcement schedule would produce the fastest learning of the new behavior?",
@@ -502,7 +576,10 @@
       "lessonExcerpt": "Initially, the fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "According to Thorndike's law of effect, how are behaviors influenced by their consequences?",
@@ -520,7 +597,10 @@
       "quality_comment": "The question clearly targets a foundational concept with distractors that are plausible misconceptions, suitable for EPPP-level assessment.",
       "lessonExcerpt": "This led to his law of effect: behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Where It All Started"
+      ]
     },
     {
       "stem": "Which of the following best describes negative reinforcement?",
@@ -538,7 +618,10 @@
       "quality_comment": "Options are well-constructed with subtle distinctions, promoting careful analysis and preventing guessing based on wording alone.",
       "lessonExcerpt": "This led to his law of effect: behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "A rat receives a food pellet each time it presses a lever exactly 15 times. This reinforcement schedule is known as:",
@@ -556,7 +639,10 @@
       "quality_comment": "Clear and focused stem with plausible distractors, ensuring candidates understand different reinforcement schedules.",
       "lessonExcerpt": "Fixed Ratio (FR): Reinforcement comes after a set number of responses.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "Which intermittent reinforcement schedule typically produces the highest rate of responding and the greatest resistance to extinction?",
@@ -574,7 +660,10 @@
       "quality_comment": "Distractors are all plausible types of reinforcement schedules, requiring solid content knowledge to select the correct option.",
       "lessonExcerpt": "Fixed Ratio (FR): Reinforcement comes after a set number of responses.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies positive punishment?",
@@ -592,7 +681,10 @@
       "quality_comment": "Options cover various operant conditioning scenarios with subtle differences, requiring careful discrimination by test-takers.",
       "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses. This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "A behavior that initially increases after discontinuing reinforcement but then gradually decreases is known as:",
@@ -610,7 +702,10 @@
       "quality_comment": "The distractors are plausible and closely related concepts, making this question challenging yet fair for the exam level.",
       "lessonExcerpt": "Positive Punishment | Decreases | Something unpleasant is added | Pain",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "Behavioral contrast is observed when:",
@@ -628,7 +723,10 @@
       "quality_comment": "The stem addresses a complex operant conditioning concept; distractors are relevant, challenging test-takers’ higher-level understanding.",
       "lessonExcerpt": "Here's what trips people up: when you first stop the reinforcement, the behavior often increases temporarily. This is called an extinction burst.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "In the context of operant conditioning, a generalized reinforcer is best described as:",
@@ -646,7 +744,10 @@
       "quality_comment": "Distractors represent related concepts in reinforcement, which enhances discriminability of candidate understanding.",
       "lessonExcerpt": "Negative behavioral contrast: When you increase reinforcement for Behavior A, Behavior B decreases (even though its reinforcement stayed the same).",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "A child who cleans her room to stop her parents from nagging is an example of what type of operant conditioning?",
@@ -664,7 +765,10 @@
       "quality_comment": "The scenario is straightforward and clearly illustrates the concept, making the question accessible while encouraging application skills.",
       "lessonExcerpt": "Generalized reinforcers are secondary reinforcers associated with multiple different primary reinforcers. Money is the classic example",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "Which of the following best describes the process of fading in operant conditioning?",
@@ -682,7 +786,10 @@
       "quality_comment": "The options include similar behavioral concepts, requiring examinees to differentiate between related procedures.",
       "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "Skinner’s concept of superstitious behavior is best explained as:",
@@ -700,7 +807,10 @@
       "quality_comment": "This question focuses on a specific phenomenon with carefully crafted distractors that could confuse less-prepared candidates.",
       "lessonExcerpt": "Fading is the gradual removal of prompts once the behavior is established.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "When a rat learns to press a lever only when a blinking light is on, the blinking light functions as what in operant conditioning?",
@@ -718,7 +828,10 @@
       "quality_comment": "The distractors include related conditioning terms, encouraging precise understanding of discrimination stimuli.",
       "lessonExcerpt": "Superstitious behavior develops when a behavior is accidentally reinforced, when reinforcement happens to follow the behavior by coincidence, not because the behavior caused it.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "According to the matching law, when two behaviors are reinforced concurrently on different schedules, how will the organism allocate responding?",
@@ -736,7 +849,10 @@
       "quality_comment": "The item requires nuanced understanding of concurrent reinforcement schedules; the distractors include common misconceptions.",
       "lessonExcerpt": "The positive discriminative stimulus (SD) signals that reinforcement is available.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "In escape conditioning, a behavior is maintained because it:",
@@ -754,7 +870,10 @@
       "quality_comment": "Clear stem with distractors representing related but distinct concepts improves discrimination of candidate knowledge.",
       "lessonExcerpt": "The matching law predicts that when multiple behaviors are reinforced simultaneously on different schedules, you'll perform each behavior proportionally to how often it's reinforced.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "In operant conditioning, what is the primary purpose of implementing a thinning schedule?",
@@ -772,7 +891,10 @@
       "quality_comment": "The options are similarly worded, requiring precise understanding of thinning to avoid confusion.",
       "lessonExcerpt": "Escape conditioning: A behavior occurs because it allows you to get away from something unpleasant that's already happening.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "Which operant conditioning phenomenon explains why punishment often loses effectiveness over time?",
@@ -790,7 +912,10 @@
       "quality_comment": "Distractors are related behavioral phenomena, which requires candidates to distinguish habituation specifically in this context.",
       "lessonExcerpt": "Thinning means gradually reducing how much reinforcement you provide. Thinning increases resistance to extinction, making behaviors more durable in the long run.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Operant Concepts for the EPPP"
+      ]
     },
     {
       "stem": "Which of the following scenarios best illustrates negative reinforcement?",
@@ -813,7 +938,10 @@
       ],
       "lessonExcerpt": "Habituation refers to a gradual decline in response over time. In operant conditioning contexts, this is particularly relevant to punishment. When punishment is used repeatedly, people often become accustomed to it, and it loses effectiveness.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "In the context of operant conditioning, which of the following best exemplifies the principle of negative reinforcement?",
@@ -836,7 +964,10 @@
       ],
       "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "How does negative reinforcement play a role in smoking behavior?",
@@ -857,7 +988,10 @@
       "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "What is the primary reason for extinction resistance in reinforcement schedules?",
@@ -878,7 +1012,10 @@
       "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "In behavior modification, which of the following best describes negative punishment?",
@@ -899,7 +1036,10 @@
       "lessonExcerpt": "Negative Punishment | Decreases | Something desirable is removed | Loss",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "The Four Core Consequences"
+      ]
     },
     {
       "stem": "What is the optimal timing for reinforcement to enhance learning according to behavioral psychology?",
@@ -920,7 +1060,10 @@
       "lessonExcerpt": "Negative Punishment | Decreases | Something desirable is removed | Loss",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "A psychologist consulted by a treatment program for gambling disorder is asked to explain why individuals who have lost money gambling for weeks continue to return to the casino, and why abstinence is so difficult to maintain even after extended breaks. The psychologist's most accurate explanation for both the persistence and high extinction resistance of gambling behavior is that slot machines operate on a:",
@@ -941,7 +1084,10 @@
       "lessonExcerpt": "Bandura's bobo doll experiments showed children learn through observation without direct reinforcement. Observational learning requires four processes",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     },
     {
       "stem": "A forensic psychologist is developing a treatment plan for a client diagnosed with antisocial personality disorder who has a history of manipulation and disregard for social norms. Based on the literature regarding treatment of antisocial personality disorder, which type of consequence would be MOST effective in influencing this client's behavior?",
@@ -962,7 +1108,8 @@
       "lessonExcerpt": "Treatment is notoriously difficult because these individuals don't believe they have a problem. However, cognitive-behavioral group interventions may reduce reoffending, and contingency management can help with comorbid substance use.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     },
     {
       "stem": "A behavioral analyst is training a child with autism to use a new functional communication device to request preferred items. To maximize the rate at which this new behavior is acquired during initial training, which schedule of reinforcement should be implemented?",
@@ -983,7 +1130,10 @@
       "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Reinforcement Schedules: Timing Is Everything"
+      ]
     }
   ]
 }

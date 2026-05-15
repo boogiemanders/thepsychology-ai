@@ -19,7 +19,10 @@
       "lessonExcerpt": "Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "In Jungian analytical psychology, the process by which an individual attributes their own unacknowledged dark or undesirable qualities onto other people or external situations is most accurately described as:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "During a Gestalt therapy session, a client describes a recurring dream in which she is lost in a dark forest while a bright light shines from a distant tower. The therapist asks the client to \"become\" the dark forest and speak as the forest, then to \"become\" the bright light and speak as the light. This approach to dream interpretation reflects which Gestalt principle?",
@@ -61,7 +67,11 @@
       "lessonExcerpt": "Dream work: Unlike Freud's symbolic interpretation, Gestalt therapists have clients role-play different elements of their dreams, treating each part as a disowned aspect of the client's own personality.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 29
+      "inspirationIndex": 29,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning",
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "A behavioral psychologist explains that the emotional release experienced during psychoanalytic free association is therapeutically beneficial not because of catharsis per se, but because it allows the client to discuss previously avoided material without negative consequences. This explanation is MOST consistent with which behavioral principle?",
@@ -82,7 +92,11 @@
       "lessonExcerpt": "through repeated interpretation, clients experience catharsis (releasing repressed emotions) and insight, which leads to working through. Gradually accepting and integrating these new understandings into their lives.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 32
+      "inspirationIndex": 32,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces",
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "During Jungian analysis, a client who consistently presents himself as entirely selfless and accommodating expresses intense, seemingly disproportionate contempt for colleagues he describes as 'exploitative and narcissistic.' His analyst hypothesizes that the client is engaged in shadow projection. Which of the following most accurately describes the theoretical basis for this formulation within Jungian analytical psychology?",
@@ -103,7 +117,10 @@
       "lessonExcerpt": "Personal unconscious: Your own forgotten or repressed memories (similar to Freud's idea). Collective unconscious: Memories shared by all humans, passed down through generations. The collective unconscious contains archetypes. Universal patterns of thought and imagery that predispose us to act in similar ways... Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "A client in Gestalt therapy recounts a recurring dream in which she is relentlessly chased by an enormous shadowy figure who eventually corners her against a solid wall. The therapist asks the client to 'become' each element of the dream in turn—to speak as the pursuer, as the wall, and as the trapped version of herself—and to give each a voice. This technique reflects which foundational Gestalt view of dreams?",
@@ -124,7 +141,11 @@
       "lessonExcerpt": "**Dream work**: Unlike Freud's symbolic interpretation, Gestalt therapists have clients role-play different elements of their dreams, treating each part as a disowned aspect of the client's own personality.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 29
+      "inspirationIndex": 29,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces",
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "From a behavioral perspective, the psychoanalytic concept of catharsis is BEST understood as:",
@@ -145,7 +166,11 @@
       "lessonExcerpt": "clients experience catharsis (releasing repressed emotions) and insight, which leads to working through. Gradually accepting and integrating these new understandings into their lives.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 32
+      "inspirationIndex": 32,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces",
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "According to Freudian psychoanalysis, which aspect of personality operates according to the reality principle and attempts to satisfy the id's desires in realistic ways?",
@@ -163,7 +188,10 @@
       "quality_comment": "The question is clear and distractors are plausible, testing a fundamental Freudian concept appropriate for EPPP exam level.",
       "lessonExcerpt": "| **Ego** | ~6 months | Reality principle | Rational problem-solving | To satisfy id's needs realistically |",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "Which defense mechanism involves attributing one's own unacceptable impulses to another person?",
@@ -181,7 +209,10 @@
       "quality_comment": "Options are well balanced and reflect commonly tested defense mechanisms, ensuring test-taker differentiation.",
       "lessonExcerpt": "**Projection**: Attributing your own unacceptable feelings to someone else.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "Jung's concept of the collective unconscious includes which of the following?",
@@ -199,7 +230,10 @@
       "quality_comment": "Distractors contrast Jung’s key concepts with Freud’s theory, promoting discriminative thinking.",
       "lessonExcerpt": "The collective unconscious contains **archetypes**. Universal patterns of thought and imagery that predispose us to act in similar ways.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "In Rogers's person-centered therapy, what is the therapist’s role in facilitating client growth?",
@@ -217,7 +251,10 @@
       "quality_comment": "The options cover common therapy interventions, with plausible distractors from other therapy types enhancing discriminability.",
       "lessonExcerpt": "Rogers believed that providing these three core conditions creates an environment where clients can grow: Empathy, Unconditional Positive Regard, Congruence",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "Which boundary disturbance in Gestalt therapy is characterized by a person attributing unwanted parts of themselves to others?",
@@ -235,7 +272,10 @@
       "quality_comment": "Distractors are other Gestalt boundary disturbances providing a balanced challenge for examinees familiar with the model.",
       "lessonExcerpt": "**Projection**: Putting your own undesirable qualities onto others.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "Existential therapies focus primarily on helping clients confront anxieties arising from which of the following ultimate concerns?",
@@ -253,7 +293,10 @@
       "quality_comment": "The distractors focus on other theoretical models, making the correct option clear to knowledgeable candidates.",
       "lessonExcerpt": "Existential therapists believe psychological disturbances come from failing to resolve conflicts around four ultimate concerns: 1. Death 2. Freedom 3. Isolation 4. Meaninglessness",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "In Glasser’s reality therapy, what term describes the client’s adoption of positive, responsible ways to fulfill basic needs without infringing on others’ rights?",
@@ -271,7 +314,10 @@
       "quality_comment": "Distractors include terms from other theories and related but incorrect concepts, enhancing discriminability.",
       "lessonExcerpt": "- **Success identity**: Meeting needs responsibly, in ways that don't infringe on others' rights",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "Which technique is most associated with Gestalt therapy and involves role-playing opposing parts of the self or significant others to increase awareness?",
@@ -289,7 +335,11 @@
       "quality_comment": "Distractors are plausible therapeutic techniques from other models, making the question appropriate for EPPP level.",
       "lessonExcerpt": "**Empty chair technique**: The client talks to an empty chair as if someone important is sitting there, or they switch chairs to dialogue between different parts of themselves",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning",
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "Positive psychology's concept of 'flow' is best described as:",
@@ -307,7 +357,10 @@
       "quality_comment": "Clear options distinguish flow from anxiety or relaxation states, appropriate for testing foundational positive psychology concepts.",
       "lessonExcerpt": "Flow happens most when there's a challenge-skill balance: you believe you have the skills needed, and both the challenge and your skill level are relatively high.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "Kelly’s personal construct therapy primarily assists clients by helping them:",
@@ -325,7 +378,10 @@
       "quality_comment": "Distractors reflect concepts from other therapies, which is helpful to discern correct personal construct therapy principles.",
       "lessonExcerpt": "These are bipolar dimensions of meaning we use to understand the world: fair/unfair, strong/weak, trustworthy/untrustworthy, success/failure.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "In Freudian psychoanalysis, what is the initial step in the process of analysis that involves helping clients recognize previously unconscious behaviors?",
@@ -343,7 +399,10 @@
       "quality_comment": "Options are closely related analytic steps, requiring detailed knowledge suitable for a challenging EPPP question.",
       "lessonExcerpt": "**Confrontation** → **Clarification** → **Interpretation** → **Working Through** First, you help clients notice behaviors they weren't aware of.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "Which of the following best differentiates existential therapies from humanistic therapies?",
@@ -361,7 +420,10 @@
       "quality_comment": "Presents a nuanced comparison of similar therapies with plausible but incorrect distractors, fitting for EPPP.",
       "lessonExcerpt": "**Humanistic**: Emphasizes acceptance, growth, self-actualization **Existential**: Emphasizes freedom, responsibility, authentic engagement with life's inherent anxieties",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "According to Freud, repression is best described as:",
@@ -379,7 +441,10 @@
       "quality_comment": "Distractors represent other defense mechanisms, making the correct choice clear but requiring knowledge of terms.",
       "lessonExcerpt": "**Repression**: The foundation of all other defenses. Keeping threatening thoughts completely out of awareness. Not conscious avoidance, but truly not knowing they exist.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "In the context of positive psychology, which intervention is most supported by empirical research to improve physical health?",
@@ -397,7 +462,10 @@
       "quality_comment": "The question integrates empirical support with positive psychology concepts, promoting clinical rationale at EPPP level.",
       "lessonExcerpt": "Studies have linked positive emotions and optimism to longer life and improved physical health.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning"
+      ]
     },
     {
       "stem": "What is the primary goal of Jung’s analytical psychotherapy?",
@@ -415,7 +483,11 @@
       "quality_comment": "Distractors represent other therapy goals to challenge test-takers’ differentiation of psychodynamic approaches.",
       "lessonExcerpt": "Jung's therapy aims for individuation, which happens mainly in the second half of life. This is the process of becoming a whole, complete individual, integrating all aspects of yourself, including those from the collective unconscious.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Humanistic and Existential Perspective: Freedom, Growth, and Meaning",
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "In the context of psychodynamic theory, which component of personality is primarily responsible for moral judgments and strives for perfection?",
@@ -438,7 +510,10 @@
       ],
       "lessonExcerpt": "| **Superego** | Later childhood | Moral principle | Society's rules internalized | To block id's \"bad\" impulses completely |",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     },
     {
       "stem": "Which structure of personality, according to Freud, is involved in mediating between instinctual drives and societal expectations, often leading to defense mechanisms?",
@@ -461,7 +536,10 @@
       ],
       "lessonExcerpt": "When the ego can't resolve conflicts between id and superego rationally, it uses defense mechanisms.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Psychodynamic Perspective: Understanding the Hidden Forces"
+      ]
     }
   ]
 }

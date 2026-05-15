@@ -18,7 +18,12 @@
       "suggestedParagraph": "## Understanding Reliability: What Does \"Consistent\" Really Mean?",
       "lessonExcerpt": "A reliability coefficient tells you directly what percentage of score variability comes from true differences versus error.",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT"
+      "inspirationDomain": "ASSESSMENT",
+      "relatedSections": [
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?",
+        "Four Ways to Measure Reliability",
+        "Standard Error of Measurement: Embracing Uncertainty"
+      ]
     },
     {
       "stem": "Why is internal consistency reliability generally not an appropriate way to estimate reliability for a pure speed test?",
@@ -38,7 +43,10 @@
       "suggestedParagraph": "### 3. Internal Consistency Reliability: Do the Items Work Together?",
       "lessonExcerpt": "Internal consistency is NOT appropriate for speed tests. Why? Because on speed tests, people who get far in the test answer more items correctly, making it look like the items are highly consistent when really you're just measuring speed.",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT"
+      "inspirationDomain": "ASSESSMENT",
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "An item analysis shows that an item's discrimination index is negative. Which conclusion is most justified?",
@@ -58,7 +66,11 @@
       "suggestedParagraph": "### Item Discrimination Index (D)",
       "lessonExcerpt": "D = -1.0: All low scorers got it right, no high scorers did (something's wrong!)",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT"
+      "inspirationDomain": "ASSESSMENT",
+      "relatedSections": [
+        "Item Analysis: Building Better Tests",
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?"
+      ]
     },
     {
       "stem": "A psychologist administers an IQ test that has a standard deviation of 15 and a reliability coefficient of .91. She calculates the standard error of measurement (SEM) to be 4.5. The SEM value of 4.5 is expressed in:",
@@ -79,7 +91,10 @@
       "lessonExcerpt": "Formula: SEM = SD x sqrt(1 - Reliability coefficient). Where SD is the test's standard deviation. Example: Test has SD = 15 and reliability = .91, SEM = 4.5",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Standard Error of Measurement: Embracing Uncertainty"
+      ]
     },
     {
       "stem": "Two clinicians independently diagnose 100 patients using the same structured diagnostic interview. Their inter-rater agreement yields a Cohen's Kappa of .85. This coefficient indicates that:",
@@ -100,7 +115,11 @@
       "lessonExcerpt": "Cohen's Kappa: A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale (categories with no inherent order).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Four Ways to Measure Reliability",
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?"
+      ]
     },
     {
       "stem": "A graduate student is studying psychometric principles and reads that the Spearman-Brown prophecy formula is used in split-half reliability to correct for the fact that shorter tests are less reliable. This principle reflects the broader psychometric finding that increasing test length:",
@@ -121,7 +140,10 @@
       "lessonExcerpt": "Because shorter tests are less reliable, split-half gives you the reliability of two half-length tests. The Spearman-Brown formula corrects this to estimate the full test's reliability... A test's reliability always sets a ceiling on its validity.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "A test developer is deciding between classical test theory (CTT) and item response theory (IRT) for constructing a new adaptive screening measure. Which characteristic of IRT represents its PRIMARY advantage over CTT for this application?",
@@ -142,7 +164,10 @@
       "lessonExcerpt": "Sample-dependent (item statistics change with different groups) | Sample-invariant (item properties stable across groups)",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Item Response Theory: The Modern Alternative"
+      ]
     },
     {
       "stem": "Two clinicians independently review 100 patient records and classify each patient as meeting or not meeting criteria for a specific diagnosis. Their percent agreement is 88%, but when Cohen's Kappa is calculated, the value is .76. The difference between these two values is best explained by the fact that Kappa:",
@@ -163,7 +188,10 @@
       "lessonExcerpt": "Cohen's Kappa: A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale (categories with no inherent order).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "A psychologist reports that an intelligence test with a standard deviation of 15 and a reliability coefficient of .91 has a standard error of measurement of approximately 4.5 points. A school team uses this value to construct a confidence interval around a student's obtained score of 112. In what metric are both the obtained score and the confidence interval boundaries expressed?",
@@ -184,7 +212,11 @@
       "lessonExcerpt": "Formula: SEM = SD x sqrt(1 - Reliability coefficient). Where SD is the test's standard deviation. Test has SD = 15 and reliability = .91, SEM = 4.5",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Standard Error of Measurement: Embracing Uncertainty",
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "Two doctoral-level clinicians independently administer and score a structured diagnostic interview with 40 patients. Their raw percentage agreement is 75%. Given the base rates of diagnoses in this clinic population, chance agreement is estimated at 50%. The computed kappa coefficient is .50. Which of the following statements accurately interprets this kappa value?",
@@ -205,7 +237,11 @@
       "lessonExcerpt": "Cohen's Kappa: A more sophisticated measure that corrects for chance agreement.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?",
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "In classical test theory, an observed test score (X) is conceptualized as the sum of which two components?",
@@ -223,7 +259,12 @@
       "quality_comment": "This foundational question clearly assesses core understanding of classical test theory; distractors are plausible but distinct.",
       "lessonExcerpt": "Obtained Score = True Score + Measurement Error",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability",
+        "Standard Error of Measurement: Embracing Uncertainty",
+        "Classical Test Theory: The Foundation"
+      ]
     },
     {
       "stem": "Which reliability method is most appropriate for a test that measures a stable trait and requires consistency of scores over time?",
@@ -241,7 +282,10 @@
       "quality_comment": "The question is clear with well-differentiated options, focusing on appropriate reliability methods.",
       "lessonExcerpt": "Test-retest reliability matters for characteristics that should be stable over time, like intelligence or enduring personality traits.",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "Cronbach’s alpha is commonly used to estimate which type of reliability?",
@@ -259,7 +303,10 @@
       "quality_comment": "Options are plausible, and the question targets a frequently tested reliability concept.",
       "lessonExcerpt": "Coefficient Alpha (Cronbach's Alpha): Calculates the average correlation among all items on the test. This is the most widely used method.",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "Which of the following factors tends to increase the reliability coefficient of a test?",
@@ -277,7 +324,10 @@
       "quality_comment": "Distractors address common misconceptions, enhancing discriminability for test-takers.",
       "lessonExcerpt": "Tests measuring one unified thing tend to be more reliable than tests measuring several different things.",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "An item on a multiple-choice test has a difficulty index (p) of 0.30. Which statement best characterizes this item?",
@@ -295,7 +345,12 @@
       "quality_comment": "The question is straightforward with clear numeric interpretation; distractors are reasonable but incorrect.",
       "lessonExcerpt": "The p-value tells you what percentage of test-takers got the item right. p = .50: Half got it right (moderate difficulty). For most tests, you want moderately difficult items (p = .30 to .70).",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Item Analysis: Building Better Tests",
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?",
+        "From Reliability Coefficient to Reliability Index"
+      ]
     },
     {
       "stem": "Which method corrects for the underestimation of reliability that occurs when splitting a test in half for the calculation of split-half reliability?",
@@ -313,7 +368,10 @@
       "quality_comment": "The question is technically detailed and challenges test-takers’ knowledge of specific reliability corrections.",
       "lessonExcerpt": "Split-Half Reliability: Divide the test in half (usually odd-numbered items vs. even-numbered items), correlate the two halves, then apply the Spearman-Brown prophecy formula to estimate what the full test's reliability would be.",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "A test has a reliability coefficient of .81. What is the reliability index (index of reliability), as defined by taking the square root of the coefficient?",
@@ -331,7 +389,12 @@
       "quality_comment": "Numerical but basic calculation question, with distractors that test misunderstandings of the formula.",
       "lessonExcerpt": "Reliability index: The theoretical correlation between observed scores and true scores, calculated as the square root of the reliability coefficient. For example, if a test has a reliability coefficient of .81, the reliability index would be sqrt(.81) = .90",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Reliability Coefficients Go Up or Down?",
+        "From Reliability Coefficient to Reliability Index",
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "Inter-rater reliability is most accurately estimated by which statistic that accounts for chance agreement when two raters assign nominal ratings?",
@@ -349,7 +412,10 @@
       "quality_comment": "Good clarity and plausible distractors, focusing the test-taker on differences between reliability coefficients.",
       "lessonExcerpt": "Cohen's Kappa: A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale (categories with no inherent order).",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "In item response theory (IRT), the difficulty parameter of an item represents:",
@@ -367,7 +433,10 @@
       "quality_comment": "The question probes advanced understanding of IRT model parameters with balanced plausible options.",
       "lessonExcerpt": "Difficulty Parameter (b): What level of the trait do you need to have a 50% chance of answering correctly?",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Item Response Theory: The Modern Alternative"
+      ]
     },
     {
       "stem": "What is the standard error of measurement (SEM) if a test has a standard deviation of 10 and a reliability coefficient of 0.84?",
@@ -385,7 +454,11 @@
       "quality_comment": "Math-focused question with clear, calculable options, typical of reliability statistics in psychometrics.",
       "lessonExcerpt": "Formula: SEM = SD x sqrt(1 - Reliability coefficient). Where SD is the test's standard deviation.",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard Error of Measurement: Embracing Uncertainty",
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?"
+      ]
     },
     {
       "stem": "An obtained test score is 85. The test's standard error of measurement is 5. What is the 95% confidence interval for the examinee's true score?",
@@ -403,7 +476,10 @@
       "quality_comment": "Clear calculation with properly distributed plausible distractors reflecting common mistakes.",
       "lessonExcerpt": "The simple rules: 68% confidence interval: Obtained score +/- 1 SEM, 95% confidence interval: Obtained score +/- 2 SEM, 99% confidence interval: Obtained score +/- 3 SEM",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard Error of Measurement: Embracing Uncertainty"
+      ]
     },
     {
       "stem": "Consensual observer drift is most likely to affect the reliability of which type of assessment?",
@@ -421,7 +497,10 @@
       "quality_comment": "Well-constructed question targeting nuances of rater-related reliability error, with plausible alternatives.",
       "lessonExcerpt": "Here's something that can quietly ruin your inter-rater reliability: when raters talk to each other while rating, they start agreeing more and more with each other. But not necessarily with reality. Their ratings become consistent but inaccurate.",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "Which item discrimination index (D) value is generally considered acceptable for test items?",
@@ -439,7 +518,11 @@
       "quality_comment": "Clear and focused question; distractors reflect common misunderstanding about discrimination indices.",
       "lessonExcerpt": "What's acceptable? Generally, you want D >= .30",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Item Analysis: Building Better Tests",
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?"
+      ]
     },
     {
       "stem": "Alternate forms reliability is best described as an assessment of:",
@@ -457,7 +540,10 @@
       "quality_comment": "Options are concise and clearly different; the question is well-targeted to a core reliability concept.",
       "lessonExcerpt": "Some tests have multiple versions (Form A, Form B, etc.). The process: Give Form A to a group, Give Form B to the same group, Correlate the scores",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "Item response theory (IRT) differs from classical test theory (CTT) primarily in that IRT:",
@@ -475,7 +561,11 @@
       "quality_comment": "The question clearly distinguishes key features of IRT versus traditional measurement models with plausible options.",
       "lessonExcerpt": "| Test-based (focuses on total scores) | Item-based (focuses on individual items) |",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Item Response Theory: The Modern Alternative",
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "Which of the following best characterizes the use of item characteristic curves (ICCs) in item response theory?",
@@ -493,7 +583,11 @@
       "quality_comment": "Well-constructed with focused content, this question taps understanding of foundational IRT concepts.",
       "lessonExcerpt": "For each item, you create an Item Characteristic Curve (ICC) that shows: X-axis: Level of the trait (low to high), Y-axis: Probability of endorsing or answering correctly (0 to 1.0)",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability",
+        "Item Response Theory: The Modern Alternative"
+      ]
     },
     {
       "stem": "Which parameter of an item response theory (IRT) model indicates how well an item differentiates among examinees with different levels of a latent trait?",
@@ -511,7 +605,11 @@
       "quality_comment": "This question clarifies key distinctions among item parameters, reinforcing core conceptual knowledge required for the EPPP.",
       "lessonExcerpt": "Discrimination Parameter (a): How well does this item distinguish between people just above and just below the difficulty level? Indicated by the slope of the curve",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Item Response Theory: The Modern Alternative",
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "A psychologist is evaluating the reliability of a personality assessment that is administered to the same group of individuals twice, several weeks apart. Which reliability method is she using?",
@@ -534,7 +632,10 @@
       ],
       "lessonExcerpt": "The process: Give the test to a group of people, Wait days, weeks, or months, Give them the exact same test again, Calculate the correlation between the two sets of scores",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "A researcher is conducting a longitudinal study to determine the stability of a cognitive ability test over a period of five years. Which reliability method should the researcher utilize to ensure that the test scores remain consistent across this time frame?",
@@ -557,7 +658,10 @@
       ],
       "lessonExcerpt": "Test-retest reliability matters for characteristics that should be stable over time, like intelligence or enduring personality traits.",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "Research on the pratfall effect shows that a competent person who makes a blunder is perceived as:",
@@ -575,7 +679,10 @@
       "quality_comment": "Question clearly differentiates between competence and the blunder's effect, with distractors testing common misconceptions.",
       "lessonExcerpt": "ssical Test Theory | Item Response Theory | |----------------------|---------------------| | Test-based (focuses on total scores) | Item-based (focuses on individual items) | | Sample-dependent (item statistics change with different groups) | Sample-invariant (item properties stable across groups) | | Less suitable for adaptive testing | Ideal for adaptive testing | | Simpler to understand and calculate | More complex but more powerful | ### The Core Idea: Item Characteristic Curves",
       "suggestedLesson": "5-items-and-reliability",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Item Response Theory: The Modern Alternative"
+      ]
     },
     {
       "stem": "What does test-retest reliability measure in psychological testing?",
@@ -596,7 +703,11 @@
       "lessonExcerpt": "### Item Discrimination Index (D)",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Four Ways to Measure Reliability",
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?"
+      ]
     },
     {
       "stem": "What is the primary purpose of the Kuder-Richardson formula in psychological testing?",
@@ -617,7 +728,12 @@
       "lessonExcerpt": "**Kuder-Richardson 20 (KR-20):** A version of coefficient alpha specifically for items scored as right/wrong (dichotomous scoring).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Four Ways to Measure Reliability",
+        "Standard Error of Measurement: Embracing Uncertainty",
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?"
+      ]
     },
     {
       "stem": "What is the primary purpose of the Stroop Color Interference Test in cognitive assessment?",
@@ -638,7 +754,10 @@
       "lessonExcerpt": "The **standard error of measurement (SEM)** quantifies this uncertainty.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Standard Error of Measurement: Embracing Uncertainty"
+      ]
     },
     {
       "stem": "Which type of delusional disorder is characterized by the belief that one is being persecuted or harmed?",
@@ -659,7 +778,10 @@
       "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Four Ways to Measure Reliability"
+      ]
     },
     {
       "stem": "What does the Kappa coefficient measure in the context of psychometric assessments?",
@@ -680,7 +802,11 @@
       "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 27
+      "inspirationIndex": 27,
+      "relatedSections": [
+        "Four Ways to Measure Reliability",
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?"
+      ]
     },
     {
       "stem": "How can increasing the number of test items improve the reliability of psychological testing?",
@@ -701,7 +827,10 @@
       "lessonExcerpt": "Increasing the number of test items can improve the reliability of psychological testing by providing more data points.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Standard Error of Measurement: Embracing Uncertainty"
+      ]
     },
     {
       "stem": "What is the primary method for optimizing test reliability during the development of psychological assessments?",
@@ -722,7 +851,11 @@
       "lessonExcerpt": "**Fluid intelligence (Gf)** is your raw ability to solve new problems, see patterns, and think abstractly without relying on previous knowledge.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "Understanding Reliability: What Does \"Consistent\" Really Mean?",
+        "Four Ways to Measure Reliability"
+      ]
     }
   ]
 }

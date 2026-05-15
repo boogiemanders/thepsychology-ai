@@ -19,7 +19,10 @@
       "lessonExcerpt": "Initially, researchers thought the entire pattern predicted heart disease. More recent evidence suggests that **hostility** is the component most strongly linked to cardiovascular problems.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "What Makes Some People More Stress-Resistant?"
+      ]
     },
     {
       "stem": "Which individual factor has been linked to the stability of job satisfaction over time and across different jobs?",
@@ -37,7 +40,10 @@
       "quality_comment": "The question is clear and tests knowledge of individual contributors to job satisfaction; options are plausible but only one matches the content.",
       "lessonExcerpt": "**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Job Satisfaction: Why Some People Love Mondays and Others Dread Them"
+      ]
     },
     {
       "stem": "Which type of organizational justice is concerned with the fairness of the procedures used to determine workplace outcomes?",
@@ -55,7 +61,10 @@
       "quality_comment": "The question is straightforward with distractors that are commonly confused types of justice, suitable for EPPP level.",
       "lessonExcerpt": "| **Procedural Justice** | Fairness of the process used to make decisions | Are performance reviews conducted consistently? Do employees have a voice? |",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Job Satisfaction: Why Some People Love Mondays and Others Dread Them"
+      ]
     },
     {
       "stem": "According to meta-analytic research, which type of organizational commitment is most consistently associated with positive job outcomes such as satisfaction and performance?",
@@ -73,7 +82,10 @@
       "quality_comment": "Question clearly distinguishes commitment types; options are plausible, though 'role-based commitment' is a distractor not supported by the material.",
       "lessonExcerpt": "Of these three, **affective commitment consistently shows the strongest relationships with positive job outcomes**. People who are emotionally attached to their organizations perform better, are more satisfied, and are less likely to leave.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Organizational Commitment: Why People Stay (or Leave)"
+      ]
     },
     {
       "stem": "Which hormone is released by the adrenal cortex during the general adaptation syndrome and helps maintain energy during prolonged stress?",
@@ -91,7 +103,10 @@
       "quality_comment": "Distractors include hormones related to stress but with different roles, making the question both challenging and clear.",
       "lessonExcerpt": "The pituitary gland releases ACTH, which stimulates the adrenal cortex to release cortisol",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Stress: When Work Pushes You Beyond Your Limits"
+      ]
     },
     {
       "stem": "Which of the following is NOT identified as a major source of work-related stress?",
@@ -109,7 +124,10 @@
       "quality_comment": "Options are well balanced; the correct choice is clearly differentiated from the others, aiding test-taker discrimination.",
       "lessonExcerpt": "Major workplace stressors include lack of control, work-family conflict, and downsizing (which affects survivors too)",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Major Sources of Workplace Stress"
+      ]
     },
     {
       "stem": "Which of the following best describes the 'survivor syndrome' observed in employees who remain after organizational downsizing?",
@@ -127,7 +145,10 @@
       "quality_comment": "The distractors are plausible reactions to organizational change; the correct answer clearly reflects the syndrome described.",
       "lessonExcerpt": "**Survivor syndrome** includes:\n- Reduced job satisfaction and organizational commitment\n- Loss of control feelings\n- Anxiety, depression, and insomnia\n- Somatic symptoms\n- Guilt about surviving when colleagues didn't",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Major Sources of Workplace Stress"
+      ]
     },
     {
       "stem": "Which of the following is NOT one of the three core characteristics of job burnout as defined by Maslach and colleagues?",
@@ -145,7 +166,10 @@
       "quality_comment": "Clear and concise question with an obvious correct answer relative to plausible distractors enhances reliability.",
       "lessonExcerpt": "Burnout is a specific syndrome resulting from chronic work stress. Christina Maslach and her colleagues identified three core characteristics:",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Job Burnout: The End Stage of Chronic Work Stress"
+      ]
     },
     {
       "stem": "According to Kobasa's model, which personality trait increases resistance to the harmful effects of stress?",
@@ -163,7 +187,10 @@
       "quality_comment": "Distractors include related but incorrect traits, encouraging critical thinking about stress resilience.",
       "lessonExcerpt": "Kobasa's research on hardiness identified three interconnected characteristics that buffer against stress:",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Some People More Stress-Resistant?"
+      ]
     },
     {
       "stem": "Which Type A behavior characteristic is most associated with an increased risk for coronary heart disease?",
@@ -181,7 +208,10 @@
       "quality_comment": "The question targets a nuanced detail in the relationship between Type A behavior and health, with plausible distractors enhancing challenge.",
       "lessonExcerpt": "Initially, researchers thought the entire pattern predicted heart disease. More recent evidence suggests that **hostility** is the component most strongly linked to cardiovascular problems.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Some People More Stress-Resistant?"
+      ]
     },
     {
       "stem": "Which construct refers to employees' perceptions of their value as members of their organization and relates to their resistance to job stress?",
@@ -199,7 +229,10 @@
       "quality_comment": "Distractors are related constructs, making the question appropriate for assessing nuanced knowledge in this area.",
       "lessonExcerpt": "OBSE refers to how valuable you perceive yourself to be as an organization member. High OBSE is linked to:\n\n- Greater job satisfaction\n- Stronger organizational commitment\n- Better stress management (active rather than passive coping)",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Some People More Stress-Resistant?"
+      ]
     },
     {
       "stem": "Which statement best describes the relationship between job satisfaction and job performance according to meta-analytic findings?",
@@ -217,7 +250,10 @@
       "quality_comment": "The question addresses complex causal relationships with plausible distractors; it challenges higher-level reasoning relevant to EPPP.",
       "lessonExcerpt": "Research suggests that when pay is closely tied to performance, performance might actually drive satisfaction rather than the other way around.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Job Satisfaction: Why Some People Love Mondays and Others Dread Them"
+      ]
     },
     {
       "stem": "Which stage of the General Adaptation Syndrome is characterized by the body's inability to sustain hormonal responses, leading to physiological breakdown?",
@@ -235,7 +271,10 @@
       "quality_comment": "The question clearly distinguishes the key features of each stage, helping test-takers understand the sequence and consequences of stress.",
       "lessonExcerpt": "**Stage 3: Exhaustion**\n\nWhen stress persists too long without resolution, your pituitary and adrenal glands can't maintain elevated hormone levels anymore. Physiological processes break down.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Stress: When Work Pushes You Beyond Your Limits"
+      ]
     },
     {
       "stem": "Which of the following individual characteristics is associated with increased susceptibility to the negative effects of stress and an elevated risk for coronary heart disease?",
@@ -253,7 +292,10 @@
       "quality_comment": "The distractors are plausible resilience or unrelated traits; the item assesses important associations in stress-health research.",
       "lessonExcerpt": "Unlike hardiness and OBSE, Type A behavior increases vulnerability to stress's negative effects.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Some People More Stress-Resistant?"
+      ]
     },
     {
       "stem": "Work-family conflict has been found to be equally reported by men and women across various regions. However, in dual-earner couples, what slight difference exists in the type of interference reported?",
@@ -271,7 +313,10 @@
       "quality_comment": "The question examines nuanced gender-related differences in work-family stress, promoting application of research findings.",
       "lessonExcerpt": "However, small differences emerge in specific contexts: in dual-earner couples, men report slightly more work-to-family interference, while women report slightly more family-to-work interference.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Major Sources of Workplace Stress"
+      ]
     },
     {
       "stem": "What individual characteristic is often associated with consistent levels of life satisfaction across different life domains?",
@@ -294,7 +339,10 @@
       ],
       "lessonExcerpt": "**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Job Satisfaction: Why Some People Love Mondays and Others Dread Them"
+      ]
     },
     {
       "stem": "In the context of psychological resilience, which individual trait has been shown to contribute to sustained job satisfaction despite external stressors?",
@@ -317,7 +365,10 @@
       ],
       "lessonExcerpt": "**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts.",
       "suggestedLesson": "2-3-work-satisfaction",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Job Satisfaction: Why Some People Love Mondays and Others Dread Them"
+      ]
     },
     {
       "stem": "An industrial-organizational psychologist reviews exit interview data and employee satisfaction surveys from a large healthcare organization. She finds that units with the lowest mean job satisfaction scores show the highest rates of voluntary employee turnover. Which of the following best characterizes this statistical relationship?",
@@ -338,7 +389,10 @@
       "lessonExcerpt": "**Absenteeism and turnover**: Satisfied employees are less likely to miss work or quit, but again, the relationships are moderate",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Job Satisfaction: Why Some People Love Mondays and Others Dread Them"
+      ]
     },
     {
       "stem": "An industrial-organizational psychologist reviewing the empirical literature on job satisfaction reports to leadership that satisfaction is moderately correlated with job performance and is more strongly associated with turnover and absenteeism than with output quality. She cautions that the relationship with performance should not be interpreted as demonstrating that improving satisfaction will cause proportional performance gains. Her caution reflects which empirical and interpretive consideration?",
@@ -359,7 +413,10 @@
       "lessonExcerpt": "**Job performance**: The correlation ranges from .17 to .30 depending on the study. Statistically significant but not enormous",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Job Satisfaction: Why Some People Love Mondays and Others Dread Them"
+      ]
     },
     {
       "stem": "What is a common psychological effect of a compressed work week on employee productivity?",
@@ -380,7 +437,8 @@
       "lessonExcerpt": "Memory span (also called primary memory): The basic storage capacity. How much you can hold",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": null
     }
   ]
 }

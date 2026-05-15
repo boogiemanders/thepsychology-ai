@@ -19,7 +19,10 @@
       "lessonExcerpt": "Gate control theory revolutionized pain understanding by explaining why pain isn't simply a direct signal from injury to brain. The theory proposes a \"gate\" mechanism in your spinal cord that can increase or decrease pain signals reaching your brain.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Pain: More Than Just a Physical Signal"
+      ]
     },
     {
       "stem": "Which of the following best distinguishes bottom-up processing from top-down processing in sensation and perception?",
@@ -37,7 +40,10 @@
       "quality_comment": "Clear wording and plausible distractors make the question effective at differentiating understanding of processing types.",
       "lessonExcerpt": "- **Sensation** receives environmental stimuli; **perception** interprets them. Bottom-up processing builds from sensory data; top-down uses existing knowledge.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Sensation vs. Perception"
+      ]
     },
     {
       "stem": "According to the opponent-process theory of color vision, which of the following color pairs would be processed as opponent channels?",
@@ -55,7 +61,10 @@
       "quality_comment": "Distractors are reasonable color pairs; correct answer aligns clearly with opponent-process theory.",
       "lessonExcerpt": "This theory explains what happens after the retina, in subsequent neural processing. It proposes that color information is processed through three opposing pairs: red versus green, blue versus yellow, and black versus white.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Color Vision: Two Theories, Both Right"
+      ]
     },
     {
       "stem": "Which type of color blindness is most frequently caused by a recessive gene on the X chromosome and affects males more often than females?",
@@ -73,7 +82,10 @@
       "quality_comment": "The distractors are plausible types of color blindness but differ sufficiently to test precise knowledge of genetic causes.",
       "lessonExcerpt": "**Red-green color blindness** is the most common type (affecting about 8% of males and 0.5% of females). It's caused by a recessive gene on the X chromosome. Males have only one X chromosome (inherited from their mothers), so one copy of the mutated gene causes color blindness.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Color Blindness: Genetics Matter"
+      ]
     },
     {
       "stem": "Which depth perception cue depends on the brain integrating different images from each eye due to their slightly different perspectives?",
@@ -91,7 +103,10 @@
       "quality_comment": "Options include common monocular and binocular cues, which makes the question sufficiently challenging.",
       "lessonExcerpt": "- **Depth perception** uses binocular cues (retinal disparity, convergence) for nearby objects and monocular cues (relative size, interposition, etc.) for distant objects.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Depth Perception: How We Navigate 3D Space"
+      ]
     },
     {
       "stem": "According to gate control theory of pain, how can non-painful stimuli reduce the experience of pain?",
@@ -109,7 +124,10 @@
       "quality_comment": "Distractors represent common misconceptions; the correct option accurately reflects the gate control mechanism.",
       "lessonExcerpt": "Here's how it works: Your spinal cord contains two types of nerve fibers. Small unmyelinated fibers transmit pain signals (opening the gate). Large myelinated fibers transmit other sensory information like touch, pressure, or temperature (closing the gate).",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Pain: More Than Just a Physical Signal"
+      ]
     },
     {
       "stem": "A person with grapheme-color synesthesia most likely experiences which phenomenon?",
@@ -127,7 +145,10 @@
       "quality_comment": "Clear options and focused stem make this question straightforward yet informative.",
       "lessonExcerpt": "Synesthesia occurs when stimulating one sense automatically triggers another. The most common type is grapheme-color synesthesia, where specific numbers or letters consistently evoke specific colors. {{M}}Someone might always see the number 5 as distinctly red, or the letter A as blue.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Synesthesia: When Senses Cross"
+      ]
     },
     {
       "stem": "Which psychophysical law predicts that the just noticeable difference (JND) for a stimulus is a constant proportion of the original stimulus intensity?",
@@ -145,7 +166,10 @@
       "quality_comment": "Options represent key psychophysical theories, requiring candidates to distinguish among related laws.",
       "lessonExcerpt": "- **Weber's law**: JND is a constant proportion. **Fechner's law**: logarithmic relationship. **Stevens's power law**: exponential relationship varies by stimulus type.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Psychophysics: The Math of Perception"
+      ]
     },
     {
       "stem": "In signal detection theory, what does a false alarm indicate during a perception task?",
@@ -163,7 +187,10 @@
       "quality_comment": "The question clearly tests knowledge of SDT's outcome categories with plausible alternatives.",
       "lessonExcerpt": "| **Reality** | **Your Response: \"Yes\"** | **Your Response: \"No\"** | |------------|------------------------|------------------------| | **Signal Present** | Hit (correct) | Miss (error) | | **Signal Absent** | False Alarm (error) | Correct Rejection (correct) |",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Psychophysics: The Math of Perception"
+      ]
     },
     {
       "stem": "Which psychophysical theory proposes an exponential relationship between psychological sensation and the magnitude of the physical stimulus, with varying exponents for different stimuli?",
@@ -181,7 +208,10 @@
       "quality_comment": "Good complexity and nuance; the distinctions among laws challenge test-takers to apply precise knowledge.",
       "lessonExcerpt": "- **Weber's law**: JND is a constant proportion. **Fechner's law**: logarithmic relationship. **Stevens's power law**: exponential relationship varies by stimulus type.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Psychophysics: The Math of Perception"
+      ]
     },
     {
       "stem": "Why is red-green color blindness more prevalent in males than females?",
@@ -199,7 +229,10 @@
       "quality_comment": "Distractors test understanding of inheritance patterns; question is clearly posed.",
       "lessonExcerpt": "**Red-green color blindness** is the most common type (affecting about 8% of males and 0.5% of females). It's caused by a recessive gene on the X chromosome. Males have only one X chromosome (inherited from their mothers), so one copy of the mutated gene causes color blindness.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Color Blindness: Genetics Matter"
+      ]
     },
     {
       "stem": "Which monocular depth cue involves judging the distance of an object based on the relative size compared to other objects?",
@@ -217,7 +250,10 @@
       "quality_comment": "Options include both binocular and monocular cues; answer choices are balanced.",
       "lessonExcerpt": "- **Depth perception** uses binocular cues (retinal disparity, convergence) for nearby objects and monocular cues (relative size, interposition, etc.) for distant objects.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Depth Perception: How We Navigate 3D Space"
+      ]
     },
     {
       "stem": "How does signal detection theory account for decision-making under conditions of uncertainty in stimulus perception?",
@@ -235,7 +271,10 @@
       "quality_comment": "Complex concept clearly presented with well-designed distractors, appropriate for advanced EPPP items.",
       "lessonExcerpt": "- **Signal detection theory** recognizes that perception involves both sensory sensitivity and decision criteria, directly applicable to clinical diagnosis and assessment.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Psychophysics: The Math of Perception"
+      ]
     },
     {
       "stem": "Which photoreceptor type is primarily responsible for vision in dim light and peripheral vision?",
@@ -253,7 +292,10 @@
       "quality_comment": "The options include cell types involved in visual processing, but only rods match the description precisely, enhancing content specificity.",
       "lessonExcerpt": "**Rods** are your night-vision specialists. They're extremely sensitive to light but can't detect color. They dominate your peripheral vision. {{M}}Think of them as the security cameras that work in low light. Great for detecting movement in your periphery but not for reading fine print.{{/M}}",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Vision: More Than Meets the Eye"
+      ]
     },
     {
       "stem": "Retinal disparity and convergence are examples of which type of depth perception cues?",
@@ -271,7 +313,10 @@
       "quality_comment": "Distractors are plausible types of sensory cues, making the question effective at distinguishing knowledge of depth perception categories.",
       "lessonExcerpt": "- **Depth perception** uses binocular cues (retinal disparity, convergence) for nearby objects and monocular cues (relative size, interposition, etc.) for distant objects.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Depth Perception: How We Navigate 3D Space"
+      ]
     },
     {
       "stem": "How does the gate control theory explain the pain relief produced by distraction or guided imagery?",
@@ -289,7 +334,10 @@
       "quality_comment": "The options provide common misconceptions about pain relief, with the correct option reflecting accurate neurobiological mechanisms.",
       "lessonExcerpt": "2. **From the brain**: Cognitive and emotional factors can close the gate through descending signals. {{M}}This is why watching an engaging movie or using guided imagery can reduce pain. Your brain sends signals that literally close the spinal gate to pain transmission.{{/M}}",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Pain: More Than Just a Physical Signal"
+      ]
     },
     {
       "stem": "Which of the following statements best describes the role of bottom-up processing in the perception of a new musical piece?",
@@ -312,7 +360,10 @@
       ],
       "lessonExcerpt": "- **Sensation** receives environmental stimuli; **perception** interprets them. Bottom-up processing builds from sensory data; top-down uses existing knowledge.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Sensation vs. Perception"
+      ]
     },
     {
       "stem": "In a psychological experiment, participants are asked to identify shapes presented briefly on a screen. Which processing method would most likely help them recognize familiar shapes based on previous experiences?",
@@ -335,7 +386,10 @@
       ],
       "lessonExcerpt": "- **Sensation** receives environmental stimuli; **perception** interprets them. Bottom-up processing builds from sensory data; top-down uses existing knowledge.",
       "suggestedLesson": "1-sensory-perception",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Sensation vs. Perception"
+      ]
     },
     {
       "stem": "A child psychologist is conducting an intake evaluation for an 8-year-old boy referred for repetitive hand-washing and intrusive thoughts about contamination. When considering the epidemiology of obsessive-compulsive disorder, the psychologist should be aware that:",
@@ -356,7 +410,8 @@
       "lessonExcerpt": "Males have earlier onset than females (higher childhood prevalence). Females have slightly higher adult prevalence.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": null
     },
     {
       "stem": "When comparing the epidemiology of obsessive-compulsive disorder across gender, which statement MOST accurately describes the research findings?",
@@ -377,7 +432,8 @@
       "lessonExcerpt": "Males have earlier onset than females (higher childhood prevalence); Females have slightly higher adult prevalence",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": null
     },
     {
       "stem": "Epidemiological research on autism spectrum disorder (ASD) consistently identifies a significant difference in diagnostic prevalence between males and females. Which of the following most accurately describes the male-to-female sex ratio in ASD diagnoses across population-based studies?",
@@ -398,7 +454,8 @@
       "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": null
     }
   ]
 }

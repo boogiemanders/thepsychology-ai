@@ -19,7 +19,10 @@
       "lessonExcerpt": "Temptation. Urge to engage in the old behavior; strongest in early stages.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "A therapist treating a client with chronic insomnia instructs her: 'Tonight, instead of trying to force yourself to fall asleep, I want you to lie in bed in the dark and deliberately try to stay awake as long as you possibly can. Do not try to sleep.' The therapist explains that attempting to follow this instruction will interrupt the performance anxiety that is perpetuating the insomnia. This intervention is best identified as:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Developed by Klerman and Weissman originally for depression, IPT operates from a medical model perspective. It views mental disorders as treatable illnesses and focuses on how interpersonal factors co",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": [
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "Which of the following best describes the primary goal of Interpersonal Psychotherapy (IPT)?",
@@ -58,7 +64,12 @@
       "quality_comment": "The distractors are plausible therapy goals but differ clearly from IPT’s focus, providing a good test of conceptual understanding.",
       "lessonExcerpt": "Developed by Klerman and Weissman originally for depression, IPT operates from a medical model perspective. It views mental disorders as treatable illnesses and focuses on how interpersonal factors contribute to symptoms.",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Interpersonal Psychotherapy (IPT)",
+        "Transtheoretical Model (Stages of Change)",
+        "Solution-Focused Therapy"
+      ]
     },
     {
       "stem": "In Solution-Focused Therapy, which type of question is most useful for identifying client strengths and past successes in managing problems?",
@@ -76,7 +87,11 @@
       "quality_comment": "Options include commonly confused question types, making for a good discriminative item on therapy techniques.",
       "lessonExcerpt": "**Exception Questions**: \"When was a time recently when the problem didn't happen, or wasn't as bad?\" These questions help clients recognize they already have resources and times of success.",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Solution-Focused Therapy",
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "According to the Transtheoretical Model, which stage is characterized by clients having no intention to change behavior within the next six months and often resisting advice?",
@@ -94,7 +109,10 @@
       "quality_comment": "The stem is precise and options are clearly defined stages, reducing ambiguity and facilitating recall.",
       "lessonExcerpt": "| Precontemplation | No intention to change | Not in next 6 months | Consciousness raising, dramatic relief, environmental reevaluation |",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "Which strategy is most appropriate for clients in the contemplation stage of the Transtheoretical Model?",
@@ -112,7 +130,12 @@
       "quality_comment": "Options include plausible therapeutic strategies, but only one is stage-matched, effectively assessing clinical application.",
       "lessonExcerpt": "| Contemplation | Thinking about change | Within 6 months | Above strategies + self-reevaluation |",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Transtheoretical Model (Stages of Change)",
+        "Interpersonal Psychotherapy (IPT)",
+        "Brief Psychodynamic Psychotherapy"
+      ]
     },
     {
       "stem": "Which of the following is NOT a typical component of Motivational Interviewing (MI)?",
@@ -130,7 +153,12 @@
       "quality_comment": "Distractors are closely related techniques used in MI, ensuring examinees must know therapy-specific components.",
       "lessonExcerpt": "The \"sick role\" is a distinctive IPT concept. It allows clients to acknowledge they're ill without self-blame and frames the condition as temporary and treatable.",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Interpersonal Psychotherapy (IPT)",
+        "Motivational Interviewing (MI)",
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "Which of these statements best exemplifies 'change talk' in Motivational Interviewing?",
@@ -148,7 +176,10 @@
       "quality_comment": "Options represent distinct client attitudes, making the correct answer clear to those familiar with MI concepts.",
       "lessonExcerpt": "| Change talk | Statements favoring change | \"I'd probably feel better if I quit smoking\" | Elicit and strengthen |",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "Which brief therapy emphasizes focusing on solutions and future goals rather than exploring the history or causes of problems?",
@@ -166,7 +197,12 @@
       "quality_comment": "The options list well-known therapies with distinct characteristics, making this a straightforward knowledge check.",
       "lessonExcerpt": "Created by Steve de Shazer, this approach flips traditional therapy on its head. Instead of digging into what caused the problem, it asks: \"What does the solution look like?\"",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Solution-Focused Therapy",
+        "Brief Psychodynamic Psychotherapy",
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "Which of the following is a shared characteristic of brief psychodynamic psychotherapy approaches?",
@@ -184,7 +220,11 @@
       "quality_comment": "Distractors are plausible but incorrect, testing familiarity with the brief psychodynamic framework effectively.",
       "lessonExcerpt": "2. **Limited, agreed-upon goals**. Identified early in treatment",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Brief Psychodynamic Psychotherapy",
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "In the transtheoretical model, which factor is the most important determinant of motivation during the contemplation stage?",
@@ -202,7 +242,10 @@
       "quality_comment": "Options include closely related motivational constructs requiring nuanced knowledge, elevating item difficulty.",
       "lessonExcerpt": "1. **Decisional balance**, weighing pros and cons of change; most important during contemplation",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "Which strategy would be most effective for clients in the action stage of behavior change according to the transtheoretical model?",
@@ -220,7 +263,11 @@
       "quality_comment": "Distractors reflect earlier stages’ strategies, helping to test precise knowledge of stage-appropriate interventions.",
       "lessonExcerpt": "| Action | Actively changing | Currently | Contingency management, stimulus control, counterconditioning |",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Transtheoretical Model (Stages of Change)",
+        "Solution-Focused Therapy"
+      ]
     },
     {
       "stem": "Which brief therapy explicitly assigns clients the 'sick role' to reduce self-blame for their symptoms?",
@@ -238,7 +285,12 @@
       "quality_comment": "Options are prominent brief therapies, promoting integration of conceptual and procedural knowledge.",
       "lessonExcerpt": "The \"sick role\" is a distinctive IPT concept. It allows clients to acknowledge they're ill without self-blame and frames the condition as temporary and treatable.",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Brief Psychodynamic Psychotherapy",
+        "Solution-Focused Therapy",
+        "Interpersonal Psychotherapy (IPT)"
+      ]
     },
     {
       "stem": "Which of the following is true about the use of decision balance in Motivational Interviewing?",
@@ -256,7 +308,11 @@
       "quality_comment": "The distractors are nuanced and conceptually challenging, suitable for higher-level comprehension.",
       "lessonExcerpt": "- **Use decisional balance when**: You want to maintain neutrality while assessing readiness",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Motivational Interviewing (MI)",
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "Research indicates that combining Motivational Interviewing (MI) with Cognitive Behavior Therapy (CBT) for anxiety disorders results in:",
@@ -274,7 +330,10 @@
       "quality_comment": "The stem is clear, and distractors address potential misconceptions about treatment efficacy.",
       "lessonExcerpt": "Beneficial when added before other treatments (e.g., MI before CBT shows greater improvement than CBT alone for anxiety disorders)",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Motivational Interviewing (MI)"
+      ]
     },
     {
       "stem": "Which of the following elements is essential in a therapist’s approach when conducting brief psychodynamic psychotherapy?",
@@ -292,7 +351,11 @@
       "quality_comment": "The item requires understanding subtle differences in therapist roles across therapy types, promoting higher-order thinking.",
       "lessonExcerpt": "4. **Active therapist role**. From the start, to establish alliance and maintain focus",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Brief Psychodynamic Psychotherapy",
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "Which of the following best describes the role of relapse prevention in the Transtheoretical Model's maintenance stage?",
@@ -310,7 +373,10 @@
       "quality_comment": "The distractors include related but inaccurate strategies for maintenance, enhancing discriminative value.",
       "lessonExcerpt": "| Maintenance | Sustaining change | 6+ months of change | Same as action stage, focus on relapse prevention |",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Transtheoretical Model (Stages of Change)"
+      ]
     },
     {
       "stem": "In Motivational Interviewing, what does 'discord' in the therapeutic relationship typically indicate?",
@@ -328,7 +394,10 @@
       "quality_comment": "Clear distinctions among options require nuanced understanding of client-therapist interactions.",
       "lessonExcerpt": "| Discord | Signals relationship strain | \"You don't understand what I'm going through\" | Resolve |",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Motivational Interviewing (MI)"
+      ]
     },
     {
       "stem": "Which therapeutic approach emphasizes the importance of social support in alleviating depressive symptoms?",
@@ -351,7 +420,10 @@
       ],
       "lessonExcerpt": "Developed by Klerman and Weissman originally for depression, IPT operates from a medical model perspective. It views mental disorders as treatable illnesses and focuses on how interpersonal factors contribute to symptoms.",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Interpersonal Psychotherapy (IPT)"
+      ]
     }
   ]
 }

@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The stem clearly focuses on diagnostic features. Distractors include plausible but incorrect features, enhancing the challenge without ambiguity.",
       "lessonExcerpt": "**Deficits in intellectual functioning**. Confirmed by both clinical assessment and standardized IQ testing (typically two or more standard deviations below the mean, which translates to an IQ around 70 or below)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Intellectual Developmental Disorder (Intellectual Disability)"
+      ]
     },
     {
       "stem": "Which two genetic causes are the most common contributors to Intellectual Disability with known etiology?",
@@ -32,7 +35,10 @@
       "difficulty": "medium",
       "quality_comment": "Options contain well-known genetic disorders to challenge the examinee; the correct option is precise and directly from the content.",
       "lessonExcerpt": "**Prenatal factors (80-85% of known causes)**: Includes genetic conditions like Down syndrome and Fragile X syndrome",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Intellectual Developmental Disorder (Intellectual Disability)"
+      ]
     },
     {
       "stem": "Which of the following is NOT a required symptom domain for an Autism Spectrum Disorder diagnosis?",
@@ -49,7 +55,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are closely related concepts, making the question suitable for eliminating superficial knowledge and requiring careful reading.",
       "lessonExcerpt": "ASD requires two main symptom clusters, and both must be present: **Cluster 1: Deficits in social communication and interaction**... **Cluster 2: Restrictive and repetitive behaviors, interests, and activities**",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Autism Spectrum Disorder (ASD)"
+      ]
     },
     {
       "stem": "Which neuroanatomical abnormality is commonly linked to Autism Spectrum Disorder?",
@@ -66,7 +75,10 @@
       "difficulty": "medium",
       "quality_comment": "Options present plausible brain-related abnormalities but only one matches ASD-specific evidence, requiring discrimination at the EPPP level.",
       "lessonExcerpt": "Children with ASD experience accelerated brain growth starting around 6 months, leading to larger head circumference and increased brain volume during early childhood.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Autism Spectrum Disorder (ASD)"
+      ]
     },
     {
       "stem": "What is the primary evidence-based behavioral intervention approach for young children with Autism Spectrum Disorder?",
@@ -83,7 +95,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are other behavioral therapies, but only ABA/EIBI is well-established for ASD core symptoms, creating a clear but challenging test item.",
       "lessonExcerpt": "**Early Intensive Behavioral Intervention (EIBI)** is the gold standard nonpharmacological treatment. Based on applied behavior analysis (ABA), the classic Lovaas method involved 40+ hours per week of behavioral interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Autism Spectrum Disorder (ASD)"
+      ]
     },
     {
       "stem": "Which neurotransmitter abnormalities are most consistently associated with ADHD?",
@@ -100,7 +115,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors contain plausible neurotransmitter combinations but only low dopamine/norepinephrine correctly corresponds to ADHD, making it a solid clinical neuroscience question.",
       "lessonExcerpt": "**Neurotransmitters**: Low dopamine and norepinephrine levels are most consistently implicated, particularly in the prefrontal cortex, affecting impulse control, attention, and executive functioning.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Attention-Deficit/Hyperactivity Disorder (ADHD)"
+      ]
     },
     {
       "stem": "Which of the following best describes the recommended treatment for preschool children diagnosed with ADHD according to American Academy of Pediatrics guidelines?",
@@ -117,7 +135,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include common misconceptions and opposites of guidelines, requiring knowledge of age-specific treatment recommendations.",
       "lessonExcerpt": "**Preschool children**: Behavioral interventions first, particularly parent training in behavioral management (PTBM) programs like positive parenting or parent-child interaction therapy. Medication only if behavioral approaches fail.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Attention-Deficit/Hyperactivity Disorder (ADHD)"
+      ]
     },
     {
       "stem": "A diagnosis of Tourette’s disorder requires which of the following?",
@@ -134,7 +155,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors accurately reflect other tic disorder definitions, increasing the need for precise knowledge of DSM distinctions.",
       "lessonExcerpt": "Tourette's Disorder | Multiple motor tics AND at least one vocal tic; persisted >1 year; onset before age 18",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Tic Disorders"
+      ]
     },
     {
       "stem": "Which statement is true regarding the relationship between psychostimulant treatment of ADHD in childhood and later substance use disorders?",
@@ -151,7 +175,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors represent common myths and misconceptions, requiring exam takers to rely on evidence-based knowledge.",
       "lessonExcerpt": "children with ADHD who receive psychostimulant treatment have similar rates of future substance use disorders as children with ADHD who don't receive stimulants. The medication neither increases nor decreases risk for later substance problems.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Attention-Deficit/Hyperactivity Disorder (ADHD)"
+      ]
     },
     {
       "stem": "Which characteristic symptom is NOT typical of Childhood-Onset Fluency Disorder (stuttering)?",
@@ -168,7 +195,10 @@
       "difficulty": "medium",
       "quality_comment": "All options are speech-related behaviors, but only one is not a core stuttering symptom, providing a well-constructed discrimination item.",
       "lessonExcerpt": "Look for sound/syllable repetitions, sound prolongations, broken words, blocking, circumlocutions, excessive tension when speaking, or whole-word repetitions.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Communication Disorders"
+      ]
     },
     {
       "stem": "Which of the following best describes the typical gender ratio and prevalence of Attention-Deficit/Hyperactivity Disorder (ADHD) in childhood?",
@@ -185,7 +215,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors invert gender ratios and prevalence levels, forcing knowledge rather than guesswork.",
       "lessonExcerpt": "ADHD is the most commonly diagnosed disorder among youth ages 3-17 in the United States. The male-to-female ratio is 2:1 in childhood but narrows to about 1.6:1 in adulthood.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Attention-Deficit/Hyperactivity Disorder (ADHD)"
+      ]
     },
     {
       "stem": "Which of the following statements about the heritability and environmental influences for Autism Spectrum Disorder (ASD) is most accurate?",
@@ -202,7 +235,10 @@
       "difficulty": "medium",
       "quality_comment": "Explanation rejects incorrect environmental myths and clarifies heritability and environmental interplay, useful for discriminating nuanced knowledge.",
       "lessonExcerpt": "Twin studies show heritability around 62%, with concordance rates of 59-84% for identical twins versus 3.5-29% for fraternal twins. Environmental risk factors include very premature birth (before 26 weeks), prenatal exposure to certain drugs like valproic acid, and advanced parental age.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Autism Spectrum Disorder (ASD)"
+      ]
     },
     {
       "stem": "Which common bias can lead clinicians to overestimate the likelihood of a rare disorder when interpreting assessment data?",
@@ -220,7 +256,8 @@
       "quality_comment": "Distractors are all common biases to create a challenging item requiring knowledge of base rate effects specifically.",
       "lessonExcerpt": "Even if you know that social anxiety affects only about 7% of the population (the base rate), you might focus instead on those specific behavioral details and overestimate the likelihood{{/M}}. This matters in forensic settings too.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following technologies has MOST enhanced the assessment of neurodevelopmental disorders by enabling more objective and detailed behavioral data collection?",
@@ -238,7 +275,8 @@
       "quality_comment": "Distractors include technology unrelated or less relevant to assessment, improving discrimination and relevance.",
       "lessonExcerpt": "The Future of Testing: Computerized Adaptive Testing (CAT) Computerized adaptive testing represents a major evolution in assessment.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following is a necessary criterion for diagnosing a specific learning disorder according to DSM-5-TR?",
@@ -260,7 +298,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Academic skills must be substantially below age expectations, interfere with functioning, have onset during school years, and not be better explained by another condition.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Specific Learning Disorder"
+      ]
     },
     {
       "stem": "In the context of Neurodevelopmental Disorders, which of the following conditions must be met for a diagnosis of Autism Spectrum Disorder according to DSM-5-TR?",
@@ -282,7 +323,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "**Cluster 1: Deficits in social communication and interaction** Impaired social-emotional reciprocity (limited back-and-forth interaction) Impaired nonverbal communication (unusual eye contact, facial expressions, gestures) Difficulty developing and maintaining relationships",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Autism Spectrum Disorder (ASD)"
+      ]
     }
   ]
 }

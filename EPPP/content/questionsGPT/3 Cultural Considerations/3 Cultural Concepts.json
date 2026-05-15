@@ -18,7 +18,10 @@
       "suggestedParagraph": "## Acculturation: Navigating Between Two Cultural Worlds",
       "lessonExcerpt": "Integration: Keeping your original culture while also adopting the majority culture.",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "Acculturation: Navigating Between Two Cultural Worlds"
+      ]
     },
     {
       "stem": "A Black client is guarded with a White therapist during the first several sessions but is generally open and relaxed with Black professionals in other settings. There is no evidence of broad distrust toward everyone. Ridley would most likely describe this as:",
@@ -38,7 +41,10 @@
       "suggestedParagraph": "## Healthy Cultural Paranoia: When Distrust Makes Sense",
       "lessonExcerpt": "Healthy cultural paranoia is different. It's a rational response to real experiences of prejudice and discrimination.",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "Healthy Cultural Paranoia: When Distrust Makes Sense"
+      ]
     },
     {
       "stem": "Which of the following comments is the best example of a microinvalidation rather than a microinsult or microassault?",
@@ -58,7 +64,10 @@
       "suggestedParagraph": "## Racial Microaggressions: Death by a Thousand Cuts",
       "lessonExcerpt": "Microinvalidations dismiss or negate the experiences of people of color: Claiming \"I don't see color\" (denying that race affects experience)",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "Racial Microaggressions: Death by a Thousand Cuts"
+      ]
     },
     {
       "stem": "A psychologist who assumes that all clients share the same worldview and applies a single theoretical framework regardless of the client's cultural background is best demonstrating which of the following?",
@@ -79,7 +88,10 @@
       "lessonExcerpt": "Wrenn coined this term to describe mental health professionals who can't work effectively across cultures. Culturally encapsulated therapists assume their cultural assumptions about mental health apply universally.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Cultural Encapsulation: Being Trapped in Your Own Perspective"
+      ]
     },
     {
       "stem": "Which of the following is MOST characteristic of the structural organization found in many African American family systems?",
@@ -100,7 +112,10 @@
       "lessonExcerpt": "Extended kinship networks often include friends and church community, not just family. Family roles are often flexible and egalitarian.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Cultural Competence in Practice: Population-Specific Guidelines"
+      ]
     },
     {
       "stem": "A psychologist is designing a culturally adapted treatment plan for a first-generation Chinese American client who presents with symptoms of depression. Based on research on culturally appropriate therapeutic approaches for Asian American clients, which of the following treatment characteristics would be MOST consistent with this client's likely cultural preferences?",
@@ -121,7 +136,10 @@
       "lessonExcerpt": "Asian Americans typically prefer brief, structured, goal-oriented, family-focused approaches. They expect therapists to be knowledgeable experts who give advice while still encouraging participation in goal-setting.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Cultural Competence in Practice: Population-Specific Guidelines"
+      ]
     },
     {
       "stem": "A psychologist working with Latino children incorporates traditional folktales that model adaptive behaviors as therapeutic narratives. This culturally congruent intervention is known as:",
@@ -142,7 +160,10 @@
       "lessonExcerpt": "Culturally congruent techniques include cuento therapy (folktales as models) and dichos (proverbs for emotional expression).",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Cultural Competence in Practice: Population-Specific Guidelines"
+      ]
     },
     {
       "stem": "A psychologist working with a Latino client who presents with somatic complaints and strong religious beliefs is considering culturally adapted interventions. According to guidelines for culturally adapted treatments, which of the following format changes would be MOST consistent with best practices?",
@@ -163,7 +184,10 @@
       "lessonExcerpt": "Format changes: Delivering treatment in native language, adopting culturally appropriate interpersonal styles, including indigenous healers... Adaptations work better when adding features rather than replacing core components.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Evidence-Based Practice Meets Cultural Adaptation"
+      ]
     },
     {
       "stem": "A researcher studying depression wants to determine whether a Western-developed depression inventory is valid for use with individuals from a collectivist Southeast Asian culture. The researcher's assumption that the same construct and measurement tool should apply universally across cultures reflects which perspective?",
@@ -184,7 +208,10 @@
       "lessonExcerpt": "Etic perspective: Behavior is universal. The same theories and interventions work across cultures. Emic perspective: Behavior is culture-bound. What works for one group may not work for another.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Etic vs. Emic: Universal or Culture-Specific?"
+      ]
     },
     {
       "stem": "A psychologist begins working with an African American family presenting with communication difficulties. Based on culturally responsive treatment guidelines, which therapeutic approach would be MOST appropriate?",
@@ -205,7 +232,10 @@
       "lessonExcerpt": "African American clients typically prefer egalitarian relationships and problem-solving approaches. Boyd-Franklin recommends multisystems approaches, intervening across individual, family, community, and agency levels.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Cultural Competence in Practice: Population-Specific Guidelines"
+      ]
     },
     {
       "stem": "According to Sue's worldview framework, which type of worldview is most characteristic of mainstream American culture?",
@@ -223,7 +253,10 @@
       "quality_comment": "The question clearly targets a key cultural concept with plausible distractors reflecting different worldviews to assess nuanced understanding.",
       "lessonExcerpt": "| IC-IR | Internal | Internal | \"I control my destiny and own my results\" | Mainstream American culture |",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Worldview: The Lens Through Which Clients See Reality"
+      ]
     },
     {
       "stem": "Which acculturation strategy, according to Berry, is associated with the least acculturative stress?",
@@ -241,7 +274,10 @@
       "quality_comment": "The question is straightforward and tests knowledge of a fundamental concept in acculturation with well-known strategies as distractors.",
       "lessonExcerpt": "Berry found that integration produces the least stress, while marginalization produces the most.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Acculturation: Navigating Between Two Cultural Worlds"
+      ]
     },
     {
       "stem": "What is the primary difference between functional paranoia and healthy cultural paranoia in ethnic minority clients, according to Ridley?",
@@ -259,7 +295,10 @@
       "quality_comment": "The distractors are nuanced and the question is clearly worded, effectively assessing discrimination between similar concepts.",
       "lessonExcerpt": "**Functional paranoia** is unhealthy. It's pervasive distrust toward everyone, regardless of their background. A client with functional paranoia won't open up to any therapist, minority or majority.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Healthy Cultural Paranoia: When Distrust Makes Sense"
+      ]
     },
     {
       "stem": "Which of the following best describes a microinvalidation as defined by Sue et al. (2007)?",
@@ -277,7 +316,10 @@
       "quality_comment": "Options represent distinct microaggression types; the question requires precise recall, making it suitable for EPPP-level assessment.",
       "lessonExcerpt": "**Microinvalidations** dismiss or negate the experiences of people of color:\n- Telling an Asian American they speak English well (implying they're foreign)",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Racial Microaggressions: Death by a Thousand Cuts"
+      ]
     },
     {
       "stem": "Which statement regarding White privilege according to McIntosh (1998) is accurate?",
@@ -295,7 +337,10 @@
       "quality_comment": "The options include common misconceptions as distractors, improving the diagnostic value of the question.",
       "lessonExcerpt": "Peggy McIntosh described **white privilege** as unearned benefits conferred solely based on having white skin. Most White people don't notice these advantages because they're maintained through denial and seem \"normal.\"",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "White Privilege: The Invisible Advantages"
+      ]
     },
     {
       "stem": "A psychologist who believes psychological theories and interventions are culture-specific and may not apply across cultural groups is said to adopt which perspective?",
@@ -313,7 +358,10 @@
       "quality_comment": "The question is clear and the options are well balanced; universalist and relativistic may be plausible distractors that test finer understanding.",
       "lessonExcerpt": "**Emic perspective**: Behavior is culture-bound. What works for one group may not work for another. You need different tools and approaches for different cultural contexts.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Etic vs. Emic: Universal or Culture-Specific?"
+      ]
     },
     {
       "stem": "According to Gelfand's research, which characteristic is more likely in individuals from tight cultures compared to loose cultures?",
@@ -331,7 +379,10 @@
       "quality_comment": "Distractors represent opposite traits of tight vs loose cultures, requiring examinees to know the conceptual framework for effective elimination.",
       "lessonExcerpt": "People in tight cultures tend toward conformity, risk avoidance, and stability. They score higher on conscientiousness and lower on openness.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Tight vs. Loose Cultures: How Strict Are the Rules?"
+      ]
     },
     {
       "stem": "In culturally competent psychotherapy with Asian American clients, which therapist behavior is most appropriate based on research findings?",
@@ -349,7 +400,11 @@
       "quality_comment": "The question clearly contrasts culturally appropriate and inappropriate therapist behaviors for Asian American clients, enhancing discriminative value.",
       "lessonExcerpt": "Fear of losing face and shame are powerful motivators affecting disclosure. Silence and avoiding eye contact express respect.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cultural Competence in Practice: Population-Specific Guidelines",
+        "Communication Styles: Reading Between the Lines"
+      ]
     },
     {
       "stem": "Minority stress theory distinguishes proximal and distal stress processes experienced by sexual minority individuals. Which of the following is a proximal stress process?",
@@ -367,7 +422,10 @@
       "quality_comment": "Clear distinction between internal and external stressors with plausible distractors fitting each category improves effectiveness.",
       "lessonExcerpt": "**Proximal stressors**: Internal processes like concealment, fear of rejection, internalized heterosexism",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Minority Stress Theory: The Toll of Stigma"
+      ]
     },
     {
       "stem": "When a therapist assumes that all presenting problems of a gay client are due to sexual orientation and overlooks other causes, this is an example of what phenomenon?",
@@ -385,7 +443,10 @@
       "quality_comment": "Options include related bias and cultural concepts but only diagnostic overshadowing accurately describes the diagnostic error.",
       "lessonExcerpt": "For example, assuming a gay client's problems stem entirely from sexual orientation without considering other explanations.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Diagnostic Overshadowing: When One Factor Eclipses Everything"
+      ]
     },
     {
       "stem": "The 'own-race bias' refers to which phenomenon observed in the perception of faces?",
@@ -403,7 +464,10 @@
       "quality_comment": "Clear stem and plausible distractors make the question appropriate for testing foundational knowledge.",
       "lessonExcerpt": "The **own-race bias** (also called cross-race effect) means people more accurately recognize faces of their own race than other races.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Own-Race Bias: Recognition Across Racial Lines"
+      ]
     },
     {
       "stem": "Which treatment approach is described as focusing on changing the client’s behavior or perceptions so they can adapt to the environment rather than changing external circumstances?",
@@ -421,7 +485,10 @@
       "quality_comment": "The options include related but distinct terms, providing a clear test of conceptual knowledge of intervention strategies.",
       "lessonExcerpt": "**Autoplastic interventions** focus on changing the client to fit the environment, developing insight, learning new skills, or modifying behaviors.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Autoplastic vs. Alloplastic: Change the Person or Change the Environment?"
+      ]
     },
     {
       "stem": "In the context of culturally competent assessment, what does 'cultural fit' most accurately refer to?",
@@ -439,7 +506,10 @@
       "quality_comment": "Distractors focus on related but incorrect factors affecting acculturation, requiring conceptual understanding.",
       "lessonExcerpt": "**Cultural fit** describes how well someone's personality matches the host culture's values.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Acculturation: Navigating Between Two Cultural Worlds"
+      ]
     },
     {
       "stem": "Which of the following best describes the integration paradox in immigrant populations?",
@@ -457,7 +527,10 @@
       "quality_comment": "The question targets subtle understanding of immigrant integration dynamics and avoids confusing it with the immigrant paradox.",
       "lessonExcerpt": "Here's something counterintuitive: highly educated, economically successful immigrants report experiencing more discrimination than lower-status immigrants and feel less positive about mainstream society. This is the **integration paradox**.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Integration Paradox: Success Doesn't Mean Comfort"
+      ]
     },
     {
       "stem": "In the context of Sue's worldview framework, which worldview is characterized by a belief in personal responsibility but an external locus of control?",
@@ -480,7 +553,10 @@
       ],
       "lessonExcerpt": "| EC-IR | External | Internal | \"I can't control outcomes but blame myself anyway\" | Some minority groups experiencing internalized oppression |",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Worldview: The Lens Through Which Clients See Reality"
+      ]
     },
     {
       "stem": "Which worldview in Sue's framework reflects a belief that individuals have control over their outcomes but do not feel personally responsible for their failures?",
@@ -503,7 +579,10 @@
       ],
       "lessonExcerpt": "| IC-ER | Internal | External | \"I could succeed if others weren't blocking me\" | Some minority groups facing systemic barriers |",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Worldview: The Lens Through Which Clients See Reality"
+      ]
     },
     {
       "stem": "A licensed psychologist at a community mental health clinic consistently interprets Latino clients' somatic complaints as pathological somatization, dismisses spirituality-based explanatory models as irrational, and applies manualized CBT protocols without culturally responsive modification. The clinical supervisor observes that this therapist appears unaware that these worldviews differ from mainstream Western psychological assumptions. This pattern BEST exemplifies which phenomenon?",
@@ -524,7 +603,10 @@
       "lessonExcerpt": "Wrenn coined this term to describe mental health professionals who can't work effectively across cultures. **Culturally encapsulated** therapists assume their cultural assumptions about mental health apply universally. They're insensitive to differences and impose their worldview on all clients.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 0
+      "inspirationIndex": 0,
+      "relatedSections": [
+        "Cultural Encapsulation: Being Trapped in Your Own Perspective"
+      ]
     },
     {
       "stem": "During a home visit, a family therapist observes that an African American family's infant is regularly cared for by the maternal grandmother, two aunts, and an older teenage cousin in addition to the parents, with childcare responsibilities shifting fluidly among all of them across different households. This arrangement is BEST understood as an expression of which characteristic strength consistently identified in the research literature on African American families?",
@@ -545,7 +627,10 @@
       "lessonExcerpt": "Extended kinship networks often include friends and church community, not just family. Family roles are often flexible and egalitarian.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Cultural Competence in Practice: Population-Specific Guidelines"
+      ]
     },
     {
       "stem": "According to social identity theory, prejudice and discrimination toward outgroup members stem primarily from:",
@@ -563,7 +648,8 @@
       "quality_comment": "Distractors are plausible competing theories of prejudice, making this question effective for assessing theory knowledge.",
       "lessonExcerpt": "Culturally adapted interventions** systematically modify evidence-based treatments to align with clients' cultural patterns, meanings, and values. Adaptations might include: - Content changes: Addressing acculturation, racism, spirituality - Format changes: Delivering treatment in native language, adopting culturally appropriate interpersonal styles, including indigenous healers",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     }
   ]
 }

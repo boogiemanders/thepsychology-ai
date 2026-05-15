@@ -19,7 +19,10 @@
       "lessonExcerpt": "Subjective norms: What you believe others think you should do.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Three Models for Predicting Behavior from Attitudes"
+      ]
     },
     {
       "stem": "After deliberating for weeks, a graduate student finally chooses to accept an offer from Program A over an equally appealing offer from Program B. In the days following her decision, she begins emphasizing Program A's strengths (excellent mentorship, prestigious faculty) while focusing on Program B's weaknesses (less funding, smaller alumni network). According to Festinger's theory, her shift in evaluations MOST likely reflects:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Festinger's cognitive dissonance theory is one of the most influential concepts in social psychology. The core idea: when you become aware that two of your cognitions (attitudes, beliefs, opinions) contradict each other, or when your behavior contradicts your attitudes, you experience psychological discomfort called dissonance. This discomfort motivates you to reduce it.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "In a classic study, children who enjoyed drawing with markers were given external rewards for drawing during a play period. When the rewards were later removed, the previously rewarded children drew less than unrewarded children. This finding best illustrates:",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "Children who enjoyed drawing with markers were either rewarded or not rewarded for drawing during a play period. Later, when rewards were removed, the previously rewarded children spent less time drawing than the unrewarded children.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "In a replication of Festinger and Carlsmith's classic experiment, participants perform a tedious task and are then paid either $2 or $50 to tell the next participant the task was enjoyable. According to cognitive dissonance theory, which group will subsequently rate the task as MORE enjoyable, and why?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "The $1 participants experienced dissonance: 'I told someone this boring task was fun, but I only got a dollar for lying.' They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "A predoctoral intern receives two equally attractive internship offers — one at a prestigious clinical training site and one at a highly regarded research-focused site. After accepting the clinical position, the intern tells a colleague one week later: 'The more I think about it, the more I realize the research site would have been too narrow for my long-term goals — clinical training is clearly the stronger choice.' According to cognitive dissonance theory, this post-decisional reevaluation is BEST explained by:",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "Understanding attitudes and how they change isn't just academic trivia. It's essential for predicting human behavior, creating effective health campaigns, understanding why therapy clients struggle to change, and recognizing your own patterns of behavior change.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "According to the theory of planned behavior, which factor is NOT considered a determinant of a person's intention to perform a behavior?",
@@ -121,7 +136,10 @@
       "quality_comment": "The stem clearly tests knowledge of the theory’s components; distractors are plausible but only one option is not part of the theory, ensuring focused and fair assessment.",
       "lessonExcerpt": "Three factors work together: Attitude toward the behavior, subjective norms, perceived behavioral control",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Three Models for Predicting Behavior from Attitudes"
+      ]
     },
     {
       "stem": "In the prototype/willingness model, what primarily influences a person’s willingness to engage in a health risk behavior in social settings?",
@@ -139,7 +157,10 @@
       "quality_comment": "Options differentiate between related social cognitive constructs, requiring a clear understanding of the prototype/willingness model, making it a solid EPPP item.",
       "lessonExcerpt": "If you have a positive prototype of people who do something, you're more willing to do it when the opportunity arises, even without planning.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Three Models for Predicting Behavior from Attitudes"
+      ]
     },
     {
       "stem": "Which of the following is NOT a component of the health belief model that predicts a person's likelihood of engaging in health-promoting behavior?",
@@ -157,7 +178,10 @@
       "quality_comment": "Distractors are well matched and the question tests essential knowledge of foundational model components, appropriate for foundational-level recall.",
       "lessonExcerpt": "Three factors work together: Attitude toward the behavior, subjective norms, perceived behavioral control",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Three Models for Predicting Behavior from Attitudes"
+      ]
     },
     {
       "stem": "According to the elaboration likelihood model, attitude change that is strong, enduring, and predictive of behavior is most likely to occur through which processing route?",
@@ -175,7 +199,10 @@
       "quality_comment": "The question contrasts central and peripheral routes effectively, with distractors based on peripheral cues, encouraging discrimination of key theoretical concepts.",
       "lessonExcerpt": "If you have a positive prototype of people who do something, you're more willing to do it when the opportunity arises, even without planning.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "According to social judgment theory, when a person's level of ego-involvement with an issue increases, how do their latitudes of acceptance and rejection change?",
@@ -193,7 +220,10 @@
       "quality_comment": "The stem requires understanding subtle changes in attitude latitudes with ego involvement, and distractors are nuanced, providing a challenging yet fair test of knowledge.",
       "lessonExcerpt": "Perceived susceptibility, Perceived severity, Perceived benefits, Perceived barriers, Self-efficacy, Cues to action",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "Heider's balance theory suggests that if Patricia (P) likes Oscar (O) but Oscar dislikes country music (X), which Patricia likes, Patricia will likely be:",
@@ -211,7 +241,10 @@
       "quality_comment": "The question presents a clear, practical example of the theory, with plausible distractors, making it well suited for applied knowledge testing.",
       "lessonExcerpt": "When persuasion happens through the central route, it's based on the strength of the argument itself. The resulting attitude change is strong, lasting, and predictive of future behavior.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "In Festinger and Carlsmith’s cognitive dissonance study, why did participants paid $1 to lie about a boring task rate the task as more enjoyable than those paid $20?",
@@ -229,7 +262,10 @@
       "quality_comment": "This question tests critical experimental findings illustrating theoretical principles, with well-matched distractors that reflect common misconceptions.",
       "lessonExcerpt": "The more ego-involved you are: Your latitude of acceptance shrinks, Your latitude of noncommitment shrinks, Your latitude of rejection expands",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "Which phenomenon best explains why children who were externally rewarded for an intrinsically enjoyable activity later showed decreased intrinsic motivation for that activity?",
@@ -247,7 +283,10 @@
       "quality_comment": "Distractors are relevant social psychology concepts but only one answers the question correctly; clear and concise formulation enhances validity.",
       "lessonExcerpt": "When imbalance occurs, you're motivated to restore balance by changing one of the relationships.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "Which condition is LEAST likely to strengthen the relationship between a person’s attitude and their subsequent behavior?",
@@ -265,7 +304,10 @@
       "quality_comment": "The stem is clear and concise, with plausible options that test understanding of important moderating factors for attitudes predicting behavior.",
       "lessonExcerpt": "The $1 participants experienced dissonance: \"I told someone this boring task was fun, but I only got a dollar for lying.\" They had insufficient justification for their behavior.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Do Attitudes Actually Predict Behavior?"
+      ]
     },
     {
       "stem": "According to the elaboration likelihood model, which of the following is a peripheral cue that may influence attitude change through the peripheral route?",
@@ -283,7 +325,10 @@
       "quality_comment": "Clear and focused question with plausible answer choices that differentiate between central message content and peripheral cues.",
       "lessonExcerpt": "if you're externally rewarded for doing something you already enjoy intrinsically, your intrinsic motivation decreases.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "Within the health belief model, what is the role of 'cues to action'?",
@@ -301,7 +346,10 @@
       "quality_comment": "The question stems from core model knowledge with distractors reflecting other model components, providing a robust assessment of detailed understanding.",
       "lessonExcerpt": "Match the specificity level. General attitudes predict general behavior patterns. Specific attitudes predict specific behaviors.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Three Models for Predicting Behavior from Attitudes"
+      ]
     },
     {
       "stem": "Which factor most strongly influences the strength of the relationship between attitudes and behavior?",
@@ -319,7 +367,10 @@
       "quality_comment": "This question complements existing items by emphasizing an important factor affecting the attitude-behavior link, broadening coverage within this topic.",
       "lessonExcerpt": "When persuasion happens through the peripheral route, it relies on peripheral cues. Things unrelated to the argument's quality: Is the speaker attractive or likeable?",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Do Attitudes Actually Predict Behavior?"
+      ]
     },
     {
       "stem": "According to the prototype/willingness model, an adolescent with a positive social image (prototype) of peers who smoke marijuana is more likely to:",
@@ -337,7 +388,10 @@
       "quality_comment": "The item uses a practical example to distinguish theoretical pathways, enhancing the applied understanding of the prototype/willingness model.",
       "lessonExcerpt": "Cues to action | \"What triggers me to act now?\" | More reminders/prompts → More likely to act",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Three Models for Predicting Behavior from Attitudes"
+      ]
     },
     {
       "stem": "In social judgment theory, what happens when a persuasive message falls within a person’s latitude of rejection?",
@@ -355,7 +409,10 @@
       "quality_comment": "Distractors involve plausible misunderstandings, requiring knowledge of nuanced effects within attitude change theories to answer correctly.",
       "lessonExcerpt": "Direct experience: If you've personally experienced something, your attitude about it carries more weight.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "In the context of the theory of planned behavior, which of the following is NOT a component that influences behavioral intention?",
@@ -378,7 +435,10 @@
       ],
       "lessonExcerpt": "If you have a positive prototype of people who do something, you're more willing to do it when the opportunity arises, even without planning.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Three Models for Predicting Behavior from Attitudes"
+      ]
     },
     {
       "stem": "Which of the following statements best describes a factor that is NOT part of the theory of planned behavior's framework for predicting intentions?",
@@ -401,7 +461,10 @@
       ],
       "lessonExcerpt": "Latitude of Rejection: Positions so different from yours that you immediately reject them. Messages here can backfire, making you more entrenched in your original position.",
       "suggestedLesson": "3-attitudes",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Three Models for Predicting Behavior from Attitudes"
+      ]
     },
     {
       "stem": "How does cognitive dissonance typically lead to attitude change?",
@@ -422,7 +485,10 @@
       "lessonExcerpt": "you experience psychological discomfort called dissonance. This discomfort motivates you to reduce it.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     },
     {
       "stem": "What is the primary mechanism through which cognitive dissonance leads to attitude adjustment?",
@@ -443,7 +509,10 @@
       "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "How Attitudes Change: Five Major Theories"
+      ]
     }
   ]
 }

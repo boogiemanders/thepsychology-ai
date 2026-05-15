@@ -19,7 +19,10 @@
       "lessonExcerpt": "Work samples require applicants to actually perform job tasks under realistic conditions... Work samples were traditionally used for manual skilled jobs (like welding or carpentry), where they work exceptionally well... General Mental Ability Tests: Highest (most valid) — Highest adverse impact risk",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "A company is concerned about adverse impact in their hiring process after learning that their general mental ability test disproportionately screens out qualified applicants from certain minority groups. An I-O psychologist recommends replacing the cognitive test with a selection method that asks applicants to perform actual job tasks under standardized conditions. The psychologist is recommending:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "But there's a significant downside: general mental ability tests have the highest risk of adverse impact on applicants from certain ethnic and racial minority groups.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "A manufacturing company currently uses a general cognitive ability test for selecting assembly line workers. A civil rights audit reveals significant adverse impact: the test produces substantial mean score differences between racial groups, resulting in proportional hiring rates that violate the 4/5ths rule. An I/O psychologist consultant recommends switching to work sample tests. What is the primary psychometric and legal rationale for this recommendation?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "Work samples require applicants to actually perform job tasks under realistic conditions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "Which type of interview is characterized by asking all candidates the same questions based on a job analysis, using a standardized scoring key?",
@@ -79,7 +88,10 @@
       "quality_comment": "The question is clear, and the options provide plausible interview types that require understanding differences between structured and unstructured methods.",
       "lessonExcerpt": "**Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "A recent meta-analysis found that when behavioral and situational interview questions assess the same job requirements, which type of interview question better predicts job performance?",
@@ -97,7 +109,10 @@
       "quality_comment": "The question challenges test takers to distinguish between nuanced interview question types backed by recent research evidence, providing well-constructed response options.",
       "lessonExcerpt": "Here's a twist the research revealed: When behavioral and situational questions are designed to assess the same job requirements and asked of the same applicants, situational questions actually predict job performance better.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "Which selection technique has been found to be the most valid predictor of job performance across a wide variety of jobs and organizations?",
@@ -115,7 +130,11 @@
       "quality_comment": "This item tests knowledge of predictor validity and includes plausible distractors, making it a fair and relevant EPPP question.",
       "lessonExcerpt": "These tests go by several names: general cognitive ability tests, intelligence tests, or simply cognitive ability tests. Here's what you absolutely need to know: **these are the most valid predictors of job performance** across different types of jobs, performance criteria, and organizations.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques",
+        "Comparison Table: Selection Technique Validity"
+      ]
     },
     {
       "stem": "Which Big Five personality trait has been consistently shown to be the best predictor of job performance across diverse roles and criteria?",
@@ -133,7 +152,10 @@
       "quality_comment": "The question is straightforward with clearly distinct options, suitable for testing basic knowledge of personality predictors.",
       "lessonExcerpt": "Of these five traits, **conscientiousness** consistently emerges as the best predictor of job performance across different jobs and performance criteria.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "What is a key advantage of integrity tests used in employee selection compared to general mental ability tests?",
@@ -151,7 +173,10 @@
       "quality_comment": "Distractors are plausible but not accurate, making the correct answer salient for knowledge of differential impacts of selection tools.",
       "lessonExcerpt": "The good news? Integrity tests don't show adverse impact for racial or ethnic minorities, making them a legally safer option than some alternatives.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "When using multiple predictors in employee selection, which method involves administering all predictors to all applicants, requiring each applicant to meet cutoff scores on every predictor to be considered?",
@@ -169,7 +194,10 @@
       "quality_comment": "This item requires detailed knowledge of selection process terminology and is well-constructed with plausible alternatives.",
       "lessonExcerpt": "**Multiple cutoff** administers all predictors to all applicants. To move forward, applicants must score above the cutoff on every single predictor.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Combining Selection Techniques: The Whole Is Greater Than the Sum"
+      ]
     },
     {
       "stem": "Which of the following is a noncompensatory selection method that administers predictors sequentially, only proceeding to the next if the applicant meets the cutoff score on the current test?",
@@ -187,7 +215,10 @@
       "quality_comment": "The question is clear and tests understanding of specific selection techniques with well-differentiated options.",
       "lessonExcerpt": "**Multiple hurdles** takes a sequential approach. Predictors are administered in a specific order, and applicants must pass each hurdle before advancing to the next one.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Combining Selection Techniques: The Whole Is Greater Than the Sum"
+      ]
     },
     {
       "stem": "What is one major disadvantage of using biodata (biographical information) measures in employee selection?",
@@ -205,7 +236,10 @@
       "quality_comment": "Options are plausible, requiring nuanced understanding of biodata drawbacks which is appropriate for EPPP-level knowledge.",
       "lessonExcerpt": "But there's a catch: some items lack **face validity**, meaning they don't appear relevant to job performance.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "Which type of work sample test is designed specifically for applicants without prior job experience, incorporating training and evaluation periods?",
@@ -223,7 +257,10 @@
       "quality_comment": "The question is precise and answer choices include related but distinct concepts, requiring careful attention to terminology.",
       "lessonExcerpt": "There's a specialized version called **trainability work sample tests** designed for applicants without previous experience. These incorporate training periods followed by evaluation",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "Assessment centers typically use multiple raters and methods to evaluate managerial candidates. Which simulation exercise requires candidates to respond to memos and phone messages reflecting typical job communications?",
@@ -241,7 +278,10 @@
       "quality_comment": "Distractors represent common selection tools, making the question appropriate for testing familiarity with specific assessment center exercises.",
       "lessonExcerpt": "**The in-basket exercise** assesses decision-making skills.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "According to research, combining which two selection methods produces the greatest gain in validity for predicting job performance?",
@@ -259,7 +299,10 @@
       "quality_comment": "This item requires integration of meta-analytic findings, challenging candidates to apply research knowledge to practical assessment scenarios.",
       "lessonExcerpt": "When researchers examined which combination of selection methods provides the best prediction, they found that **combining a general mental ability test with an integrity test produces the greatest incremental validity**.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Combining Selection Techniques: The Whole Is Greater Than the Sum"
+      ]
     },
     {
       "stem": "Which selection predictor is least likely to produce adverse impact for racial/ethnic minority applicants?",
@@ -277,7 +320,10 @@
       "quality_comment": "The question focuses on differential subgroup impacts, which is important in test fairness knowledge.",
       "lessonExcerpt": "The good news? Integrity tests don't show adverse impact for racial or ethnic minorities, making them a legally safer option than some alternatives.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "What is a realistic job preview's primary purpose in employee selection?",
@@ -295,7 +341,10 @@
       "quality_comment": "This question clarifies the concept and importance of realistic job previews in practical hiring contexts.",
       "lessonExcerpt": "Work samples often appear in **realistic job previews (RJPs)**, which show applicants both positive and negative aspects of the job. The goal? Reduce turnover by ensuring new hires know what they're getting into before accepting an offer.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "Which type of integrity test directly asks about attitudes and past behaviors related to dishonesty?",
@@ -313,7 +362,10 @@
       "quality_comment": "Answered options are plausible and related, making the question effective for testing conceptual differentiation.",
       "lessonExcerpt": "**Overt integrity tests** ask directly about attitudes toward dishonesty and past behavior.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "What type of interview format allows for the same set of questions to be posed to all applicants, ensuring consistency in the evaluation process?",
@@ -336,7 +388,10 @@
       ],
       "lessonExcerpt": "**Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "In the context of employee selection, which interview method is most likely to produce the most reliable and valid assessment of candidates by using predetermined questions and a scoring rubric?",
@@ -359,7 +414,10 @@
       ],
       "lessonExcerpt": "**Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system. For years, researchers believed structured interviews were clearly superior predictors of job performance.",
       "suggestedLesson": "5-hiring-methods",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "A pediatric neuropsychologist is providing psychoeducation to parents of a 9-year-old recently diagnosed with reading disorder (dyslexia). Which statement most accurately represents current research on the long-term prognosis of this condition?",
@@ -380,7 +438,8 @@
       "lessonExcerpt": "There are two main approaches: compensatory and noncompensatory methods. ### Compensatory Methods: Balance Is Possible",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following employee selection methods is most appropriate for assessing multiple skills in candidates?",
@@ -401,7 +460,10 @@
       "lessonExcerpt": "There's a specialized version called **trainability work sample tests** designed for applicants without previous experience. These incorporate training periods followed by evaluation, helping organizations determine whether inexperienced applicants are likely to benefit from on-the-job training.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "Which of the following is considered a strong predictor of job performance?",
@@ -422,7 +484,10 @@
       "lessonExcerpt": "Ability tests are strong predictors of job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "The Heavy Hitters: Seven Core Selection Techniques"
+      ]
     },
     {
       "stem": "Which factor is most critical when assessing an individual's risk of suicide?",
@@ -443,7 +508,8 @@
       "lessonExcerpt": "Previous suicide attempts are one of the strongest predictors of future suicide risk.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": null
     },
     {
       "stem": "What is the primary concern regarding the predictive validity of infant development tests?",
@@ -464,7 +530,8 @@
       "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": null
     }
   ]
 }

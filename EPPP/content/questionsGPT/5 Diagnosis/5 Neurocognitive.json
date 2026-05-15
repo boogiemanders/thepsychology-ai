@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The stem is clear, and distractors cover related but distinct disorders, promoting good differentiation of delirium from other conditions.",
       "lessonExcerpt": "Delirium requires two key components working together: 1. **Disturbed attention and awareness** that develops quickly (hours to days), fluctuates throughout the day, and represents a clear change from the person's baseline 2. **At least one additional cognitive problem**",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Delirium: The Cognitive Emergency"
+      ]
     },
     {
       "stem": "Which neuropathological feature is considered a hallmark of Alzheimer's disease?",
@@ -32,7 +35,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include other neurological features to mislead, but the correct response is clearly the signature pathological hallmark of Alzheimer's.",
       "lessonExcerpt": "**Amyloid plaques**: Clumps of beta-amyloid protein that form outside neurons **Neurofibrillary tangles**: Abnormal tau protein accumulation inside neurons that creates twisted threads",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Alzheimer's Disease: The Most Common Culprit"
+      ]
     },
     {
       "stem": "Which of the following is NOT a characteristic early symptom distinguishing the behavioral variant of frontotemporal neurocognitive disorder from Alzheimer's disease?",
@@ -49,7 +55,11 @@
       "difficulty": "hard",
       "quality_comment": "The question carefully distinguishes overlapping symptoms, requiring nuanced understanding of frontotemporal vs. Alzheimer's presentations.",
       "lessonExcerpt": "Early prominent symptoms | Personality changes, behavioral disinhibition, language problems | Memory impairment ... Early memory | Relatively preserved | Significantly impaired",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Frontotemporal Neurocognitive Disorder: The Early-Onset Personality Changer",
+        "Alzheimer's Disease: The Most Common Culprit"
+      ]
     },
     {
       "stem": "Which of the following medications primarily acts as a cholinesterase inhibitor used in treating Alzheimer’s disease?",
@@ -66,7 +76,10 @@
       "difficulty": "easy",
       "quality_comment": "The stem is straightforward and options are common drugs, ensuring clarity and good differentiation.",
       "lessonExcerpt": "**Cholinesterase inhibitors** (donepezil, rivastigmine): Prevent acetylcholine breakdown",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Alzheimer's Disease: The Most Common Culprit"
+      ]
     },
     {
       "stem": "Which symptom is more typical of neurocognitive disorder with Lewy bodies than Alzheimer’s disease?",
@@ -83,7 +96,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors reflect Alzheimer’s symptoms, enhancing discriminatory power of the question.",
       "lessonExcerpt": "Fluctuating cognition with varying attention and alertness Recurrent visual hallucinations",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurocognitive Disorder with Lewy Bodies: The Fluctuating Presentation"
+      ]
     },
     {
       "stem": "Which of the following best describes the prognosis and course of vascular neurocognitive disorder?",
@@ -100,7 +116,10 @@
       "difficulty": "medium",
       "quality_comment": "The question clearly differentiates vascular NCD from other neurocognitive disorders, useful for exam preparation.",
       "lessonExcerpt": "The course varies dramatically: you might see acute onset with partial recovery, stepwise decline, or progressive deterioration with plateaus.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Vascular Neurocognitive Disorder: When Blood Flow Problems Damage the Brain"
+      ]
     },
     {
       "stem": "A patient with Down syndrome in their 20s begins showing early signs of cognitive decline. Which neurocognitive disorder and mechanism is most consistent with this presentation?",
@@ -117,7 +136,10 @@
       "difficulty": "medium",
       "quality_comment": "Question integrates genetics and clinical presentation effectively; distractors are plausible but biologically distinct.",
       "lessonExcerpt": "Down syndrome (due to extra APP gene on chromosome 21)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Alzheimer's Disease: The Most Common Culprit"
+      ]
     },
     {
       "stem": "Which feature distinguishes mild neurocognitive disorder from major neurocognitive disorder according to DSM-5-TR criteria?",
@@ -134,7 +156,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear formulation contrasts mild vs. major NCD, with distractors that are partially true but misleading for diagnostic criteria.",
       "lessonExcerpt": "delirium (the acute crisis), mild neurocognitive disorder (noticeable problems that don't disrupt independence), and major neurocognitive disorder (significant impairment that interferes with daily living).",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Neurocognitive Disorders Different"
+      ]
     },
     {
       "stem": "In the assessment of Alzheimer’s disease, which statement about a definitive diagnosis is accurate?",
@@ -151,7 +176,10 @@
       "difficulty": "medium",
       "quality_comment": "The question clarifies a common misconception, with well-balanced distractors for clinical context.",
       "lessonExcerpt": "**Reality**: Definitive diagnosis requires brain biopsy or autopsy. Clinical diagnosis is based on characteristic symptoms plus ruling out other explanations.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Alzheimer's Disease: The Most Common Culprit"
+      ]
     },
     {
       "stem": "Which intervention has recently been FDA approved to slow progression of early-stage Alzheimer’s disease by targeting amyloid plaques?",
@@ -168,7 +196,10 @@
       "difficulty": "medium",
       "quality_comment": "Options are well-known drugs for neurocognitive or psychiatric disorders, increasing plausibility.",
       "lessonExcerpt": "**Donanemab**: Newly approved, targets amyloid plaques directly (given as monthly IV infusion for early-stage disease)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Alzheimer's Disease: The Most Common Culprit"
+      ]
     },
     {
       "stem": "A patient with HIV shows forgetfulness, apathy, psychomotor slowing, and tremors. Which neurocognitive disorder subtype is most consistent with this presentation?",
@@ -185,7 +216,11 @@
       "difficulty": "hard",
       "quality_comment": "Distractors include plausible brain region categories, requiring strong content knowledge for correct choice.",
       "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows **subcortical symptoms**: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Geography of Brain Damage: Cortical, Subcortical, and Mixed",
+        "Other Neurocognitive Disorders You Need to Know"
+      ]
     },
     {
       "stem": "Which approach is recommended for treating agitation and psychotic symptoms in delirium in hospitalized older adults?",
@@ -202,7 +237,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear question stem and relevant plausible options; distractors are pharmacologically related but distinct in use.",
       "lessonExcerpt": "potentially use antipsychotic medications like haloperidol to manage severe agitation or psychotic symptoms.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Delirium: The Cognitive Emergency"
+      ]
     },
     {
       "stem": "Which of the following factors is associated with increased risk for developing Alzheimer’s disease?",
@@ -219,7 +257,10 @@
       "difficulty": "medium",
       "quality_comment": "Options balance protective and risk factors well, requiring applied knowledge.",
       "lessonExcerpt": "Low educational attainment Obesity Hearing loss",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Alzheimer's Disease: The Most Common Culprit"
+      ]
     },
     {
       "stem": "When interpreting neurocognitive assessment data, what is the importance of considering base rates in the patient population?",
@@ -237,7 +278,8 @@
       "quality_comment": "This item clarifies a frequently misunderstood concept in clinical test interpretation, with plausible distractors.",
       "lessonExcerpt": "The Foundation: Sampling Distributions and Probability Let's start with a core concept that trips up many students: the sampling distribution of means.",
       "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following is a key feature of the diagnostic criteria for major neurocognitive disorder?",
@@ -259,7 +301,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "major neurocognitive disorder (significant impairment that interferes with daily living)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Neurocognitive Disorders Different"
+      ]
     },
     {
       "stem": "Which of the following best describes the cognitive disturbances associated with a diagnosis of vascular neurocognitive disorder?",
@@ -281,7 +326,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Symptoms consistent with vascular cause (temporal relationship to stroke or prominent attention/executive problems) Evidence of cerebrovascular disease from history, exam, or neuroimaging",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Vascular Neurocognitive Disorder: When Blood Flow Problems Damage the Brain"
+      ]
     }
   ]
 }

@@ -19,7 +19,10 @@
       "lessonExcerpt": "**Worth noting:** Research shows that when people without ADHD use stimulants for cognitive enhancement, they may increase attention and positive mood but don't improve reading comprehension and may actually impair working memory and academic performance.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "ADHD Medications: First, Second, and Third-Line Treatments"
+      ]
     },
     {
       "stem": "A patient who has been drinking heavily for 15 years abruptly stops consuming alcohol. Within 48 hours, he begins experiencing vivid visual hallucinations, tremors, and autonomic hyperactivity. Which of the following best describes this clinical presentation?",
@@ -40,7 +43,11 @@
       "lessonExcerpt": "Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Drugs for Substance Use Disorders: Supporting Recovery",
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "A psychiatrist consults you regarding a 35-year-old patient recently diagnosed with bipolar I disorder who is experiencing a manic episode with euphoric mood and no rapid cycling features. Which medication would be considered the first-line pharmacological treatment?",
@@ -61,7 +68,10 @@
       "lessonExcerpt": "Lithium (Eskalith, Lithobid) remains the first-line treatment for acute mania and classic bipolar disorder (euphoric mania without rapid cycling).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Mood Stabilizers: Managing Bipolar Disorder"
+      ]
     },
     {
       "stem": "A patient with a long history of heavy alcohol use is brought to the emergency department after a motor vehicle accident. Medical records indicate the patient has developed significant tolerance to alcohol. The treatment team is considering benzodiazepines for sedation during a procedure. What pharmacological phenomenon should the team anticipate regarding the patient's response to benzodiazepines?",
@@ -82,7 +92,11 @@
       "lessonExcerpt": "Cross-tolerance: Tolerance to one drug creates tolerance to others in the same class. For example, alcohol tolerance produces tolerance to benzodiazepines and barbiturates because they're all central nervous system depressants.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Critical Pharmacology Concepts: The Technical Details That Matter",
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "A psychologist is consulting with a psychiatrist about a patient who has been experiencing significant cognitive difficulties since starting a new medication. The patient reports confusion, memory impairment, and difficulty concentrating. Which class of psychotropic medication is MOST likely to produce these cognitive side effects, particularly in older adults?",
@@ -103,7 +117,10 @@
       "lessonExcerpt": "Benzodiazepines include diazepam (Valium), alprazolam (Xanax), and lorazepam (Ativan). These drugs work by increasing GABA activity.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "A patient who has been taking alprazolam daily for two years abruptly stops the medication without medical supervision. Which symptom is MOST characteristic of acute benzodiazepine withdrawal?",
@@ -124,7 +141,10 @@
       "lessonExcerpt": "Abrupt discontinuation after long-term use can cause rebound anxiety, seizures, and severe withdrawal. Tapering schedules must be longer for short-half-life benzodiazepines like alprazolam and lorazepam.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "What is the phenomenon called when tolerance to one substance leads to a reduced response to another, chemically similar substance?",
@@ -145,7 +165,10 @@
       "lessonExcerpt": "**Cross-tolerance:** Tolerance to one drug creates tolerance to others in the same class. For example, alcohol tolerance produces tolerance to benzodiazepines and barbiturates because they're all central nervous system depressants.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Critical Pharmacology Concepts: The Technical Details That Matter"
+      ]
     },
     {
       "stem": "Which of the following withdrawal symptoms is most commonly associated with benzodiazepine discontinuation?",
@@ -166,7 +189,10 @@
       "lessonExcerpt": "Abrupt discontinuation after long-term use can cause rebound anxiety, seizures, and severe withdrawal.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "What is a common side effect of stimulant medications like Ritalin?",
@@ -187,7 +213,10 @@
       "lessonExcerpt": "Common side effects: insomnia, nervousness, decreased appetite, weight loss, abdominal pain. Stimulants can suppress growth in children, but \"drug holidays\" during school vacations can reverse this effect.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "ADHD Medications: First, Second, and Third-Line Treatments"
+      ]
     },
     {
       "stem": "What is a significant risk associated with long-term use of benzodiazepines?",
@@ -208,7 +237,10 @@
       "lessonExcerpt": "Benzodiazepines excel at reducing physical anxiety symptoms (racing heart, sweating, trembling) but don't do much for the cognitive symptoms (worried thoughts, rumination). They also come with significant risks: tolerance, physical dependence, and withdrawal problems.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "Which of the following is a common withdrawal symptom associated with benzodiazepine discontinuation?",
@@ -229,7 +261,10 @@
       "lessonExcerpt": "Abrupt discontinuation after long-term use can cause rebound anxiety, seizures, and severe withdrawal.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "Which of the following is a common withdrawal symptom associated with opioid abuse?",
@@ -250,7 +285,10 @@
       "lessonExcerpt": "Here's the crucial comparison for the exam: **Benzodiazepines versus SSRIs/SNRIs for anxiety**. {{M}}Think of benzodiazepines as the fast-food option{{/M}}.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis"
+      ]
     },
     {
       "stem": "What is the primary purpose of stimulant medications prescribed for ADHD?",
@@ -271,7 +309,10 @@
       "lessonExcerpt": "**Worth noting:** Research shows that when people without ADHD use stimulants for cognitive enhancement, they may increase attention and positive mood but don't improve reading comprehension and may actually impair working memory and academic performance.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "ADHD Medications: First, Second, and Third-Line Treatments"
+      ]
     },
     {
       "stem": "Which of the following is a significant concern regarding the long-term prescription of benzodiazepines?",
@@ -292,7 +333,10 @@
       "lessonExcerpt": "Benzodiazepines excel at reducing physical anxiety symptoms but come with significant risks: tolerance, physical dependence, and withdrawal problems.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "A school psychologist is consulting with a pediatrician about stimulant medication trials. The psychologist correctly notes that the behavioral response to psychostimulants such as methylphenidate differs between children with ADHD and neurotypical children. Which of the following best describes this differential response?",
@@ -313,7 +357,10 @@
       "lessonExcerpt": "**Worth noting:** Research shows that when people without ADHD use stimulants for cognitive enhancement, they may increase attention and positive mood but don't improve reading comprehension and may actually impair working memory and academic performance.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "ADHD Medications: First, Second, and Third-Line Treatments"
+      ]
     },
     {
       "stem": "A client with a 15-year history of heavy daily alcohol consumption is medically admitted after abrupt cessation of drinking. On day two of admission, he reports seeing insects crawling on the walls and feels them on his skin despite the absence of any visible source. Among the following substances, which withdrawal syndrome is MOST classically associated with these frank perceptual disturbances?",
@@ -334,7 +381,11 @@
       "lessonExcerpt": "They're used for anxiety, insomnia, seizures, and alcohol withdrawal... Abrupt discontinuation after long-term use can cause rebound anxiety, seizures, and severe withdrawal.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents",
+        "Drugs for Substance Use Disorders: Supporting Recovery"
+      ]
     },
     {
       "stem": "A psychiatrist consults a psychologist regarding pharmacological management for a client newly diagnosed with Bipolar I Disorder following a first manic episode with grandiosity, decreased need for sleep, and pressured speech. According to established treatment guidelines, which medication class represents the first-line pharmacological intervention for Bipolar I Disorder?",
@@ -355,7 +406,10 @@
       "lessonExcerpt": "Methylphenidate (Ritalin, Concerta), pemoline (Cylert), and amphetamine-dextroamphetamine (Adderall) are the go-to medications for ADHD. They increase dopamine and norepinephrine activity in the prefrontal cortex, improving attention, concentration, and reducing hyperactivity and impulsivity.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Mood Stabilizers: Managing Bipolar Disorder"
+      ]
     },
     {
       "stem": "Which of the following statements best describes a key advantage of benzodiazepines compared to SSRIs or SNRIs in the treatment of anxiety?",
@@ -373,7 +427,10 @@
       "quality_comment": "The question clearly addresses a clinically important distinction; distractors include common misconceptions, making it an effective test of knowledge.",
       "lessonExcerpt": "| Feature | Benzodiazepines | SSRIs/SNRIs | |---------|----------------|-------------| | Onset | Fast (30-60 min) | Slow (2-4 weeks) | | Best for | Physical symptoms, acute anxiety | Cognitive symptoms, chronic anxiety | | Duration | Short-term | Long-term | | Dependence risk | High | Low |",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "A patient who has been on long-term alprazolam (Xanax) therapy wishes to discontinue use. What is the best approach to minimize withdrawal symptoms?",
@@ -391,7 +448,10 @@
       "quality_comment": "Options are phrased to target common clinical errors; the correct answer is clear and well justified, suitable for EPPP standards.",
       "lessonExcerpt": "**Misconception #3:** \"All mood stabilizers work the same way.\" **Reality:** Lithium, anticonvulsants, and some atypical antipsychotics are all used as mood stabilizers, but they have different mechanisms, side effect profiles, and monitoring requirements.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "Which side effect is most characteristic of barbiturate use and warrants caution due to its severity?",
@@ -409,7 +469,10 @@
       "quality_comment": "Distractors reflect side effects of related drug classes, increasing the plausibility and discriminative quality of the item.",
       "lessonExcerpt": "| Feature | Benzodiazepines | SSRIs/SNRIs | |---------|----------------|-------------| | Onset | Fast (30-60 min) | Slow (2-4 weeks) | | Best for | Physical symptoms, acute anxiety | Cognitive symptoms, chronic anxiety | | Duration | Short-term | Long-term | | Dependence risk | High | Low |",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "Which anxiolytic drug is preferred when sedation, tolerance, and dependence are significant clinical concerns?",
@@ -427,7 +490,10 @@
       "quality_comment": "The concise options contrast well-known drugs with a unique alternative, facilitating clear differentiation for examinees.",
       "lessonExcerpt": "**Nicotine replacement therapy (NRT):** Provides stable low levels of nicotine to prevent withdrawal symptoms that trigger relapse. {{M}}It's like gradually stepping down from a high-caffeine habit by switching to progressively weaker coffee rather than quitting cold turkey.{{/M}}",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "Methadone is primarily used in the treatment of which condition and why?",
@@ -445,7 +511,11 @@
       "quality_comment": "Distractors are plausible drugs but irrelevant for the treatment described, maintaining focus on opioid pharmacology.",
       "lessonExcerpt": "Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
+        "Drugs for Substance Use Disorders: Supporting Recovery"
+      ]
     },
     {
       "stem": "Propranolol is sometimes used to treat anxiety because it primarily reduces which type of symptoms?",
@@ -463,7 +533,10 @@
       "quality_comment": "The stem clearly directs attention to symptom types; distractors represent other symptom domains to challenge the examinee's precision.",
       "lessonExcerpt": "Barbiturates like thiopental (Pentothal) and secobarbital (Seconal) also enhance GABA activity. They're less commonly prescribed today because they're more dangerous than benzodiazepines. They're used as general anesthetics and for treating anxiety, insomnia, and seizures.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beta-Blockers: Calming the Body's Alarm System"
+      ]
     },
     {
       "stem": "Which of the following statements best characterizes the drug half-life and its importance in medication management?",
@@ -481,7 +554,10 @@
       "quality_comment": "Distractors include common misconceptions, but the correct answer is clearly stated, testing critical pharmacological knowledge.",
       "lessonExcerpt": "**Clinical uses:** pre-surgery anesthetic, pain management, and heroin detoxification (methadone). Methadone works by reducing heroin cravings and withdrawal symptoms without producing heroin's euphoric effects.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Critical Pharmacology Concepts: The Technical Details That Matter"
+      ]
     },
     {
       "stem": "A drug with a narrow therapeutic window is characterized by which of the following?",
@@ -499,7 +575,10 @@
       "quality_comment": "Options contrast safety profiles effectively, and the correct answer requires integration of pharmacological concepts.",
       "lessonExcerpt": "- **Beta-blockers** (especially propranolol) reduce physical anxiety symptoms better than psychological symptoms. Think performance anxiety. Require tapering, not abrupt discontinuation.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Critical Pharmacology Concepts: The Technical Details That Matter"
+      ]
     },
     {
       "stem": "For managing ADHD symptoms in a patient who cannot tolerate stimulant side effects, which medication is considered a second-line treatment option?",
@@ -517,7 +596,10 @@
       "quality_comment": "The options include well-known stimulants and nonstimulants; the question is clear and discriminates well among medications.",
       "lessonExcerpt": "The half-life is the time needed for blood levels to decrease to 50% of peak levels. This determines dosing intervals. Short half-life means more frequent doses, and vice versa.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "ADHD Medications: First, Second, and Third-Line Treatments"
+      ]
     },
     {
       "stem": "Which of the following drugs is FDA approved for slowing progression in moderate to severe Alzheimer's disease and exerts its effects potentially by regulating glutamate activity?",
@@ -535,7 +617,10 @@
       "quality_comment": "Options are all cholinesterase inhibitors except memantine, challenging examinees to recall specific drug mechanisms.",
       "lessonExcerpt": "- **Lithium** is first-line for classic bipolar disorder but has a narrow therapeutic window requiring regular blood level monitoring to avoid toxicity.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Drugs for Alzheimer's Disease: Slowing Cognitive Decline"
+      ]
     },
     {
       "stem": "Which of the following is a common side effect of psychostimulant medications used for ADHD in children?",
@@ -553,7 +638,10 @@
       "quality_comment": "Clear and straightforward, with plausible distractors reflecting other drug side effects, appropriate for standard testing.",
       "lessonExcerpt": "**Atomoxetine (Strattera):** A norepinephrine reuptake inhibitor and the most common nonstimulant for ADHD. More effective than stimulants for patients with comorbid tic disorders, sleep disorders, anxiety, or depression.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "ADHD Medications: First, Second, and Third-Line Treatments"
+      ]
     },
     {
       "stem": "In terms of pharmacological treatment of tobacco use disorder, which medication is known to reduce both nicotine craving and withdrawal symptoms and was originally developed as an antidepressant?",
@@ -571,7 +659,10 @@
       "quality_comment": "Options cover a range of substances and medications associated with addiction treatment, effectively challenging knowledge.",
       "lessonExcerpt": "**NMDA receptor antagonists** like memantine (Namenda) are approved for moderate to severe Alzheimer's disease. Memantine works by regulating glutamate activity.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Drugs for Substance Use Disorders: Supporting Recovery"
+      ]
     },
     {
       "stem": "Which neurotransmitter system is primarily affected by benzodiazepines to produce their anxiolytic and sedative effects?",
@@ -589,7 +680,10 @@
       "quality_comment": "Very clear question focusing on core pharmacological mechanisms with plausible distractors, appropriate for the EPPP.",
       "lessonExcerpt": "Common side effects: insomnia, nervousness, decreased appetite, weight loss, abdominal pain. Stimulants can suppress growth in children, but \"drug holidays\" during school vacations can reverse this effect.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "Which pharmacological property best explains the need for “drug holidays” in children treated with psychostimulants for ADHD?",
@@ -607,7 +701,10 @@
       "quality_comment": "The question addresses a clinically relevant concept that may be overlooked; options are plausible and test understanding of side effects versus pharmacokinetics.",
       "lessonExcerpt": "**Bupropion:** Originally an antidepressant, also reduces nicotine craving and withdrawal symptoms.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "ADHD Medications: First, Second, and Third-Line Treatments"
+      ]
     },
     {
       "stem": "Which class of psychoactive drugs is known to produce paradoxical excitability or increased anxiety, especially in children and older adults?",
@@ -625,7 +722,10 @@
       "quality_comment": "The question targets a nuanced side effect, helping discriminate knowledgeable examinees; distractors are related drug classes for strong content validity.",
       "lessonExcerpt": "Benzodiazepines include diazepam (Valium), alprazolam (Xanax), and lorazepam (Ativan). These drugs work by increasing GABA activity.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "What is the major pharmacological action of beta-blockers such as propranolol when used to reduce anxiety symptoms?",
@@ -643,7 +743,10 @@
       "quality_comment": "The options provide plausible pharmacological actions, requiring precise knowledge of adrenergic receptor pharmacology.",
       "lessonExcerpt": "Common side effects: insomnia, nervousness, decreased appetite, weight loss, abdominal pain. Stimulants can suppress growth in children, but \"drug holidays\" during school vacations can reverse this effect.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beta-Blockers: Calming the Body's Alarm System"
+      ]
     },
     {
       "stem": "What is a primary reason benzodiazepines are often preferred for acute anxiety episodes over other medications?",
@@ -666,7 +769,10 @@
       ],
       "lessonExcerpt": "Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "In the context of treating panic attacks, which of the following statements accurately reflects a significant benefit of using benzodiazepines?",
@@ -689,7 +795,10 @@
       ],
       "lessonExcerpt": "Beta-blockers like propranolol (Inderal) work by inhibiting sympathetic nervous system activity. Primary uses include hypertension, cardiac arrhythmias, migraines, and essential tremor.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sedatives, Hypnotics, and Anxiolytics: The Calming Agents"
+      ]
     },
     {
       "stem": "Which cognitive side effect is commonly associated with the use of antipsychotic medications?",
@@ -710,7 +819,8 @@
       "lessonExcerpt": "They target cognitive symptoms more effectively and don't create the same dependence issues, though they come with their own side effect profile. **Common side effects** of benzodiazepines include drowsiness, sedation, weakness, memory impairment, and confusion (especially in older adults).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": null
     },
     {
       "stem": "Which medication is commonly used to treat bipolar disorder?",
@@ -731,7 +841,10 @@
       "lessonExcerpt": "**Misconception #3:** \"All mood stabilizers work the same way.\" **Reality:** Lithium, anticonvulsants, and some atypical antipsychotics are all used as mood stabilizers, but they have different mechanisms, side effect profiles, and monitoring requirements.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Mood Stabilizers: Managing Bipolar Disorder"
+      ]
     },
     {
       "stem": "Which medication is most likely to cause tremors as a side effect?",
@@ -752,7 +865,10 @@
       "lessonExcerpt": "Common side effects: nausea, vomiting, diarrhea, metallic taste, increased thirst, weight gain, hand tremor, fatigue, memory impairment. The critical concern with lithium is its **narrow therapeutic window**, the difference between an effective dose and a toxic dose is small.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Mood Stabilizers: Managing Bipolar Disorder"
+      ]
     },
     {
       "stem": "Which of the following is a characteristic symptom of Intermittent Explosive Disorder?",
@@ -773,7 +889,8 @@
       "lessonExcerpt": "Intermittent Explosive Disorder is characterized by sudden episodes of aggressive outbursts.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 29
+      "inspirationIndex": 29,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following is a key characteristic of social anxiety disorder?",
@@ -794,7 +911,8 @@
       "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": null
     },
     {
       "stem": "What is a key diagnostic criterion for acute stress disorder?",
@@ -815,7 +933,8 @@
       "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": null
     },
     {
       "stem": "What is a significant challenge in diagnosing ADHD in young children?",
@@ -836,7 +955,10 @@
       "lessonExcerpt": "The symptoms of ADHD can overlap with those of other developmental disorders, complicating diagnosis.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "ADHD Medications: First, Second, and Third-Line Treatments"
+      ]
     },
     {
       "stem": "Which of the following coexisting diagnoses is most commonly associated with specific learning disorder?",
@@ -857,7 +979,8 @@
       "lessonExcerpt": "ADHD is frequently comorbid with specific learning disorders.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": null
     },
     {
       "stem": "Which symptom is most likely to differentiate caffeine intoxication from anxiety disorders?",
@@ -878,7 +1001,8 @@
       "lessonExcerpt": "Caffeine intoxication can lead to symptoms such as increased heart rate and gastrointestinal disturbances.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best distinguishes Generalized Anxiety Disorder (GAD) from normal worries?",
@@ -899,7 +1023,8 @@
       "lessonExcerpt": "GAD involves excessive anxiety and worry about multiple events or activities occurring most days for at least six months. The person finds it difficult to control the worry.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": null
     },
     {
       "stem": "A 44-year-old male presents to a cardiologist for the fifth time in eight months complaining of crushing chest pain, left arm numbness, diaphoresis, and an overwhelming sense that he is about to die. Each episode lasts approximately 10–15 minutes and then resolves completely. Electrocardiograms, echocardiography, and a cardiac stress test are all normal. He is referred for psychological evaluation. Which diagnosis should be ranked highest in the differential?",
@@ -920,7 +1045,8 @@
       "lessonExcerpt": "They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": null
     },
     {
       "stem": "A 32-year-old woman presents to the emergency department with sudden onset of chest pain, heart palpitations, dizziness, and intense fear of dying. Cardiac workup and other medical tests reveal no abnormalities. She reports that similar episodes have occurred three times over the past two months, and she now avoids exercising because she fears triggering another episode. The most likely diagnosis is:",
@@ -941,7 +1067,8 @@
       "lessonExcerpt": "Panic disorder involves recurrent, unexpected panic attacks followed by at least one month of either: Persistent concern about additional attacks or their consequences, OR Significant maladaptive behavior change related to the attacks... These symptoms overlap with medical conditions like hyperthyroidism and cardiac arrhythmia. Always rule out medical causes before diagnosing panic disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": null
     },
     {
       "stem": "A 28-year-old woman presents to the emergency department reporting heart palpitations, chest tightness, shortness of breath, dizziness, and tingling in her extremities. She states the episode came on suddenly while watching television and peaked within approximately 10 minutes. Medical workup including EKG, troponin levels, and thyroid panel are all within normal limits. She reports persistent worry about having additional episodes and has begun avoiding situations where she previously experienced similar symptoms. The most likely diagnosis is:",
@@ -962,7 +1089,8 @@
       "lessonExcerpt": "Panic disorder involves recurrent, unexpected panic attacks followed by at least one month of either: Persistent concern about additional attacks or their consequences, OR Significant maladaptive behavior change related to the attacks",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": null
     },
     {
       "stem": "A 28-year-old woman reports intense fear and avoidance of work meetings, dinner parties, and any situation where she might be observed by others. She experiences heart palpitations, sweating, and trembling exclusively in these social contexts. She does not experience panic attacks at any other time. The most appropriate diagnosis is:",
@@ -983,7 +1111,8 @@
       "lessonExcerpt": "Social anxiety disorder involves fear or anxiety in social situations where scrutiny might occur. The person fears showing anxiety symptoms that others will negatively evaluate. Duration requirement: six months minimum.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": null
     },
     {
       "stem": "A psychologist is evaluating a 32-year-old patient who has experienced a single episode of markedly elevated mood, decreased need for sleep, pressured speech, and grandiose delusions lasting 10 days, requiring hospitalization. The patient has never experienced a major depressive episode. Based on DSM-5 criteria, what is the MOST appropriate diagnosis?",
@@ -1004,7 +1133,8 @@
       "lessonExcerpt": "Bipolar I only requires ONE manic episode. That person might never have depression, but they still have Bipolar I.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": null
     },
     {
       "stem": "A psychologist is conducting a neuropsychological evaluation of an HIV-positive client who presents with forgetfulness, difficulty concentrating, psychomotor slowing, and social withdrawal. These symptoms are most consistent with which pattern of neurocognitive impairment?",
@@ -1025,7 +1155,8 @@
       "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": null
     },
     {
       "stem": "A child psychologist is conducting an initial evaluation of a 9-year-old boy who was referred for multiple motor tics (eye blinking, shoulder shrugging) and one vocal tic (throat clearing) that have been present for 18 months. The psychologist should be MOST alert to the possible co-occurrence of which condition?",
@@ -1046,7 +1177,8 @@
       "lessonExcerpt": "ADHD is the most common comorbid disorder with Tourette's.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": null
     },
     {
       "stem": "A 35-year-old graduate student presents with restlessness, insomnia, muscle twitching, rambling speech, tachycardia, and psychomotor agitation. She reports consuming approximately 8-10 cups of coffee daily to stay awake while studying for comprehensive exams. She denies use of any other substances, and her urine drug screen is negative. The most likely diagnosis is:",
@@ -1067,7 +1199,8 @@
       "lessonExcerpt": "We're talking about intoxication, withdrawal, and other mental disorders directly caused by substances (like substance-induced depression or anxiety). **Substance-Use Disorders** are the ongoing patterns.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": null
     },
     {
       "stem": "A 26-year-old graduate student drinks six cups of coffee between 8 AM and noon while preparing for a qualifying exam. At noon she visits the student health center reporting restlessness she cannot control, visible muscle twitching in her legs, a racing heart (pulse 112 bpm), and speech that staff describe as rapid and loosely organized. She denies anxiety symptoms prior to her caffeine intake and has no psychiatric history. Which DSM-5 diagnosis is most appropriate?",
@@ -1088,7 +1221,8 @@
       "lessonExcerpt": "Alcohol Intoxication** is what most people call being drunk, but the clinical diagnosis requires specific criteria. You need problematic behavioral or psychological changes (inappropriate sexual or aggressive behavior, mood swings, poor judgment) plus at least one physical sign: slurred speech, poor coordination, unsteady walking, nystagmus (involuntary eye movements), problems with attention or memory, or stupor/coma.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": null
     },
     {
       "stem": "Which symptom is NOT one of the criteria for Cannabis Intoxication in DSM-5-TR?",
@@ -1111,7 +1245,8 @@
       ],
       "lessonExcerpt": "Opioid Intoxication** involves problematic behavioral or psychological changes (initial euphoria followed by apathy or dysphoria, impaired judgment) plus pupillary constriction (pinpoint pupils (this is a key sign) and at least one of: drowsiness or coma, slurred speech, or impaired attention/memory. Sometimes people experience perceptual disturbances) hallucinations with intact reality testing or illusions without delirium.",
       "suggestedLesson": "1-pharmacology-other-drugs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "A pediatrician refers a 4-year-old child to a psychologist after the child has been hospitalized multiple times for unexplained symptoms. The mother appears unusually knowledgeable about medical procedures and seems invested in the child remaining hospitalized, but no external incentives such as financial gain or avoidance of legal consequences can be identified. Which diagnosis is most appropriate for the mother?",
@@ -1132,7 +1267,8 @@
       "lessonExcerpt": "Factitious Disorder Imposed on Another: Same as above, but symptoms are induced in another person (often a child by their parent)... Factitious Disorder: Internal psychological need; no obvious external reward... Malingering: Clear external reward (money, drugs, avoiding work/legal consequences)",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": null
     },
     {
       "stem": "A pediatrician reports that a 4-year-old patient has been hospitalized multiple times for symptoms that cannot be medically explained, and lab results appear to have been tampered with. The child's mother, who has medical training, is always present and appears very engaged with hospital staff. There is no evidence of external incentive such as financial gain or avoidance of legal responsibility. Which diagnosis is most appropriate for the mother?",
@@ -1153,7 +1289,8 @@
       "lessonExcerpt": "Imposed on another: Person causes symptoms in someone else (often a child)... The person presents themselves as ill or impaired even without obvious external reward. This distinguishes it from malingering.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": null
     }
   ]
 }

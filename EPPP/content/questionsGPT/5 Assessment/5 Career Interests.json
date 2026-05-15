@@ -19,7 +19,8 @@
       "lessonExcerpt": "interest inventories are excellent at predicting job choice, satisfaction, and persistence, but they're much less accurate at predicting actual job success.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 31
+      "inspirationIndex": 31,
+      "relatedSections": null
     },
     {
       "stem": "Which personal style is NOT assessed by the Personal Styles Scales (PSSs) in the Strong Interest Inventory?",
@@ -37,7 +38,10 @@
       "quality_comment": "The options are similar in length and plausibility, challenging test-takers to know specific scale content enhancing discriminative capacity.",
       "lessonExcerpt": "These five scales capture how someone prefers to work, beyond just what they want to work on:\n\n- **Work style**\n- **Leadership style**\n- **Learning environment**\n- **Risk taking**\n- **Team orientation**",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Strong Interest Inventory: Five Layers of Career Insight"
+      ]
     },
     {
       "stem": "How were the Occupational Scales (OSs) of the Strong Interest Inventory constructed?",
@@ -55,7 +59,10 @@
       "quality_comment": "Distractors blend both common test construction practices and relevant theory, requiring a precise understanding, suitable for graduate level.",
       "lessonExcerpt": "The GOTs are based on Holland's six occupational themes, which you'll want to memorize for the exam.",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Strong Interest Inventory: Five Layers of Career Insight"
+      ]
     },
     {
       "stem": "Which of the following is a key difference between the Strong Interest Inventory (SII) and the Kuder Occupational Interest Survey (KOIS)?",
@@ -73,7 +80,10 @@
       "quality_comment": "The distractors include partially correct or clearly false options, increasing the precision with which test takers must know differences between assessments.",
       "lessonExcerpt": "ipsative scores allow you to compare a person's interests against their own other interests (intra-individual comparison), but you cannot meaningfully compare one person's scores to another person's scores",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Key Differences Between SII and KOIS"
+      ]
     },
     {
       "stem": "Which statement best describes how Occupational Scales for the Kuder Occupational Interest Survey (KOIS) were developed?",
@@ -91,7 +101,10 @@
       "quality_comment": "The distractors reflect plausible test development methods, requiring deep knowledge of KOIS scale construction, appropriate for advanced learners.",
       "lessonExcerpt": "These five scales capture how someone prefers to work, beyond just what they want to work on:\n\n- **Work style**\n- **Leadership style**\n- **Learning environment**\n- **Risk taking**\n- **Team orientation**",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Kuder Occupational Interest Survey: A Different Approach"
+      ]
     },
     {
       "stem": "Which of the following statements about the Kuder Career Planning System (KCPS) is TRUE?",
@@ -109,7 +122,10 @@
       "quality_comment": "This question is straightforward with clear true/false options, good for foundational knowledge testing at the EPPP level.",
       "lessonExcerpt": "they actually compared responses from people employed in specific occupations with responses from a general representative sample of employed adults. Only the items that actually distinguished between these groups made it onto each Occupational Scale.",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Kuder Occupational Interest Survey: A Different Approach"
+      ]
     },
     {
       "stem": "The Strong Interest Inventory’s Personal Styles Scales assess preferences related to all of the following EXCEPT:",
@@ -127,7 +143,10 @@
       "quality_comment": "The distractors are consistent with plausible personality/personal style factors, making the test-taker discriminate carefully.",
       "lessonExcerpt": "| **Score type** | Normative (can compare between people) | Ipsative (can only compare within person) |",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Strong Interest Inventory: Five Layers of Career Insight"
+      ]
     },
     {
       "stem": "Which of the following is the primary purpose of the Dependability Indices on the Kuder Occupational Interest Survey?",
@@ -145,7 +164,10 @@
       "quality_comment": "Distractors address related but distinct concepts, reinforcing understanding of test response validity measures.",
       "lessonExcerpt": "The KOIS didn't compare occupational groups to a general sample. Instead, it compared different occupational groups directly to each other, including only items that could distinguish between them.",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Kuder Occupational Interest Survey: A Different Approach"
+      ]
     },
     {
       "stem": "What type of vocational interests do the Basic Interest Scales (BISs) of the Strong Interest Inventory (SII) assess?",
@@ -163,7 +185,10 @@
       "quality_comment": "Plausible distractors related to other scale types strengthen the question’s discriminative power and relevance.",
       "lessonExcerpt": "The Kuder has evolved into an online platform called the Kuder Career Planning System (KCPS), which offers age-appropriate programs",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Strong Interest Inventory: Five Layers of Career Insight"
+      ]
     },
     {
       "stem": "Which of the following is a primary advantage of empirical criterion keying in the development of interest inventory scales such as the Strong Interest Inventory's Occupational Scales?",
@@ -181,7 +206,10 @@
       "quality_comment": "The question effectively contrasts empirical and theoretical scale development methods, important for advanced test knowledge.",
       "lessonExcerpt": "These five scales capture how someone prefers to work, beyond just what they want to work on:\n\n- **Work style**\n- **Leadership style**\n- **Learning environment**\n- **Risk taking**\n- **Team orientation**",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Strong Interest Inventory: Five Layers of Career Insight"
+      ]
     },
     {
       "stem": "Which component of the Strong Interest Inventory (SII) focuses on specific careers and compares an individual's interests with those of people in various occupations?",
@@ -204,7 +232,10 @@
       ],
       "lessonExcerpt": "Like the SII's Administrative Indices, these help determine if the responses are valid and consistent.",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Strong Interest Inventory: Five Layers of Career Insight"
+      ]
     },
     {
       "stem": "In the context of the Strong Interest Inventory (SII), which scale is primarily used to assess an individual's preferences in work environments and personal styles?",
@@ -227,7 +258,10 @@
       ],
       "lessonExcerpt": "ipsative scores allow you to compare a person's interests against their own other interests (intra-individual comparison), but you cannot meaningfully compare one person's scores to another person's scores",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Strong Interest Inventory: Five Layers of Career Insight"
+      ]
     },
     {
       "stem": "Which of the following scales on the Strong Interest Inventory (SII) provides scores based on Holland's six occupational themes such as realistic and investigative?",
@@ -245,7 +279,10 @@
       "quality_comment": "The question clearly contrasts different SII scales, with plausible distractors referencing other legitimate scales, enhancing content validity for EPPP level.",
       "lessonExcerpt": "| Exploration | 15 to 24 | Trying out different options, narrowing choices |",
       "suggestedLesson": "5-career-interests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Strong Interest Inventory: Five Layers of Career Insight"
+      ]
     },
     {
       "stem": "Which of the following strengths is commonly observed in children with autism spectrum disorder?",
@@ -266,7 +303,8 @@
       "lessonExcerpt": "Children with autism spectrum disorder often exhibit an intense focus on specific interests.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 30
+      "inspirationIndex": 30,
+      "relatedSections": null
     },
     {
       "stem": "What is the primary purpose of empirical criterion keying in personality assessment?",
@@ -287,7 +325,8 @@
       "lessonExcerpt": "These were developed through **empirical criterion keying**",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": null
     }
   ]
 }

@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The distractors are disorder-relevant concepts that test differentiation between similar trauma/stressor-related diagnoses, enhancing the question’s discriminative ability.",
       "lessonExcerpt": "The child consistently pulls away from adult caregivers emotionally. They don't seek comfort when upset and don't respond when comfort is offered",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "For the diagnosis of Disinhibited Social Engagement Disorder (DSED), which of the following behaviors would be most characteristic?",
@@ -32,7 +35,10 @@
       "difficulty": "medium",
       "quality_comment": "Clear and focused stem; distractors include related but incorrect behaviors, effectively assessing knowledge of the specific disorder.",
       "lessonExcerpt": "Little to no hesitation approaching or interacting with unfamiliar adults Overly familiar behavior (verbal or physical) with strangers Doesn't check back with caregivers after separation Willingly goes off with strangers with minimal hesitation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "Which neurobiological finding is most commonly associated with Posttraumatic Stress Disorder (PTSD)?",
@@ -49,7 +55,10 @@
       "difficulty": "hard",
       "quality_comment": "Options are plausible and neurobiologically detailed, requiring advanced knowledge of PTSD pathophysiology suitable for EPPP.",
       "lessonExcerpt": "**Hyperactive amygdala**: The brain's alarm system is stuck in overdrive ... **Reduced hippocampal volume**: The memory center is actually smaller",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "Which pharmacological treatment is recommended by the APA Clinical Practice Guideline as a second-line option for PTSD in adults?",
@@ -66,7 +75,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors represent plausible but incorrect medication choices, making the question clinically relevant and clear.",
       "lessonExcerpt": "**Medication**: No first-line medication recommendations exist. Second-line options include: SSRIs: fluoxetine, paroxetine, sertraline SNRI: venlafaxine",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "Which of the following statements best differentiates factitious disorder from malingering?",
@@ -83,7 +95,10 @@
       "difficulty": "medium",
       "quality_comment": "The question clearly contrasts two commonly confused diagnoses with plausible distractors reflecting common misconceptions.",
       "lessonExcerpt": "**Motivation** | Internal psychological need; no obvious external reward | Clear external reward (money, drugs, avoiding work/legal consequences)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Somatic Symptom and Related Disorders: When Physical Symptoms Don't Match Medical Findings"
+      ]
     },
     {
       "stem": "Which characteristic is most consistent with dissociative amnesia, as opposed to feigned memory loss?",
@@ -100,7 +115,10 @@
       "difficulty": "hard",
       "quality_comment": "Distractors effectively test nuanced clinical judgment, suitable for advanced level EPPP candidates.",
       "lessonExcerpt": "**Onset/Termination** | Gradual, hazy | Often sudden, clear-cut",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Dissociative Disorders: When the Mind Disconnects"
+      ]
     },
     {
       "stem": "According to the DSM-5-TR, which of the following is NOT a required feature for the diagnosis of Illness Anxiety Disorder?",
@@ -117,7 +135,10 @@
       "difficulty": "medium",
       "quality_comment": "The distractors are all DSM-5-TR criteria for the disorder except the correct answer, aiding discrimination between related disorders.",
       "lessonExcerpt": "Preoccupation with having a serious illness No or mild somatic symptoms present Excessive health anxiety Either excessive health-related behaviors (frequent doctor visits, checking) or maladaptive avoidance (avoiding medical care) Symptoms present at least 6 months",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Somatic Symptom and Related Disorders: When Physical Symptoms Don't Match Medical Findings"
+      ]
     },
     {
       "stem": "Which treatment is considered first-line psychological therapy for PTSD according to the APA Clinical Practice Guideline?",
@@ -134,7 +155,10 @@
       "difficulty": "easy",
       "quality_comment": "Question is straightforward; distractors include commonly misunderstood or less supported interventions, improving test validity.",
       "lessonExcerpt": "**First-line psychological treatments** (recommended): Cognitive Processing Therapy (CPT) Prolonged Exposure (PE) Trauma-focused CBT",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "Which of the following best describes the nature of symptoms in Functional Neurological Symptom Disorder (Conversion Disorder)?",
@@ -151,7 +175,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are all plausible but incorrect; the question requires precise understanding of conversion disorder criteria.",
       "lessonExcerpt": "The person has one or more symptoms involving disturbed voluntary motor or sensory functioning (paralysis, blindness, seizures, etc.), but: Symptoms are incompatible with any known neurological or medical condition Symptoms cause significant distress or impairment",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Somatic Symptom and Related Disorders: When Physical Symptoms Don't Match Medical Findings"
+      ]
     },
     {
       "stem": "Which symptom cluster is NOT a required category of symptoms for an Acute Stress Disorder diagnosis?",
@@ -168,7 +195,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include relevant symptom types making the correct answer clear only for those with detailed knowledge.",
       "lessonExcerpt": "Need at least 9 symptoms from any of five categories: intrusion, negative mood, dissociative symptoms, avoidance, arousal",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "Which of the following is a risk factor that increases the likelihood of developing PTSD after trauma exposure?",
@@ -185,7 +215,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear and well-constructed question with plausible alternative answers based on demographic and psychosocial factors.",
       "lessonExcerpt": "Pre-trauma factors that increase risk include: Prior trauma exposure Prior psychiatric disorders Negative affectivity (tendency toward negative emotions) Female gender Low education and socioeconomic status Lack of social support",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "When diagnosing Prolonged Grief Disorder in adults, which of the following is required in addition to at least three associated symptoms?",
@@ -202,7 +235,10 @@
       "difficulty": "medium",
       "quality_comment": "The question thoroughly tests temporal and symptomatic diagnostic requirements, with distractors testing common confounding concepts.",
       "lessonExcerpt": "Death of someone close occurred at least 12 months ago (adults) or 6 months ago (children/adolescents)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "In the assessment of malingering, the forced-choice method is used based on what underlying assumption?",
@@ -219,7 +255,10 @@
       "difficulty": "hard",
       "quality_comment": "Question requires integration of knowledge about clinical assessment methods and malingering detection strategies, suitable for advanced learners.",
       "lessonExcerpt": "The **forced-choice method** is valuable for detecting malingering. ... If someone scores significantly below chance (well under 50%), they must be deliberately choosing wrong answers.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Somatic Symptom and Related Disorders: When Physical Symptoms Don't Match Medical Findings"
+      ]
     },
     {
       "stem": "Trauma-focused cognitive behavior therapy (TF-CBT) for children and adolescents includes all of the following EXCEPT:",
@@ -236,7 +275,10 @@
       "difficulty": "easy",
       "quality_comment": "Simple and direct question with distractors reflecting plausible components, making it accessible yet discriminative.",
       "lessonExcerpt": "**For Children and Adolescents**: Trauma-Focused CBT (TF-CBT) is the go-to treatment for ages 3-18. Originally designed for sexual abuse, it now addresses various trauma types and includes family therapy, parenting skills, and conjoint parent-child sessions.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "Which of the following best describes the theoretical basis for the forced-choice method in malingering assessment?",
@@ -253,7 +295,10 @@
       "difficulty": "medium",
       "quality_comment": "This item clarifies the theoretical rationale behind a common malingering detection method, reinforcing understanding of assessment biases and interpretation.",
       "lessonExcerpt": "It's based on a simple principle: even random guessing should produce about 50% correct answers with true/false items. If someone scores significantly below chance (well under 50%), they must be deliberately choosing wrong answers.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Somatic Symptom and Related Disorders: When Physical Symptoms Don't Match Medical Findings"
+      ]
     },
     {
       "stem": "Which neurochemical abnormalities have been implicated in PTSD according to current evidence?",
@@ -270,7 +315,10 @@
       "difficulty": "hard",
       "quality_comment": "Distractors include plausible but incorrect neurochemical profiles, requiring detailed knowledge of PTSD neurobiology.",
       "lessonExcerpt": "**Neurotransmitter changes**: Increased dopamine, norepinephrine, and glutamate; decreased serotonin and GABA",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "Which of the following best represents an evidence-based model explaining PTSD symptom maintenance?",
@@ -287,7 +335,10 @@
       "difficulty": "medium",
       "quality_comment": "The item focuses on a central mechanistic model, with distractors reflecting related but inaccurate neurobiological hypotheses.",
       "lessonExcerpt": "**Hypoactive ventromedial prefrontal cortex**: The \"brake pedal\" that normally calms the amygdala isn't working properly. This creates a runaway fear response",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "Which of the following symptoms is indicative of Disinhibited Social Engagement Disorder (DSED) in children?",
@@ -309,7 +360,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Overly familiar behavior (verbal or physical) with strangers",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     },
     {
       "stem": "In the context of trauma-related disorders, which of the following is a key feature of PTSD that differentiates it from Reactive Attachment Disorder?",
@@ -331,7 +385,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "**Intrusion** | Distressing memories, nightmares, flashbacks, psychological/physical reactions to reminders",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Trauma and Stressor-Related Disorders: When Bad Events Leave Lasting Marks"
+      ]
     }
   ]
 }

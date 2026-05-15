@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The stem is clear and the distractors are realistic but distinct, reflecting common misconceptions and specifics of treatment models.",
       "lessonExcerpt": "**CBT-E (Enhanced CBT)**: A transdiagnostic treatment proposing all eating disorders share the same core problem, giving too much value to physical appearance and weight.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Feeding and Eating Disorders: When Food Becomes the Problem"
+      ]
     },
     {
       "stem": "A 7-year-old child has repeated involuntary urination into clothing at least twice weekly for four months, with no medical cause identified. Which treatment is considered first-line for nocturnal episodes in this elimination disorder?",
@@ -32,7 +35,10 @@
       "difficulty": "easy",
       "quality_comment": "The options present plausible treatments for enuresis, with the moisture alarm clearly the best first-line evidence-based intervention, enhancing question validity.",
       "lessonExcerpt": "The moisture alarm (bell-and-pad) is the most common treatment for nocturnal enuresis.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Elimination Disorders: When Bodily Control Is the Issue"
+      ]
     },
     {
       "stem": "Which medical complication is most directly associated with the compensatory behaviors seen in bulimia nervosa?",
@@ -49,7 +55,10 @@
       "difficulty": "medium",
       "quality_comment": "The distractors include serious complications related to other feeding disorders, increasing the plausibility of incorrect choices and testing detailed knowledge.",
       "lessonExcerpt": "Purging causes dental erosion, gastroesophageal reflux, and dehydration. That dehydration leads to electrolyte imbalances that can cause heart arrhythmias and death.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Feeding and Eating Disorders: When Food Becomes the Problem"
+      ]
     },
     {
       "stem": "A patient with anorexia nervosa is resistant to treatment and denies having an eating disorder. Which treatment approach is most consistent with enhancing motivation and addressing distorted beliefs after initial weight restoration?",
@@ -66,7 +75,10 @@
       "difficulty": "medium",
       "quality_comment": "The options reflect common treatments, but only CBT post-hospitalization specifically targets motivation and cognition, making distractors plausible yet distinct.",
       "lessonExcerpt": "**CBT for Anorexia Nervosa**: A post-hospitalization intervention assuming that concerns about shape and weight lead to dietary restriction that maintains symptoms. Uses behavioral strategies for regular eating and cognitive strategies to change problematic thinking.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Feeding and Eating Disorders: When Food Becomes the Problem"
+      ]
     },
     {
       "stem": "Which of the following sleep disturbances involves episodes of incomplete awakening during slow-wave sleep accompanied by ambulation and lack of memory for the event upon awakening?",
@@ -83,7 +95,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors represent related but distinct sleep disorders, making this question effective for discriminating knowledge of specific sleep-wake disorders.",
       "lessonExcerpt": "These disorders involve incomplete awakening from sleep, usually during Stage 3 or 4 sleep in the first third of a major sleep period. **Sleepwalking:** Getting out of bed and walking during sleep ... Little or no memory upon awakening",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep-Wake Disorders: When Rest Becomes a Problem"
+      ]
     },
     {
       "stem": "Which feature differentiates binge-eating disorder (BED) from bulimia nervosa in terms of diagnostic criteria?",
@@ -100,7 +115,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include common features of both disorders, providing a balanced challenge and clear focus on distinctive diagnostic features.",
       "lessonExcerpt": "**Crucially**: No recurrent inappropriate compensatory behaviors (this distinguishes BED from bulimia)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Feeding and Eating Disorders: When Food Becomes the Problem"
+      ]
     },
     {
       "stem": "A young adult reports difficulty initiating sleep and waking early unable to return to sleep for the past four months, impairing daytime functioning despite adequate opportunity for sleep. Which treatment component directly targets strengthening the bed and bedroom as sleep cues in cognitive-behavior therapy for insomnia (CBT-I)?",
@@ -117,7 +135,10 @@
       "difficulty": "medium",
       "quality_comment": "Options are all common CBT-I components, making the question a precise test of specific intervention knowledge.",
       "lessonExcerpt": "**Stimulus control**: Strengthens bedroom and bed as cues for sleep (go to bed only when tired, use bedroom only for sleep and sex)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep-Wake Disorders: When Rest Becomes a Problem"
+      ]
     },
     {
       "stem": "What is the hallmark characteristic of narcolepsy that differentiates it from other sleep-wake disorders?",
@@ -134,7 +155,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors reflect symptoms of other sleep disorders, effectively testing recognition of narcolepsy's unique feature.",
       "lessonExcerpt": "Episodes of cataplexy (loss of muscle tone) ... Because cataplexy is often triggered by strong emotions, people with narcolepsy may try to control their emotions to prevent sleep episodes.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep-Wake Disorders: When Rest Becomes a Problem"
+      ]
     },
     {
       "stem": "In family-based treatment (FBT) for adolescent anorexia nervosa, what is the primary focus during the first phase of treatment?",
@@ -151,7 +175,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors describe later phases or features of other treatments, providing a clear but challenging test of FBT procedural knowledge.",
       "lessonExcerpt": "**Family-Based Treatment (FBT)**: An outpatient intervention for medically stable adolescents with three phases: 1. Parents take charge of nutritional rehabilitation and weight restoration",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Feeding and Eating Disorders: When Food Becomes the Problem"
+      ]
     },
     {
       "stem": "Which medication is the primary pharmacological treatment used specifically to reduce cataplexy in narcolepsy?",
@@ -168,7 +195,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include commonly used drugs but only venlafaxine targets cataplexy specifically, testing pharmacotherapy details.",
       "lessonExcerpt": "**Medications for cataplexy**: Antidepressants (venlafaxine, fluoxetine, clomipramine)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep-Wake Disorders: When Rest Becomes a Problem"
+      ]
     },
     {
       "stem": "A patient with insomnia complains of worry about the consequences of poor sleep and frequently checks the clock at night, which worsens their difficulty sleeping. According to cognitive therapy for insomnia (CT-I), what are these behaviors termed?",
@@ -185,7 +215,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible sleep-related terms, allowing for meaningful discrimination based on CT-I theory.",
       "lessonExcerpt": "Safety behaviors that actually worsen insomnia (checking time constantly, avoiding social activities, exercising or drinking alcohol before bed to force sleep)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep-Wake Disorders: When Rest Becomes a Problem"
+      ]
     },
     {
       "stem": "Which characteristic symptom is NOT required for the diagnosis of binge-eating disorder according to DSM-5-TR criteria?",
@@ -202,7 +235,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are accurate DSM criteria for BED except for the compensatory behavior item, making this an effective question on diagnostic differentiation.",
       "lessonExcerpt": "**Crucially**: No recurrent inappropriate compensatory behaviors (this distinguishes BED from bulimia)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Feeding and Eating Disorders: When Food Becomes the Problem"
+      ]
     },
     {
       "stem": "Which of the following is the most common subtype of insomnia disorder reported in clinical populations?",
@@ -219,7 +255,10 @@
       "difficulty": "easy",
       "quality_comment": "Distractors include all recognized insomnia types, with the correct answer well-supported by epidemiological data, enhancing clarity.",
       "lessonExcerpt": "Sleep maintenance insomnia is the most common single type, but having all three types together is most common overall.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep-Wake Disorders: When Rest Becomes a Problem"
+      ]
     },
     {
       "stem": "Which model of insomnia emphasizes the role of selective attention, worry, and safety behaviors in maintaining the disorder?",
@@ -236,7 +275,10 @@
       "difficulty": "medium",
       "quality_comment": "The distractors are plausible models related to sleep/wake regulation, providing a strong test of specific model knowledge.",
       "lessonExcerpt": "CT-I is based on Harvey's cognitive model and focuses on reversing problematic cognitive processes that occur day and night",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep-Wake Disorders: When Rest Becomes a Problem"
+      ]
     },
     {
       "stem": "In the context of eating disorders, which statement best reflects the typical temporal relationship between anxiety disorders and anorexia nervosa?",
@@ -253,7 +295,10 @@
       "difficulty": "medium",
       "quality_comment": "The options are well-constructed and reflect common clinical patterns, making discrimination of temporal sequence necessary.",
       "lessonExcerpt": "Anorexia frequently co-occurs with depression or anxiety disorders, especially obsessive-compulsive disorder. Research shows that anxiety often comes first, then anorexia develops.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Feeding and Eating Disorders: When Food Becomes the Problem"
+      ]
     },
     {
       "stem": "Which statistical concept is crucial to avoid misinterpretation of rare symptoms in psychological assessment, particularly when base rates are low?",
@@ -271,7 +316,8 @@
       "quality_comment": "The question effectively integrates statistical reasoning with clinical assessment, testing conceptual understanding of common biases.",
       "lessonExcerpt": "Base Rate Fallacy: Ignoring the Big Picture The **base rate fallacy** occurs when we ignore statistical information about the general population (base rates) and instead focus on specific, distinctive details about an individual case.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Which technology is commonly employed to objectively measure sleep stages and diagnose sleep-wake disorders in clinical settings?",
@@ -288,7 +334,10 @@
       "difficulty": "easy",
       "quality_comment": "The options are common physiological measures, with polysomnography clearly the best fit, making the item an accessible test of assessment technology knowledge.",
       "lessonExcerpt": "REM sleep latency of 15 minutes or less on polysomnography",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sleep-Wake Disorders: When Rest Becomes a Problem"
+      ]
     },
     {
       "stem": "Which of the following is a common cognitive distortion associated with eating disorders that is addressed in transdiagnostic CBT-E treatment?",
@@ -311,7 +360,10 @@
       ],
       "lessonExcerpt": "morning, so I'm probably getting fired\" | | Selective Abstraction | Focusing on one negative detail while ignoring everything else | Receiving 95% positive feedback and only thinking about the 5% criticism | | Dichotomous Thinking | Seeing things as all-or-nothing, black-or-white | \"If I don't get promoted this year, I'm a complete failure\" | | Personalization | Assuming you caused something without evidence | A friend cancels plans and you think \"They must not like spending time with me\" | |...",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Feeding and Eating Disorders: When Food Becomes the Problem"
+      ]
     }
   ]
 }

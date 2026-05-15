@@ -19,7 +19,10 @@
       "lessonExcerpt": "| Flextime | Fixed total hours and core time (e.g., 10am-2pm) but flexible start/end times | Strongest effect on reducing absenteeism; weakest effect on self-rated performance; beneficial for job satisfaction |",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "An I/O psychologist is advising a manufacturing company on implementing a compressed workweek schedule (four 10-hour days). Based on the research literature, what outcome pattern should the psychologist predict?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Compressed Workweek: Fewer days with longer hours (e.g., four 10-hour days) | Strong positive effect on job satisfaction; positive but weaker effect on productivity; unclear effects on absenteeism",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "According to Lewin's three-step model of planned change, what is the primary focus of the 'unfreezing' stage?",
@@ -58,7 +64,10 @@
       "quality_comment": "The question clearly assesses knowledge of foundational change theory, with plausible distractors that test differentiation of model stages.",
       "lessonExcerpt": "**Unfreezing** is about disrupting the status quo. Before any real change can happen, you need to shake people out of their comfortable routines. This means identifying what's keeping things stuck (resistances) and reducing those forces while simultaneously increasing the forces pushing for change.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Lewin's Three-Step Model: The Classic Framework"
+      ]
     },
     {
       "stem": "During which phase of Cummings and Worley’s general model of planned change does the OD consultant work with organization members to reach an agreement on expectations and develop a contractual arrangement?",
@@ -76,7 +85,10 @@
       "quality_comment": "Distractors are distinct phases of planned change, requiring the test taker to have precise knowledge of the timing and activities for each stage.",
       "lessonExcerpt": "### Phase 1: Entering and Contracting\n\nThis is where the organization realizes it has a problem and brings in help. Key activities include:\n\n- Identifying the core issues that need addressing\n- Determining who needs to be involved in solving them\n- Selecting an OD practitioner (consultant)\n- Establishing a collaborative relationship\n- Creating a contract that specifies expectations and working relationships",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The General Model of Planned Change: A Modern Expansion"
+      ]
     },
     {
       "stem": "Which of the following best describes the role of a process consultant in organizational development?",
@@ -94,7 +106,10 @@
       "quality_comment": "The options include common misconceptions about consultation, enhancing the discriminative quality of the question.",
       "lessonExcerpt": "Here's what makes it unique: the process consultant doesn't provide answers or solutions. Instead, they help the organization develop the capacity to diagnose and solve its own problems.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "What is a key characteristic of self-managed work teams (SMWTs)?",
@@ -112,7 +127,10 @@
       "quality_comment": "Clear stem and well-balanced options make this suitable for testing basic knowledge of SMWTs.",
       "lessonExcerpt": "These are groups with complete responsibility and control over their work, including budgets, task assignments, work methods, schedules, hiring, training, and performance appraisal. There's no supervisor in the traditional sense",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "Which technostructural intervention involves radically redesigning core business processes to achieve dramatic improvements in efficiency?",
@@ -130,7 +148,10 @@
       "quality_comment": "Distractors are related OD concepts of similar length and detail, challenging test takers’ knowledge of specific intervention types.",
       "lessonExcerpt": "**Business Process Reengineering (BPR)** involves radically redesigning core organizational processes like financial systems and communication channels. It's not about tweaking. It's about fundamental reconstruction for dramatic efficiency gains.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "Research examining the compressed workweek has found it to have which of the following effects?",
@@ -148,7 +169,10 @@
       "quality_comment": "This question requires recall of nuanced research findings, demanding careful reading of each option’s details.",
       "lessonExcerpt": "| Compressed Workweek | Fewer days with longer hours (e.g., four 10-hour days) | Strong positive effect on job satisfaction; positive but weaker effect on productivity; unclear effects on absenteeism |",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "In Total Quality Management (TQM), which technique involves small groups of employees volunteering to identify quality problems and suggest solutions?",
@@ -166,7 +190,10 @@
       "quality_comment": "Options are all valid organizational techniques, making this a plausible and fair test of knowledge specificity.",
       "lessonExcerpt": "**Quality Circles (QCs)** are small volunteer groups that meet regularly to identify and solve quality and productivity problems.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "What is the primary purpose of a program logic model in organizational program planning?",
@@ -184,7 +211,10 @@
       "quality_comment": "The distractors are plausible but clearly distinct from the definition, helping assess understanding of program logic models.",
       "lessonExcerpt": "Think of it as a roadmap showing how your program will get from identifying a need to achieving results. It's typically displayed as a flowchart with arrows connecting components to show causal relationships.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Program Logic Model: Planning for Success"
+      ]
     },
     {
       "stem": "Which of the following phases is NOT part of the '4D cycle' in Appreciative Inquiry?",
@@ -202,7 +232,10 @@
       "quality_comment": "Options are similar in wording and related to different phases or approaches, effectively testing recognition of model components.",
       "lessonExcerpt": "| Discovery | Appreciate \"what is\" | What are our current strengths? |\n| Dream | Envision \"what could be\" | What's our ideal future? |\n| Design | Determine \"what should be\" | What structures will get us there? |\n| Delivery/Destiny | Sustain \"what will be\" | How do we maintain progress? |",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "Which component of a program logic model includes the human, financial, and organizational resources needed to support the program?",
@@ -220,7 +253,10 @@
       "quality_comment": "Clear definitions make the question straightforward but effective for foundational knowledge assessment.",
       "lessonExcerpt": "**Inputs** are the resources needed to support your program: people, money, organizational support, community resources, data sources, and funding.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Program Logic Model: Planning for Success"
+      ]
     },
     {
       "stem": "Which method involves collecting employee feedback via surveys, sharing the summary results with employees, and collaboratively developing an action plan?",
@@ -238,7 +274,10 @@
       "quality_comment": "All options are valid OD methods, making the question a fair test differentiating their key characteristics.",
       "lessonExcerpt": "1. **Collect data**: Employees at all levels complete surveys about attitudes, perceptions, and opinions regarding work conditions, supervision, policies, and other issues\n2. **Provide feedback**: Results are summarized and shared so everyone understands current strengths and weaknesses\n3. **Develop action plan**: Employees offer recommendations, and management creates a plan",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "In the context of Organizational Development, 'job enrichment' primarily aims to:",
@@ -256,7 +295,10 @@
       "quality_comment": "Distractors represent other work redesign strategies but differ distinctly from job enrichment, encouraging nuanced understanding.",
       "lessonExcerpt": "**Job Enrichment**, originally described by Herzberg in 1966, means designing jobs to include more responsibility, challenge, advancement opportunities, and other motivating factors that increase satisfaction and drive.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "Which aspect of organizational change and development is most directly supported by the use of a program logic model?",
@@ -274,7 +316,10 @@
       "quality_comment": "The question clearly distinguishes the unique role of logic models, avoiding confusion with other organizational development methods.",
       "lessonExcerpt": "Think of it as a roadmap showing how your program will get from identifying a need to achieving results. It's typically displayed as a flowchart with arrows connecting components to show causal relationships.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Program Logic Model: Planning for Success"
+      ]
     },
     {
       "stem": "In the general model of planned change by Cummings and Worley, which phase primarily focuses on assessing organizational readiness to change and planning interventions?",
@@ -292,7 +337,10 @@
       "quality_comment": "Options correspond to distinct phases of change, requiring detailed knowledge of the model’s stages.",
       "lessonExcerpt": "### Phase 3: Planning and Implementing\n\nThis is where things get real. The phase includes several critical activities:\n\n- Assessing readiness for change (are people actually prepared for this?)",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The General Model of Planned Change: A Modern Expansion"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies an outcome in a program logic model for an employee wellness program?",
@@ -310,7 +358,10 @@
       "quality_comment": "The options contrast tangible resources and products with actual benefits, helping test comprehension of evaluation terminology.",
       "lessonExcerpt": "**Outcomes** are the changes or benefits expected from your activities and outputs.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Program Logic Model: Planning for Success"
+      ]
     },
     {
       "stem": "In the context of Lewin's change model, what is the main objective during the 'unfreezing' phase?",
@@ -333,7 +384,10 @@
       ],
       "lessonExcerpt": "**Unfreezing** is about disrupting the status quo. Before any real change can happen, you need to shake people out of their comfortable routines.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Lewin's Three-Step Model: The Classic Framework"
+      ]
     },
     {
       "stem": "Which of the following actions best exemplifies the 'unfreezing' stage in Lewin's model of change?",
@@ -356,7 +410,10 @@
       ],
       "lessonExcerpt": "**Unfreezing** is about disrupting the status quo. Before any real change can happen, you need to shake people out of their comfortable routines. This means identifying what's keeping things stuck (resistances) and reducing those forces while simultaneously increasing the forces pushing for change.",
       "suggestedLesson": "6-how-orgs-change",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Lewin's Three-Step Model: The Classic Framework"
+      ]
     },
     {
       "stem": "An organizational psychologist evaluates the effects of implementing a compressed four-day, 40-hour workweek across a mid-sized logistics company. After six months, she compares pre- and post-implementation data. Based on the empirical literature on alternative work schedules, which pattern of outcomes is she most likely to find?",
@@ -377,7 +434,10 @@
       "lessonExcerpt": "Compressed workweeks improve satisfaction more than productivity. Flextime's biggest benefit is reducing absenteeism, not improving performance ratings.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Methods of Organizational Development: Your Practical Toolkit"
+      ]
     },
     {
       "stem": "What strategy is most effective in reducing racial prejudice according to intergroup contact theory?",
@@ -398,7 +458,8 @@
       "lessonExcerpt": "Job Enrichment**, originally described by Herzberg in 1966, means designing jobs to include more responsibility, challenge, advancement opportunities, and other motivating factors that increase satisfaction and drive. **Alternative Work Schedules** include two main types:",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": null
     }
   ]
 }

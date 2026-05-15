@@ -19,7 +19,10 @@
       "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms... FGAs are effective for positive symptoms of schizophrenia. Things like hallucinations, delusions, and disorganized thinking.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "A psychiatry resident is studying the neurochemical basis of schizophrenia. Which of the following BEST describes the dopamine hypothesis of schizophrenia and its primary supporting evidence?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "A 35-year-old male with chronic schizophrenia has been treated with haloperidol for several years. During a routine appointment, his psychologist observes involuntary, repetitive movements of his tongue and jaw, including lip smacking and chewing motions. These movements were not present at his last visit six months ago. Which medication side effect is MOST consistent with this presentation?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "tardive dyskinesia. This condition typically emerges after long-term use and involves involuntary movements (usually starting with the tongue, face, and jaw, then potentially spreading to limbs and trunk. It's more common in women and older adults, and here's the scary part: it can be irreversible.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "A psychiatrist is considering prescribing an SSRI to a patient diagnosed with bipolar I disorder who is currently experiencing a major depressive episode. The psychiatrist decides to co-prescribe a mood stabilizer. What is the PRIMARY reason for adding the mood stabilizer?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "For bipolar disorder, they're used cautiously. Usually combined with a mood stabilizer because SSRIs alone can trigger manic episodes.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "A psychiatrist switches a patient with schizophrenia from a second-generation antipsychotic to haloperidol due to concerns about metabolic syndrome. Which limitation of this first-generation antipsychotic should the treatment team anticipate?",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "FGAs are effective for positive symptoms of schizophrenia. Things like hallucinations, delusions, and disorganized thinking. However, they're much less effective for negative symptoms (flat affect, social withdrawal, lack of motivation).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "A psychologist is consulting with a psychiatrist about a patient prescribed phenelzine for treatment-resistant depression. Which dietary counseling is MOST essential for this patient to prevent a medical emergency?",
@@ -124,7 +139,10 @@
       "lessonExcerpt": "MAOIs can cause a dangerous spike in blood pressure when combined with certain drugs or foods containing tyramine. Foods to avoid include aged cheeses and meats, soy products, beer, red wine, sauerkraut, fava beans, and overripe bananas.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "A patient presents with winter-onset depression characterized by hypersomnia, increased appetite, weight gain, and carbohydrate cravings. The biological mechanism underlying this seasonal pattern is most strongly associated with:",
@@ -145,7 +163,10 @@
       "lessonExcerpt": "The 'with seasonal pattern' specifier typically applies to winter-onset depression. Symptoms include hypersomnia, overeating, weight gain, and carbohydrate cravings. It's linked to low serotonin and high melatonin levels. Treatment often involves phototherapy (bright light exposure) which suppresses melatonin production.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "A psychiatrist starts a patient on chlorpromazine for psychotic symptoms. When counseling the patient about the MOST commonly reported anticholinergic side effect, the psychiatrist should emphasize:",
@@ -166,7 +187,10 @@
       "lessonExcerpt": "**Anticholinergic Effects** | Low-potency FGAs (chlorpromazine, thioridazine) | Dry mouth, blurred vision, constipation, urinary retention, rapid heart rate",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Which of the following medications is most likely to cause restlessness as a side effect?",
@@ -187,7 +211,10 @@
       "lessonExcerpt": "**Extrapyramidal Side Effects** | High-potency FGAs (haloperidol, fluphenazine) | Parkinsonism (tremor, rigidity), dystonia (muscle spasms), akathisia (restlessness), tardive dyskinesia",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "When prescribing tricyclic antidepressants, which consideration is most critical due to potential side effects?",
@@ -208,7 +235,10 @@
       "lessonExcerpt": "**The Problem:** TCAs are effective but have significant side effects: cardiovascular effects (including dangerous drops in blood pressure when standing), anticholinergic effects, sedation, weight gain, and sexual dysfunction. Secondary amines have fewer side effects than tertiary amines.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "What is the primary mechanism of action for neuroleptics used in treating paranoid symptoms?",
@@ -229,7 +259,11 @@
       "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations",
+        "The Foundation: How These Medications Work"
+      ]
     },
     {
       "stem": "Which dietary restriction is critical for patients taking MAO inhibitors?",
@@ -250,7 +284,10 @@
       "lessonExcerpt": "**MAOI** | Phenelzine, Tranylcypromine | Serotonin, Norepinephrine, Dopamine | Treatment-resistant depression | Hypertensive crisis with tyramine",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which of the following is a common side effect associated with anticholinergic medications?",
@@ -271,7 +308,10 @@
       "lessonExcerpt": "**Anticholinergic Effects** | Low-potency FGAs (chlorpromazine, thioridazine) | Dry mouth, blurred vision, constipation, urinary retention, rapid heart rate",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "According to the dopamine hypothesis, which of the following is believed to contribute to the symptoms of psychotic disorders?",
@@ -292,7 +332,10 @@
       "lessonExcerpt": "**How They Work:** FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "What is a significant risk associated with the use of MAO inhibitors?",
@@ -313,7 +356,10 @@
       "lessonExcerpt": "Symptoms of hypertensive crisis include severe headache, neck pain, rapid heart rate, nausea, sweating, light sensitivity, and confusion. This requires immediate medical attention.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "What is a common side effect of Prozac when used as an antidepressant?",
@@ -334,7 +380,10 @@
       "lessonExcerpt": "**SSRI** | Fluoxetine, Sertraline | Serotonin | Depression, anxiety, OCD | Sexual dysfunction",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which class of medication is commonly used as a first-line treatment for OCD?",
@@ -355,7 +404,10 @@
       "lessonExcerpt": "**What They Treat:** Depression is the primary target, but SSRIs are also used for anxiety disorders (panic, social anxiety, GAD, PTSD), OCD, bulimia, premenstrual dysphoric disorder, and even premature ejaculation. For bipolar disorder, they're used cautiously.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "What is a primary concern regarding the use of methylphenidate in children with ADHD?",
@@ -376,7 +428,8 @@
       "lessonExcerpt": "Let's focus on the most concerning: **tardive dyskinesia**. This condition typically emerges after long-term use and involves involuntary movements (usually starting with the tongue, face, and jaw, then potentially spreading to limbs and trunk.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": null
     },
     {
       "stem": "Agranulocytosis is a serious side effect associated with which class of medications?",
@@ -397,7 +450,10 @@
       "lessonExcerpt": "Not exactly. While third-generation antipsychotics have fewer side effects, second-generation drugs like clozapine are still the gold standard for treatment-resistant schizophrenia. Similarly, older antidepressants like TCAs and MAOIs remain valuable for specific situations.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "What is the primary mechanism of action for drug agonists?",
@@ -418,7 +474,10 @@
       "lessonExcerpt": "- **Agonists** increase neurotransmitter activity (either directly or indirectly) - **Antagonists** decrease neurotransmitter activity by blocking receptors - **Reuptake inhibitors** prevent neurotransmitters from being sucked back up by the sending neuron, leaving more available in the synapse",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "The Foundation: How These Medications Work"
+      ]
     },
     {
       "stem": "Which medication is commonly prescribed for childhood anxiety and OCD?",
@@ -439,7 +498,10 @@
       "lessonExcerpt": "**SSRI** | Fluoxetine, Sertraline | Serotonin | Depression, anxiety, OCD | Sexual dysfunction",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which side effect is commonly associated with antipsychotic medications?",
@@ -460,7 +522,10 @@
       "lessonExcerpt": "SGAs cause fewer extrapyramidal side effects than FGAs, which sounds great. But they introduced a new major concern: metabolic syndrome.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "A psychiatric resident reviews a patient's chart and notes that the patient's hallucinations and delusions responded well to treatment with haloperidol, a first-generation antipsychotic. The resident correctly reasons that the mechanism by which this drug alleviates positive symptoms provides the most direct pharmacological evidence for which neurobiological hypothesis of schizophrenia?",
@@ -481,7 +546,10 @@
       "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Which side effect is most commonly associated with long-term use of high-potency first-generation antipsychotics and is characterized by involuntary, rhythmic movements of the face and limbs?",
@@ -499,7 +567,10 @@
       "quality_comment": "The question is clear and targets a key adverse effect relevant for clinicians, with distractors representing other movement-related side effects making the question challenging.",
       "lessonExcerpt": "Let's focus on the most concerning: **tardive dyskinesia**. This condition typically emerges after long-term use and involves involuntary movements (usually starting with the tongue, face, and jaw, then potentially spreading to limbs and trunk.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Which of the following antipsychotic drugs is FDA-approved specifically for treatment-resistant schizophrenia and requires regular blood monitoring due to risk of neutropenia?",
@@ -517,7 +588,10 @@
       "quality_comment": "The question focuses on a clinically important unique feature of clozapine with options including other well-known antipsychotics, providing good discriminative power.",
       "lessonExcerpt": "**What They Treat:** SGAs treat both positive and negative symptoms of schizophrenia more effectively than FGAs. Some are FDA-approved for bipolar disorder and as add-on treatments for major depression.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Third-generation antipsychotics such as aripiprazole differ from second-generation antipsychotics primarily because they:",
@@ -535,7 +609,10 @@
       "quality_comment": "The question clearly distinguishes a nuanced pharmacological mechanism with distractors serving as common misconceptions, suitable for higher-difficulty items.",
       "lessonExcerpt": "**How They Work:** SGAs are dopamine-serotonin antagonists. They block both dopamine receptors (especially D2, D3, and D4) and serotonin receptors (especially 5-HT2A). This dual action is key to their broader effectiveness.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Which of the following is a common and potentially dangerous side effect of combining an SSRI with an MAOI?",
@@ -553,7 +630,10 @@
       "quality_comment": "The question is clinically relevant and the distractors consist of other severe drug side effects, requiring precise knowledge for correct selection.",
       "lessonExcerpt": "2. **Serotonin Syndrome:** A potentially fatal condition caused by combining SSRIs with other serotonergic drugs (like MAOIs). Signs include extreme agitation, confusion, fever, tremors, seizures, and delirium. This requires immediate medical attention.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "A patient on fluoxetine (an SSRI) abruptly discontinues the medication and experiences headaches, dizziness, mood swings, and flu-like symptoms. This cluster of symptoms is best described as:",
@@ -571,7 +651,10 @@
       "quality_comment": "The question is straightforward, with distractors representing other adverse effects that are less consistent with the symptom cluster described.",
       "lessonExcerpt": "1. **Discontinuation Syndrome:** Happens when someone stops SSRIs abruptly. Symptoms include headaches, dizziness, mood swings, concentration problems, sleep issues, and flu-like feelings.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which antidepressant is least likely to cause sexual dysfunction and has an activating effect due to its inhibition of norepinephrine and dopamine reuptake?",
@@ -589,7 +672,10 @@
       "quality_comment": "Good question differentiating side effect profiles and mechanisms among common antidepressants, with plausible distractors included.",
       "lessonExcerpt": "Each class has distinct mechanisms. SSRIs, SNRIs, and TCAs all block reuptake, but of different neurotransmitters. MAOIs work by preventing breakdown. Bupropion affects dopamine while most others don't. These differences matter for side effects and effectiveness.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which of the following drug classes is contraindicated for patients with uncontrolled hypertension due to its potential to elevate blood pressure?",
@@ -607,7 +693,10 @@
       "quality_comment": "Clear and clinically significant question, with adequate distractors that might confuse due to some overlap in side effect profiles.",
       "lessonExcerpt": "**Key Differences:** SNRIs are similar in effectiveness to SSRIs for most depression, though some evidence suggests they may work better for severe depression. Side effects are comparable to SSRIs, including sexual dysfunction and risk of discontinuation syndrome and serotonin syndrome.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "A patient treated with a tricyclic antidepressant experiences orthostatic hypotension, dry mouth, sedation, and weight gain. These symptoms primarily reflect the:",
@@ -625,7 +714,10 @@
       "quality_comment": "Well-structured question with plausible options, differentiating types of side effects associated with TCAs.",
       "lessonExcerpt": "**The Problem:** TCAs are effective but have significant side effects: cardiovascular effects (including dangerous drops in blood pressure when standing), anticholinergic effects, sedation, weight gain, and sexual dysfunction. Secondary amines have fewer side effects than tertiary amines.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which of the following is a life-threatening adverse effect associated primarily with first-generation antipsychotics and involves muscle rigidity, high fever, and autonomic dysfunction?",
@@ -643,7 +735,10 @@
       "quality_comment": "The question is clear and covers an important safety issue, with distractors being other adverse effects that must be differentiated clinically.",
       "lessonExcerpt": "3. **Monitor for serious complications:** Recognizing early signs of serotonin syndrome, neuroleptic malignant syndrome, or hypertensive crisis could literally save a client's life.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Treatment with monoamine oxidase inhibitors (MAOIs) requires dietary restrictions primarily to prevent which potentially fatal complication?",
@@ -661,7 +756,10 @@
       "quality_comment": "The question is clinically relevant and tests knowledge of safety considerations, with distractors representing other severe drug-induced conditions.",
       "lessonExcerpt": "3. **Monitor for serious complications:** Recognizing early signs of serotonin syndrome, neuroleptic malignant syndrome, or hypertensive crisis could literally save a client's life.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which of the following best describes the mechanism of action of selective serotonin reuptake inhibitors (SSRIs)?",
@@ -679,7 +777,11 @@
       "quality_comment": "Straightforward and factual question with appropriate distractors, ideal for foundational knowledge assessment.",
       "lessonExcerpt": "- **Agonists** increase neurotransmitter activity (either directly or indirectly) - **Antagonists** decrease neurotransmitter activity by blocking receptors - **Reuptake inhibitors** prevent neurotransmitters from being sucked back up by the sending neuron, leaving more available in the synapse",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes",
+        "The Foundation: How These Medications Work"
+      ]
     },
     {
       "stem": "Which antipsychotic generation is associated with the highest risk of metabolic syndrome, including weight gain and insulin resistance?",
@@ -697,7 +799,10 @@
       "quality_comment": "Clear question with plausible answer choices; the distractors are reasonable and test recognition of important clinical differences.",
       "lessonExcerpt": "Second-generation antipsychotics (also called \"atypical\" antipsychotics) represented a major advancement. Key players include:",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Why are SSRIs prescribed cautiously when treating bipolar I disorder without mood stabilizers?",
@@ -715,7 +820,10 @@
       "quality_comment": "The question is clinically relevant, with distractors representing other drug effects, requiring test-takers to understand bipolar treatment nuances.",
       "lessonExcerpt": "Side effects are comparable to SSRIs, including sexual dysfunction and risk of discontinuation syndrome and serotonin syndrome. However, because they affect norepinephrine, SNRIs can elevate blood pressure, something to monitor in patients with hypertension.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which neurotransmitter receptor blockade is primarily responsible for second-generation antipsychotics alleviating negative and cognitive symptoms of schizophrenia?",
@@ -733,7 +841,10 @@
       "quality_comment": "The question highlights a key pharmacological distinction with well-matched distractors requiring solid content knowledge.",
       "lessonExcerpt": "**How They Work:** SGAs are dopamine-serotonin antagonists. They block both dopamine receptors (especially D2, D3, and D4) and serotonin receptors (especially 5-HT2A). This dual action is key to their broader effectiveness.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Which side effect is unique to clozapine among second-generation antipsychotics and necessitates frequent blood monitoring?",
@@ -751,7 +862,10 @@
       "quality_comment": "This item focuses on an important safety consideration with distinct distractors, making it clinically meaningful.",
       "lessonExcerpt": "Clozapine has an additional serious risk: agranulocytosis, a dangerous drop in white blood cells that compromises the immune system. Patients on clozapine need regular blood monitoring. This isn't optional.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "Which side effect, often seen with prolonged use of antipsychotic medications, involves repetitive, involuntary movements, especially in the facial area?",
@@ -774,7 +888,10 @@
       ],
       "lessonExcerpt": "Let's focus on the most concerning: **tardive dyskinesia**. This condition typically emerges after long-term use and involves involuntary movements (usually starting with the tongue, face, and jaw, then potentially spreading to limbs and trunk.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "In the context of psychopharmacology, which of the following conditions is a late-onset movement disorder associated with the use of antipsychotic medications, particularly after extended treatment?",
@@ -797,7 +914,10 @@
       ],
       "lessonExcerpt": "Let's focus on the most concerning: **tardive dyskinesia**. This condition typically emerges after long-term use and involves involuntary movements (usually starting with the tongue, face, and jaw, then potentially spreading to limbs and trunk.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "How is akathisia best defined in the context of movement disorders?",
@@ -818,7 +938,10 @@
       "lessonExcerpt": "**Extrapyramidal Side Effects** | High-potency FGAs (haloperidol, fluphenazine) | Parkinsonism (tremor, rigidity), dystonia (muscle spasms), akathisia (restlessness), tardive dyskinesia",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "A 59-year-old woman with a 25-year history of recurrent major depressive disorder has failed three adequate antidepressant trials, including one augmentation strategy with lithium. She is currently experiencing severe neurovegetative symptoms, mood-congruent delusions of guilt, and passive suicidal ideation with a plan. Her psychiatrist is evaluating electroconvulsive therapy. For which clinical profile does ECT have the strongest empirical support as a primary intervention?",
@@ -839,7 +962,10 @@
       "lessonExcerpt": "What They Treat:** Treatment-resistant depression and atypical depression (characterized by reversed vegetative symptoms like oversleeping, increased appetite, and mood reactivity). **The Major Concern: Hypertensive Crisis",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Clinical Practice Connections"
+      ]
     },
     {
       "stem": "What is a common treatment approach for premature ejaculation?",
@@ -860,7 +986,10 @@
       "lessonExcerpt": "**Common side effects** of benzodiazepines include drowsiness, sedation, weakness, memory impairment, and confusion (especially in older adults).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Antidepressants: Understanding Five Major Classes"
+      ]
     },
     {
       "stem": "Which type of hallucination is most commonly reported by individuals with schizophrenia?",
@@ -881,7 +1010,8 @@
       "lessonExcerpt": "The **halo error** (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following symptoms is most indicative of bipolar disorder in adolescents?",
@@ -902,7 +1032,8 @@
       "lessonExcerpt": "Bipolar disorder is characterized by episodes of extreme mood swings between mania and depression.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": null
     },
     {
       "stem": "Which gender-related factor is considered a prognostic factor in schizophrenia?",
@@ -923,7 +1054,8 @@
       "lessonExcerpt": "Gender differences are significant prognostic factors in schizophrenia.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": null
     },
     {
       "stem": "What is a common treatment outcome for individuals diagnosed with schizoaffective disorder?",
@@ -944,7 +1076,10 @@
       "lessonExcerpt": "Significant improvement in mood symptoms with antipsychotic treatment is common for individuals diagnosed with schizoaffective disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 27
+      "inspirationIndex": 27,
+      "relatedSections": [
+        "Antipsychotics: The Three Generations"
+      ]
     },
     {
       "stem": "A psychologist is reviewing DSM-5 changes for a continuing education course. Regarding the diagnostic significance of bizarre delusions across psychotic disorders, which of the following reflects a key change from DSM-IV-TR to DSM-5?",
@@ -965,7 +1100,8 @@
       "lessonExcerpt": "Delusional Disorder: Highly Focused Beliefs This is different from schizophrenia in important ways: - One or more delusions lasting at least 1 month - Overall functioning is NOT markedly impaired (except for direct effects of the delusion) - No prominent hallucinations, disorganized speech, or negative symptoms",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": null
     }
   ]
 }

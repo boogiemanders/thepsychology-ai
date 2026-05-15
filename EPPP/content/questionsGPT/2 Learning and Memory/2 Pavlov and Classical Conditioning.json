@@ -19,7 +19,10 @@
       "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. This allows conditioning to spread without ever presenting the original US again.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts"
+      ]
     },
     {
       "stem": "A child who was once stung by a bee develops a fear response to bees. Over time, the child also begins to feel anxious when seeing the yellow and black striped pattern on a sports jersey. This expansion of the fear response to new stimuli that were never directly paired with pain is BEST explained by:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "classical conditioning can establish complex emotional responses, physiological reactions, immune responses, and even aspects of social behavior. It's far more pervasive than most people realize.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "A child was bitten by a dog (US) and subsequently developed a fear response (CR) to the sight of dogs (CS). Later, the child begins to feel anxious whenever she sees the leash hanging by the front door, even though the leash was never directly associated with being bitten. The leash had only been associated with seeing dogs. This phenomenon is best described as:",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. This allows conditioning to spread without ever presenting the original US again.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts"
+      ]
     },
     {
       "stem": "John Watson's study of Little Albert demonstrated that after conditioning a fear response to a white rat, the infant also exhibited fear toward a white rabbit, a fur coat, and a Santa Claus mask. This spread of the conditioned fear response to stimuli that were never directly paired with the unconditioned stimulus is an example of:",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "A researcher conditions a dog to salivate to a tone by pairing it with food. After this association is well-established, the researcher begins pairing a flashing light with the tone but never presents food during these trials. Eventually, the flashing light alone elicits salivation. This outcome demonstrates:",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. This allows conditioning to spread without ever presenting the original US again.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts"
+      ]
     },
     {
       "stem": "In classical conditioning, what is the term for a learned fear response to a previously neutral stimulus?",
@@ -124,7 +139,10 @@
       "lessonExcerpt": "Conditioned Response (CR): This is the learned response to the CS.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "The Foundation: Pavlov's Discovery"
+      ]
     },
     {
       "stem": "What is the process called when a conditioned response is elicited by stimuli that are similar to the original conditioned stimulus?",
@@ -145,7 +163,10 @@
       "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the conditioned response.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "In the context of conditioning, how does higher-order conditioning differ from stimulus generalization?",
@@ -166,7 +187,11 @@
       "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts",
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "Which concept describes the process of behavior modification through pairing a neutral stimulus with an unconditioned stimulus?",
@@ -187,7 +212,10 @@
       "lessonExcerpt": "Conditioned Stimulus (CS): After repeated pairings with the US, the neutral stimulus becomes a CS. It now triggers a response on its own.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "The Foundation: Pavlov's Discovery"
+      ]
     },
     {
       "stem": "What does stimulus generalization in traumatic experiences refer to?",
@@ -208,7 +236,10 @@
       "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the conditioned response.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "What is the primary mechanism by which classical extinction occurs in classical conditioning?",
@@ -229,7 +260,10 @@
       "lessonExcerpt": "This is crucial for therapy. It's the basis for exposure treatments. Repeatedly presenting the feared stimulus (CS) without the feared outcome (US) until the fear response (CR) extinguishes.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "A combat veteran was involved in an explosion during deployment and now experiences a strong fear response whenever he hears a car backfire. After several months of treatment, he reports that he also experiences notable anxiety when he hears a truck door slam loudly, a sound never directly paired with the original traumatic event. Which classical conditioning process best explains his anxiety to the truck door slam?",
@@ -250,7 +284,10 @@
       "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the [conditioned response].",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "During a child's first dental appointment, the sound of the drill (CS1) was paired with the pain of a cavity filling (US), and the child developed a fear response (CR) to the drill sound. On subsequent visits, the dental receptionist greets the child by name before escorting her to the operatory. After several such visits, the child begins showing measurable fear when she hears the receptionist's voice on the phone, even though the receptionist has never been present during any painful procedure. This scenario best illustrates:",
@@ -271,7 +308,10 @@
       "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. After a bell becomes a CS that produces salivation, you can pair that bell with a light. Eventually, the light alone will produce salivation.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts"
+      ]
     },
     {
       "stem": "A client who completed an inpatient substance use treatment program relapses after walking past the bar where he used to drink regularly. The sight of the bar triggered intense cravings that overwhelmed his coping skills. This relapse is best explained by which principle?",
@@ -292,7 +332,10 @@
       "lessonExcerpt": "Drug cues (needles, specific locations, certain people) become CSs that trigger cravings and physiological preparation for drug use. This is why changing environments can be crucial in early recovery.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Real-World Applications in Clinical Practice"
+      ]
     },
     {
       "stem": "A client was classically conditioned to fear elevators after being trapped in one during a power outage. A therapist treats this phobia by having the client repeatedly ride elevators without any aversive event occurring, until the fear response diminishes. This procedure is best described as:",
@@ -313,7 +356,10 @@
       "lessonExcerpt": "if you repeatedly present the CS without the US, the CR gradually disappears. This is classical extinction.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "In classical conditioning, which procedure is considered most effective for acquiring a conditioned response?",
@@ -331,7 +377,10 @@
       "quality_comment": "The question clearly distinguishes between different conditioning paradigms with plausible distractors, aiding test-takers in distinguishing procedural differences.",
       "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap) | MOST EFFECTIVE, especially with about 0.5 second delay",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Timing Is Everything: The Four Conditioning Procedures"
+      ]
     },
     {
       "stem": "Which phenomenon occurs when a previously extinguished conditioned response (CR) reappears after a rest period without further conditioning?",
@@ -349,7 +398,10 @@
       "quality_comment": "This straightforward question effectively distinguishes key classical conditioning terms, with distractors that are often confused concepts, making it a solid foundational question.",
       "lessonExcerpt": "Even after a CR appears completely extinguished, if you wait a while and then present the CS again, the CR often returns. Though in a weaker form. Pavlov called this spontaneous recovery.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "In Pavlov's classical conditioning studies, the phenomenon where a dog salivates in response to tones similar but not identical to the conditioned stimulus tone is called:",
@@ -367,7 +419,10 @@
       "quality_comment": "The question targets understanding of different stimulus-response phenomena in classical conditioning with well-balanced answer choices.",
       "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "What is an example of conditioned inhibition in classical conditioning?",
@@ -385,7 +440,10 @@
       "quality_comment": "This question requires specific knowledge of conditioned inhibition and differentiates it carefully from related concepts like compound conditioning, making it challenging.",
       "lessonExcerpt": "After establishing that a ringing bell (CS+) produces salivation, you repeatedly present the bell together with a blinking light (CS-) WITHOUT the meat powder. The light becomes a conditioned inhibitor.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts"
+      ]
     },
     {
       "stem": "During compound conditioning, what occurs in the blocking effect?",
@@ -403,7 +461,10 @@
       "quality_comment": "The question is well-constructed with closely related distractors, requiring detailed knowledge of compound conditioning effects to answer correctly.",
       "lessonExcerpt": "Blocking happens when you first establish one CS, then try to add a second stimulus.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts"
+      ]
     },
     {
       "stem": "What best describes higher-order conditioning?",
@@ -421,7 +482,10 @@
       "quality_comment": "Options are clear and concise with strong distractors that test discrimination among stages of conditioning, fitting EPPP exam style.",
       "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts"
+      ]
     },
     {
       "stem": "In Pavlov's stimulus discrimination studies, dogs became extremely agitated and aggressive when discrimination was difficult. This pattern of behavior is known as:",
@@ -439,7 +503,10 @@
       "quality_comment": "This question taps into less commonly tested but important classical conditioning research, backed by plausible distractors aiding discrimination.",
       "lessonExcerpt": "Pavlov discovered something troubling: when discriminations became too difficult (like distinguishing a circle from a very similar ellipse), dogs developed what he called experimental neurosis.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "How does overshadowing affect classical conditioning when two neutral stimuli are presented together before the US?",
@@ -457,7 +524,10 @@
       "quality_comment": "Distractors are plausible and concise, and the question targets a nuanced concept, appropriate for mid-level challenge.",
       "lessonExcerpt": "Overshadowing occurs when two neutral stimuli are presented together from the beginning, right before the US. Both stimuli are present during conditioning, but the more salient (noticeable, intense) stimulus becomes a strong CS while the less salient stimulus produces little or no CR",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced Classical Conditioning Concepts"
+      ]
     },
     {
       "stem": "Which classical conditioning term refers to the reduction or elimination of a conditioned response when the conditioned stimulus is repeatedly presented without the unconditioned stimulus?",
@@ -475,7 +545,10 @@
       "quality_comment": "This is a foundational question suitable for early-stage mastery testing, with clearly distinguishable options.",
       "lessonExcerpt": "Once a CR is established, you might think it's permanent. But if you repeatedly present the CS without the US, the CR gradually disappears. This is classical extinction.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "In the Little Albert experiment, the infant exhibited fear responses not only to the white rat (CS) but also to other white furry objects. This phenomenon exemplifies:",
@@ -493,7 +566,10 @@
       "quality_comment": "Includes a classic applied example that enhances the relevance and appeal of the question, with carefully chosen distractors.",
       "lessonExcerpt": "Albert's fear didn't stop there. He also became afraid of a white rabbit, a fur coat, and even a Santa Claus mask. All these white, furry objects were similar enough to the original CS that they triggered the fear response.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "Which classical conditioning phenomenon illustrates that the conditioned response (CR) is typically weaker than the unconditioned response (UR) and increases with repeated CS-US pairings?",
@@ -511,7 +587,10 @@
       "quality_comment": "Good item focusing on response magnitude, with distractors addressing other classical conditioning phenomena, supporting comprehension of response dynamics.",
       "lessonExcerpt": "Conditioned Response (CR): This is the learned response to the CS. Here's something important: the CR is always weaker than the UR.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Pavlov's Discovery"
+      ]
     },
     {
       "stem": "Why is backward conditioning generally considered ineffective in classical conditioning procedures?",
@@ -529,7 +608,10 @@
       "quality_comment": "The distractors are plausible alternative procedures, helping assess grasp of temporal factors affecting conditioning efficacy.",
       "lessonExcerpt": "Backward Conditioning | US comes before CS | Usually ineffective - When you present the US before the CS (backward conditioning), there's no predictive relationship.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Timing Is Everything: The Four Conditioning Procedures"
+      ]
     },
     {
       "stem": "What is the optimal time interval between the conditioned stimulus (CS) and unconditioned stimulus (US) presentation during delay conditioning?",
@@ -547,7 +629,10 @@
       "quality_comment": "This focused question reinforces knowledge of timing critical to optimal conditioning, balancing specificity with plausible distractors.",
       "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap) | MOST EFFECTIVE, especially with about 0.5 second delay",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Timing Is Everything: The Four Conditioning Procedures"
+      ]
     },
     {
       "stem": "Which of the following conditioning procedures is most likely to lead to a strong association between the conditioned stimulus (CS) and the unconditioned stimulus (US)?",
@@ -570,7 +655,10 @@
       ],
       "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap) | MOST EFFECTIVE",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Timing Is Everything: The Four Conditioning Procedures"
+      ]
     },
     {
       "stem": "In a study on classical conditioning, a researcher uses a procedure where the conditioned stimulus (CS) is presented continuously while the unconditioned stimulus (US) is introduced shortly after the CS begins. What is this conditioning method called?",
@@ -593,7 +681,10 @@
       ],
       "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap)",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Timing Is Everything: The Four Conditioning Procedures"
+      ]
     },
     {
       "stem": "A sex therapist applies aversive counterconditioning to treat a client whose shoe fetish is causing marked personal distress. The therapist repeatedly and systematically pairs visual presentations of the fetish object with a highly aversive stimulus to extinguish the problematic arousal response. In classical conditioning terminology, the fetish object in this procedure is correctly identified as the:",
@@ -614,7 +705,11 @@
       "lessonExcerpt": "Unconditioned Stimulus (US)**: This is something that naturally, automatically triggers a response without any learning required. In Pavlov's studies, meat powder was the US.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 30
+      "inspirationIndex": 30,
+      "relatedSections": [
+        "The Foundation: Pavlov's Discovery",
+        "Real-World Applications in Clinical Practice"
+      ]
     },
     {
       "stem": "What role does classical conditioning play in the development of attitudes as conditioned responses?",
@@ -635,7 +730,10 @@
       "lessonExcerpt": "Understanding classical conditioning isn't just about passing the EPPP. It's about recognizing one of the most powerful ways our nervous system learns.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Why Classical Conditioning Matters for Your Practice"
+      ]
     },
     {
       "stem": "A therapist is conducting aversion therapy with a client who has a fetishistic disorder. In this counterconditioning paradigm, the fetish object (e.g., a specific article of clothing) is repeatedly presented immediately before an aversive stimulus such as a mild electric shock. In classical conditioning terms, the fetish object serves as the:",
@@ -656,7 +754,11 @@
       "lessonExcerpt": "Conditioned Stimulus (CS): Stimuli associated with the problem behavior (alcohol, cigarettes, fetish object). Unconditioned Stimulus (US): Something naturally unpleasant (electric shock, nausea-inducing drug, foul odor).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 30
+      "inspirationIndex": 30,
+      "relatedSections": [
+        "Real-World Applications in Clinical Practice",
+        "The Foundation: Pavlov's Discovery"
+      ]
     },
     {
       "stem": "In aversion therapy, the fetish object serves as which of the following in classical conditioning terms?",
@@ -674,7 +776,11 @@
       "quality_comment": "This is a straightforward, well-constructed question testing fundamental classical conditioning concepts in treatment context.",
       "lessonExcerpt": "Conditioned Stimulus (CS): Stimuli associated with the problem behavior (alcohol, cigarettes, fetish object)",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Real-World Applications in Clinical Practice",
+        "The Foundation: Pavlov's Discovery"
+      ]
     },
     {
       "stem": "Which of the following elements is NOT associated with operant conditioning?",
@@ -695,7 +801,8 @@
       "lessonExcerpt": "Time out (formally \"time out from positive reinforcement\") removes access to ALL reinforcement for a brief period.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": null
     },
     {
       "stem": "Masters and Johnson's sensate focus technique for treating sexual dysfunctions is theoretically classified as which type of intervention?",
@@ -716,7 +823,10 @@
       "lessonExcerpt": "Sensate Focus (developed by Masters and Johnson in 1970) is the gold standard behavioral intervention. It works by gradually rebuilding intimacy while removing performance pressure.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Real-World Applications in Clinical Practice"
+      ]
     },
     {
       "stem": "A client with alcohol use disorder reports experiencing intense cravings whenever he drives past the bar where he used to drink regularly. From a behavioral perspective, this craving response is BEST explained by:",
@@ -737,7 +847,10 @@
       "lessonExcerpt": "With addiction, certain cues become powerfully associated with use. The smell of cigarette smoke in a bar, the sight of friends you used to drink with, even the specific route home that passes your dealer's corner. These become conditioned stimuli that trigger cravings and use.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Real-World Applications in Clinical Practice"
+      ]
     },
     {
       "stem": "A client developed a conditioned fear of elevators after being trapped in one during a power outage. To extinguish this classically conditioned fear response, the therapist should:",
@@ -758,7 +871,10 @@
       "lessonExcerpt": "Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response... the trigger no longer leads to the old reaction because you've interrupted that pathway enough times.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     },
     {
       "stem": "A client successfully completed exposure-based therapy for dog phobia two years ago, reporting no fear during her final session. She encounters a dog unexpectedly at a park and experiences a strong fear response. Her therapist explains this is a predictable phenomenon rooted in classical conditioning principles. Which mechanism best explains what has occurred?",
@@ -779,7 +895,10 @@
       "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "What Happens After Conditioning: Important Processes"
+      ]
     }
   ]
 }

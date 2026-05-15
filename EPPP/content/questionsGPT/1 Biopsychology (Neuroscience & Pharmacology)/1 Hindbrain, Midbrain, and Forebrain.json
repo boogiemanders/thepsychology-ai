@@ -19,7 +19,10 @@
       "lessonExcerpt": "Located in the hypothalamus, the SCN regulates your daily sleep-wake patterns (circadian rhythms). When you're studying sleep disorders or questions about jet lag and shift work, remember the SCN is your body's timekeeper.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "A developmental neuropsychologist is explaining to new parents why certain reflexes are present at birth while higher-order cognitive functions develop later. Which of the following best describes the pattern of brain maturation at birth?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "The brain develops from the bottom up, both evolutionally and individually. The hindbrain sits right above your spinal cord, the oldest, most primitive part. The midbrain connects everything in the middle. The forebrain caps it all off with both subcortical structures (buried beneath the surface) and the cerebral cortex.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Three-Story Brain: Location Matters"
+      ]
     },
     {
       "stem": "A neurologist is evaluating a patient who sustained damage to the thalamus following a stroke. Based on knowledge of thalamic function, which of the following deficits would be MOST expected?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "The RAS is your consciousness control center. It: - Mediates consciousness and arousal - Controls the sleep-wake cycle - Alerts your cerebral cortex that sensory information is incoming - Regulates muscle tone and coordinates eye movements",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "A child who received radiation treatment for a posterior fossa brain tumor is referred for neuropsychological evaluation. Given that the cerebellum was in the radiation field, which cognitive domain would you MOST expect to be affected, beyond motor coordination?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "The cerebellum also contributes to: Attention, Language processing, Understanding where things are in space (visuospatial abilities)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "A researcher is studying the physiological stress response and wants to measure a biomarker that directly reflects activation of the hypothalamic-pituitary-adrenal (HPA) axis. Which of the following would be the most appropriate biomarker to assess?",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "The hypothalamus initiates the stress response by releasing hormones that trigger the pituitary, which triggers the adrenal glands, the HPA (hypothalamic-pituitary-adrenal) axis... Elevated oxytocin levels inhibit HPA axis responses to stress, reducing blood pressure, heart rate, and cortisol.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "A researcher is investigating the brain structure responsible for maintaining the body's 24-hour sleep-wake rhythm. Which of the following structures, located within the hypothalamus, serves as the body's primary biological clock regulating circadian patterns?",
@@ -124,7 +139,10 @@
       "lessonExcerpt": "Located in the hypothalamus, the SCN regulates your daily sleep-wake patterns (circadian rhythms). When you're studying sleep disorders or questions about jet lag and shift work, remember the SCN is your body's timekeeper.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "A patient presents with unsteady gait, slurred speech, jerky eye movements, and difficulty executing previously mastered guitar fingering patterns—despite being able to verbally describe the correct finger positions. Neuropsychological testing reveals intact declarative memory but impaired procedural memory. Damage to which brain structure BEST accounts for this clinical presentation?",
@@ -145,7 +163,10 @@
       "lessonExcerpt": "A patient presents with balance problems, slurred speech, and difficulty with previously mastered motor skills (like playing guitar). They can verbally explain the finger positions but can't execute them. Neuropsych testing reveals intact declarative memory but impaired procedural memory. You're looking at cerebellar damage, not cortical dementia.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "What is the primary role of the cerebellum in motor coordination?",
@@ -166,7 +187,10 @@
       "lessonExcerpt": "The cerebellum coordinates voluntary movements and maintains posture.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "Which brain structures are primarily involved in the regulation of aggression?",
@@ -187,7 +211,10 @@
       "lessonExcerpt": "The limbic system traditionally includes the amygdala, cingulate cortex, and hippocampus. However, brain imaging has revealed extensive connections with other structures, so there's no complete consensus anymore. Some definitions include the hypothalamus and thalamus too.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "What neurological structure is primarily associated with the regulation of tics and OCD?",
@@ -208,7 +235,11 @@
       "lessonExcerpt": "2. **Match severity to location:** Life-threatening = brainstem (medulla especially). Movement = cerebellum, basal ganglia, or substantia nigra. Memory = hippocampus or thalamus. Emotion = amygdala or limbic system.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation",
+        "Midbrain: The Alert System and Movement Moderator"
+      ]
     },
     {
       "stem": "A patient presents with severely disrupted sleep-wake cycles following a lesion in the anterior hypothalamus. Neuroimaging confirms damage to a small paired structure in this region that synchronizes biological rhythms to the 24-hour light-dark cycle by receiving direct retinal input. Which structure has been damaged?",
@@ -229,7 +260,10 @@
       "lessonExcerpt": "Located in the hypothalamus, the SCN regulates your daily sleep-wake patterns (circadian rhythms). When you're studying sleep disorders or questions about jet lag and shift work, remember the SCN is your body's timekeeper.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "A patient sustains an infarct involving the thalamus and subsequently presents with contralateral loss of touch, pain, and temperature sensation, despite intact primary somatosensory cortex on neuroimaging. The neurologist explains that the deficit results from disruption of the thalamus's principal role in sensory processing. Which function best accounts for this presentation?",
@@ -250,7 +284,10 @@
       "lessonExcerpt": "The thalamus plays a role in memory processing, and damage here can cause both anterograde amnesia (inability to form new memories) and retrograde amnesia (loss of past memories). [Sensory relay function is covered in the full forebrain section beyond the provided excerpt]",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "A 71-year-old client is referred for neuropsychological evaluation. He presents with a resting tremor, cogwheel muscle rigidity, bradykinesia, and a shuffling gait. His neurologist has confirmed a diagnosis of Parkinson's disease. The motor symptoms of this disorder result primarily from the progressive loss of dopaminergic neurons in which brain structure?",
@@ -271,7 +308,10 @@
       "lessonExcerpt": "The disease destroys cells in the caudate nucleus and putamen (parts of the basal ganglia), plus the cerebral cortex, cerebellum, and thalamus. [Note: this quote describes Huntington's disease; the substantia nigra section in the midbrain was present but truncated in the lesson file.]",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Midbrain: The Alert System and Movement Moderator"
+      ]
     },
     {
       "stem": "A school psychologist is conducting a cognitive follow-up evaluation of a 10-year-old child who received posterior fossa cranial radiation 18 months ago to treat a medulloblastoma affecting the cerebellum. Based on the known cognitive contributions of the cerebellum, which pattern of neuropsychological deficits would MOST likely be observed as a direct consequence of cerebellar radiation damage?",
@@ -292,7 +332,10 @@
       "lessonExcerpt": "The cerebellum also contributes to: Attention, Language processing, Understanding where things are in space (visuospatial abilities).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "Damage to which hindbrain structure is MOST likely to result in life-threatening disruptions to respiration, heart rate, and blood pressure?",
@@ -310,7 +353,10 @@
       "quality_comment": "The question is clear and the distractors are neuroanatomically plausible, enhancing discrimination of knowledge on brainstem function.",
       "lessonExcerpt": "The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "Which brain structure is primarily responsible for coordinating voluntary movement and maintaining balance, and damage to it often produces ataxia?",
@@ -328,7 +374,10 @@
       "quality_comment": "Distractors are anatomically and functionally related to movement and homeostasis, making the question straightforward yet instructive.",
       "lessonExcerpt": "Most students remember \"cerebellum = balance and coordination,\" but that's only scratching the surface. Yes, it coordinates voluntary movements and maintains posture. Yes, damage causes **ataxia** (unsteady, clumsy movements).",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "Stimulation of which midbrain structure is MOST associated with mediating arousal and the sleep/wake cycle?",
@@ -346,7 +395,10 @@
       "quality_comment": "Options are all brain structures involved in motor or sensory integration, making the correct answer distinguishable through understanding of arousal systems.",
       "lessonExcerpt": "The reticular formation is a network of neurons extending from the medulla into the midbrain. Within it lies the **reticular activating system (RAS)**. Also called the ascending reticular activating system (ARAS).",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Midbrain: The Alert System and Movement Moderator"
+      ]
     },
     {
       "stem": "Parkinson’s disease symptoms such as tremors and rigidity result primarily from degeneration in which midbrain structure?",
@@ -364,7 +416,10 @@
       "quality_comment": "Distractors are functionally relevant but serve as effective foil to test understanding of Parkinson’s neurobiology.",
       "lessonExcerpt": "The substantia nigra plays a role in reward-seeking and drug addiction, but its claim to fame is its connection to motor control through the basal ganglia. The substantia nigra produces dopamine, and when its dopamine-producing cells die off, you get **Parkinson's disease**.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Midbrain: The Alert System and Movement Moderator"
+      ]
     },
     {
       "stem": "Which subcortical forebrain structure regulates homeostasis including temperature, hunger, thirst, and links the nervous and endocrine systems?",
@@ -382,7 +437,10 @@
       "quality_comment": "Clear stem and plausible options related to limbic and diencephalic structures make this a solid recall question.",
       "lessonExcerpt": "- **Hypothalamus = homeostasis hub:** Regulates body temperature, hunger, thirst, stress response, circadian rhythms (SCN), and controls pituitary function.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Electrical stimulation of the hypothalamus can elicit emotional responses such as rage or laughter, indicating its involvement in:",
@@ -400,7 +458,10 @@
       "quality_comment": "Distractors address other brain functions but are distinct enough to require applied knowledge of emotional neuroanatomy.",
       "lessonExcerpt": "Additional | Emotions, memory (via mammillary bodies), circadian rhythms (via SCN)",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Which subcortical brain structure acts as a sensory relay station, transmitting all sensory information to the cerebral cortex except olfactory stimuli?",
@@ -418,7 +479,10 @@
       "quality_comment": "Options are functionally related structures making the question appropriate for testing differentiation of sensory processing roles.",
       "lessonExcerpt": "Beyond sensory relay, the thalamus contributes to: - Coordination of sensory and motor functioning - Language and speech - Declarative memory - Pain perception",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Confabulation, often seen in Korsakoff syndrome, is related to damage in the thalamus and which associated structure?",
@@ -436,7 +500,10 @@
       "quality_comment": "The inclusion of less commonly recalled structures like mammillary bodies adds challenge appropriate for higher-level knowledge assessment.",
       "lessonExcerpt": "3. **Look for combination symptoms:** Multiple symptom types help pinpoint specific structures. Ataxia + memory problems = cerebellum. Memory + confabulation + alcoholism = Korsakoff (thalamus + mammillary bodies). Fear issues + can't recognize faces = amygdala.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "The basal ganglia are primarily involved in:",
@@ -454,7 +521,10 @@
       "quality_comment": "Distractors represent other brain functions, increasing the need to distinguish basal ganglia involvement accurately.",
       "lessonExcerpt": "**Functions:** - Initiating and controlling voluntary movements - Procedural and habit learning - Cognitive functions (attention, decision-making) - Emotions",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Damage to the amygdala is MOST likely to affect a person's ability to:",
@@ -472,7 +542,10 @@
       "quality_comment": "Distractors are plausible functions of other brain areas, requiring examinees to understand the amygdala’s emotional role.",
       "lessonExcerpt": "Kluver-Bucy Syndrome:** Damage to both sides of the amygdala (bilateral damage) (usually including hippocampus and temporal lobes) causes: - Hyperphagia (excessive eating) - Hyperorality (examining objects by mouth) - Reduced fear - Hypersexuality - Visual agnosia/psychic blindness (can see but can'",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Which of the following symptoms would MOST likely occur with damage to the cingulate cortex?",
@@ -490,7 +563,10 @@
       "quality_comment": "The options are clinically relevant and make examinees differentiate sensory versus affective pain processing.",
       "lessonExcerpt": "The cingulate cortex contributes to motivation, memory, and emotions, particularly **emotional reactions to pain**. People with cingulate cortex damage can feel pain but aren't emotionally distressed by it. They'll tell you \"yes, it hurts\" but won't seem bothered.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Which hormone, produced by the hypothalamus and released via the posterior pituitary, plays a critical role in social bonding and the stress response?",
@@ -508,7 +584,10 @@
       "quality_comment": "Plausible hormonal distractors related to stress and reproduction increase the question's discriminative value.",
       "lessonExcerpt": "**1. Anterior pituitary:** The hypothalamus produces releasing and inhibiting hormones. For example, it secretes gonadotropin-releasing hormone (GnRH), which tells the anterior pituitary to release hormones that regulate the testes and ovaries.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Kluver-Bucy syndrome, characterized by hyperorality, hypersexuality, and reduced fear, results from bilateral lesioning involving the amygdala and which other structure?",
@@ -526,7 +605,10 @@
       "quality_comment": "The inclusion of combined lesion sites enhances complexity appropriate for advanced exam takers.",
       "lessonExcerpt": "Kluver-Bucy Syndrome:** Damage to both sides of the amygdala (bilateral damage) (usually including hippocampus and temporal lobes) causes: - Hyperphagia (excessive eating) - Hyperorality (examining objects by mouth) - Reduced fear - Hypersexuality - Visual agnosia/psychic blindness (can see but can'",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Which structure in the brainstem plays a crucial role in coordinating eye movements and regulating muscle tone?",
@@ -544,7 +626,11 @@
       "quality_comment": "Options are anatomically relevant brainstem structures, requiring careful consideration of function.",
       "lessonExcerpt": "The reticular formation is a network of neurons extending from the medulla into the midbrain. Within it lies the **reticular activating system (RAS)**. Also called the ascending reticular activating system (ARAS).",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Midbrain: The Alert System and Movement Moderator",
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "The suprachiasmatic nucleus (SCN), located within the hypothalamus, is primarily responsible for:",
@@ -562,7 +648,10 @@
       "quality_comment": "Distractors represent brain functions controlled by other regions, promoting discrimination based on specialized hypothalamic roles.",
       "lessonExcerpt": "Located in the hypothalamus, the SCN regulates your daily sleep-wake patterns (circadian rhythms). When you're studying sleep disorders or questions about jet lag and shift work, remember the SCN is your body's timekeeper.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Which hypothalamic hormone stimulates the anterior pituitary to release gonadotropins that regulate reproductive function?",
@@ -580,7 +669,10 @@
       "quality_comment": "All options are hormones, requiring examinees to distinguish their specific neuroendocrine origins and functions.",
       "lessonExcerpt": "**1. Anterior pituitary:** The hypothalamus produces releasing and inhibiting hormones. For example, it secretes gonadotropin-releasing hormone (GnRH), which tells the anterior pituitary to release hormones that regulate the testes and ovaries.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Oxytocin released by the posterior pituitary influences social behavior. Which of the following is NOT a reported effect of oxytocin based on research findings?",
@@ -598,7 +690,10 @@
       "quality_comment": "Plausible alternatives and nuanced interpretation of research findings enhance the question's discrimination.",
       "lessonExcerpt": "**Stress reduction:** Elevated oxytocin levels inhibit HPA axis responses to stress, reducing blood pressure, heart rate, and cortisol. {{M}}It's like having a friend who can talk you down when you're spiraling. Oxytocin literally calms your stress response system.{{/M}}",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "Which structure in the hindbrain is primarily responsible for regulating balance and coordination of voluntary movements?",
@@ -621,7 +716,10 @@
       ],
       "lessonExcerpt": "Most students remember \"cerebellum = balance and coordination,\" but that's only scratching the surface. Yes, it coordinates voluntary movements and maintains posture.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "In the context of brain injury, which hindbrain structure is most likely to lead to severe disruptions in arousal and alertness when damaged?",
@@ -644,7 +742,11 @@
       ],
       "lessonExcerpt": "The reticular formation is a network of neurons extending from the medulla into the midbrain. Within it lies the **reticular activating system (RAS)**. Also called the ascending reticular activating system (ARAS).",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Midbrain: The Alert System and Movement Moderator",
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "What condition is characterized by Wernicke's encephalopathy due to thiamine deficiency?",
@@ -665,7 +767,10 @@
       "lessonExcerpt": "**EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome. The exam might present a case of chronic alcoholism with severe memory problems and confabulation.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "A health psychologist is designing a study to assess biological markers of chronic stress in nurses working in high-acuity ICU settings. To capture HPA axis activation associated with prolonged occupational stress, the researcher selects a salivary biomarker secreted by the adrenal cortex in response to CRH and ACTH signaling. Which biomarker is MOST appropriate for this purpose?",
@@ -686,7 +791,10 @@
       "lessonExcerpt": "The hypothalamus initiates the stress response by releasing hormones that trigger the pituitary, which triggers the adrenal glands, the HPA (hypothalamic-pituitary-adrenal) axis. This is fundamental for understanding trauma responses, chronic stress effects, and conditions like PTSD and depression.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     },
     {
       "stem": "During a neuropsychological evaluation, a psychologist reviews medical records noting that a patient experienced both tachycardia and bradycardia during stimulant intoxication. These terms refer, respectively, to:",
@@ -707,7 +815,10 @@
       "lessonExcerpt": "The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Hindbrain: The Survival Center"
+      ]
     },
     {
       "stem": "Damage to the left hemisphere areas of the cerebral cortex involved in emotion typically results in which reaction?",
@@ -725,7 +836,8 @@
       "quality_comment": "Distractors are plausible but incorrect, making this question effective for assessing neurological knowledge relevant to emotion.",
       "lessonExcerpt": "Damage here can be catastrophic. We're talking respiratory failure, coma, or death.",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Which structures are primarily involved in the secretion of hormones in the endocrine system?",
@@ -746,7 +858,10 @@
       "lessonExcerpt": "Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Subcortical Forebrain: Where Emotion Meets Regulation"
+      ]
     }
   ]
 }

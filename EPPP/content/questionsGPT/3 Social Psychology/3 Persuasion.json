@@ -19,7 +19,11 @@
       "lessonExcerpt": "Fear appeals work best when they're high in fear BUT (and this is crucial) they must also include an efficacy message... Three ingredients make fear appeals effective: 1. High fear arousal 2. Efficacy message 3. Clear risk description.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Message Factors: How You Say It Matters",
+        "Communicator Factors: Who's Doing the Persuading?"
+      ]
     },
     {
       "stem": "According to the elaboration likelihood model, which route to persuasion is most effective when individuals are motivated and able to process information?",
@@ -40,7 +44,8 @@
       "lessonExcerpt": "Understanding what makes messages stick – and what makes people resist them – isn't just academic knowledge.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": null
     },
     {
       "stem": "What technique can increase compliance by making a request seem less daunting through audience engagement?",
@@ -61,7 +66,8 @@
       "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": null
     },
     {
       "stem": "Which persuasive strategy involves addressing a person's resistance to change by acknowledging their concerns?",
@@ -82,7 +88,10 @@
       "lessonExcerpt": "Omega strategies take a different approach. Instead of adding more pull, they reduce the push-back.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "The Two Big Strategies: Alpha and Omega"
+      ]
     },
     {
       "stem": "Which strategy in persuasion aims to overcome resistance by increasing approach forces such as maximizing the strength of arguments and using consensus information?",
@@ -100,7 +109,10 @@
       "quality_comment": "Clear stem with plausible distractors, though use of Greek letter names might slightly cue the test takers; otherwise well-constructed.",
       "lessonExcerpt": "Alpha strategies focus on increasing the attractive pull toward change. ... Alpha strategies pile on the reasons why change is desirable.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Two Big Strategies: Alpha and Omega"
+      ]
     },
     {
       "stem": "What is the 'sleeper effect' in the context of communicator credibility in persuasion?",
@@ -118,7 +130,10 @@
       "quality_comment": "The alternatives are subtle and plausible, encouraging critical thinking about source issues in persuasion.",
       "lessonExcerpt": "the impact of credibility fades over time. This phenomenon is called the sleeper effect. ... People remember the message but forget who said it.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Communicator Factors: Who's Doing the Persuading?"
+      ]
     },
     {
       "stem": "Regarding message discrepancy and communicator credibility, which pattern best describes the relationship between amount of attitude change and message discrepancy when the communicator is high in credibility?",
@@ -136,7 +151,11 @@
       "quality_comment": "Offers well-balanced options and tests understanding of a nuanced interaction effect in persuasion research.",
       "lessonExcerpt": "for high-credible sources, more discrepancy actually leads to more attitude change – a linear relationship.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Message Factors: How You Say It Matters",
+        "Communicator Factors: Who's Doing the Persuading?"
+      ]
     },
     {
       "stem": "When two opposing sides of an argument are presented back-to-back and attitudes are assessed after a delay, which effect is most likely to be observed?",
@@ -154,7 +173,10 @@
       "quality_comment": "Clear distinction between primacy and recency effects; distractors are plausible and test knowledge well.",
       "lessonExcerpt": "Primacy effect occurs when: Both sides are presented back-to-back; Then time passes before measuring attitudes; Result: The first side wins",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Message Factors: How You Say It Matters"
+      ]
     },
     {
       "stem": "According to Tannenbaum et al. (2015), fear appeals are most effective in changing attitudes when they include all of the following EXCEPT:",
@@ -172,7 +194,10 @@
       "quality_comment": "Well-crafted question focusing on specifics of fear appeals with plausible but incorrect distractor emphasizing minimization.",
       "lessonExcerpt": "Three ingredients make fear appeals effective: 1. High fear arousal: Don't hold back on describing the negative consequences 2. Efficacy message: Assure people they're capable of taking action AND that the action will work 3. Clear risk description: Spell out what happens if no action is taken",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Message Factors: How You Say It Matters"
+      ]
     },
     {
       "stem": "Which recipient characteristic shows an inverted-U shaped relationship with susceptibility to persuasion?",
@@ -190,7 +215,10 @@
       "quality_comment": "Distractors are all plausible individual difference variables; question is clear and focused.",
       "lessonExcerpt": "The relationship between self-esteem and persuasion forms another inverted U-shape. People with moderate self-esteem are most easily persuaded.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Recipient Factors: Who's Being Persuaded?"
+      ]
     },
     {
       "stem": "McGuire’s attitude inoculation hypothesis proposes that resistance to persuasion is increased by:",
@@ -208,7 +236,10 @@
       "quality_comment": "Distractors are plausible but only one describes inoculation theory correctly, making it an effective question.",
       "lessonExcerpt": "attitude inoculation exposes people to weak arguments against their current beliefs, along with counterarguments that refute those weak arguments.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Building Resistance: Attitude Inoculation"
+      ]
     },
     {
       "stem": "According to behavioral economics, which of the following best illustrates 'loss aversion'?",
@@ -226,7 +257,10 @@
       "quality_comment": "Options are clear and differentiated; tests precise understanding of the key concept of loss aversion.",
       "lessonExcerpt": "The pain of losing something is roughly twice as powerful as the pleasure of gaining the same thing.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Behavioral Economics: The Money-Mind Connection"
+      ]
     },
     {
       "stem": "What does the term 'scarcity trap' refer to in behavioral economics?",
@@ -244,7 +278,10 @@
       "quality_comment": "The question captures a complex concept with well-balanced answer choices, requiring integration of multiple ideas.",
       "lessonExcerpt": "When bandwidth is reduced by scarcity, people make worse decisions, which can create a scarcity trap.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Behavioral Economics: The Money-Mind Connection"
+      ]
     },
     {
       "stem": "Which of the following factors decreases the perceived trustworthiness of a communicator in persuasion?",
@@ -262,7 +299,10 @@
       "quality_comment": "Clear and straightforward question with plausible distractors, appropriate for foundational understanding.",
       "lessonExcerpt": "Trustworthiness means people see you as honest, fair, and unbiased.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Communicator Factors: Who's Doing the Persuading?"
+      ]
     },
     {
       "stem": "Which of the following describes the typical relationship between intelligence and susceptibility to persuasion?",
@@ -280,7 +320,10 @@
       "quality_comment": "Distractors cover common patterns to distinguish test-takers' familiarity with intelligence and persuasion data.",
       "lessonExcerpt": "intelligence shows a linear relationship with persuasion: lower intelligence is associated with higher susceptibility.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Recipient Factors: Who's Being Persuaded?"
+      ]
     },
     {
       "stem": "Which of the following best defines 'materialism' as studied in behavioral economics and psychology?",
@@ -298,7 +341,10 @@
       "quality_comment": "Good conceptual clarity; distractors are plausible but clearly different constructs from materialism.",
       "lessonExcerpt": "Materialism involves organizing your values and goals around wealth, possessions, image, and status.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Behavioral Economics: The Money-Mind Connection"
+      ]
     },
     {
       "stem": "Which persuasion factor is most enhanced when a celebrity endorses a product that aligns closely with their known background or expertise?",
@@ -316,7 +362,10 @@
       "quality_comment": "Clear linkage of communicator expertise to an applied example; options are balanced and plausible.",
       "lessonExcerpt": "The research shows that expertise works best when there's a match between the communicator's background and what they're endorsing.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Communicator Factors: Who's Doing the Persuading?"
+      ]
     },
     {
       "stem": "Which of the following is an example of an omega strategy in persuasion?",
@@ -334,7 +383,10 @@
       "quality_comment": "Good discrimination between approach-focused alpha strategies and resistance-focused omega strategies.",
       "lessonExcerpt": "You're addressing resistance head-on, providing counterarguments to objections, and making the change seem less threatening.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Two Big Strategies: Alpha and Omega"
+      ]
     },
     {
       "stem": "Which recipient factor has been shown to have a U-shaped relationship with susceptibility to persuasion, with adolescents and older adults being more persuadable than middle-aged adults?",
@@ -352,7 +404,10 @@
       "quality_comment": "Distractors are relevant constructs, allowing effective testing of nuanced developmental patterns in susceptibility.",
       "lessonExcerpt": "research suggests a U-shaped pattern: adolescents/young adults and older adults are more easily persuaded than middle-aged adults.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Recipient Factors: Who's Being Persuaded?"
+      ]
     },
     {
       "stem": "In the context of persuasion, which approach focuses on enhancing the attractiveness of a message to encourage acceptance by highlighting expert opinions and positive testimonials?",
@@ -375,7 +430,10 @@
       ],
       "lessonExcerpt": "Alpha strategies focus on increasing the attractive pull toward change.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Two Big Strategies: Alpha and Omega"
+      ]
     },
     {
       "stem": "Which persuasion technique involves presenting compelling evidence and social proof to strengthen an argument and reduce counterarguments?",
@@ -398,7 +456,10 @@
       ],
       "lessonExcerpt": "Alpha strategies pile on the reasons why change is desirable. You're strengthening the arguments for change and showing that lots of other people are already on board.",
       "suggestedLesson": "3-persuasion",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Two Big Strategies: Alpha and Omega"
+      ]
     }
   ]
 }

@@ -18,7 +18,10 @@
       "suggestedParagraph": "### Tests for When Words Get in the Way",
       "lessonExcerpt": "The KABC-II was designed with cultural fairness in mind. It's for ages 3 to 18 years and minimizes cultural content and verbal requirements. You can interpret results using two different models: The Cattell-Horn-Carroll (CHC) model of cognitive abilities. Luria's neuropsychological processing model.",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT"
+      "inspirationDomain": "ASSESSMENT",
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "An adult client is recovering from a stroke and has severe expressive speech difficulties but can point accurately to visual stimuli. The psychologist wants to measure the client's receptive vocabulary with minimal verbal output demands. Which instrument is most appropriate?",
@@ -38,7 +41,10 @@
       "suggestedParagraph": "### Tests for When Words Get in the Way",
       "lessonExcerpt": "The PPVT-5 measures receptive vocabulary. You show someone four pictures and say a word. They point to the picture that matches the word. That's it. No speaking required.",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT"
+      "inspirationDomain": "ASSESSMENT",
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Which of the following best describes how computerized adaptive testing (CAT) typically proceeds?",
@@ -58,7 +64,10 @@
       "suggestedParagraph": "## The Future of Testing: Computerized Adaptive Testing (CAT)",
       "lessonExcerpt": "You start with a moderately difficult question. If you answer correctly next question is harder. If you answer incorrectly next question is easier.",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT"
+      "inspirationDomain": "ASSESSMENT",
+      "relatedSections": [
+        "The Future of Testing: Computerized Adaptive Testing (CAT)"
+      ]
     },
     {
       "stem": "A psychologist selects Raven's Standard Progressive Matrices (SPM) to assess a 10-year-old child with autism spectrum disorder who has limited verbal abilities. This choice is most appropriate because Raven's SPM:",
@@ -79,7 +88,10 @@
       "lessonExcerpt": "research has shown Raven's SPM is less likely than Wechsler tests to underestimate intelligence in people with autism spectrum disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "A developmental psychologist administers the Bayley-4 to a 24-month-old toddler who obtains above-average scores across all domains. When the parents ask whether this means their child will have a high IQ in school, the psychologist's MOST accurate response would be:",
@@ -100,7 +112,10 @@
       "lessonExcerpt": "Infant tests predict adult IQ perfectly—They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "The Youngest Clients: Infant and Toddler Assessment"
+      ]
     },
     {
       "stem": "Which test is particularly useful for assessing receptive vocabulary in individuals with speech or motor impairments, as it does not require reading or writing skills?",
@@ -118,7 +133,10 @@
       "quality_comment": "Clear question with plausible distractors that assess recognition of test purposes and administration requirements.",
       "lessonExcerpt": "The PPVT-5 measures receptive vocabulary – basically, what words someone understands when they hear them.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Which assessment is a nonverbal test of cognitive abilities emphasizing fluid intelligence and suitable for individuals with speech or hearing impairments, autism spectrum disorder, or limited English proficiency?",
@@ -136,7 +154,10 @@
       "quality_comment": "The distractors test knowledge of other assessments, with plausible but incorrect matches, making the question effective.",
       "lessonExcerpt": "The Leiter-3 is the Swiss Army knife of nonverbal cognitive assessment, covering ages 3 to 75+. You can administer it completely without verbal instructions",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Raven’s Standard Progressive Matrices (SPM) is best described as:",
@@ -154,7 +175,10 @@
       "quality_comment": "This question has clearly differentiated options referencing different tests and domains, facilitating discrimination of knowledge.",
       "lessonExcerpt": "The CAS2 takes a different approach than traditional IQ tests. Instead of focusing on verbal and performance abilities, it looks at how the brain actually processes information. It's designed for kids ages 5 to 18 and is based on Luria's PASS theory.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Which group intelligence test consists of 50 verbal, numerical, and spatial items administered in 12 minutes and is frequently used for adult hiring decisions?",
@@ -172,7 +196,10 @@
       "quality_comment": "A straightforward recall question with plausible distractors relevant to cognitive testing.",
       "lessonExcerpt": "The PPVT-5 measures receptive vocabulary – basically, what words someone understands when they hear them.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Group Tests: When You Need Efficiency at Scale"
+      ]
     },
     {
       "stem": "Computerized adaptive testing (CAT) primarily improves assessment by:",
@@ -190,7 +217,10 @@
       "quality_comment": "The question is well-phrased with plausible distractors that address common misunderstandings about CAT.",
       "lessonExcerpt": "The KABC-II was designed with cultural fairness in mind – a big deal in our diverse world. It's for ages 3 to 18 years and minimizes cultural content and verbal requirements.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Future of Testing: Computerized Adaptive Testing (CAT)"
+      ]
     },
     {
       "stem": "Which test is designed specifically for assessing general reasoning ability in young children 3:6 to 9:11 years old and is often used with children with cerebral palsy or limited English proficiency?",
@@ -208,7 +238,10 @@
       "quality_comment": "Clear stem focusing on test population and characteristics, with distractors that are similar in age range but differ in test focus.",
       "lessonExcerpt": "The Leiter-3 is the Swiss Army knife of nonverbal cognitive assessment, covering ages 3 to 75+. You can administer it completely without verbal instructions",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "The Bayley Scales of Infant and Toddler Development, Fourth Edition (Bayley-4) assess all of the following except:",
@@ -226,7 +259,10 @@
       "quality_comment": "Question effectively tests recognition of assessment domains with plausible but incorrect distractor closely related to cognition.",
       "lessonExcerpt": "it's measuring abstract reasoning and fluid intelligence, relatively free from cultural and educational influences.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Youngest Clients: Infant and Toddler Assessment"
+      ]
     },
     {
       "stem": "Which of the following is NOT an advantage of computerized adaptive testing (CAT)?",
@@ -244,7 +280,10 @@
       "quality_comment": "Distractors are accurate CAT advantages, making the correct answer stand out as the known limitation.",
       "lessonExcerpt": "| Wonderlic Cognitive Ability Test | Hiring decisions | 12 minutes, 50 items (verbal, numerical, spatial) |",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Future of Testing: Computerized Adaptive Testing (CAT)"
+      ]
     },
     {
       "stem": "The Graduate Record Exam (GRE) General Test is designed to assess:",
@@ -262,7 +301,10 @@
       "quality_comment": "Clear question with well-differentiated options testing familiarity with graduate-level assessments.",
       "lessonExcerpt": "Instead of everyone answering the same questions, the computer tailors the test to each person's ability level.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "College Admissions Tests: Predicting Academic Success"
+      ]
     },
     {
       "stem": "Which cognitive testing approach is primarily responsible for presenting items matched to an individual examinee's ability level in real time?",
@@ -280,7 +322,10 @@
       "quality_comment": "This question clearly differentiates between testing modalities and emphasizes the importance of IRT in CAT, improving conceptual understanding.",
       "lessonExcerpt": "Originally developed for children with cerebral palsy, the CMMS is for kids ages 3.5 to 9 years and measures general reasoning ability.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Future of Testing: Computerized Adaptive Testing (CAT)"
+      ]
     },
     {
       "stem": "Which of the following assessment instruments is particularly suited for minimizing cultural and language bias in evaluating children's cognitive abilities by allowing interpretation based on either the CHC model or Luria's neuropsychological model?",
@@ -298,7 +343,10 @@
       "quality_comment": "The options provide tests with varying cultural fairness, emphasizing the distinctiveness of the KABC-II for reducing bias, enhancing item validity.",
       "lessonExcerpt": "The Bayley-4 is the gold standard for assessing developmental status in children from 16 days to 42 months. It evaluates five domains:\n\n- Cognitive\n- Motor\n- Language\n- Social-emotional\n- Adaptive behavior",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "In the context of cognitive assessments, what is a major benefit of nonverbal tests such as Raven’s Standard Progressive Matrices and Leiter-3?",
@@ -316,7 +364,10 @@
       "quality_comment": "The distractors are plausible yet incorrect, effectively assessing understanding of the rationale behind nonverbal assessment tools.",
       "lessonExcerpt": "**Disadvantages of CAT:**\n\n1. **Development costs**: Expensive and time-consuming to create\n2. **No review**: Usually can't go back to previous questions",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Which cognitive assessment tool is designed to evaluate the cognitive abilities of children and adolescents aged 3 to 16 years, using the PASS theory framework?",
@@ -339,7 +390,10 @@
       ],
       "lessonExcerpt": "1. **General Test**: Used for graduate school admissions, measuring general academic skills:\n   - Verbal reasoning\n   - Quantitative reasoning\n   - Analytical reasoning",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "In the context of cognitive assessments, which test employs the PASS model to assess cognitive functioning in children and is known for its emphasis on non-verbal skills?",
@@ -362,7 +416,10 @@
       ],
       "lessonExcerpt": "CAT typically uses **item response theory (IRT)** in development.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "A 68-year-old retired attorney scores at the 80th percentile on a test of legal vocabulary and professional knowledge, yet scores at the 40th percentile compared to younger adults on a novel matrix reasoning task administered under time pressure. This dissociation best illustrates which well-documented pattern in cognitive aging?",
@@ -383,7 +440,8 @@
       "lessonExcerpt": "Nonverbal tests typically emphasize fluid intelligence (reasoning with new information) while minimizing crystallized intelligence (learned knowledge). They're measuring different aspects of cognitive ability.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": null
     },
     {
       "stem": "What is a significant concern regarding racial and cultural biases in IQ testing?",
@@ -404,7 +462,10 @@
       "lessonExcerpt": "When you need to minimize cultural bias or language barriers, your top two choices are: KABC-II, Raven's SPM. The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Which assessment battery is recommended to reduce cultural bias and minimize the influence of English proficiency in cognitive testing of culturally diverse children?",
@@ -422,7 +483,10 @@
       "quality_comment": "Distractors include well-known tests but only one focuses on reducing cultural and language bias, making the question discriminative.",
       "lessonExcerpt": "The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Which assessment is especially useful for minimizing cultural and language biases in nonverbal intelligence testing?",
@@ -440,7 +504,10 @@
       "quality_comment": "The question clearly contrasts verbal and nonverbal assessments to test knowledge of culturally fair instruments.",
       "lessonExcerpt": "The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Which neuropsychological test is designed to assess executive functions such as abstract reasoning, perseveration, and set shifting by requiring examinees to match cards according to undisclosed sorting rules?",
@@ -458,7 +525,8 @@
       "quality_comment": "The options are plausible neuropsychological tests, reinforcing discrimination of similar but distinct tests targeting executive functions.",
       "lessonExcerpt": "**Wisconsin Card Sorting Test (WCST)** evaluates abstract reasoning, cognitive flexibility, and the ability to shift strategies based on feedback (all executive functions linked to frontal lobe activity.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "A clinician wants to screen for adaptive functioning to assist in diagnosing intellectual disability. Which assessment is most appropriate?",
@@ -476,7 +544,8 @@
       "quality_comment": "The distractors are common psychological tests but measure different constructs, supporting clear discrimination for EPPP-level examinees.",
       "lessonExcerpt": "**Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)** assesses how well someone functions in daily life, from birth to age 90.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best describes the clinical utility of the Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3) in assessment?",
@@ -494,7 +563,8 @@
       "quality_comment": "The item clearly contrasts different types of assessments, making it suitable for assessing real-world clinical decision-making knowledge.",
       "lessonExcerpt": "**Halstead-Reitan Neuropsychological Battery** is the comprehensive physical exam of brain function testing. Available for ages 5 and up, it evaluates memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration.",
       "suggestedLesson": "5-cognitive-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Raven's Progressive Matrices is frequently cited in factor-analytic research as one of the strongest available indicators of Spearman's g (general intelligence). Based on the test's core characteristics, which of the following BEST explains why it serves as such a high-loading measure of g?",
@@ -515,7 +585,10 @@
       "lessonExcerpt": "the Stroop Test evaluates cognitive flexibility, processing speed, selective attention, and response inhibition.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     },
     {
       "stem": "Which of the following assessments is primarily designed to evaluate non-verbal intelligence?",
@@ -536,7 +609,10 @@
       "lessonExcerpt": "**Mini-Mental State Exam (MMSE)** is the quick cognitive screening tool you'll see everywhere, particularly in settings with older adults.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Individual Tests: Matching the Right Tool to the Right Person"
+      ]
     }
   ]
 }

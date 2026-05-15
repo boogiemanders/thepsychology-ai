@@ -19,7 +19,10 @@
       "lessonExcerpt": "Hindsight bias is the tendency to believe, after an event occurs, that we predicted it would happen (or that we could have predicted it) more than we actually could have or did.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "In legal judgments, what is the primary effect of hindsight bias?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Hindsight bias is the tendency to believe, after an event occurs, that we predicted it would happen (or that we could have predicted it) more than we actually could have or did.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "What psychological effect is most likely to occur in individuals living in overcrowded environments?",
@@ -61,7 +67,8 @@
       "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best exemplifies the confirmation bias in social cognition?",
@@ -79,7 +86,10 @@
       "quality_comment": "The stem is clear and the distractors are plausible cognitive errors, making it a strong question for testing knowledge of confirmation bias.",
       "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "A defense attorney presents anecdotal stories of rare wrongful convictions to the jury, who then ignore national conviction rates and base their verdict on these stories. Which cognitive bias is most clearly illustrated here?",
@@ -97,7 +107,10 @@
       "quality_comment": "Options reflect several known biases, requiring examinees to discriminate carefully, which increases item quality and test validity.",
       "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "Which cognitive bias is characterized by the tendency to overestimate how much other people share our own opinions and beliefs?",
@@ -115,7 +128,10 @@
       "quality_comment": "Clear question with well-targeted distractors that help differentiate related but distinct concepts increases the question’s quality.",
       "lessonExcerpt": "The base rate fallacy occurs when we ignore statistical information about the general population (base rates) and instead focus on specific, distinctive details about an individual case.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "Which of the following scenarios illustrates the gambler’s fallacy?",
@@ -133,7 +149,10 @@
       "quality_comment": "The options include related biases making the correct answer distinguishable, achieving a good balance between challenge and clarity.",
       "lessonExcerpt": "The false consensus effect is our tendency to overestimate how many other people share our opinions, values, and beliefs.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "The tendency to imagine alternative outcomes to events that have already happened, often leading to feelings of regret or relief, is known as:",
@@ -151,7 +170,10 @@
       "quality_comment": "Distractors are plausible cognitive biases, requiring a good understanding of terminology which makes for a high-quality question.",
       "lessonExcerpt": "The gambler's fallacy is the mistaken belief that previous random events affect future random events. That random outcomes will \"even out\" in the short run.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "A person believes that their choice of a 'lucky number' will improve their odds of winning the lottery, despite the lottery being random. This is an example of:",
@@ -169,7 +191,10 @@
       "quality_comment": "Options are distinct and target common heuristics and biases, making it a clear and effective test item.",
       "lessonExcerpt": "Counterfactual thinking involves imagining alternative outcomes. What might have happened but didn't.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "Which heuristic involves making judgments about the likelihood of an event based on how easily relevant examples come to mind?",
@@ -187,7 +212,10 @@
       "quality_comment": "The item is straightforward with well-defined distractors that help the test-taker differentiate related heuristics.",
       "lessonExcerpt": "Illusory control (also called illusion of control) happens when people believe they can influence outcomes that are actually outside their control.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Mental Shortcuts: The Heuristics"
+      ]
     },
     {
       "stem": "The conjunction fallacy, as demonstrated by Tversky and Kahneman, is an error that results from:",
@@ -205,7 +233,10 @@
       "quality_comment": "The question references a classic experimental result with plausible distractors, offering a challenging test of conceptual understanding.",
       "lessonExcerpt": "The availability heuristic involves judging the frequency or likelihood of events based on how easily we can recall examples.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Mental Shortcuts: The Heuristics"
+      ]
     },
     {
       "stem": "A college student who received a passing grade on a social sensitivity test estimates that most other students also passed, whereas a student who failed the same test estimates most others failed. This phenomenon is an example of the:",
@@ -223,7 +254,10 @@
       "quality_comment": "The question uses a well-known empirical example, and options are all social biases, enhancing discriminability and conceptual clarity.",
       "lessonExcerpt": "the conjunction fallacy, where people incorrectly judge that two events happening together are more likely than either event alone.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "After a political election, individuals' recollections of their pre-election predictions become closer to the actual results than originally predicted. This is an example of:",
@@ -241,7 +275,10 @@
       "quality_comment": "The scenario is distinct and the distractors are other known biases, fostering precise knowledge assessment.",
       "lessonExcerpt": "students took a bogus \"social sensitivity test\" and were told they either passed or failed. When asked to predict how other students would perform, those who failed predicted most others would fail too, and those who passed predicted most others would pass.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "Which bias involves continuing to invest resources into an unsuccessful project because previous investments cannot be recovered?",
@@ -259,7 +296,10 @@
       "quality_comment": "Well-constructed question with plausible distractors that target related but distinct cognitive errors.",
       "lessonExcerpt": "Blank and colleagues found that after political elections, people's memories of their own predictions shifted to become closer to the actual results.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "The Spotlight Effect refers to:",
@@ -277,7 +317,10 @@
       "quality_comment": "Clear and concise, with distractors representative of other common biases, making it effective and accessible.",
       "lessonExcerpt": "The sunk-cost fallacy happens when people continue investing resources (time, money, effort) into something that isn't working because they've already invested so much.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "Which heuristic involves beginning with an initial estimate and making adjustments to reach a final judgment, often insufficiently shifting from the starting point?",
@@ -295,7 +338,10 @@
       "quality_comment": "Distractors are well-matched and conceptually related, requiring focused knowledge for correct identification.",
       "lessonExcerpt": "The spotlight effect occurs when people believe others notice their actions and appearance far more than they actually do.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Mental Shortcuts: The Heuristics"
+      ]
     },
     {
       "stem": "The illusion of transparency differs from the spotlight effect in that it refers to overestimating how well others can perceive one's:",
@@ -313,7 +359,10 @@
       "quality_comment": "Options are clearly distinct, and the stem properly differentiates similar social perception biases, enhancing item quality.",
       "lessonExcerpt": "When using the anchoring and adjustment heuristic, we start with an initial value (the anchor) and then adjust up or down from there. The problem is that our adjustments are usually insufficient.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "Illusory correlation often leads to which of the following social cognitive errors?",
@@ -331,7 +380,10 @@
       "quality_comment": "The distractors are plausible but distinct errors; the correct answer draws from a clear example, enhancing clarity and discriminability.",
       "lessonExcerpt": "The illusion of transparency is closely related to the spotlight effect, but it specifically involves overestimating how well others can discern our internal thoughts and feelings.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "Which cognitive bias explains why older adults may be less likely to continue investing in a failing project compared to younger adults?",
@@ -349,7 +401,10 @@
       "quality_comment": "Includes demographic nuance increasing complexity while staying anchored in core social cognitive concepts, supporting deep understanding.",
       "lessonExcerpt": "Research by Hamilton and Gifford found that people tend to overestimate how often minority group members engage in negative behaviors.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "The simulation heuristic affects decision making by influencing:",
@@ -367,7 +422,10 @@
       "quality_comment": "Options reflect related heuristics requiring careful analysis, making this a useful question to probe nuanced comprehension.",
       "lessonExcerpt": "research by Strough and colleagues found that older adults are actually less susceptible to this fallacy than younger adults",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Mental Shortcuts: The Heuristics"
+      ]
     },
     {
       "stem": "Which of the following scenarios illustrates the concept of confirmation bias in decision-making?",
@@ -390,7 +448,10 @@
       ],
       "lessonExcerpt": "The simulation heuristic involves judging how likely an event is based on how easily we can mentally simulate (imagine) it happening.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     },
     {
       "stem": "In which of the following situations is confirmation bias most likely to occur?",
@@ -413,7 +474,10 @@
       ],
       "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Players: Errors and Biases"
+      ]
     }
   ]
 }

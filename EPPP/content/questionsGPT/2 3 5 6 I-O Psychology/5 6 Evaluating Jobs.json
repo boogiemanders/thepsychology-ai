@@ -19,7 +19,10 @@
       "lessonExcerpt": "Criterion contamination occurs when the measure is influenced by factors unrelated to actual job performance. Common sources of contamination include... Knowledge of hiring scores: When a supervisor knows how well someone scored on pre-employment tests and lets that knowledge color performance ratings",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Gap Between Ideal and Real: Ultimate Versus Actual Criteria"
+      ]
     },
     {
       "stem": "An organization wants to reduce halo error in its annual performance evaluations. Based on research evidence, which combination of strategies would be MOST effective?",
@@ -40,7 +43,11 @@
       "lessonExcerpt": "BARS reduce all types of biases by clarifying what each rating point means through specific behavioral descriptions... Frame-of-reference (FOR) training is the most effective way to improve rating accuracy... training focused solely on avoiding biases can actually reduce overall accuracy.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Reducing Rater Biases: Practical Solutions",
+        "Rater Biases: The Systematic Errors That Distort Ratings"
+      ]
     },
     {
       "stem": "An I-O psychologist is asked to improve the accuracy of performance ratings at a large corporation where different supervisors appear to use inconsistent internal standards when evaluating employees. Research suggests the MOST effective approach would be to implement which type of rater training?",
@@ -61,7 +68,10 @@
       "lessonExcerpt": "The superior approach is frame-of-reference (FOR) training, which includes: Teaching the multidimensional nature of performance, Establishing shared standards, Practice with feedback... Research shows that training focused solely on avoiding biases can actually reduce overall accuracy.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Reducing Rater Biases: Practical Solutions"
+      ]
     },
     {
       "stem": "During annual performance reviews, a supervisor rates a research assistant highly on statistical analysis, literature review skills, and interpersonal communication after being particularly impressed by the assistant's consistently excellent data management abilities. The supervisor's ratings MOST likely reflect:",
@@ -82,7 +92,10 @@
       "lessonExcerpt": "The halo error (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Rater Biases: The Systematic Errors That Distort Ratings"
+      ]
     },
     {
       "stem": "A supervisor provides performance ratings for employees in her department. She recently learned that one of her subordinates graduated from a prestigious doctoral program. Although this information is unrelated to the employee's current job duties, the supervisor's ratings of this employee are consistently higher across all performance dimensions compared to a colleague with equivalent actual performance. This scenario best illustrates:",
@@ -103,7 +116,10 @@
       "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance. Common sources of contamination include:\n\n- Demographics: When a supervisor's ratings are influenced by an employee's gender, race, age, or appearance rather than actual performance\n- Knowledge of hiring scores: When a supervisor knows how well someone scored on pre-employment tests and lets that knowledge color performance ratings",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Gap Between Ideal and Real: Ultimate Versus Actual Criteria"
+      ]
     },
     {
       "stem": "An organizational psychologist consults with a company whose performance appraisal system uses graphic rating scales. Supervisors tend to rate employees who excel in one area as excellent across all dimensions, even those unrelated to the area of strength. The psychologist recommends implementing a training program that helps raters understand that performance is multidimensional, provides examples of effective versus ineffective behaviors, and includes practice rating with feedback. This intervention is known as:",
@@ -124,7 +140,11 @@
       "lessonExcerpt": "The superior approach is **frame-of-reference (FOR) training**, which includes:\n\n1. **Teaching the multidimensional nature of performance**",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Reducing Rater Biases: Practical Solutions",
+        "Rater Biases: The Systematic Errors That Distort Ratings"
+      ]
     },
     {
       "stem": "An industrial-organizational psychologist develops a performance evaluation for clinical psychologists that measures diagnostic accuracy and treatment effectiveness but fails to assess ethics, cultural competence, or consultation skills. This evaluation instrument best illustrates which measurement problem?",
@@ -145,7 +165,10 @@
       "lessonExcerpt": "**Criterion deficiency** occurs when our measure misses important aspects of performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "The Gap Between Ideal and Real: Ultimate Versus Actual Criteria"
+      ]
     },
     {
       "stem": "Which of the following best describes a work-oriented job analysis?",
@@ -163,7 +186,10 @@
       "quality_comment": "The question clearly contrasts key approaches within job analysis, and the distractors are plausible but distinct, testing nuanced understanding.",
       "lessonExcerpt": "**Work-oriented job analysis** focuses on the actual tasks someone does.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Job Analysis"
+      ]
     },
     {
       "stem": "What is the primary focus of competency modeling in organizations?",
@@ -181,7 +207,10 @@
       "quality_comment": "Options differentiate closely related concepts, requiring test-takers to discriminate between job analysis and competency modeling effectively.",
       "lessonExcerpt": "While job analysis examines individual positions, **competency modeling** takes a broader view. It identifies the core attributes needed across multiple jobs within an organization. Characteristics tied to the organization's values and strategic goals.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beyond Job Analysis: Competency Modeling"
+      ]
     },
     {
       "stem": "Which job evaluation method involves assigning points to compensable factors such as skill and responsibility to determine job value?",
@@ -199,7 +228,10 @@
       "quality_comment": "The distractors are related organizational concepts, which enhances the question's discriminative power and relevance for the domain.",
       "lessonExcerpt": "The **point system** is a common evaluation method:\n1. Identify compensable factors (effort, skill, responsibility, working conditions)\n2. Assign points to each factor based on the job's requirements",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Job Evaluation: Determining Fair Pay"
+      ]
     },
     {
       "stem": "Which of the following is an advantage of using subjective performance appraisal measures over objective measures?",
@@ -217,7 +249,10 @@
       "quality_comment": "Clear stem and plausible distractors make this a well-constructed question for testing comprehension of performance appraisal approaches.",
       "lessonExcerpt": "**Subjective measures** involve ratings and judgments, typically from supervisors. They're the most common type of performance assessment because they can:\n- Assess aspects of performance that can't be measured objectively\n- Account for situational factors affecting performance",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Performance Assessment: Measuring How Well People Do Their Jobs"
+      ]
     },
     {
       "stem": "The forced distribution method of performance appraisal is best described as:",
@@ -235,7 +270,10 @@
       "quality_comment": "The answer and distractors clearly correspond to different appraisal methods, encouraging precise understanding of forced distribution advantages and limitations.",
       "lessonExcerpt": "**Forced distribution method**: The rater must assign specific percentages of employees to predetermined categories.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Types of Rating Scales: Relative and Absolute"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies the criterion contamination problem in performance appraisal?",
@@ -253,7 +291,11 @@
       "quality_comment": "Distractors represent related but distinct issues, making this an effective item for assessing nuanced knowledge of criterion validity concepts.",
       "lessonExcerpt": "- Demographics: When a supervisor's ratings are influenced by an employee's gender, race, age, or appearance rather than actual performance",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Gap Between Ideal and Real: Ultimate Versus Actual Criteria",
+        "Rater Biases: The Systematic Errors That Distort Ratings"
+      ]
     },
     {
       "stem": "Which rater bias is demonstrated when a supervisor gives all employees the same average rating regardless of their actual performance?",
@@ -271,7 +313,10 @@
       "quality_comment": "The question clearly differentiates common rater biases with realistic distractors, making it appropriate for foundational knowledge testing.",
       "lessonExcerpt": "**Central tendency bias**: The rater gives everyone average ratings.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Rater Biases: The Systematic Errors That Distort Ratings"
+      ]
     },
     {
       "stem": "Behaviorally Anchored Rating Scales (BARS) differ from graphic rating scales primarily because:",
@@ -289,7 +334,10 @@
       "quality_comment": "The options contrast key features of BARS versus other rating scales, supporting discrimination of item-level knowledge.",
       "lessonExcerpt": "**Behaviorally Anchored Rating Scales (BARS)**: These improve on simple graphic scales by anchoring each scale point with specific behavioral descriptions.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Types of Rating Scales: Relative and Absolute"
+      ]
     },
     {
       "stem": "Which of the following rater training approaches aims to improve rating accuracy by teaching raters about multidimensional job performance and providing rating practice with feedback?",
@@ -307,7 +355,10 @@
       "quality_comment": "This question tests conceptual understanding of specific training methods to reduce rater errors, suitable for advanced preparation.",
       "lessonExcerpt": "The superior approach is **frame-of-reference (FOR) training**, which includes:\n\n1. **Teaching the multidimensional nature of performance**: Helping raters understand that someone can be strong in some areas and weak in others, and that these dimensions should be evaluated independently",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reducing Rater Biases: Practical Solutions"
+      ]
     },
     {
       "stem": "A Position Analysis Questionnaire (PAQ) is most accurately described as:",
@@ -325,7 +376,10 @@
       "quality_comment": "The question clearly distinguishes among various organizational instruments, improving test-taker discrimination.",
       "lessonExcerpt": "The **Position Analysis Questionnaire (PAQ)** is a widely-used worker-oriented tool that examines six categories:",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Job Analysis"
+      ]
     },
     {
       "stem": "The contrast error in subjective performance ratings occurs when:",
@@ -343,7 +397,10 @@
       "quality_comment": "This question uses a clear example of contrast error with plausible distractors to enhance discriminability.",
       "lessonExcerpt": "**Contrast error** occurs when ratings of one employee are influenced by the performance of a previously evaluated employee rather than by absolute standards.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Rater Biases: The Systematic Errors That Distort Ratings"
+      ]
     },
     {
       "stem": "Which performance appraisal method involves identifying exceptional positive and negative behaviors to assess employee performance?",
@@ -361,7 +418,11 @@
       "quality_comment": "Options contrast different appraisal methods well, aiding in testing recognition of the CIT’s unique characteristics.",
       "lessonExcerpt": "**Critical Incident Technique (CIT)**: This method involves collecting specific examples of behaviors that represent exceptionally good or exceptionally poor performance.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Performance Assessment: Measuring How Well People Do Their Jobs",
+        "Types of Rating Scales: Relative and Absolute"
+      ]
     },
     {
       "stem": "Which of the following is a key benefit of using electronic performance monitoring as part of a job analysis?",
@@ -379,7 +440,10 @@
       "quality_comment": "The question effectively probes understanding of modern data collection methods for job analysis with clearly distinct distractors.",
       "lessonExcerpt": "**Electronic performance monitoring**: Digital systems track activities, though this raises privacy concerns and may not capture the full scope of performance.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Job Analysis"
+      ]
     },
     {
       "stem": "When developing a behaviorally anchored rating scale (BARS), which group is typically involved in identifying performance dimensions and defining behavioral anchors?",
@@ -397,7 +461,10 @@
       "quality_comment": "The question targets the procedural context of BARS development and contrasts typical vs. inappropriate contributors, enhancing content validity.",
       "lessonExcerpt": "Development involves having job experts identify essential performance dimensions and describe specific behaviors representing excellent, average, and poor performance for each dimension.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Types of Rating Scales: Relative and Absolute"
+      ]
     },
     {
       "stem": "Which of the following is the primary focus of a task-oriented job analysis?",
@@ -420,7 +487,10 @@
       ],
       "lessonExcerpt": "The most common work-oriented method is **task analysis**. Here's how it works: employees and supervisors create a comprehensive list of job tasks, then subject matter experts rate each task on how frequently it occurs and how important it is.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Job Analysis"
+      ]
     },
     {
       "stem": "In the context of performance assessment, which approach emphasizes the evaluation of job tasks to inform performance criteria?",
@@ -443,7 +513,11 @@
       ],
       "lessonExcerpt": "The most common work-oriented method is **task analysis**. Here's how it works: employees and supervisors create a comprehensive list of job tasks, then subject matter experts rate each task on how frequently it occurs and how important it is.",
       "suggestedLesson": "5-6-evaluating-jobs",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: Job Analysis",
+        "Performance Assessment: Measuring How Well People Do Their Jobs"
+      ]
     },
     {
       "stem": "Before conducting performance appraisals, a plant supervisor reviews the standardized selection test scores that each employee received when they were hired two years ago. An employee who scored at the 95th percentile on the selection battery subsequently receives a 'superior' performance rating from the supervisor, despite producing output that is objectively average according to production records. This error is best classified as:",
@@ -464,7 +538,10 @@
       "lessonExcerpt": "- Knowledge of hiring scores: When a supervisor knows how well someone scored on pre-employment tests and lets that knowledge color performance ratings",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Gap Between Ideal and Real: Ultimate Versus Actual Criteria"
+      ]
     },
     {
       "stem": "A hospital is revising its annual performance evaluation process for nursing staff after an audit revealed that supervisors consistently assign nearly identical scores across all competency dimensions (clinical skills, communication, professionalism, and teamwork) even when objective indicators suggest meaningful differences between nurses on these dimensions. Which intervention would most directly address the cognitive mechanism producing this rating pattern?",
@@ -485,7 +562,11 @@
       "lessonExcerpt": "**Behaviorally Anchored Rating Scales (BARS)**: These improve on simple graphic scales by anchoring each scale point with specific behavioral descriptions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Rater Biases: The Systematic Errors That Distort Ratings",
+        "Reducing Rater Biases: Practical Solutions"
+      ]
     },
     {
       "stem": "Which strategy is most effective in addressing rater leniency during performance appraisals?",
@@ -506,7 +587,10 @@
       "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Reducing Rater Biases: Practical Solutions"
+      ]
     },
     {
       "stem": "Which of the following best describes the halo effect in performance ratings?",
@@ -527,7 +611,10 @@
       "lessonExcerpt": "The **halo error** (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Rater Biases: The Systematic Errors That Distort Ratings"
+      ]
     },
     {
       "stem": "What is a key characteristic of the forced distribution method in employee performance evaluations?",
@@ -548,7 +635,10 @@
       "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Types of Rating Scales: Relative and Absolute"
+      ]
     }
   ]
 }

@@ -18,7 +18,10 @@
       "suggestedParagraph": "### The Serial Position Effect: Proof the Model Works",
       "lessonExcerpt": "Wait 30 seconds before the test, and the recency effect disappears.",
       "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR"
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain"
+      ]
     },
     {
       "stem": "A client recently changed phone numbers but keeps giving friends the old number whenever asked for contact information. Which process best explains this memory error?",
@@ -38,7 +41,10 @@
       "suggestedParagraph": "## Why We Forget: Trace Decay vs. Interference",
       "lessonExcerpt": "Proactive interference: Old information blocks new learning - You keep giving your old phone number instead of your new one",
       "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR"
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "relatedSections": [
+        "Why We Forget: Trace Decay vs. Interference"
+      ]
     },
     {
       "stem": "A client says, \"I do not usually forget what people tell me, but I keep forgetting that I have supervision on Tuesdays unless I set three reminders.\" This difficulty is most directly a problem in:",
@@ -58,7 +64,10 @@
       "suggestedParagraph": "### Retrospective vs. Prospective Memory",
       "lessonExcerpt": "Prospective memory: Remembering to do something in the future",
       "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR"
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "relatedSections": [
+        "Types of Long-Term Memory: Not All Memories Are Equal"
+      ]
     },
     {
       "stem": "A researcher presents participants with a list of words and asks them to perform one of three tasks for each word: count the number of vowels, determine whether the word rhymes with another word, or decide whether the word fits meaningfully into a sentence. Which group will demonstrate the best recall on a subsequent surprise memory test?",
@@ -79,7 +88,10 @@
       "lessonExcerpt": "This process, called semantic encoding, is the most effective way to transfer information to long-term memory.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "A clinical psychology trainee observes her supervisor successfully use a grounding technique with a distressed client. Later that week, when the trainee encounters a similar situation, she attempts the technique herself. According to Bandura's social cognitive theory, which of the following processes is NOT required for this observational learning to result in successful performance?",
@@ -100,7 +112,10 @@
       "lessonExcerpt": "Key finding: Reinforcement affects performance, not learning. Children learned aggressive behavior from models but only performed it when motivated.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Cognitive Learning Theories: Learning Without Direct Reinforcement"
+      ]
     },
     {
       "stem": "A graduate student is preparing for the EPPP and reads through a list of key terms multiple times using rote rehearsal. Her study partner instead creates personal examples linking each term to clinical experiences. Research on encoding suggests that the study partner's approach is more effective because it relies on:",
@@ -121,7 +136,10 @@
       "lessonExcerpt": "This process, called semantic encoding, is the most effective way to transfer information to long-term memory.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "During a therapy session, a psychologist mentally holds a client's statement in mind while simultaneously comparing it to information the client shared three sessions ago and deciding which therapeutic intervention to use next. This cognitive activity BEST illustrates the function of:",
@@ -142,7 +160,10 @@
       "lessonExcerpt": "Episodic buffer: Integrates all types of information and links to long-term memory. Example: Connecting what a client just said to their history.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Baddeley's Working Memory Model: A Closer Look"
+      ]
     },
     {
       "stem": "A neuropsychologist is evaluating a 72-year-old patient who can accurately recite historical facts, define complex vocabulary words, and explain scientific concepts but has significant difficulty recalling personal events such as a recent family gathering or a conversation from earlier in the week. This pattern of preserved and impaired abilities is most consistent with intact __________ memory and impaired __________ memory.",
@@ -163,7 +184,10 @@
       "lessonExcerpt": "Semantic memory: General knowledge and facts (DSM-5 criteria, therapy theories, that the multi-store model has three components). Episodic memory: Personal experiences (your first therapy session, where you were during a significant life event)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "Types of Long-Term Memory: Not All Memories Are Equal"
+      ]
     },
     {
       "stem": "A psychology trainee who spent two years mastering EMDR protocols is now learning Cognitive Processing Therapy (CPT) for trauma. She finds herself repeatedly confusing the CPT session structure with EMDR procedures, despite careful study of the new manual. This difficulty is best explained by:",
@@ -184,7 +208,10 @@
       "lessonExcerpt": "Proactive interference: Old information blocks new learning. You learned EMDR protocols in your first trauma training, and now those steps interfere with learning a new trauma protocol.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "Why We Forget: Trace Decay vs. Interference"
+      ]
     },
     {
       "stem": "How does semantic similarity influence memory recall according to cognitive psychology?",
@@ -205,7 +232,10 @@
       "lessonExcerpt": "This explains why clients might say they 'heard' what you said but can't recall it, the information never made it past sensory memory because their attention was elsewhere.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "What is the primary function of working memory in cognitive tasks?",
@@ -226,7 +256,10 @@
       "lessonExcerpt": "The central executive coordinates these systems like a project manager directing different teams.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Baddeley's Working Memory Model: A Closer Look"
+      ]
     },
     {
       "stem": "Which of the following best describes prospective memory impairment?",
@@ -247,7 +280,10 @@
       "lessonExcerpt": "Prospective memory: Remembering to do something in the future (remembering you have supervision next Tuesday, that you need to submit case notes by Friday)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Types of Long-Term Memory: Not All Memories Are Equal"
+      ]
     },
     {
       "stem": "Which of the following factors is most likely to enhance long-term memory encoding?",
@@ -268,7 +304,10 @@
       "lessonExcerpt": "Proactive interference: Old information blocks new learning",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "What is the primary function of primary memory in cognitive processing?",
@@ -289,7 +328,10 @@
       "lessonExcerpt": "Memory span (also called primary memory): The basic storage capacity. How much you can hold",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain"
+      ]
     },
     {
       "stem": "Which memory encoding strategy involves grouping information to enhance recall?",
@@ -310,7 +352,11 @@
       "lessonExcerpt": "You can expand capacity by grouping information.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain",
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "Which statement best reflects the relationship between hypnosis and memory recall accuracy?",
@@ -331,7 +377,10 @@
       "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "False Memories: When Memory Betrays Us"
+      ]
     },
     {
       "stem": "What is the primary characteristic of episodic memory recall?",
@@ -352,7 +401,10 @@
       "lessonExcerpt": "Episodic memory: Personal experiences (your first therapy session, where you were during a significant life event)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "Types of Long-Term Memory: Not All Memories Are Equal"
+      ]
     },
     {
       "stem": "What is the typical retention duration of sensory memory for visual information?",
@@ -373,7 +425,10 @@
       "lessonExcerpt": "Visual information (iconic memory) lasts about half a second, while sounds (echoic memory) stick around for about two seconds.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain"
+      ]
     },
     {
       "stem": "What process describes memory retrieval that is triggered by sensory input?",
@@ -394,7 +449,10 @@
       "lessonExcerpt": "Priming occurs when exposure to something influences your later response without conscious awareness.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Priming: Memory Without Awareness"
+      ]
     },
     {
       "stem": "What is retroactive interference in the context of memory?",
@@ -415,7 +473,10 @@
       "lessonExcerpt": "Episodic memory: Personal experiences (your first therapy session, where you were during a significant life event)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Why We Forget: Trace Decay vs. Interference"
+      ]
     },
     {
       "stem": "Which of the following best describes a common reason for long-term memory retrieval failure?",
@@ -436,7 +497,10 @@
       "lessonExcerpt": "Visual information (iconic memory) lasts about half a second, while sounds (echoic memory) stick around for about two seconds.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "What is a key factor that influences memory recall of significant events?",
@@ -457,7 +521,10 @@
       "lessonExcerpt": "Priming occurs when exposure to something influences your later response without conscious awareness.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Types of Long-Term Memory: Not All Memories Are Equal"
+      ]
     },
     {
       "stem": "What phenomenon describes the improved recall of information when the context during retrieval matches the context during encoding?",
@@ -478,7 +545,10 @@
       "lessonExcerpt": "Retroactive interference: New information blocks old recall",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "Which mnemonic device is most effective for enhancing memory retention according to memory strategies?",
@@ -499,7 +569,11 @@
       "lessonExcerpt": "You can expand capacity by grouping information.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain",
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "What does the serial position effect in memory recall demonstrate about memory processes?",
@@ -520,7 +594,10 @@
       "lessonExcerpt": "If tested immediately, you'll remember techniques from the beginning (primacy effect) and end (recency effect) better than the middle ones.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain"
+      ]
     },
     {
       "stem": "Which type of memory encoding involves the transformation of sensory input into a form that can be stored in long-term memory?",
@@ -541,7 +618,10 @@
       "lessonExcerpt": "Context-dependent learning: Study where you'll be tested (or in a similar environment)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "What type of interference occurs when newly learned information disrupts the recall of previously learned information?",
@@ -562,7 +642,10 @@
       "lessonExcerpt": "The recency effect disappears. Those end items faded from short-term memory.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Why We Forget: Trace Decay vs. Interference"
+      ]
     },
     {
       "stem": "The Zeigarnik effect suggests that people remember uncompleted or interrupted tasks better than completed ones. What psychological principle does this phenomenon illustrate?",
@@ -583,7 +666,8 @@
       "lessonExcerpt": "This explains why clients might say they 'heard' what you said but can't recall it, the information never made it past sensory memory because their attention was elsewhere.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": null
     },
     {
       "stem": "What neurobiological process is associated with the strengthening of synapses and is believed to underlie learning and memory?",
@@ -604,7 +688,8 @@
       "lessonExcerpt": "This is your workhorse intervention for anxiety disorders.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": null
     },
     {
       "stem": "Which cognitive function is primarily affected in individuals with amnesia?",
@@ -625,7 +710,10 @@
       "lessonExcerpt": "Episodic memory: Personal experiences (your first therapy session, where you were during a significant life event)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Types of Long-Term Memory: Not All Memories Are Equal"
+      ]
     },
     {
       "stem": "What phenomenon describes the improved recall of information when in the same emotional state as when the information was learned?",
@@ -646,7 +734,10 @@
       "lessonExcerpt": "When you pay attention to sensory information, it moves into short-term memory.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "What does the tip-of-the-tongue phenomenon primarily involve?",
@@ -667,7 +758,10 @@
       "lessonExcerpt": "This is crucial for therapy. It's the basis for exposure treatments. Repeatedly presenting the feared stimulus (CS) without the feared outcome (US) until the fear response (CR) extinguishes.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Why We Forget: Trace Decay vs. Interference"
+      ]
     },
     {
       "stem": "A psychology intern can recall that the DSM-5 requires at least five symptoms for a Major Depressive Episode, that the multi-store model of memory was proposed by Atkinson and Shiffrin, and that delay conditioning is the most effective timing procedure in classical conditioning. According to the declarative memory framework described in the lesson, which memory system stores this body of knowledge?",
@@ -688,7 +782,10 @@
       "lessonExcerpt": "Semantic memory: General knowledge and facts (DSM-5 criteria, therapy theories, that the multi-store model has three components)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Types of Long-Term Memory: Not All Memories Are Equal"
+      ]
     },
     {
       "stem": "A cognitive psychologist presents participants with a recorded list of spoken words under three conditions: one group rates whether each word rhymes with another word (acoustic processing), a second group judges whether each word belongs to a living category (semantic processing), and a third group decides whether each word contains the letter 'e' (structural processing). On a surprise recall test one hour later, which group would the levels-of-processing framework predict will show the highest retention?",
@@ -709,7 +806,10 @@
       "lessonExcerpt": "Simply repeating information (rote rehearsal) is weak. Elaborative rehearsal works better. Connect new information to what you already know - This process, called semantic encoding, is the most effective way to transfer information to long-term memory.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "In a controlled memory study, participants studied a list of 30 paired associates and were then randomly assigned to either sleep for 8 hours or remain awake before a retention test. The sleep group showed significantly superior recall compared to the wake group, even when total elapsed time and interference from new learning were held constant. The mechanism that most directly accounts for the sleep group's advantage is:",
@@ -730,7 +830,10 @@
       "lessonExcerpt": "Information moves from short-term to long-term memory through encoding, connecting new information to something already stored in long-term memory.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain"
+      ]
     },
     {
       "stem": "According to the multi-store model of memory, which type of memory has a large capacity but retains information for only a very brief duration?",
@@ -748,7 +851,10 @@
       "quality_comment": "The question is straightforward with clear, plausible distractors; it tests basic knowledge of memory systems suitable for EPPP review.",
       "lessonExcerpt": "Sensory memory holds incoming information for barely long enough to decide if it matters. Visual information (iconic memory) lasts about half a second",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain"
+      ]
     },
     {
       "stem": "Which of the following best describes the function of the phonological loop in Baddeley's model of working memory?",
@@ -766,7 +872,10 @@
       "quality_comment": "Distractors are carefully worded to reflect other components of working memory, requiring solid understanding to select the correct one.",
       "lessonExcerpt": "Phonological loop | Stores verbal/auditory information",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Baddeley's Working Memory Model: A Closer Look"
+      ]
     },
     {
       "stem": "In the serial position effect observed in the multi-store model of memory, why do individuals recall more words from the end of a list immediately after presentation?",
@@ -784,7 +893,10 @@
       "quality_comment": "The question clearly focuses on a key memory phenomenon and offers plausible distractors that differentiate key memory concepts.",
       "lessonExcerpt": "Semantic memory: General knowledge and facts (DSM-5 criteria, therapy theories, that the multi-store model has three components)",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain"
+      ]
     },
     {
       "stem": "In the Deese-Roediger-McDermott (DRM) procedure, participants commonly demonstrate false memories by:",
@@ -802,7 +914,10 @@
       "quality_comment": "The option choices are plausible memory outcomes, but only one describes the hallmark false memory effect of the DRM paradigm.",
       "lessonExcerpt": "Simply repeating information (rote rehearsal) is weak. Elaborative rehearsal works better. Connect new information to what you already know - This process, called semantic encoding, is the most effective way to transfer information to long-term memory.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "False Memories: When Memory Betrays Us"
+      ]
     },
     {
       "stem": "Which memory improvement technique is demonstrated when a student relates new information to concepts they already understand to facilitate storage in long-term memory?",
@@ -820,7 +935,10 @@
       "quality_comment": "The distractors are related memory strategies, but only elaborative rehearsal involves meaningful connections, making the question clear and well-constructed.",
       "lessonExcerpt": "Elaborative rehearsal works better. Connect new information to what you already know or create personally meaningful examples.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "Tolman’s concept of latent learning was best demonstrated by rats in a maze who:",
@@ -838,7 +956,10 @@
       "quality_comment": "Distractors are plausible maze learning scenarios but differ clearly from Tolman’s latent learning, requiring comprehension of specific experimental results.",
       "lessonExcerpt": "Sensory memory holds incoming information for barely long enough to decide if it matters. Visual information (iconic memory) lasts about half a second",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cognitive Learning Theories: Learning Without Direct Reinforcement"
+      ]
     },
     {
       "stem": "Which of the following best characterizes the recency effect in memory recall tasks?",
@@ -856,7 +977,10 @@
       "quality_comment": "The options are all memory-related concepts but only one correctly describes the recency effect, making this a clear and focused question.",
       "lessonExcerpt": "Phonological loop | Stores verbal/auditory information",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Store Model: How Information Moves Through Your Brain"
+      ]
     },
     {
       "stem": "Which type of interference occurs when newly learned information impairs the recall of previously acquired information?",
@@ -874,7 +998,10 @@
       "quality_comment": "The question provides common interference types, requiring test-takers to distinguish between the directionality of interference effects.",
       "lessonExcerpt": "If tested immediately, you'll remember techniques from the beginning (primacy effect) and end (recency effect) better than the middle ones. The beginning items made it to long-term memory through rehearsal, while the end items are still in short-term memory.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Why We Forget: Trace Decay vs. Interference"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies the use of an acrostic mnemonic?",
@@ -892,7 +1019,10 @@
       "quality_comment": "Distractors represent different mnemonic strategies, requiring knowledge of specific definitions, making for a reasonable test item.",
       "lessonExcerpt": "Critical finding: Amnesic patients with no explicit memory for new information perform normally on priming tasks. This proves implicit memory operates independently from explicit memory.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "The encoding specificity hypothesis explains improved memory retrieval when:",
@@ -910,7 +1040,10 @@
       "quality_comment": "Options are plausible memory strategies but only the correct answer accurately reflects encoding specificity, ensuring clarity and discrimination.",
       "lessonExcerpt": "Method of loci: For lists - Link each concept to objects in your apartment.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Techniques for Improving Memory: Study Smarter"
+      ]
     },
     {
       "stem": "Which type of priming involves facilitated identification of words or objects based on prior exposure to the exact same stimuli, often tested with word-stem or word-fragment completion tasks?",
@@ -928,7 +1061,10 @@
       "quality_comment": "Distractors are several types of priming, requiring detailed knowledge of their distinctions, making the item challenging but focused.",
       "lessonExcerpt": "Interference theory has strong research support. We forget because other information gets in the way",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Priming: Memory Without Awareness"
+      ]
     },
     {
       "stem": "A researcher repeatedly asks participants to imagine an event that never happened, leading to increased confidence that the event did occur. This technique is an example of:",
@@ -946,7 +1082,10 @@
       "quality_comment": "Options include related memory distortion techniques, requiring detailed knowledge to accurately select imagination inflation.",
       "lessonExcerpt": "Observational learning requires four processes: Attention | Retention | Production | Motivation",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "False Memories: When Memory Betrays Us"
+      ]
     },
     {
       "stem": "In Baddeley's model of working memory, which component is primarily responsible for the temporary storage of auditory information?",
@@ -969,7 +1108,10 @@
       ],
       "lessonExcerpt": "Present words: candy, sugar, bitter, chocolate, taste, cake, honey - Result: Many people confidently \"remember\" seeing the word SWEET. Even though it wasn't on the list.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Baddeley's Working Memory Model: A Closer Look"
+      ]
     },
     {
       "stem": "Which of the following best illustrates the role of the phonological loop when a person is trying to remember a phone number by repeating it silently?",
@@ -992,7 +1134,10 @@
       ],
       "lessonExcerpt": "Elaborative rehearsal works better. Connect new information to what you already know or create personally meaningful examples.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Baddeley's Working Memory Model: A Closer Look"
+      ]
     },
     {
       "stem": "A practicum student watches a senior clinician skillfully redirect a client's catastrophic thinking using Socratic questioning during a live supervision session. Without ever having practiced the technique directly or receiving any feedback on their own performance, the student begins successfully using Socratic questioning in their own caseload the following week. Which theoretical framework best explains this acquisition, and who is its primary theorist?",
@@ -1013,7 +1158,10 @@
       "lessonExcerpt": "Bandura's bobo doll experiments showed children learn through observation without direct reinforcement. Observational learning requires four processes",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Cognitive Learning Theories: Learning Without Direct Reinforcement"
+      ]
     },
     {
       "stem": "According to Bandura's social cognitive theory, which of the following is NOT one of the four mediational processes required for observational learning?",
@@ -1031,7 +1179,10 @@
       "quality_comment": "The distractors include three correct mediational processes and one related but incorrect term, requiring precise knowledge of Bandura's theory.",
       "lessonExcerpt": "Retrograde amnesia**: Can't remember things from before the injury. Recent memories disappear first, and when memories return, the oldest ones come back first.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cognitive Learning Theories: Learning Without Direct Reinforcement"
+      ]
     },
     {
       "stem": "What cognitive issue is commonly observed in elderly individuals related to memory retrieval?",
@@ -1052,7 +1203,8 @@
       "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following cognitive changes is most commonly associated with aging?",
@@ -1073,7 +1225,8 @@
       "lessonExcerpt": "The frontal lobes (especially that prefrontal cortex) and parietal lobes show the greatest decrease in size.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following is TRUE regarding the Wechsler Memory Scale – Fourth Edition (WMS-IV)?",
@@ -1091,7 +1244,8 @@
       "quality_comment": "Distractors contain partially true and false statements enhancing discrimination; question promotes integration of test knowledge.",
       "lessonExcerpt": "Four main index scales emerge from the primary subtests",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "Which test is best suited for assessing visual perception, visual memory, and visuoconstructive abilities through reproduction of geometric figures from memory in individuals aged 8 and older?",
@@ -1109,7 +1263,8 @@
       "quality_comment": "The question appropriately targets recognition of test purpose with distractors that assess different domains or ages.",
       "lessonExcerpt": "**Benton Visual Retention Test, 5th Edition (BVRT)** serves a similar purpose for ages 8 and up, focusing on visual perception, visual memory, and visuo-constructive skills.",
       "suggestedLesson": "2-memory",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     }
   ]
 }

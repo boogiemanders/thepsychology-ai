@@ -19,7 +19,10 @@
       "lessonExcerpt": "The Taylor-Russell tables let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?"
+      ]
     },
     {
       "stem": "A company receives 200 applications from White candidates and hires 80 (40% hiring rate), and receives 100 applications from Hispanic candidates and hires 28 (28% hiring rate). According to the four-fifths rule outlined in the Uniform Guidelines on Employee Selection Procedures, this hiring pattern:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "An I-O psychologist introduces a new cognitive ability test (validity coefficient = .35) to a company's hiring process. According to the Taylor-Russell tables, under which combination of conditions will this test produce the GREATEST incremental validity?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "Current base rate: .50... New predictor's validity coefficient: .30... Selection ratio: .10... Result: Adding the new predictor increases success rate to 71%, a 21% improvement! But change the selection ratio to .90... and that same predictor only increases success to 53%. Barely a 3% improvement.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?"
+      ]
     },
     {
       "stem": "An employer uses a cognitive ability test for hiring that results in a selection rate of 70% for White applicants and 50% for Black applicants. According to the Uniform Guidelines on Employee Selection Procedures, the employer should first determine whether adverse impact exists by applying:",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "Will it cause adverse impact? (Does it unfairly screen out protected groups?)",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "Which type of validity evaluates the extent to which a selection test adequately samples the content it is intended to measure?",
@@ -100,7 +112,10 @@
       "quality_comment": "The stem is clear and concise; distractors are related validity types, creating plausible options that test understanding of distinct validity forms.",
       "lessonExcerpt": "**Content validity** means the selection tool adequately covers the knowledge or skills needed for the job.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reliability and Validity: The Foundation"
+      ]
     },
     {
       "stem": "A personality test used in employee selection correlates moderately with a valid intelligence test but poorly with measures of unrelated traits. This approach illustrates assessment of which type of validity?",
@@ -118,7 +133,10 @@
       "quality_comment": "The scenario requires application of validity concepts; distractors are related but distinct types, promoting discriminative thinking.",
       "lessonExcerpt": "To establish construct validity, you'd show that:\n- Scores correlate highly with other valid measures of the same construct (convergent validity)\n- Scores don't correlate too highly with measures of different constructs (discriminant validity)",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reliability and Validity: The Foundation"
+      ]
     },
     {
       "stem": "Which coefficient range indicates the highest reliability in a selection test?",
@@ -136,7 +154,10 @@
       "quality_comment": "Simple numerical options with clear distinctions make the question straightforward and ideal for foundational knowledge testing.",
       "lessonExcerpt": "Most good selection tools aim for reliability coefficients above .70 or .80.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reliability and Validity: The Foundation"
+      ]
     },
     {
       "stem": "When an organization uses a new predictor with a criterion-related validity coefficient of .30, a base rate of .50, and a selection ratio of .10, what is the expected percentage of successful employees after adding this predictor, according to the Taylor-Russell tables?",
@@ -154,7 +175,10 @@
       "quality_comment": "Requires integration of multiple concepts; options are numerically plausible, providing realistic distractors for higher-level content mastery.",
       "lessonExcerpt": "Here's an example from the tables:\n- Current base rate: .50 (50% of current hires are successful)\n- New predictor's validity coefficient: .30 (fairly modest)\n- Selection ratio: .10 (hiring 1 out of 10 applicants)\n\n**Result**: Adding the new predictor increases success rate to 71%",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?"
+      ]
     },
     {
       "stem": "Which of the following best describes the selection ratio?",
@@ -172,7 +196,10 @@
       "quality_comment": "Options are plausible HR and psychometric terms, requiring clear understanding of selection ratio definition.",
       "lessonExcerpt": "**Selection Ratio = Number of people you'll hire ÷ Total number of applicants**",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?"
+      ]
     },
     {
       "stem": "According to the Uniform Guidelines on Employee Selection Procedures, adverse impact occurs when:",
@@ -190,7 +217,10 @@
       "quality_comment": "Straightforward stem with clearly differentiated options tests knowledge of a key legal criterion effectively.",
       "lessonExcerpt": "**Adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group.**",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "Which of the following is an example of test unfairness in employee selection?",
@@ -208,7 +238,10 @@
       "quality_comment": "Distractors reflect related concepts making the examinee carefully analyze the fairness concepts.",
       "lessonExcerpt": "**Test unfairness** happens when members of one group consistently score lower on a selection test, but this difference *doesn't* appear in their actual job performance.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "An employer defends the use of a selection test that shows adverse impact by demonstrating it is a business necessity. Which of the following is an example of a business necessity?",
@@ -226,7 +259,10 @@
       "quality_comment": "Options include plausible but incorrect scenarios that test knowledge of acceptable business necessity criteria.",
       "lessonExcerpt": "| **Business Necessity** | The requirement is necessary for safe and efficient operation | Airline requiring pilots to have excellent vision |",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "Utility analysis in employee selection is primarily concerned with:",
@@ -244,7 +280,10 @@
       "quality_comment": "Distractors are related to measurement concepts, encouraging discrimination among technical terms.",
       "lessonExcerpt": "**Utility analysis** calculates the economic return on investment from using a selection tool.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Utility Analysis: Show Me the Money"
+      ]
     },
     {
       "stem": "Incremental validity is best exemplified by which of the following statements?",
@@ -262,7 +301,10 @@
       "quality_comment": "Clear wording and close distractors make this question an effective test of understanding incremental validity.",
       "lessonExcerpt": "**Incremental validity** is the increase in decision-making accuracy you get from adding a new predictor.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?"
+      ]
     },
     {
       "stem": "Differential validity occurs when:",
@@ -280,7 +322,10 @@
       "quality_comment": "Distractors are plausible and require knowledge of nuanced fairness concepts in employment testing.",
       "lessonExcerpt": "**Differential validity** occurs when a selection tool has significantly different validity coefficients for different groups.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "A selection test has high reliability but low validity. What does this imply about the test?",
@@ -298,7 +343,10 @@
       "quality_comment": "Presents a core testing concept with balanced answer choices encouraging understanding of measurement theory.",
       "lessonExcerpt": "Your bathroom scale might consistently tell you that you weigh 150 pounds, but if you actually weigh 180 pounds, that scale is reliable but not valid. It's consistently measuring the wrong thing.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reliability and Validity: The Foundation"
+      ]
     },
     {
       "stem": "A new assessment tool designed to measure leadership skills shows a strong correlation with existing measures of emotional intelligence but no correlation with physical fitness tests. This scenario exemplifies which type of validity?",
@@ -321,7 +369,10 @@
       ],
       "lessonExcerpt": "**Construct validity** means the tool actually measures the psychological trait (construct) it claims to measure.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reliability and Validity: The Foundation"
+      ]
     },
     {
       "stem": "In a study evaluating a new cognitive ability test, researchers find that it correlates highly with established measures of problem-solving skills but shows no relationship with measures of creativity. This finding supports which type of validity?",
@@ -344,7 +395,10 @@
       ],
       "lessonExcerpt": "To establish construct validity, you'd show that:\n- Scores correlate highly with other valid measures of the same construct (convergent validity)",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Reliability and Validity: The Foundation"
+      ]
     },
     {
       "stem": "A human resources consultant wants to use Taylor-Russell tables to estimate the proportion of selected job candidates who will be successful performers after implementing a new aptitude test. Which combination of three variables is required as input to use these tables correctly?",
@@ -365,7 +419,10 @@
       "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?"
+      ]
     },
     {
       "stem": "A psychologist is evaluating an employer's selection process for potential adverse impact. She finds that White applicants are hired at a rate of 60%, while Black applicants are hired at a rate of 44%. Applying the four-fifths (80%) rule as specified in the EEOC Uniform Guidelines on Employee Selection Procedures, which of the following conclusions is MOST appropriate?",
@@ -386,7 +443,10 @@
       "lessonExcerpt": "**Adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group.**",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "In 1971, the U.S. Supreme Court ruled in Griggs v. Duke Power Co. that Duke Power's requirement of a high school diploma and passing scores on two general intelligence tests for internal job transfers was unlawful under Title VII of the Civil Rights Act. The company had not validated these requirements as related to successful job performance, and Black employees were disproportionately excluded. Which of the following most accurately captures the central principle established by this ruling for employment selection testing?",
@@ -407,7 +467,10 @@
       "lessonExcerpt": "Adverse impact** (also called disparate impact) occurs when a selection method negatively affects protected group members compared to majority group members. The Uniform Guidelines on Employee Selection Procedures outlines two main problems that cause adverse impact:",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "What does the standard error of measurement (SEM) indicate in the context of psychological testing?",
@@ -428,7 +491,10 @@
       "lessonExcerpt": "The **standard error of measurement (SEM)** quantifies this uncertainty.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Reliability and Validity: The Foundation"
+      ]
     },
     {
       "stem": "Which of the following best describes the primary purpose of using Taylor-Russell tables in evaluating a new predictor test?",
@@ -446,7 +512,10 @@
       "quality_comment": "This question adds depth by addressing specific methods used to evaluate incremental validity, with distractors related to other psychometric concepts.",
       "lessonExcerpt": "The Taylor-Russell tables let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
       "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?"
+      ]
     },
     {
       "stem": "When adjusting predictor cutoffs in hiring processes, what is a primary consideration?",
@@ -467,7 +536,10 @@
       "lessonExcerpt": "Adjusting predictor cutoffs in hiring processes requires consideration of the potential impact on diversity.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "Which method is most effective for optimizing incremental validity in selection processes?",
@@ -488,7 +560,10 @@
       "lessonExcerpt": "**Incremental validity** asks: Does this new predictor improve prediction accuracy beyond what we already have?",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?"
+      ]
     },
     {
       "stem": "What is a primary concern regarding adverse impact in employment testing?",
@@ -509,7 +584,10 @@
       "lessonExcerpt": "Adverse impact may disproportionately affect certain demographic groups.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Adverse Impact: Making Sure Your Tool Is Fair"
+      ]
     },
     {
       "stem": "What do Taylor-Russell tables primarily help assess in the context of selection decision-making?",
@@ -530,7 +608,11 @@
       "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "Incremental Validity: Does Adding This Tool Actually Help?",
+        "Utility Analysis: Show Me the Money"
+      ]
     },
     {
       "stem": "Based on 2022 CDC epidemiological data, a psychologist conducting a suicide risk assessment should be MOST aware that the highest rate of completed suicide among males occurs in which demographic group?",
@@ -551,7 +633,8 @@
       "lessonExcerpt": "Males: 4 times higher suicide rate than females. Highest rate for males: ages 75+. Highest rate for females: ages 45-64. Ethnicity: Highest rates for non-Hispanic American Indian/Alaskan Native individuals.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": null
     }
   ]
 }

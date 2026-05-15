@@ -19,7 +19,11 @@
       "lessonExcerpt": "When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Understanding Distribution Shapes: What the Data's Shape Tells You",
+        "Visualizing Data: Choosing the Right Graph"
+      ]
     },
     {
       "stem": "A dataset of anxiety scores has a positively skewed distribution with a mean of 35, a standard deviation of 8, and a range from 20 to 75. If each score is converted to a z-score, what will be true about the resulting distribution?",
@@ -40,7 +44,10 @@
       "lessonExcerpt": "{{M}}If you measure the wait times for appointments at a large clinic and get a normal distribution with a mean of 15 minutes and standard deviation of 5 minutes, you know that about 68% of clients wa",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Understanding Distribution Shapes: What the Data's Shape Tells You"
+      ]
     },
     {
       "stem": "How does age function as a moderator variable in psychological research?",
@@ -61,7 +68,10 @@
       "lessonExcerpt": "A moderator variable changes the strength or direction of the relationship between your independent and dependent variables.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "A researcher collects annual income data from a sample of psychologists but many participants at the high end report only that they earn '$200,000 or more' rather than providing exact figures. When selecting a measure of central tendency for this dataset, the researcher should use the:",
@@ -82,7 +92,10 @@
       "lessonExcerpt": "When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Understanding Distribution Shapes: What the Data's Shape Tells You"
+      ]
     },
     {
       "stem": "In a research study comparing the effectiveness of three different therapies on reducing depressive symptoms, the variable representing the type of therapy given is best described as which of the following?",
@@ -100,7 +113,10 @@
       "quality_comment": "The question clearly distinguishes between different types of variables; distractors are plausible for examinees who might confuse roles of variables in studies.",
       "lessonExcerpt": "The **independent variable** is what researchers manipulate or compare (it's the \"cause\" side of the equation.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "Which of the following best characterizes a mediator variable in psychological research?",
@@ -118,7 +134,10 @@
       "quality_comment": "Distractors include correct concepts related to variables but selectively differentiate mediator from moderator and extraneous variables, enhancing discrimination.",
       "lessonExcerpt": "A **mediator variable** explains *why* or *how* an independent variable affects a dependent variable. It's the mechanism, the middle step in the process.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "In a study of teaching methods where one group receives instruction in noisier conditions than another group, the noise level is best described as which type of variable?",
@@ -136,7 +155,10 @@
       "quality_comment": "The question situationally clarifies concept of extraneous variables; distractors include other variable types to test subtle distinctions.",
       "lessonExcerpt": "**Extraneous variables** (also called confounding variables) are factors you didn't plan for but might mess up your results.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "Which scale of measurement allows for meaningful statements about ratios, such as one value being twice as much as another, due to having an absolute zero?",
@@ -154,7 +176,10 @@
       "quality_comment": "Distractors reflect common scales of measurement, making the question effective for testing knowledge of scale properties.",
       "lessonExcerpt": "**Ratio scales** have everything: ordered categories, equal intervals, *and* an absolute zero point that means \"none of this quality exists.\"",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Scales of Measurement: How We Quantify Experience"
+      ]
     },
     {
       "stem": "A variable measured by assigning individuals to categories such as 'strongly agree,' 'agree,' 'disagree,' and 'strongly disagree' is an example of which scale of measurement?",
@@ -172,7 +197,10 @@
       "quality_comment": "Clear stem with straightforward options; distractors are plausible but test basic knowledge of measurement levels.",
       "lessonExcerpt": "Common examples:\n- Likert scales (strongly agree to strongly disagree)",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Scales of Measurement: How We Quantify Experience"
+      ]
     },
     {
       "stem": "In a frequency polygon depicting test scores that are negatively skewed, which of the following accurately describes the relative positions of the mean, median, and mode?",
@@ -190,7 +218,11 @@
       "quality_comment": "The question tests nuanced understanding of skewed distributions; the distractors are plausible, requiring detailed conceptual comprehension.",
       "lessonExcerpt": "| Negatively Skewed | Lowest value | Middle | Highest value |",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Distribution Shapes: What the Data's Shape Tells You",
+        "Visualizing Data: Choosing the Right Graph"
+      ]
     },
     {
       "stem": "Which type of graph is most appropriate for displaying data measured on a nominal scale, such as eye color categories?",
@@ -208,7 +240,10 @@
       "quality_comment": "The question is clear and tests common knowledge; distractors are typical graph types but less suitable for nominal data.",
       "lessonExcerpt": "**Bar graphs** work with nominal and ordinal data.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Visualizing Data: Choosing the Right Graph"
+      ]
     },
     {
       "stem": "A study finds that cognitive-behavioral therapy reduces anxiety because it changes the way clients think. Changing the clients' thinking is an example of what kind of variable in this context?",
@@ -226,7 +261,10 @@
       "quality_comment": "Distractors include relevant variable concepts; the scenario helps clarify mediator conceptualization effectively.",
       "lessonExcerpt": "In psychotherapy research, cognitive therapy for depression assumes this pathway:\n- Therapy (independent variable) → Changes in negative thinking patterns (mediator) → Reduced depressive symptoms (dependent variable)",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "What distinguishes a moderator variable in experimental research?",
@@ -244,7 +282,10 @@
       "quality_comment": "Distractors reflect related concepts, requiring test-takers to discriminate carefully, making it a well-constructed question.",
       "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "Which of the following best describes a platykurtic distribution?",
@@ -262,7 +303,10 @@
       "quality_comment": "This item tests knowledge often confused with leptokurtic and normal distributions; the distractors are appropriately challenging.",
       "lessonExcerpt": "**Platykurtic distribution**: Flatter peak and fatter tails than normal.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Distribution Shapes: What the Data's Shape Tells You"
+      ]
     },
     {
       "stem": "Which of the following is true about a confounding variable in research?",
@@ -280,7 +324,10 @@
       "quality_comment": "The question clarifies an important subtype of extraneous variables, distinguishing it from mediators or moderators with effective distractors.",
       "lessonExcerpt": "**Extraneous variables** (also called confounding variables) are factors you didn't plan for but might mess up your results. They make it hard to know if your independent variable really caused the changes you observed.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "What type of graph is most appropriate to show the distribution of IQ scores in a sample, which are measured on an interval scale?",
@@ -298,7 +345,12 @@
       "quality_comment": "The item tests basic but essential knowledge of data visualization; distractors are plausible graph types but inappropriate for interval data.",
       "lessonExcerpt": "**Histograms** are used with interval and ratio data. The bars touch each other because the data represents a continuous range of scores, not separate categories.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Visualizing Data: Choosing the Right Graph",
+        "Scales of Measurement: How We Quantify Experience",
+        "Understanding Distribution Shapes: What the Data's Shape Tells You"
+      ]
     },
     {
       "stem": "In terms of variable types, which best describes parenting style that modifies the effectiveness of a treatment for social anxiety in adolescents?",
@@ -316,7 +368,10 @@
       "quality_comment": "The realistic example enhances understanding; distractors involve related variable types for candidate discrimination.",
       "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "In a study examining the impact of different diets on weight loss, the variable indicating the type of diet participants follow is classified as which of the following?",
@@ -339,7 +394,10 @@
       ],
       "lessonExcerpt": "The **independent variable** is what researchers manipulate or compare (it's the \"cause\" side of the equation.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "In an experiment investigating the effects of various teaching methods on student performance, the variable that denotes the specific teaching method used is best described as which type of variable?",
@@ -362,7 +420,10 @@
       ],
       "lessonExcerpt": "The **independent variable** is what researchers manipulate or compare (it's the \"cause\" side of the equation.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "In a study examining the relationship between education level and job performance, which of the following best describes the role of education as a moderator variable?",
@@ -383,7 +444,10 @@
       "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables"
+      ]
     },
     {
       "stem": "In a mixed research design measuring the effects of drug dose on depression over time, drug dose is manipulated between subjects, while depressive symptoms measured weekly represent which type of variable?",
@@ -401,7 +465,11 @@
       "quality_comment": "The question requires integration of design concepts, making distractors plausible and the item challenging at the EPPP level.",
       "lessonExcerpt": "Each person experiences all (or multiple) conditions at different times.",
       "suggestedLesson": "7-variables",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Cast of Characters: Types of Variables",
+        "Scales of Measurement: How We Quantify Experience"
+      ]
     }
   ]
 }

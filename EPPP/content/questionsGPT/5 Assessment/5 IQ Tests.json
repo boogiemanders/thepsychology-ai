@@ -19,7 +19,10 @@
       "lessonExcerpt": "This creates the \"classic aging pattern\". Verbal abilities stay strong while performance (nonverbal) abilities decline earlier.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "A school psychologist administers the WISC-V to a 7-year-old child referred for a gifted education evaluation. The child obtains maximum or near-maximum scores on multiple subtests, making it difficult to determine precisely how far above average the child's abilities extend. This limitation is BEST described as:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Testing continues until you reach the ceiling level—the point where they miss 75% of questions at two consecutive age levels.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)"
+      ]
     },
     {
       "stem": "What is the predictive validity of infant intelligence tests primarily concerned with?",
@@ -61,7 +67,8 @@
       "lessonExcerpt": "Nonverbal Learning Disability (NVLD)** shows VCI significantly higher than PRI. These individuals have strong verbal abilities but struggle with visual-spatial tasks, math concepts, and reading nonverbal cues.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": null
     },
     {
       "stem": "When assessing intelligence in children with disorders, which type of test is most likely to be used to evaluate verbal intelligence?",
@@ -82,7 +89,10 @@
       "lessonExcerpt": "## Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)\n\n### Structure\n\nThe WISC-V assesses children and adolescents ages 6-16",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)"
+      ]
     },
     {
       "stem": "What is the primary focus of the Primary Mental Abilities Test?",
@@ -103,7 +113,10 @@
       "lessonExcerpt": "## Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)\n\n### Structure\n\nThe WISC-V assesses children and adolescents ages 6-16",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     },
     {
       "stem": "Which of the following best describes the hierarchical levels in Carroll's Three-Stratum Theory of intelligence?",
@@ -121,7 +134,10 @@
       "quality_comment": "Options are structured similarly but contain subtle reversals in the order of strata, requiring detailed knowledge; well-designed for EPPP difficulty.",
       "lessonExcerpt": "Fluid intelligence peaks relatively early (around 30-40 years) and starts declining. Crystallized intelligence, however, keeps growing until around 60-70 years.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     },
     {
       "stem": "The Cattell-Horn-Carroll (CHC) theory has most influenced the development and revision of which intelligence test?",
@@ -139,7 +155,11 @@
       "quality_comment": "Distractors are credible alternate intelligence tests, making the correct answer plausible yet distinguished by careful recall.",
       "lessonExcerpt": "The Woodcock-Johnson (WJ-III, 2001 and WJ-IV, 2014) was the first major intelligence battery designed explicitly around CHC theory, and it remains the canonical operationalization of CHC in the psychometric literature.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Woodcock-Johnson Tests of Cognitive Abilities (WJ-IV)",
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     },
     {
       "stem": "Which cognitive ability is primarily assessed by the Visual Spatial Index of the WISC-V?",
@@ -157,7 +177,10 @@
       "quality_comment": "The options are equally plausible cognitive abilities, making this a straightforward recall question appropriate for EPPP.",
       "lessonExcerpt": "The Stanford-Binet 5th Edition explicitly uses CHC theory",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)"
+      ]
     },
     {
       "stem": "What is the primary reason psychologists must be cautious when interpreting IQ scores obtained using older test norms, according to the Flynn Effect?",
@@ -175,7 +198,10 @@
       "quality_comment": "Distractors address plausible misunderstandings about the Flynn effect, thus providing meaningful options for test-takers.",
       "lessonExcerpt": "| Visual Spatial | Visual Processing (Gv) |",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Flynn Effect: Why Test Norms Matter"
+      ]
     },
     {
       "stem": "In the WAIS-IV, which Index Score typically shows the greatest decline beginning around age 30?",
@@ -193,7 +219,10 @@
       "quality_comment": "Distractors include other WAIS-IV indexes that decline later or remain stable to increase discrimination without making the question overly difficult.",
       "lessonExcerpt": "IQ scores increased by about 3 points per decade throughout the 20th century. This \"Flynn effect\" means that if you took an IQ test with 1980s norms today, you'd score higher than if you took a test with current norms.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "Which of the following patterns of WAIS-IV index scores is characteristic of an individual with nonverbal learning disability (NVLD)?",
@@ -211,7 +240,10 @@
       "quality_comment": "Options include plausible discrepancies but only one corresponds to the clinical pattern, rewarding detailed knowledge of test profiles.",
       "lessonExcerpt": "- **PSI**: Steepest age-related decline, starting around 30",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "Which of the following theories of intelligence emphasizes planning, attention, simultaneous processing, and sequential processing as four interdependent functions?",
@@ -229,7 +261,10 @@
       "quality_comment": "Distractor theories are well-known and plausible but distinct; this tests precise recognition of the PASS theory.",
       "lessonExcerpt": "**Nonverbal Learning Disability (NVLD)** shows VCI significantly higher than PRI.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     },
     {
       "stem": "Which WAIS-IV Index is mainly associated with crystallized intelligence (Gc) based on CHC theory as identified in independent factor analyses?",
@@ -247,7 +282,10 @@
       "quality_comment": "Clear distinction among indexes with CHC labels makes this a straightforward knowledge recall question well-suited for EPPP review.",
       "lessonExcerpt": "**PASS Theory** focuses on four cognitive functions: Planning, Attention, Simultaneous processing, and Sequential processing. This theory connects to brain structures based on Luria's research.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "For a child diagnosed with Autism Spectrum Disorder without language impairment, which WISC-V Index score is typically the highest?",
@@ -265,7 +303,10 @@
       "quality_comment": "Distractors are commonly reported indexes allowing test-takers to exercise applied knowledge, enhancing question quality.",
       "lessonExcerpt": "| Verbal Comprehension | Crystallized Intelligence (Gc) |",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)"
+      ]
     },
     {
       "stem": "Which of the following accurately describes the stopping rule (ceiling) when administering a Stanford-Binet 5th Edition subtest?",
@@ -283,7 +324,10 @@
       "quality_comment": "Options are plausible test discontinuation rules, but only one matches the SB5 guidelines, requiring specific knowledge.",
       "lessonExcerpt": "| Autism Spectrum Disorder without Language Impairment | PSI | VCI |",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Stanford-Binet Intelligence Scale, 5th Edition (SB5)"
+      ]
     },
     {
       "stem": "Which intelligence test is designed for individuals aged 2 to 85 years and contains five cognitive factors each divided into verbal and nonverbal domains?",
@@ -301,7 +345,10 @@
       "quality_comment": "The options are all major IQ tests but differ in age ranges and structure; question clearly assesses knowledge of test features.",
       "lessonExcerpt": "Testing continues until you reach the **ceiling level**) the point where they miss 75% of questions at two consecutive age levels.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Stanford-Binet Intelligence Scale, 5th Edition (SB5)"
+      ]
     },
     {
       "stem": "Which of the following best describes the General Ability Index (GAI) on the WAIS-IV?",
@@ -319,7 +366,10 @@
       "quality_comment": "Distractors are plausible alternate index conceptualizations, requiring knowledge of WAIS-IV scoring and clinical use.",
       "lessonExcerpt": "The SB5 assesses individuals from age 2 to 85+ and measures five cognitive factors derived from CHC theory",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "Research indicates that the Flynn effect has recently plateaued or reversed in certain populations. Which environmental factor best explains these rapid IQ score changes?",
@@ -337,7 +387,10 @@
       "quality_comment": "Distractors include common but incorrect attributions, providing a discriminating test of understanding environmental vs. genetic influences.",
       "lessonExcerpt": "The **General Ability Index (GAI)** combines only VCI and PRI, excluding working memory and processing speed.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Flynn Effect: Why Test Norms Matter"
+      ]
     },
     {
       "stem": "Which theory of intelligence critiques traditional IQ tests for neglecting creative and practical intelligence?",
@@ -355,7 +408,10 @@
       "quality_comment": "Answer options are well-known theories, making the correct choice rewarding knowledge of broader intelligence conceptualizations.",
       "lessonExcerpt": "The changes happen too fast to be genetic. They're environmental. Better nutrition, more education, increased cognitive complexity in daily life, and other environmental factors likely drive these changes.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     },
     {
       "stem": "Which of the following best explains the importance of updated normative data in intelligence testing?",
@@ -373,7 +429,10 @@
       "quality_comment": "Distractors contrast commonly held misconceptions, allowing clear discrimination for those understanding test norm updates.",
       "lessonExcerpt": "**Sternberg's Triarchic Theory** describes three components: analytical intelligence (academic problem-solving), creative intelligence (handling novel situations), and practical intelligence (everyday tasks). Sternberg criticized traditional IQ tests",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Flynn Effect: Why Test Norms Matter"
+      ]
     },
     {
       "stem": "In the context of cognitive development, which type of intelligence is characterized by the ability to reason and solve new problems without relying on previously acquired knowledge?",
@@ -396,7 +455,10 @@
       ],
       "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses. Someone tested on an older test might score above the intellectual disability threshold, but on a newer test with updated norms, they might fall below it.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     },
     {
       "stem": "Which of the following statements best describes the trend of crystallized intelligence across the lifespan, according to Horn and Cattell's theory?",
@@ -419,7 +481,10 @@
       ],
       "lessonExcerpt": "**Fluid intelligence (Gf)** is your raw ability to solve new problems, see patterns, and think abstractly without relying on previous knowledge.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     },
     {
       "stem": "According to Horn and Cattell's theory, which type of intelligence peaks earliest in adulthood?",
@@ -437,7 +502,10 @@
       "quality_comment": "The distractors are plausible and based on reversed or incorrect age and intelligence type pairings, requiring careful knowledge of the theory.",
       "lessonExcerpt": "**Criterion deficiency** occurs when our measure misses important aspects of performance.",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     },
     {
       "stem": "Dr. Martinez is conducting a neuropsychological evaluation of a 68-year-old client. She expects to find age-related decline on tasks measuring fluid intelligence but relatively preserved performance on tasks measuring crystallized intelligence. Which pattern of test results would be MOST consistent with this expectation?",
@@ -458,7 +526,10 @@
       "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss. This process accelerates after age 60... the brain isn't helpless against this decline. It compensates through: Developing new connections between remaining neurons",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "What cognitive decline is commonly observed in aging adults as measured by the WAIS-IV?",
@@ -479,7 +550,10 @@
       "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "What cognitive abilities typically decline with aging, according to research?",
@@ -500,7 +574,10 @@
       "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss, affecting memory and processing speed.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "Which of the following characteristics is most commonly associated with autism spectrum disorder?",
@@ -521,7 +598,8 @@
       "lessonExcerpt": "**Incremental validity** asks: Does this new predictor improve prediction accuracy beyond what we already have?",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     },
     {
       "stem": "What is the primary aim of the Wechsler Adult Intelligence Scale (WAIS)?",
@@ -544,7 +622,10 @@
       ],
       "lessonExcerpt": "| 0.5 to 0.7 | Moderate impairment |",
       "suggestedLesson": "5-iq-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)"
+      ]
     },
     {
       "stem": "In the WISC-IV, which cognitive ability is primarily assessed by the Perceptual Reasoning Index?",
@@ -565,7 +646,10 @@
       "lessonExcerpt": "**Kuder-Richardson 20 (KR-20):** A version of coefficient alpha specifically for items scored as right/wrong (dichotomous scoring).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)"
+      ]
     },
     {
       "stem": "According to the Cattell-Horn-Carroll theory of intelligence, which of the following abilities is classified under fluid intelligence?",
@@ -586,7 +670,10 @@
       "lessonExcerpt": "**Fluid intelligence (Gf)** is your raw ability to solve new problems, see patterns, and think abstractly without relying on previous knowledge.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Understanding Intelligence: The Theoretical Foundation"
+      ]
     }
   ]
 }

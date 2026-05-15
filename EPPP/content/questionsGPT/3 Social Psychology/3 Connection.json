@@ -19,7 +19,10 @@
       "lessonExcerpt": "Physical attractiveness - Youth - Specific physical markers ### Why These Differences?",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "What Makes Us Attracted to Specific People?"
+      ]
     },
     {
       "stem": "A graduate student receives unexpectedly critical feedback on her dissertation proposal and is unsure whether her emotional reaction is proportionate. According to Festinger's social comparison theory, she would most likely seek out:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Social comparison theory, developed by Leon Festinger in 1954, explains why. When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "The Need for Affiliation: Why We Seek Others"
+      ]
     },
     {
       "stem": "A 4-year-old boy correctly states that he will grow up to be a man, but he believes that if he wore a dress and grew his hair long, he could become a girl. According to Kohlberg's cognitive developmental theory, this child has achieved which stage of gender identity development?",
@@ -61,7 +67,8 @@
       "lessonExcerpt": "1. **Gender identity** (ages 2-3): Correctly labels self and others as male/female\n2. **Gender stability** (age 4): Understands gender is stable over time (boys become men)\n3. **Gender constancy** (ages 6-7): Understands gender is stable across situations and doesn't change with appearance",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": null
     },
     {
       "stem": "According to Schachter's (1959) research on affiliation, highly anxious individuals tend to prefer waiting with:",
@@ -79,7 +86,10 @@
       "quality_comment": "The question clearly tests understanding of a key study with plausible distractors that cover alternative behaviors, making it suitable for EPPP-level.",
       "lessonExcerpt": "Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice When you work with clients, you'll quickly notice that many of their struggles center on relationships: Why can't they make friends?",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Need for Affiliation: Why We Seek Others"
+      ]
     },
     {
       "stem": "Which of the following best explains why people tend to be attracted to others who share similar attitudes according to Byrne's law of attraction?",
@@ -97,7 +107,10 @@
       "quality_comment": "Options are well balanced and the correct answer targets a core principle of attraction, making it appropriate for the EPPP.",
       "lessonExcerpt": "Donn Byrne formulated the law of attraction in 1971, stating there's a positive linear relationship between attitude similarity and attraction. Why? Because interacting with people who share our views is reinforcing.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Us Attracted to Specific People?"
+      ]
     },
     {
       "stem": "The mere exposure effect predicts that repeated exposure to a person will increase liking only when initial reactions are:",
@@ -115,7 +128,10 @@
       "quality_comment": "Distractors include nuanced choices around valence, which challenges the test taker to recall precise conditions of the mere exposure effect.",
       "lessonExcerpt": "This effect works when our initial reaction is neutral, mildly negative, or positive. If you absolutely can't stand someone from your first meeting, seeing them repeatedly won't magically fix that.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Us Attracted to Specific People?"
+      ]
     },
     {
       "stem": "The gain-loss effect in reciprocity suggests that people tend to be most attracted to those who:",
@@ -133,7 +149,10 @@
       "quality_comment": "The options reflect the theoretical gradient of liking, well-designed to test recognition of a subtle social psychological phenomenon.",
       "lessonExcerpt": "When highly anxious participants could choose between waiting alone or with other participants facing the same shock experiment, they overwhelmingly chose to wait together.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Us Attracted to Specific People?"
+      ]
     },
     {
       "stem": "According to Berscheid’s emotion-in-relationships model, strong emotional reactions in intimate relationships occur primarily when:",
@@ -151,7 +170,10 @@
       "quality_comment": "The stem is precise and all options are plausible behaviors in relationships, making the correct answer stand out logically.",
       "lessonExcerpt": "Donn Byrne formulated the law of attraction in 1971, stating there's a positive linear relationship between attitude similarity and attraction. Why? Because interacting with people who share our views is reinforcing.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Intimate Relationships Generate Emotion"
+      ]
     },
     {
       "stem": "Buss and colleagues (1992) found that sexual infidelity elicits a stronger jealous response in men because:",
@@ -169,7 +191,10 @@
       "quality_comment": "Answer options include commonly studied motives and theories, making the correct response clearly tied to key EPPP content.",
       "lessonExcerpt": "This effect works when our initial reaction is neutral, mildly negative, or positive. If you absolutely can't stand someone from your first meeting, seeing them repeatedly won't magically fix that.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Jealousy: Gender Differences and Explanations"
+      ]
     },
     {
       "stem": "The double-shot hypothesis explains gender differences in jealousy by proposing that:",
@@ -187,7 +212,10 @@
       "quality_comment": "The question requires understanding a complex interaction of beliefs and jealousy with plausible but nuanced distractors.",
       "lessonExcerpt": "competent people become more attractive when they commit small blunders, while average people become less attractive when they make the same mistakes.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Jealousy: Gender Differences and Explanations"
+      ]
     },
     {
       "stem": "According to Buss (1989), across many cultures, men prefer mates who primarily exhibit:",
@@ -205,7 +233,10 @@
       "quality_comment": "Distractors are relevant mate qualities, making the correct option salient but not obvious, suitable for EPPP level.",
       "lessonExcerpt": "We're MORE attracted to people who initially dislike us but warm up over time than to people who consistently like us",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gender Differences in Mate Preferences"
+      ]
     },
     {
       "stem": "Cross-cultural research indicates that a low waist-to-hip ratio (WHR) of about 0.7 in women is generally preferred by men because it is a marker of:",
@@ -223,7 +254,10 @@
       "quality_comment": "Good balance of options; the correct answer aligns with established evolutionary theory tested in EPPP.",
       "lessonExcerpt": "strong emotions arise in close relationships when a partner interrupts the couple's usual behavioral routines by doing something unexpected.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gender Differences in Mate Preferences"
+      ]
     },
     {
       "stem": "Which of the following best describes the evolutionary basis for the human need for affiliation?",
@@ -241,7 +275,10 @@
       "quality_comment": "Options are plausible theories, allowing examinees to discriminate knowledge of evolutionary vs. social explanations effectively.",
       "lessonExcerpt": "Throughout human history, sexual infidelity threatened men's certainty about paternity (since they couldn't be sure a child was genetically theirs)",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Need for Affiliation: Why We Seek Others"
+      ]
     },
     {
       "stem": "Generalized reciprocity differs from dyadic reciprocity in that generalized reciprocity:",
@@ -259,7 +296,10 @@
       "quality_comment": "This item distinguishes similar concepts with closely related terminology, testing precise conceptual understanding suitable for EPPP.",
       "lessonExcerpt": "DeSteno and Salovey proposed the double-shot hypothesis in 1996, which suggests men and women have different beliefs about how sexual and emotional infidelity co-occur",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes Us Attracted to Specific People?"
+      ]
     },
     {
       "stem": "In a study on social affiliation, researchers found that individuals experiencing high levels of anxiety are more likely to seek out:",
@@ -282,7 +322,10 @@
       ],
       "lessonExcerpt": "Men prioritized: Physical attractiveness, Youth, Specific physical markers",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Need for Affiliation: Why We Seek Others"
+      ]
     },
     {
       "stem": "A group of researchers is examining the behavior of individuals in stressful situations. They hypothesize that those with high anxiety will prefer to engage in group activities with:",
@@ -305,7 +348,10 @@
       ],
       "lessonExcerpt": "Men across cultures tend to prefer a WHR of approximately 0.7 (waist circumference about 70% of hip circumference), considered a marker of good health and reproductive ability.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Need for Affiliation: Why We Seek Others"
+      ]
     },
     {
       "stem": "Which type of depth cue do infants begin using at about five to six months of age, providing the impression of depth from static, one-eyed images?",
@@ -323,7 +369,8 @@
       "quality_comment": "Distractors are plausible types of depth cues, requiring test-takers to know specific developmental timing and cue types.",
       "lessonExcerpt": "These different reproductive challenges shaped what triggers jealousy most intensely. ### Alternative Explanation: The Double-Shot Hypothesis",
       "suggestedLesson": "3-connection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     }
   ]
 }

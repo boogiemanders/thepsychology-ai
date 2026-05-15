@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include relevant techniques for other sexual disorders or paraphilic disorders, providing plausible but distinct options.",
       "lessonExcerpt": "**Sensate Focus** (developed by Masters and Johnson in 1970) is the gold standard behavioral intervention. It works by gradually rebuilding intimacy while removing performance pressure.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Dysfunctions: When the Body and Mind Don't Cooperate"
+      ]
     },
     {
       "stem": "A man reports persistent difficulty ejaculating before one minute of vaginal penetration in 80% of sexual encounters for the past seven months, causing him significant distress. Which of the following treatments is supported by research for this condition?",
@@ -32,7 +35,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include plausible treatments related to sexual disorders or gender dysphoria to challenge test-takers appropriately.",
       "lessonExcerpt": "**SSRIs** (particularly paroxetine): Low serotonin levels contribute to premature ejaculation, and daily SSRIs can help delay ejaculation",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Dysfunctions: When the Body and Mind Don't Cooperate"
+      ]
     },
     {
       "stem": "Which of the following DSM-5-TR specifiers is NOT applicable to genito-pelvic pain/penetration disorder?",
@@ -49,7 +55,10 @@
       "difficulty": "hard",
       "quality_comment": "The question tests detailed knowledge of diagnostic criteria and specifiers, with distractors mixing diagnostic features and irrelevant clinical terminology.",
       "lessonExcerpt": "The one exception is genito-pelvic pain/penetration disorder, which only uses onset and severity specifiers.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Dysfunctions: When the Body and Mind Don't Cooperate"
+      ]
     },
     {
       "stem": "Which treatment combination is most appropriate for a woman experiencing genito-pelvic pain/penetration disorder associated with pelvic floor muscle tension?",
@@ -66,7 +75,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include treatments relevant to other disorders providing thoughtful challenge, with plausible but incorrect options.",
       "lessonExcerpt": "Treatment options include: Relaxation training, Sensate focus, Topical anesthetics, Vaginal dilators (gradually increasing sizes), Kegel exercises to gain voluntary control over pelvic floor muscles",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Dysfunctions: When the Body and Mind Don't Cooperate"
+      ]
     },
     {
       "stem": "According to the gender-affirmative model of care for gender diverse youth, which of the following assumptions is emphasized?",
@@ -83,7 +95,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors contrast the Dutch protocol and incorrect assumptions, enhancing clarity and discrimination.",
       "lessonExcerpt": "View of gender variations | Not explicitly stated | Gender variations are not disorders; gender is diverse, not always binary, and may be fluid",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gender Dysphoria: When Assigned and Experienced Gender Don't Match"
+      ]
     },
     {
       "stem": "Which of the following criteria must be met for a diagnosis of pedophilic disorder according to DSM-5-TR?",
@@ -100,7 +115,10 @@
       "difficulty": "hard",
       "quality_comment": "Distractors contain partially correct but inaccurate age or consent descriptions to thoughtfully challenge recall of specific DSM criteria.",
       "lessonExcerpt": "Sexual arousal related to children 13 years or younger Person must be at least 16 years old and at least five years older than the child",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Paraphilic Disorders: When Sexual Interests Cause Harm or Distress"
+      ]
     },
     {
       "stem": "Which pharmacological treatment would most likely be prescribed to reduce sexual desire in a client with severe paraphilic disorder to reduce risk of harm to others?",
@@ -117,7 +135,10 @@
       "difficulty": "medium",
       "quality_comment": "All options are psychopharmacological agents relevant to psychiatry, but only one is correctly linked to reducing sexual drive.",
       "lessonExcerpt": "Antiandrogens (Depo-Provera) | Severe disorders | Reduce sexual desire; serious side effects; high relapse risk when discontinued",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Paraphilic Disorders: When Sexual Interests Cause Harm or Distress"
+      ]
     },
     {
       "stem": "A client diagnosed with exhibitionistic disorder must meet which of the following diagnostic requirements according to DSM-5-TR?",
@@ -134,7 +155,10 @@
       "difficulty": "medium",
       "quality_comment": "Options present nuanced diagnostic features related to duration, consent, and behavior to challenge detailed knowledge of criteria.",
       "lessonExcerpt": "Exposing genitals to unsuspecting persons for sexual arousal At least six months duration Person has acted on urges OR experienced significant distress/impairment",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Paraphilic Disorders: When Sexual Interests Cause Harm or Distress"
+      ]
     },
     {
       "stem": "Which of the following is true regarding the prognosis of gender confirmation surgery (gender-affirming surgery)?",
@@ -151,7 +175,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are clearly incorrect but plausible misconceptions, making the question effective for assessing understanding of prognosis.",
       "lessonExcerpt": "Transgender male patients tend to have slightly more positive outcomes than transgender female patients",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gender Dysphoria: When Assigned and Experienced Gender Don't Match"
+      ]
     },
     {
       "stem": "Orgasmic reconditioning as a behavioral strategy in the treatment of paraphilic disorders involves which of the following?",
@@ -168,7 +195,10 @@
       "difficulty": "medium",
       "quality_comment": "Options contrast related behavioral interventions, requiring examinees to discriminate subtle but important distinctions.",
       "lessonExcerpt": "**Orgasmic (masturbatory) reconditioning**: The person switches their fantasy during masturbation from the paraphilic object to more appropriate stimuli.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Paraphilic Disorders: When Sexual Interests Cause Harm or Distress"
+      ]
     },
     {
       "stem": "Which sexual dysfunction requires symptoms to have been present at least six months, occur on 75-100% of sexual occasions, and involve marked difficulty maintaining an erection during sexual activity?",
@@ -185,7 +215,10 @@
       "difficulty": "easy",
       "quality_comment": "Stem and options are clearly stated, with plausible distractors representing other sexual dysfunctions to aid discrimination.",
       "lessonExcerpt": "For an erectile disorder diagnosis, symptoms must occur on 75-100% of sexual occasions. ... These symptoms must persist for at least six months and cause significant distress.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Dysfunctions: When the Body and Mind Don't Cooperate"
+      ]
     },
     {
       "stem": "The Dutch protocol for treating gender dysphoria in youth emphasizes which of the following approaches prior to puberty?",
@@ -202,7 +235,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include approaches from other models or inaccurate practices, clarifying the distinctions for examinees.",
       "lessonExcerpt": "Childhood approach: \"Watchful waiting\" with support ... Both approaches may include this progression as appropriate: 1. Social transition (name, pronouns, clothing, presentation) 2. Puberty blockers at puberty onset (gives time for exploration)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gender Dysphoria: When Assigned and Experienced Gender Don't Match"
+      ]
     },
     {
       "stem": "Which of the following statements about transvestic disorder is true?",
@@ -219,7 +255,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are common misunderstandings related to gender dysphoria and gender identity, promoting clear differentiation.",
       "lessonExcerpt": "Cross-dressing specifically for sexual arousal (not for gender expression) At least six months duration causing significant distress or impairment Most individuals identify as heterosexual",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Paraphilic Disorders: When Sexual Interests Cause Harm or Distress"
+      ]
     },
     {
       "stem": "Which of the following best describes a key feature of the gender-affirmative model of care for gender diverse youth?",
@@ -236,7 +275,10 @@
       "difficulty": "medium",
       "quality_comment": "Options contrast important aspects of gender-affirmative care and common misconceptions, aiding discrimination and conceptual understanding.",
       "lessonExcerpt": "Gender variations are not disorders; gender is diverse, not always binary, and may be fluid",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gender Dysphoria: When Assigned and Experienced Gender Don't Match"
+      ]
     },
     {
       "stem": "In the context of paraphilic disorders, which cognitive-behavioral technique is primarily aimed at replacing sexual arousal associated with deviant stimuli with fear or aversive responses?",
@@ -253,7 +295,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are other behavioral intervention techniques, requiring examinees to distinguish between related therapies.",
       "lessonExcerpt": "**Covert sensitization**: A form of aversive counterconditioning conducted in imagination. ... The sexual arousal gets replaced with fear or another undesirable response.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Paraphilic Disorders: When Sexual Interests Cause Harm or Distress"
+      ]
     },
     {
       "stem": "When assessing a client for sexual dysfunction, understanding the base rates of nocturnal erections can most help differentiate if erectile difficulties are due to organic or psychological causes by confirming which?",
@@ -270,7 +315,10 @@
       "difficulty": "medium",
       "quality_comment": "Options test understanding of clinical clues in differential diagnosis, using base rate and diagnostic reasoning principles.",
       "lessonExcerpt": "If the problem is psychological rather than purely medical, the person typically still has spontaneous erections at unexpected times, morning erections, or successful erections during masturbation or with a different partner.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Dysfunctions: When the Body and Mind Don't Cooperate"
+      ]
     },
     {
       "stem": "Which technique is commonly employed to help couples improve intimacy and reduce anxiety during sexual activities?",
@@ -292,7 +340,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "**Sensate Focus** (developed by Masters and Johnson in 1970) is the gold standard behavioral intervention. It works by gradually rebuilding intimacy while removing performance pressure.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Dysfunctions: When the Body and Mind Don't Cooperate"
+      ]
     },
     {
       "stem": "In the context of treating sexual dysfunctions, which approach emphasizes gradual exposure to sexual stimuli to reduce anxiety?",
@@ -314,7 +365,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "The couple progresses through stages: 1. Non-sexual touching while focusing on pleasurable sensations 2. Sexual touching (still no intercourse) 3. Finally, sexual intercourse",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Dysfunctions: When the Body and Mind Don't Cooperate"
+      ]
     }
   ]
 }

@@ -19,7 +19,10 @@
       "lessonExcerpt": "Insanity refers to the defendant's mental state at the time of the crime. It's about whether they understood their actions were legally or morally wrong when they committed the offense.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "According to data from the Association of State and Provincial Psychology Boards (ASPPB) on disciplinary actions against psychologists from 1974 to 2023, which of the following represents the MOST frequently cited basis for disciplinary action?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "1. Unprofessional conduct (the catch-all category) 2. Sexual misconduct (any sexual contact with clients) 3. Negligence (failing to meet standards of care) 4. Non-sexual dual relationships",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "At a neighborhood barbecue, a licensed psychologist casually tells an acquaintance, 'You should really see a cognitive-behavioral therapist for that anxiety you mentioned.' The acquaintance follows this advice, sees a CBT therapist, and experiences a worsening of symptoms due to an undiagnosed bipolar disorder. Could the psychologist be held liable for malpractice?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "Duty of Care: A professional relationship existed where you owed the client a standard of care... if even one D is missing, the malpractice claim typically fails.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "A psychologist receives a subpoena demanding her client's therapy records for an upcoming civil trial. After contacting her client, the client refuses to authorize release of the records. What is the psychologist's MOST appropriate next step?",
@@ -82,7 +91,12 @@
       "lessonExcerpt": "If they don't authorize? Contact the requesting party to negotiate or withdraw the request... Ask the court for help. Either informally through a letter or formally with a motion to quash the subpoena or request a protective order.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "What should a psychologist do first upon receiving a subpoena to testify in a divorce proceeding?",
@@ -103,7 +117,11 @@
       "lessonExcerpt": "Before doing anything else, reach out to discuss the implications. Your client has a right to know what's being requested and to make informed decisions about their confidential information.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "What is the primary purpose of state licensure for psychologists?",
@@ -124,7 +142,11 @@
       "lessonExcerpt": "Understanding these issues isn't optional. It's what separates psychologists who thrive from those who face disciplinary actions.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "What does it mean for a defendant to be found incompetent to stand trial?",
@@ -145,7 +167,11 @@
       "lessonExcerpt": "Competency refers to the defendant's mental state right now. It's about whether they can currently understand the charges against them and cooperate with their attorney.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Legal Terms That Trip People Up",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "Which ethical principle emphasizes the importance of minimizing harm to research animals in psychological studies?",
@@ -166,7 +192,10 @@
       "lessonExcerpt": "The Preamble states the Ethics Code's primary goals: protecting the people psychologists work with and educating everyone about ethical standards.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "What should a psychologist do when they receive a subpoena for client records?",
@@ -187,7 +216,11 @@
       "lessonExcerpt": "Before doing anything else, reach out to discuss the implications.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "Under the M'Naghten Rule, what must a defendant demonstrate to be found legally insane?",
@@ -208,7 +241,12 @@
       "lessonExcerpt": "Insanity refers to the defendant's mental state at the time of the crime. It's about whether they understood their actions were legally or morally wrong when they committed the offense.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Legal Terms That Trip People Up",
+        "What Actually Gets Psychologists in Trouble",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "What ethical obligation does a psychologist have when a client is financially struggling but still requires treatment?",
@@ -229,7 +267,11 @@
       "lessonExcerpt": "Understanding these issues isn't optional. It's what separates psychologists who thrive from those who face disciplinary actions.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "When a Subpoena Lands on Your Desk"
+      ]
     },
     {
       "stem": "In the context of referral ethics, what is a psychologist's responsibility regarding the outcomes of a referral?",
@@ -250,7 +292,10 @@
       "lessonExcerpt": "The key question isn't always 'Was this technically part of my job?' The APA considers whether your personal actions overlap with your professional role.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "In the event of a subpoena for treatment records, what is a psychologist's primary obligation regarding client privilege?",
@@ -271,7 +316,11 @@
       "lessonExcerpt": "If you're sitting in a deposition or courtroom without client authorization, assert psychotherapist-patient privilege on behalf of your client.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "After a psychologist's contract with a managed care organization is terminated, which of the following ethical obligations remains in effect regarding client information?",
@@ -292,7 +341,11 @@
       "lessonExcerpt": "The key question isn't always 'Was this technically part of my job?' The APA considers whether your personal actions overlap with your professional role.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 31
+      "inspirationIndex": 31,
+      "relatedSections": [
+        "Psychological Autopsies: Understanding Death After the Fact",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "What is the primary ethical consideration regarding confidentiality of a deceased client's information?",
@@ -313,7 +366,12 @@
       "lessonExcerpt": "The APA considers whether your personal actions overlap with your professional role.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 32
+      "inspirationIndex": 32,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "Psychological Autopsies: Understanding Death After the Fact",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "In a legal setting, which of the following best describes a psychologist's obligation regarding a client's confidentiality when faced with a subpoena?",
@@ -334,7 +392,10 @@
       "lessonExcerpt": "If you're sitting in a deposition or courtroom without client authorization, assert psychotherapist-patient privilege on behalf of your client.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 0
+      "inspirationIndex": 0,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk"
+      ]
     },
     {
       "stem": "Which of the following best describes ethical collaboration among professionals in psychology?",
@@ -355,7 +416,10 @@
       "lessonExcerpt": "The key question isn't always 'Was this technically part of my job?' The APA considers whether your personal actions overlap with your professional role.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "When providing employer referrals, which of the following is crucial to maintain client privacy?",
@@ -376,7 +440,12 @@
       "lessonExcerpt": "Your client has a right to know what's being requested and to make informed decisions about their confidential information.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "What is the primary legal obligation of psychologists under the Tarasoff rulings?",
@@ -397,7 +466,12 @@
       "lessonExcerpt": "Your job? Make sure you're meeting that duty of care consistently, so those other dominoes never fall.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "Which of the following is a common cause of malpractice claims against psychologists?",
@@ -418,7 +492,10 @@
       "lessonExcerpt": "Notice what's conspicuously absent from most psychologists' concerns? Record-keeping and continuing education.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "In the context of court-ordered evaluations, what is the status of privilege?",
@@ -439,7 +516,12 @@
       "lessonExcerpt": "If you're sitting in a deposition or courtroom without client authorization, assert psychotherapist-patient privilege on behalf of your client.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "What is the ethical guideline regarding confidentiality after a client's death?",
@@ -460,7 +542,12 @@
       "lessonExcerpt": "The key question isn't always 'Was this technically part of my job?' The APA considers whether your personal actions overlap with your professional role.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "What Actually Gets Psychologists in Trouble",
+        "Psychological Autopsies: Understanding Death After the Fact"
+      ]
     },
     {
       "stem": "When responding to employer inquiries about a client, what is the psychologist's primary ethical obligation?",
@@ -481,7 +568,12 @@
       "lessonExcerpt": "Your client has a right to know what's being requested and to make informed decisions about their confidential information.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "What is the ethical guideline regarding referrals for lack of competence?",
@@ -502,7 +594,10 @@
       "lessonExcerpt": "You can refer someone elsewhere when you genuinely believe their situation falls outside your competence.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "When conducting research with culturally diverse populations, which of the following is a critical component of obtaining informed consent?",
@@ -523,7 +618,10 @@
       "lessonExcerpt": "The ethical standards exist to protect others first, not to make your life easier.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk"
+      ]
     },
     {
       "stem": "Which of the following best describes the concept of competency to stand trial for defendants with mental illness?",
@@ -544,7 +642,12 @@
       "lessonExcerpt": "Competency refers to the defendant's mental state right now. It's about whether they can currently understand the charges against them and cooperate with their attorney.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Legal Terms That Trip People Up",
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "Which ethical principle is primarily concerned with the treatment of animals in research?",
@@ -565,7 +668,10 @@
       "lessonExcerpt": "The ethical standards exist to protect others first, not to make your life easier.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "What is the primary consideration when making psychological decisions in the best interests of a child?",
@@ -586,7 +692,12 @@
       "lessonExcerpt": "The ethical standards exist to protect others first, not to make your life easier.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "When a Subpoena Lands on Your Desk",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "What is a key strategy for managing dual relationships in therapy?",
@@ -607,7 +718,11 @@
       "lessonExcerpt": "When a potentially harmful multiple relationship occurs anyway, you must take reasonable steps to resolve it.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "When a Subpoena Lands on Your Desk"
+      ]
     },
     {
       "stem": "What is a psychologist's ethical responsibility when addressing a misdiagnosis that may have led to inappropriate medication being prescribed?",
@@ -628,7 +743,12 @@
       "lessonExcerpt": "Your job? Make sure you're meeting that duty of care consistently, so those other dominoes never fall.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "What Actually Gets Psychologists in Trouble",
+        "When a Subpoena Lands on Your Desk"
+      ]
     },
     {
       "stem": "What ethical considerations should a psychologist keep in mind when refusing treatment to a client?",
@@ -649,7 +769,12 @@
       "lessonExcerpt": "You can refer someone elsewhere when you genuinely believe their situation falls outside your competence or when specific circumstances would prevent you from providing effective care.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "When a Subpoena Lands on Your Desk",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "What is a psychologist's legal obligation when they suspect child abuse?",
@@ -670,7 +795,12 @@
       "lessonExcerpt": "You must report suspected abuse to the appropriate authorities.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "What Actually Gets Psychologists in Trouble",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "What rights do clients have during court evaluations?",
@@ -691,7 +821,12 @@
       "lessonExcerpt": "Your client has a right to know what's being requested and to make informed decisions about their confidential information.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "What does privilege in a therapeutic relationship protect?",
@@ -712,7 +847,12 @@
       "lessonExcerpt": "Assert psychotherapist-patient privilege on behalf of your client.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "Which of the following is a common reason for malpractice claims against psychologists?",
@@ -733,7 +873,12 @@
       "lessonExcerpt": "Poor record-keeping (inadequate or inaccurate documentation)",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "What ethical considerations must psychologists adhere to when conducting research involving animals?",
@@ -754,7 +899,12 @@
       "lessonExcerpt": "The ethical code exists to protect others first, not to make your life easier.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "When a Subpoena Lands on Your Desk",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "What is the first step a psychologist should take upon receiving a subpoena for client records?",
@@ -775,7 +925,11 @@
       "lessonExcerpt": "Before doing anything else, reach out to discuss the implications. Your client has a right to know what's being requested and to make informed decisions about their confidential information.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "Which of the following is a common ethical concern in psychology?",
@@ -796,7 +950,11 @@
       "lessonExcerpt": "The Association of State and Provincial Psychology Boards keeps track of why psychologists face disciplinary action.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 30
+      "inspirationIndex": 30,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "Accreditation: Why It Matters"
+      ]
     },
     {
       "stem": "A defendant is found not guilty by reason of insanity (NGRI) for a violent felony. This verdict most accurately means that:",
@@ -817,7 +975,10 @@
       "lessonExcerpt": "Insanity refers to the defendant's mental state at the time of the crime. It's about whether they understood their actions were legally or morally wrong when they committed the offense... Competency refers to the defendant's mental state right now. It's about whether they can currently understand the charges against them and cooperate with their attorney.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "According to data from the Association of State and Provincial Psychology Boards (ASPPB), which of the following represents the most frequently cited category of disciplinary action against psychologists?",
@@ -838,7 +999,10 @@
       "lessonExcerpt": "Based on data from 1974 to 2023, here are the top ten reasons: 1. Unprofessional conduct (the catch-all category) 2. Sexual misconduct (any sexual contact with clients) 3. Negligence (failing to meet standards of care)",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "A court mandates that an individual convicted of domestic violence attend therapy as a condition of probation. During the course of treatment, the prosecution subpoenas the therapist's records. In this court-ordered treatment scenario, who holds the therapist-client privilege?",
@@ -859,7 +1023,10 @@
       "lessonExcerpt": "Assert psychotherapist-patient privilege on behalf of your client. Only reveal information with explicit client authorization or a court order.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk"
+      ]
     },
     {
       "stem": "Dr. Rivera receives a subpoena requesting her therapy records for a client involved in a civil lawsuit. The client does not authorize release of the records. After contacting the requesting party to negotiate withdrawal of the subpoena unsuccessfully, what should Dr. Rivera do next according to APA guidelines?",
@@ -880,7 +1047,12 @@
       "lessonExcerpt": "Still stuck? Ask the court for help. Either informally through a letter or formally with a motion to quash the subpoena or request a protective order.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "Which of the following is NOT one of the four conditions necessary for a client to succeed in a malpractice claim against a psychologist?",
@@ -898,7 +1070,10 @@
       "quality_comment": "The question is straightforward with one clearly inaccurate option, testing essential malpractice concepts effectively.",
       "lessonExcerpt": "Malpractice claims follow a predictable pattern called the \"Four Ds.\" Duty of Care; Dereliction of Duty; Damages; Direct Cause",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "According to APA guidelines, when responding to a subpoena for client records, what is the psychologist's first step?",
@@ -916,7 +1091,12 @@
       "quality_comment": "Clear and concise stem, with plausible distractors; this item effectively addresses a key professional legal procedure.",
       "lessonExcerpt": "Step 1: Verify the subpoena is legitimate. A valid subpoena must include: Court name and jurisdiction; Case title and docket number",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "What Actually Gets Psychologists in Trouble",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "Which statement best describes the difference between a fact witness and an expert witness in forensic psychology?",
@@ -934,7 +1114,12 @@
       "quality_comment": "Stem is well-written; distractors are plausible misconceptions, making this a good discriminating item.",
       "lessonExcerpt": "Fact Witness: Testifies only to what they directly saw, heard, or observed; Cannot give opinions or speculate. Expert Witness: Offers professional opinions based on specialized knowledge; Can respond to hypothetical situations",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "Legal Terms That Trip People Up",
+        "Psychological Autopsies: Understanding Death After the Fact"
+      ]
     },
     {
       "stem": "Which of the following best describes the purpose of a psychological autopsy in forensic cases?",
@@ -952,7 +1137,11 @@
       "quality_comment": "Options are balanced and the correct answer is the only one describing the unique forensic autopsy purpose, making it effective for EPPP-level testing.",
       "lessonExcerpt": "Equivocal Death Psychological Autopsy (EDPA): Used when manner of death is ambiguous. Was it suicide, accident, homicide, natural causes, or undetermined?",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Psychological Autopsies: Understanding Death After the Fact",
+        "Legal Terms That Trip People Up"
+      ]
     },
     {
       "stem": "According to APA Inclusive Language Guidelines, which of the following is the most appropriate way to refer to a hypothetical single individual of unknown gender?",
@@ -970,7 +1159,10 @@
       "quality_comment": "Clear question stem and well-differentiated options; tests awareness of current recommendations for non-binary inclusive language.",
       "lessonExcerpt": "When gender is irrelevant or the person is hypothetical, use \"they/them/their\" as singular pronouns. Yes, even in formal writing.",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Speaking and Writing Without Bias"
+      ]
     },
     {
       "stem": "Which of the following is TRUE about providing telepsychology services across state lines in jurisdictions NOT participating in PSYPACT?",
@@ -988,7 +1180,12 @@
       "quality_comment": "Distractors include common misconceptions; the stem is clear, making this question effective and relevant.",
       "lessonExcerpt": "If jurisdictions aren't part of PSYPACT (we'll get to that), you must determine legal requirements for both your location and your client's location.",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When a Subpoena Lands on Your Desk",
+        "Legal Terms That Trip People Up",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "What is the primary purpose of the APA Commission on Accreditation (APA-CoA)?",
@@ -1006,7 +1203,12 @@
       "quality_comment": "The options are plausible roles but only one matches the main purpose of APA-CoA, making this question straightforward.",
       "lessonExcerpt": "Accreditation assures the public that programs meet professional standards supporting ethical, skillful service delivery. It protects students, benefits the public, and improves quality.",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "Accreditation: Why It Matters",
+        "Handling Negative Online Reviews"
+      ]
     },
     {
       "stem": "In Bernard’s discrimination model of clinical supervision, which combination describes the supervisor acting as counselor focusing on personalization skills?",
@@ -1024,7 +1226,10 @@
       "quality_comment": "The stem is precise and options plausible; this tests more advanced knowledge fitting well at the applied level.",
       "lessonExcerpt": "Bernard's discrimination model identifies three focus areas (intervention skills, conceptualization skills, personalization skills) and three supervisor roles (educator, counselor, consultant).",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Supervision: More Than Just Overseeing Trainees"
+      ]
     },
     {
       "stem": "According to APA’s Supervision Guidelines, what is the supervisor’s responsibility regarding confidentiality in supervision?",
@@ -1042,7 +1247,10 @@
       "quality_comment": "Well-constructed item with clear alternatives; tests knowledge of supervisor ethical duties.",
       "lessonExcerpt": "Confidentiality: Supervisees need to know the limits of confidentiality regarding their personal disclosures and evaluations. Their clients need to know about the supervisory relationship and that the supervisor has access to their records.",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Supervision: More Than Just Overseeing Trainees"
+      ]
     },
     {
       "stem": "Which stage in Stoltenberg's Integrated Developmental Model is characterized by supervisees who are anxious about evaluation, highly dependent on the supervisor, and primarily focused on themselves?",
@@ -1060,7 +1268,10 @@
       "quality_comment": "Distractors include plausible levels but only one reflects the early developmental characteristics accurately.",
       "lessonExcerpt": "Level 1: Self-focused, anxious, highly dependent. Needs structure, support, and skill-building.",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Supervision: More Than Just Overseeing Trainees"
+      ]
     },
     {
       "stem": "Which of the following is an appropriate ethical response to a negative online review about a psychologist's services?",
@@ -1078,7 +1289,12 @@
       "quality_comment": "Options represent common reactions; the correct answer reflects current ethical guidance, making this a relevant applied item.",
       "lessonExcerpt": "So what can you do? Build a positive online presence proactively. Post patient satisfaction ratings, testimonials from colleagues and supervisors, professional accomplishments.",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "Handling Negative Online Reviews"
+      ]
     },
     {
       "stem": "Which of the following best describes the ethical competency a supervisor must possess to provide competent clinical supervision?",
@@ -1096,7 +1312,11 @@
       "quality_comment": "This question fills an important gap about supervisor competence and is appropriately stated for EPPP-level testing.",
       "lessonExcerpt": "Competence: You must be competent both in the services the supervisee provides AND in providing supervision itself. You can't just wing it.",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Supervision: More Than Just Overseeing Trainees",
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "Which of the following is true regarding telepsychology supervision according to APA guidelines?",
@@ -1114,7 +1334,10 @@
       "quality_comment": "Options provide clear contrasts; this question addresses an emerging and underrepresented topic well.",
       "lessonExcerpt": "Telepsychology supervision can account for no more than 50% of total supervision at any site. Supervisors must verify supervisee identity at each contact and inform them about security and privacy limitations.",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Clinical Supervision: More Than Just Overseeing Trainees"
+      ]
     },
     {
       "stem": "Which of the following elements is NOT essential for establishing negligence in a psychological practice?",
@@ -1137,7 +1360,10 @@
       ],
       "lessonExcerpt": "Malpractice claims follow a predictable pattern called the \"Four Ds.\" Duty of Care; Dereliction of Duty; Damages; Direct Cause",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget"
+      ]
     },
     {
       "stem": "In the context of a malpractice lawsuit against a psychologist, which of the following must be demonstrated to establish a successful claim?",
@@ -1160,7 +1386,12 @@
       ],
       "lessonExcerpt": "Direct Cause: Your breach directly caused the harm",
       "suggestedLesson": "8-practice-issues",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "Legal Terms That Trip People Up",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "What must a psychologist demonstrate to establish legal liability in a malpractice case?",
@@ -1181,7 +1412,11 @@
       "lessonExcerpt": "Malpractice claims follow a predictable pattern called the \"Four Ds.\" Duty of Care: A professional relationship existed where you owed the client a standard of care. Dereliction of Duty: You breached that standard through negligence or misconduct. Damages: The client suffered measurable harm. Direct Cause: Your breach directly caused the harm.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "Understanding Malpractice: The Four Ds You Can't Forget",
+        "What Actually Gets Psychologists in Trouble"
+      ]
     },
     {
       "stem": "What ethical obligation does a psychologist have when testifying as a fact witness?",
@@ -1202,7 +1437,12 @@
       "lessonExcerpt": "Testifies only to what they directly saw, heard, or observed | Cannot give opinions or speculate | Must have firsthand knowledge",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 29
+      "inspirationIndex": 29,
+      "relatedSections": [
+        "What Actually Gets Psychologists in Trouble",
+        "Psychological Autopsies: Understanding Death After the Fact",
+        "When a Subpoena Lands on Your Desk"
+      ]
     }
   ]
 }

@@ -19,7 +19,10 @@
       "lessonExcerpt": "Research consistently shows children raised by gay or lesbian parents don't differ from children of heterosexual parents in psychological adjustment, intellectual functioning, gender identity, or sexual orientation. Gay and lesbian parents' skills are similar to or better than those of heterosexual parents.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Family Structure Variations"
+      ]
     },
     {
       "stem": "A psychologist is evaluating two children from the same household where intimate partner violence occurs. Child A has been directly physically abused by the perpetrating parent, while Child B has not been directly abused but has regularly witnessed the violence between parents. Based on the research literature on family violence and child outcomes, which of the following statements is MOST accurate?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Trauma-Focused Cognitive Behavioral Therapy (TF-CBT) for ages 3-18: Treats sexual abuse, maltreatment, domestic violence exposure, traumatic loss",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Violence and Abuse in Families"
+      ]
     },
     {
       "stem": "A clinical psychologist is treating a 16-year-old female whose parents divorced when she was 5. The client reports chronic anxiety about abandonment in her romantic relationship and recently became pregnant. Her parents describe her as having adjusted well throughout childhood with no apparent difficulties. This presentation is MOST consistent with which research finding on divorce and child adjustment?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "Trauma-Focused Cognitive Behavioral Therapy (TF-CBT) for ages 3-18: Treats sexual abuse, maltreatment, domestic violence exposure, traumatic loss",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Marriage, Divorce, and What Comes After"
+      ]
     },
     {
       "stem": "Research on gender dynamics in classroom settings has consistently found that teachers tend to:",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "Family and school experiences are the laboratories where people first learn about relationships, conflict, success, and failure.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "School Influences"
+      ]
     },
     {
       "stem": "What impact do teacher-student gender interactions have on educational outcomes?",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "Research reveals gender-biased teaching patterns from elementary through graduate school: Teachers call on male students more frequently... These patterns reflect and perpetuate gender stereotypes",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "School Influences"
+      ]
     },
     {
       "stem": "What is the primary mechanism by which the Rosenthal effect influences student performance?",
@@ -124,7 +139,10 @@
       "lessonExcerpt": "The famous Rosenthal and Jacobson study demonstrated the self-fulfilling prophecy effect: Teachers told certain randomly-selected students were \"bloomers\" who would excel.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "School Influences"
+      ]
     },
     {
       "stem": "How might children typically respond emotionally to their parents' divorce?",
@@ -145,7 +163,10 @@
       "lessonExcerpt": "Research reveals gender-biased teaching patterns from elementary through graduate school: Teachers call on male students more frequently... These patterns reflect and perpetuate gender stereotypes",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Marriage, Divorce, and What Comes After"
+      ]
     },
     {
       "stem": "A psychologist is presenting grand rounds on post-divorce adjustment. She summarizes the empirical literature as follows: 'The primary stressor differs by gender, and the chronicity of effects also differs.' Which of the following most accurately captures the gender-differentiated findings on adjustment to divorce?",
@@ -166,7 +187,10 @@
       "lessonExcerpt": "The famous Rosenthal and Jacobson study demonstrated the self-fulfilling prophecy effect: Teachers told certain randomly-selected students were \"bloomers\" who would excel.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Marriage, Divorce, and What Comes After"
+      ]
     },
     {
       "stem": "According to Gottman and Levenson's research, which communication behavior is the single best predictor of divorce?",
@@ -184,7 +208,10 @@
       "quality_comment": "The question is clear and covers a key concept with plausible distractors that test knowledge of specific relationship dynamics.",
       "lessonExcerpt": "Interestingly, contempt alone is the single strongest predictor of divorce.",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: How Relationships Shape Us"
+      ]
     },
     {
       "stem": "Which parenting style is usually associated with custodial mothers following divorce, especially toward sons?",
@@ -202,7 +229,10 @@
       "quality_comment": "Answer options fairly distinct; question tests nuanced knowledge of parenting changes post-divorce.",
       "lessonExcerpt": "Custodial mothers may become less affectionate (especially toward sons) and more authoritarian.",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Marriage, Divorce, and What Comes After"
+      ]
     },
     {
       "stem": "Which type of intimate partner violence (IPV) is characterized by one partner’s use of violence to exert control and includes cycles of tension, acute violence, and loving contrition?",
@@ -220,7 +250,10 @@
       "quality_comment": "Question tests detailed understanding of IPV typology with well-differentiated response options.",
       "lessonExcerpt": "Interestingly, contempt alone is the single strongest predictor of divorce.",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Violence and Abuse in Families"
+      ]
     },
     {
       "stem": "Which intervention model includes live coaching of parents by therapists through a two-way mirror and focuses on strengthening parent-child relationships and consistent discipline?",
@@ -238,7 +271,10 @@
       "quality_comment": "Clear stem with relevant, plausible interventions as distractors, requiring specific knowledge.",
       "lessonExcerpt": "The Avoidant Pattern (Later Divorce Predictor) Some couples avoid conflict entirely. They don't share feelings, dodge difficult conversations, and maintain emotional distance.",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Violence and Abuse in Families"
+      ]
     },
     {
       "stem": "Research on 'helicopter parents' has linked this parenting style primarily to which child or emerging adult outcomes?",
@@ -256,7 +292,10 @@
       "quality_comment": "Distractors are reasonable and the correct answer clearly reflects the evidence-based outcomes of helicopter parenting.",
       "lessonExcerpt": "| Lower socioeconomic status | Financial stress adds pressure to relationships |",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Parenting Styles That Harm: Helicopter Parents"
+      ]
     },
     {
       "stem": "Which outcome is most consistently observed among children raised by gay or lesbian parents compared to those raised by heterosexual parents?",
@@ -274,7 +313,10 @@
       "quality_comment": "Simple and straightforward question assessing a critical research consensus with plausible distractors.",
       "lessonExcerpt": "For men: Health problems more often stem from risky behaviors, social isolation, and psychological factors. ... However, these negative effects are often temporary rather than chronic.",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Family Structure Variations"
+      ]
     },
     {
       "stem": "Which factor is most strongly related to better adjustment among stepfathers according to research findings?",
@@ -292,7 +334,10 @@
       "quality_comment": "Well-constructed distractors with one clearly supported correct answer from the research.",
       "lessonExcerpt": "Custodial mothers may become less affectionate (especially toward sons) and more authoritarian.",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Family Structure Variations"
+      ]
     },
     {
       "stem": "According to Rosenthal and Jacobson's study on teacher expectations, what phenomenon explains students' improved performance when labeled as 'bloomers'?",
@@ -310,7 +355,10 @@
       "quality_comment": "Classic study question with well-known theory and plausible alternative social-cognitive phenomena.",
       "lessonExcerpt": "When family income drops after divorce (which typically happens for custodial mothers), children face increased risk for academic, behavioral, and emotional problems. ... the problems aren't about single parenting itself, but about the financial stress",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "School Influences"
+      ]
     },
     {
       "stem": "Which factor related to early maternal employment is associated with small positive effects on children’s behavior and academic achievement?",
@@ -328,7 +376,10 @@
       "quality_comment": "Options are balanced and incorporate key contextual factors influencing child outcomes.",
       "lessonExcerpt": "| Intimate Terrorism | Usually male partner | Control partner | Uses multiple control tactics; follows cycle of violence |",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Maternal Employment and Childcare"
+      ]
     },
     {
       "stem": "Which of the following best describes the impact of cultural socialization practices used by ethnic/racial minority parents?",
@@ -346,7 +397,10 @@
       "quality_comment": "The question effectively highlights cultural factors in development with balanced and plausible distractors.",
       "lessonExcerpt": "Parent-Child Interaction Therapy (PCIT) for ages 2-12: - Therapist observes from behind mirror, coaches parents via earpiece - Phase 1: Child-directed interaction (strengthen bond)",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "School Influences"
+      ]
     },
     {
       "stem": "Which factor has been found to have a greater influence than the frequency of nonresident father contact on children’s outcomes following divorce?",
@@ -364,7 +418,10 @@
       "quality_comment": "Good differentiation of factors affecting child outcomes with consistent plausible alternatives.",
       "lessonExcerpt": "But the outcomes are similarly problematic: - High stress and anxiety in children - Increased sense of entitlement - Poor emotional and behavioral self-regulation - Low autonomy",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Marriage, Divorce, and What Comes After"
+      ]
     },
     {
       "stem": "Which stage is NOT part of Walker’s cycle of violence in intimate partner violence?",
@@ -382,7 +439,10 @@
       "quality_comment": "Clear, focused question with a distinct incorrect option to test recognition of cycle components.",
       "lessonExcerpt": "Research consistently shows children raised by gay or lesbian parents don't differ from children of heterosexual parents in psychological adjustment, intellectual functioning, gender identity, or sexual orientation.",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Violence and Abuse in Families"
+      ]
     },
     {
       "stem": "Which of the following negative communication patterns, identified by Gottman, is most detrimental to long-term relationship stability?",
@@ -405,7 +465,10 @@
       ],
       "lessonExcerpt": "Stepfather Adjustment. Stepfathers adjust better when they: - Have their own biological children living in the household",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: How Relationships Shape Us"
+      ]
     },
     {
       "stem": "The empathy-altruism hypothesis proposes that people help others primarily due to:",
@@ -423,7 +486,8 @@
       "quality_comment": "The correct option is conceptually distinct and distractors reflect alternative motivational explanations, enhancing test validity.",
       "lessonExcerpt": "Fewer externalizing and internalizing problems ### Teacher Expectations",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "What is a potential impact of domestic violence on children's development?",
@@ -444,7 +508,10 @@
       "lessonExcerpt": "Understanding socioemotional development isn't just about memorizing attachment styles for the EPPP. It's about recognizing patterns that show up daily in your consulting room.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Violence and Abuse in Families"
+      ]
     },
     {
       "stem": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The child's parents report significant distress at school, including refusal to use the girls' restroom and daily crying before school. According to DSM-5, which of the following is required in addition to the specified incongruence criteria to diagnose Gender Dysphoria in Children?",
@@ -465,7 +532,8 @@
       "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     }
   ]
 }

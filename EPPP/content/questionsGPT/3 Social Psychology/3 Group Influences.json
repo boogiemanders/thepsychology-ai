@@ -18,7 +18,10 @@
       "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
       "lessonExcerpt": "Social facilitation occurs when other people's presence improves your performance. Social inhibition happens when their presence makes your performance worse. The deciding factor? Whether the task is easy and well-practiced, or difficult and unfamiliar.",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "When Others Watch: Social Facilitation and Social Inhibition"
+      ]
     },
     {
       "stem": "A hospital team is planning a surprise retirement celebration. If even one member fails to keep the plan secret, the entire effort is ruined. According to Steiner's task taxonomy, this is best classified as which type of group task?",
@@ -38,7 +41,10 @@
       "suggestedParagraph": "## Task Types and Group Performance",
       "lessonExcerpt": "Conjunctive tasks demand that everyone contribute, and the group's performance is limited by the weakest member.",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "Task Types and Group Performance"
+      ]
     },
     {
       "stem": "In a committee meeting, only two members oppose the popular plan. They continue presenting the same evidence calmly and consistently over several meetings, and eventually several other members privately change their minds. Moscovici would describe this pattern as an example of:",
@@ -58,7 +64,10 @@
       "suggestedParagraph": "## The Power of the Persistent Few: Minority Influence",
       "lessonExcerpt": "The key is consistency without rigidity.",
       "needsReview": false,
-      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "relatedSections": [
+        "The Power of the Persistent Few: Minority Influence"
+      ]
     },
     {
       "stem": "According to Zajonc's drive theory of social facilitation, a doctoral student who has thoroughly rehearsed her dissertation defense would be expected to perform ________ in front of her committee compared to practicing alone, because the presence of others increases arousal which strengthens the ________ response.",
@@ -79,7 +88,10 @@
       "lessonExcerpt": "Zajonc's drive theory explains why this happens. The presence of others increases your physiological arousal. Your heart rate picks up, your alertness increases. This arousal strengthens whatever response is dominant (most likely to occur) in that situation. For well-learned tasks, your dominant response is the correct one, so arousal helps.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "When Others Watch: Social Facilitation and Social Inhibition"
+      ]
     },
     {
       "stem": "A clinical treatment team individually favors a moderately conservative approach to a complex case. After extensive group discussion, they collectively decide on an even more cautious plan than any individual member originally endorsed. This outcome is best explained by:",
@@ -100,7 +112,8 @@
       "lessonExcerpt": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone. After discussion, the group shifts toward a more intense version of the average initial position. Either riskier or more cautious.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": null
     },
     {
       "stem": "What phenomenon describes the tendency for individuals to exert less effort when working in a group compared to working alone?",
@@ -121,7 +134,10 @@
       "lessonExcerpt": "Social loafing happens when people in groups contribute less than they would working alone.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "The Free Rider Effect: Social Loafing"
+      ]
     },
     {
       "stem": "Which phenomenon describes the tendency for individuals to exert less effort when working in a group compared to when working alone?",
@@ -142,7 +158,10 @@
       "lessonExcerpt": "Disjunctive | Group chooses best solution from those offered | Equal to or less than best individual",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "The Free Rider Effect: Social Loafing"
+      ]
     },
     {
       "stem": "An ongoing therapy group has met weekly for two months. During the first several sessions, members were polite, tended to seek the facilitator's approval before speaking, and kept disclosures superficial. In the eighth session, a previously cooperative member directly confronts the facilitator: 'You always validate the same people and dismiss what I say.' Two other members immediately express similar grievances about the facilitator's perceived favoritism. According to developmental models of group therapy, this pattern of member hostility toward the leader MOST likely signals that the group has entered:",
@@ -163,7 +182,10 @@
       "lessonExcerpt": "It's less likely when: The group is small and cohesive, Members find the task personally meaningful, There's potential punishment for poor performance, Individual contributions are clearly necessary for success, Each person's contribution can be identified and evaluated",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "The Journey of Groups: Tuckman and Jensen's Stages"
+      ]
     },
     {
       "stem": "Which of the following best describes social loafing?",
@@ -181,7 +203,10 @@
       "quality_comment": "Question is straightforward with clearly distinguishable options; it effectively assesses understanding of a fundamental group behavior phenomenon.",
       "lessonExcerpt": "Social loafing happens when people in groups contribute less than they would working alone.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Free Rider Effect: Social Loafing"
+      ]
     },
     {
       "stem": "Which factor is NOT typically associated with reducing social loafing in group tasks?",
@@ -199,7 +224,10 @@
       "quality_comment": "The distractors are plausible and connected to social loafing, making the incorrect option (large group) stand out as the best answer.",
       "lessonExcerpt": "It's less likely when: The group is small and cohesive, Members find the task personally meaningful, There's potential punishment for poor performance, Individual contributions are clearly necessary for success, Each person's contribution can be identified and evaluated",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Free Rider Effect: Social Loafing"
+      ]
     },
     {
       "stem": "What best characterizes deindividuation in group settings?",
@@ -217,7 +245,10 @@
       "quality_comment": "Options contrast different group phenomena well; distractors are similar concepts that challenge recall and conceptual understanding.",
       "lessonExcerpt": "Deindividuation refers to losing your sense of individuality and the normal restraints against behavior you'd typically avoid. It happens when you can act anonymously.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Losing Yourself in the Crowd: Deindividuation"
+      ]
     },
     {
       "stem": "Which type of group task involves group members working independently and the final group output being the sum of individual contributions?",
@@ -235,7 +266,10 @@
       "quality_comment": "Options include commonly referenced task types with different characteristics; question is clear with sufficiently similar option length.",
       "lessonExcerpt": "This arousal strengthens whatever response is dominant (most likely to occur) in that situation. For well-learned tasks, your dominant response is the correct one, so arousal helps.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Task Types and Group Performance"
+      ]
     },
     {
       "stem": "In Steiner's framework, which group task is limited by the performance of the poorest member, because all must contribute successfully for the group to succeed?",
@@ -253,7 +287,10 @@
       "quality_comment": "Distractors are all Steiner task types, requiring specific knowledge to differentiate, making this suitable for EPPP-level difficulty.",
       "lessonExcerpt": "Social loafing happens when people in groups contribute less than they would working alone.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Task Types and Group Performance"
+      ]
     },
     {
       "stem": "According to Tuckman and Jensen's model, what characterizes the norming stage of group development?",
@@ -271,7 +308,10 @@
       "quality_comment": "Options correspond to different stages of Tuckman's model, effectively assessing knowledge of group development phases.",
       "lessonExcerpt": "It's less likely when: The group is small and cohesive, Members find the task personally meaningful, There's potential punishment for poor performance, Individual contributions are clearly necessary for success, Each person's contribution can be identified and evaluated",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Journey of Groups: Tuckman and Jensen's Stages"
+      ]
     },
     {
       "stem": "Which statement best describes opinion change due to minority influence compared to majority influence, according to Moscovici?",
@@ -289,7 +329,10 @@
       "quality_comment": "The options are carefully crafted to test subtle distinctions between types of social influence and their effects.",
       "lessonExcerpt": "Deindividuation refers to losing your sense of individuality and the normal restraints against behavior you'd typically avoid. It happens when you can act anonymously.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Power of the Persistent Few: Minority Influence"
+      ]
     },
     {
       "stem": "During which stage of Tuckman and Jensen’s group development model are group members most likely to avoid conflict and act politely toward one another?",
@@ -307,7 +350,10 @@
       "quality_comment": "Question is straightforward with clear, distinct options representing the well-known stages of group development.",
       "lessonExcerpt": "minorities must depend on behavioral style. The key is consistency without rigidity.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Journey of Groups: Tuckman and Jensen's Stages"
+      ]
     },
     {
       "stem": "Which cultural difference is associated with greater likelihood of social loafing?",
@@ -325,7 +371,10 @@
       "quality_comment": "The question effectively integrates cultural context with a specific group behavior, with plausible alternatives to challenge test takers.",
       "lessonExcerpt": "Additive | Members work independently; outputs are summed | Better than best individual",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Free Rider Effect: Social Loafing"
+      ]
     },
     {
       "stem": "Which of the following best describes why social loafing decreases when individual contributions are identifiable?",
@@ -343,7 +392,10 @@
       "quality_comment": "This item asks about underlying psychological processes related to group behavior, connecting well to fundamental social influence concepts.",
       "lessonExcerpt": "Conjunctive | All members must contribute; weakest link matters | Limited by worst performer",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Free Rider Effect: Social Loafing"
+      ]
     },
     {
       "stem": "In a study on social influence, researchers found that individuals performed better on tasks they were already skilled at when in the presence of others. What type of task is most likely to benefit from this phenomenon?",
@@ -366,7 +418,10 @@
       ],
       "lessonExcerpt": "Norming (Stage 3): If the group survives storming, cohesion and commitment grow. Members work to resolve the conflicts and issues from the previous stage.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Others Watch: Social Facilitation and Social Inhibition"
+      ]
     },
     {
       "stem": "A researcher is examining the effects of audience presence on performance across various types of tasks. Which scenario is most likely to illustrate the principle of social facilitation as described by Zajonc's drive theory?",
@@ -389,7 +444,10 @@
       ],
       "lessonExcerpt": "When a minority changes someone's mind, it tends to result in private acceptance (genuine conversion)",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Others Watch: Social Facilitation and Social Inhibition"
+      ]
     },
     {
       "stem": "What type of group task is characterized by a single solution that is determined by the most competent member of the group?",
@@ -410,7 +468,10 @@
       "lessonExcerpt": "Two specific phenomena can seriously undermine group decision-making: groupthink and group polarization. These patterns are so common and so damaging that understanding them is critical for your professional life.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Task Types and Group Performance"
+      ]
     },
     {
       "stem": "According to Zajonc’s drive theory, social facilitation occurs because the presence of others increases physiological arousal, which strengthens the dominant response. For which type of task is this dominant response typically correct, leading to improved performance?",
@@ -428,7 +489,10 @@
       "quality_comment": "The question clearly targets a core mechanism of social facilitation with plausible distractors related to task difficulty and familiarity.",
       "lessonExcerpt": "MTFC (Multidimensional Treatment Foster Care): Alternative to residential care **For etiology of CD:** Remember the three G's plus F: **Genes, Gut reactions (low physiological arousal), and Grueling family experiences**.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Others Watch: Social Facilitation and Social Inhibition"
+      ]
     }
   ]
 }

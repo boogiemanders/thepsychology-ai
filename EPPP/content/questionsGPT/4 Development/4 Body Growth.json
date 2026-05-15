@@ -19,7 +19,10 @@
       "lessonExcerpt": "Early Puberty in Boys. Mixed bag... Early Puberty in Girls. Predominantly negative: Lower self-esteem and popularity, Poorer academic achievement, Higher risk for precocious sexual behavior, Increased rates of substance use, depression, anxiety, eating disorders, and disruptive behavior.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Adolescent Physical Development: More Than Just Growth"
+      ]
     },
     {
       "stem": "At the time of birth, a full-term neonate's brain contains approximately what proportion of the neurons it will have in adulthood?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Most neurons are already present at birth. Instead, three major processes are happening: Synaptogenesis... Dendritic growth... Myelination",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "The Brain's Journey: From Birth Through Adulthood"
+      ]
     },
     {
       "stem": "Which neonatal reflex is crucial for successful breastfeeding?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "They respond to a cheek touch by turning their head toward the touch. That's the rooting reflex.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Sensory Development: How We Experience the World"
+      ]
     },
     {
       "stem": "At what age do most children typically begin to walk independently, marking a significant milestone in motor development?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "They respond to a cheek touch by turning their head toward the touch. That's the rooting reflex.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Gross Motor Development: The Predictable Sequence"
+      ]
     },
     {
       "stem": "What are the potential outcomes of early physical maturity in adolescents?",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "Understanding how the body and brain develop across the lifespan gives you crucial insight into when certain psychological disorders might emerge.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Adolescent Physical Development: More Than Just Growth"
+      ]
     },
     {
       "stem": "Which of the following is a key developmental milestone in motor skills for infants around 12 months of age?",
@@ -124,7 +139,10 @@
       "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Gross Motor Development: The Predictable Sequence"
+      ]
     },
     {
       "stem": "How does inadequate nutrition during critical periods of development impact a child's physical growth?",
@@ -145,7 +163,8 @@
       "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following senses is least developed at birth and shows significant improvement by 7-8 months of age?",
@@ -166,7 +185,10 @@
       "lessonExcerpt": "Vision is the least developed sense at birth. A newborn's visual acuity is roughly 20/400 to 20/600. By 7-8 months, though, infants have visual acuity similar to normal adults.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Sensory Development: How We Experience the World"
+      ]
     },
     {
       "stem": "A school psychologist is preparing a psychoeducational workshop for middle school staff on puberty timing. A teacher asks whether developing early is advantageous or disadvantageous for students. Which of the following most accurately summarizes the empirical literature on the differential psychosocial effects of early physical maturation in boys versus girls?",
@@ -187,7 +209,10 @@
       "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Adolescent Physical Development: More Than Just Growth"
+      ]
     },
     {
       "stem": "A gerontologist is reviewing outcome data across a cohort of adults aged 70–85. After controlling for physical health status, which factor most consistently predicts positive psychological and functional outcomes in late life according to the research literature on successful aging?",
@@ -208,7 +233,8 @@
       "lessonExcerpt": "This explains why many older adults maintain strong cognitive abilities despite some neuron loss, the brain adapts.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     },
     {
       "stem": "Which brain developmental process involves the elimination of unused synapses that continues through adolescence?",
@@ -226,7 +252,10 @@
       "quality_comment": "Clear stem with plausible distractors involving related brain development processes makes it suitable for EPPP-level testing.",
       "lessonExcerpt": "After this explosive growth in synapses, something counterintuitive happens: the brain starts cutting connections. This process is called synaptic pruning, and it continues through adolescence.",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Brain's Journey: From Birth Through Adulthood"
+      ]
     },
     {
       "stem": "Which factor is associated with an increased risk of early onset puberty in girls?",
@@ -244,7 +273,10 @@
       "quality_comment": "Distractors relate to plausible family environment factors, enhancing the discriminative power of the question.",
       "lessonExcerpt": "Early Puberty in Boys. Mixed bag: Higher self-esteem, Greater social maturity, More popularity, Better athletic skills",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Adolescent Physical Development: More Than Just Growth"
+      ]
     },
     {
       "stem": "Why are adolescents particularly at risk for engaging in substance use and other impulsive behaviors, according to brain development research?",
@@ -262,7 +294,11 @@
       "quality_comment": "Well-structured distractors require nuanced understanding of developmental neuroscience, making it suitable for intermediate difficulty.",
       "lessonExcerpt": "Remember how the prefrontal cortex doesn't mature until the late teens to mid-20s? Here's where that matters most: the limbic system (involved in emotions and motivation) develops earlier than the prefrontal cortex.",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Brain's Journey: From Birth Through Adulthood",
+        "Adolescent Substance Use: Risk and Protection"
+      ]
     },
     {
       "stem": "Which developmental milestone is expected between 10 and 12 months of age?",
@@ -280,7 +316,10 @@
       "quality_comment": "Options represent motor milestones from different ages, requiring precise knowledge of developmental timing.",
       "lessonExcerpt": "After this explosive growth in synapses, something counterintuitive happens: the brain starts cutting connections. This process is called synaptic pruning, and it continues through adolescence.",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gross Motor Development: The Predictable Sequence"
+      ]
     },
     {
       "stem": "Which of the following is NOT recommended to reduce the risk of Sudden Infant Death Syndrome (SIDS)?",
@@ -298,7 +337,10 @@
       "quality_comment": "The question uses commonly known safe sleep practices, with distractors that are clear and plausible, enhancing clarity.",
       "lessonExcerpt": "By 7-8 months, though, infants have visual acuity similar to normal adults.",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sudden Infant Death Syndrome (SIDS): What You Need to Know"
+      ]
     },
     {
       "stem": "Which biological factor is most consistently linked to the increased likelihood that a boy will have a gay sexual orientation?",
@@ -316,7 +358,10 @@
       "quality_comment": "Distractors involve plausible biological factors, increasing the challenge suitable for advanced examination items.",
       "lessonExcerpt": "| 5-6 months | Pictorial cues | Can perceive depth with one eye using size, shadows, texture |",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Orientation and Fluidity"
+      ]
     },
     {
       "stem": "What is the main biological factor contributing to adolescent sleep deprivation according to research?",
@@ -334,7 +379,10 @@
       "quality_comment": "Options reflect known contributors with a clear distinction between biological and social factors, fostering critical thinking.",
       "lessonExcerpt": "Presbycusis (age-related hearing loss) typically starts around age 40, beginning with decreased sensitivity to high-frequency sounds.",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Adolescent Sleep Deprivation: A Perfect Storm"
+      ]
     },
     {
       "stem": "Which term best describes variations in sexual attractions and behaviors over time that differ from a person's stable sexual orientation labels?",
@@ -352,7 +400,10 @@
       "quality_comment": "The question distinguishes nuanced terminology relevant to sexual orientation and identity, suitable for graduate-level understanding.",
       "lessonExcerpt": "Predictors of early puberty in girls include maternal mood disorder, biological father's absence, stepfather or maternal boyfriend presence, and discordant family relationships.",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sexual Orientation and Fluidity"
+      ]
     },
     {
       "stem": "Which of the following scenarios best illustrates a protective factor that buffers the adverse effect of stressful life events on adolescent substance use?",
@@ -370,7 +421,10 @@
       "quality_comment": "Clear scenario-based question enhances application of theory to realistic developmental contexts.",
       "lessonExcerpt": "Remember how the prefrontal cortex doesn't mature until the late teens to mid-20s? Here's where that matters most: the limbic system (involved in emotions and motivation) develops earlier than the prefrontal cortex.",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Adolescent Substance Use: Risk and Protection"
+      ]
     },
     {
       "stem": "Which of the following best describes a mechanism by which synaptic pruning improves brain efficiency during development?",
@@ -388,7 +442,10 @@
       "quality_comment": "Distractors are plausible neurological processes, requiring test-takers to understand specific pruning functions.",
       "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Brain's Journey: From Birth Through Adulthood"
+      ]
     },
     {
       "stem": "What term describes the process by which the brain strengthens synaptic connections that are frequently used while eliminating those that are not?",
@@ -411,7 +468,10 @@
       ],
       "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Brain's Journey: From Birth Through Adulthood"
+      ]
     },
     {
       "stem": "During which developmental phase does synaptic pruning primarily occur, leading to a more efficient neural network in the brain?",
@@ -434,7 +494,10 @@
       ],
       "lessonExcerpt": "Protective factors include: Back sleeping position; Breastfeeding; Bare crib (minimal bedding); Avoiding overheating; Room-sharing without bed-sharing",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Brain's Journey: From Birth Through Adulthood"
+      ]
     },
     {
       "stem": "Which of the following factors is most strongly associated with predicting adolescent alcohol use?",
@@ -455,7 +518,10 @@
       "lessonExcerpt": "Risk Factors: Stressful life events, Parental substance abuse, Weak parent-child relationships, Affiliation with substance-using peers",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Adolescent Substance Use: Risk and Protection"
+      ]
     },
     {
       "stem": "Which of the following is considered a protective factor in the context of developmental resilience?",
@@ -476,7 +542,10 @@
       "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Adolescent Substance Use: Risk and Protection"
+      ]
     },
     {
       "stem": "What pattern of couple communication is associated with divorce occurring later in the marriage?",
@@ -494,7 +563,8 @@
       "quality_comment": "Clear stem and well-constructed distractors that distinguish between emotional expression styles in couples.",
       "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "What is the reported prevalence of obsessive-compulsive disorder (OCD) in girls compared to boys?",
@@ -515,7 +585,8 @@
       "lessonExcerpt": "The lesson does not specifically cover OCD prevalence in girls, indicating a need for review.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": null
     },
     {
       "stem": "A researcher studying the epidemiology of major depressive disorder across the lifespan finds that prevalence rates for boys and girls are roughly equivalent until a specific developmental period, after which rates diverge significantly. This divergence is MOST likely to become apparent during:",
@@ -536,7 +607,8 @@
       "lessonExcerpt": "During childhood, depression rates are similar for boys and girls. But in early adolescence, rates for females skyrocket while male rates stay stable.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": null
     }
   ]
 }

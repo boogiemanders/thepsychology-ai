@@ -19,7 +19,10 @@
       "lessonExcerpt": "Fiedler used the Least Preferred Coworker (LPC) scale. Leaders rate their least preferred coworker on bipolar adjectives. Low LPC leaders (task-oriented) rate their least preferred coworker negatively because they focus on that person's poor task performance.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 31
+      "inspirationIndex": 31,
+      "relatedSections": [
+        "Leadership Theories: Finding the Right Fit"
+      ]
     },
     {
       "stem": "A newly hired employee quickly adopts the work habits and values of a senior colleague whom she admires and with whom she strongly identifies. The senior colleague's ability to influence the new employee's behavior is best explained by which of French and Raven's bases of social power?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "French and Raven (1958) identified five types of power leaders use to influence others. The 'softer' forms of power (expert and referent) generate genuine commitment, while reward and legitimate power get compliance, and coercive power often backfires with resistance.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Five Bases of Power"
+      ]
     },
     {
       "stem": "According to Judge, Bono, Ilies, and Gerehardt (2002), which Big Five personality traits are most strongly correlated with leader effectiveness?",
@@ -58,7 +64,10 @@
       "quality_comment": "The question is clear and targets knowledge of personality traits in leadership, with plausible distractors that could challenge test-takers.",
       "lessonExcerpt": "| Extraversion | .31 |\n| Conscientiousness | .28 |",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes a Leader Effective? The Trait Approach"
+      ]
     },
     {
       "stem": "Which of the following descriptions best aligns with a leader high in 'initiating structure' according to Ohio State studies on leader behavior?",
@@ -76,7 +85,10 @@
       "quality_comment": "The question is straightforward with clearly distinct options, ensuring comprehension of key leadership behavior constructs.",
       "lessonExcerpt": "**Initiating Structure**: Task-oriented behavior focused on getting things done, setting goals, organizing work, and achieving performance objectives.",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Two Core Leadership Dimensions"
+      ]
     },
     {
       "stem": "Which leadership style is most characteristic of female leaders compared to male leaders, based on meta-analyses by Eagly and colleagues?",
@@ -94,7 +106,10 @@
       "quality_comment": "Options reflect nuanced leadership distinctions by gender; distractors are scientifically grounded yet distinguishable.",
       "lessonExcerpt": "**Female leaders are more likely to:**\n- Use transformational leadership approaches (inspiring and developing people)\n- Provide contingency rewards (a transactional element)",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Leadership and Gender: What the Research Actually Shows"
+      ]
     },
     {
       "stem": "According to French and Raven’s bases of social power, which type of power is most likely to foster commitment rather than mere compliance or resistance?",
@@ -112,7 +127,10 @@
       "quality_comment": "Distractors are all plausible types of power; correct answer requires specific recall of power outcomes.",
       "lessonExcerpt": "| Expert Power | Knowledge, skills, expertise | Commitment |\n| Referent Power | Respect, admiration, identification | Commitment |",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Five Bases of Power"
+      ]
     },
     {
       "stem": "In Fiedler’s Contingency Model, what does a low Least Preferred Coworker (LPC) score indicate about a leader’s style?",
@@ -130,7 +148,10 @@
       "quality_comment": "This question requires understanding of a specific and less commonly known leadership assessment tool, raising its difficulty appropriately.",
       "lessonExcerpt": "- **Low LPC leaders** (task-oriented): Rate their least preferred coworker negatively because they focus on that person's poor task performance",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Leadership Theories: Finding the Right Fit"
+      ]
     },
     {
       "stem": "According to Hersey and Blanchard’s Situational Leadership Theory, what leadership style is best for subordinates who have high job ability but low willingness?",
@@ -148,7 +169,10 @@
       "quality_comment": "Distractors are balanced and reflect the core four styles; clinical application of theory is effectively tested.",
       "lessonExcerpt": "| Low willingness, High ability | Participating | Low task, High relationship |",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Leadership Theories: Finding the Right Fit"
+      ]
     },
     {
       "stem": "House's Path-Goal Theory suggests which leadership style is most appropriate for subordinates who have a high need for affiliation and are performing mundane tasks with low job satisfaction?",
@@ -166,7 +190,10 @@
       "quality_comment": "Clear and focused stem with plausible distractors, requiring precise application of the theory.",
       "lessonExcerpt": "- Supportive style works best when: Subordinates have high affiliation needs and low satisfaction AND the task is mundane and unchallenging",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Leadership Theories: Finding the Right Fit"
+      ]
     },
     {
       "stem": "The Vroom-Yetton-Jago decision model helps leaders determine:",
@@ -184,7 +211,10 @@
       "quality_comment": "Distractors are credible and somewhat related to leadership theory, adequately challenging knowledge without being misleading.",
       "lessonExcerpt": "Based on these ratings, the model recommends one of five strategies ranging from highly autocratic (decide alone) to highly democratic (let the group decide).",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Leadership Theories: Finding the Right Fit"
+      ]
     },
     {
       "stem": "In Leader-Member Exchange (LMX) theory, subordinates classified as 'in-group' typically experience:",
@@ -202,7 +232,10 @@
       "quality_comment": "The response options reflect contrasting out-group and in-group experiences well, making this an effective discrimination item.",
       "lessonExcerpt": "**In-group members** (perceived as competent, trustworthy, willing to take responsibility):\n- Receive more attention and support\n- Participate in decision-making\n- Get interesting, challenging assignments\n- Show higher job satisfaction, performance, commitment, and organizational citizenship",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Leadership Theories: Finding the Right Fit"
+      ]
     },
     {
       "stem": "Which characteristic is NOT a defining feature of transformational leadership according to Bass (1997)?",
@@ -220,7 +253,10 @@
       "quality_comment": "The question clearly differentiates related constructs; distractors reflect both leadership styles to test nuanced understanding.",
       "lessonExcerpt": "Transformational leadership elevates both leaders and followers to higher levels of ethics, morality, and motivation (Bass, 1997; Bass & Steidlmeier, 1999). It has four components.",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Transformational vs. Transactional Leadership"
+      ]
     },
     {
       "stem": "Management-by-exception in transactional leadership is characterized by:",
@@ -238,7 +274,10 @@
       "quality_comment": "The distractors are all plausible leadership-related behaviors, but only one accurately describes management-by-exception.",
       "lessonExcerpt": "**Management-by-Exception (MBE)**: Intervening to correct mistakes or rule violations\n- **Active MBE**: Closely monitoring and taking immediate corrective action to prevent problems\n- **Passive MBE**: Not monitoring closely; only acting after serious problems occur",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Transformational vs. Transactional Leadership"
+      ]
     },
     {
       "stem": "Which of the following leadership traits has been found to predict leader effectiveness better when the leader’s stress level is low and the leader uses a directive style?",
@@ -256,7 +295,10 @@
       "quality_comment": "This question requires integration of trait and situational influences, providing moderate difficulty and differentiation.",
       "lessonExcerpt": "Here's what's interesting: Intelligence predicts effectiveness better when stress is low and when leaders use a directive (telling people what to do) rather than participative (involving people in decisions) style.",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Makes a Leader Effective? The Trait Approach"
+      ]
     },
     {
       "stem": "Which of the following best describes the role of leader power bases in eliciting subordinate responses, according to Yukl (2002)?",
@@ -274,7 +316,10 @@
       "quality_comment": "Choices are nuanced and related; the correct answer requires precise knowledge of power bases and influence outcomes.",
       "lessonExcerpt": "| Reward Power | Control over pay, promotions, recognition | Compliance |\n| Coercive Power | Control over punishments, penalties | Resistance |\n| Legitimate Power | Formal position, title, role authority | Compliance |\n| Expert Power | Knowledge, skills, expertise | Commitment |\n| Referent Power | Respect, admiration, identification | Commitment |",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Five Bases of Power"
+      ]
     },
     {
       "stem": "In Fiedler’s model, which situational factor would NOT contribute to a very favorable situation for a leader?",
@@ -292,7 +337,10 @@
       "quality_comment": "Clear distractors focus on key situational elements; discriminates well between knowledge levels about leadership contingencies.",
       "lessonExcerpt": "Three factors determine how much control a leader has:\n1. Leader-member relations (good or poor)\n2. Task structure (structured or unstructured)  \n3. Position power (strong or weak)",
       "suggestedLesson": "5-6-leadership",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Leadership Theories: Finding the Right Fit"
+      ]
     },
     {
       "stem": "A psychologist-in-training is waiting to learn whether she passed a high-stakes oral examination. She feels anxious and is unsure whether her distress level is reasonable or excessive. Rather than seeking out faculty who have administered the exam many times, she finds herself wanting to talk with other trainees who are in the same waiting period. According to social comparison theory, what best explains this selective preference?",
@@ -313,7 +361,8 @@
       "lessonExcerpt": "A meta-analysis by Eagly, Johannesen-Schmidt, and van Engen (2003) revealed something interesting about transformational and transactional leadership: **Female leaders are more likely to:** - Use transformational leadership approaches (inspiring and developing people) - Provide contingency rewards (a transactional element)",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     },
     {
       "stem": "According to Fiedler's contingency model, a leader with a low LPC (Least Preferred Coworker) score would be MOST effective in which of the following situations?",
@@ -334,7 +383,10 @@
       "lessonExcerpt": "These combine to create situations ranging from very favorable to very unfavorable. **The Match-Up",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 31
+      "inspirationIndex": 31,
+      "relatedSections": [
+        "Leadership Theories: Finding the Right Fit"
+      ]
     },
     {
       "stem": "Research indicates that men and women may exhibit different leadership styles. Which of the following is a commonly observed difference?",
@@ -355,7 +407,10 @@
       "lessonExcerpt": "Theory #6: Expectancy Theory (VIE Theory) Vroom's expectancy theory says motivation is a calculation based on three factors:",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Leadership and Gender: What the Research Actually Shows"
+      ]
     },
     {
       "stem": "Research indicates that which leadership style is often associated with better outcomes in gender-diverse teams?",
@@ -376,7 +431,11 @@
       "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Leadership and Gender: What the Research Actually Shows",
+        "Transformational vs. Transactional Leadership"
+      ]
     },
     {
       "stem": "Which leadership style focuses on inspiring and motivating followers to achieve higher levels of performance?",
@@ -397,7 +456,10 @@
       "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Transformational vs. Transactional Leadership"
+      ]
     }
   ]
 }

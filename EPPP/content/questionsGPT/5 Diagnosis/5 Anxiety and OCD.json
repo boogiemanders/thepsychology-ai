@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The question clearly focuses on learning theory application with plausible distractors that test understanding of different conditioning processes.",
       "lessonExcerpt": "**Stage 2. Operant Conditioning:** The person learns that avoiding elevators prevents anxiety. This avoidance is negatively reinforced (it removes the unpleasant anxiety feeling), which makes the person more likely to avoid elevators in the future.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Specific Phobia"
+      ]
     },
     {
       "stem": "Which cognitive model of Generalized Anxiety Disorder posits that worry functions to help individuals avoid sudden shifts from neutral or positive affect to negative affect?",
@@ -32,7 +35,10 @@
       "difficulty": "hard",
       "quality_comment": "The question tests detailed knowledge of competing cognitive models of GAD with well-constructed distractors that are conceptually related but distinct.",
       "lessonExcerpt": "**2. Contrast Avoidance Model (Newman & Llera)** People with GAD maintain chronic worry to stay in a sustained negative emotional state, which prevents jarring shifts from positive/neutral states to negative states when something bad happens.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Generalized Anxiety Disorder (GAD)"
+      ]
     },
     {
       "stem": "Which of the following is the preferred initial treatment approach for childhood Separation Anxiety Disorder that includes school refusal?",
@@ -49,7 +55,10 @@
       "difficulty": "medium",
       "quality_comment": "Options represent plausible treatments, but the correct answer aligns with best research-supported interventions for this disorder and population.",
       "lessonExcerpt": "**First-line treatment:** Cognitive-behavioral therapy (CBT) that includes: Psychoeducation, Exposure (gradually facing separation), Relaxation techniques, Cognitive restructuring (challenging anxious thoughts), Parent training (which significantly improves outcomes for children)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Separation Anxiety Disorder"
+      ]
     },
     {
       "stem": "In panic disorder, which of the following best describes interoceptive exposure as part of panic control treatment?",
@@ -66,7 +75,10 @@
       "difficulty": "medium",
       "quality_comment": "The stem clearly specifies panic disorder context; distractors are reasonable but different treatment concepts, increasing question quality.",
       "lessonExcerpt": "**Interoceptive exposure:** Deliberately creating physical panic symptoms (running in place, spinning, breathing through a straw) to help the person learn these sensations aren't dangerous",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Panic Disorder"
+      ]
     },
     {
       "stem": "Which neurobiological circuit is most implicated in Obsessive-Compulsive Disorder (OCD) as identified by neuroimaging studies?",
@@ -83,7 +95,10 @@
       "difficulty": "hard",
       "quality_comment": "The question requires integration of neuroanatomical knowledge with disorder-specific findings; distractors are relevant brain circuits, enhancing rigor.",
       "lessonExcerpt": "Hyperactivity in the cortico-striato-thalamo-cortical (CSTC) pathway, which controls movement execution, habit formation, and reward.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Obsessive-Compulsive Disorder (OCD)"
+      ]
     },
     {
       "stem": "Which of these statements about the heritability and familial risk of anxiety disorders is most accurate based on twin and family studies?",
@@ -100,7 +115,10 @@
       "difficulty": "medium",
       "quality_comment": "The options distinguish genetic vs. environmental contributions clearly with scientifically accurate ranges, making the item valid and discriminative.",
       "lessonExcerpt": "**Genetics** (heritability estimates range from 30-50%, with concordance rates of 12-26% for identical twins and 4-15% for fraternal twins)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding the Anxiety Disorders Family"
+      ]
     },
     {
       "stem": "What is the most likely reason that exposure therapy for the blood-injection-injury subtype of specific phobia combines exposure with applied tension techniques?",
@@ -117,7 +135,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible treatment components but only the correct response contextualizes the rationale specific to this subtype, improving question validity.",
       "lessonExcerpt": "Adding motivational interviewing as a pretreatment to CBT reduces treatment resistance and improves outcomes.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Specific Phobia"
+      ]
     },
     {
       "stem": "Which of the following diagnostic features distinguishes Generalized Anxiety Disorder (GAD) from nonpathological anxiety?",
@@ -134,7 +155,10 @@
       "difficulty": "easy",
       "quality_comment": "Question is straightforward with clearly differentiable options for other anxiety disorders, enhancing clarity and suitability for EPPP.",
       "lessonExcerpt": "GAD involves excessive anxiety and worry about multiple events or activities occurring most days for at least six months. The person finds it difficult to control the worry.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Generalized Anxiety Disorder (GAD)"
+      ]
     },
     {
       "stem": "Which treatment approach has research found to be equally effective to face-to-face cognitive behavior therapy (CBT) for adult Social Anxiety Disorder?",
@@ -151,7 +175,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include plausible but less supported or inappropriate options, aiding in testing knowledge of empirically supported modern treatments.",
       "lessonExcerpt": "Guided internet-delivered CBT appears equivalent to face-to-face CBT for symptom reduction in adults.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Social Anxiety Disorder (Social Phobia)"
+      ]
     },
     {
       "stem": "In Obsessive-Compulsive Disorder (OCD), what best describes the nature of compulsions?",
@@ -168,7 +195,10 @@
       "difficulty": "easy",
       "quality_comment": "The question is clearly worded and provides plausible alternative symptom descriptions, making it effective for assessing knowledge of OCD criteria.",
       "lessonExcerpt": "**Compulsions:** Repetitive behaviors or mental acts that: The person feels driven to perform, Are done in response to an obsession or according to rigid rules, Aim to reduce anxiety or prevent something bad",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Obsessive-Compulsive Disorder (OCD)"
+      ]
     },
     {
       "stem": "Which of the following is true about the typical presentation and prevalence of Specific Phobia?",
@@ -185,7 +215,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors reflect features of other anxiety disorders, which enhances discriminative validity and clarity for examinees.",
       "lessonExcerpt": "**Key diagnostic features:** Fear must be persistent (typically six months or longer) Must cause significant distress or functional impairment Twice as common in girls than boys Average onset around age 10",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Specific Phobia"
+      ]
     },
     {
       "stem": "What is the first-line treatment modality for Agoraphobia?",
@@ -202,7 +235,10 @@
       "difficulty": "easy",
       "quality_comment": "The options mix various interventions to challenge knowledge of evidence-based practice while maintaining clarity and plausibility.",
       "lessonExcerpt": "**First-line:** In vivo exposure and response prevention",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Agoraphobia"
+      ]
     },
     {
       "stem": "A 9-year-old child presents with excessive distress when anticipating separation from parents, reluctance to go to school, and recurrent complaints of headaches and stomachaches during school days for six weeks. Which diagnosis best fits this clinical picture?",
@@ -219,7 +255,10 @@
       "difficulty": "medium",
       "quality_comment": "The clinical vignette provides relevant symptoms and duration, with distractors representing other anxiety disorders to test diagnostic accuracy.",
       "lessonExcerpt": "**Duration requirements:** Four weeks for children and adolescents, six months for adults. School refusal often signals separation anxiety disorder",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Separation Anxiety Disorder"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies an evidence-based method to enhance motivation before cognitive-behavioral therapy (CBT) for anxiety disorders?",
@@ -236,7 +275,10 @@
       "difficulty": "medium",
       "quality_comment": "The item focuses on integrated intervention strategies supported by research, with distractors reflecting common but less evidence-supported approaches.",
       "lessonExcerpt": "**Treatment enhancement:** Adding motivational interviewing as a pretreatment to CBT reduces treatment resistance and improves outcomes.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Understanding the Anxiety Disorders Family"
+      ]
     },
     {
       "stem": "Which neuroimaging finding is most commonly associated with Generalized Anxiety Disorder (GAD)?",
@@ -253,7 +295,10 @@
       "difficulty": "hard",
       "quality_comment": "The item requires integration of functional neurobiology and pathophysiology, with distractors involving less relevant or incorrect brain regions.",
       "lessonExcerpt": "Research shows reduced connectivity between prefrontal cortex regions and the amygdala, suggesting weak top-down control of the amygdala's fear responses.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Generalized Anxiety Disorder (GAD)"
+      ]
     },
     {
       "stem": "In the context of anxiety disorder assessment, what is the primary advantage of using virtual reality exposure therapy (VRET)?",
@@ -270,7 +315,10 @@
       "difficulty": "medium",
       "quality_comment": "The option set examines understanding of practical advantages of technology-based interventions versus exaggerated or inaccurate claims.",
       "lessonExcerpt": "Virtual reality may be as effective as in vivo for certain phobias (heights, flying, small animals)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Specific Phobia"
+      ]
     },
     {
       "stem": "In the context of anxiety disorders, which of the following best illustrates how negative reinforcement can perpetuate social anxiety?",
@@ -292,7 +340,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "The person learns that avoiding elevators prevents anxiety. This avoidance is negatively reinforced (it removes the unpleasant anxiety feeling), which makes the person more likely to avoid elevators in the future.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Social Anxiety Disorder (Social Phobia)"
+      ]
     },
     {
       "stem": "Which of the following scenarios best exemplifies the role of operant conditioning in the maintenance of obsessive-compulsive disorder (OCD)?",
@@ -314,7 +365,10 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "**Compulsions:** Repetitive behaviors or mental acts that: The person feels driven to perform, Are done in response to an obsession or according to rigid rules, Aim to reduce anxiety or prevent something bad",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Obsessive-Compulsive Disorder (OCD)"
+      ]
     }
   ]
 }

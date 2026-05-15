@@ -19,7 +19,10 @@
       "lessonExcerpt": "**Projective tests** operate on the assumption that when you give people ambiguous, unstructured stimuli and freedom to respond however they want, they'll unconsciously reveal their inner world",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "Projective Personality Tests: Reading Between the Lines"
+      ]
     },
     {
       "stem": "What type of scoring does the Edwards Personal Preference Schedule (EPPS) use, and what is a key limitation of these scores?",
@@ -37,7 +40,10 @@
       "quality_comment": "Distractors are plausible but incorrect scoring types, making the correct choice clear for knowledgeable candidates.",
       "lessonExcerpt": "**Projective tests** operate on the assumption that when you give people ambiguous, unstructured stimuli and freedom to respond however they want, they'll unconsciously reveal their inner world",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "Which personality test categorizes individuals into 16 types based on four bipolar dimensions derived from Jung’s theory?",
@@ -55,7 +61,10 @@
       "quality_comment": "Straightforward question with clearly differentiated options; suitable for foundational EPPP content.",
       "lessonExcerpt": "Raymond Cattell created the 16 PF in 1947 using a fascinating approach. He started with the **lexical strategy**, which assumes that if a personality trait is important, people will have created words for it.",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "Which of the following personality inventories assesses the 'Big Five' traits and provides scores on broad traits and multiple facets?",
@@ -73,7 +82,10 @@
       "quality_comment": "Good distractor options that are also personality tests enhance the question's rigor without ambiguity.",
       "lessonExcerpt": "This format produces **ipsative scores**, which is fancy terminology for \"relative rankings.\" Ipsative scores tell you which needs are strongest *within* a person (intra-individual comparison) but can't compare how strong someone's needs are relative to other people",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "According to meta-analytic research, which Big Five personality traits are most consistently associated with an increased risk for Alzheimer’s disease and other neurocognitive disorders?",
@@ -91,7 +103,10 @@
       "quality_comment": "The question requires integration of personality and neurocognitive disorder knowledge, appropriately challenging for the EPPP.",
       "lessonExcerpt": "Your results place you into one of 16 personality types. Combinations like ISTP or ENFJ.",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "Which projective test uses 10 bilaterally symmetrical inkblots and includes an administration phase where the examinee describes what they see and an inquiry phase exploring determinants of responses?",
@@ -109,7 +124,10 @@
       "quality_comment": "Well-constructed with plausible distractors, effectively distinguishing knowledge of projective methods.",
       "lessonExcerpt": "This is the gold standard for measuring the **Big Five** personality traits",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Projective Personality Tests: Reading Between the Lines"
+      ]
     },
     {
       "stem": "In the Exner Comprehensive System for the Rorschach Inkblot Test, what does a high number of 'color' responses typically indicate about an examinee?",
@@ -127,7 +145,10 @@
       "quality_comment": "Distractors are related to other possible interpretations, increasing the question’s discriminative power.",
       "lessonExcerpt": "A major meta-analysis by Aschwanden and colleagues in 2021 found that high neuroticism and low conscientiousness significantly predict increased risk for Alzheimer's disease and other neurocognitive disorders.",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Projective Personality Tests: Reading Between the Lines"
+      ]
     },
     {
       "stem": "The Thematic Apperception Test (TAT) was developed based on which of the following theoretical frameworks?",
@@ -145,7 +166,10 @@
       "quality_comment": "Distractors include other well-known personality theories that provide plausible but incorrect choices.",
       "lessonExcerpt": "The test includes 10 cards with bilaterally symmetrical inkblots",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Projective Personality Tests: Reading Between the Lines"
+      ]
     },
     {
       "stem": "Which of the following describes a primary characteristic of projective personality tests?",
@@ -163,7 +187,10 @@
       "quality_comment": "Simple yet important distinction, with distractors reflecting characteristics of structured tests, enhancing clarity.",
       "lessonExcerpt": "Many **color responses** suggest strong emotionality and impulsiveness, the person responds quickly to emotional stimuli",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Projective Personality Tests: Reading Between the Lines"
+      ]
     },
     {
       "stem": "In the Rorschach test, what does a 'whole' response location typically indicate about the examinee’s cognitive style?",
@@ -181,7 +208,10 @@
       "quality_comment": "Options are concise and targeted, emphasizing clinically relevant interpretation for advanced examinees.",
       "lessonExcerpt": "Henry Murray developed the TAT in 1943, building on his theory of human needs",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Projective Personality Tests: Reading Between the Lines"
+      ]
     },
     {
       "stem": "Which best describes a theoretical model underlying the 16 Personality Factor Questionnaire (16 PF)?",
@@ -199,7 +229,10 @@
       "quality_comment": "Well-constructed item distinguishing theoretical foundations, enhancing domain-relevant conceptual understanding.",
       "lessonExcerpt": "**Projective tests** operate on the assumption that when you give people ambiguous, unstructured stimuli and freedom to respond however they want, they'll unconsciously reveal their inner world",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "Which key limitation is associated with ipsative scoring formats such as that used in the Edwards Personal Preference Schedule (EPPS)?",
@@ -217,7 +250,10 @@
       "quality_comment": "Options are plausible but distinct, requiring nuanced comprehension of scoring methods.",
       "lessonExcerpt": "Many **whole responses** indicate creative, theoretical thinking, the ability to see the big picture",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "Which personality test categorizes individuals into 16 distinct personality profiles based on their responses to a series of questions regarding their traits and behaviors?",
@@ -240,7 +276,10 @@
       ],
       "lessonExcerpt": "He started with the **lexical strategy**, which assumes that if a personality trait is important, people will have created words for it.",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "Which of the following assessments utilizes a lexical approach to identify key personality traits, focusing on the language used to describe these traits?",
@@ -263,7 +302,10 @@
       ],
       "lessonExcerpt": "Ipsative scores only allow intra-individual comparisons (within one person). You cannot use EPPS results to say one person has higher achievement needs than another person.",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "A doctoral student is preparing a presentation comparing classical Freudian theory with Neo-Freudian approaches. Her supervisor asks her to identify the most fundamental theoretical shift introduced by Neo-Freudian theorists. Which of the following most accurately characterizes the primary reconceptualization advanced by theorists such as Adler and Horney?",
@@ -284,7 +326,8 @@
       "lessonExcerpt": "Determinants:** What characteristics influenced the response? - Form (the shape) - Movement (perceived action) - Color - Shading",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following statements best reflects the concept of trait theory in personality psychology?",
@@ -305,7 +348,8 @@
       "lessonExcerpt": "Temperament is your biological starting point (genetically influenced but shaped by environment. Think of temperament as the default settings on a new phone)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following personality disorders is characterized by a pervasive pattern of disregard for the rights of others?",
@@ -326,7 +370,8 @@
       "lessonExcerpt": "**Diagnosis Requires ONE of These:**\n\n- Episodes of cataplexy (loss of muscle tone)\n- Hypocretin deficiency\n- REM sleep latency of 15 minutes or less on polysomnography",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following symptoms is most characteristic of schizotypal personality disorder?",
@@ -347,7 +392,8 @@
       "lessonExcerpt": "Schizotypal personality disorder is characterized by odd beliefs or magical thinking.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": null
     },
     {
       "stem": "Which personality trait is most closely associated with avoidant personality disorder?",
@@ -368,7 +414,8 @@
       "lessonExcerpt": "Low self-esteem is a significant trait associated with avoidant personality disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": null
     },
     {
       "stem": "Which neuropsychological assessment is specifically focused on identifying deficits in executive functioning?",
@@ -391,7 +438,8 @@
       ],
       "lessonExcerpt": "Instead of just recording whether someone got the answer right, it focuses on *how* they arrived at their answer. This qualitative approach means you might modify standardized tests on the fly",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "What is a key characteristic of the Thematic Apperception Test (TAT) in projective testing?",
@@ -412,7 +460,10 @@
       "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Projective Personality Tests: Reading Between the Lines"
+      ]
     },
     {
       "stem": "Which personality assessment is based on the assumption that important personality traits are encoded in the English language and uses factor analysis to identify both primary and global traits?",
@@ -430,7 +481,10 @@
       "quality_comment": "Clear stem with well-differentiated options focused on specific test characteristics, appropriate for the EPPP.",
       "lessonExcerpt": "These were developed through **empirical criterion keying**",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Structured Personality Tests: The Multiple-Choice Approach"
+      ]
     },
     {
       "stem": "According to the DSM-5-TR, the ten specific personality disorders are organized using which classification approach?",
@@ -451,7 +505,8 @@
       "lessonExcerpt": "The DSM-5-TR organizes the ten personality disorders into three clusters based on shared characteristics... Cluster A: Odd, eccentric behaviors... Cluster B: Dramatic, emotional, erratic behaviors... Cluster C: Anxious, fearful behaviors.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best describes the relationship between histrionic and antisocial personality disorders according to Hamburger et al. (1996)?",
@@ -469,7 +524,8 @@
       "quality_comment": "The question includes advanced content on differential expression hypotheses, with distractors plausible but clearly distinct for trained examinees.",
       "lessonExcerpt": "There's debate about whether these disorders represent gender-biased expressions of similar underlying traits (psychopathy), but research hasn't strongly supported this hypothesis. Some experts suggest diagnostic bias explains why antisocial is more common in men and histrionic in women.",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "According to DSM-5-TR, which statement is accurate regarding the diagnosis of narcissistic personality disorder in individuals who are still in their teenage years?",
@@ -492,7 +548,8 @@
       ],
       "lessonExcerpt": "Reality:** CD cannot be diagnosed after age 18 if the person meets criteria for Antisocial Personality Disorder. CD is essentially the developmental precursor.",
       "suggestedLesson": "5-personality-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     }
   ]
 }

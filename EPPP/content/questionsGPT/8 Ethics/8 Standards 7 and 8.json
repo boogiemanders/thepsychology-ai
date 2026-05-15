@@ -19,7 +19,11 @@
       "lessonExcerpt": "Standard 7 focuses on education and training, while Standard 8 covers research and publication.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Standard 8: Research and Publication",
+        "Standard 7: Education and Training"
+      ]
     },
     {
       "stem": "A doctoral student completes her dissertation under the mentorship of her faculty advisor. The advisor provided guidance on conceptualizing the research question, helped design the methodology, and offered editorial feedback on the manuscript. The student conducted all data collection and analysis independently. When the dissertation is prepared for publication, who should be listed as principal author?",
@@ -40,7 +44,10 @@
       "lessonExcerpt": "Students must be listed as principal author on articles substantially based on their dissertations, except in exceptional circumstances.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 29
+      "inspirationIndex": 29,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "What is the ethical guideline regarding the termination of therapy when a client poses a threat to themselves or others?",
@@ -61,7 +68,10 @@
       "lessonExcerpt": "You must take reasonable steps to resolve it. Discuss it with those involved, consult colleagues, prioritize the affected person's best interests.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 15
+      "inspirationIndex": 15,
+      "relatedSections": [
+        "Standard 7: Education and Training"
+      ]
     },
     {
       "stem": "What is the psychologist's duty when they become aware of a client's threat of violence?",
@@ -82,7 +92,10 @@
       "lessonExcerpt": "You must take reasonable steps to resolve it.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "What regulatory body oversees the professional behavior of psychologists?",
@@ -103,7 +116,10 @@
       "lessonExcerpt": "The APA can also take action against you for things outside your direct professional role.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Standard 7: Education and Training"
+      ]
     },
     {
       "stem": "Which of the following best describes the ethical considerations regarding authorship in academic publications?",
@@ -124,7 +140,10 @@
       "lessonExcerpt": "Publication credit: Standard 8.12 addresses who gets credit for published work. The principle is simple: Take credit only for work you actually did or substantially contributed to. Author order should reflect the relative contributions of each person involved.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "What is a key criterion for authorship in research papers according to ethical standards?",
@@ -145,7 +164,10 @@
       "lessonExcerpt": "What counts as substantial contribution? According to the APA Publication Manual: Formulating the problem or hypothesis; Structuring the study design; Organizing and conducting the analysis; Interpreting results",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "What ethical requirement must psychology students fulfill regarding their psychotherapy training?",
@@ -166,7 +188,10 @@
       "lessonExcerpt": "Students must be able to choose a therapist who isn't affiliated with the program.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": [
+        "Standard 7: Education and Training"
+      ]
     },
     {
       "stem": "A researcher conducts a study in which participants are led to believe they are evaluating a new educational program, when in fact the study examines conformity to authority figures. After data collection is complete, the researcher's primary ethical obligation is to:",
@@ -187,7 +212,10 @@
       "lessonExcerpt": "Additionally, participants must be allowed to withdraw their data at any time, and you must debrief them about the deception as early as feasible. Preferably right after their participation, but no la",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "A graduate student completes her doctoral dissertation with substantial intellectual contributions from her faculty advisor, who helped design the study methodology, conducted the primary statistical analyses, and wrote significant portions of the results and discussion sections. When the dissertation is submitted for publication, what authorship arrangement is MOST consistent with APA Ethics Code Standard 8.12?",
@@ -208,7 +236,10 @@
       "lessonExcerpt": "Students must be listed as principal author on articles substantially based on their dissertations, except in exceptional circumstances.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 29
+      "inspirationIndex": 29,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "When can a psychology training program require students to disclose personal information during coursework or training activities?",
@@ -226,7 +257,10 @@
       "quality_comment": "The stem clearly asks about a specific ethical standard and the distractors are plausible but incorrect interpretations of the standard, providing a clear assessment of the examinee's understanding.",
       "lessonExcerpt": "You can only require this disclosure when: You clearly stated this requirement in the admissions materials before students signed up, OR You need the information to evaluate whether personal problems are preventing a student from performing competently or posing a threat",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 7: Education and Training"
+      ]
     },
     {
       "stem": "If a graduate program requires therapy for students, what practice should be avoided to prevent dual relationships?",
@@ -244,7 +278,10 @@
       "quality_comment": "The question distinguishes a clear ethical violation from acceptable practices, with reasonable distractors that probe knowledge of therapy requirements in training.",
       "lessonExcerpt": "Students must be able to choose a therapist who isn't affiliated with the program. Additionally, faculty members who evaluate students' academic performance cannot provide that therapy themselves.",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 7: Education and Training"
+      ]
     },
     {
       "stem": "When is using deception in research ethically justifiable?",
@@ -262,7 +299,10 @@
       "quality_comment": "The question is clear with plausible distractors that reflect common misconceptions, good for testing ethical decision-making understanding.",
       "lessonExcerpt": "You can only use deception when: It's justified by significant scientific, educational, or applied value; Non-deceptive alternatives aren't available; You're not deceiving people about procedures likely to cause physical pain or severe emotional distress",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "What must psychologists do about Institutional Review Board approval before starting research with human participants?",
@@ -280,7 +320,11 @@
       "quality_comment": "The question is straightforward and covers essential ethical practice, with distractors that are clearly incorrect, fitting basic knowledge testing.",
       "lessonExcerpt": "Before you start research involving human subjects, you need approval from an Institutional Review Board (IRB). Once you get approval, you must obtain informed consent from participants",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 8: Research and Publication",
+        "Standard 7: Education and Training"
+      ]
     },
     {
       "stem": "Which statement best describes the APA Ethics Code requirements for informed consent in research involving children who are unable to provide consent themselves?",
@@ -298,7 +342,10 @@
       "quality_comment": "The question involves nuanced regulatory knowledge and has distractors reflecting common misunderstandings, making it appropriate for advanced ethical reasoning.",
       "lessonExcerpt": "Federal regulations allow waiving a child's assent when the research offers health benefits they can't get elsewhere.",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "According to the Ethics Code, what must psychologists do when they discover significant errors in their published research data?",
@@ -316,7 +363,10 @@
       "quality_comment": "The distractors are plausible but incorrect, and the stem clearly tests knowledge of ethical standards for handling errors, making this a well-constructed item.",
       "lessonExcerpt": "Correcting errors: If you discover significant errors in your published data, you must take reasonable steps to correct them through a correction, retraction, or erratum.",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "What distinguishes duplicate publication from piecemeal publication according to APA guidelines?",
@@ -334,7 +384,10 @@
       "quality_comment": "The question clearly differentiates similar ethical concepts, with distractors reflecting common confusions, making it useful for precise knowledge assessment.",
       "lessonExcerpt": "Duplicate publication means publishing the same data in two separate works. Piecemeal publication means splitting findings from one study into multiple publications.",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "After research is published, what are psychologists' obligations around sharing data for verification?",
@@ -352,7 +405,10 @@
       "quality_comment": "The options are balanced in detail and highlight critical concepts, making the question effective for testing understanding of post-publication data sharing ethics.",
       "lessonExcerpt": "After publishing research, you must share your data with competent professionals who want to verify your findings, as long as you can protect participants' confidentiality.",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "As a peer reviewer for manuscripts or grant proposals, what is a key ethical obligation?",
@@ -370,7 +426,10 @@
       "quality_comment": "The question is straightforward, with clear and plausible distractors, suitable for testing foundational ethical knowledge about peer review.",
       "lessonExcerpt": "If you review grant applications, manuscripts, or conference submissions, you must: Keep the content confidential (don't share documents or information about them without permission)",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "When may psychologists waive obtaining informed consent from research participants?",
@@ -388,7 +447,10 @@
       "quality_comment": "The item has plausible distractors and a clear stem, effectively assessing understanding of informed consent waivers.",
       "lessonExcerpt": "Standard 8.05 allows you to dispense with informed consent when the research isn't likely to cause harm and involves: Studying normal educational practices in schools; Using anonymous questionnaires, naturalistic observations, or archival research (with confidentiality protected)",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "What ethical guidelines should a psychologist follow when requiring students to participate in personal psychotherapy as part of their training program?",
@@ -406,7 +468,11 @@
       "quality_comment": "The stem clearly targets ethical training standards, and distractors include common missteps, making it effective for knowledge assessment.",
       "lessonExcerpt": "Justified by training objectives | The therapy requirement must make sense for what the program is teaching. Disclosed in application materials | No surprises. Student choice in therapist selection. No multiple relationships. Financially feasible options",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 7: Education and Training",
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "In what situation might a psychologist ethically request personal information from a supervisee during supervision?",
@@ -429,7 +495,10 @@
       ],
       "lessonExcerpt": "You need the information to evaluate whether personal problems are preventing a student from performing competently or posing a threat to themselves or others",
       "suggestedLesson": "8-standards-7-8",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Standard 7: Education and Training"
+      ]
     },
     {
       "stem": "What is the minimum retention period for HIPAA documentation according to HIPAA regulations?",
@@ -450,7 +519,10 @@
       "lessonExcerpt": "HIPAA regulations (for health information): At least 6 years after authorization is signed",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "In psychological research, what is the primary purpose of obtaining informed consent from participants?",
@@ -471,7 +543,10 @@
       "lessonExcerpt": "When someone agrees to participate in your research, they need to know what they're signing up for. Standard 8.02 requires you to tell prospective participants",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "What is the ethical guideline regarding quoting academic work in psychological publications?",
@@ -492,7 +567,10 @@
       "lessonExcerpt": "Plagiarism: Standard 8.11 prohibits presenting others' work as your own, even if you cite the source occasionally.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     },
     {
       "stem": "In research involving minors, what is a critical component of obtaining informed consent?",
@@ -513,7 +591,10 @@
       "lessonExcerpt": "Special considerations for children: Children typically need to give assent in addition to their parents' consent.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "Standard 8: Research and Publication"
+      ]
     }
   ]
 }

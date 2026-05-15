@@ -19,7 +19,10 @@
       "lessonExcerpt": "| Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Marcia's Identity Statuses"
+      ]
     },
     {
       "stem": "According to Erikson's theory of psychosocial development, a 2-year-old child who is encouraged to make choices about what clothes to wear and what snacks to eat is most likely developing a sense of:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "| 1-3 years | Autonomy vs. Shame/Doubt | Will |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Personality Development: Classical Theories"
+      ]
     },
     {
       "stem": "According to Freud, the Oedipus complex occurs during which psychosexual stage, and what is its primary characteristic?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "| 3-6 years | Phallic | Genitals, Oedipus/Electra complex | Sexual dysfunction, authority issues |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Personality Development: Classical Theories"
+      ]
     },
     {
       "stem": "A developmental psychology student is comparing Freud's psychosexual and Erikson's psychosocial stage theories. Which of the following CORRECTLY pairs a Freudian stage with its corresponding Eriksonian crisis during the same developmental period?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "Notice that Erikson's first five stages align age-wise with Freud's stages. The key difference: Erikson continues through adulthood, focusing on relationship and meaning issues rather than biological drives.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Personality Development: Classical Theories"
+      ]
     },
     {
       "stem": "What psychological changes are commonly observed during mid-life?",
@@ -103,7 +115,8 @@
       "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best describes the correspondence between Freud's and Erikson's stages of development?",
@@ -124,7 +137,10 @@
       "lessonExcerpt": "Freud proposed five stages from birth through adolescence, each focused on a different body zone where libido (sexual energy) concentrates.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Personality Development: Classical Theories"
+      ]
     },
     {
       "stem": "Which of the following statements best describes the differences in parenting styles based on gender?",
@@ -145,7 +161,8 @@
       "lessonExcerpt": "Proposes gender identity develops through: Observing and imitating same-gender models; Differential reinforcement (praise for gender-appropriate behavior)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": null
     },
     {
       "stem": "According to Freud's theory of psychosexual development, the Oedipus complex in boys is resolved primarily through which psychological mechanism?",
@@ -166,7 +183,10 @@
       "lessonExcerpt": "Freud proposed five stages from birth through adolescence, each focused on a different body zone where libido (sexual energy) concentrates... [table shows] 3-6 years | Phallic | [truncated]",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Personality Development: Classical Theories"
+      ]
     },
     {
       "stem": "According to Thomas and Chess's temperament categories, which characteristics best describe a 'slow-to-warm-up' child?",
@@ -184,7 +204,10 @@
       "quality_comment": "The distractors are plausible temperament profiles, but only one correctly matches the slow-to-warm-up description, making it a clear but challenging question.",
       "lessonExcerpt": "| Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values |",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Temperament: The Raw Material of Personality"
+      ]
     },
     {
       "stem": "Which parenting style is characterized by high demandingness and low responsiveness, often leading to children who are insecure, moody, and have poorer social skills?",
@@ -202,7 +225,10 @@
       "quality_comment": "The four styles are well-known and clearly distinct; the distractors are reasonable but the correct answer is direct, suitable for foundational knowledge testing.",
       "lessonExcerpt": "Authoritarian (High Demand + Low Response). These parents have many strict rules, emphasize control and authority, use harsh punishment, and show little warmth.",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Parenting Styles: Critical for Child Outcomes"
+      ]
     },
     {
       "stem": "At what age do most children pass the mirror self-recognition test, indicating self-awareness?",
@@ -220,7 +246,10 @@
       "quality_comment": "Dates given are plausible developmental intervals, making this a well-constructed question for foundational knowledge assessment.",
       "lessonExcerpt": "By 18-24 months, most children pass the mirror self-recognition test (touching their own nose when they see a red dot on it in the mirror, not the mirror image).",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Self-Awareness and Identity Development"
+      ]
     },
     {
       "stem": "According to Marcia’s model of adolescent identity development, which identity status is characterized by having experienced a crisis but lacking commitment?",
@@ -238,7 +267,10 @@
       "quality_comment": "Options represent distinct stages with nuanced differences; distractors are plausible, requiring careful knowledge of Marcia’s model.",
       "lessonExcerpt": "Slow-to-warm-up children (about 15% of infants): - Mildly negative mood initially - Need time to adjust to new people and situations - Low activity levels - Moderately regular routines",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Marcia's Identity Statuses"
+      ]
     },
     {
       "stem": "Which of the following theories proposes that children organize gender-related experiences into schemas that guide their perceptions and behavior?",
@@ -256,7 +288,10 @@
       "quality_comment": "Each option represents a credible theory on gender identity, making distractors plausible and the item an effective test of detailed knowledge.",
       "lessonExcerpt": "Rothbart's model focuses on two core components of temperament: Reactivity ... Self-regulation refers to processes that control reactivity.",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gender Identity Theories"
+      ]
     },
     {
       "stem": "Which personality trait, according to Costa, Terracciano, and McCrae's research, do women tend to score higher on consistently across cultures?",
@@ -274,7 +309,10 @@
       "quality_comment": "The options are traits commonly investigated in personality research, making it a solid question for assessing knowledge of sex differences in personality.",
       "lessonExcerpt": "| 1-3 years | Autonomy vs. Shame/Doubt | Will |",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Personality Changes Across Adulthood"
+      ]
     },
     {
       "stem": "What does Thomas and Chess’s goodness-of-fit model primarily emphasize regarding child development?",
@@ -292,7 +330,10 @@
       "quality_comment": "Distractors include common misconceptions, ensuring that only those familiar with the model select the correct conceptual emphasis.",
       "lessonExcerpt": "Authoritarian (High Demand + Low Response). These parents have many strict rules, emphasize control and authority, use harsh punishment, and show little warmth.",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Temperament: The Raw Material of Personality"
+      ]
     },
     {
       "stem": "Which parenting style is most strongly associated with juvenile delinquency according to research by Tapia et al. (2018)?",
@@ -310,7 +351,10 @@
       "quality_comment": "The distractors are common parenting styles with known associations to problem behavior, making this question a realistic assessment of specific research findings.",
       "lessonExcerpt": "Mean-level change: ... Neuroticism decreases ... Extraversion and openness: Remain stable or decrease slightly ... Agreeableness increases ... Conscientiousness increases",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Parenting Styles: Critical for Child Outcomes"
+      ]
     },
     {
       "stem": "In Rothbart’s temperament model, what does 'effortful control' refer to?",
@@ -328,7 +372,10 @@
       "quality_comment": "Answer choices align conceptually with temperament dimensions, requiring knowledge of this specific self-regulatory construct.",
       "lessonExcerpt": "By 18-24 months, most children pass the mirror self-recognition test (touching their own nose when they see a red dot on it in the mirror, not the mirror image).",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Temperament: The Raw Material of Personality"
+      ]
     },
     {
       "stem": "Which of the following describes the pattern of gender typicality and contentedness according to Egan and Perry’s multidimensional model and their relation to psychological adjustment?",
@@ -346,7 +393,10 @@
       "quality_comment": "The options are complex and close in meaning, suitable for testing nuanced understanding at a higher difficulty level.",
       "lessonExcerpt": "| Identity Moratorium | Yes | No | Actively exploring but not yet committed |",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gender Identity Theories"
+      ]
     },
     {
       "stem": "Which temperamental characteristic did Kagan focus on, characterized by withdrawal and negative affect toward unfamiliar people and situations?",
@@ -364,7 +414,10 @@
       "quality_comment": "The distractors are other temperament concepts, making the correct answer specific and requiring targeted knowledge of Kagan's focus.",
       "lessonExcerpt": "Bem's Gender Schema Theory. Combines cognitive and social learning approaches. Children develop gender schemas. Mental frameworks organizing information about what's appropriate for each gender.",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Temperament: The Raw Material of Personality"
+      ]
     },
     {
       "stem": "Which characteristic is most typical of children raised by permissive parents?",
@@ -382,7 +435,10 @@
       "quality_comment": "Options reflect outcomes of different parenting styles, requiring knowledge of specific behavioral correlates of permissive parenting.",
       "lessonExcerpt": "Women score higher on: Neuroticism, agreeableness, warmth, openness to feelings",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Parenting Styles: Critical for Child Outcomes"
+      ]
     },
     {
       "stem": "Which of the following characteristics is most likely associated with a child who is categorized as 'slow-to-warm-up' in temperament?",
@@ -405,7 +461,10 @@
       ],
       "lessonExcerpt": "Here's what makes Thomas and Chess clinically useful: their goodness-of-fit model. This proposes that outcomes depend on the match between a child's temperament and environmental demands.",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Temperament: The Raw Material of Personality"
+      ]
     },
     {
       "stem": "In the context of temperament, which of the following behaviors would most likely be exhibited by a child identified as 'slow-to-warm-up'?",
@@ -428,7 +487,10 @@
       ],
       "lessonExcerpt": "Uninvolved/Neglectful (Low Demand + Low Response) ... Most strongly associated with juvenile delinquency among all parenting styles.",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Temperament: The Raw Material of Personality"
+      ]
     },
     {
       "stem": "In Erikson's psychosocial development theory, which stage is primarily concerned with the psychosocial task of identity?",
@@ -449,7 +511,10 @@
       "lessonExcerpt": "| Adolescence | Identity vs. Role Confusion | Fidelity |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Personality Development: Classical Theories"
+      ]
     },
     {
       "stem": "At what age do infants typically begin to engage in social referencing, looking to caregivers for cues on how to respond in uncertain situations?",
@@ -470,7 +535,8 @@
       "lessonExcerpt": "| Adolescence | Identity vs. Role Confusion | Fidelity |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best describes the identity status of foreclosure in Erikson's theory of identity development?",
@@ -491,7 +557,10 @@
       "lessonExcerpt": "| Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Marcia's Identity Statuses"
+      ]
     },
     {
       "stem": "According to Erikson's psychosocial development theory, which of the following is the primary challenge faced during the stage of late adulthood?",
@@ -512,7 +581,10 @@
       "lessonExcerpt": "| Late adulthood | Integrity vs. Despair | Wisdom |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Personality Development: Classical Theories"
+      ]
     },
     {
       "stem": "Which parenting style is associated with the most positive outcomes in children, including higher self-esteem and better social skills?",
@@ -533,7 +605,10 @@
       "lessonExcerpt": "Child outcomes: Best overall. Self-confident, independent, cooperative, good social skills, high academic achievement",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": [
+        "Parenting Styles: Critical for Child Outcomes"
+      ]
     },
     {
       "stem": "A pediatrician refers a family to a psychologist because the parents are alarmed that their 15-month-old son screams, clings to them, and attempts to follow them whenever they leave his sight. They fear something is psychologically wrong. Based on normative developmental data, the psychologist's first priority should be to:",
@@ -554,7 +629,8 @@
       "lessonExcerpt": "Erikson expanded personality development across the entire lifespan, emphasizing social and cultural influences over biological drives.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": null
     },
     {
       "stem": "In Harlow and Zimmerman's (1959) study with infant monkeys, what was the main finding regarding attachment?",
@@ -572,7 +648,8 @@
       "quality_comment": "The question is clear, and the distractors are plausible, reflecting common misconceptions about attachment and early behavior research.",
       "lessonExcerpt": "Child outcomes: Best overall. Self-confident, independent, cooperative, good social skills, high academic achievement",
       "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "What impact does poor parenting have on the likelihood of delinquency in children?",
@@ -593,7 +670,10 @@
       "lessonExcerpt": "Most strongly associated with juvenile delinquency among all parenting styles.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Parenting Styles: Critical for Child Outcomes"
+      ]
     },
     {
       "stem": "A 7-year-old biological male is brought to a psychologist by concerned parents. The child consistently insists on wearing dresses, prefers playing with dolls, exclusively chooses female playmates, and has expressed a strong desire to be a girl for the past 8 months. According to DSM-5-TR criteria, how many of the specified symptoms must be present to diagnose gender dysphoria in children?",
@@ -614,7 +694,8 @@
       "lessonExcerpt": "**For children**, you need at least six of eight symptoms lasting six months: Strong desire to be the other gender, Strong preference for wearing clothes typical of the other gender, Strong dislike of one's sexual anatomy",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     }
   ]
 }

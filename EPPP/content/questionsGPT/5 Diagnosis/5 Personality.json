@@ -15,7 +15,10 @@
       "difficulty": "medium",
       "quality_comment": "The question clearly tests a key diagnostic criterion with plausible distractors, effectively assessing detailed knowledge of diagnostic age restrictions.",
       "lessonExcerpt": "You can diagnose most personality disorders in someone under 18 if symptoms have been present for at least one year. The exception? Antisocial personality disorder requires the person to be at least 18.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster B: The Dramatic and Erratic"
+      ]
     },
     {
       "stem": "Which personality disorder is characterized by a pervasive pattern of detachment from social relationships and restricted emotional expression, including little or no interest in sexual experiences and emotional coldness?",
@@ -32,7 +35,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear stem with clinically relevant symptom descriptions; distractors are disorders with social components but differing features, making it effective for assessment.",
       "lessonExcerpt": "This involves detachment from social relationships and restricted emotional expression. You need at least four of seven symptoms",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster A: The Odd and Eccentric"
+      ]
     },
     {
       "stem": "Which cluster of personality disorders is most associated with anxiety and fearfulness?",
@@ -49,7 +55,11 @@
       "difficulty": "easy",
       "quality_comment": "The question is straightforward and tests foundational knowledge of cluster distinctions; distractors are clear and manageable for test-takers.",
       "lessonExcerpt": "**Cluster C** | Anxious, fearful behaviors | Avoidant, Dependent, Obsessive-Compulsive",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three Clusters: Your Organizational Framework",
+        "Cluster C: The Anxious and Fearful"
+      ]
     },
     {
       "stem": "Dialectical behavior therapy (DBT) for borderline personality disorder includes all the following components EXCEPT:",
@@ -66,7 +76,10 @@
       "difficulty": "medium",
       "quality_comment": "Good balance of plausible options reflecting aspects of treatment; distractors are consistent with treatment terminology but clearly differentiated.",
       "lessonExcerpt": "DBT has three main components: 1. **Group skills training**: Teaches emotion regulation, distress tolerance, relationship effectiveness, and mindfulness 2. **Individual psychotherapy** ... 3. **Intersession coaching**: Telephone support to generalize skills",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster B: The Dramatic and Erratic"
+      ]
     },
     {
       "stem": "A key difference between schizotypal and schizoid personality disorders concerning interpersonal relationships is that:",
@@ -83,7 +96,10 @@
       "difficulty": "hard",
       "quality_comment": "The nuanced distinctions present a challenge appropriate for advanced understanding; distractors are well-constructed to test conceptual clarity.",
       "lessonExcerpt": "**Schizotypal**: Uncomfortable around others despite expressing unhappiness about isolation; acts disinterested **Schizoid**: Limited desire for relationships; derives no pleasure from them **Avoidant**: Desperately wants relationships but fears criticism and rejection",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster A: The Odd and Eccentric"
+      ]
     },
     {
       "stem": "Which Big Five personality trait is most positively related to the presence of personality disorders, according to meta-analytic findings?",
@@ -100,7 +116,10 @@
       "difficulty": "medium",
       "quality_comment": "Concise stem with reasonable distractors focusing on Big Five traits; tests integration of personality theory and disorder correlation effectively.",
       "lessonExcerpt": "**Neuroticism** has the strongest positive relationships with personality disorders (higher neuroticism = more disorder features)",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Connecting Personality Disorders to the Big Five"
+      ]
     },
     {
       "stem": "A pervasive pattern of disregard for and violation of the rights of others since age 15, with a history of conduct disorder and at least three symptoms such as deceitfulness and impulsivity, describes which personality disorder?",
@@ -117,7 +136,10 @@
       "difficulty": "medium",
       "quality_comment": "Stem clearly includes key diagnostic features; distractors are borderline disorders but differ significantly in diagnostic criteria.",
       "lessonExcerpt": "This is the only personality disorder that requires the person to be at least 18 years old AND have a history of conduct disorder before age 15. You need at least three of seven symptoms showing disregard for others' rights since age 15",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster B: The Dramatic and Erratic"
+      ]
     },
     {
       "stem": "Which personality disorder involves a pervasive pattern of excessive emotionality and attention seeking, with symptoms such as inappropriately seductive behavior, rapidly shifting emotions, and exaggerated expression of emotion?",
@@ -134,7 +156,10 @@
       "difficulty": "easy",
       "quality_comment": "Clear presentation of defining symptoms helps distinguish this disorder from other Cluster B disorders.",
       "lessonExcerpt": "This involves excessive emotionality and attention-seeking. You need at least five of eight symptoms: Uncomfortable when not the center of attention Inappropriately seductive or provocative Rapidly shifting, shallow emotions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster B: The Dramatic and Erratic"
+      ]
     },
     {
       "stem": "Which of the following symptoms is NOT characteristic of obsessive-compulsive personality disorder?",
@@ -151,7 +176,10 @@
       "difficulty": "medium",
       "quality_comment": "Distractors reflect core features of OCPD, contrasted with the key feature of OCD, clarifying common misconceptions.",
       "lessonExcerpt": "Despite similar names, obsessive-compulsive personality disorder and obsessive-compulsive disorder (OCD) are different. Only OCD involves true obsessions (intrusive thoughts) and compulsions (ritualistic behaviors). OCPD is about pervasive rigidity and perfectionism as personality traits.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster C: The Anxious and Fearful"
+      ]
     },
     {
       "stem": "Which personality disorder is characterized by a persistent and excessive need to be taken care of, resulting in submissive and clinging behaviors and fear of separation?",
@@ -168,7 +196,10 @@
       "difficulty": "easy",
       "quality_comment": "Straightforward question focused on key traits allows for clear differentiation from similar disorders.",
       "lessonExcerpt": "This involves excessive need to be taken care of, leading to submissive, clinging behavior and separation fears. You need at least five of eight symptoms",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster C: The Anxious and Fearful"
+      ]
     },
     {
       "stem": "Which of the following symptoms is typical of borderline personality disorder as defined in DSM-5-TR?",
@@ -185,7 +216,10 @@
       "difficulty": "medium",
       "quality_comment": "Options include common traits from multiple personality disorders, making the correct choice a good test of symptom recognition.",
       "lessonExcerpt": "Frantic efforts to avoid abandonment",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster B: The Dramatic and Erratic"
+      ]
     },
     {
       "stem": "What is the primary theoretical basis for dialectical behavior therapy (DBT) in the treatment of borderline personality disorder?",
@@ -202,7 +236,10 @@
       "difficulty": "medium",
       "quality_comment": "The question highlights foundational theory for an evidence-based treatment, clearly differentiating models of psychopathology.",
       "lessonExcerpt": "**Treatment spotlight:** Dialectical Behavior Therapy (DBT) by Marsha Linehan is the gold standard. It assumes the disorder stems from emotion dysregulation caused by biological and environmental factors.",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cluster B: The Dramatic and Erratic"
+      ]
     },
     {
       "stem": "When interpreting assessment data for personality disorders, which bias involves overestimating the likelihood of rare personality disorders due to their dramatic features, regardless of actual base rates?",
@@ -220,7 +257,8 @@
       "quality_comment": "It effectively tests knowledge of common cognitive biases that can distort assessment data interpretation relevant to personality disorders.",
       "lessonExcerpt": "Availability Heuristic: How Easily Can I Think of Examples? The **availability heuristic** involves judging the frequency or likelihood of events based on how easily we can recall examples.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     }
   ]
 }

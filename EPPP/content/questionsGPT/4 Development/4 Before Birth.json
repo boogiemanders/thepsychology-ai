@@ -19,7 +19,10 @@
       "lessonExcerpt": "Down syndrome is the most common genetic cause of intellectual developmental disorder. It involves chromosome 21 rather than sex chromosomes, making it an autosomal disorder.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "Which of the following is a recognized cause of intellectual disability?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Because everything is forming so rapidly, this is when exposure to harmful substances (called teratogens) causes the most serious damage.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "What is a potential consequence of fetal malnutrition during the prenatal development period?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "Fetal Alcohol Syndrome (FAS). Most severe | Small eye openings, thin upper lip, other facial anomalies; retarded physical growth; CNS dysfunction (intellectual deficits, slowed processing, hyperactivity)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "What genetic abnormality is primarily associated with Down syndrome, and what is its typical cause?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "Trisomy 21 (about 95% of cases): Every cell contains three copies of chromosome 21 instead of two, giving 47 total chromosomes instead of 46.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "What is the primary risk associated with teratogen exposure during the embryonic period of prenatal development?",
@@ -103,7 +115,11 @@
       "lessonExcerpt": "Trisomy 21 (about 95% of cases): Every cell contains three copies of chromosome 21 instead of two, giving 47 total chromosomes instead of 46.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Three-Part Timeline of Prenatal Development",
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "During which period of prenatal development is exposure to teratogens most likely to produce major structural defects?",
@@ -121,7 +137,11 @@
       "quality_comment": "The options are clearly defined and plausible; the stem focuses specifically on timing, which is important for prenatal development understanding.",
       "lessonExcerpt": "This is why the embryonic period represents the window of greatest vulnerability for major birth defects.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Part Timeline of Prenatal Development",
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "Which syndrome is caused by a deletion on the paternal chromosome 15 and is characterized by hypotonia, hyperphagia, obesity, intellectual disabilities, and self-injurious behaviors?",
@@ -139,7 +159,10 @@
       "quality_comment": "Distractors include other disorders with some overlapping features, requiring precise knowledge of genetic etiology and symptomatology, appropriate for higher difficulty.",
       "lessonExcerpt": "The Embryonic Period (Weeks 3-8) This is the high-stakes period. During weeks three through eight, all the major organs and body structures are forming.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "A female infant presents with slowed head growth, loss of speech around 12 months, abnormal hand movements, breathing problems, and seizures. Genetic testing reveals a mutation in the MECP2 gene. Which diagnosis is most consistent with this presentation?",
@@ -157,7 +180,10 @@
       "quality_comment": "The clinical features and genetic details provide adequate difficulty, and distractors are disorders with distinct features but plausible genetic bases.",
       "lessonExcerpt": "Prader-Willi Syndrome | Deletion on paternal chromosome 15 | Narrow forehead, almond-shaped eyes, small hands/feet, short stature | Chronic overeating leading to obesity, intellectual disabilities, self-injurious behaviors like skin-picking",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "Which chromosomal abnormality is associated with males having two or more X chromosomes and symptoms including gynecomastia, taller stature, impaired executive functions, and social cognitive deficits?",
@@ -175,7 +201,10 @@
       "quality_comment": "Options are plausible chromosomal disorders, and the stem includes multiple distinguishing features that require specific knowledge.",
       "lessonExcerpt": "Rett Syndrome is an X-linked dominant disorder, almost exclusively affecting females, usually caused by mutations in the MECP2 gene.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "Which of the following inheritance patterns best describes Huntington’s disease?",
@@ -193,7 +222,10 @@
       "quality_comment": "The options are common inheritance patterns and the question is straightforward, serving well as a foundational item on genetics.",
       "lessonExcerpt": "Klinefelter Syndrome affects males who have XXY (or sometimes XXXY or more X chromosomes) instead of the typical XY.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gene Disorders: Dominant vs. Recessive"
+      ]
     },
     {
       "stem": "Prenatal exposure to which substance is most strongly associated with fetal alcohol syndrome, characterized by facial anomalies, growth retardation, CNS dysfunction, and organ defects?",
@@ -211,7 +243,10 @@
       "quality_comment": "Distractors include other teratogens or drugs of abuse, creating plausible alternatives and requiring precise knowledge of prenatal teratogens.",
       "lessonExcerpt": "Autosomal Dominant: Huntington's Disease. Huntington's disease requires only one copy of the abnormal gene to cause the disorder.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "The earliest age at which a premature baby can survive outside the womb, typically occurring between 22 and 26 weeks gestation, is known as the:",
@@ -229,7 +264,10 @@
       "quality_comment": "Clear question with plausible options related to prenatal periods; a good recall-level question for foundational knowledge.",
       "lessonExcerpt": "Prenatal alcohol exposure can cause Fetal Alcohol Spectrum Disorder (FASD), an umbrella term for four related conditions with largely irreversible effects",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Part Timeline of Prenatal Development"
+      ]
     },
     {
       "stem": "Which statement best describes the effect of exposure to teratogens during the germinal period of prenatal development?",
@@ -247,7 +285,11 @@
       "quality_comment": "The distractors are plausible but inaccurate statements about teratogen effects that require knowledge about timing, enhancing discriminative value.",
       "lessonExcerpt": "Around weeks 22-26, the fetus reaches the age of viability, the earliest point where a premature baby could potentially survive outside the womb with intensive medical support.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Part Timeline of Prenatal Development",
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "Which of the following chromosomal abnormalities is characterized by an extra chromosome 21 in all cells, resulting in intellectual disability, hypotonia, and a short stocky build?",
@@ -265,7 +307,10 @@
       "quality_comment": "Options are chromosomal disorders with distinct features, making the question appropriate for assessing knowledge of common genetic syndromes.",
       "lessonExcerpt": "Either the damage is so severe that implantation fails (often before a woman even knows she's pregnant), or the damage is minimal enough that implantation succeeds and development continues relatively normally.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "A child is diagnosed with phenylketonuria (PKU). Which of the following is the most accurate inheritance pattern and key management strategy?",
@@ -283,7 +328,10 @@
       "quality_comment": "The options reflect different inheritance and management strategies, requiring understanding of both genetics and treatment principles.",
       "lessonExcerpt": "Trisomy 21 (about 95% of cases): Every cell contains three copies of chromosome 21 instead of two, giving 47 total chromosomes instead of 46.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gene Disorders: Dominant vs. Recessive"
+      ]
     },
     {
       "stem": "Which teratogen is most associated with spontaneous abortion, premature birth, low birth weight, and infants who are irritable with a piercing cry and later risk for attention and behavior problems?",
@@ -301,7 +349,10 @@
       "quality_comment": "Distractors are substances with teratogenic effects, but only cocaine matches this specific pattern, making this a well-constructed clinical knowledge item.",
       "lessonExcerpt": "Phenylketonuria (PKU) requires two copies of the recessive gene. ... PKU is manageable with a strict low-phenylalanine diet (no milk, cheese, meat, fish, eggs) maintained throughout life.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "Which disorder is caused by a deletion on chromosome 5 and includes a high-pitched, cat-like cry, intellectual disability, microcephaly, and distinctive facial features?",
@@ -319,7 +370,10 @@
       "quality_comment": "Options are syndromes with overlap in developmental delay but distinct genetics; the question requires precise identification of genetic causes.",
       "lessonExcerpt": "Prenatal cocaine exposure can cause: Spontaneous abortion during first trimester; Premature birth; Low birth weight; Infant irritability and overreaction to stimuli; Shrill, piercing cry",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "Which of the following best reflects the relationship between prenatal teratogen exposure and epigenetic changes?",
@@ -337,7 +391,10 @@
       "quality_comment": "This item introduces newer conceptual knowledge about teratogen mechanisms, enhancing depth without undue complexity; options are balanced and plausible.",
       "lessonExcerpt": "Cri-du-Chat Syndrome | Deletion on chromosome 5 | Characteristic high-pitched cat-like cry, low-set ears, round face, widely set eyes | Intellectual disability, developmental delays, weak muscle tone",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "Regarding prenatal exposure to cocaine, which of the following statements best describes factors influencing variability in developmental outcomes?",
@@ -355,7 +412,10 @@
       "quality_comment": "The item tests understanding of complex interactions between prenatal teratogens and environmental influences; options are plausible and carefully constructed.",
       "lessonExcerpt": "Some teratogens work by causing epigenetic changes. Altering how genes are expressed without changing the DNA sequence itself.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Teratogens: Environmental Threats to Development"
+      ]
     },
     {
       "stem": "Which prenatal period corresponds to the second trimester, and what major developmental processes occur during this time?",
@@ -373,7 +433,10 @@
       "quality_comment": "Clear and straightforward item that reinforces basic knowledge of prenatal developmental periods; distractors are conceptually related but incorrect.",
       "lessonExcerpt": "Outcomes depend on: Amount and potency of cocaine used; Other prenatal risk factors; Postnatal environment (poverty, caregiving quality, ongoing substance abuse in the home)",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Part Timeline of Prenatal Development"
+      ]
     },
     {
       "stem": "During which stage of prenatal development is the risk of miscarriage highest due to chromosomal abnormalities?",
@@ -396,7 +459,10 @@
       ],
       "lessonExcerpt": "Second trimester: Weeks 14-27 (entirely fetal period)",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Part Timeline of Prenatal Development"
+      ]
     },
     {
       "stem": "Which prenatal stage is particularly sensitive to environmental factors that can influence brain development?",
@@ -419,7 +485,10 @@
       ],
       "lessonExcerpt": "Either the damage is so severe that implantation fails (often before a woman even knows she's pregnant)",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Three-Part Timeline of Prenatal Development"
+      ]
     },
     {
       "stem": "A parent brings in a 4-year-old child diagnosed with cerebral palsy and asks when the brain damage most likely occurred. Based on current understanding of cerebral palsy etiology, which of the following is the most accurate response?",
@@ -440,7 +509,8 @@
       "lessonExcerpt": "**Reality**: Some effects, particularly neurodevelopmental ones, emerge later as children face age-appropriate cognitive demands. A child exposed to alcohol prenatally might seem okay as an infant but struggle with executive function and impulse control in school.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": null
     },
     {
       "stem": "What dietary management is essential for individuals with phenylketonuria (PKU)?",
@@ -461,7 +531,10 @@
       "lessonExcerpt": "People with PKU cannot properly metabolize phenylalanine, an amino acid found in protein. Without treatment starting immediately after birth, phenylalanine builds up and causes:",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Gene Disorders: Dominant vs. Recessive"
+      ]
     },
     {
       "stem": "Which form of inheritance involves a trait influenced by a gene located on the X chromosome?",
@@ -479,7 +552,10 @@
       "quality_comment": "Options are tightly related but only one accurately describes sex-linked inheritance, aiding discrimination.",
       "lessonExcerpt": "Fragile X Syndrome (FXS) is also X-linked dominant but affects both males and females, with males typically showing more severe symptoms.",
       "suggestedLesson": "4-before-birth",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Gene Disorders: Dominant vs. Recessive"
+      ]
     },
     {
       "stem": "A 30-year-old male client presents with tall stature, long limbs, difficulties with social cognition and executive function, and reports a history of incomplete secondary sex characteristic development. Genetic testing would most likely reveal which chromosomal pattern?",
@@ -500,7 +576,10 @@
       "lessonExcerpt": "Klinefelter Syndrome affects males who have XXY (or sometimes XXXY or more X chromosomes) instead of the typical XY. They develop male identity and typically masculine appearance, but have: Incomplete development of secondary sex characteristics",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "Klinefelter's syndrome is characterized by which of the following genetic conditions?",
@@ -521,7 +600,10 @@
       "lessonExcerpt": "**Huntington's disease** is a devastating hereditary condition caused by a mutated gene on chromosome 4.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "Cri-du-chat syndrome is primarily caused by a deletion on which chromosome?",
@@ -542,7 +624,10 @@
       "lessonExcerpt": "**Huntington's disease** is a devastating hereditary condition caused by a mutated gene on chromosome 4.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "When Chromosomes Tell a Different Story"
+      ]
     },
     {
       "stem": "What is a common comorbidity associated with Tourette's disorder?",
@@ -563,7 +648,8 @@
       "lessonExcerpt": "The lesson does not specifically address Tourette's disorder comorbidities, indicating a need for review.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following is a key feature in diagnosing autism spectrum disorder related to social communication difficulties?",
@@ -584,7 +670,8 @@
       "lessonExcerpt": "Key features in diagnosing autism spectrum disorder include deficits in social-emotional reciprocity.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": null
     },
     {
       "stem": "What is the primary criterion for diagnosing intellectual disability related to adaptive functioning?",
@@ -605,7 +692,8 @@
       "lessonExcerpt": "The primary criterion for diagnosing intellectual disability includes deficits in adaptive functioning.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": null
     },
     {
       "stem": "A developmental psychologist is reviewing epidemiological data on autism spectrum disorder (ASD) for a grant proposal. Based on current prevalence estimates, which of the following statements most accurately describes the sex distribution of ASD diagnoses?",
@@ -626,7 +714,8 @@
       "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": null
     }
   ]
 }

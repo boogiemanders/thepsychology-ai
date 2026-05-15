@@ -19,7 +19,11 @@
       "lessonExcerpt": "Face validity refers to whether a test looks valid to the people taking it. It's not actual validity at all. It's about appearances and perceptions... Tests measuring socially sensitive topics like honesty, criminal thinking, or prejudice often work better when they're not face valid.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Which of the following best describes content validity in psychological testing?",
@@ -37,7 +41,10 @@
       "quality_comment": "The question clearly differentiates content validity from other forms, and distractors are plausible, enhancing discriminability in an exam setting.",
       "lessonExcerpt": "Content validity is straightforward: it's about whether a test actually samples the domain it claims to measure. This is especially important for achievement tests, job knowledge tests, and work samples.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "Face validity is best described as:",
@@ -55,7 +62,11 @@
       "quality_comment": "The question is straightforward with clear distractors, well suited for testing basic knowledge of validity concepts.",
       "lessonExcerpt": "Face validity refers to whether a test looks valid to the people taking it. It's not actual validity at all. It's about appearances and perceptions.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Which coefficient in a multitrait-multimethod matrix provides evidence of convergent validity?",
@@ -73,7 +84,11 @@
       "quality_comment": "The question requires precise knowledge about validity coefficients; distractors are plausible which enhances its difficulty and discrimination.",
       "lessonExcerpt": "Monotrait-Heteromethod (same trait, different method): A high correlation here provides evidence of convergent validity. Both methods are measuring sociability, and they agree.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Multitrait-Multimethod Matrix: A Powerful Tool",
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "In a multitrait-multimethod matrix, a low correlation between the target test and a different trait measured by the same method provides evidence of:",
@@ -91,7 +106,10 @@
       "quality_comment": "The question clearly distinguishes divergent from convergent and content validity, with plausible distractors, suitable for intermediate learners.",
       "lessonExcerpt": "Heterotrait-Monomethod (different trait, same method): A low correlation here provides evidence of divergent validity. Even though both use the same method (self-report), they're measuring different things, so they shouldn't correlate much.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "When factor analysis of a test and related measures yields high factor loadings on one factor and low on another unrelated factor, this primarily supports which type of validity?",
@@ -109,7 +127,11 @@
       "quality_comment": "The item integrates an understanding of factor analysis and validity, challenging test-takers to apply knowledge rather than recall simple definitions.",
       "lessonExcerpt": "For your new Test A, this provides strong evidence of both convergent and divergent validity: Convergent validity: Test A loads highly (.80) on the same factor as other locus of control tests, Divergent validity: Test A loads minimally (.10) on the self-esteem factor",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Assuming factors are orthogonal, how is the communality of a test item in factor analysis calculated?",
@@ -127,7 +149,12 @@
       "quality_comment": "The question requires knowledge of factor analysis computations, making it appropriate for advanced examinees; distractors are reasonable but clearly incorrect.",
       "lessonExcerpt": "If communality isn't provided, you can calculate it (when factors are orthogonal/uncorrelated) by squaring each loading and adding them up: Test A: (.80)^2 + (.10)^2 = .64 + .01 = .65",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See",
+        "Factor Analysis: Unveiling Hidden Structure"
+      ]
     },
     {
       "stem": "Which source of validity evidence includes systematic review by subject matter experts to ensure representativeness of test items?",
@@ -145,7 +172,10 @@
       "quality_comment": "The item clearly distinguishes among types of validity evidence with plausible distractors, making it effective for knowledge assessment.",
       "lessonExcerpt": "Step 3: Expert Review. Subject matter experts systematically review the items to ensure they're appropriate, accurate, and comprehensive. These experts verify that the test covers all critical aspects of the domain.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "Why might face validity be undesirable for certain tests, such as those assessing honesty or criminality?",
@@ -163,7 +193,11 @@
       "quality_comment": "The question is clear and addresses a nuanced concept; distractors are plausible but distinguishable with careful reading.",
       "lessonExcerpt": "Sometimes face validity is actually undesirable. Tests measuring socially sensitive topics like honesty, criminal thinking, or prejudice often work better when they're not face valid. If it's obvious what you're measuring, people can fake their responses to look better.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Which statement about the monotrait-monomethod coefficient in a multitrait-multimethod matrix is true?",
@@ -181,7 +215,12 @@
       "quality_comment": "The item is precise and requires detailed knowledge of multitrait-multimethod methodology; distractors are plausible, increasing discriminability.",
       "lessonExcerpt": "Monotrait-Monomethod (same trait, same method): This is actually a reliability coefficient for your test, something like coefficient alpha or test-retest reliability. It should be high.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Multitrait-Multimethod Matrix: A Powerful Tool",
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Which of the following steps is NOT part of the factor analysis process used to assess test validity?",
@@ -199,7 +238,12 @@
       "quality_comment": "The distractors are believable steps related to test validation, making the question good for assessing procedural knowledge.",
       "lessonExcerpt": "Factor analysis involves four main steps: 1. Administration: Give your test to a sample of people, along with tests of related and unrelated constructs. 2. Correlation: Calculate correlations between all pairs of tests and create a correlation matrix. 3. Factor Extraction. 4. Rotation: Rotate the factors to make them easier to interpret.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Factor Analysis: Unveiling Hidden Structure",
+        "Construct Validity: Measuring What You Can't See",
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "Which source of validity evidence would best address whether the interpretation of test scores is supported by theoretical relationships with other constructs?",
@@ -217,7 +261,12 @@
       "quality_comment": "The question is well-constructed with clear and plausible distractors, helping to solidify concepts of validity evidence.",
       "lessonExcerpt": "The Standards identify five sources of validity evidence: Evidence based on test content, Evidence based on response processes, Evidence based on internal structure, Evidence based on relationships with other variables, Evidence based on consequences of testing",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Factor Analysis: Unveiling Hidden Structure",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "A newly developed self-report sociability test shows a high correlation with a teacher report sociability test and a low correlation with a teacher report impulsivity test. This pattern of correlations primarily demonstrates:",
@@ -235,7 +284,10 @@
       "quality_comment": "The scenario-based question integrates concepts well, with distractors reflecting common validity misconceptions.",
       "lessonExcerpt": "Convergent Validity: Scores on your test should correlate highly with scores on other measures of the same or similar constructs. Divergent Validity (also called discriminant validity): Scores on your test should have low correlations with measures of unrelated constructs.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "Which validity evidence source focuses on how respondents engage with test items during administration to ensure accurate construct measurement?",
@@ -253,7 +305,12 @@
       "quality_comment": "This question adds coverage on validity evidence related to response processes, filling an underrepresented validity source area with clear distractors.",
       "lessonExcerpt": "The Standards identify five sources of validity evidence: Evidence based on test content, Evidence based on response processes, Evidence based on internal structure, Evidence based on relationships with other variables, Evidence based on consequences of testing",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Factor Analysis: Unveiling Hidden Structure",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "In the context of construct validity, how does the multitrait-multimethod matrix aid in understanding measurement error?",
@@ -271,7 +328,12 @@
       "quality_comment": "The item targets higher-level understanding of the multitrait-multimethod approach, adding depth to the question bank with well-crafted distractors.",
       "lessonExcerpt": "The matrix is elegant because it separates trait variance (what you actually want to measure) from method variance (artificial similarity created by using the same assessment method).",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See",
+        "The Multitrait-Multimethod Matrix: A Powerful Tool"
+      ]
     },
     {
       "stem": "How can factor analysis help in identifying construct-irrelevant variance in a psychological test?",
@@ -289,7 +351,11 @@
       "quality_comment": "The question introduces the application of factor analysis beyond simple construct confirmation, enhancing conceptual coverage with balanced options.",
       "lessonExcerpt": "Tests measuring the same construct should load on the same factor",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Which of the following best illustrates construct validity evidence using external correlates?",
@@ -307,7 +373,10 @@
       "quality_comment": "This question broadens coverage into evidence evaluation and construct validation, supporting interpretive skill development with plausible distractors.",
       "lessonExcerpt": "Convergent Validity: Scores on your test should correlate highly with scores on other measures of the same or similar constructs. Divergent Validity: Scores on your test should have low correlations with measures of unrelated constructs.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "Which of the following statements best illustrates the concept of construct validity in psychological assessments?",
@@ -330,7 +399,11 @@
       ],
       "lessonExcerpt": "Construct validity is essential when you're measuring hypothetical traits. Things you can't directly observe but must infer from behavior.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "In the context of test validity, which scenario best exemplifies a threat to content validity?",
@@ -353,7 +426,10 @@
       ],
       "lessonExcerpt": "Step 2: Sample Representatively. Once the domain is defined, test items must represent all important aspects of that domain proportionally.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "In the context of test development, what does empirical criterion-keying primarily assess?",
@@ -374,7 +450,11 @@
       "lessonExcerpt": "These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 27
+      "inspirationIndex": 27,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Which validity assessment method allows researchers to evaluate the convergence and divergence of different measures?",
@@ -395,7 +475,12 @@
       "lessonExcerpt": "One of the most elegant ways to assess construct validity is the multitrait-multimethod matrix, developed by Campbell and Fiske.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 28
+      "inspirationIndex": 28,
+      "relatedSections": [
+        "The Multitrait-Multimethod Matrix: A Powerful Tool",
+        "Construct Validity: Measuring What You Can't See",
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "What does criterion contamination refer to in the context of validity assessment?",
@@ -416,7 +501,10 @@
       "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "Which clinical test uses a five-point Global Scoring System to evaluate visual-motor integration by having examinees copy geometric figures and then recall them from memory?",
@@ -434,7 +522,10 @@
       "quality_comment": "Well-constructed with plausible distractors involving other visual and neuropsych tests, requiring detailed content knowledge.",
       "lessonExcerpt": "The Global Scoring System rates each drawing from 0 (no resemblance) to 4 (nearly perfect).",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "When administering the Stroop Color and Word Test, what cognitive ability is primarily being assessed?",
@@ -452,7 +543,11 @@
       "quality_comment": "This item clearly differentiates cognitive processes and highlights the underlying constructs assessed by the Stroop test.",
       "lessonExcerpt": "the Stroop Test evaluates cognitive flexibility, processing speed, selective attention, and response inhibition.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "What is the primary purpose of establishing test validity during the construction of psychological assessments?",
@@ -473,7 +568,11 @@
       "lessonExcerpt": "They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Which theory or model is primarily concerned with how base rates and cognitive biases can affect the interpretation of neuropsychological test results?",
@@ -491,7 +590,11 @@
       "quality_comment": "The options include other cognitive models but only the heuristics and biases framework specifically addresses judgment biases in assessment.",
       "lessonExcerpt": "topic_name: Social Cognition – Errors, Biases, and Heuristics domain: 3: Social Psychology slug: social-cognition-errors-biases-and-heuristics generated_at: 2025-11-16T15:25:15.002Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Your Brain Takes Shortcuts (And How That Shows Up on the EPPP)",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?",
+        "Construct Validity: Measuring What You Can't See"
+      ]
     },
     {
       "stem": "Which theory or model best explains the importance of base rates and potential biases in interpreting neuropsychological test results?",
@@ -509,7 +612,11 @@
       "quality_comment": "Distractors are plausible psychological or testing theories, but only Bayesian theory specifically relates to base rate use and bias interpretation.",
       "lessonExcerpt": "The Foundation: Sampling Distributions and Probability Let's start with a core concept that trips up many students: the sampling distribution of means.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Construct Validity: Measuring What You Can't See",
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     },
     {
       "stem": "What type of validity evidence is most relevant for evaluating whether a neurodevelopmental disorder assessment tool accurately predicts treatment outcomes?",
@@ -527,7 +634,10 @@
       "quality_comment": "Distractors are valid forms of validity but only predictive validity relates to future outcome prediction, making the item conceptually sound.",
       "lessonExcerpt": "Predictive Validity: Future Outcomes **Predictive validity** means we collect predictor scores first, then wait to collect criterion scores later.",
       "suggestedLesson": "5-what-tests-measure",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Content Validity: Does the Test Cover What It Should?"
+      ]
     }
   ]
 }

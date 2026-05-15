@@ -19,7 +19,10 @@
       "lessonExcerpt": "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model... This is your foundational model. It applies broadly to members of any racial or cultural minority group.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model"
+      ]
     },
     {
       "stem": "An African American college student who has always admired White cultural values experiences a racially motivated incident on campus. She begins to question her previous assumptions and develops a growing interest in learning about her African American heritage. According to Cross's Nigrescence model, this student is most likely in the:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Encounter: Something happens that forces awareness of racism's impact. It's like suddenly noticing a pattern you'd been blind to... This triggers questioning and interest in their own culture.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Cross's Black Racial Identity Development Model"
+      ]
     },
     {
       "stem": "A 26-year-old Black woman reports that a racially charged incident at her graduate program last month prompted her to question assumptions she had long held about racial identity. She has since immersed herself in African American literature and cultural organizations, reports intense anger toward White-dominated institutions, and has begun distancing herself from non-Black social contacts. According to Cross's (1971) Nigrescence model, she is MOST likely in which stage?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "**Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "Cross's Black Racial Identity Development Model"
+      ]
     },
     {
       "stem": "In Atkinson, Morten, and Sue’s Racial/Cultural Identity Development (R/CID) Model, which stage is characterized by positive attitudes toward one's own minority group, negative attitudes toward the majority group, and suspicion of mental health services?",
@@ -79,7 +88,10 @@
       "quality_comment": "The question is clear and tests recognition of specific stage characteristics, with plausible distractors representing other stages in the model.",
       "lessonExcerpt": "These clients are suspicious of mental health services altogether. If they do come to therapy, they'll likely blame racism for their problems (which may be accurate) and strongly prefer a therapist from their own minority group.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model"
+      ]
     },
     {
       "stem": "According to Cross’s original Nigrescence Model, the Encounter stage involves:",
@@ -97,7 +109,10 @@
       "quality_comment": "Options are balanced in length and closely related, increasing the challenge and the need for precise knowledge of the model’s stages.",
       "lessonExcerpt": "**Encounter:** Something happens that forces awareness of racism's impact.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cross's Black Racial Identity Development Model"
+      ]
     },
     {
       "stem": "Which dimension of Sellers et al.'s Multidimensional Model of Racial Identity refers to the importance of race to an individual's overall self-concept compared to other identities like gender or religion?",
@@ -115,7 +130,10 @@
       "quality_comment": "Distractors are terms from the same model and related concepts, making the question appropriately challenging at the EPPP level.",
       "lessonExcerpt": "**Racial Centrality:** How important is race to your identity generally? This is relatively stable. For some African Americans, race is absolutely central to who they are. For others, gender, religion, or profession might be more important.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sellers' Multidimensional Model of Racial Identity"
+      ]
     },
     {
       "stem": "In Helms's White Racial Identity Development Model, which status is characterized by superficial tolerance of minority groups often accompanied by paternalistic attitudes that perpetuate racism?",
@@ -133,7 +151,10 @@
       "quality_comment": "Distractors are clearly defined statuses from the same model, requiring detailed knowledge for accurate identification.",
       "lessonExcerpt": "**Pseudo-Independence:** Something makes them question their beliefs about racial superiority. They develop a superficial tolerance of minority groups but may show paternalistic attitudes that actually perpetuate racism.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Helms's White Racial Identity Development Model"
+      ]
     },
     {
       "stem": "Troiden’s Model of Homosexual Identity Development describes the Identity Confusion stage as:",
@@ -151,7 +172,10 @@
       "quality_comment": "Options cover sequential stages of the model with similar detail, making the correct choice non-obvious but fair.",
       "lessonExcerpt": "**Identity Confusion (Middle to Late Adolescence):** They start feeling sexually attracted to same-sex individuals and suspect they might be gay or lesbian. This creates anxiety and uncertainty. They cope through:\n- Denial\n- Avoidance",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Troiden's Model of Homosexual Identity Development"
+      ]
     },
     {
       "stem": "According to Sellers et al., which racial ideology emphasizes the unique African American experience and supports African American self-determination with minimal input from other groups?",
@@ -169,7 +193,10 @@
       "quality_comment": "All options are racial ideologies defined by the model, ensuring plausible distractors and solid conceptual testing.",
       "lessonExcerpt": "| Nationalist | African American experience is unique; we should control our own destiny with minimal outside input |",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sellers' Multidimensional Model of Racial Identity"
+      ]
     },
     {
       "stem": "Which sexual identity status in Worthington et al.'s model is defined by purposeful exploration, evaluation, or experimentation of one’s sexual values, orientation, or preferences?",
@@ -187,7 +214,10 @@
       "quality_comment": "Options are clearly described statuses that differ conceptually, providing well-balanced answer choices.",
       "lessonExcerpt": "**Active Exploration:** You're purposefully exploring and experimenting with your sexual needs, values, orientation, preferences for activities, partner characteristics, or modes of expression.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Worthington's Multidimensional Model of Heterosexual Identity Development"
+      ]
     },
     {
       "stem": "In Atkinson, Morten, and Sue’s R/CID Model, what therapist preference is typical of individuals in the Conformity stage?",
@@ -205,7 +235,10 @@
       "quality_comment": "Plausible distractors make the question appropriately challenging; clear linkage to counseling implications enhances relevance.",
       "lessonExcerpt": "**Therapy implications:** These clients want a therapist from the majority group and will resist any attempt to explore their cultural identity.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model"
+      ]
     },
     {
       "stem": "In Sellers et al.’s Multidimensional Model of Racial Identity, how do 'private regard' and 'public regard' differ?",
@@ -223,7 +256,10 @@
       "quality_comment": "Distractors are detailed and similar in length, requiring precise conceptual understanding to identify the correct definitions.",
       "lessonExcerpt": "*Private regard:* How positively or negatively do you feel about being African American and about African Americans generally?\n- *Public regard:* How positively or negatively do you think others view African Americans?",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sellers' Multidimensional Model of Racial Identity"
+      ]
     },
     {
       "stem": "According to Helms's WRID Model, which status is characterized by denial of racism and satisfaction with the racial status quo, often accompanied by limited contact with racial minorities?",
@@ -241,7 +277,10 @@
       "quality_comment": "Clear distinction between statuses in the WRID model and concise stem make this question straightforward and useful for foundational knowledge.",
       "lessonExcerpt": "**Contact:** Unaware of racism, satisfied with how things are, likely have had limited contact with people from minority groups. May claim to be \"colorblind.\"",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Helms's White Racial Identity Development Model"
+      ]
     },
     {
       "stem": "Which stage in Troiden’s Model of Homosexual Identity Development is marked by internalized acceptance of one's sexual orientation and comfort disclosing it to others?",
@@ -259,7 +298,10 @@
       "quality_comment": "The options reflect distinct stages clearly described in the model, offering well-balanced alternatives that require understanding of developmental progression.",
       "lessonExcerpt": "**Identity Commitment:** They've fully internalized their gay or lesbian identity, accepted homosexuality as a way of life, and are comfortable disclosing their orientation broadly.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Troiden's Model of Homosexual Identity Development"
+      ]
     },
     {
       "stem": "In Worthington et al.'s Multidimensional Model of Heterosexual Identity Development, which status involves integrating one’s sexual identity with other aspects of identity such as gender and race/ethnicity?",
@@ -277,7 +319,10 @@
       "quality_comment": "Distractors are stages within the model, and the stem clearly distinguishes integration, enhancing item clarity and focus.",
       "lessonExcerpt": "**Synthesis:** You've integrated your sexual identity with your other identities (gender, race/ethnicity, etc.).",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Worthington's Multidimensional Model of Heterosexual Identity Development"
+      ]
     },
     {
       "stem": "According to the Multidimensional Model of Racial Identity (Sellers et al.), which racial ideology emphasizes the similarity in oppression among minority groups and prioritizes coalition building?",
@@ -295,7 +340,10 @@
       "quality_comment": "All options are drawn from the model’s ideologies with similar complexity and length, increasing discriminative quality.",
       "lessonExcerpt": "| Oppressed Minority | Our oppression is similar to other minorities; we should form coalitions with them |",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Sellers' Multidimensional Model of Racial Identity"
+      ]
     },
     {
       "stem": "In the context of the Racial/Cultural Identity Development (R/CID) Model, which stage is primarily focused on the exploration of one's cultural identity and the questioning of dominant cultural values?",
@@ -318,7 +366,10 @@
       ],
       "lessonExcerpt": "Something cracks the facade. Maybe they experience discrimination directly, or they encounter information that contradicts their worldview. Now they're questioning everything.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model"
+      ]
     },
     {
       "stem": "Which stage of Atkinson, Morten, and Sue’s R/CID Model is marked by an understanding and acceptance of one's cultural identity, as well as a commitment to social justice and equity?",
@@ -341,7 +392,10 @@
       ],
       "lessonExcerpt": "They've arrived at balance. They can see positive and negative aspects in all cultural groups, including their own. They're secure in their identity and committed to fighting all forms of oppression, not just the ones affecting their group.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model"
+      ]
     },
     {
       "stem": "According to social exchange theory, what primarily drives interpersonal attraction?",
@@ -362,7 +416,8 @@
       "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 24
+      "inspirationIndex": 24,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best describes cultural syndromes as expressions of distress?",
@@ -383,7 +438,8 @@
       "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": null
     },
     {
       "stem": "Which stage in the Racial/Cultural Identity Development Model involves individuals recognizing their own cultural identity and its significance?",
@@ -404,7 +460,10 @@
       "lessonExcerpt": "Internalization:** The emotional intensity decreases. They've developed a positive Black identity and can now tolerate or respect racial and cultural differences.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
+      "inspirationIndex": 13,
+      "relatedSections": [
+        "Cross's Black Racial Identity Development Model"
+      ]
     },
     {
       "stem": "Which of the following best describes the concept of infrahumanization in dehumanization theories?",
@@ -422,7 +481,8 @@
       "quality_comment": "Distractors are well-constructed, and the item requires understanding subtle differences in theories of dehumanization.",
       "lessonExcerpt": "Internalization:** The emotional intensity decreases. They've developed a positive Black identity and can now tolerate or respect racial and cultural differences.",
       "suggestedLesson": "3-cultural-identity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     },
     {
       "stem": "What is a primary cause of dissociative identity disorder often linked to its development?",
@@ -443,7 +503,8 @@
       "lessonExcerpt": "Childhood trauma is a primary cause linked to the development of dissociative identity disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": null
     }
   ]
 }

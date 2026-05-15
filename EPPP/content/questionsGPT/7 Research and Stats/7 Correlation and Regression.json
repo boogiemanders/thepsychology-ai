@@ -19,7 +19,10 @@
       "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Three Critical Assumptions"
+      ]
     },
     {
       "stem": "A researcher plots the relationship between a predictor variable (X) and a criterion variable (Y) on a scatterplot. She notices that the spread of Y scores is roughly the same at every level of X, and the data points form a circular cloud with no discernible pattern. Which of the following BEST describes this situation?",
@@ -40,7 +43,12 @@
       "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Three Critical Assumptions",
+        "The Foundation: What Correlation Actually Tells Us",
+        "Choosing the Right Correlation Coefficient"
+      ]
     },
     {
       "stem": "An industrial-organizational psychologist validates a cognitive ability test by correlating test scores with subsequent job performance ratings. However, because only applicants who scored above the 60th percentile were hired, the validation study includes only those employees. The resulting validity coefficient is r = .25. What is the most accurate interpretation of this finding?",
@@ -61,7 +69,12 @@
       "lessonExcerpt": "This is crucial for employment testing. If you validate a test only on people who were hired (and thus likely scored well), you're missing the lower range of scores, and your correlation will underestimate the test's true predictive power.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us",
+        "Choosing the Right Correlation Coefficient",
+        "The Coefficient of Determination: Understanding Shared Variance"
+      ]
     },
     {
       "stem": "In predictive modeling, which of the following best describes the role of multiple predictor variables?",
@@ -82,7 +95,11 @@
       "lessonExcerpt": "These tools help you evaluate whether a new therapy actually works, determine if a psychological test is worth using, and understand research that guides your clinical decisions.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Going Multivariate: Using Multiple Predictors",
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "What is a significant limitation of the Pearson correlation coefficient?",
@@ -103,7 +120,12 @@
       "lessonExcerpt": "The relationship between your variables needs to be linear.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us",
+        "The Three Critical Assumptions",
+        "Choosing the Right Correlation Coefficient"
+      ]
     },
     {
       "stem": "What does a correlation of 0.85 between IQ scores suggest about the relationship between the two variables?",
@@ -124,7 +146,10 @@
       "lessonExcerpt": "A **perfect positive correlation** (+1.0) means as one variable increases, the other increases in perfect lockstep",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "In a study examining the relationship between multiple variables, which statistical method is most appropriate for assessing the interrelationships among a set of observed variables?",
@@ -145,7 +170,12 @@
       "lessonExcerpt": "**Canonical correlation** extends multiple regression to situations with multiple continuous predictors AND multiple continuous criteria.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "Going Multivariate: Using Multiple Predictors",
+        "Regression Analysis: From Correlation to Prediction",
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "What does the biserial coefficient primarily measure?",
@@ -166,7 +196,11 @@
       "lessonExcerpt": "| **Biserial** | One variable continuous, one is an artificial dichotomy | Relationship between therapy hours and pass/fail licensing exam status |",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Choosing the Right Correlation Coefficient",
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "In the context of correlation, what does it mean for two variables to be orthogonal?",
@@ -187,7 +221,10 @@
       "lessonExcerpt": "Correlation measures the relationship between two or more variables. In simple terms, it tells us whether two things tend to move together, move in opposite directions, or have no pattern at all.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "What does an inverted U relationship between two variables indicate about their correlation?",
@@ -208,7 +245,12 @@
       "lessonExcerpt": "At very low anxiety, performance might be poor (you're not motivated). At moderate anxiety, performance peaks (you're engaged). At very high anxiety, performance drops again (you're overwhelmed). This creates a curved, inverted-U relationship.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us",
+        "The Three Critical Assumptions",
+        "Regression Analysis: From Correlation to Prediction"
+      ]
     },
     {
       "stem": "What does partial correlation measure in correlation analysis?",
@@ -229,7 +271,10 @@
       "lessonExcerpt": "Partial correlation measures the relationship between two variables while controlling for a third variable.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "A researcher creates a scatterplot showing the relationship between therapist experience (X) and client outcome ratings (Y). She notices that clients of therapists with fewer than 5 years of experience show highly variable outcome ratings (ranging from very poor to excellent), while clients of therapists with more than 15 years of experience show consistently high ratings with little variability. This pattern MOST directly indicates a violation of which assumption?",
@@ -250,7 +295,10 @@
       "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Three Critical Assumptions"
+      ]
     },
     {
       "stem": "A psychologist conducts a study examining the correlation between years of clinical experience and client satisfaction ratings across a large, unrestricted sample of therapists ranging from newly licensed to 30+ years of practice. Based on what is typically found in psychological research involving related professional variables, which of the following Pearson r values would be the most realistic estimate of this correlation?",
@@ -271,7 +319,10 @@
       "lessonExcerpt": "Most correlation coefficients range from -1.0 to +1.0, and they're usually symbolized with the letter 'r.'",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "Which assumption must be met when using most correlation coefficients to ensure accurate estimation of the relationship between variables?",
@@ -289,7 +340,12 @@
       "quality_comment": "The question clearly tests understanding of key correlation assumptions; distractors are plausible misunderstandings that reinforce knowledge of assumptions.",
       "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Regression Analysis: From Correlation to Prediction",
+        "Going Multivariate: Using Multiple Predictors",
+        "The Three Critical Assumptions"
+      ]
     },
     {
       "stem": "The Pearson product-moment correlation coefficient (Pearson r) is most appropriate when:",
@@ -307,7 +363,12 @@
       "quality_comment": "Options represent common correlation types, making the correct choice clear but requiring knowledge of variable measurement and relationships.",
       "lessonExcerpt": "| **Pearson r** | Both variables are continuous (interval/ratio) and linearly related | Relationship between depression scores and sleep hours |",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Choosing the Right Correlation Coefficient",
+        "The Foundation: What Correlation Actually Tells Us",
+        "Regression Analysis: From Correlation to Prediction"
+      ]
     },
     {
       "stem": "If the correlation coefficient between job knowledge and job performance is .70, what does the coefficient of determination (.70 squared) indicate?",
@@ -325,7 +386,12 @@
       "quality_comment": "Clear numeric example enhances understanding; distractors test common misconceptions about correlation and variance explained.",
       "lessonExcerpt": "Suppose you find that the correlation between therapeutic alliance scores and symptom improvement is r = .70. Square that (.70 × .70 = .49), and you discover that 49% of the variability in symptom improvement is explained by differences in therapeutic alliance quality.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us",
+        "The Coefficient of Determination: Understanding Shared Variance",
+        "Choosing the Right Correlation Coefficient"
+      ]
     },
     {
       "stem": "Which correlation coefficient is appropriate when one variable is continuous and the other is a true dichotomy (i.e., a categorical variable with exactly two categories)?",
@@ -343,7 +409,12 @@
       "quality_comment": "Options include similar correlation coefficients, demanding specific knowledge; well constructed to test precision of statistical tool application.",
       "lessonExcerpt": "| **Point biserial** | One variable continuous, one is a true dichotomy | Relationship between anxiety scores and biological sex |",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Choosing the Right Correlation Coefficient",
+        "Regression Analysis: From Correlation to Prediction",
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "What is the primary reason multicollinearity among predictor variables in a multiple regression analysis is problematic?",
@@ -361,7 +432,12 @@
       "quality_comment": "Options are plausible statistical concerns; distractors test common regression misconceptions, improving discriminability.",
       "lessonExcerpt": "ideally, each predictor should correlate highly with the criterion but show low correlations with other predictors. This ensures each predictor provides unique information.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Regression Analysis: From Correlation to Prediction",
+        "Going Multivariate: Using Multiple Predictors",
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "Discriminant function analysis is the most appropriate statistical technique to use when:",
@@ -379,7 +455,10 @@
       "quality_comment": "Well-focused question on method selection; distractors reflect other related but incorrect multivariate techniques, which helps test deep understanding.",
       "lessonExcerpt": "**Discriminant function analysis** is used when your criterion is categorical (nominal) rather than continuous.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Going Multivariate: Using Multiple Predictors"
+      ]
     },
     {
       "stem": "Structural Equation Modeling (SEM) differs from multiple regression primarily because SEM:",
@@ -397,7 +476,12 @@
       "quality_comment": "The question clearly distinguishes SEM from simpler methods; distractors are plausible misconceptions, making it suitable for advanced understanding.",
       "lessonExcerpt": "SEM combines factor analysis with multiple regression to test complex theories about how variables relate to each other.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Regression Analysis: From Correlation to Prediction",
+        "Structural Equation Modeling: The Advanced Toolkit",
+        "Going Multivariate: Using Multiple Predictors"
+      ]
     },
     {
       "stem": "Which of the following correlation coefficients is suitable for data when both variables are measured on nominal scales?",
@@ -415,7 +499,12 @@
       "quality_comment": "Straightforward question with clearly distinct options, allowing assessment of fundamental knowledge about correlation types.",
       "lessonExcerpt": "| **Contingency coefficient** | Both variables are nominal (categories) | Relationship between diagnosis type and treatment modality chosen |",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Choosing the Right Correlation Coefficient",
+        "The Foundation: What Correlation Actually Tells Us",
+        "Regression Analysis: From Correlation to Prediction"
+      ]
     },
     {
       "stem": "Stepwise multiple regression differs from simultaneous multiple regression in that it:",
@@ -433,7 +522,11 @@
       "quality_comment": "Options cover common regression methods and misinterpretations, promoting discrimination of concepts related to regression procedures.",
       "lessonExcerpt": "**Stepwise multiple regression** adds predictors one at a time, identifying which ones add meaningful predictive power.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Going Multivariate: Using Multiple Predictors",
+        "Regression Analysis: From Correlation to Prediction"
+      ]
     },
     {
       "stem": "What does homoscedasticity assume in the context of regression analysis?",
@@ -451,7 +544,12 @@
       "quality_comment": "This question targets understanding of a key regression assumption; distractors are conceptually related, making the question a good test of nuance.",
       "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Regression Analysis: From Correlation to Prediction",
+        "The Foundation: What Correlation Actually Tells Us",
+        "Going Multivariate: Using Multiple Predictors"
+      ]
     },
     {
       "stem": "When using multiple regression, which scenario best describes the problem caused by multicollinearity?",
@@ -469,7 +567,10 @@
       "quality_comment": "The item clarifies a common source of confusion about multicollinearity with plausible distractors, enhancing conceptual understanding.",
       "lessonExcerpt": "These predictors are measuring almost the same thing – they're highly intercorrelated. This is called multicollinearity, and it creates problems because the predictors aren't giving you unique information.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Going Multivariate: Using Multiple Predictors"
+      ]
     },
     {
       "stem": "Which of the following best characterizes the difference between point biserial and biserial correlation coefficients?",
@@ -487,7 +588,12 @@
       "quality_comment": "The question highlights a subtle but important distinction important for precise application, with clear, balanced answer choices.",
       "lessonExcerpt": "The biserial coefficient attempts to estimate what the correlation would have been if you hadn't artificially split that continuous variable. The point biserial coefficient treats the dichotomy as naturally occurring.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Choosing the Right Correlation Coefficient",
+        "The Foundation: What Correlation Actually Tells Us",
+        "Regression Analysis: From Correlation to Prediction"
+      ]
     },
     {
       "stem": "What is the purpose of canonical correlation analysis?",
@@ -505,7 +611,12 @@
       "quality_comment": "Provides a clear description of canonical correlation's function compared to related methods, promoting nuanced understanding.",
       "lessonExcerpt": "**Canonical correlation** extends multiple regression to situations with multiple continuous predictors AND multiple continuous criteria.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Going Multivariate: Using Multiple Predictors",
+        "The Foundation: What Correlation Actually Tells Us",
+        "Regression Analysis: From Correlation to Prediction"
+      ]
     },
     {
       "stem": "What condition must be satisfied to ensure that the relationship between two variables can be accurately assessed using Pearson's correlation coefficient?",
@@ -528,7 +639,12 @@
       ],
       "lessonExcerpt": "The relationship between your variables needs to be linear – meaning when you plot the data points, they roughly form a straight line rather than a curve.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Foundation: What Correlation Actually Tells Us",
+        "Choosing the Right Correlation Coefficient",
+        "Regression Analysis: From Correlation to Prediction"
+      ]
     },
     {
       "stem": "In stepwise regression, what is the primary criterion for selecting predictors?",
@@ -549,7 +665,11 @@
       "lessonExcerpt": "**Stepwise multiple regression** adds predictors one at a time, identifying which ones add meaningful predictive power.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Going Multivariate: Using Multiple Predictors",
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "What is the primary function of structural equation modeling (SEM) in testing causal models?",
@@ -570,7 +690,11 @@
       "lessonExcerpt": "**Step 4: Model Evaluation** – Researchers use statistics like the goodness-of-fit index (GFI) to determine whether their theoretical model fits the actual data well.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Structural Equation Modeling: The Advanced Toolkit",
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "A correlational study analyzes the relationship between the predictor X (hours studied) and criterion Y (exam score). What does the regression equation derived from this analysis primarily allow the researcher to do?",
@@ -588,7 +712,11 @@
       "quality_comment": "Distractors cover various unrelated statistical concepts, compelling test-takers to correctly apply the concept of regression in correlational research.",
       "lessonExcerpt": "Once you've established that two variables are correlated, regression analysis lets you make predictions. The correlational study produces a **regression equation** – essentially a formula that takes someone's predictor score and estimates their criterion score.",
       "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Regression Analysis: From Correlation to Prediction",
+        "The Foundation: What Correlation Actually Tells Us"
+      ]
     },
     {
       "stem": "What is the primary purpose of structural equation modeling (SEM) in statistical analysis?",
@@ -609,7 +737,12 @@
       "lessonExcerpt": "SEM combines factor analysis with multiple regression to test complex theories about how variables relate to each other.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Structural Equation Modeling: The Advanced Toolkit",
+        "The Foundation: What Correlation Actually Tells Us",
+        "Going Multivariate: Using Multiple Predictors"
+      ]
     }
   ]
 }

@@ -19,7 +19,10 @@
       "lessonExcerpt": "The chi-square test works with nominal data. Frequencies and categories.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories"
+      ]
     },
     {
       "stem": "A researcher uses a chi-square test to examine whether diagnosis type (anxiety disorder, mood disorder, or personality disorder) is associated with treatment preference (medication, psychotherapy, or combined). She collects data by surveying 150 clients at a clinic, where some married couples are both included in the sample. What assumption of the chi-square test is MOST likely violated?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "**Nonparametric tests** handle nominal and ordinal data. Categories and rankings. The chi-square test is the main player here. These tests don't require the strict assumptions of parametric tests. Eve",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories"
+      ]
     },
     {
       "stem": "A clinical researcher wants to determine whether there are significant differences in burnout scores (measured on a validated interval-level scale) among therapists who primarily use one of four theoretical orientations: psychodynamic, cognitive-behavioral, humanistic, or integrative. Each therapist practices only one orientation, and participants were randomly assigned to orientation-based supervision groups at the start of their training. Which statistical test is most appropriate for this analysis?",
@@ -61,7 +67,12 @@
       "lessonExcerpt": "When you have one independent variable with more than two levels and one dependent variable on an interval or ratio scale, you need a one-way analysis of variance (ANOVA).",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "One-Way ANOVA: Comparing Multiple Groups",
+        "The Chi-Square Test: Analyzing Categories",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     },
     {
       "stem": "When comparing multiple outcome measures, which statistical test is most appropriate to use?",
@@ -82,7 +93,12 @@
       "lessonExcerpt": "**MANOVA (Multivariate Analysis of Variance):** For studies with multiple dependent variables, each measured on an interval or ratio scale.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means",
+        "The Selection Process: Your Decision Framework"
+      ]
     },
     {
       "stem": "What does an F ratio in ANOVA represent?",
@@ -103,7 +119,12 @@
       "lessonExcerpt": "When the F-ratio is larger than 1.0, the between-group differences exceed within-group variability, suggesting your independent variable had an effect.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "The Student's t-Test: Comparing Two Means",
+        "The Selection Process: Your Decision Framework",
+        "One-Way ANOVA: Comparing Multiple Groups"
+      ]
     },
     {
       "stem": "A researcher wants to use a chi-square test to examine whether there is an association between therapeutic orientation (psychodynamic, humanistic, cognitive-behavioral) and client dropout (yes/no). The study includes 60 participants, but one cell in the contingency table contains only 3 observations. Which of the following is the PRIMARY concern with this analysis?",
@@ -124,7 +145,10 @@
       "lessonExcerpt": "The chi-square test works with nominal data. Frequencies and categories.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories"
+      ]
     },
     {
       "stem": "A researcher wants to determine whether there are significant differences in job satisfaction scores (measured on a continuous scale) among employees in four different departments. Each employee belongs to only one department, and the data meet assumptions of normality and homogeneity of variance. Which statistical test is most appropriate?",
@@ -145,7 +169,12 @@
       "lessonExcerpt": "When you have one independent variable with exactly two levels and one dependent variable measured on an interval or ratio scale, you need a t-test.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following best describes when a nonparametric statistical test is preferred over a parametric test?",
@@ -163,7 +192,12 @@
       "quality_comment": "The question is clear and tests fundamental knowledge about statistical test selection; distractors are plausible and well-balanced.",
       "lessonExcerpt": "**Nonparametric tests** handle nominal and ordinal data. Categories and rankings.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced ANOVA Variations You Need to Know",
+        "The Student's t-Test: Comparing Two Means",
+        "The Chi-Square Test: Analyzing Categories"
+      ]
     },
     {
       "stem": "In a study comparing two treatment groups on an interval-scaled dependent variable with unrelated participants, which statistical test is most appropriate?",
@@ -181,7 +215,12 @@
       "quality_comment": "The stem is straightforward and the distractors are related statistical tests, making the item appropriate for testing basic inferential test selection.",
       "lessonExcerpt": "**t-Test for Unrelated Samples (Independent Samples):** Compares means from two separate, unrelated groups.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means",
+        "One-Way ANOVA: Comparing Multiple Groups"
+      ]
     },
     {
       "stem": "A researcher wants to test whether undergraduates prefer hard-copy or online textbooks. Which statistical test should be used?",
@@ -199,7 +238,11 @@
       "quality_comment": "Distractors are credible statistical tests, challenging the test taker to correctly identify the single-variable chi-square application.",
       "lessonExcerpt": "**Example:** You want to know if college students prefer hard-copy or digital textbooks. That's one variable (preference) with two categories. Use the single-sample chi-square.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means"
+      ]
     },
     {
       "stem": "Which test produces an F-ratio as its main test statistic and is appropriate for comparing means across three or more unrelated groups on an interval or ratio dependent variable?",
@@ -217,7 +260,12 @@
       "quality_comment": "The stem is clear and direct; distractors are appropriate alternatives that help differentiate basic knowledge of statistical tests.",
       "lessonExcerpt": "When you have one independent variable with more than two levels and one dependent variable on an interval or ratio scale, you need a one-way analysis of variance (ANOVA).",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     },
     {
       "stem": "In a one-way ANOVA with 3 groups and a total of 36 participants, what are the degrees of freedom for the mean square between groups (MSB) and the mean square within groups (MSW), respectively?",
@@ -235,7 +283,12 @@
       "quality_comment": "This numerical item requires specific recall of formulas for ANOVA degrees of freedom; the distractors represent common calculation errors.",
       "lessonExcerpt": "- **Degrees of freedom for MSB** = C, 1 (where C = number of groups)\n- **Degrees of freedom for MSW** = N. C (where N = total participants)",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Student's t-Test: Comparing Two Means",
+        "One-Way ANOVA: Comparing Multiple Groups",
+        "The Chi-Square Test: Analyzing Categories"
+      ]
     },
     {
       "stem": "Which of the following best describes the Bonferroni procedure in the context of conducting multiple planned comparisons or post hoc tests?",
@@ -253,7 +306,10 @@
       "quality_comment": "Distractors represent commonly misunderstood aspects of error control, making this an effective question for testing knowledge of multiple comparison procedures.",
       "lessonExcerpt": "**Bonferroni Correction:** Divide your alpha by the number of comparisons.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Digging Deeper: Planned Comparisons and Post Hoc Tests"
+      ]
     },
     {
       "stem": "Which effect size measure is most appropriate for comparing the magnitude of difference between two groups on an interval or ratio dependent variable?",
@@ -271,7 +327,12 @@
       "quality_comment": "The options are plausible, though only Cohen’s d directly represents effect size for two-group mean differences, providing a good knowledge check.",
       "lessonExcerpt": "**Practical Significance (Effect Size):** Measures the magnitude of an intervention's effect. **Cohen's d** is the most common measure, expressing the difference between groups in standard deviation units.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "One-Way ANOVA: Comparing Multiple Groups",
+        "The Student's t-Test: Comparing Two Means"
+      ]
     },
     {
       "stem": "Which statement best characterizes the Jacobson-Truax method for evaluating clinical significance of treatment outcomes?",
@@ -289,7 +350,12 @@
       "quality_comment": "The question probes detailed understanding of clinical significance methods, differentiating sophisticated concepts relevant for advanced test takers.",
       "lessonExcerpt": "The **Jacobson-Truax Method** assesses clinical significance through two steps:",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beyond Statistical Significance: What Really Matters",
+        "The Student's t-Test: Comparing Two Means",
+        "One-Way ANOVA: Comparing Multiple Groups"
+      ]
     },
     {
       "stem": "A researcher wants to analyze data from a study with two independent variables, each with two levels, and one continuous dependent variable. Which statistical test is most appropriate?",
@@ -307,7 +373,11 @@
       "quality_comment": "Distractors are plausible, especially one-way ANOVA and t-test; the question tests conceptual understanding of factorial designs.",
       "lessonExcerpt": "**Factorial ANOVA:** For studies with multiple independent variables.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means"
+      ]
     },
     {
       "stem": "What is the advantage of using a one-way ANOVA instead of multiple t-tests when comparing three or more group means?",
@@ -325,7 +395,12 @@
       "quality_comment": "The stem is clearly phrased; distractors are reasonable misunderstandings, making it effective for assessing inferential statistics knowledge.",
       "lessonExcerpt": "The one-way ANOVA solves this by comparing all groups simultaneously while maintaining your chosen alpha level.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "One-Way ANOVA: Comparing Multiple Groups",
+        "The Student's t-Test: Comparing Two Means",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     },
     {
       "stem": "In which scenario would a t-test for related samples be the appropriate statistical test to use?",
@@ -343,7 +418,12 @@
       "quality_comment": "The distractors are clearly distinct from the correct option, giving a fair test of understanding paired sample testing.",
       "lessonExcerpt": "3. Repeated measures (same people measured at two time points. They're \"paired with themselves\")",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means",
+        "One-Way ANOVA: Comparing Multiple Groups"
+      ]
     },
     {
       "stem": "Which statistical test is most appropriate for analyzing data when a study includes one or more independent variables and two or more dependent variables measured on interval or ratio scales?",
@@ -361,7 +441,12 @@
       "quality_comment": "Distractors are common inferential tests but do not accommodate multiple dependent variables, making this a well-targeted knowledge item.",
       "lessonExcerpt": "**MANOVA (Multivariate Analysis of Variance):** For studies with multiple dependent variables, each measured on an interval or ratio scale.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means",
+        "One-Way ANOVA: Comparing Multiple Groups"
+      ]
     },
     {
       "stem": "What is the primary purpose of using trend analysis in inferential statistics?",
@@ -379,7 +464,12 @@
       "quality_comment": "The distractors represent other statistical approaches, helping distinguish knowledge of methods for testing functional form relationships.",
       "lessonExcerpt": "**Trend Analysis:** Used with quantitative independent variables to determine if there's a linear or nonlinear relationship with the dependent variable.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Student's t-Test: Comparing Two Means",
+        "One-Way ANOVA: Comparing Multiple Groups",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     },
     {
       "stem": "Which inferential statistical test is appropriate to control the effect of an extraneous variable by including it as an independent variable in the analysis?",
@@ -397,7 +487,11 @@
       "quality_comment": "The question requires knowledge of specialized inferential designs with plausible distractors involving control of extraneous factors.",
       "lessonExcerpt": "**Randomized Block ANOVA:** Controls for an extraneous variable by including it as a factor in your analysis.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     },
     {
       "stem": "In which scenario would you choose a nonparametric test instead of a parametric test?",
@@ -420,7 +514,12 @@
       ],
       "lessonExcerpt": "Even when you have interval or ratio data, you'll use nonparametric tests if your sample is small, groups are unequal in size, and those parametric assumptions are violated.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Advanced ANOVA Variations You Need to Know",
+        "The Student's t-Test: Comparing Two Means",
+        "The Selection Process: Your Decision Framework"
+      ]
     },
     {
       "stem": "Which of the following situations would justify the use of a nonparametric test over a parametric test?",
@@ -443,7 +542,12 @@
       ],
       "lessonExcerpt": "**Nonparametric tests** handle nominal and ordinal data. Categories and rankings.",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     },
     {
       "stem": "In a one-way ANOVA, what is the primary purpose of the analysis?",
@@ -464,7 +568,12 @@
       "lessonExcerpt": "When you have one independent variable with more than two levels and one dependent variable on an interval or ratio scale, you need a one-way analysis of variance (ANOVA).",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Advanced ANOVA Variations You Need to Know",
+        "One-Way ANOVA: Comparing Multiple Groups",
+        "The Student's t-Test: Comparing Two Means"
+      ]
     },
     {
       "stem": "Which statistical test is most appropriate for analyzing non-linear outcomes in a dataset?",
@@ -485,7 +594,10 @@
       "lessonExcerpt": "**Trend Analysis:** Used with quantitative independent variables to determine if there's a linear or nonlinear relationship with the dependent variable.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories"
+      ]
     },
     {
       "stem": "What is a key advantage of using MANOVA over ANOVA?",
@@ -506,7 +618,12 @@
       "lessonExcerpt": "**MANOVA (Multivariate Analysis of Variance):** For studies with multiple dependent variables, each measured on an interval or ratio scale.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Advanced ANOVA Variations You Need to Know",
+        "The Two Main Families of Statistical Tests",
+        "The Chi-Square Test: Analyzing Categories"
+      ]
     },
     {
       "stem": "When conducting multiple t-tests, what is the primary concern regarding Type I error rates?",
@@ -527,7 +644,10 @@
       "lessonExcerpt": "Running multiple tests inflates this risk, the **experimentwise error rate**.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Beyond Statistical Significance: What Really Matters"
+      ]
     },
     {
       "stem": "What is the primary purpose of using ANCOVA in research design?",
@@ -548,7 +668,12 @@
       "lessonExcerpt": "**ANCOVA (Analysis of Covariance):** Another way to control for an extraneous variable, but instead of including it as a factor, ANCOVA statistically removes its effects from the dependent variable.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Student's t-Test: Comparing Two Means",
+        "One-Way ANOVA: Comparing Multiple Groups",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     },
     {
       "stem": "When calculating expected frequencies for a chi-square test, which of the following is the correct formula to use?",
@@ -569,7 +694,10 @@
       "lessonExcerpt": "M}}People often describe it as feeling like the worst flu of their life, multiplied by ten.{{/M}} ### Stimulant Intoxication and Withdrawal",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories"
+      ]
     },
     {
       "stem": "Which statistical test is generally more powerful when data meet the required assumptions?",
@@ -587,7 +715,12 @@
       "quality_comment": "The distractors are appropriate examples of nonparametric tests, providing a meaningful challenge for test takers.",
       "lessonExcerpt": "**Parametric tests** (like t-tests and ANOVA) are more powerful than **nonparametric tests** (like chi-square).",
       "suggestedLesson": "7-stats-tests",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Chi-Square Test: Analyzing Categories",
+        "The Student's t-Test: Comparing Two Means",
+        "Advanced ANOVA Variations You Need to Know"
+      ]
     }
   ]
 }

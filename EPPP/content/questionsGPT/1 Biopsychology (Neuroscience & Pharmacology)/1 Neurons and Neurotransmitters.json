@@ -19,7 +19,11 @@
       "lessonExcerpt": "Reuptake inhibitors prevent neurotransmitters from being sucked back up by the sending neuron, leaving more available in the synapse",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers",
+        "How Drugs Affect Neurotransmitter Systems"
+      ]
     },
     {
       "stem": "A psychiatrist is explaining to a patient why their SSRI medication may help with both depression and insomnia. Which neurotransmitter targeted by SSRIs plays a key role in regulating BOTH mood and sleep?",
@@ -40,7 +44,10 @@
       "lessonExcerpt": "- **Major neurotransmitters and their clinical associations**: Dopamine (movement, reward, Parkinson's, schizophrenia), acetylcholine (memory, movement, Alzheimer's), glutamate (excitatory, excitotoxicity), norepinephrine (arousal, mood), serotonin (mood, appetite, anxiety), and GABA (inhibitory, an",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "A 19-year-old female presents with binge-purge behaviors consistent with bulimia nervosa. Based on current neurobiological research, which neurotransmitter abnormality is most likely associated with her condition?",
@@ -61,7 +68,10 @@
       "lessonExcerpt": "Low serotonin levels in specific brain regions are linked to: Depression and increased suicide risk, Bulimia nervosa, Obsessive-compulsive disorder, Migraine headaches.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "A patient with myasthenia gravis reports progressive difficulty with voluntary movements, including chewing, swallowing, and lifting her arms. Which neurotransmitter system is most directly implicated in her motor symptoms?",
@@ -82,7 +92,10 @@
       "lessonExcerpt": "Movement: ACh causes muscle contraction at neuromuscular junctions. Myasthenia gravis destroys ACh receptors, causing progressive muscle weakness.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Exogenous opioids such as morphine and heroin produce their analgesic and euphoric effects primarily by mimicking the action of which endogenous substances?",
@@ -103,7 +116,10 @@
       "lessonExcerpt": "Neuropeptides: Larger molecules synthesized in the cell body and transported to terminals (endorphins, enkephalins, the brain's natural opioids that reduce pain and create euphoria)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "In physiological responses, what term describes the number of heartbeats per minute?",
@@ -124,7 +140,10 @@
       "lessonExcerpt": "**The Autonomic Nervous System (ANS)** manages the involuntary functions that keep you alive without conscious effort. Heart rate, digestion, breathing rate, and glandular activity.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "The Nervous System: Your Body's Information Network"
+      ]
     },
     {
       "stem": "Which neurotransmitter is primarily associated with the modulation of pain relief through opioid peptides?",
@@ -145,7 +164,10 @@
       "lessonExcerpt": "Reality: The relationship between neurotransmitters and disorders is complex. Low serotonin is associated with depression, but anorexia nervosa involves *high* brain serotonin. No disorder has a single neurotransmitter cause. Multiple systems interact.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
+      "inspirationIndex": 18,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Which neurotransmitter is most commonly implicated in obsessive-compulsive disorder (OCD)?",
@@ -166,7 +188,10 @@
       "lessonExcerpt": "Understanding neurotransmitter function underlies nearly every question about medication effects, substance use disorders, and neurological conditions you'll encounter on the exam.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Which primary neurotransmitter is primarily affected by alcohol consumption, leading to its depressant effects?",
@@ -187,7 +212,11 @@
       "lessonExcerpt": "**Gamma-Aminobutyric Acid (GABA)** is the primary inhibitory neurotransmitter, involved in motor control, memory, mood, anxiety, arousal, and sleep. GABA essentially puts the brakes on neural activity:",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers",
+        "How Drugs Affect Neurotransmitter Systems"
+      ]
     },
     {
       "stem": "How does the magnitude of an action potential relate to stimulus intensity?",
@@ -208,7 +237,10 @@
       "lessonExcerpt": "Reality: Action potentials are all-or-none. Stimulus intensity is encoded by firing *frequency* and the *number* of neurons firing, not by action potential intensity. This is fundamental to understanding neural coding.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Neurons: The Messengers That Make It All Work"
+      ]
     },
     {
       "stem": "A psychopharmacologist teaching a continuing education course explains that a single monoamine neurotransmitter plays a dual role in promoting slow-wave sleep and regulating mood, which is why disruptions to this system are implicated in both insomnia and major depressive disorder, and why medications that potentiate this system are used to treat both conditions. Which neurotransmitter is most likely being described?",
@@ -229,7 +261,10 @@
       "lessonExcerpt": "- **Major neurotransmitters and their clinical associations**: Dopamine (movement, reward, Parkinson's, schizophrenia), acetylcholine (memory, movement, Alzheimer's), glutamate (excitatory, excitotoxicity), norepinephrine (arousal, mood), serotonin (mood, appetite, anxiety), and GABA (inhibitory, an",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "A clinical psychologist is reviewing the neurobiological literature in preparation for treating a client with a chronic history of anorexia nervosa and co-occurring mood disturbance. Research consistently implicates a deficiency in which neurotransmitter system as central to the restrictive eating behaviors, distorted body image, and dysphoric mood characteristic of eating disorders?",
@@ -250,7 +285,10 @@
       "lessonExcerpt": "- **Major neurotransmitters and their clinical associations**: Dopamine (movement, reward, Parkinson's, schizophrenia), acetylcholine (memory, movement, Alzheimer's), glutamate (excitatory, excitotoxicity), norepinephrine (arousal, mood), serotonin (mood, appetite, anxiety), and GABA (inhibitory, an",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "A physical medicine specialist consults with a neuropsychologist regarding a client who sustained a peripheral motor neuron injury at the lumbar level, resulting in weakness of the lower extremities. The specialist explains that the disrupted signal occurs at the neuromuscular junction where the motor neuron synaptically communicates with skeletal muscle. Voluntary motor movement via the somatic nervous system is mediated at this junction by which neurotransmitter?",
@@ -271,7 +309,11 @@
       "lessonExcerpt": "The Somatic Nervous System (SNS) handles voluntary actions you consciously control... This system connects sensory receptors throughout your body to the CNS and connects the CNS to skeletal muscles.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "The Nervous System: Your Body's Information Network",
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Which division of the nervous system is responsible for transmitting information from the body's sensory receptors to the central nervous system and from the CNS to the skeletal muscles?",
@@ -289,7 +331,10 @@
       "quality_comment": "The question is straightforward with clear, plausible distractors and tests fundamental knowledge appropriate for the EPPP.",
       "lessonExcerpt": "**The Autonomic Nervous System (ANS)** manages the involuntary functions that keep you alive without conscious effort. Heart rate, digestion, breathing rate, and glandular activity. It communicates between smooth muscles, organs, and the CNS.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Nervous System: Your Body's Information Network"
+      ]
     },
     {
       "stem": "During the fight-or-flight response, which of the following physiological changes is primarily mediated by the sympathetic nervous system?",
@@ -307,7 +352,10 @@
       "quality_comment": "Options are reasonably balanced, and the question clearly assesses physiological responses controlled by the sympathetic nervous system.",
       "lessonExcerpt": "**The Autonomic Nervous System (ANS)** manages the involuntary functions that keep you alive without conscious effort. Heart rate, digestion, breathing rate, and glandular activity. It communicates between smooth muscles, organs, and the CNS.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Nervous System: Your Body's Information Network"
+      ]
     },
     {
       "stem": "Which component of a neuron is responsible for receiving chemical signals from other neurons?",
@@ -325,7 +373,10 @@
       "quality_comment": "The distractors are plausible neuron components, making the question clear and appropriate for basic foundational testing.",
       "lessonExcerpt": "Your pupils dilate (better vision), heart rate increases (more blood flow), respiration quickens (more oxygen), you start sweating (cooling system activated), and digestion slows down (resources redirected to muscles).",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurons: The Messengers That Make It All Work"
+      ]
     },
     {
       "stem": "What best describes an action potential in neuronal conduction?",
@@ -343,7 +394,10 @@
       "quality_comment": "The distractors are scientifically plausible but clearly distinct, allowing accurate assessment of action potential knowledge.",
       "lessonExcerpt": "**Conduction within neurons** starts when dendrites receive sufficient stimulation.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurons: The Messengers That Make It All Work"
+      ]
     },
     {
       "stem": "Which statement best describes the role of neurotransmitters during synaptic transmission?",
@@ -361,7 +415,10 @@
       "quality_comment": "Clear and concise wording with suitable distractors makes this question effective for assessing synaptic mechanisms.",
       "lessonExcerpt": "When this depolarization reaches a minimum threshold, complete depolarization occurs, triggering an **action potential**, an electrical impulse that travels down the axon. After firing, the neuron returns to its resting state and prepares to fire again.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurons: The Messengers That Make It All Work"
+      ]
     },
     {
       "stem": "Which type of neuroplasticity involves the reassignment of a brain area to process a different sensory modality after deprivation of its usual input?",
@@ -379,7 +436,10 @@
       "quality_comment": "The answer choices reflect distinct types of neuroplasticity, challenging the test-taker to apply knowledge precisely.",
       "lessonExcerpt": "**Conventional neurotransmitters** are stored in small sacs called synaptic vesicles, released when action potentials arrive, and activate postsynaptic receptors. This category includes:",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neuroplasticity: Your Brain's Ability to Adapt"
+      ]
     },
     {
       "stem": "Which neurotransmitter is involved in motor control, reward, mood, and is implicated in disorders such as Parkinson’s disease, ADHD, and schizophrenia?",
@@ -397,7 +457,10 @@
       "quality_comment": "Clear distractors are other major neurotransmitters, making this a well-constructed and relevant item.",
       "lessonExcerpt": "- **Neuroplasticity continues throughout life** and includes homologous area adaptation, cross-modal reassignment, map expansion, and compensatory masquerade.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "What is the primary role of acetylcholine (ACh) at the neuromuscular junction?",
@@ -415,7 +478,10 @@
       "quality_comment": "Distractors are related concepts but only one fits the neuromuscular function, making this item clear and valid.",
       "lessonExcerpt": "- **Major neurotransmitters and their clinical associations**: Dopamine (movement, reward, Parkinson's, schizophrenia), acetylcholine (memory, movement, Alzheimer's), glutamate (excitatory, excitotoxicity), norepinephrine (arousal, mood), serotonin (mood, appetite, anxiety), and GABA (inhibitory, an",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Gamma-aminobutyric acid (GABA) primarily functions as which of the following in the nervous system?",
@@ -433,7 +499,10 @@
       "quality_comment": "Distractors are plausible but inaccurate, allowing clear discrimination of GABA’s inhibitory role.",
       "lessonExcerpt": "**Nicotinic** | ACh and nicotine | Rapid communication | CNS, PNS, neuromuscular junctions, autonomic ganglia | Excitatory (muscle contraction)",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Which description best fits a partial agonist drug in relation to neurotransmitter receptors?",
@@ -451,7 +520,10 @@
       "quality_comment": "Distractors are well constructed to reflect other pharmacological concepts, making the item a solid test of drug action knowledge.",
       "lessonExcerpt": "**Gamma-Aminobutyric Acid (GABA)** is the primary inhibitory neurotransmitter, involved in motor control, memory, mood, anxiety, arousal, and sleep. GABA essentially puts the brakes on neural activity:",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "How Drugs Affect Neurotransmitter Systems"
+      ]
     },
     {
       "stem": "Which neurotransmitter's deficiency is associated with depression according to the catecholamine hypothesis?",
@@ -469,7 +541,10 @@
       "quality_comment": "Distractors are other well-known neurotransmitters, increasing the item’s clinical relevance and discriminability.",
       "lessonExcerpt": "**Conventional neurotransmitters** are stored in small sacs called synaptic vesicles, released when action potentials arrive, and activate postsynaptic receptors. This category includes:",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Which statement accurately describes how the resting state of a neuron is maintained before stimulation?",
@@ -487,7 +562,10 @@
       "quality_comment": "Distractors are presented in a scientifically plausible manner, requiring test-takers to apply knowledge of neurobiology.",
       "lessonExcerpt": "It's essential for the sympathetic fight-or-flight response and involved in attention, arousal, sleep, memory, and mood. The catecholamine hypothesis proposes that some forms of depression result from not enough norepinephrine (deficiency), while mania stems from norepinephrine excess.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurons: The Messengers That Make It All Work"
+      ]
     },
     {
       "stem": "Which neurotransmitter is characterized as an unconventional neurotransmitter that is synthesized on demand and involved in regulating pain, memory, appetite, and sleep?",
@@ -505,7 +583,10 @@
       "quality_comment": "The item is clear and differentiated by including both conventional and unconventional neurotransmitters as options, enhancing discrimination.",
       "lessonExcerpt": "Negatively charged inside relative to outside, {{M}}like a battery waiting to discharge{{/M}}. When stimulation reaches the dendrites, channels in the cell membrane open, allowing positively charged sodium ions to rush inside. This makes the cell less negative (depolarization).",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Which neuroplasticity process refers to the recruitment of neurons from the borders of a functioning cortical region due to practice or exercise?",
@@ -523,7 +604,10 @@
       "quality_comment": "The answer options represent distinct neuroplasticity types, allowing assessment of precise conceptual knowledge.",
       "lessonExcerpt": "**Unconventional neurotransmitters** aren't stored in vesicles but are made on demand. They can be released from various locations in the neuron and sometimes travel backward from postsynaptic to presynaptic neurons. The **endocannabinoids** belong to this category.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neuroplasticity: Your Brain's Ability to Adapt"
+      ]
     },
     {
       "stem": "Which neurotransmitter receptor type mediates rapid excitatory neurotransmission at the neuromuscular junction and responds to both acetylcholine and nicotine?",
@@ -541,7 +625,10 @@
       "quality_comment": "Distractors are plausible receptor types making the test-taker apply specific knowledge about receptor function.",
       "lessonExcerpt": "- **Neuroplasticity continues throughout life** and includes homologous area adaptation, cross-modal reassignment, map expansion, and compensatory masquerade.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Which of the following actions is primarily regulated by the sympathetic nervous system during a stressful situation?",
@@ -564,7 +651,10 @@
       ],
       "lessonExcerpt": "**Nicotinic** | ACh and nicotine | Rapid communication | CNS, PNS, neuromuscular junctions, autonomic ganglia | Excitatory (muscle contraction)",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Nervous System: Your Body's Information Network"
+      ]
     },
     {
       "stem": "In response to a perceived threat, which physiological response is NOT typically associated with the activation of the sympathetic nervous system?",
@@ -587,7 +677,10 @@
       ],
       "lessonExcerpt": "Your pupils dilate (better vision), heart rate increases (more blood flow), respiration quickens (more oxygen), you start sweating (cooling system activated), and digestion slows down (resources redirected to muscles).",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Nervous System: Your Body's Information Network"
+      ]
     },
     {
       "stem": "Which neurotransmitter is primarily involved in the pathophysiology of Alzheimer's disease?",
@@ -608,7 +701,10 @@
       "lessonExcerpt": "- **Memory**: Low ACh levels in the entorhinal cortex and hippocampus are linked to early Alzheimer's disease memory loss (this is why cholinesterase inhibitors like donepezil are used to treat Alzheimer's. They prevent ACh breakdown)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "Which neurotransmitter is believed to play a significant role in the pathophysiology of seasonal affective disorder (SAD)?",
@@ -629,7 +725,10 @@
       "lessonExcerpt": "**Migraines** involve intense, throbbing pain (usually one-sided) often with nausea/vomiting and sensitivity to light or other stimuli. They're linked to low serotonin and abnormalities in glutamate, dopamine, and norepinephrine.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
+      "inspirationIndex": 20,
+      "relatedSections": [
+        "Neurotransmitters: The Chemical Messengers"
+      ]
     },
     {
       "stem": "In the context of eating disorders, which of the following psychological factors is most likely to perpetuate the cycle of disordered eating behaviors as identified in transdiagnostic CBT-E?",
@@ -652,7 +751,8 @@
       ],
       "lessonExcerpt": "This requires preoccupation with orderliness, perfectionism, and control that limits flexibility and efficiency. You need at least four of eight symptoms:",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": null
     }
   ]
 }

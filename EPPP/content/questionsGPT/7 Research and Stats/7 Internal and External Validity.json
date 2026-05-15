@@ -19,7 +19,11 @@
       "lessonExcerpt": "Despite its name, this actually refers to how you assign people to groups. If groups start out different, you can't trust your conclusions.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity",
+        "The Four Threats to External Validity"
+      ]
     },
     {
       "stem": "Which of the following is a potential threat to the validity of quasi-experimental designs?",
@@ -40,7 +44,11 @@
       "lessonExcerpt": "Random assignment is your defense here. When you randomly assign participants to groups, you create similar groups at the start. No random assignment? You've got a problem.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity",
+        "The Four Threats to External Validity"
+      ]
     },
     {
       "stem": "Which of the following is NOT considered a threat to validity in research design?",
@@ -61,7 +69,10 @@
       "lessonExcerpt": "**Random assignment** helps internal validity by creating equivalent groups. **Random selection** helps external validity by ensuring your sample represents the population.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity"
+      ]
     },
     {
       "stem": "Which of the following is a threat to internal validity that occurs when an external event affects the outcome of a study?",
@@ -82,7 +93,10 @@
       "lessonExcerpt": "History occurs when outside events during the study affect the results.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity"
+      ]
     },
     {
       "stem": "A researcher uses a quasi-experimental design to evaluate the effectiveness of a new group therapy for social anxiety by comparing an existing therapy group at one clinic with a waitlist control group at another clinic. Six weeks into the study, the clinic housing the control group hosts a community mental health awareness event that several control participants attend. Which threat to internal validity is MOST concerning in this scenario?",
@@ -103,7 +117,10 @@
       "lessonExcerpt": "History occurs when outside events during the study affect the results... There's a trickier version: when you're testing groups separately and something happens to just one group.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity"
+      ]
     },
     {
       "stem": "Which of the following best defines internal validity in experimental research?",
@@ -121,7 +138,10 @@
       "quality_comment": "The question is clear, with plausible distractors focusing on different aspects of research validity, facilitating discrimination of understanding.",
       "lessonExcerpt": "Internal validity tells you whether a study's conclusions about cause-and-effect are accurate.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Breaking Down External Validity Into Five Parts"
+      ]
     },
     {
       "stem": "A study’s results are threatened by history when:",
@@ -139,7 +159,12 @@
       "quality_comment": "The stem clearly targets a major threat to validity, and answer options cover common internal validity threats, making distractors plausible and relevant.",
       "lessonExcerpt": "History occurs when outside events during the study affect the results.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity",
+        "Breaking Down External Validity Into Five Parts",
+        "The Four Threats to External Validity"
+      ]
     },
     {
       "stem": "Which technique is most effective at controlling the threat of maturation in an experimental study?",
@@ -157,7 +182,12 @@
       "quality_comment": "Options provide realistic techniques to control validity threats, encouraging test-takers to differentiate between methods appropriate for specific threats.",
       "lessonExcerpt": "Random assignment to multiple groups solves this too. If you have a treatment group and a control group, both mature at roughly the same rate.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Threats to External Validity",
+        "Breaking Down External Validity Into Five Parts",
+        "The Seven Threats to Internal Validity"
+      ]
     },
     {
       "stem": "What is differential selection in the context of experimental research?",
@@ -175,7 +205,11 @@
       "quality_comment": "Distractors address other internal validity threats, enhancing the question's discriminative utility for advanced understanding.",
       "lessonExcerpt": "Despite its name, this actually refers to how you assign people to groups. If groups start out different, you can't trust your conclusions.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Threats to External Validity",
+        "The Seven Threats to Internal Validity"
+      ]
     },
     {
       "stem": "Which of the following best describes the purpose of the Solomon four-group design?",
@@ -193,7 +227,10 @@
       "quality_comment": "The question is clear and tests detailed knowledge of research design, with distractors referencing other study design principles, making it challenging.",
       "lessonExcerpt": "The **Solomon four-group design** simultaneously addresses testing as a threat to internal validity and pretest-treatment interaction as a threat to external validity.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Threats to External Validity"
+      ]
     },
     {
       "stem": "Which threat to external validity refers to participants responding differently to the independent variable during a study than they would in real life due to knowing they are being observed?",
@@ -211,7 +248,10 @@
       "quality_comment": "The question succinctly targets a key external validity threat, with plausible distractors from both internal and external validity domains.",
       "lessonExcerpt": "Reactivity means people act differently because they know they're being studied.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Threats to External Validity"
+      ]
     },
     {
       "stem": "In a within-subjects design assessing three different drug doses given in sequence, the greatest observed effect at the highest dose might be due to which threat to external validity?",
@@ -229,7 +269,10 @@
       "quality_comment": "Well-constructed stem and options refer to common research validity concerns, requiring application of knowledge about within-subjects design threats.",
       "lessonExcerpt": "This occurs in within-subjects designs where each person receives multiple treatments or conditions. The order matters.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Threats to External Validity"
+      ]
     },
     {
       "stem": "Which strategy is best for controlling the threat of selection-treatment interaction in experimental research?",
@@ -247,7 +290,11 @@
       "quality_comment": "Distractors refer to other validity threats or control techniques, making the correct choice stand out to examinees familiar with research sampling concepts.",
       "lessonExcerpt": "The best control is random selection from the population.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Threats to External Validity",
+        "Breaking Down External Validity Into Five Parts"
+      ]
     },
     {
       "stem": "What type of external validity relates to whether study results can be generalized across different time periods?",
@@ -265,7 +312,11 @@
       "quality_comment": "Clear and straightforward, this question separates related validity concepts effectively with plausibly similar-sounding distractors.",
       "lessonExcerpt": "| **Temporal Validity** | Can we generalize across time? | Will this treatment still work five years from now? |",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Breaking Down External Validity Into Five Parts",
+        "The Foundation: What These Terms Really Mean"
+      ]
     },
     {
       "stem": "If raters become more accurate or stricter in scoring over the duration of a study, threatening internal validity, this phenomenon is called:",
@@ -283,7 +334,11 @@
       "quality_comment": "Good clarity and plausible alternatives test knowledge of distinct internal validity threats without overlapping definitions.",
       "lessonExcerpt": "Instrumentation problems occur when your measuring tool changes over time.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity",
+        "Breaking Down External Validity Into Five Parts"
+      ]
     },
     {
       "stem": "Which of the following threats to internal validity involves participants scoring extremely high or low on a pretest and then regressing to more typical scores on a posttest?",
@@ -301,7 +356,12 @@
       "quality_comment": "Distractors are other threats to validity, providing a good set of plausible choices for examinees to consider.",
       "lessonExcerpt": "Statistical regression happens when you select people specifically because they scored extremely high or low on something, and their scores naturally drift toward average over time.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity",
+        "The Four Threats to External Validity",
+        "Breaking Down External Validity Into Five Parts"
+      ]
     },
     {
       "stem": "Demand characteristics in a research study primarily threaten which aspect of validity?",
@@ -319,7 +379,11 @@
       "quality_comment": "The question is clearly worded and includes plausible distractors that distinguish between types of validity and threats.",
       "lessonExcerpt": "**Demand characteristics** are cues that tell participants what you expect.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Breaking Down External Validity Into Five Parts",
+        "The Four Threats to External Validity"
+      ]
     },
     {
       "stem": "Counterbalancing is a control procedure used primarily to address which research threat?",
@@ -337,7 +401,11 @@
       "quality_comment": "Distractors target plausible alternative threats, enhancing the question’s effectiveness in testing detailed knowledge of design controls.",
       "lessonExcerpt": "**Counterbalancing** solves this. You have different groups receive the treatments in different orders.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Four Threats to External Validity",
+        "The Seven Threats to Internal Validity"
+      ]
     },
     {
       "stem": "Which of the following internal validity threats is most likely to be minimized by using double-blind procedures in a study?",
@@ -355,7 +423,12 @@
       "quality_comment": "This question adds focus on a control technique for an internal validity threat, complementing existing items well.",
       "lessonExcerpt": "**Double-blind technique**: Neither participants nor researchers interacting with them know who's in which group",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity",
+        "The Four Threats to External Validity",
+        "The Foundation: What These Terms Really Mean"
+      ]
     },
     {
       "stem": "Which validity threat involves changes in participants’ responses due to repeated exposure to the same measurement instrument across multiple time points?",
@@ -373,7 +446,10 @@
       "quality_comment": "This item clarifies the concept of testing effects, enriching the existing question pool about internal validity threats.",
       "lessonExcerpt": "Taking a test can change how you perform on that test later.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity"
+      ]
     },
     {
       "stem": "Which of the following best describes ecological validity?",
@@ -391,7 +467,10 @@
       "quality_comment": "This straightforward item supplements existing external validity questions by focusing on a key subcategory that is well covered in the source content.",
       "lessonExcerpt": "| **Ecological Validity** | Can we generalize to real-world settings? | Will this therapy work in a clinic, not just in a controlled lab? |",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Breaking Down External Validity Into Five Parts"
+      ]
     },
     {
       "stem": "In a longitudinal study, which of the following scenarios would most likely introduce a history threat to the validity of the findings?",
@@ -414,7 +493,11 @@
       ],
       "lessonExcerpt": "There's a trickier version: when you're testing groups separately and something happens to just one group.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity",
+        "The Four Threats to External Validity"
+      ]
     },
     {
       "stem": "During a psychological experiment, a significant political event occurs that influences participants' responses. This scenario demonstrates a threat to validity known as:",
@@ -437,7 +520,12 @@
       ],
       "lessonExcerpt": "History occurs when outside events during the study affect the results.",
       "suggestedLesson": "7-internal-external-validity",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Seven Threats to Internal Validity",
+        "The Four Threats to External Validity",
+        "Breaking Down External Validity Into Five Parts"
+      ]
     },
     {
       "stem": "What is the primary purpose of the Solomon Four-Group design in experimental research?",
@@ -458,7 +546,11 @@
       "lessonExcerpt": "The **Solomon four-group design** simultaneously addresses testing as a threat to internal validity and pretest-treatment interaction as a threat to external validity.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "The Four Threats to External Validity",
+        "Breaking Down External Validity Into Five Parts"
+      ]
     },
     {
       "stem": "Which of the following methods is most effective in reducing experimenter bias in research design?",
@@ -479,7 +571,10 @@
       "lessonExcerpt": "**Double-blind technique**: Neither participants nor researchers interacting with them know who's in which group",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "The Four Threats to External Validity"
+      ]
     }
   ]
 }

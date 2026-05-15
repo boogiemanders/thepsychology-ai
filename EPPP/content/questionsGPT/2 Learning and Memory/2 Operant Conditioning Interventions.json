@@ -19,7 +19,10 @@
       "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior. In plain language: you can do something you love AFTER you do something you don't want to do.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": [
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "What is the typical behavioral response observed during an extinction burst in operant conditioning?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "The smart approach to applying these interventions starts with a functional behavioral assessment (FBA).",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Extinction and Differential Reinforcement: The Sophisticated Approaches"
+      ]
     },
     {
       "stem": "In the context of parenting, what does the term 'contingency of reinforcement' refer to?",
@@ -61,7 +67,11 @@
       "lessonExcerpt": "What happens after a behavior determines whether that behavior increases or decreases.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": [
+        "The Foundation: What Makes Behavior Stick or Disappear?",
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "How does the 'time out' principle function as a learning principle in behavior modification?",
@@ -82,7 +92,10 @@
       "lessonExcerpt": "Time out (formally \"time out from positive reinforcement\") removes access to ALL reinforcement for a brief period.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Punishment: Reducing Unwanted Behaviors"
+      ]
     },
     {
       "stem": "In operant conditioning, what is the effect of negative consequences on behavior?",
@@ -103,7 +116,11 @@
       "lessonExcerpt": "What happens after a behavior determines whether that behavior increases or decreases.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "The Foundation: What Makes Behavior Stick or Disappear?",
+        "Punishment: Reducing Unwanted Behaviors"
+      ]
     },
     {
       "stem": "In the context of motivation theories, what is the primary challenge of approach-avoidance conflict?",
@@ -124,7 +141,8 @@
       "lessonExcerpt": "Understanding these techniques will give you practical tools for treating anxiety disorders, phobias, PTSD, and addictive behaviors.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 23
+      "inspirationIndex": 23,
+      "relatedSections": null
     },
     {
       "stem": "The overjustification effect suggests that external rewards can undermine intrinsic motivation. Which of the following scenarios best illustrates this effect?",
@@ -145,7 +163,10 @@
       "lessonExcerpt": "The key is that the preferred activity must follow the less preferred one.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "Which learning theory emphasizes the role of consequences in shaping behavior?",
@@ -166,7 +187,10 @@
       "lessonExcerpt": "This is operant conditioning in action.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 10
+      "inspirationIndex": 10,
+      "relatedSections": [
+        "The Foundation: What Makes Behavior Stick or Disappear?"
+      ]
     },
     {
       "stem": "A board-certified behavior analyst conducts a functional behavioral assessment for a 5-year-old with a history of screaming and floor-kicking during transitions. The FBA reveals that the behavior is maintained by caregiver attention. The treatment plan instructs all caregivers to provide zero social attention—no eye contact, verbal response, or physical contact—when screaming and floor-kicking occur, while ensuring physical safety. Over the next two weeks, the behavior decreases substantially. The primary mechanism responsible for the behavior reduction is:",
@@ -187,7 +211,10 @@
       "lessonExcerpt": "Extinction means stopping all reinforcement for a previously reinforced behavior. If attention maintains a behavior, extinction means withdrawing all attention.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Extinction and Differential Reinforcement: The Sophisticated Approaches"
+      ]
     },
     {
       "stem": "A behavioral therapist instructs a highly distractible adult client to allow himself to browse news websites for 15 minutes, but only after completing 30 minutes of uninterrupted report writing. The therapist explains that this works because the preferred activity is being used as a consequence for completing the less preferred one. Which operant principle most precisely describes this intervention?",
@@ -208,7 +235,10 @@
       "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior. In plain language: you can do something you love AFTER you do something you don't want to do.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "A behavior analyst is using differential reinforcement of other behavior (DRO) with a child who engages in repetitive head-banging. The therapist reinforces the child at the end of each 5-minute interval in which no head-banging occurred. Which behavioral principle BEST explains why DRO is effective?",
@@ -229,7 +259,10 @@
       "lessonExcerpt": "Differential Reinforcement of Other Behavior (DRO): You reinforce ANY behavior except the target problem behavior during specified time intervals. This is less focused than DRI or DRA but sometimes more practical.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 26
+      "inspirationIndex": 26,
+      "relatedSections": [
+        "Extinction and Differential Reinforcement: The Sophisticated Approaches"
+      ]
     },
     {
       "stem": "Which of the following best describes the primary distinction between shaping and chaining in operant conditioning interventions?",
@@ -247,7 +280,10 @@
       "quality_comment": "The stem clearly differentiates two similar operant techniques; distractors are plausible but clearly incorrect upon knowledge of definitions.",
       "lessonExcerpt": "Extinction means stopping all reinforcement for a previously reinforced behavior. If attention maintains a behavior, extinction means withdrawing all attention.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "A teacher praises a student for raising her hand instead of shouting out answers in class. Which differential reinforcement procedure is being used?",
@@ -265,7 +301,10 @@
       "quality_comment": "The item is straightforward with clearly defined options that differentiate closely related reinforcement procedures, suitable for EPPP level.",
       "lessonExcerpt": "Differential Reinforcement of Alternative Behavior (DRA) - Example: A student shouts out answers in class. You reinforce raising their hand instead.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction and Differential Reinforcement: The Sophisticated Approaches"
+      ]
     },
     {
       "stem": "Which of the following is an example of positive punishment?",
@@ -283,7 +322,10 @@
       "quality_comment": "The options represent different types of consequences making the question a good discriminator of understanding positive versus negative punishment and extinction.",
       "lessonExcerpt": "Overcorrection is technically positive punishment (adding a consequence), but it's designed to be educational rather than just unpleasant. Restitution requires the person to fix what they damaged",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Punishment: Reducing Unwanted Behaviors"
+      ]
     },
     {
       "stem": "In functional behavioral assessment, what is the purpose of systematically altering antecedents and consequences during the third step?",
@@ -301,7 +343,10 @@
       "quality_comment": "The question clearly targets a key step in functional behavioral assessment with plausible distractors representing other steps.",
       "lessonExcerpt": "Step 3: Test Your Hypotheses - You systematically change the antecedents and consequences to see what actually affects the behavior.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Putting It Together in Clinical Practice"
+      ]
     },
     {
       "stem": "When applying the Premack principle, which of the following scenarios illustrates its use correctly?",
@@ -319,7 +364,10 @@
       "quality_comment": "The stem is clear and distractors include other operant techniques, aiding in differentiation of concepts.",
       "lessonExcerpt": "Confusing shaping and chaining: Remember, shaping produces ONE final behavior where intermediate steps vanish. Chaining produces a SEQUENCE where all steps remain visible.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "Which of these statements about time out as a behavior intervention is FALSE?",
@@ -337,7 +385,10 @@
       "quality_comment": "This item effectively tests common misunderstandings about time out with clearly true and false answer choices.",
       "lessonExcerpt": "Differential Reinforcement of Alternative Behavior (DRA) - Example: A student shouts out answers in class. You reinforce raising their hand instead.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Punishment: Reducing Unwanted Behaviors"
+      ]
     },
     {
       "stem": "A parent stops responding to a child's whining, which previously resulted in attention. This intervention is an example of:",
@@ -355,7 +406,10 @@
       "quality_comment": "The example is straightforward and well matched to the concept tested, with plausible distractors to challenge knowledge.",
       "lessonExcerpt": "Overcorrection is technically positive punishment (adding a consequence), but it's designed to be educational rather than just unpleasant. Restitution requires the person to fix what they damaged",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction and Differential Reinforcement: The Sophisticated Approaches"
+      ]
     },
     {
       "stem": "In backward chaining, teaching a complex task differs from forward chaining because:",
@@ -373,7 +427,10 @@
       "quality_comment": "The item clearly contrasts chaining methods with plausible distractors that reflect basic misunderstandings.",
       "lessonExcerpt": "Step 3: Test Your Hypotheses - You systematically change the antecedents and consequences to see what actually affects the behavior.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "A teacher reinforces a student for staying seated for 30 minutes, which is incompatible with the student's usual behavior of leaving their seat frequently. This is an example of:",
@@ -391,7 +448,10 @@
       "quality_comment": "Distractors include other differential reinforcement types, requiring precise knowledge for correct selection.",
       "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior. In plain language: you can do something you love AFTER you do something you don't want to do.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction and Differential Reinforcement: The Sophisticated Approaches"
+      ]
     },
     {
       "stem": "Which step in functional behavioral assessment involves collecting information about the antecedents and consequences maintaining a target behavior and forming hypotheses about its function?",
@@ -409,7 +469,10 @@
       "quality_comment": "The question requires recall of FBA procedural steps with distractors reflecting other stages, well constructed for exam review.",
       "lessonExcerpt": "End on compliance: Don't release someone from time out while they're still acting out",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Putting It Together in Clinical Practice"
+      ]
     },
     {
       "stem": "Response cost is best characterized as:",
@@ -427,7 +490,10 @@
       "quality_comment": "Options are clearly defined and plausible, facilitating discrimination of key operant concepts.",
       "lessonExcerpt": "Extinction means stopping all reinforcement for a previously reinforced behavior. If attention maintains a behavior, extinction means withdrawing all attention.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Punishment: Reducing Unwanted Behaviors"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies differential reinforcement of low rates of behavior (DRL)?",
@@ -445,7 +511,10 @@
       "quality_comment": "Distractors reflect other differential reinforcement types, requiring solid understanding to answer correctly.",
       "lessonExcerpt": "Backward chaining starts with the last step.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction and Differential Reinforcement: The Sophisticated Approaches"
+      ]
     },
     {
       "stem": "Which of the following best describes a critical feature for extinction to effectively reduce an undesirable behavior?",
@@ -463,7 +532,10 @@
       "quality_comment": "The item addresses a key operational detail of extinction interventions, with distractors clarifying common misconceptions.",
       "lessonExcerpt": "Differential Reinforcement of Incompatible Behavior (DRI) - You reinforce a behavior that physically cannot occur at the same time as the problem behavior.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Extinction and Differential Reinforcement: The Sophisticated Approaches"
+      ]
     },
     {
       "stem": "In functional behavioral assessment (FBA), what is the main reason for including indirect methods such as family member reports during data collection?",
@@ -481,7 +553,10 @@
       "quality_comment": "The question addresses the complementary use of indirect methods in FBA, enhancing test-taker understanding of assessment techniques.",
       "lessonExcerpt": "Step 2: Identify Functions - You figure out what's triggering the behavior (antecedents) and what's maintaining it (consequences).",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Putting It Together in Clinical Practice"
+      ]
     },
     {
       "stem": "Which of the following is a declarative characteristic of overcorrection as a positive punishment technique in operant interventions?",
@@ -499,7 +574,10 @@
       "quality_comment": "The distractors represent varied operant concepts, enhancing discrimination of overcorrection's unique features.",
       "lessonExcerpt": "Response cost is negative punishment, you remove something valued when an undesired behavior occurs. The key word is \"specific\", you take away a particular reinforcer, not everything.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Punishment: Reducing Unwanted Behaviors"
+      ]
     },
     {
       "stem": "In the context of teaching a child to tie their shoes, which of the following best illustrates the process of shaping?",
@@ -522,7 +600,10 @@
       ],
       "lessonExcerpt": "Differential Reinforcement of Low Rates (DRL) - Unlike the others, you're not trying to eliminate the behavior completely. You're just reducing its frequency to an acceptable level.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "Which of the following scenarios best exemplifies the use of chaining in operant conditioning?",
@@ -545,7 +626,10 @@
       ],
       "lessonExcerpt": "Differential reinforcement combines extinction of the problem behavior with reinforcement of alternative behaviors.",
       "suggestedLesson": "2-operant-conditioning-interventions",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Positive Reinforcement: Building New Behaviors"
+      ]
     },
     {
       "stem": "A special education classroom operates a token economy. A student with a history of verbal outbursts earns tokens throughout the day for appropriate behavior. After each instance of shouting, the teacher removes five tokens from the student's running total. Over the following two weeks, the frequency of shouting decreases significantly. According to the operant conditioning framework described in the lesson, the mechanism producing the behavior reduction is best classified as:",
@@ -566,7 +650,11 @@
       "lessonExcerpt": "Response cost is negative punishment, you remove something valued when an undesired behavior occurs. In clinical settings, this might look like a token economy where clients earn points for appropriate behaviors and lose a set number of points for specific problem behaviors.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Punishment: Reducing Unwanted Behaviors",
+        "The Foundation: What Makes Behavior Stick or Disappear?"
+      ]
     },
     {
       "stem": "Which of the following behaviors is classified as self-injurious behavior in children?",
@@ -587,7 +675,8 @@
       "lessonExcerpt": "Episodes of cataplexy (loss of muscle tone)",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best describes the developmental model of antisocial behavior?",
@@ -608,7 +697,8 @@
       "lessonExcerpt": "Psychologist Terrie Moffitt (1993) proposed an influential framework distinguishing two types of antisocial behavior: Life-Course-Persistent Type... While parenting factors contribute, the etiology is multifactorial, including genetic, neurobiological, and environmental influences.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 16
+      "inspirationIndex": 16,
+      "relatedSections": null
     }
   ]
 }

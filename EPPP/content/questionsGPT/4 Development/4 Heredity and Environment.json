@@ -19,7 +19,10 @@
       "lessonExcerpt": "By comparing adopted children to both biological and adoptive parents, researchers can separate genetic from environmental transmission. If adopted children resemble biological parents they never lived with, this suggests genetic influence.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Research Designs You Need to Know"
+      ]
     },
     {
       "stem": "A researcher studying the heritability of intelligence explains that monozygotic twins share 100% of their DNA while dizygotic twins share approximately 50%, similar to non-twin siblings. If a heritability study finds that monozygotic twins show substantially higher IQ correlations than dizygotic twins, this finding MOST directly supports which conclusion?",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "Monozygotic (identical) twins share 100% of their DNA. Dizygotic (fraternal) twins share 50% of their DNA, like regular siblings. If identical twins are more similar than fraternal twins on a trait, this suggests genetic influence.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Research Designs You Need to Know"
+      ]
     },
     {
       "stem": "What is the typical correlation of IQ scores among siblings raised in the same household?",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "A heritability of 0.50 means that approximately 50% of the differences we see between people in intelligence are due to genetic differences.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 5
+      "inspirationIndex": 5,
+      "relatedSections": [
+        "Research Designs You Need to Know"
+      ]
     },
     {
       "stem": "A longitudinal adoption study tracks the IQ scores of children placed with non-biological families at birth. When measured in childhood, adoptees show meaningful IQ correlations with their adoptive parents. When re-assessed in adulthood, which pattern does research most consistently find?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "A heritability of 0.50 means that approximately 50% of the differences we see between people in intelligence are due to genetic differences... Heritability estimates are population statistics, not individual predictions. They also vary depending on the environment.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": [
+        "Research Designs You Need to Know"
+      ]
     },
     {
       "stem": "Fragile X syndrome is the most common inherited cause of intellectual developmental disorder. Males with the Fragile X mutation typically show more severe symptoms than females because:",
@@ -103,7 +115,8 @@
       "lessonExcerpt": "A gene-environment interaction means that genetic predispositions are expressed differently depending on environmental conditions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 27
+      "inspirationIndex": 27,
+      "relatedSections": null
     },
     {
       "stem": "What is epigenetics primarily concerned with in the study of development?",
@@ -121,7 +134,10 @@
       "quality_comment": "Distractors are relevant genetic concepts but distinct enough to test knowledge of epigenetic mechanisms effectively.",
       "lessonExcerpt": "Epigenetics shows us that environmental experiences can actually affect how our genes are expressed, without changing the underlying DNA sequence itself.",
       "suggestedLesson": "4-heredity-and-environment",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Key Principles: How Nature and Nurture Actually Work"
+      ]
     },
     {
       "stem": "Which of the following best describes the role of passive genotype-environment correlation?",
@@ -139,7 +155,10 @@
       "quality_comment": "Distractors include other genotype-environment correlations and epigenetic concepts, increasing discriminability.",
       "lessonExcerpt": "Most psychological traits and disorders result from complex interactions between multiple genes and multiple environmental factors. Polygenic and multifactorial",
       "suggestedLesson": "4-heredity-and-environment",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Key Principles: How Nature and Nurture Actually Work"
+      ]
     },
     {
       "stem": "Which environmental factors have been identified as causing epigenetic changes during prenatal development?",
@@ -157,7 +176,10 @@
       "quality_comment": "Distractors include postnatal and genetic-only factors, enabling testers to distinguish prenatal environmental epigenetic influences.",
       "lessonExcerpt": "Active Gene-Environment Correlation: As we develop, we actively select and create environments that match our genetic predispositions.",
       "suggestedLesson": "4-heredity-and-environment",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Key Principles: How Nature and Nurture Actually Work"
+      ]
     },
     {
       "stem": "In which genetic inheritance pattern does a single copy of a mutated gene from one parent lead to the expression of a disorder?",
@@ -178,7 +200,8 @@
       "lessonExcerpt": "Huntington's disease is a devastating hereditary condition caused by a mutated gene on chromosome 4. Because it's autosomal dominant, each child of an affected parent has a 50% chance of inheriting it.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following genetic factors is most strongly associated with an increased risk of developing schizophrenia?",
@@ -199,7 +222,10 @@
       "lessonExcerpt": "A family history of schizophrenia is a significant genetic risk factor.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 25
+      "inspirationIndex": 25,
+      "relatedSections": [
+        "Real-World Applications: What This Means for Clinical Practice"
+      ]
     },
     {
       "stem": "Which of the following genetic factors is most strongly associated with bipolar I disorder?",
@@ -220,7 +246,10 @@
       "lessonExcerpt": "A family history of mood disorders is strongly associated with bipolar I disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 7
+      "inspirationIndex": 7,
+      "relatedSections": [
+        "Real-World Applications: What This Means for Clinical Practice"
+      ]
     },
     {
       "stem": "A clinical psychologist is educating a family about the genetic contribution to bipolar I disorder. When discussing concordance rates in twin studies, which of the following most accurately reflects the research findings?",
@@ -241,7 +270,10 @@
       "lessonExcerpt": "The concordance rates tell the story: Monozygotic (identical) twins: 40-80% Dizygotic (fraternal) twins: 5-30%",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 14
+      "inspirationIndex": 14,
+      "relatedSections": [
+        "Research Designs You Need to Know"
+      ]
     }
   ]
 }

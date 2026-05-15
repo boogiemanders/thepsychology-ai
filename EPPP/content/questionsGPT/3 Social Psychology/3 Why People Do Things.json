@@ -19,7 +19,10 @@
       "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "Dr. Patel is running late for a supervision meeting and attributes her tardiness to unexpected traffic. However, when her supervisee arrives late the following week, Dr. Patel assumes the supervisee is irresponsible. This pattern of attributing one's own behavior to situational factors while attributing others' behavior to dispositional factors is known as:",
@@ -40,7 +43,10 @@
       "lessonExcerpt": "We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities... We have access to our own internal experiences, context, and history. We know all the situational pressures we face. But when observing others, we see their behavior without full access to their circumstances, so we fill in the gaps with assumptions about their character.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "According to the reformulated learned helplessness model, a person who attributes a job rejection to the belief that 'I'm incompetent at everything and always will be' is making attributions that are:",
@@ -61,7 +67,10 @@
       "lessonExcerpt": "People with a pessimistic explanatory style do the opposite with negative events, attributing them to internal, stable, and global factors. They think 'I'm not qualified' (internal), 'I'm always bad at interviews' (stable), and 'I can't do anything right' (global).",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "What Are Causal Attributions?"
+      ]
     },
     {
       "stem": "A doctoral student who has consistently performed well on comprehensive exams unexpectedly receives a failing score on one section. When discussing the result with peers, the student states, 'The questions were unfairly worded and the grading rubric was inconsistent.' This response BEST illustrates which attribution pattern?",
@@ -82,7 +91,10 @@
       "lessonExcerpt": "The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
+      "inspirationIndex": 19,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "A clinical psychologist completes a particularly successful assessment with a complex client and attributes the outcome to her advanced training and clinical intuition. The following week, she conducts an assessment that goes poorly and attributes the outcome to the client's lack of motivation and the referring provider's inadequate background information. This pattern of attribution BEST illustrates:",
@@ -103,7 +115,10 @@
       "lessonExcerpt": "The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following best describes how gender stereotypes can influence the attribution of performance in academic settings?",
@@ -124,7 +139,10 @@
       "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Real-World Applications in Clinical Practice"
+      ]
     },
     {
       "stem": "In the context of motivation theories, which of the following statements best differentiates intrinsic from extrinsic motivation?",
@@ -145,7 +163,8 @@
       "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP, but it's also essential for your future clinical work.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": null
     },
     {
       "stem": "What is the actor-observer bias in attribution theory?",
@@ -166,7 +185,10 @@
       "lessonExcerpt": "The actor-observer effect highlights a double standard we all use: We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
+      "inspirationIndex": 3,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "How does learned helplessness relate to attribution styles in individuals?",
@@ -187,7 +209,11 @@
       "lessonExcerpt": "People with a pessimistic explanatory style do the opposite with negative events, attributing them to internal, stable, and global factors.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "What Are Causal Attributions?",
+        "Real-World Applications in Clinical Practice"
+      ]
     },
     {
       "stem": "According to Kelly's Personal Construct Theory, how do individuals use their constructs to anticipate future events?",
@@ -208,7 +234,8 @@
       "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": null
     },
     {
       "stem": "In the context of attribution theory, how do individuals typically explain their failures when experiencing depression?",
@@ -229,7 +256,11 @@
       "lessonExcerpt": "People with a pessimistic explanatory style explain bad events as internal, stable, and global factors.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
+      "inspirationIndex": 4,
+      "relatedSections": [
+        "What Are Causal Attributions?",
+        "Real-World Applications in Clinical Practice"
+      ]
     },
     {
       "stem": "What is a common attribution bias that affects social perception?",
@@ -250,7 +281,10 @@
       "lessonExcerpt": "The fundamental attribution error is a common bias where individuals overestimate personality factors and underestimate situational factors.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "A forensic evaluator reviews a security video showing a convenience store cashier who, without observable provocation, responds sharply to a customer and refuses to complete the transaction. Without reviewing the cashier's work history or the events of that day, the evaluator concludes the cashier has 'an inherently aggressive and confrontational personality.' This reasoning most clearly reflects:",
@@ -271,7 +305,10 @@
       "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
+      "inspirationIndex": 11,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "A licensed psychologist begins treatment with a first-generation Korean American client presenting with chronic occupational stress and somatic complaints. The client appears disengaged during open-ended reflective questioning and responds minimally to exploratory affect-focused techniques. However, the client becomes notably more engaged when the psychologist offers concrete coping strategies and a structured plan for managing workplace conflicts. Which adjustment would be MOST consistent with culturally competent practice for this client?",
@@ -292,7 +329,8 @@
       "lessonExcerpt": "Joan Miller's 1984 research compared North Americans and Asian Indians and found that children from both cultures made similar attributions. But as they grew into adolescence and adulthood, Americans increasingly made dispositional attributions while Indians made more situational attributions. This tells us that the fundamental attribution error isn't hardwired. It's learned through cultural values about individualism versus collectivism.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
+      "inspirationIndex": 12,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best describes the fundamental attribution error?",
@@ -310,7 +348,10 @@
       "quality_comment": "The stem is precise and the distractors are plausible but clearly distinguishable, providing a solid test of key attribution bias knowledge.",
       "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "According to Kelley's covariation model, which pattern of consensus, consistency, and distinctiveness would most likely lead to an internal attribution?",
@@ -328,7 +369,10 @@
       "quality_comment": "The question challenges understanding of multiple interacting variables and requires familiarity with the model’s conceptual framework; distractors are reasonable alternatives.",
       "lessonExcerpt": "When consensus is LOW, consistency is HIGH, and distinctiveness is LOW, you make an internal (dispositional) attribution",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Kelley's Covariation Model: A Systematic Approach"
+      ]
     },
     {
       "stem": "Which bias explains why individuals tend to attribute their own failures to situational factors but their successes to dispositional factors?",
@@ -346,7 +390,10 @@
       "quality_comment": "Clear wording and well-chosen distractors that refer to related biases enhance the question’s diagnostic value.",
       "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following describes the ultimate attribution error?",
@@ -364,7 +411,10 @@
       "quality_comment": "Distractors represent other attribution biases, making the question appropriately challenging and discriminative.",
       "lessonExcerpt": "When consensus is LOW, consistency is HIGH, and distinctiveness is LOW, you make an internal (dispositional) attribution",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "In the actor-observer effect, how do people typically explain their own versus others’ behavior?",
@@ -382,7 +432,10 @@
       "quality_comment": "The question is clear and the options are plausible, making it a good straightforward item for testing basic attribution concepts.",
       "lessonExcerpt": "the self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following statements accurately reflects cultural differences in the fundamental attribution error as found by Miller (1984)?",
@@ -400,7 +453,11 @@
       "quality_comment": "The question is well constructed to distinguish knowledge of cultural variations in attribution, with credible distractors reflecting common misconceptions.",
       "lessonExcerpt": "When someone in our in-group does something negative, we attribute it to situational factors or dismiss it as an exception. When someone in an out-group does something negative, we attribute it to their character or culture.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know",
+        "Real-World Applications in Clinical Practice"
+      ]
     },
     {
       "stem": "What is the group attribution error as described by Allison and Messick (1985)?",
@@ -418,7 +475,10 @@
       "quality_comment": "The stem is specific and the distractors plausible, requiring careful knowledge of the subtle distinctions in group attribution biases.",
       "lessonExcerpt": "We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "According to an optimistic explanatory style, how are negative events typically attributed?",
@@ -436,7 +496,10 @@
       "quality_comment": "The answer options are concise and balanced, with distractors reflecting common attributions that require careful discrimination.",
       "lessonExcerpt": "Americans increasingly made dispositional attributions while Indians made more situational attributions.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "What Are Causal Attributions?"
+      ]
     },
     {
       "stem": "Which of the following best exemplifies the self-serving bias?",
@@ -454,7 +517,10 @@
       "quality_comment": "The example clearly illustrates the bias with realistic scenarios and plausible alternative biases as distractors.",
       "lessonExcerpt": "Version 2 (Allison & Messick, 1985): We assume a group's decision reflects every individual member's opinion, even when we know the decision wasn't unanimous.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "Which of the following is true when consensus, consistency, and distinctiveness are all high in Kelley's covariation model?",
@@ -472,7 +538,10 @@
       "quality_comment": "The question is concise and well-targeted; distractors are intuitive but incorrect, requiring solid understanding of the model.",
       "lessonExcerpt": "people with an optimistic explanatory style explain bad events as external, unstable, and specific.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Kelley's Covariation Model: A Systematic Approach"
+      ]
     },
     {
       "stem": "Which of the following best illustrates the group attribution error?",
@@ -490,7 +559,10 @@
       "quality_comment": "The options are balanced and the question requires careful differentiation of group versus individual attributions.",
       "lessonExcerpt": "Land a new client? \"I've really developed strong therapeutic skills.\" Lose a client? \"They weren't ready for change,\" or \"Insurance issues made it impossible.\"",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "How does the actor-observer effect relate to attributions made by individuals about their own versus others' behaviors?",
@@ -508,7 +580,10 @@
       "quality_comment": "The distractors are plausible but clearly incorrect; the item succinctly tests the core idea.",
       "lessonExcerpt": "Pattern 2 | High | High | High | External (Situational) | \"Anyone would act that way in those circumstances\"",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "What is the tendency to attribute one's own negative behaviors to external factors while attributing others' similar behaviors to their character called?",
@@ -531,7 +606,10 @@
       ],
       "lessonExcerpt": "We assume a group's decision reflects every individual member's opinion, even when we know the decision wasn't unanimous.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "In a study examining how people explain the behaviors of their peers versus their own, which of the following findings would be consistent with the fundamental attribution error?",
@@ -554,7 +632,10 @@
       ],
       "lessonExcerpt": "We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities.",
       "suggestedLesson": "3-why-people-do-things",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "Which cognitive bias is primarily responsible for individuals who believe in astrology focusing on information that confirms their beliefs while ignoring contradictory evidence?",
@@ -575,7 +656,8 @@
       "lessonExcerpt": "For the EPPP, you'll need to recognize different types of attribution biases and understand how people decide whether behavior stems from someone's personality or their circumstances. Let's break this down in a way that sticks.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": null
     },
     {
       "stem": "What cognitive bias is illustrated by the halo effect in social perception?",
@@ -596,7 +678,8 @@
       "lessonExcerpt": "topic_name: Social Cognition – Causal Attributions domain: 3: Social Psychology slug: social-cognition-causal-attributions generated_at: 2025-11-16T15:23:20.860Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Causal Attributions Matter in Your Career as a Psychologist",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": null
     },
     {
       "stem": "In Rosenthal and Jacobson's (1968) Pygmalion in the Classroom study, teachers were falsely informed that randomly selected students had been identified by a test as poised for significant intellectual growth. At the end of the academic year, those students showed measurably greater IQ gains than matched controls. Which mechanism MOST accurately explains this outcome?",
@@ -617,7 +700,8 @@
       "lessonExcerpt": "topic_name: Social Cognition – Causal Attributions domain: 3: Social Psychology slug: social-cognition-causal-attributions generated_at: 2025-11-16T15:23:20.860Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Causal Attributions Matter in Your Career as a Psychologist",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
+      "inspirationIndex": 6,
+      "relatedSections": null
     },
     {
       "stem": "A psychologist working in a residential facility for adults with intellectual disabilities notices that staff members consistently attribute a resident's social withdrawal, appetite changes, and sleep disturbance solely to the resident's intellectual disability rather than considering a possible mood disorder. This pattern BEST illustrates:",
@@ -638,7 +722,8 @@
       "lessonExcerpt": "Diagnostic overshadowing originally described attributing all problems of people with intellectual disabilities to that diagnosis, overlooking other issues.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 17
+      "inspirationIndex": 17,
+      "relatedSections": null
     },
     {
       "stem": "Which of the following best illustrates the self-serving bias in social cognition?",
@@ -659,7 +744,10 @@
       "lessonExcerpt": "The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": [
+        "The Major Attribution Biases You Need to Know"
+      ]
     },
     {
       "stem": "Research on gender-role stereotypes and academic achievement has found that parents typically attribute their sons' success in mathematics to ability, while attributing their daughters' success in mathematics to:",
@@ -680,7 +768,8 @@
       "lessonExcerpt": "Parents expect sons to excel at math and attribute their success to ability, but attribute daughters' success to effort. Children internalize these views, affecting confidence, interest, course selection, and career choices.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": null
     },
     {
       "stem": "In the diagnosis of female orgasmic disorder, which of the following best describes the situational type?",
@@ -701,7 +790,8 @@
       "lessonExcerpt": "The situational type occurs only in specific contexts or situations.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 22
+      "inspirationIndex": 22,
+      "relatedSections": null
     }
   ]
 }

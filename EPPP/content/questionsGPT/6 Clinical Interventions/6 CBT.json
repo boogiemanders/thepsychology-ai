@@ -18,7 +18,10 @@
       "suggestedParagraph": "### The Three Core Components",
       "lessonExcerpt": "Selective Abstraction | Focusing on one negative detail while ignoring everything else",
       "needsReview": false,
-      "inspirationDomain": "TREATMENT/INTERVENTION"
+      "inspirationDomain": "TREATMENT/INTERVENTION",
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation"
+      ]
     },
     {
       "stem": "In CBT, a client says, \"If I make one mistake during the presentation, everyone will know I am incompetent.\" The therapist responds, \"Let's treat that prediction as a hypothesis and review the evidence for and against it.\" This intervention best illustrates:",
@@ -38,7 +41,11 @@
       "suggestedParagraph": "### How CBT Works in Practice",
       "lessonExcerpt": "Therapist and client become like scientific partners investigating evidence together.",
       "needsReview": false,
-      "inspirationDomain": "TREATMENT/INTERVENTION"
+      "inspirationDomain": "TREATMENT/INTERVENTION",
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation",
+        "Mindfulness-Based Interventions"
+      ]
     },
     {
       "stem": "A therapist is completing a Safety Planning Intervention with a client who has recurrent suicidal crises. The client has already identified warning signs and tried internal coping strategies, but the suicidal urge remains intense. According to the sequence of the intervention, what should come next?",
@@ -58,7 +65,10 @@
       "suggestedParagraph": "### Safety Planning Intervention (SPI)",
       "lessonExcerpt": "2. Use internal coping strategies (distraction, self-soothing)\n3. Contact social supports for distraction\n4. Contact family or friends who can help resolve the crisis",
       "needsReview": false,
-      "inspirationDomain": "TREATMENT/INTERVENTION"
+      "inspirationDomain": "TREATMENT/INTERVENTION",
+      "relatedSections": [
+        "Cognitive-Behavioral Therapy for Suicide Prevention"
+      ]
     },
     {
       "stem": "Masters and Johnson's sensate focus technique for treating sexual dysfunctions is best understood as an application of which behavioral learning principle?",
@@ -79,7 +89,10 @@
       "lessonExcerpt": "Counterconditioning means replacing an unwanted response with a different, incompatible one. You can't be deeply relaxed and panicked at the same time... By pairing the trigger with a new, opposite response, you overwrite the old pattern.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Rational Emotive Behavior Therapy (REBT): Ellis's Approach"
+      ]
     },
     {
       "stem": "In Beck's cognitive therapy model, the primary therapeutic focus is on identifying and modifying:",
@@ -100,7 +113,10 @@
       "lessonExcerpt": "Beck identified three elements that create and maintain psychological distress: Cognitive Schemas (Core Beliefs)... Automatic Thoughts... Cognitive Distortions (Thinking Errors).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation"
+      ]
     },
     {
       "stem": "Meichenbaum's self-instructional training was originally developed for which population and involves a progression from external to internal speech guidance?",
@@ -121,7 +137,10 @@
       "lessonExcerpt": "Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Self-Instructional Training: Teaching Self-Talk"
+      ]
     },
     {
       "stem": "A depressed client tells her therapist, 'My coworker didn't say hello to me this morning, so she must hate me.' According to Beck's cognitive therapy, this thought is best classified as which type of cognitive distortion?",
@@ -142,7 +161,10 @@
       "lessonExcerpt": "Arbitrary Inference | Drawing negative conclusions without evidence | 'My boss didn't smile at me this morning, so I'm probably getting fired'",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation"
+      ]
     },
     {
       "stem": "Meichenbaum's self-instructional training was originally developed for which population?",
@@ -163,7 +185,10 @@
       "lessonExcerpt": "Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Self-Instructional Training: Teaching Self-Talk"
+      ]
     },
     {
       "stem": "A therapist is developing a treatment plan for a client diagnosed with obsessive-compulsive disorder who experiences intrusive thoughts about contamination and responds by washing her hands for up to three hours daily. Based on cognitive-behavioral principles, which behavioral intervention has the strongest empirical support as the first-line treatment for this presentation?",
@@ -184,7 +209,12 @@
       "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation",
+        "Cognitive-Behavioral Therapy for Suicide Prevention",
+        "Mindfulness-Based Interventions"
+      ]
     },
     {
       "stem": "A sex therapist introduces sensate focus exercises to a couple in which the male partner experiences erectile dysfunction attributed to performance anxiety. The therapist explains that intercourse is temporarily prohibited and partners are asked to focus exclusively on physical sensation during non-genital touch. Which theoretical construct most directly provides the basis for this intervention?",
@@ -205,7 +235,12 @@
       "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 2
+      "inspirationIndex": 2,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation",
+        "Cognitive-Behavioral Therapy for Suicide Prevention",
+        "Rational Emotive Behavior Therapy (REBT): Ellis's Approach"
+      ]
     },
     {
       "stem": "During a cognitive therapy session, a client who recently received mostly positive performance feedback at work states, 'My supervisor included one critical comment in my evaluation, which proves I'm completely incompetent.' According to Beck's model, this statement most clearly illustrates which cognitive distortion?",
@@ -226,7 +261,10 @@
       "lessonExcerpt": "Selective Abstraction: Focusing on one negative detail while ignoring everything else. Receiving 95% positive feedback and only thinking about the 5% criticism.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 8
+      "inspirationIndex": 8,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation"
+      ]
     },
     {
       "stem": "Meichenbaum's self-instruction training was originally designed to address deficits in the verbal mediation of behavior and has demonstrated the greatest empirical support when applied to which clinical population?",
@@ -247,7 +285,12 @@
       "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 9
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Rational Emotive Behavior Therapy (REBT): Ellis's Approach",
+        "Self-Instructional Training: Teaching Self-Talk",
+        "Cognitive-Behavioral Therapy for Suicide Prevention"
+      ]
     },
     {
       "stem": "A psychologist is treating a client with obsessive-compulsive disorder who engages in elaborate hand-washing rituals after touching doorknobs. Which treatment approach has the strongest evidence base for this condition, and what is its primary mechanism of action?",
@@ -268,7 +311,10 @@
       "lessonExcerpt": "Exposure with Response Prevention | Extinction | Anxiety disorders, OCD, phobias | Real or imagined exposure without avoidance",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 1
+      "inspirationIndex": 1,
+      "relatedSections": [
+        "Stress Inoculation Training: Building Resilience"
+      ]
     },
     {
       "stem": "According to Beck’s cognitive theory, which of the following best describes cognitive schemas?",
@@ -286,7 +332,12 @@
       "quality_comment": "The question clearly targets a key CBT construct with distractors that reflect related but distinct concepts, enhancing test-taker discrimination.",
       "lessonExcerpt": "These are deep, enduring beliefs we develop in childhood based on our experiences.",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation",
+        "Cognitive-Behavioral Therapy for Suicide Prevention",
+        "Mindfulness-Based Interventions"
+      ]
     },
     {
       "stem": "Which cognitive distortion involves drawing negative conclusions without any evidence to support them?",
@@ -304,7 +355,12 @@
       "quality_comment": "This question uses well-known distortions with clear definitions, making it appropriate for straightforward knowledge assessment.",
       "lessonExcerpt": "| Arbitrary Inference | Drawing negative conclusions without evidence | \"My boss didn't smile at me this morning, so I'm probably getting fired\" |",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cognitive-Behavioral Therapy for Suicide Prevention",
+        "Beck's Cognitive Therapy: The Foundation",
+        "Mindfulness-Based Interventions"
+      ]
     },
     {
       "stem": "In Beck's CBT, what is the purpose of the Dysfunctional Thought Record (DTR)?",
@@ -322,7 +378,12 @@
       "quality_comment": "The question has a clear stem and plausible but incorrect options, effectively distinguishing understanding of CBT tools.",
       "lessonExcerpt": "In therapy, clients often use a Dysfunctional Thought Record (DTR) to track these thoughts. The DTR captures: The situation that triggered the emotion, The automatic thought that followed, The emotion and its intensity (rated 0-100), An alternative, more balanced thought",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation",
+        "Rational Emotive Behavior Therapy (REBT): Ellis's Approach",
+        "Cognitive-Behavioral Therapy for Suicide Prevention"
+      ]
     },
     {
       "stem": "Ellis’s Rational Emotive Behavior Therapy (REBT) conceptualizes psychological disturbance primarily as the result of:",
@@ -340,7 +401,12 @@
       "quality_comment": "Distractors include closely related CBT concepts, requiring nuanced understanding of REBT's unique emphasis on irrational beliefs.",
       "lessonExcerpt": "Notice the key difference from regular worry: irrational beliefs contain absolute demands expressed as \"must,\" \"should,\" \"have to,\" or \"ought.\" These inflexible demands create unnecessary suffering.",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Rational Emotive Behavior Therapy (REBT): Ellis's Approach",
+        "Beck's Cognitive Therapy: The Foundation",
+        "Stress Inoculation Training: Building Resilience"
+      ]
     },
     {
       "stem": "What is the main focus of Meichenbaum’s Stress Inoculation Training (SIT)?",
@@ -358,7 +424,12 @@
       "quality_comment": "The question accurately targets SIT's features with plausible distractors drawn from related CBT principles.",
       "lessonExcerpt": "Also developed by Meichenbaum, stress inoculation training prepares people to handle stress better. Not just current stressors, but future ones too.",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Stress Inoculation Training: Building Resilience",
+        "Self-Instructional Training: Teaching Self-Talk",
+        "Cognitive-Behavioral Therapy for Suicide Prevention"
+      ]
     },
     {
       "stem": "In Acceptance and Commitment Therapy (ACT), what is the process of 'cognitive defusion' designed to accomplish?",
@@ -376,7 +447,10 @@
       "quality_comment": "Distractors reflect plausible misunderstandings of ACT processes, encouraging precise knowledge of its therapeutic components.",
       "lessonExcerpt": "| Cognitive Defusion | Cognitive fusion | Creating distance from thoughts; seeing thoughts as just thoughts, not reality |",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Acceptance and Commitment Therapy (ACT): The Third Wave"
+      ]
     },
     {
       "stem": "Which of the following distinguishes 'clean pain' from 'dirty pain' in Acceptance and Commitment Therapy?",
@@ -394,7 +468,10 @@
       "quality_comment": "The question probes subtle conceptual distinctions in ACT, with distractors designed to mislead those unfamiliar with this model.",
       "lessonExcerpt": "**Clean pain** is the unavoidable discomfort that's part of being human. **Dirty pain** is the additional suffering we create by struggling against clean pain.",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Acceptance and Commitment Therapy (ACT): The Third Wave"
+      ]
     },
     {
       "stem": "Which intervention is an essential and empirically supported component of CBT for suicide prevention used across various client populations?",
@@ -412,7 +489,10 @@
       "quality_comment": "Distractors are credible therapeutic techniques, but only safety planning has consistent empirical backing in this context, making the question clinically relevant.",
       "lessonExcerpt": "Safety Planning Intervention (SPI): This six-step approach is essential to know for the EPPP. It starts with internal strategies and moves to external support when needed: 1. Recognize warning signs of an impending suicidal crisis 2. Use internal coping strategies",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Cognitive-Behavioral Therapy for Suicide Prevention"
+      ]
     },
     {
       "stem": "Self-instructional training (Meichenbaum) aims to improve children's impulsivity mainly by teaching them to:",
@@ -430,7 +510,11 @@
       "quality_comment": "The question offers concise but distinct options that require knowledge of the sequential stages in self-instructional training.",
       "lessonExcerpt": "Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations. The idea is to teach people to guide their own behavior through internal speech.",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Self-Instructional Training: Teaching Self-Talk",
+        "Rational Emotive Behavior Therapy (REBT): Ellis's Approach"
+      ]
     },
     {
       "stem": "Mindfulness-Based Cognitive Therapy (MBCT) primarily seeks to help clients:",
@@ -448,7 +532,12 @@
       "quality_comment": "Distractors describe plausible but inaccurate mechanisms, requiring an understanding of MBCT’s unique therapeutic goals.",
       "lessonExcerpt": "The goal is to help clients become aware of distressing thoughts and feelings and learn to \"de-center\" from them. Observe them without getting caught up in them.",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Mindfulness-Based Interventions",
+        "Acceptance and Commitment Therapy (ACT): The Third Wave",
+        "Cognitive-Behavioral Therapy for Suicide Prevention"
+      ]
     },
     {
       "stem": "Which core process in Acceptance and Commitment Therapy (ACT) counters attempts to alter or avoid unpleasant private experiences by promoting an open and accepting attitude toward them?",
@@ -466,7 +555,10 @@
       "quality_comment": "Distractors are ACT-related but conceptually distinct, requiring examinees to differentiate among nuanced therapeutic targets.",
       "lessonExcerpt": "| Experiential Acceptance | Experiential avoidance | Embracing difficult private experiences without trying to change or avoid them |",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Acceptance and Commitment Therapy (ACT): The Third Wave"
+      ]
     },
     {
       "stem": "In cognitive-behavioral therapy, what role do cognitive schemas play in influencing a person's emotional responses?",
@@ -489,7 +581,11 @@
       ],
       "lessonExcerpt": "These are deep, enduring beliefs we develop in childhood based on our experiences. You're not always aware of them, but they influence everything.",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation",
+        "Cognitive-Behavioral Therapy for Suicide Prevention"
+      ]
     },
     {
       "stem": "Which of the following statements best illustrates the impact of cognitive schemas on an individual's perception of reality in cognitive-behavioral therapy?",
@@ -512,7 +608,12 @@
       ],
       "lessonExcerpt": "Someone with social anxiety might have schemas centered on being judged or humiliated, while someone with panic disorder might have schemas about physical sensations being dangerous.",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation",
+        "Cognitive-Behavioral Therapy for Suicide Prevention",
+        "Mindfulness-Based Interventions"
+      ]
     },
     {
       "stem": "What is the main focus of Cognitive Behavioral Therapy (CBT) in treating anxiety disorders?",
@@ -535,7 +636,11 @@
       ],
       "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
       "suggestedLesson": "6-cbt",
-      "needsReview": false
+      "needsReview": false,
+      "relatedSections": [
+        "Beck's Cognitive Therapy: The Foundation",
+        "Cognitive-Behavioral Therapy for Suicide Prevention"
+      ]
     },
     {
       "stem": "Which of the following best describes self-mutilation as a coping mechanism in trauma survivors?",
@@ -556,7 +661,8 @@
       "lessonExcerpt": "One of the most elegant ways to assess construct validity is the multitrait-multimethod matrix, developed by Campbell and Fiske.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 21
+      "inspirationIndex": 21,
+      "relatedSections": null
     }
   ]
 }
