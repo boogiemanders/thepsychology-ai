@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
           Privacy Policy
         </h1>
         <p className="mt-3 text-sm text-zinc-400 dark:text-zinc-500">
-          Last updated April 29, 2026
+          Last updated May 14, 2026
         </p>
       </header>
 
@@ -87,12 +87,15 @@ export default function PrivacyPolicyPage() {
             How long data sticks around
           </h2>
           <p>
-            Captured intakes live in Chrome session and local storage until
-            you transfer them or delete them yourself.
+            Captured intakes live in Chrome local storage and auto-delete 24
+            hours after capture. A background timer runs hourly to clear
+            anything past that window. You can also clear captured intakes
+            yourself from the extension popup at any time.
           </p>
           <p className="mt-3">
-            Settings stay in Chrome local storage until you remove the
-            extension or clear them manually.
+            Settings (provider name, locations, CPT codes, VOB recipients,
+            signature block) stay in Chrome local storage until you remove
+            the extension or clear them manually.
           </p>
         </section>
 
