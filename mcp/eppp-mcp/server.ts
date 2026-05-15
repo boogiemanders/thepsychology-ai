@@ -335,28 +335,29 @@ async function handle(name: string, args: Record<string, any>): Promise<any> {
 
       const [signups, paid] = await Promise.all([
         sbGet(`users?created_at=gte.${startIso}&select=created_at&order=created_at.asc&limit=20000`).catch(() => []),
-        sbGet(`stripe_webhook_log?event_type=eq.checkout.session.completed&received_at=gte.${startIso}&select=received_at,customer_id&order=received_at.asc&limit=20000`).catch(() => []),
+        sbGet(`users?subscription_tier=eq.pro&subscription_started_at=gte.${startIso}&select=subscription_started_at&order=subscription_started_at.asc&limit=20000`).catch(() => []),
       ]);
 
       const signupCounts = new Map<string, number>();
-      const paidByBucket = new Map<string, Set<string>>();
+      const paidCounts = new Map<string, number>();
       for (const b of buckets) {
         signupCounts.set(b, 0);
-        paidByBucket.set(b, new Set());
+        paidCounts.set(b, 0);
       }
       for (const row of signups) {
         const k = bucketKey(new Date(row.created_at));
         if (signupCounts.has(k)) signupCounts.set(k, (signupCounts.get(k) ?? 0) + 1);
       }
       for (const row of paid) {
-        const k = bucketKey(new Date(row.received_at));
-        if (paidByBucket.has(k) && row.customer_id) paidByBucket.get(k)!.add(row.customer_id);
+        if (!row.subscription_started_at) continue;
+        const k = bucketKey(new Date(row.subscription_started_at));
+        if (paidCounts.has(k)) paidCounts.set(k, (paidCounts.get(k) ?? 0) + 1);
       }
 
       const series = buckets.map((b) => ({
         bucket: b,
         new_users: signupCounts.get(b) ?? 0,
-        new_paid: paidByBucket.get(b)?.size ?? 0,
+        new_paid: paidCounts.get(b) ?? 0,
       }));
 
       const maxVal = Math.max(1, ...series.flatMap((s) => [s.new_users, s.new_paid]));
@@ -373,7 +374,7 @@ async function handle(name: string, args: Record<string, any>): Promise<any> {
       lines.push("NEW USERS (signups)");
       for (const s of series) lines.push(`  ${s.bucket.padEnd(10)}  ${String(s.new_users).padStart(4)}  ${bar(s.new_users)}`);
       lines.push("");
-      lines.push("NEW PAID (Stripe checkout.session.completed, distinct customers)");
+      lines.push("NEW PAID (users.subscription_tier='pro', by subscription_started_at)");
       for (const s of series) lines.push(`  ${s.bucket.padEnd(10)}  ${String(s.new_paid).padStart(4)}  ${bar(s.new_paid)}`);
       lines.push("");
       lines.push(`TOTALS — ${totalUsers} signups, ${totalPaid} paid (${convPct}% conversion)`);
