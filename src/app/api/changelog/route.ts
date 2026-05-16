@@ -52,6 +52,8 @@ const EXCLUDED_CHANGELOG_KEYWORDS = [
   'topic-content-v3', 'topic-content-v4',
   // Marketing/testimonials
   'testimonial',
+  // Internal compensation / employment agreement changes
+  'didactic', 'licensed agreement', 'agreement v2', '90791', '90837',
 ]
 
 // Hide brand/vendor names that should not appear in the public-facing changelog.
