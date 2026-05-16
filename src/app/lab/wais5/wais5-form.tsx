@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   SUBTESTS,
   PRIMARY_INDEXES,
@@ -122,6 +122,23 @@ export default function Wais5Form() {
   const set = useCallback((name: string, value: string) => {
     setData(prev => ({ ...prev, [name]: value }))
   }, [])
+
+  // Split a scripted line on (parenthetical) stage directions. Blue brand color
+  // for read-aloud, muted italic for the stage notes (mirrors the WAIS-5 manual).
+  function renderScriptedInstruction(text: string) {
+    const parts = text.split(/(\([^)]*\))/g).filter(Boolean)
+    return (
+      <>
+        {parts.map((seg, i) =>
+          seg.startsWith('(') && seg.endsWith(')') ? (
+            <span key={i} className="italic text-zinc-500 dark:text-zinc-400">{seg}</span>
+          ) : (
+            <span key={i} className="font-semibold text-[#4EBFD4]">{seg}</span>
+          )
+        )}
+      </>
+    )
+  }
 
   const showToast = (msg: string) => {
     setToast(msg)
@@ -645,7 +662,17 @@ export default function Wais5Form() {
     </table>
   )
 
-  const renderBlockDesign = (st: Subtest) => (
+  const renderBlockDesign = (st: Subtest) => {
+    const subtestScripts = SCRIPTS[st.id]
+    const groups = SUBTEST_INTROS[st.id]?.itemGroups || []
+    // Map first-item key for each group → group, so we can inject the script row
+    // right before that item in the table body.
+    const groupAt: Record<string, typeof groups[number]> = {}
+    for (const g of groups) {
+      const m = g.label.match(/(\d+)/)
+      if (m) groupAt[m[1]] = g
+    }
+    return (
     <>
       <table className="w-full border-collapse text-[13px]">
         <thead>
@@ -659,15 +686,64 @@ export default function Wais5Form() {
         <tbody>
           {(st.items || []).map(it => {
             const name = `${st.id}-${it.k}`
+            const script = subtestScripts?.[it.k]
+            const group = groupAt[it.k]
             const opts = it.validScores
               ? it.validScores
               : it.scoreMax === 2 ? [0, 1, 2]
               : it.scoreMax === 4 ? [0, 1, 2, 3, 4]
               : [0, 1, 2, 3, 4, 5, 6, 7]
             return (
-              <tr key={it.k} className="border-b border-slate-200 dark:border-zinc-800 align-top">
+              <Fragment key={it.k}>
+                {group ? (
+                  <tr>
+                    <td colSpan={4} className="px-2 pt-4 pb-2">
+                      <div className="rounded border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-[#4EBFD4] p-3">
+                        <p className="mb-2 text-[11px] font-mono uppercase tracking-[0.14em] text-zinc-700 dark:text-zinc-300">
+                          {group.label}
+                        </p>
+                        {group.single ? (
+                          <p className="whitespace-pre-line text-[13px] leading-snug">
+                            {renderScriptedInstruction(group.single)}
+                          </p>
+                        ) : null}
+                        {group.trial1 || group.trial2 ? (
+                          <div className="space-y-2">
+                            {group.trial1 ? (
+                              <div>
+                                <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#4EBFD4]">Trial 1</p>
+                                <p className="whitespace-pre-line text-[13px] leading-snug">
+                                  {renderScriptedInstruction(group.trial1)}
+                                </p>
+                              </div>
+                            ) : null}
+                            {group.trial2 ? (
+                              <div>
+                                <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#4EBFD4]">Trial 2</p>
+                                <p className="whitespace-pre-line text-[13px] leading-snug">
+                                  {renderScriptedInstruction(group.trial2)}
+                                </p>
+                              </div>
+                            ) : null}
+                          </div>
+                        ) : null}
+                      </div>
+                    </td>
+                  </tr>
+                ) : null}
+                <tr className="border-b border-slate-200 dark:border-zinc-800 align-top">
                 <td className="w-12 px-2 py-1 font-semibold text-slate-500 dark:text-zinc-400">{tagBadge(it.tag ?? null)}{it.k}.</td>
-                <td className="w-32 px-2 py-1 text-[11px] text-slate-500 dark:text-zinc-400">{it.blocks} blocks · {it.t}</td>
+                <td className="w-36 px-2 py-1 text-[11px] text-slate-500 dark:text-zinc-400">
+                  <div>{it.blocks} blocks · {it.t}</div>
+                  {script?.stim && stimUrls[script.stim] ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={stimUrls[script.stim]}
+                      alt=""
+                      className="mt-1 w-28 h-auto rounded border border-zinc-200 dark:border-zinc-800"
+                    />
+                  ) : null}
+                </td>
                 <td className="px-2 py-1">
                   {it.trials ? (
                     <>
@@ -712,6 +788,7 @@ export default function Wais5Form() {
                   </div>
                 </td>
               </tr>
+              </Fragment>
             )
           })}
         </tbody>
@@ -727,7 +804,8 @@ export default function Wais5Form() {
         </div>
       ) : null}
     </>
-  )
+    )
+  }
 
   const renderRunDigits = (st: Subtest) => (
     <>
@@ -861,16 +939,31 @@ export default function Wais5Form() {
         <button type="button" onClick={handleClear} className="rounded border border-[#E7437D] bg-[#E7437D] px-3 py-1 text-[12px] text-white hover:opacity-90">New</button>
       </div>
 
-      {/* jump nav */}
-      <nav className="flex flex-wrap gap-1 rounded-lg border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-2 text-[11px] print:hidden">
-        {SUBTESTS.map(st => (
-          <a key={st.id} href={`#st-${st.id}`} className="rounded border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100">
-            {st.n}. {st.name}
-          </a>
-        ))}
-        <a href="#bx" className="rounded border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100">Behavioral</a>
-        <a href="#summary" className="rounded border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100">Summary</a>
-        <a href="#analysis" className="rounded border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100">Analysis</a>
+      {/* jump nav — fixed on left, hover/focus expands */}
+      <nav className="group fixed left-2 top-1/2 z-30 -translate-y-1/2 print:hidden">
+        <button
+          type="button"
+          tabIndex={0}
+          className="rounded border border-zinc-300 dark:border-zinc-700 bg-white/95 dark:bg-zinc-900/95 backdrop-blur px-2 py-1 text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-700 dark:text-zinc-300 shadow-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:outline-none focus-visible:ring-1 focus-visible:ring-zinc-400"
+          aria-label="Jump to section"
+        >
+          Jump
+        </button>
+        <div className="invisible absolute left-full top-1/2 ml-1 w-64 max-h-[calc(100vh-2rem)] -translate-x-1 -translate-y-1/2 overflow-y-auto rounded border border-zinc-200 dark:border-zinc-800 bg-white/98 dark:bg-zinc-900/98 backdrop-blur p-2 opacity-0 shadow-lg transition-all duration-150 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-x-0 group-focus-within:opacity-100">
+          <p className="px-1 pb-1 text-[9px] font-mono uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500">Jump to</p>
+          <div className="flex flex-col">
+            {SUBTESTS.map(st => (
+              <a key={st.id} href={`#st-${st.id}`} className="rounded px-2 py-1 text-[11px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100">
+                <span className="inline-block w-5 text-zinc-400 dark:text-zinc-500">{st.n}.</span>
+                {st.name}
+              </a>
+            ))}
+            <div className="my-1 border-t border-zinc-100 dark:border-zinc-800" />
+            <a href="#bx" className="rounded px-2 py-1 text-[11px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100">Behavioral</a>
+            <a href="#summary" className="rounded px-2 py-1 text-[11px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100">Summary</a>
+            <a href="#analysis" className="rounded px-2 py-1 text-[11px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100">Analysis</a>
+          </div>
+        </div>
       </nav>
 
       {/* identifying info */}
@@ -953,8 +1046,8 @@ export default function Wais5Form() {
               <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em] text-[#4EBFD4]">
                 Read aloud · Instructions
               </p>
-              <p className="text-[14px] leading-snug text-zinc-800 dark:text-zinc-200">
-                &ldquo;{intro.instruction}&rdquo;
+              <p className="text-[14px] leading-snug">
+                {renderScriptedInstruction(intro.instruction)}
               </p>
             </div>
           ) : null}
@@ -981,6 +1074,18 @@ export default function Wais5Form() {
                 ) : null}
               </div>
             </div>
+          ) : null}
+          {intro?.notes && intro.notes.length > 0 ? (
+            <details className="mb-4 print:hidden">
+              <summary className="cursor-pointer text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
+                Examiner notes ({intro.notes.length})
+              </summary>
+              <ul className="mt-2 space-y-1 pl-4 text-[12px] leading-relaxed text-zinc-600 dark:text-zinc-400 list-disc">
+                {intro.notes.map((n, i) => (
+                  <li key={i}>{n}</li>
+                ))}
+              </ul>
+            </details>
           ) : null}
           {renderSubtest(st)}
           {/* extras for twotrial */}

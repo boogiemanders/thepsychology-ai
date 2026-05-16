@@ -14,7 +14,8 @@ export default function NavbarAutoHide() {
     let hideTimer: number | null = null
 
     const hide = () => {
-      navbar.style.transition = 'opacity 0.4s ease'
+      hideTimer = null
+      navbar.style.transition = 'opacity 0.2s ease'
       navbar.style.opacity = '0'
       navbar.style.pointerEvents = 'none'
     }
@@ -24,14 +25,14 @@ export default function NavbarAutoHide() {
         window.clearTimeout(hideTimer)
         hideTimer = null
       }
-      navbar.style.transition = 'opacity 0.4s ease'
+      navbar.style.transition = 'opacity 0.15s ease'
       navbar.style.opacity = '1'
       navbar.style.pointerEvents = 'auto'
     }
 
-    const scheduleHide = () => {
+    const scheduleHide = (delay = 600) => {
       if (hideTimer) window.clearTimeout(hideTimer)
-      hideTimer = window.setTimeout(hide, 1000)
+      hideTimer = window.setTimeout(hide, delay)
     }
 
     // Hot zone at the very top of the viewport - moving the mouse here reveals the nav.
@@ -44,10 +45,16 @@ export default function NavbarAutoHide() {
     navbar.addEventListener('mouseleave', scheduleHide)
     hotZone.addEventListener('mouseleave', scheduleHide)
 
-    // Show whenever scrolled to the top; schedule hide once scrolled away.
+    // Show at the top; once scrolled away, arm a single timer (don't reset on every scroll event)
+    // so the nav fades even while the user is still scrolling.
     const onScroll = () => {
-      if (window.scrollY <= 4) show()
-      else scheduleHide()
+      if (window.scrollY <= 4) {
+        show()
+        return
+      }
+      if (hideTimer == null && navbar.style.opacity !== '0') {
+        hideTimer = window.setTimeout(hide, 250)
+      }
     }
     window.addEventListener('scroll', onScroll, { passive: true })
 

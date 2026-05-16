@@ -20,10 +20,21 @@ export type SampleScript = {
   onIncorrect?: string
 }
 
+/** A grouped admin script — e.g. Block Design "Item 1" or "Items 5-9". Each
+ *  group is either a single line or a Trial 1 / Trial 2 pair. Multi-line text
+ *  uses real newlines; parentheticals in the text render as muted stage notes. */
+export type ItemGroupScript = {
+  label: string
+  trial1?: string
+  trial2?: string
+  single?: string
+}
+
 export type SubtestIntro = {
   sample?: SampleScript
   instruction?: string
   notes?: string[]
+  itemGroups?: ItemGroupScript[]
 }
 
 export const GENERAL_TEST_INTRO =
@@ -31,28 +42,273 @@ export const GENERAL_TEST_INTRO =
 
 export const SUBTEST_INTROS: Record<string, SubtestIntro> = {
   similarities: {
+    instruction: "I'm going to say two words that are alike in some way. Tell me how they are alike.",
     sample: {
       prompt: 'In what way are TWO and SEVEN alike? How are they the same?',
       onCorrect: "That's right.",
       onIncorrect: "That's not quite right. Two and seven are both numbers.",
     },
-    notes: ['Score 2, 1, or 0 points. Record responses verbatim.'],
+    notes: [
+      'Score 2, 1, or 0 points. Record responses verbatim.',
+      'Reverse: imperfect score on first two items given. Discontinue: 3 consecutive 0s.',
+    ],
   },
+
+  blockdesign: {
+    instruction: 'Place two blocks in front of the examinee. Pick up one block and say, See these blocks? They are all alike. On some sides, they are all red (show red side); on some sides, all white (show white side); and on some sides, half red and half white (show red-and-white side).',
+    notes: [
+      'Items 1-4 have two trials each; Items 5-14 have one trial. Time limits vary by item — accurate timing is essential.',
+      'Designs on the record form are from the examiner\'s perspective (upside down). Shaded areas = red portions.',
+      'If hesitating: "Work as fast as you can, and tell me when you\'re done." If attempting to copy block sides: "Only the tops of the blocks need to be the same."',
+      'Stop timing when the design is complete OR the examinee indicates they\'re done OR time expires.',
+      'Watch construction carefully — needed for BDn, BDp, BDde, BDre process scores.',
+    ],
+    itemGroups: [
+      {
+        label: 'Item 1',
+        trial1: 'Say, Watch me make my blocks look just like this (point to pictured design). Use two blocks to slowly assemble the model. Leave the model intact.\nSay, Now you make one like this (point to pictured design). Work as fast as you can and tell me when you\'re done. I\'ll tell you when time is up.\nEnsure the examinee has two more scrambled blocks and say, Go ahead. Begin timing.',
+        trial2: 'Leave the model intact and say, Watch me again. Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, Now you try it again and make one like this (point to pictured design).\nSay, Go ahead. Begin timing.',
+      },
+      {
+        label: 'Items 2-3',
+        trial1: 'Say, Watch me make my blocks look just like this (point to pictured design). Use four blocks to slowly assemble the model. Leave the model intact.\nSay, Now you make one like this (point to pictured design). Work as fast as you can.\nEnsure the examinee has four more scrambled blocks and say, Go ahead. Begin timing.',
+        trial2: 'Leave the model intact and say, Watch me again. Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, Now you try it again and make one like this (point to pictured design).\nSay, Go ahead. Begin timing.',
+      },
+      {
+        label: 'Item 4',
+        trial1: 'Say, Watch me make my blocks look just like this (point to pictured design). Use four blocks to slowly assemble the model. Leave the model intact.\nSay, Now you make one like this (point to pictured design). Work as fast as you can and tell me when you\'re done. I\'ll tell you when time is up.\nEnsure the examinee has four more scrambled blocks and say, Go ahead. Begin timing.',
+        trial2: 'Leave the model intact and say, Watch me again. Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, Now you try it again and make one like this (point to pictured design).\nSay, Go ahead. Begin timing.',
+      },
+      {
+        label: 'Items 5-9',
+        single: 'Ensure the examinee has only four blocks. As you scramble the blocks, say, Now make one like this (point to pictured design). Work as fast as you can. Go ahead. Begin timing.',
+      },
+      {
+        label: 'Items 10-14',
+        single: 'Ensure the examinee has nine blocks. As you scramble the blocks, say, Now make one like this (point to pictured design), using all nine blocks. Work as fast as you can. Go ahead. Begin timing.',
+      },
+    ],
+  },
+
+  matrix: {
+    instruction: "Look at the picture and pick the option that best completes it.",
+    sample: {
+      prompt: 'Which one here finishes the picture? (point across response options, then to the question mark)',
+      onCorrect: "That's right.",
+      onIncorrect: "That's not quite right. The yellow circle is the only one that works going across and down. (Sample A) | The little circle should come next in order. (Sample B)",
+    },
+    notes: [
+      'Two item types: matrix (2x2, 3x3) and serial order (1x6 row). Samples A and B introduce each type.',
+      'If asked whether answer works across or down: "The answer should work both across the picture and down."',
+      'Score 1 if correct, 0 if incorrect / DK / no response within ~30 sec.',
+    ],
+  },
+
+  digitsforward: {
+    instruction: "Now I'm going to say some numbers, and when I stop, you should say them back to me in the same order. Just say what I say. Listen carefully — I can only say them one time.",
+    notes: [
+      'Read each trial at 1 digit per second. Drop voice inflection slightly on the last digit.',
+      'Administer BOTH trials of every item, even if Trial 1 is correct.',
+      'Do not repeat any trial. If asked to repeat: "I can only say them one time. Just take your best guess."',
+      'If responds before you finish: present the rest, score the response, then "Wait until I stop before you start."',
+      'Discontinue after scores of 0 on BOTH trials of an item.',
+    ],
+  },
+
+  digitseq: {
+    instruction: "Now I'm going to say some numbers, and when I stop, you should say the numbers in order, from smallest to largest.",
+    sample: {
+      prompt: 'If I say 2 – 3 – 1, what would you say?  (Trial 2: "Let\'s try another: 5 – 2 – 2.")',
+      onCorrect: "That's right.  (Trial 2: That's right. You had to say 2 twice.)",
+      onIncorrect: 'That\'s not quite right. To say them in order from smallest to largest, you should say 1 – 2 – 3.  (Trial 2 adds: "You may have to say the same number more than once.")',
+    },
+    notes: [
+      'Read each trial at 1 digit per second. Drop voice inflection on the last digit.',
+      'Same number may repeat in a trial. If asked: "You may have to say the same number more than once."',
+      'Do not repeat any trial. Discontinue after 0 on both trials of an item.',
+    ],
+  },
+
+  coding: {
+    instruction: "Each number 1-9 has its own special mark. Copy the matching mark below each number as fast as you can without making mistakes. Don't skip any.",
+    notes: [
+      'Time limit: 120 seconds. Use the demonstration items, then the sample items, then start the test items.',
+      'No eraser. If they ask about mistakes: "That\'s OK. Cross it out, write your new answer, and keep going."',
+      'If skipping or reversing: "Do them in order. Don\'t skip any." If starting early: "Wait until I say \'Go\' to start."',
+      'Score with the Coding Scoring Template. 1 point per correctly drawn symbol within the time limit.',
+    ],
+  },
+
   vocab: {
     instruction: 'I am going to say some words. Listen carefully and tell me what each word means.',
     notes: [
       'Picture Items (1-3): Point to the picture and say, "What is this?" Score 0 or 1.',
       'Verbal Items (4-24): Read the verbal-items instruction above, then point to each word on the stimulus page. Score 0, 1, or 2.',
+      'Reverse: imperfect on first two given. Discontinue: 3 consecutive 0s.',
     ],
   },
+
+  figw: {
+    instruction: "Look at the scale. Pick the option that keeps the scale balanced.",
+    sample: {
+      prompt: 'This scale has one red circle. Which one of these (point across response options) goes here (point to question mark) because it weighs the same?  (Sample A)',
+      onCorrect: "That's right.",
+      onIncorrect: "That's not quite right. (Then explain why the chosen option is wrong — color, shape, or quantity — and say) Try again.",
+    },
+    notes: [
+      'Time limit: 20 sec for Items 1-16; 30 sec for Items 17-28. A thick black line on the record form flags the change.',
+      'Item 20 has a required verbatim instruction (marked **) introducing 3-scale items.',
+      'No pencil or paper for the examinee. Finger-tracing on the table is fine.',
+      'Score: 1 pt (items 1-16) or 2 pts (items 17-28) for correct within time limit; 0 otherwise.',
+    ],
+  },
+
+  vpuzzles: {
+    instruction: "I'm going to show you a puzzle and some pieces. Pick three pieces that go together to make the puzzle. The pieces have to go next to each other — you can't stack one to cover up part of another.",
+    notes: [
+      'Time limit: 30 sec per item. Stop timing once 3 options are selected, DK, or time expires.',
+      'If asks about order: "You do not have to choose them in order." If picks fewer than 3: "Choose three pieces to make the puzzle."',
+      'If asks to flip face-down: "It can\'t be flipped face down." If asks to stack: "It can\'t be stacked to cover up any part of another piece."',
+      'If selects >3 or self-corrects unclearly: "Which three pieces did you mean?"',
+      'Score 1 if exactly the 3 correct pieces are chosen within time limit; 0 otherwise.',
+    ],
+  },
+
+  rundigits: {
+    instruction: "I'll read a long string of numbers. When I stop, repeat back only the LAST few numbers I said, in the same order.",
+    notes: [
+      'Read each item at 2 digits per second. Drop voice inflection on the last digit.',
+      'Use the Running Digits Scoring Template — aligned over the record form, helps score and apply the discontinue rule.',
+      'Recalibration items (after Item 5 and after Item 8) are not scored and don\'t count toward discontinue.',
+      'Do not repeat any item. If asked: "I can only say them one time. Just take your best guess."',
+      'Discontinue after 2 consecutive imperfect scores.',
+    ],
+  },
+
+  symsearch: {
+    instruction: "Look at the two target symbols. Then look at the search group. If one of the target symbols is in the search group, mark YES. If neither is, mark NO. Work as fast as you can without making mistakes.",
+    notes: [
+      'Time limit: 120 seconds. Use the demo items, then the sample items, then the test items.',
+      'Demo and sample items are on page 5 of the response booklet. Test items begin on page 6.',
+      'If marks oddly (not a slash): "Draw one line to make each mark." If marks a target: "Make your marks over here." (point across search group and NO box)',
+      'No eraser. If mistakes: "That\'s OK. Cross it out, mark your new answer, and keep going."',
+      'If reaches end of page: turn page for them and say "Keep working as fast as you can."',
+      'Score with the Symbol Search Scoring Key. Raw = Correct − Incorrect. Track set errors (SSse) and rotation errors (SSre) for process scores.',
+    ],
+  },
+
   info: {
-    notes: ['Say each question word-for-word. Score 0 or 1.'],
+    instruction: "I'm going to ask you some questions. Try to answer each one.",
+    notes: [
+      'Say each question word-for-word. Score 0 or 1.',
+      'Reverse: imperfect on first two given. Discontinue: 3 consecutive 0s.',
+    ],
   },
-  comp: {
-    notes: ['Read each item exactly as written. Score 0, 1, or 2.'],
-  },
+
   arith: {
-    notes: ['Time limit: 30 seconds. Repetition allowed once.'],
+    instruction: "I'm going to read you some problems. Listen carefully. You can ask me to read a problem again, but only once.",
+    notes: [
+      'Time limit: 30 seconds per item. Repetition allowed ONCE per item.',
+      'Items 1-19 score 0/1. Items 20-22 score 0/1/2.',
+      'Reverse: imperfect on first two given. Discontinue: 3 consecutive 0s.',
+    ],
+  },
+
+  digitsback: {
+    instruction: "Now I'm going to say some numbers, and when I stop, you should say the numbers backward.",
+    sample: {
+      prompt: 'If I say 3 – 4, what would you say?  (Trial 2: "Let\'s try another: 5 – 1.")',
+      onCorrect: "That's right.",
+      onIncorrect: "That's not quite right. I said 3 – 4, so to say them backward, you should say 4 – 3.",
+    },
+    notes: [
+      'Read each trial at 1 digit per second. Drop voice on the last digit.',
+      'Administer both trials of every item. Do not repeat any trial.',
+      'If asked to repeat: "I can only say them one time. Just take your best guess."',
+      'Discontinue after 0 on both trials of an item.',
+    ],
+  },
+
+  symspan: {
+    instruction: "I will show you a page with symbols on it. Look carefully and remember the order. Then I will turn the page, and you will point to the symbols you saw in the same order you saw them.",
+    sample: {
+      prompt: 'Look carefully at the symbols and remember their order from left to right. (Allow 5 sec, then turn to the response page.) Now point to the two symbols I just showed you in the same order you saw them.',
+      onCorrect: "That's right. Let's do some more.",
+      onIncorrect: "That's not quite right. This was the first symbol and this was the second symbol. Let's try again.",
+    },
+    notes: [
+      'Expose each stimulus page for exactly 5 seconds. Accurate timing is essential.',
+      'Stim pages exposed ONE TIME only (except sample, which can repeat until understood).',
+      'If asked for another exposure: "I can only show it one time. Just take your best guess."',
+      'Items 1-2: single symbol, recognize it. Items 3-23: multiple symbols, identify in correct order.',
+      'Discontinue after 3 consecutive imperfect scores.',
+    ],
+  },
+
+  nsq: {
+    instruction: 'Each box has one, two, three, or four squares. When I say "Go," name how many squares are in each box as fast as you can without making mistakes. Start at the first box, go in order, and don\'t skip any.',
+    notes: [
+      'Time limit: 75 seconds per item. Administer Sample, then Item 1, then Item 2.',
+      'If misnames 2 in a row in the same row: point to the second misnamed quantity and say "Keep going from here."',
+      'If skips a row or reverses: point to first box in the correct row and "Keep going from here."',
+      'If hesitates >5 sec on a single quantity: "Go on to the next one." If hesitates at end of row: "Go on to the next row."',
+      'Record each error with a slash mark. SC next to slash for self-corrections (do not count).',
+      'Total raw score = sum of completion times across both items. Track NSQe (errors).',
+    ],
+  },
+
+  comp: {
+    instruction: 'I\'m going to ask you some questions. Answer each one as well as you can.',
+    notes: [
+      'Read each item exactly as written. Score 0, 1, or 2.',
+      'Reverse: imperfect on first two given. Discontinue: 3 consecutive 0s.',
+    ],
+  },
+
+  setrel: {
+    instruction: "Look at the circles and the shapes inside them. Pick the option that goes in the missing spot.",
+    sample: {
+      prompt: 'These are all triangles (sweep finger around triangles in circle). Which one here (point across response options) goes here (point to question mark)?  (Item 1, used as teaching)',
+      onCorrect: "That's right.",
+      onIncorrect: "This triangle goes here. The others don't because they are not triangles.",
+    },
+    notes: [
+      'If needed, read and point to the words in the circles for the examinee.',
+      'If they say the correct answer isn\'t present: "Just pick the best one."',
+      'Items 1-4, 5, and 9 are teaching items.',
+      'Demo Items A-C are administered immediately before Item 5 for examinees who have not discontinued.',
+      'Items 1-22 score 0/1. Items 23-27 score 0/1/2. Discontinue: 3 consecutive imperfect scores.',
+    ],
+  },
+
+  spadd: {
+    instruction: "I'll show you two grids with colored circles. Look at each grid for a few seconds, then combine them in your mind and place chips on the response grid to show the result.",
+    notes: [
+      'Expose each stimulus page (Grid 1 and Grid 2) for exactly 5 seconds. Stim pages exposed ONE TIME only.',
+      'If reorienting: "Look at the grid so you can remember it." If asks for re-exposure: "I can only show it one time. Just take your best guess."',
+      'Ages 16-69: Demos A&B, Sample A, Sample B, then Item 6. Ages 70-90 (or suspected ID): Demos A&B, Sample A, then Item 1.',
+      'Use 3x3 response grid for Demos / Sample A / Items 1-5. Use 4x4 for Sample B / Items 6-23.',
+      'Items 1-11: blue + white chips only. Items 12-23: blue + white + red chips.',
+      'If they touch the grid before you record: ask them to wait. If chip placement is ambiguous: "Which one did you mean?"',
+      'Record correctly placed chips by CIRCLING the color letter (B/W). Record incorrectly placed by WRITING the letter (B/W/R). All chips must be correct with no extras for the response to be correct.',
+    ],
+  },
+
+  lns: {
+    instruction: "I'm going to say some numbers and letters, and when I stop, you should say the number first, then the letter. For example, if I say C – 1, you should say 1 – C.",
+    sample: {
+      prompt: 'Now you try. A – 4.  (Sample A — for Items 1-2)',
+      onCorrect: "That's right.",
+      onIncorrect: "That's not quite right. I said A – 4, so you should say 4 – A. Say the number, then the letter.",
+    },
+    notes: [
+      'Read each trial at 1 number/letter per second. Drop voice on the last element.',
+      'Demo A + Sample A teach Items 1-2 (one number + one letter, number first).',
+      'Demo B (3 elements, e.g. "2 – B – 1" → "1 – 2 – B") teaches Items 3-10. For these, recall numbers first in ascending order, THEN letters in alphabetical order.',
+      'Credit for Items 3-10 is awarded even if letters are recalled BEFORE numbers, as long as both sequences are individually correct.',
+      'Items 1-2 are teaching items. The digits 0 and letters O, I, L are excluded to avoid confusion.',
+      'Do not repeat any trial. If asked: "I can only say them one time. Just take your best guess."',
+    ],
   },
 }
 
@@ -549,6 +805,22 @@ const RAW = {
       },
       "corrective": null
     }
+  },
+  "blockdesign": {
+    "1":  { "prompt": "", "stim": "stim1/p005.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "2":  { "prompt": "", "stim": "stim1/p006.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "3":  { "prompt": "", "stim": "stim1/p007.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "4":  { "prompt": "", "stim": "stim1/p008.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "5":  { "prompt": "", "stim": "stim1/p009.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "6":  { "prompt": "", "stim": "stim1/p010.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "7":  { "prompt": "", "stim": "stim1/p011.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "8":  { "prompt": "", "stim": "stim1/p012.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "9":  { "prompt": "", "stim": "stim1/p013.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "10": { "prompt": "", "stim": "stim1/p014.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "11": { "prompt": "", "stim": "stim1/p015.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "12": { "prompt": "", "stim": "stim1/p016.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "13": { "prompt": "", "stim": "stim1/p017.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "14": { "prompt": "", "stim": "stim1/p018.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null }
   },
   "vocab": {
     "1": {
@@ -1364,13 +1636,29 @@ const RAW = {
       "corrective": null
     },
     "13": {
-      "prompt": "Arithmetic",
+      "prompt": "Who was Mahatma Gandhi?",
       "scoring": {
         "2": [],
-        "1": [],
-        "0": []
+        "1": [
+          "An Indian leader who promoted (nonviolent civil disobedience, peaceful resistance)",
+          "Indian (activist, civil rights leader, revolutionist, politician)",
+          "Indian (philosopher, leader)",
+          "Fasted for Indian freedom",
+          "(Fought for, Won) independence of India",
+          "(Peaceful, Antiwar) person from India; Indian pacifist",
+          "Spiritual leader in India; Indian holy man"
+        ],
+        "0": [
+          "Activist (Q)",
+          "Philosopher; Leader (Q)",
+          "From India; Indian (Q)",
+          "Indian prime minister; (Ruler, Head) of India",
+          "He (fasted, restricted his eating, didn't eat)",
+          "Holy man; Religious leader (Q)",
+          "Peace advocate (Q)"
+        ]
       },
-      "corrective": "I am going to read you some problems. Listen carefully. You can ask me to read"
+      "corrective": null
     },
     "14": {
       "prompt": "Name the move in ballet in which a dancer completes a full turn on one foot.",
@@ -1731,6 +2019,35 @@ const RAW = {
       },
       "corrective": "Money is used to pay for things you need and want."
     },
+    "5": {
+      "prompt": "Tell me some reasons why many foods need to be cooked.",
+      "scoring": {
+        "2": [
+          "Response reflecting at least two of the general concepts below.",
+          "GC: To destroy microorganisms / avoid illness / make safe to eat — To (kill, destroy) bacteria; Because of germs; So you don't get (sick, food poisoning); Prevent (disease, allergic reactions)",
+          "GC: To improve flavor or taste — (Improves, Releases, Brings out) the flavor; Makes them more (appetizing, palatable); Combines the flavors; Make them taste better",
+          "GC: To aid digestion — Eases digestion; Easier to (eat, consume, chew); Helps break down the food",
+          "GC: To improve nutritional value — More nutritious; Absorb the (vitamins, nutrients) better; Release the nutrients",
+          "GC: To improve texture / tenderize — Improves texture; Makes them softer; Tenderize it",
+          "GC: For culture-specific or traditional reasons — To conform to (custom, culture); Traditionally prepared that way"
+        ],
+        "1": [
+          "Response reflecting only one of the general concepts above."
+        ],
+        "0": [
+          "GC: Vague reference to health, rawness, or edibility / trivial reason",
+          "They're raw; Can't eat them raw (Q)",
+          "They're frozen (Q)",
+          "Prevent spoilage; Preserves them; Keeps them fresh (Q)",
+          "To mix them together",
+          "It's healthier (Q)",
+          "So they're edible; So you can eat them (Q)",
+          "So they're hot (Q)",
+          "Recipe tells you to"
+        ]
+      },
+      "corrective": null
+    },
     "6": {
       "prompt": "Why do people in some professions need a license to do their job?",
       "scoring": {
@@ -1931,6 +2248,81 @@ const RAW = {
           "To explore the unknown; It’s the final frontier (Q)",
           "To plan for the future (Q)",
           "It’s interesting; Exploration is exciting (Q)"
+        ]
+      },
+      "corrective": null
+    },
+    "8": {
+      "prompt": "Tell me some reasons why it's important for a country to have good relationships with other countries.",
+      "scoring": {
+        "2": [
+          "Response reflecting at least two of the general concepts below.",
+          "GC: To maintain alliances / keep peace / prevent war / for humanity's common good — To maintain alliances; To prevent war; For national security; To keep the peace; For world peace; For the common good",
+          "GC: To exchange cultural ideas, information, or customs — To learn about other cultures; To gain cultural awareness; Share information about each other's way of life",
+          "GC: To exchange assistance or supplies in times of crisis — For help in emergency; For help in pandemic / famine / flood / earthquake; For help when natural disasters hit",
+          "GC: To facilitate trade or commerce; share resources, technology, scientific info — To encourage trade; For financial help; To help each other economically; Exchange goods and services; Imports/exports; Share natural resources; Exchange technology; Share medical/scientific info"
+        ],
+        "1": [
+          "Response reflecting only one of the general concepts above."
+        ],
+        "0": [
+          "GC: Vague or trivial reason; restatement of the question",
+          "To help each other in hard times (Q)",
+          "To share (ideas, information) (Q)",
+          "We may need something in the future (Q)",
+          "We may need (oil, water, [names specific item]) (Q)",
+          "To help us (Q)",
+          "To permit (world travel, tourism, immigration) (Q)",
+          "Foreign relations are important; Countries need each other",
+          "To communicate better"
+        ]
+      },
+      "corrective": null
+    },
+    "9": {
+      "prompt": "Tell me some reasons why it's important to enjoy your job.",
+      "scoring": {
+        "2": [
+          "Response reflecting at least two of the general concepts below.",
+          "GC: To give meaning/purpose to your life, increase self-satisfaction, improve quality of life — Sense of purpose; Self-fulfillment; Sense of accomplishment; Quality of life",
+          "GC: To enhance or maintain emotional, physical, or social well-being — For your (emotional, physical, mental) health; Positive attitude; Reduce stress; Live longer; So you're not (depressed, frustrated, miserable)",
+          "GC: To improve work quality/productivity, longevity, or interactions at work — Perform better; Be more successful; Don't get bored; Get along with coworkers; More productive; More motivation; Stay at the job longer; Don't burn out"
+        ],
+        "1": [
+          "Response reflecting only one of the general concepts above."
+        ],
+        "0": [
+          "GC: Superficial reasons, reasons for working rather than enjoying, restatement",
+          "You spend a lot of time at work (Q)",
+          "So the day goes faster (Q)",
+          "Helps you get up in the morning (Q)",
+          "You have to work (Q)",
+          "So you (have fun with, like, don't hate) what you're doing (Q)",
+          "You'll get paid",
+          "You'll meet people"
+        ]
+      },
+      "corrective": null
+    },
+    "10": {
+      "prompt": "Tell me some reasons why some people think we should explore outer space.",
+      "scoring": {
+        "2": [
+          "Response reflecting at least two of the general concepts below.",
+          "GC: To locate more natural resources or places to live — Search for resources; Possible colonization; Earth is overcrowded; Another place to live",
+          "GC: To better understand Earth — How events in the universe affect Earth; Understand our planet's past/future; How our solar system affects our planet",
+          "GC: To advance or promote science or technology, research, new discoveries — Promote science; Research; New discoveries; Technological advancement; Learn about weather; Discover cures for diseases",
+          "GC: To search for other life or possible threats — To see if there's life out there; To determine alien life; To protect our planet from danger; Prevent meteors/asteroids from hitting Earth"
+        ],
+        "1": [
+          "Response reflecting only one of the general concepts above."
+        ],
+        "0": [
+          "GC: Vague or trivial reason for exploring space",
+          "It's interesting (Q)",
+          "To learn (Q)",
+          "To go somewhere new",
+          "Because it's there"
         ]
       },
       "corrective": null
@@ -2206,15 +2598,6 @@ const RAW = {
           "So they don’t add years to the sentence;",
           "So they aren’t in jail longer"
         ]
-      },
-      "corrective": null
-    },
-    "18": {
-      "prompt": "Set Relations",
-      "scoring": {
-        "2": [],
-        "1": [],
-        "0": []
       },
       "corrective": null
     }
