@@ -33,6 +33,14 @@ type GitHubCommit = {
   } | null
 }
 
+type GitHubCommitDetail = GitHubCommit & {
+  files?: Array<{ filename: string }>
+}
+
+// Only commits that modify files under one of these folders are shown in the
+// user-facing changelog. Path prefix match against each modified file.
+const EPPP_PATH_PREFIXES = ['EPPP/']
+
 const DEFAULT_REPO = 'boogiemanders/thepsychology-ai'
 const DAY_MS = 24 * 60 * 60 * 1000
 const CANONICAL_CHANGELOG_AUTHOR = 'Anders Chan, Psy.D.'
@@ -161,6 +169,35 @@ function isMergeCommit(title: string): boolean {
   return t.startsWith('merge ') || t.startsWith('merge:')
 }
 
+async function fetchCommitDetail(
+  repo: string,
+  sha: string,
+  token: string,
+): Promise<GitHubCommitDetail | null> {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${repo}/commits/${sha}`, {
+      headers: {
+        Accept: 'application/vnd.github+json',
+        ...(token ? { Authorization: `Bearer ${token}` } : null),
+      },
+      cache: 'no-store',
+    })
+    if (!res.ok) return null
+    return (await res.json()) as GitHubCommitDetail
+  } catch {
+    return null
+  }
+}
+
+function commitTouchesEppp(detail: GitHubCommitDetail | null): boolean {
+  const files = detail?.files
+  if (!files || files.length === 0) return false
+  return files.some((f) =>
+    typeof f.filename === 'string' &&
+    EPPP_PATH_PREFIXES.some((prefix) => f.filename.startsWith(prefix)),
+  )
+}
+
 function isUserRelevantEntry(entry: ApiChangelogEntry): boolean {
   const text = `${entry.title} ${entry.body || ''}`
   const normalizedText = text.toLowerCase()
@@ -220,21 +257,36 @@ export async function GET(request: NextRequest) {
     }
 
     const commits = (await response.json()) as GitHubCommit[]
-    const entries: ApiChangelogEntry[] = (Array.isArray(commits) ? commits : [])
+
+    // Step 1: cheap exclusions first (merges, message-based filters) so we
+    // don't fan out a detail fetch for commits we already know will be dropped.
+    const prelim = (Array.isArray(commits) ? commits : [])
       .map((commit) => {
         const { title, body } = normalizeCommitMessage(commit.commit?.message || '')
         const author = normalizeChangelogAuthor(commit.author?.login || commit.commit?.author?.name || null)
-        return {
+        const entry: ApiChangelogEntry = {
           id: commit.sha,
           date: commit.commit?.author?.date || new Date().toISOString(),
           title,
           body,
-          // Intentionally omit url to prevent exposing GitHub repo to users
           author,
         }
+        return { commit, entry }
       })
-      .filter((entry) => (includeMerges ? true : !isMergeCommit(entry.title)))
-      .filter(isUserRelevantEntry)
+      .filter(({ entry }) => (includeMerges ? true : !isMergeCommit(entry.title)))
+      .filter(({ entry }) => isUserRelevantEntry(entry))
+
+    // Step 2: fetch file lists in parallel and keep only EPPP-touching commits.
+    const detailed = await Promise.all(
+      prelim.map(async ({ commit, entry }) => ({
+        entry,
+        detail: await fetchCommitDetail(repo, commit.sha, token),
+      })),
+    )
+
+    const entries: ApiChangelogEntry[] = detailed
+      .filter(({ detail }) => commitTouchesEppp(detail))
+      .map(({ entry }) => entry)
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
     const payload: ApiChangelogResponse = {
