@@ -55,6 +55,7 @@ import {
   Plus,
   XCircle,
   UserX,
+  CreditCard,
 } from 'lucide-react'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 
@@ -88,6 +89,7 @@ export default function SettingsPage() {
   })
   const [addingProgram, setAddingProgram] = useState(false)
   const [cancellingSubscription, setCancellingSubscription] = useState(false)
+  const [portalLoading, setPortalLoading] = useState(false)
   const [deletingAccount, setDeletingAccount] = useState(false)
   const [deletingData, setDeletingData] = useState(false)
   const [showCancelDialog, setShowCancelDialog] = useState(false)
@@ -184,6 +186,26 @@ export default function SettingsPage() {
   const handleDownloadData = async () => {
     // TODO: Implement data download
     alert('Data download feature coming soon. Contact support for a manual export.')
+  }
+
+  const handleManageBilling = async () => {
+    setActionError(null)
+    setPortalLoading(true)
+    try {
+      const { data: session } = await supabase.auth.getSession()
+      const res = await fetch('/api/stripe/create-portal-session', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${session?.session?.access_token}` },
+      })
+      const data = (await res.json().catch(() => null)) as { url?: string; error?: string } | null
+      if (!res.ok || !data?.url) {
+        throw new Error(data?.error || 'Could not open billing portal.')
+      }
+      window.location.href = data.url
+    } catch (err) {
+      setActionError(err instanceof Error ? err.message : 'Could not open billing portal.')
+      setPortalLoading(false)
+    }
   }
 
   const handleCancelSubscription = async () => {
@@ -404,6 +426,33 @@ export default function SettingsPage() {
             {/* Cancel Subscription - only show for Stripe subscribers */}
             {userProfile?.stripe_customer_id && (
               <>
+                <Separator />
+                <div className="flex items-center justify-between">
+                  <div>
+                    <Label className="text-sm font-medium">Payment Method</Label>
+                    <p className="text-xs text-muted-foreground">
+                      Update your credit card, view invoices, or change billing details.
+                    </p>
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleManageBilling}
+                    disabled={portalLoading}
+                  >
+                    {portalLoading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Opening...
+                      </>
+                    ) : (
+                      <>
+                        <CreditCard className="w-4 h-4 mr-2" />
+                        Update Payment Method
+                      </>
+                    )}
+                  </Button>
+                </div>
                 <Separator />
                 <div className="flex items-center justify-between">
                   <div>
