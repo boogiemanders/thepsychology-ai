@@ -1,15 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-import Stripe from 'stripe'
 import { sendSlackNotification } from '@/lib/notify-slack'
 import { sendNotificationEmail, isNotificationEmailConfigured } from '@/lib/notify-email'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
 const CRON_SECRET = process.env.CRON_SECRET
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY
-
-const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null
 
 export async function GET(request: NextRequest) {
   const authHeader = request.headers.get('authorization')
@@ -55,30 +51,23 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Failed to downgrade users' }, { status: 500 })
   }
 
+  // Stable, never-expiring URL. The dashboard settings page has an
+  // "Update Payment Method" button that mints a fresh Stripe portal
+  // session at click time.
+  const settingsUrl = 'https://thepsychology.ai/dashboard/settings'
+
   for (const user of expiredUsers) {
     if (!user.email || !isNotificationEmailConfigured(user.email)) continue
-
-    let portalUrl = 'https://thepsychology.ai/dashboard'
-    if (stripe && user.stripe_customer_id) {
-      try {
-        const portalSession = await stripe.billingPortal.sessions.create({
-          customer: user.stripe_customer_id,
-          return_url: 'https://thepsychology.ai/dashboard',
-        })
-        portalUrl = portalSession.url
-      } catch (err) {
-        console.warn('[Downgrade Past Due] Could not create billing portal session', err)
-      }
-    }
 
     const firstName = user.full_name?.split(' ')[0] || 'there'
     const html = `
 <p>Hi ${firstName},</p>
 <p>Your <strong>thePsychology.ai Pro</strong> subscription has been moved to the Free plan because we weren't able to process your payment in the last 7 days.</p>
 <p>Your study progress is safe. Everything you've completed is still there. You can keep studying on the Free plan (10 lessons, 3 quizzes/day).</p>
-<p>To restore Pro access, update your payment method:</p>
-<p><a href="${portalUrl}" style="display:inline-block;padding:12px 24px;background:#111827;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:bold;border:1px solid #111827;mso-padding-alt:0;"><span style="color:#ffffff;">Restore Pro</span></a></p>
-<p>Reply to this email if you want help. Anders will get back to you.</p>
+<p>To restore Pro access, go to your settings page and click the <strong>Update Payment Method</strong> button:</p>
+<p><a href="${settingsUrl}" style="display:inline-block;padding:12px 24px;background:#111827;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:bold;border:1px solid #111827;mso-padding-alt:0;"><span style="color:#ffffff;">Open Settings</span></a></p>
+<p>Or paste this link into your browser: <a href="${settingsUrl}">${settingsUrl}</a></p>
+<p>You can reply to this email if you want help. Anders will get back to you.</p>
 <p>The thePsychology.ai Team</p>
 `.trim()
 
@@ -89,10 +78,10 @@ export async function GET(request: NextRequest) {
       '',
       "Your study progress is safe. Everything you've completed is still there. You can keep studying on the Free plan (10 lessons, 3 quizzes/day).",
       '',
-      'To restore Pro access, update your payment method:',
-      portalUrl,
+      'To restore Pro access, go to your settings page and click the "Update Payment Method" button:',
+      settingsUrl,
       '',
-      'Reply to this email if you want help. Anders will get back to you.',
+      'You can reply to this email if you want help. Anders will get back to you.',
       '',
       'The thePsychology.ai Team',
     ].join('\n')

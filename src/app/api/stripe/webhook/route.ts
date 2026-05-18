@@ -461,19 +461,24 @@ export async function POST(request: Request) {
 
       // Start the 7-day grace countdown if not already running for this customer.
       // Preserved across Stripe Smart Retries so the deadline doesn't reset.
-      // Read the deadline back so the email shows actual remaining days
-      // (retry on day 3 -> "4 days", not "7 days").
+      // Only send the customer email on the FIRST failure (when the update
+      // actually flips grace_period_ends_at from null). Later Stripe retries
+      // re-fire this webhook but should not spam the user.
       let daysRemaining = 7
+      let isFirstFailure = true
       if (stripeCustomerId) {
         try {
           const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
           if (supabase) {
             const graceEnds = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
-            await supabase
+            const { data: updatedRows } = await supabase
               .from('users')
               .update({ grace_period_ends_at: graceEnds })
               .eq('stripe_customer_id', stripeCustomerId)
               .is('grace_period_ends_at', null)
+              .select('id')
+
+            isFirstFailure = (updatedRows?.length ?? 0) > 0
 
             const { data: userRow } = await supabase
               .from('users')
@@ -492,19 +497,11 @@ export async function POST(request: Request) {
       }
       const daysLabel = `${daysRemaining} day${daysRemaining === 1 ? '' : 's'}`
 
-      // Generate billing portal URL so customer can update payment method
-      let portalUrl = 'https://thepsychology.ai'
-      if (stripe && stripeCustomerId) {
-        try {
-          const portalSession = await stripe.billingPortal.sessions.create({
-            customer: stripeCustomerId,
-            return_url: 'https://thepsychology.ai/dashboard',
-          })
-          portalUrl = portalSession.url
-        } catch (portalErr) {
-          console.warn('[Stripe] Could not create billing portal session for payment failure email', portalErr)
-        }
-      }
+      // Stable, never-expiring URL. The dashboard settings page has an
+      // "Update Payment Method" button that mints a fresh Stripe portal
+      // session at click time — so this link still works no matter how
+      // late the user opens the email.
+      const settingsUrl = 'https://thepsychology.ai/dashboard/settings'
 
       // Look up user name and recent topic for personalization
       let recentTopic: string | null = null
@@ -535,19 +532,31 @@ export async function POST(request: Request) {
         }
       }
 
-      // Send customer-facing email
-      if (customerEmail !== 'Unknown' && isNotificationEmailConfigured(customerEmail)) {
+      // Send customer-facing email — only on the first failure.
+      // Stripe Smart Retries fire this webhook multiple times; we don't
+      // want to spam the customer with the same email every retry.
+      if (isFirstFailure && customerEmail !== 'Unknown' && isNotificationEmailConfigured(customerEmail)) {
         const greeting = firstName ? `Hi ${firstName},` : 'Hi,'
         const topicLine = recentTopic
           ? `<p>Your lessons on <strong>${recentTopic}</strong> have been tailored to your interests. We'd love to keep that going.</p>`
           : ''
 
+        const intro =
+          daysRemaining > 0
+            ? `We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription. You have ${daysLabel} to update your payment method before your account is downgraded to the free plan.`
+            : `We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription and your Pro access has been paused. You can restore it any time by updating your payment method.`
+        const introText =
+          daysRemaining > 0
+            ? `We weren't able to process your payment for your thePsychology.ai Pro subscription. You have ${daysLabel} to update your payment method before your account is downgraded to the free plan.`
+            : `We weren't able to process your payment for your thePsychology.ai Pro subscription and your Pro access has been paused. You can restore it any time by updating your payment method.`
+
         const html = `
 <p>${greeting}</p>
-<p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription. You have ${daysLabel} to update your payment method before your account is downgraded to the free plan.</p>
+<p>${intro}</p>
 ${topicLine}
-<p>To keep your Pro access, please update your payment method:</p>
-<p><a href="${portalUrl}" style="display:inline-block;padding:12px 24px;background:#111827;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:bold;border:1px solid #111827;mso-padding-alt:0;"><span style="color:#ffffff;">Update Payment Method</span></a></p>
+<p>Go to your settings page and click the <strong>Update Payment Method</strong> button:</p>
+<p><a href="${settingsUrl}" style="display:inline-block;padding:12px 24px;background:#111827;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:bold;border:1px solid #111827;mso-padding-alt:0;"><span style="color:#ffffff;">Open Settings</span></a></p>
+<p>Or paste this link into your browser: <a href="${settingsUrl}">${settingsUrl}</a></p>
 <p>This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.</p>
 <p>The thePsychology.ai Team</p>
 `.trim()
@@ -555,13 +564,13 @@ ${topicLine}
         const text = [
           greeting,
           '',
-          `We weren't able to process your payment for your thePsychology.ai Pro subscription. You have ${daysLabel} to update your payment method before your account is downgraded to the free plan.`,
+          introText,
           ...(recentTopic
             ? [`Your lessons on ${recentTopic} have been tailored to your interests. We'd love to keep that going.`]
             : []),
           '',
-          'To keep your Pro access, please update your payment method:',
-          portalUrl,
+          'Go to your settings page and click the "Update Payment Method" button:',
+          settingsUrl,
           '',
           'This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.',
           '',
@@ -578,7 +587,7 @@ ${topicLine}
       }
 
       await sendSlackNotification(
-        `⚠️ Payment failed for ${customerEmail} (attempt ${attemptCount}) — portal: ${portalUrl}`,
+        `⚠️ Payment failed for ${customerEmail} (attempt ${attemptCount}${isFirstFailure ? ', email sent' : ', email skipped — retry'})`,
         'payments'
       )
     }
