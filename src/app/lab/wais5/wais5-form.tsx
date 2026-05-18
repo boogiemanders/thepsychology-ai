@@ -123,9 +123,25 @@ export default function Wais5Form() {
     setData(prev => ({ ...prev, [name]: value }))
   }, [])
 
-  // Split a scripted line on (parenthetical) stage directions. Blue brand color
-  // for read-aloud, muted italic for the stage notes (mirrors the WAIS-5 manual).
+  // Render a scripted line with the WAIS-5 manual's blue/black split.
+  // If the text contains **...** markers, ONLY those segments are styled as
+  // read-aloud (blue). Otherwise fall back to "everything except parentheticals
+  // is read-aloud" for legacy intro strings.
   function renderScriptedInstruction(text: string) {
+    if (text.includes('**')) {
+      const parts = text.split(/(\*\*[^*]+\*\*)/g).filter(Boolean)
+      return (
+        <>
+          {parts.map((seg, i) =>
+            seg.startsWith('**') && seg.endsWith('**') ? (
+              <span key={i} className="font-semibold text-[#4EBFD4]">{seg.slice(2, -2)}</span>
+            ) : (
+              <span key={i} className="text-zinc-700 dark:text-zinc-300">{seg}</span>
+            )
+          )}
+        </>
+      )
+    }
     const parts = text.split(/(\([^)]*\))/g).filter(Boolean)
     return (
       <>

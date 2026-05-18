@@ -55,7 +55,7 @@ export const SUBTEST_INTROS: Record<string, SubtestIntro> = {
   },
 
   blockdesign: {
-    instruction: 'Place two blocks in front of the examinee. Pick up one block and say, See these blocks? They are all alike. On some sides, they are all red (show red side); on some sides, all white (show white side); and on some sides, half red and half white (show red-and-white side).',
+    instruction: 'Place two blocks in front of the examinee. Pick up one block and say, **See these blocks? They are all alike. On some sides, they are all red** (show red side); **on some sides, all white** (show white side); **and on some sides, half red and half white** (show red-and-white side).',
     notes: [
       'Items 1-4 have two trials each; Items 5-14 have one trial. Time limits vary by item — accurate timing is essential.',
       'Designs on the record form are from the examiner\'s perspective (upside down). Shaded areas = red portions.',
@@ -66,26 +66,26 @@ export const SUBTEST_INTROS: Record<string, SubtestIntro> = {
     itemGroups: [
       {
         label: 'Item 1',
-        trial1: 'Say, Watch me make my blocks look just like this (point to pictured design). Use two blocks to slowly assemble the model. Leave the model intact.\nSay, Now you make one like this (point to pictured design). Work as fast as you can and tell me when you\'re done. I\'ll tell you when time is up.\nEnsure the examinee has two more scrambled blocks and say, Go ahead. Begin timing.',
-        trial2: 'Leave the model intact and say, Watch me again. Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, Now you try it again and make one like this (point to pictured design).\nSay, Go ahead. Begin timing.',
+        trial1: 'Say, **Watch me make my blocks look just like this** (point to pictured design). Use two blocks to slowly assemble the model. Leave the model intact.\nSay, **Now you make one like this** (point to pictured design). **Work as fast as you can and tell me when you\'re done. I\'ll tell you when time is up.**\nEnsure the examinee has two more scrambled blocks and say, **Go ahead.** Begin timing.',
+        trial2: 'Leave the model intact and say, **Watch me again.** Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, **Now you try it again and make one like this** (point to pictured design).\nSay, **Go ahead.** Begin timing.',
       },
       {
         label: 'Items 2-3',
-        trial1: 'Say, Watch me make my blocks look just like this (point to pictured design). Use four blocks to slowly assemble the model. Leave the model intact.\nSay, Now you make one like this (point to pictured design). Work as fast as you can.\nEnsure the examinee has four more scrambled blocks and say, Go ahead. Begin timing.',
-        trial2: 'Leave the model intact and say, Watch me again. Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, Now you try it again and make one like this (point to pictured design).\nSay, Go ahead. Begin timing.',
+        trial1: 'Say, **Watch me make my blocks look just like this** (point to pictured design). Use four blocks to slowly assemble the model. Leave the model intact.\nSay, **Now you make one like this** (point to pictured design). **Work as fast as you can.**\nEnsure the examinee has four more scrambled blocks and say, **Go ahead.** Begin timing.',
+        trial2: 'Leave the model intact and say, **Watch me again.** Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, **Now you try it again and make one like this** (point to pictured design).\nSay, **Go ahead.** Begin timing.',
       },
       {
         label: 'Item 4',
-        trial1: 'Say, Watch me make my blocks look just like this (point to pictured design). Use four blocks to slowly assemble the model. Leave the model intact.\nSay, Now you make one like this (point to pictured design). Work as fast as you can and tell me when you\'re done. I\'ll tell you when time is up.\nEnsure the examinee has four more scrambled blocks and say, Go ahead. Begin timing.',
-        trial2: 'Leave the model intact and say, Watch me again. Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, Now you try it again and make one like this (point to pictured design).\nSay, Go ahead. Begin timing.',
+        trial1: 'Say, **Watch me make my blocks look just like this** (point to pictured design). Use four blocks to slowly assemble the model. Leave the model intact.\nSay, **Now you make one like this** (point to pictured design). **Work as fast as you can and tell me when you\'re done. I\'ll tell you when time is up.**\nEnsure the examinee has four more scrambled blocks and say, **Go ahead.** Begin timing.',
+        trial2: 'Leave the model intact and say, **Watch me again.** Using the examinee\'s blocks, slowly assemble the design.\nAs you scramble the examinee\'s blocks, say, **Now you try it again and make one like this** (point to pictured design).\nSay, **Go ahead.** Begin timing.',
       },
       {
         label: 'Items 5-9',
-        single: 'Ensure the examinee has only four blocks. As you scramble the blocks, say, Now make one like this (point to pictured design). Work as fast as you can. Go ahead. Begin timing.',
+        single: 'Ensure the examinee has only four blocks. As you scramble the blocks, say, **Now make one like this** (point to pictured design). **Work as fast as you can. Go ahead.** Begin timing.',
       },
       {
         label: 'Items 10-14',
-        single: 'Ensure the examinee has nine blocks. As you scramble the blocks, say, Now make one like this (point to pictured design), using all nine blocks. Work as fast as you can. Go ahead. Begin timing.',
+        single: 'Ensure the examinee has nine blocks. As you scramble the blocks, say, **Now make one like this** (point to pictured design)**, using all nine blocks. Work as fast as you can. Go ahead.** Begin timing.',
       },
     ],
   },
