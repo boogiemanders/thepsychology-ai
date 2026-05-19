@@ -788,6 +788,22 @@ export default function Wais5Form() {
     </table>
   )
 
+  const bdTimeRange = (k: string, v: number): string | null => {
+    if (v === 0) return null
+    if (k === '9') {
+      if (v === 4) return '31-60'
+      if (v === 5) return '21-30'
+      if (v === 6) return '11-20'
+      if (v === 7) return '1-10'
+    }
+    if (['10','11','12','13','14'].includes(k)) {
+      if (v === 4) return '71-120'
+      if (v === 5) return '51-70'
+      if (v === 6) return '31-50'
+      if (v === 7) return '1-30'
+    }
+    return null
+  }
   const renderBlockDesign = (st: Subtest) => {
     const subtestScripts = SCRIPTS[st.id]
     const groups = SUBTEST_INTROS[st.id]?.itemGroups || []
@@ -811,11 +827,40 @@ export default function Wais5Form() {
     }
     return (
     <>
-      <div className="mb-3 flex justify-end">
+      <div className="mb-3 flex items-start justify-between gap-3">
+        <div className="grid flex-1 grid-cols-1 gap-2 sm:grid-cols-3">
+          <div className="rounded border border-zinc-200 dark:border-zinc-800 p-2">
+            <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400">Items 1-4 · two trials</p>
+            <ul className="space-y-0.5 text-[11px] text-slate-700 dark:text-zinc-300">
+              <li><span className="font-mono text-[#B6D458]">2</span> = correct on Trial 1</li>
+              <li><span className="font-mono text-[#F39E3A]">1</span> = correct on Trial 2</li>
+              <li><span className="font-mono text-[#E7437D]">0</span> = both trials fail</li>
+            </ul>
+          </div>
+          <div className="rounded border border-zinc-200 dark:border-zinc-800 p-2">
+            <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400">Items 5-8 · no time bonus</p>
+            <ul className="space-y-0.5 text-[11px] text-slate-700 dark:text-zinc-300">
+              <li><span className="font-mono text-[#B6D458]">4</span> = correct within time limit</li>
+              <li><span className="font-mono text-[#E7437D]">0</span> = incorrect or time expired</li>
+            </ul>
+          </div>
+          <div className="rounded border border-zinc-200 dark:border-zinc-800 p-2">
+            <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400">Items 9-14 · time bonus</p>
+            <ul className="space-y-0.5 text-[11px] text-slate-700 dark:text-zinc-300">
+              <li><span className="font-mono text-[#B6D458]">7 / 6 / 5</span> = correct, faster = higher</li>
+              <li><span className="font-mono text-[#F39E3A]">4</span> = correct, no time bonus</li>
+              <li><span className="font-mono text-[#E7437D]">0</span> = incorrect or time expired</li>
+            </ul>
+            <p className="mt-1 text-[10px] text-zinc-500 dark:text-zinc-400">
+              Item 9: 1-10s=7, 11-20s=6, 21-30s=5, 31-60s=4.<br/>
+              Items 10-14: 1-30s=7, 31-50s=6, 51-70s=5, 71-120s=4.
+            </p>
+          </div>
+        </div>
         <button
           type="button"
           onClick={openExamineeWindow}
-          className="rounded border border-[#4EBFD4] px-3 py-1 text-[12px] font-medium text-[#4EBFD4] hover:bg-[#4EBFD4]/10"
+          className="shrink-0 rounded border border-[#4EBFD4] px-3 py-1 text-[12px] font-medium text-[#4EBFD4] hover:bg-[#4EBFD4]/10"
         >
           Open examinee window
         </button>
@@ -910,26 +955,31 @@ export default function Wais5Form() {
                   )}
                 </td>
                 <td className="px-2 py-1">
-                  <div className="flex flex-wrap items-center gap-1">
+                  <div className="flex flex-wrap items-end gap-1">
                     {opts.map(v => {
                       const isSelected = data[name] === String(v)
                       const isZero = v === 0
+                      const range = bdTimeRange(it.k, v)
                       return (
-                        <button
-                          key={v}
-                          type="button"
-                          onClick={() => set(name, isSelected ? '' : String(v))}
-                          className={[
-                            'min-w-[24px] rounded-full border px-2 py-0.5 text-[12px] transition-colors',
-                            isSelected && isZero
-                              ? 'border-[#E7437D] bg-[#E7437D] text-white'
-                              : isSelected
-                              ? 'border-zinc-900 bg-zinc-900 text-white dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-900'
-                              : 'border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:border-slate-400 dark:hover:border-zinc-600',
-                          ].join(' ')}
-                        >
-                          {v}
-                        </button>
+                        <div key={v} className="flex flex-col items-center">
+                          {range ? (
+                            <span className="mb-0.5 font-mono text-[9px] leading-none text-zinc-500 dark:text-zinc-400">{range}</span>
+                          ) : null}
+                          <button
+                            type="button"
+                            onClick={() => set(name, isSelected ? '' : String(v))}
+                            className={[
+                              'min-w-[24px] rounded-full border px-2 py-0.5 text-[12px] transition-colors',
+                              isSelected && isZero
+                                ? 'border-[#E7437D] bg-[#E7437D] text-white'
+                                : isSelected
+                                ? 'border-zinc-900 bg-zinc-900 text-white dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-900'
+                                : 'border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:border-slate-400 dark:hover:border-zinc-600',
+                            ].join(' ')}
+                          >
+                            {v}
+                          </button>
+                        </div>
                       )
                     })}
                   </div>
