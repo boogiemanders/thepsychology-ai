@@ -76,10 +76,69 @@ function tagBadge(t: Tag) {
   return null
 }
 
+// Block Design trial row: Start button → live timer → ✓/✗ buttons that stop
+// the timer and store elapsed seconds in `${name}-${suffix}time`.
+function BdTrialRow({
+  label, name, suffix, data, setData, withOk = false,
+}: {
+  label: string
+  name: string
+  suffix: string
+  data: Record<string, string>
+  setData: (updater: (prev: Record<string, string>) => Record<string, string>) => void
+  withOk?: boolean
+}) {
+  const startKey = `${name}-${suffix}start`
+  const timeKey = `${name}-${suffix}time`
+  const okKey = `${name}-${suffix}ok`
+  const startedAt = Number(data[startKey] || 0)
+  const elapsed = startedAt ? Math.max(0, (Date.now() - startedAt) / 1000) : 0
+  const storedTime = data[timeKey] || ''
+  const okVal = data[okKey] || ''
+  const start = () => setData(prev => ({ ...prev, [startKey]: String(Date.now()) }))
+  const stop = (ok: '✓' | '✗') => setData(prev => {
+    const at = Number(prev[startKey] || 0)
+    const sec = at ? ((Date.now() - at) / 1000).toFixed(1) : (prev[timeKey] || '')
+    return { ...prev, [timeKey]: sec, [okKey]: ok, [startKey]: '' }
+  })
+  const reset = () => setData(prev => ({ ...prev, [startKey]: '', [timeKey]: '', [okKey]: '' }))
+  const running = startedAt > 0
+  const display = running ? elapsed.toFixed(1) : storedTime
+  return (
+    <div className="mt-1 flex flex-wrap items-center gap-2 first:mt-0">
+      {label ? <span className="w-6 text-[11px] text-slate-500 dark:text-zinc-400">{label}</span> : null}
+      {running ? (
+        <span className="rounded border border-[#4EBFD4] bg-[#4EBFD4]/10 px-2 py-0.5 font-mono text-[12px] text-[#4EBFD4]">{display}s</span>
+      ) : storedTime ? (
+        <button type="button" onClick={reset} className="rounded border border-slate-300 dark:border-zinc-700 px-2 py-0.5 font-mono text-[12px] text-slate-700 dark:text-zinc-300 hover:border-slate-400" title="Reset">{storedTime}s</button>
+      ) : (
+        <button type="button" onClick={start} className="rounded border border-slate-300 dark:border-zinc-700 px-2 py-0.5 text-[11px] text-slate-700 dark:text-zinc-300 hover:border-[#4EBFD4] hover:text-[#4EBFD4]">Start</button>
+      )}
+      {withOk ? (
+        <div className="flex gap-1">
+          <button
+            type="button"
+            disabled={!running && !storedTime}
+            onClick={() => stop('✓')}
+            className={`min-w-[28px] rounded-full border px-2 py-0.5 text-[12px] ${okVal === '✓' ? 'border-[#B6D458] bg-[#B6D458] text-white' : 'border-slate-300 dark:border-zinc-700 text-slate-700 dark:text-zinc-300 hover:border-[#B6D458] disabled:opacity-40'}`}
+          >✓</button>
+          <button
+            type="button"
+            disabled={!running && !storedTime}
+            onClick={() => stop('✗')}
+            className={`min-w-[28px] rounded-full border px-2 py-0.5 text-[12px] ${okVal === '✗' ? 'border-[#E7437D] bg-[#E7437D] text-white' : 'border-slate-300 dark:border-zinc-700 text-slate-700 dark:text-zinc-300 hover:border-[#E7437D] disabled:opacity-40'}`}
+          >✗</button>
+        </div>
+      ) : null}
+    </div>
+  )
+}
+
 export default function Wais5Form() {
   const [data, setData] = useState<FormData>({})
   const [activeItemKey, setActiveItemKey] = useState<string | null>(null)
   const [stimUrls, setStimUrls] = useState<Record<string, string>>({})
+  const [, setTick] = useState(0)
   const [toast, setToast] = useState<string | null>(null)
   const toastTimer = useRef<number | null>(null)
   const importInputRef = useRef<HTMLInputElement | null>(null)
@@ -118,6 +177,14 @@ export default function Wais5Form() {
     if (!hydrated.current) return
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)) } catch {}
   }, [data])
+
+  // Re-render every 200ms while any BD trial timer is running.
+  const anyTimerRunning = Object.keys(data).some(k => /-(t1|t2|t)start$/.test(k) && data[k])
+  useEffect(() => {
+    if (!anyTimerRunning) return
+    const id = window.setInterval(() => setTick(t => t + 1), 200)
+    return () => window.clearInterval(id)
+  }, [anyTimerRunning])
 
   const set = useCallback((name: string, value: string) => {
     setData(prev => ({ ...prev, [name]: value }))
@@ -529,30 +596,73 @@ export default function Wais5Form() {
     )
   }
 
-  const renderMcq = (st: Subtest) => (
-    <table className="w-full border-collapse text-[13px]">
-      <thead>
-        <tr className="border-b border-zinc-200 dark:border-zinc-800 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
-          <th className="px-2 py-1 text-left">Item</th>
-          <th className="px-2 py-1 text-left">Response</th>
-          <th className="px-2 py-1 text-left">Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        {(st.items || []).map(it => {
-          const kind: ScoreKind = (it.score as ScoreKind) || '01'
-          const name = `${st.id}-${it.k}`
-          return (
-            <tr key={it.k} className="border-b border-slate-200 dark:border-zinc-800 align-top">
-              <td className="w-12 px-2 py-1 font-semibold text-slate-500 dark:text-zinc-400">{tagBadge(it.tag ?? null)}{it.k}.</td>
-              <td className="px-2 py-1"><ChoicePills name={name} count={st.choices || 0} /></td>
-              <td className="w-32 px-2 py-1"><ScorePills name={name} kind={kind} /></td>
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
-  )
+  const renderMcq = (st: Subtest) => {
+    const subtestScripts = SCRIPTS[st.id]
+    const showOnExaminee = (stim: string) => {
+      try { localStorage.setItem('wais5-present-stim', stim) } catch {}
+      try { const ch = new BroadcastChannel('wais5-present'); ch.postMessage({ stim }); ch.close() } catch {}
+    }
+    const openExamineeWindow = () => {
+      window.open('/lab/wais5/present', 'wais5-examinee', 'popup,width=1280,height=900')
+    }
+    const hasStim = !!subtestScripts && Object.values(subtestScripts).some(s => s?.stim)
+    return (
+    <>
+      {hasStim ? (
+        <div className="mb-3 flex justify-end">
+          <button
+            type="button"
+            onClick={openExamineeWindow}
+            className="rounded border border-[#4EBFD4] px-3 py-1 text-[12px] font-medium text-[#4EBFD4] hover:bg-[#4EBFD4]/10"
+          >
+            Open examinee window
+          </button>
+        </div>
+      ) : null}
+      <table className="w-full border-collapse text-[13px]">
+        <thead>
+          <tr className="border-b border-zinc-200 dark:border-zinc-800 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+            <th className="px-2 py-1 text-left">Item</th>
+            {hasStim ? <th className="px-2 py-1 text-left">Stim</th> : null}
+            <th className="px-2 py-1 text-left">Response</th>
+            <th className="px-2 py-1 text-left">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {(st.items || []).map(it => {
+            const kind: ScoreKind = (it.score as ScoreKind) || '01'
+            const name = `${st.id}-${it.k}`
+            const script = subtestScripts?.[it.k]
+            return (
+              <tr key={it.k} className="border-b border-slate-200 dark:border-zinc-800 align-top">
+                <td className="w-12 px-2 py-1 font-semibold text-slate-500 dark:text-zinc-400">{tagBadge(it.tag ?? null)}{it.k}.</td>
+                {hasStim ? (
+                  <td className="w-36 px-2 py-1">
+                    {script?.stim && stimUrls[script.stim] ? (
+                      <>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={stimUrls[script.stim]} alt="" className="w-28 h-auto rounded border border-zinc-200 dark:border-zinc-800" />
+                        <button
+                          type="button"
+                          onClick={() => script.stim && showOnExaminee(script.stim)}
+                          className="mt-1 text-[10px] font-mono uppercase tracking-[0.12em] text-[#4EBFD4] hover:underline"
+                        >
+                          Show to examinee
+                        </button>
+                      </>
+                    ) : null}
+                  </td>
+                ) : null}
+                <td className="px-2 py-1"><ChoicePills name={name} count={st.choices || 0} /></td>
+                <td className="w-32 px-2 py-1"><ScorePills name={name} kind={kind} /></td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </>
+    )
+  }
 
   const renderMcq3of6 = (st: Subtest) => (
     <table className="w-full border-collapse text-[13px]">
@@ -688,8 +798,28 @@ export default function Wais5Form() {
       const m = g.label.match(/(\d+)/)
       if (m) groupAt[m[1]] = g
     }
+    const showOnExaminee = (stim: string) => {
+      try { localStorage.setItem('wais5-present-stim', stim) } catch {}
+      try {
+        const ch = new BroadcastChannel('wais5-present')
+        ch.postMessage({ stim })
+        ch.close()
+      } catch {}
+    }
+    const openExamineeWindow = () => {
+      window.open('/lab/wais5/present', 'wais5-examinee', 'popup,width=1280,height=900')
+    }
     return (
     <>
+      <div className="mb-3 flex justify-end">
+        <button
+          type="button"
+          onClick={openExamineeWindow}
+          className="rounded border border-[#4EBFD4] px-3 py-1 text-[12px] font-medium text-[#4EBFD4] hover:bg-[#4EBFD4]/10"
+        >
+          Open examinee window
+        </button>
+      </div>
       <table className="w-full border-collapse text-[13px]">
         <thead>
           <tr className="border-b border-zinc-200 dark:border-zinc-800 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
@@ -727,7 +857,7 @@ export default function Wais5Form() {
                           <div className="space-y-2">
                             {group.trial1 ? (
                               <div>
-                                <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#4EBFD4]">Trial 1</p>
+                                <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-700 dark:text-zinc-300">Trial 1</p>
                                 <p className="whitespace-pre-line text-[13px] leading-snug">
                                   {renderScriptedInstruction(group.trial1)}
                                 </p>
@@ -735,7 +865,7 @@ export default function Wais5Form() {
                             ) : null}
                             {group.trial2 ? (
                               <div>
-                                <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#4EBFD4]">Trial 2</p>
+                                <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-700 dark:text-zinc-300">Trial 2</p>
                                 <p className="whitespace-pre-line text-[13px] leading-snug">
                                   {renderScriptedInstruction(group.trial2)}
                                 </p>
@@ -752,30 +882,31 @@ export default function Wais5Form() {
                 <td className="w-36 px-2 py-1 text-[11px] text-slate-500 dark:text-zinc-400">
                   <div>{it.blocks} blocks · {it.t}</div>
                   {script?.stim && stimUrls[script.stim] ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={stimUrls[script.stim]}
-                      alt=""
-                      className="mt-1 w-28 h-auto rounded border border-zinc-200 dark:border-zinc-800"
-                    />
+                    <>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={stimUrls[script.stim]}
+                        alt=""
+                        className="mt-1 w-28 h-auto rounded border border-zinc-200 dark:border-zinc-800"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => script.stim && showOnExaminee(script.stim)}
+                        className="mt-1 text-[10px] font-mono uppercase tracking-[0.12em] text-[#4EBFD4] hover:underline"
+                      >
+                        Show to examinee
+                      </button>
+                    </>
                   ) : null}
                 </td>
                 <td className="px-2 py-1">
                   {it.trials ? (
                     <>
-                      <div className="flex items-center gap-2">
-                        <span className="text-[11px] text-slate-500 dark:text-zinc-400">T1</span>
-                        <TinyInput name={`${name}-t1time`} placeholder="time" />
-                        <TinyInput name={`${name}-t1ok`} placeholder="✓/✗" />
-                      </div>
-                      <div className="mt-1 flex items-center gap-2">
-                        <span className="text-[11px] text-slate-500 dark:text-zinc-400">T2</span>
-                        <TinyInput name={`${name}-t2time`} placeholder="time" />
-                        <TinyInput name={`${name}-t2ok`} placeholder="✓/✗" />
-                      </div>
+                      <BdTrialRow label="T1" name={name} suffix="t1" data={data} setData={setData} withOk />
+                      <BdTrialRow label="T2" name={name} suffix="t2" data={data} setData={setData} withOk />
                     </>
                   ) : (
-                    <TinyInput name={`${name}-time`} placeholder="completion time" />
+                    <BdTrialRow label="" name={name} suffix="t" data={data} setData={setData} />
                   )}
                 </td>
                 <td className="px-2 py-1">
@@ -1040,10 +1171,10 @@ export default function Wais5Form() {
 
       {/* general intro */}
       <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-[#4EBFD4] p-4 print:hidden">
-        <p className="mb-2 text-[10px] font-mono uppercase tracking-[0.16em] text-[#4EBFD4]">
+        <p className="mb-2 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-700 dark:text-zinc-300">
           Read aloud · General introduction
         </p>
-        <p className="text-[15px] leading-relaxed text-zinc-800 dark:text-zinc-200">
+        <p className="text-[15px] font-semibold leading-relaxed text-[#4EBFD4]">
           &ldquo;{GENERAL_TEST_INTRO}&rdquo;
         </p>
       </section>
@@ -1059,7 +1190,7 @@ export default function Wais5Form() {
           <p className="mb-3 text-[11px] text-slate-500 dark:text-zinc-400">{st.rules}</p>
           {intro?.instruction ? (
             <div className="mb-4 rounded border-l-2 border-l-[#4EBFD4] p-3">
-              <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em] text-[#4EBFD4]">
+              <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-700 dark:text-zinc-300">
                 Read aloud · Instructions
               </p>
               <p className="text-[14px] leading-snug">
@@ -1069,10 +1200,10 @@ export default function Wais5Form() {
           ) : null}
           {intro?.sample ? (
             <div className="mb-4 rounded border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-[#4EBFD4] p-3">
-              <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em] text-[#4EBFD4]">
+              <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-700 dark:text-zinc-300">
                 Sample item · Read aloud
               </p>
-              <p className="text-[14px] leading-snug text-zinc-800 dark:text-zinc-200">
+              <p className="text-[14px] font-semibold leading-snug text-[#4EBFD4]">
                 &ldquo;{intro.sample.prompt}&rdquo;
               </p>
               <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
