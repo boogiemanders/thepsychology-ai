@@ -566,7 +566,7 @@ export const DEFAULT_PREFERENCES: ProviderPreferences = {
   defaultLocation: 'Video Office',
   firstVisitCPT: '90791',
   followUpCPT: '90837',
-  llmProvider: 'ollama',
+  llmProvider: 'openai',
   ollamaModel: 'llama3.2:3b',
   ollamaEndpoint: 'http://localhost:11434',
   openaiApiKey: '',

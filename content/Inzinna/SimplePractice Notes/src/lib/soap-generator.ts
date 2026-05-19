@@ -42,17 +42,27 @@ export async function generateSoapDraft(
   prefs: ProviderPreferences,
   meta: GenerationMeta = {}
 ): Promise<SoapDraft> {
-  const provider = prefs.llmProvider || 'ollama'
+  const provider = prefs.llmProvider || 'openai'
+  const reasons: string[] = []
 
   // Try OpenAI first if configured (de-identifies PHI before sending)
-  if (provider === 'openai' && prefs.openaiApiKey) {
-    const healthy = await checkOpenAIHealth(prefs.openaiApiKey)
-    if (healthy) {
-      try {
-        const draft = await generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta)
-        if (draft) return draft
-      } catch (err) {
-        console.info('[SPN] OpenAI generation failed, falling back:', getErrorMessage(err))
+  if (provider === 'openai') {
+    if (!prefs.openaiApiKey) {
+      reasons.push('OpenAI selected but no API key in popup settings. Click the extension icon, paste your key, and Save.')
+    } else {
+      const healthy = await checkOpenAIHealth(prefs.openaiApiKey)
+      if (!healthy) {
+        reasons.push('OpenAI key rejected by /v1/models (likely invalid or expired).')
+      } else {
+        try {
+          const draft = await generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta)
+          if (draft) return draft
+          reasons.push('OpenAI returned a response we could not parse as JSON or sections.')
+        } catch (err) {
+          const msg = getErrorMessage(err)
+          console.info('[SPN] OpenAI generation failed, falling back:', msg)
+          reasons.push(`OpenAI call failed: ${msg}`)
+        }
       }
     }
   }
@@ -60,21 +70,28 @@ export async function generateSoapDraft(
   // Try Ollama
   const endpoint = prefs.ollamaEndpoint || 'http://localhost:11434'
   const model = prefs.ollamaModel || 'llama3.1:8b'
-  const healthy = await checkOllamaHealth(endpoint)
-  if (healthy) {
+  const ollamaHealthy = await checkOllamaHealth(endpoint)
+  if (!ollamaHealthy) {
+    if (provider === 'ollama') {
+      reasons.push(`Ollama not running at ${endpoint}. Start Ollama or switch provider to OpenAI in the popup.`)
+    }
+  } else {
     try {
       const draft = await generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint)
       if (draft) return draft
+      reasons.push('Ollama returned a response we could not parse as JSON or sections.')
     } catch (err) {
       const message = getErrorMessage(err)
       if (!message.includes('Ollama blocked this Chrome extension')) {
         console.info('[SPN] Ollama generation fell back to regex:', message)
       }
+      reasons.push(`Ollama generation failed: ${message}`)
     }
   }
 
   // Fallback to regex builder
-  const regexDraft = buildSoapDraftRegex(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta)
+  const reason = reasons.length ? reasons.join(' ') : undefined
+  const regexDraft = buildSoapDraftRegex(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta, reason)
   return { ...regexDraft, generationMethod: 'regex' }
 }
 
