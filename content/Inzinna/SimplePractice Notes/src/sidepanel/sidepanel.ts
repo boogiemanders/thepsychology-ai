@@ -1574,23 +1574,47 @@ document.getElementById('btn-write-note')?.addEventListener('click', async () =>
   await generateSummary(true)
 })
 
+function showTabNotice(message: string): void {
+  const el = document.getElementById('tab-notice')
+  if (!el) return
+  el.textContent = message
+  el.hidden = false
+}
+
+function clearTabNotice(): void {
+  const el = document.getElementById('tab-notice')
+  if (!el) return
+  el.hidden = true
+  el.textContent = ''
+}
+
 document.getElementById('tab-soap')?.addEventListener('click', () => {
+  clearTabNotice()
   switchPanel('soap')
 })
 
 document.getElementById('tab-diagnostics')?.addEventListener('click', () => {
   const tab = document.getElementById('tab-diagnostics') as HTMLButtonElement | null
-  if (tab?.disabled) return
+  if (tab?.disabled) {
+    showTabNotice('Capture intake first from a SimplePractice client page before diagnoses are available.')
+    return
+  }
+  clearTabNotice()
   switchPanel('diagnostics')
 })
 
 document.getElementById('tab-treatment-plan')?.addEventListener('click', () => {
   const tab = document.getElementById('tab-treatment-plan') as HTMLButtonElement | null
-  if (tab?.disabled) return
+  if (tab?.disabled) {
+    showTabNotice('Open a SimplePractice client treatment plan page and click "Capture Treatment Plan" first.')
+    return
+  }
+  clearTabNotice()
   switchPanel('treatment-plan')
 })
 
 document.getElementById('tab-transcript')?.addEventListener('click', () => {
+  clearTabNotice()
   switchPanel('transcript')
 })
 
@@ -1631,6 +1655,7 @@ document.getElementById('btn-fill-soap')?.addEventListener('click', async () => 
 })
 
 document.getElementById('tab-supervision')?.addEventListener('click', () => {
+  clearTabNotice()
   switchPanel('supervision')
 })
 
