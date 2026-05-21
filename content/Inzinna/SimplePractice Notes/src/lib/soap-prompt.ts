@@ -57,9 +57,10 @@ SUBJECTIVE: What the client reported. Organize by THEME, not chronology:
 - Symptom changes since last session (better, worse, same) — quantify when possible
 - Relevant life events or stressors mentioned (with dates/details from transcript)
 - Mood self-report if stated (use client's words)
-- Risk factors: SI/HI denial or endorsement (ALWAYS document — write "denied SI/HI" if not discussed)
-- Substance use updates if discussed (quantify: frequency, amount)
+- Risk factors: SI/HI denial or endorsement (ALWAYS document — write "Client denied SI/HI" if not discussed in session). This sentence is MANDATORY.
+- Substance use: if active diagnoses include any F1x.xx substance use code, OR substance use appears in the intake / overview note, the Subjective MUST quantify current frequency and amount (e.g., "Client reports drinking 2/5 bottles of Soju and Patron on weekends and smoking cannabis 5-6 times per week"). Pull from the recent clinical note or intake if the transcript does not update it. This is MANDATORY when substance F-codes are active.
 - Include functional details when relevant: work strain, family stress, sleep disruption, appetite changes, social avoidance, exercise changes, or deadline pressure
+- LENGTH MATCHES CONTENT: Subjective length should match content density of the session. Sessions packed with new updates, multiple stressors, and quantifiable changes warrant 200-300 words. Sessions that explore historical context with fewer present-week updates can be 120-180 words. Do NOT pad to hit an arbitrary length. Do NOT under-cover when content exists. Every theme from the Pass 1 list MUST get at least one sentence in Subjective with a concrete anchor (named person, dollar amount, frequency, duration, specific event, quote, named platform, or specific behavior). Generic clinical language without an anchor is forbidden.
 - If dream content or imagery was discussed, document the dream details briefly and link them to waking stressors only if the transcript supports that link
 - Keep it concise, but not skeletal — this should read like a real therapy note, not a shorthand fragment
 
@@ -67,38 +68,50 @@ OBJECTIVE: What the clinician observed and assessed. Include:
 - Diagnostic assessment activities conducted this session (e.g., "Clinician assessed for PTSD criteria; client does not meet full criteria at this time")
 - Clinical data points extracted during the interview: substance use quantified, injury/medical history, self-report scales or ratings
 - Behavioral observations during session (engagement, emotional responses, coping demonstrated)
-- Interventions or psychoeducation delivered this session and the client's response to them
-- End the Objective section with an embedded Mental Status Exam block using exactly this layout:
-  Mental Status Exam:
-  Appearance: ...
-  Behavior: ...
-  Speech: ...
-  Mood/Affect: ...
-  Thoughts: ...
-  Cognition: ...
-  Insight/Judgment: ...
+- Interventions or psychoeducation delivered this session and the client's response to them. NAME the technique even when the clinician did not say its name out loud. Specifically:
+  • Externalizing an internal experience as a named PART (e.g., "the doubting part", "the inner critic"), visualizing parts (age, appearance, where they sit), dialoguing between parts, or exploring a part's protective function = "Internal Family Systems parts work" (or "parts work"). Label it that way in Objective AND in Plan.
+  • Holding two opposite truths at once = "dialectical reframing" or "dialectics".
+  • Tracking trigger -> thought -> feeling -> behavior = "CBT thought record" or "cognitive restructuring".
+  • Slow exposure to a feared stimulus = "graded exposure".
+  • Naming + accepting an emotion without trying to change it = "mindful acceptance" or "ACT defusion" depending on framing.
+  • "It makes sense you would feel X, even though I don't agree" = "validation without agreement".
+  • Pairing a new desired behavior with an existing automatic habit (e.g., breathing practice tied to tooth-brushing) = "habit stacking".
+  Use these names. Generic phrases like "psychoeducation on emotions" are not acceptable when a named technique was actually performed.
+- End the Objective section with an embedded Mental Status Exam block. MUST use LITERAL NEWLINE characters between every category. Do NOT collapse onto one line. Do NOT separate categories with semicolons or commas. Use this exact layout verbatim, including the line breaks:
+
+Mental Status Exam:
+Appearance: ...
+Behavior: ...
+Speech: ...
+Mood/Affect: ...
+Thoughts: ...
+Cognition: ...
+Insight/Judgment: ...
+
 - Screening scores if administered (PHQ-9, GAD-7, C-SSRS)
 
-ASSESSMENT: Clinical synthesis (NOT a summary — this is your ANALYSIS):
-- Current symptom presentation and severity — note what improved vs worsened
-- Diagnostic formulation: does the presentation fit the active diagnoses? Any rule-outs explored?
-- Historical patterns identified (e.g., "long-standing performance anxiety with somatic manifestations predates current stressors")
-- Functional impact on daily life, work, relationships — be specific
-- Protective factors (support system, insight, motivation) and risk factors
-- How the client's treatment preferences/style should inform the approach
-- Statement of medical necessity for continued treatment
-- If the session revealed family-of-origin, intergenerational, or longstanding coping patterns, include that synthesis here
-- If the client prefers logic/problem-solving, structure, or a certain treatment style, note how that should shape treatment
+ASSESSMENT: Clinical synthesis structured BY TREATMENT PLAN GOAL.
 
-PLAN: Actionable next steps (3-5 bullet points max):
+MANDATORY STRUCTURE when active treatment plan goals are provided:
+1. For EACH active treatment plan goal, write a labeled paragraph that begins exactly: "Goal to [paraphrase the goal]: [Significant progress / Moderate progress / Minimal progress / No improvement / Goal needs revision / Not addressed this session]." Follow that label with 2-4 sentences of SPECIFIC session evidence supporting the rating (what the client did, said, demonstrated, or struggled with this session).
+2. The "Not addressed this session" label fires ONLY when literally zero session content relates to the goal. If a goal-related topic appears even briefly — especially client-reported symptom CHANGE (improvement, worsening, stability), a related trigger, a flashback, a coping skill use, a related life event, or any direct mention of the goal area — you MUST rate it with a progress label (Significant / Moderate / Minimal / No improvement / Goal needs revision) and cite the brief evidence. Example: if a trauma goal is set and the client says "intrusive thoughts are less overwhelming this week" and mentions a subway flashback, that is "Significant progress" with evidence, not "Not addressed". Reserve "Not addressed this session" for goals where the topic genuinely never came up. Do NOT invent indirect connections; but do NOT under-credit content that IS in the transcript.
+3. After all per-goal paragraphs, write ONE synthesis paragraph covering: diagnostic formulation (does the presentation fit the active F-codes), current symptom severity, historical patterns and family-of-origin dynamics if relevant, functional impact, protective and risk factors, and an explicit statement of medical necessity for continued treatment.
+
+Other requirements:
+- Use DSM-5 terminology and reference the active F-codes by name when discussing the formulation.
+- If the session revealed family-of-origin, intergenerational, or longstanding coping patterns, include that synthesis in the closing paragraph.
+- Tie protective factors (support system, insight, motivation) and risk factors to specific session content, not generic descriptors.
+
+PLAN: Actionable next steps (5-8 specific directives, written as dense prose paragraph(s), not bulleted UI):
 - Treatment frequency, modality, and scheduling changes (include specific day/time if discussed)
-- Specific focus for next session based on this session's content
-- Interventions to use or continue (name specific techniques: CBT, exposure, MI, etc.)
-- Between-session assignments or skills to practice
-- Any referrals, medication coordination, or safety planning
-- Next appointment date/time if mentioned
-- Each bullet should reference a specific data point from the session, not generic advice
-- If the clinician introduced a specific skill in session, carry that into the plan as practice between sessions when supported by the transcript
+- At least one item naming a CONTINUING INTERVENTION from the treatment plan's intervention list (ACT, DBT, EFT, MI, CBT, exposure, etc.). Name the technique and how it applies to this client's content.
+- At least one specific TOPIC for the next session pulled from a theme that emerged this session (e.g., "Process family enmeshment and approval-seeking vs autonomy", "Explore words-vs-actions integrity gap and client's self-discrediting pattern").
+- Between-session assignments or skills to practice (e.g., distress tolerance practice, weekly substance-use log if Goal 2 is active).
+- CONCRETE CLIENT COMMITMENTS: any specific behavior, contact, boundary, or action the client COMMITTED to in session MUST appear in Plan as a discrete item. Examples: "Client will maintain individual contact with [named friend] while avoiding group gatherings", "Client will track substance use in a daily log", "Client will call [named person] before next session". Pull these verbatim from the transcript. Do NOT drop them.
+- Psychoeducation directions if relevant (e.g., trauma bonding, sunk cost fallacy, ambivalence, family-of-origin patterns).
+- Any referrals, medication coordination, or safety planning.
+- The next appointment statement appears in the INSTRUCTIONS block — use the date provided there verbatim.
+- Each directive must reference specific session content, not generic advice.
 
 CONCISENESS RULES (apply to ALL sections):
 - Each section should be 3-5 dense sentences or bullet points. Not 1-2, not 8-10.
@@ -231,14 +244,18 @@ export function buildSoapPrompt(
 
   // === INSTRUCTIONS ===
   const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(' ') || 'Clinician'
+  const next = new Date()
+  next.setDate(next.getDate() + 7)
+  const nextSessionDateStr = next.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
   sections.push(
     `=== INSTRUCTIONS ===\nGenerate a SOAP progress note for this session. The treating clinician is ${providerName}. ` +
       `Use the MSE checklist data for the Objective section's Mental Status Exam. ` +
       `Use the transcript and session notes to populate the Subjective, Assessment, and Plan sections. ` +
       `Aim for a dense, insurance-ready SimplePractice follow-up note rather than brief SOAP fragments. ` +
-      `Objective should include both session interventions/observations and the exact "Mental Status Exam:" block. ` +
-      `Assessment should explicitly state why continued treatment is medically necessary when the data supports that. ` +
-      `Reference treatment plan goals in the Assessment section when relevant. ` +
+      `Objective should include both session interventions/observations and the exact "Mental Status Exam:" block with line breaks between every category. ` +
+      `Assessment MUST contain one labeled paragraph PER active treatment plan goal (with progress rating) before the synthesis paragraph, when goals are provided. ` +
+      `Assessment must also explicitly state why continued treatment is medically necessary when the data supports that. ` +
+      `When closing the Plan, write: "Next appointment scheduled for ${nextSessionDateStr} at the same time" — substitute the verbatim date string. If the transcript explicitly states a different date/time, use that instead. ` +
       `Write in plain, simple clinical language rather than formal or academic language. ` +
       `Return ONLY valid JSON with keys: subjective, objective, assessment, plan.`
   )

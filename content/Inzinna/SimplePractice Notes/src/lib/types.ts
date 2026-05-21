@@ -570,6 +570,6 @@ export const DEFAULT_PREFERENCES: ProviderPreferences = {
   ollamaModel: 'llama3.2:3b',
   ollamaEndpoint: 'http://localhost:11434',
   openaiApiKey: '',
-  openaiModel: 'gpt-4o-mini',
+  openaiModel: 'gpt-4o',
   autoGenerateOnSessionEnd: true,
 }

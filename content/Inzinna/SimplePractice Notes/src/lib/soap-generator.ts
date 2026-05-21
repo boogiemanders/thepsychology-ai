@@ -105,7 +105,7 @@ async function generateWithOpenAI(
   prefs: ProviderPreferences,
   meta: GenerationMeta
 ): Promise<SoapDraft | null> {
-  const model = prefs.openaiModel || 'gpt-4o-mini'
+  const model = prefs.openaiModel || 'gpt-4o'
 
   // Two-pass (theme extraction → synthesis) when both transcript and notes
   // are present — this is the quality path. Falls through to single-pass if
