@@ -235,6 +235,33 @@
       }
     }
   }
+  async function fetchTreatmentPlanViaTab(url) {
+    const { tab } = await createRenderableTab(url);
+    if (!tab.id) return { plan: null };
+    try {
+      await waitForTabComplete(tab.id);
+      const deadline = Date.now() + 15e3;
+      while (Date.now() < deadline) {
+        const response = await sendMessageToTabWithRetries(tab.id, {
+          type: "SPN_EXTRACT_TREATMENT_PLAN"
+        }, 3);
+        if (response?.plan) {
+          return response;
+        }
+        await wait(750);
+      }
+      console.log("[SPN] Timed out waiting for rendered treatment plan in background tab:", url);
+      return { plan: null };
+    } catch (err) {
+      console.warn("[SPN] Background-tab treatment-plan extraction failed:", err);
+      return { plan: null };
+    } finally {
+      try {
+        await chrome.tabs.remove(tab.id);
+      } catch {
+      }
+    }
+  }
   async function fetchAssessmentViaTab(url) {
     const { tab } = await createRenderableTab(url);
     if (!tab.id) return { type: null, assessment: null };
@@ -444,6 +471,10 @@
     }
     if (message.type === "SPN_FETCH_ASSESSMENT_VIA_TAB") {
       fetchAssessmentViaTab(message.url).then((result) => sendResponse(result)).catch(() => sendResponse({ type: null, assessment: null }));
+      return true;
+    }
+    if (message.type === "SPN_FETCH_TREATMENT_PLAN_VIA_TAB") {
+      fetchTreatmentPlanViaTab(message.url).then((result) => sendResponse(result)).catch(() => sendResponse({ plan: null }));
       return true;
     }
     if (message.type === "SPN_DISCOVER_INTAKE_NOTE_URLS") {

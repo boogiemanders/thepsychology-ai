@@ -2633,10 +2633,10 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     const match = sourceUrl.match(/diagnosis_treatment_plans\/([^/?#]+)/);
     return match?.[1] ?? "";
   }
-  var FALLBACK_NOTICE_GENERIC = "[LLM unavailable \u2014 this is a skeleton draft. Edit manually before submitting.]";
+  var FALLBACK_NOTICE_GENERIC = "[LLM unavailable. This is a skeleton draft. Edit manually before submitting.]";
   function fallbackNotice(reason) {
     if (!reason) return FALLBACK_NOTICE_GENERIC;
-    return `[LLM unavailable: ${reason} \u2014 this is a skeleton draft. Edit manually before submitting.]`;
+    return `[LLM unavailable: ${reason} This is a skeleton draft. Edit manually before submitting.]`;
   }
   function buildSubjective(sessionNotes, intake, reason) {
     const parts = [fallbackNotice(reason)];
@@ -2659,17 +2659,17 @@ ${notes}`);
     const transcriptLineCount = transcript?.entries.length ?? 0;
     if (transcriptLineCount > 0) {
       parts.push(
-        `Session transcript captured (${transcriptLineCount} caption lines). LLM synthesis unavailable \u2014 review transcript manually.`
+        `Session transcript captured (${transcriptLineCount} caption lines). LLM synthesis unavailable. Review transcript manually.`
       );
     } else {
       parts.push("No session transcript or formal MSE documented. Add manually.");
     }
     const measurementLines = [];
     if (intake?.phq9) {
-      measurementLines.push(`PHQ-9 (intake): ${intake.phq9.totalScore}/27 \u2014 ${intake.phq9.severity}`);
+      measurementLines.push(`PHQ-9 (intake): ${intake.phq9.totalScore}/27, ${intake.phq9.severity}`);
     }
     if (intake?.gad7) {
-      measurementLines.push(`GAD-7 (intake): ${intake.gad7.totalScore}/21 \u2014 ${intake.gad7.severity}`);
+      measurementLines.push(`GAD-7 (intake): ${intake.gad7.totalScore}/21, ${intake.gad7.severity}`);
     }
     if (measurementLines.length) {
       parts.push(measurementLines.join("\n"));

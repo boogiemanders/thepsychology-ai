@@ -104,6 +104,26 @@ function collectRenderedIntakeNoteUrls(clientId = getClientIdFromUrl()): string[
   ]))
 }
 
+function extractTreatmentPlanUrlsFromText(text: string, clientId = getClientIdFromUrl()): string[] {
+  const pattern = clientId
+    ? new RegExp(`/clients/${escapeRegExp(clientId)}/diagnosis_treatment_plans/\\d+`, 'g')
+    : /\/clients\/[^/]+\/diagnosis_treatment_plans\/\d+/g
+
+  const candidates = [text, text.replace(/\\\//g, '/')]
+  return Array.from(new Set(
+    candidates.flatMap((c) => c.match(pattern) ?? [])
+      .map((m) => toAbsoluteUrl(m))
+      .filter(Boolean)
+  ))
+}
+
+function collectRenderedTreatmentPlanUrls(clientId = getClientIdFromUrl()): string[] {
+  return Array.from(new Set([
+    ...extractTreatmentPlanUrlsFromText(document.documentElement.outerHTML, clientId),
+    ...extractSameClientPageUrlsFromRoot(document, clientId).filter((url) => url.includes('/diagnosis_treatment_plans/')),
+  ]))
+}
+
 async function discoverIntakeNoteUrlsViaBackground(clientId: string): Promise<string[]> {
   try {
     const response = await chrome.runtime.sendMessage({
@@ -1267,6 +1287,41 @@ async function handleCaptureClick(): Promise<void> {
   }
 }
 
+async function fetchTreatmentPlanViaTab(): Promise<TreatmentPlanData | null> {
+  const urls = collectRenderedTreatmentPlanUrls()
+  if (urls.length === 0) {
+    console.log('[SPN] No treatment plan URL found on overview page')
+    return null
+  }
+
+  // Newest plan URL typically has the highest ID — try them all, keep the one with data.
+  const sorted = [...urls].sort((a, b) => {
+    const ai = parseInt(a.match(/diagnosis_treatment_plans\/(\d+)/)?.[1] ?? '0', 10)
+    const bi = parseInt(b.match(/diagnosis_treatment_plans\/(\d+)/)?.[1] ?? '0', 10)
+    return bi - ai
+  })
+
+  for (const url of sorted) {
+    try {
+      const absUrl = toAbsoluteUrl(url)
+      if (!absUrl) continue
+      console.log(`[SPN] Fetching treatment plan via background tab: ${absUrl}`)
+      const response = await chrome.runtime.sendMessage({
+        type: 'SPN_FETCH_TREATMENT_PLAN_VIA_TAB',
+        url: absUrl,
+      }) as { plan: TreatmentPlanData | null } | null
+
+      if (response?.plan) {
+        console.log(`[SPN] Captured treatment plan from ${absUrl}`)
+        return response.plan
+      }
+    } catch (err) {
+      console.warn(`[SPN] Background-tab treatment-plan extraction failed for ${url}:`, err)
+    }
+  }
+  return null
+}
+
 async function handleOverviewCaptureClick(): Promise<void> {
   const btn = document.getElementById('spn-overview-btn')
   const originalLabel = btn?.textContent ?? ''
@@ -1276,16 +1331,17 @@ async function handleOverviewCaptureClick(): Promise<void> {
   }
   try {
     assertExtensionContext()
-    showToast('Capturing overview, intake form, and assessments...', 'success')
+    showToast('Capturing overview, intake form, assessments, and treatment plan...', 'success')
 
     const clicked = await expandReadMoreSections()
     const overviewClinicalNote = collectOverviewClinicalNotes()
 
-    // Fetch assessments and intake form data in parallel via background tabs
+    // Fetch assessments, intake form, and treatment plan in parallel via background tabs
     const intakeNoteUrls = await discoverIntakeNoteUrls()
-    const [assessments, intakeFromTab] = await Promise.all([
+    const [assessments, intakeFromTab, treatmentPlan] = await Promise.all([
       fetchAssessmentsFromLinks(),
       fetchIntakeFormViaTab(intakeNoteUrls),
+      fetchTreatmentPlanViaTab(),
     ])
 
     // Start with intake form data if we got it (has the full Q&A, demographics, etc.)
@@ -1318,7 +1374,8 @@ async function handleOverviewCaptureClick(): Promise<void> {
       !!assessments.gad7 ||
       !!assessments.phq9 ||
       !!assessments.dass21 ||
-      !!assessments.cssrs
+      !!assessments.cssrs ||
+      !!treatmentPlan
 
     if (!hasProfileData) {
       showToast('No overview note or assessment data found on this page.', 'error')
@@ -1326,6 +1383,9 @@ async function handleOverviewCaptureClick(): Promise<void> {
     }
 
     await mergeIntake(partial)
+    if (treatmentPlan) {
+      await saveTreatmentPlan(treatmentPlan)
+    }
 
     const extras: string[] = []
     if (intakeFromTab) extras.push(`intake form (${intakeFromTab.rawQA?.length ?? 0} Q&A)`)
@@ -1334,6 +1394,12 @@ async function handleOverviewCaptureClick(): Promise<void> {
     if (assessments.phq9) extras.push(`PHQ-9 ${assessments.phq9.totalScore}`)
     if (assessments.dass21) extras.push(`DASS-21 ${assessments.dass21.totalScore}`)
     if (assessments.cssrs) extras.push(`C-SSRS ${assessments.cssrs.totalScore} yes`)
+    if (treatmentPlan) {
+      const plnParts: string[] = []
+      if (treatmentPlan.diagnoses.length) plnParts.push(`${treatmentPlan.diagnoses.length} dx`)
+      if (treatmentPlan.goals.length) plnParts.push(`${treatmentPlan.goals.length} goals`)
+      extras.push(`Tx plan${plnParts.length ? ` (${plnParts.join(', ')})` : ''}`)
+    }
     if (clicked) extras.push(`expanded ${clicked} "Read More" section(s)`)
 
     const name = partial.fullName || [partial.firstName, partial.lastName].filter(Boolean).join(' ') || 'client'
@@ -1539,6 +1605,17 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
     const intake = extractIntakeData()
     const fieldCount = countCapturedFields(intake)
     sendResponse({ intake: fieldCount > 0 ? intake : null })
+    return true
+  }
+
+  if (msg?.type === 'SPN_EXTRACT_TREATMENT_PLAN') {
+    if (!isTreatmentPlanPage()) {
+      sendResponse({ plan: null })
+      return true
+    }
+    const plan = extractTreatmentPlanData()
+    const hasData = plan.diagnoses.length > 0 || plan.goals.length > 0 || !!plan.presentingProblem
+    sendResponse({ plan: hasData ? plan : null })
     return true
   }
 })

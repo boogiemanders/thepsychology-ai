@@ -54,11 +54,11 @@ function extractTreatmentPlanId(treatmentPlan: TreatmentPlanData | null): string
 }
 
 const FALLBACK_NOTICE_GENERIC =
-  '[LLM unavailable — this is a skeleton draft. Edit manually before submitting.]'
+  '[LLM unavailable. This is a skeleton draft. Edit manually before submitting.]'
 
 function fallbackNotice(reason?: string): string {
   if (!reason) return FALLBACK_NOTICE_GENERIC
-  return `[LLM unavailable: ${reason} — this is a skeleton draft. Edit manually before submitting.]`
+  return `[LLM unavailable: ${reason} This is a skeleton draft. Edit manually before submitting.]`
 }
 
 function buildSubjective(sessionNotes: string, intake: IntakeData | null, reason?: string): string {
@@ -90,7 +90,7 @@ function buildObjective(
   const transcriptLineCount = transcript?.entries.length ?? 0
   if (transcriptLineCount > 0) {
     parts.push(
-      `Session transcript captured (${transcriptLineCount} caption lines). LLM synthesis unavailable — review transcript manually.`
+      `Session transcript captured (${transcriptLineCount} caption lines). LLM synthesis unavailable. Review transcript manually.`
     )
   } else {
     parts.push('No session transcript or formal MSE documented. Add manually.')
@@ -98,10 +98,10 @@ function buildObjective(
 
   const measurementLines: string[] = []
   if (intake?.phq9) {
-    measurementLines.push(`PHQ-9 (intake): ${intake.phq9.totalScore}/27 — ${intake.phq9.severity}`)
+    measurementLines.push(`PHQ-9 (intake): ${intake.phq9.totalScore}/27, ${intake.phq9.severity}`)
   }
   if (intake?.gad7) {
-    measurementLines.push(`GAD-7 (intake): ${intake.gad7.totalScore}/21 — ${intake.gad7.severity}`)
+    measurementLines.push(`GAD-7 (intake): ${intake.gad7.totalScore}/21, ${intake.gad7.severity}`)
   }
   if (measurementLines.length) {
     parts.push(measurementLines.join('\n'))

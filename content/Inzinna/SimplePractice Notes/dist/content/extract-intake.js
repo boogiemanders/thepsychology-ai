@@ -332,6 +332,19 @@
       ...extractSameClientPageUrlsFromRoot(document, clientId).filter((url) => url.includes("/intake_notes/"))
     ]));
   }
+  function extractTreatmentPlanUrlsFromText(text, clientId = getClientIdFromUrl()) {
+    const pattern = clientId ? new RegExp(`/clients/${escapeRegExp(clientId)}/diagnosis_treatment_plans/\\d+`, "g") : /\/clients\/[^/]+\/diagnosis_treatment_plans\/\d+/g;
+    const candidates = [text, text.replace(/\\\//g, "/")];
+    return Array.from(new Set(
+      candidates.flatMap((c) => c.match(pattern) ?? []).map((m) => toAbsoluteUrl(m)).filter(Boolean)
+    ));
+  }
+  function collectRenderedTreatmentPlanUrls(clientId = getClientIdFromUrl()) {
+    return Array.from(/* @__PURE__ */ new Set([
+      ...extractTreatmentPlanUrlsFromText(document.documentElement.outerHTML, clientId),
+      ...extractSameClientPageUrlsFromRoot(document, clientId).filter((url) => url.includes("/diagnosis_treatment_plans/"))
+    ]));
+  }
   async function discoverIntakeNoteUrlsViaBackground(clientId) {
     try {
       const response = await chrome.runtime.sendMessage({
@@ -1191,6 +1204,36 @@ ${text}`).join("\n\n");
       }
     }
   }
+  async function fetchTreatmentPlanViaTab() {
+    const urls = collectRenderedTreatmentPlanUrls();
+    if (urls.length === 0) {
+      console.log("[SPN] No treatment plan URL found on overview page");
+      return null;
+    }
+    const sorted = [...urls].sort((a, b) => {
+      const ai = parseInt(a.match(/diagnosis_treatment_plans\/(\d+)/)?.[1] ?? "0", 10);
+      const bi = parseInt(b.match(/diagnosis_treatment_plans\/(\d+)/)?.[1] ?? "0", 10);
+      return bi - ai;
+    });
+    for (const url of sorted) {
+      try {
+        const absUrl = toAbsoluteUrl(url);
+        if (!absUrl) continue;
+        console.log(`[SPN] Fetching treatment plan via background tab: ${absUrl}`);
+        const response = await chrome.runtime.sendMessage({
+          type: "SPN_FETCH_TREATMENT_PLAN_VIA_TAB",
+          url: absUrl
+        });
+        if (response?.plan) {
+          console.log(`[SPN] Captured treatment plan from ${absUrl}`);
+          return response.plan;
+        }
+      } catch (err) {
+        console.warn(`[SPN] Background-tab treatment-plan extraction failed for ${url}:`, err);
+      }
+    }
+    return null;
+  }
   async function handleOverviewCaptureClick() {
     const btn = document.getElementById("spn-overview-btn");
     const originalLabel = btn?.textContent ?? "";
@@ -1200,13 +1243,14 @@ ${text}`).join("\n\n");
     }
     try {
       assertExtensionContext();
-      showToast("Capturing overview, intake form, and assessments...", "success");
+      showToast("Capturing overview, intake form, assessments, and treatment plan...", "success");
       const clicked = await expandReadMoreSections();
       const overviewClinicalNote = collectOverviewClinicalNotes();
       const intakeNoteUrls = await discoverIntakeNoteUrls();
-      const [assessments, intakeFromTab] = await Promise.all([
+      const [assessments, intakeFromTab, treatmentPlan] = await Promise.all([
         fetchAssessmentsFromLinks(),
-        fetchIntakeFormViaTab(intakeNoteUrls)
+        fetchIntakeFormViaTab(intakeNoteUrls),
+        fetchTreatmentPlanViaTab()
       ]);
       const overviewName = extractClientNameFromPage();
       const overviewDob = extractDobFromPage();
@@ -1224,12 +1268,15 @@ ${text}`).join("\n\n");
       if (assessments.phq9) partial.phq9 = assessments.phq9;
       if (assessments.cssrs) partial.cssrs = assessments.cssrs;
       if (assessments.dass21) partial.dass21 = assessments.dass21;
-      const hasProfileData = !!partial.fullName || !!partial.firstName || !!partial.dob || !!overviewClinicalNote || !!intakeFromTab || !!assessments.gad7 || !!assessments.phq9 || !!assessments.dass21 || !!assessments.cssrs;
+      const hasProfileData = !!partial.fullName || !!partial.firstName || !!partial.dob || !!overviewClinicalNote || !!intakeFromTab || !!assessments.gad7 || !!assessments.phq9 || !!assessments.dass21 || !!assessments.cssrs || !!treatmentPlan;
       if (!hasProfileData) {
         showToast("No overview note or assessment data found on this page.", "error");
         return;
       }
       await mergeIntake(partial);
+      if (treatmentPlan) {
+        await saveTreatmentPlan(treatmentPlan);
+      }
       const extras = [];
       if (intakeFromTab) extras.push(`intake form (${intakeFromTab.rawQA?.length ?? 0} Q&A)`);
       if (overviewClinicalNote) extras.push(`${overviewClinicalNote.split(/\n\n+/).length} note block(s)`);
@@ -1237,6 +1284,12 @@ ${text}`).join("\n\n");
       if (assessments.phq9) extras.push(`PHQ-9 ${assessments.phq9.totalScore}`);
       if (assessments.dass21) extras.push(`DASS-21 ${assessments.dass21.totalScore}`);
       if (assessments.cssrs) extras.push(`C-SSRS ${assessments.cssrs.totalScore} yes`);
+      if (treatmentPlan) {
+        const plnParts = [];
+        if (treatmentPlan.diagnoses.length) plnParts.push(`${treatmentPlan.diagnoses.length} dx`);
+        if (treatmentPlan.goals.length) plnParts.push(`${treatmentPlan.goals.length} goals`);
+        extras.push(`Tx plan${plnParts.length ? ` (${plnParts.join(", ")})` : ""}`);
+      }
       if (clicked) extras.push(`expanded ${clicked} "Read More" section(s)`);
       const name = partial.fullName || [partial.firstName, partial.lastName].filter(Boolean).join(" ") || "client";
       showToast(`Captured overview prep for ${name}${extras.length ? `: ${extras.join(", ")}` : ""}`, "success");
@@ -1402,6 +1455,16 @@ ${text}`).join("\n\n");
       const intake = extractIntakeData();
       const fieldCount = countCapturedFields(intake);
       sendResponse({ intake: fieldCount > 0 ? intake : null });
+      return true;
+    }
+    if (msg?.type === "SPN_EXTRACT_TREATMENT_PLAN") {
+      if (!isTreatmentPlanPage()) {
+        sendResponse({ plan: null });
+        return true;
+      }
+      const plan = extractTreatmentPlanData();
+      const hasData = plan.diagnoses.length > 0 || plan.goals.length > 0 || !!plan.presentingProblem;
+      sendResponse({ plan: hasData ? plan : null });
       return true;
     }
   });
