@@ -97,6 +97,56 @@ export function PlanMatchLanding() {
         </SectionHeader>
 
         <div className="w-full max-w-6xl mx-auto px-6 py-16">
+          {/* Relative wrapper so the SVG flow overlay can span columns + output card. */}
+          <div className="relative">
+          {/* Flow lines: hidden on mobile, drawn on scroll into view */}
+          <motion.svg
+            aria-hidden
+            className="pointer-events-none absolute inset-0 hidden lg:block w-full h-full"
+            viewBox="0 0 1000 1000"
+            preserveAspectRatio="none"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {/* A: left column bottom-right -> engine top-left */}
+            <motion.path
+              d="M 280 360 C 360 380, 380 440, 420 480"
+              fill="none"
+              stroke="hsl(var(--primary))"
+              strokeOpacity="0.55"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              vectorEffect="non-scaling-stroke"
+              variants={{ hidden: { pathLength: 0 }, visible: { pathLength: 1 } }}
+              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+            />
+            {/* B: right column bottom-left -> engine top-right */}
+            <motion.path
+              d="M 720 360 C 640 380, 620 440, 580 480"
+              fill="none"
+              stroke="hsl(var(--primary))"
+              strokeOpacity="0.55"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              vectorEffect="non-scaling-stroke"
+              variants={{ hidden: { pathLength: 0 }, visible: { pathLength: 1 } }}
+              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+            />
+            {/* C: engine bottom -> output card top */}
+            <motion.path
+              d="M 500 720 L 500 880"
+              fill="none"
+              stroke="hsl(var(--primary))"
+              strokeOpacity="0.55"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              vectorEffect="non-scaling-stroke"
+              variants={{ hidden: { pathLength: 0 }, visible: { pathLength: 1 } }}
+              transition={{ duration: 0.7, delay: 1.0, ease: "easeOut" }}
+            />
+          </motion.svg>
+
           {/* Three columns: client / engine / psychologist. Borders separate, not cards. */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-12 lg:gap-0 lg:divide-x lg:divide-border/60">
             <motion.div
@@ -105,7 +155,7 @@ export function PlanMatchLanding() {
               className="flex flex-col lg:pr-10"
             >
               <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-4">
-                You answer
+                Client
               </p>
               <h3 className="text-lg font-medium tracking-tight mb-8">
                 Seven questions. About five minutes.
@@ -164,7 +214,7 @@ export function PlanMatchLanding() {
               className="flex flex-col lg:pl-10"
             >
               <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-4">
-                They answer
+                Clinician
               </p>
               <h3 className="text-lg font-medium tracking-tight mb-8">
                 Seven questions. Verified before they go live.
@@ -185,7 +235,7 @@ export function PlanMatchLanding() {
           </div>
 
           {/* Output: Sarah Chen card */}
-          <div className="mt-16 flex flex-col items-center gap-4">
+          <div id="match-output" className="relative z-10 mt-20 flex flex-col items-center gap-4">
             <div className="flex items-center gap-2 text-muted-foreground/70">
               <div className="h-px w-12 bg-border" />
               <span className="text-[10px] font-mono uppercase tracking-[0.2em]">
@@ -228,6 +278,7 @@ export function PlanMatchLanding() {
                 </div>
               </div>
             </motion.div>
+          </div>
           </div>
         </div>
       </section>
