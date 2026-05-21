@@ -2,11 +2,9 @@
 
 import Link from "next/link"
 import { motion } from "motion/react"
-import { ArrowRight, ArrowLeft, ArrowDown } from "lucide-react"
 
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
-import { MagicCard } from "@/components/ui/magic-card"
 import { SectionHeader } from "@/components/section-header"
 import { FooterSection } from "@/components/sections/footer-section"
 import { PlanMatchClient } from "./plan-match-client"
@@ -80,7 +78,7 @@ export function PlanMatchLanding() {
           <a href="#try-it">
             <InteractiveHoverButton
               text="Try it"
-              hoverText="Scroll to the form"
+              hoverText="Try it"
               inverted
             />
           </a>
@@ -99,144 +97,90 @@ export function PlanMatchLanding() {
         </SectionHeader>
 
         <div className="w-full max-w-6xl mx-auto px-6 py-16">
-          {/* Three columns: client / engine / psychologist */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.25fr_1fr] gap-6 lg:gap-8 items-stretch">
-            {/* Left: client */}
+          {/* Three columns: client / engine / psychologist. Borders separate, not cards. */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-12 lg:gap-0 lg:divide-x lg:divide-border/60">
             <motion.div
               {...fadeUp}
               transition={{ duration: 0.5 }}
-              className="flex flex-col"
+              className="flex flex-col lg:pr-10"
             >
-              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-3">
+              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-4">
                 You answer
               </p>
-              <h3 className="text-lg font-medium tracking-tight mb-5">
-                Seven questions, about five minutes.
+              <h3 className="text-lg font-medium tracking-tight mb-8">
+                Seven questions. About five minutes.
               </h3>
-              <ol className="space-y-3 flex-1">
+              <ol className="space-y-5 flex-1">
                 {clientStems.map((stem, i) => (
-                  <motion.li
-                    key={stem}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.4, delay: i * 0.05 }}
-                    className="flex gap-3 rounded-lg border border-border/60 bg-background px-3.5 py-2.5"
-                  >
-                    <span className="font-mono text-[10px] text-muted-foreground/50 pt-0.5 shrink-0">
+                  <li key={stem} className="flex gap-4">
+                    <span className="font-mono text-[10px] text-muted-foreground/40 pt-1 shrink-0 tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-[13px] text-foreground/90 leading-snug">
+                    <span className="text-[14px] text-foreground/85 leading-relaxed">
                       {stem}
                     </span>
-                  </motion.li>
+                  </li>
                 ))}
               </ol>
-              <div className="mt-5 flex items-center justify-center lg:justify-end gap-2 text-primary">
-                <span className="text-[11px] font-medium uppercase tracking-[0.18em]">
-                  Into the engine
-                </span>
-                <ArrowRight className="size-4 hidden lg:block" />
-                <ArrowDown className="size-4 lg:hidden" />
-              </div>
             </motion.div>
 
-            {/* Center: engine */}
             <motion.div
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="flex"
+              className="flex flex-col lg:px-10"
             >
-              <MagicCard
-                className="rounded-2xl w-full"
-                gradientFrom="hsl(var(--primary))"
-                gradientTo="hsl(var(--primary))"
-                gradientOpacity={0.15}
-              >
-                <div className="p-6 md:p-8 flex flex-col h-full">
-                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-primary mb-3">
-                    Matching engine
-                  </p>
-                  <h3 className="text-xl font-medium tracking-tight mb-2">
-                    How we rank.
-                  </h3>
-                  <p className="text-[13px] text-muted-foreground leading-relaxed mb-6">
-                    Filter by what&apos;s non-negotiable. Score the rest on
-                    clinical fit, style, and culture. Highest total wins.
-                  </p>
-
-                  <ul className="space-y-3 flex-1">
-                    {engineDimensions.map((dim, i) => (
-                      <motion.li
-                        key={dim.label}
-                        initial={{ opacity: 0, y: 8 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.4, delay: 0.2 + i * 0.06 }}
-                        className="flex items-baseline justify-between gap-4 border-b border-border/40 pb-3 last:border-b-0 last:pb-0"
-                      >
-                        <div className="min-w-0">
-                          <p className="text-[13px] font-medium text-foreground">
-                            {dim.label}
-                          </p>
-                          <p className="text-[11px] text-muted-foreground leading-snug mt-0.5">
-                            {dim.note}
-                          </p>
-                        </div>
-                        <span
-                          className={
-                            dim.weight === "Filter"
-                              ? "text-[10px] font-mono uppercase tracking-wider text-primary shrink-0"
-                              : "text-sm font-mono tabular-nums text-foreground shrink-0"
-                          }
-                        >
-                          {dim.weight}
-                        </span>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-              </MagicCard>
+              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-primary mb-4">
+                Matching engine
+              </p>
+              <h3 className="text-lg font-medium tracking-tight mb-8">
+                How we rank.
+              </h3>
+              <ul className="space-y-5 flex-1">
+                {engineDimensions.map((dim) => (
+                  <li
+                    key={dim.label}
+                    className="flex items-baseline justify-between gap-4"
+                  >
+                    <span className="text-[14px] text-foreground/85">
+                      {dim.label}
+                    </span>
+                    <span
+                      className={
+                        dim.weight === "Filter"
+                          ? "text-[10px] font-mono uppercase tracking-wider text-primary shrink-0"
+                          : "text-sm font-mono tabular-nums text-muted-foreground shrink-0"
+                      }
+                    >
+                      {dim.weight}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
 
-            {/* Right: psychologist */}
             <motion.div
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col"
+              className="flex flex-col lg:pl-10"
             >
-              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-3">
+              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-4">
                 They answer
               </p>
-              <h3 className="text-lg font-medium tracking-tight mb-5">
-                Seven questions, verified before they go live.
+              <h3 className="text-lg font-medium tracking-tight mb-8">
+                Seven questions. Verified before they go live.
               </h3>
-              <ol className="space-y-3 flex-1">
+              <ol className="space-y-5 flex-1">
                 {providerStems.map((stem, i) => (
-                  <motion.li
-                    key={stem}
-                    initial={{ opacity: 0, x: 10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.4, delay: 0.3 + i * 0.05 }}
-                    className="flex gap-3 rounded-lg border border-border/60 bg-background px-3.5 py-2.5"
-                  >
-                    <span className="font-mono text-[10px] text-muted-foreground/50 pt-0.5 shrink-0">
+                  <li key={stem} className="flex gap-4">
+                    <span className="font-mono text-[10px] text-muted-foreground/40 pt-1 shrink-0 tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-[13px] text-foreground/90 leading-snug">
+                    <span className="text-[14px] text-foreground/85 leading-relaxed">
                       {stem}
                     </span>
-                  </motion.li>
+                  </li>
                 ))}
               </ol>
-              <div className="mt-5 flex items-center justify-center lg:justify-start gap-2 text-primary">
-                <ArrowLeft className="size-4 hidden lg:block" />
-                <ArrowDown className="size-4 lg:hidden" />
-                <span className="text-[11px] font-medium uppercase tracking-[0.18em]">
-                  Into the engine
-                </span>
-              </div>
             </motion.div>
           </div>
 
