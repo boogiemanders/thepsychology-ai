@@ -8,6 +8,8 @@ export type ItemScript = {
   stageDirection?: string
   /** Optional stim book image path (under /public). */
   stim?: string
+  /** Optional correct multiple-choice answer (1-based) — examiner-only hint. */
+  answer?: number
   scoring: { '2': string[]; '1': string[]; '0': string[] }
   corrective?: string | null
 }
@@ -823,34 +825,34 @@ const RAW = {
     "14": { "prompt": "", "stim": "stim1/p018.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null }
   },
   "matrix": {
-    "SA": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p020.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "SB": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p021.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "1":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p022.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "2":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p023.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "3":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p024.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "4":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p025.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "5":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p026.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "6":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p027.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "7":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p028.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "8":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p029.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "9":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p030.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "10": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p031.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "11": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p032.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "12": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p033.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "13": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p034.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "14": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p035.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "15": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p036.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "16": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p037.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "17": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p038.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "18": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p039.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "19": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p040.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "20": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p041.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "21": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p042.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "22": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p043.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "23": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p044.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "24": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p045.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "25": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p046.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
-    "26": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p047.png", "scoring": { "2": [], "1": [], "0": [] }, "corrective": null }
+    "SA": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p020.png", "answer": 5, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "SB": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p021.png", "answer": 4, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "1":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p022.png", "answer": 1, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "2":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p023.png", "answer": 3, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "3":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p024.png", "answer": 2, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "4":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p025.png", "answer": 5, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "5":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p026.png", "answer": 3, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "6":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p027.png", "answer": 4, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "7":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p028.png", "answer": 4, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "8":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p029.png", "answer": 3, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "9":  { "prompt": "Which one here finishes the picture?", "stim": "stim1/p030.png", "answer": 1, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "10": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p031.png", "answer": 5, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "11": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p032.png", "answer": 2, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "12": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p033.png", "answer": 1, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "13": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p034.png", "answer": 2, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "14": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p035.png", "answer": 5, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "15": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p036.png", "answer": 4, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "16": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p037.png", "answer": 1, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "17": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p038.png", "answer": 3, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "18": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p039.png", "answer": 2, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "19": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p040.png", "answer": 1, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "20": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p041.png", "answer": 5, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "21": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p042.png", "answer": 1, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "22": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p043.png", "answer": 3, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "23": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p044.png", "answer": 2, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "24": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p045.png", "answer": 4, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "25": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p046.png", "answer": 5, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null },
+    "26": { "prompt": "Which one here finishes the picture?", "stim": "stim1/p047.png", "answer": 3, "scoring": { "2": [], "1": [], "0": [] }, "corrective": null }
   },
   "vocab": {
     "1": {

@@ -414,22 +414,32 @@ export default function Wais5Form() {
     )
   }
 
-  const ChoicePills = ({ name, count }: { name: string; count: number }) => {
+  const ChoicePills = ({ name, count, answer }: { name: string; count: number; answer?: number }) => {
     if (count <= 0) return <TextField name={`${name}-r`} placeholder="response" className="w-40" />
     const selected = data[name + '-choice']
     return (
       <div className="flex flex-wrap items-center gap-1">
         {range(1, count).map(v => {
           const isSelected = selected === String(v)
+          const isAnswer = answer === v
           return (
             <button
               key={v}
               type="button"
-              onClick={() => set(name + '-choice', isSelected ? '' : String(v))}
+              title={isAnswer ? 'Correct answer (examiner view)' : undefined}
+              onClick={() => {
+                const clearing = isSelected
+                set(name + '-choice', clearing ? '' : String(v))
+                if (typeof answer === 'number') {
+                  set(name, clearing ? '' : (v === answer ? '1' : '0'))
+                }
+              }}
               className={[
                 'min-w-[24px] rounded-full border px-2 py-0.5 text-[12px] transition-colors',
                 isSelected
                   ? 'border-[#534D8A] bg-[#534D8A] text-white'
+                  : isAnswer
+                  ? 'border-[#4EBFD4] text-[#4EBFD4] dark:text-[#4EBFD4] bg-[#4EBFD4]/10 font-semibold hover:bg-[#4EBFD4]/20'
                   : 'border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:border-slate-400 dark:hover:border-zinc-600',
               ].join(' ')}
             >
@@ -653,7 +663,7 @@ export default function Wais5Form() {
                     ) : null}
                   </td>
                 ) : null}
-                <td className="px-2 py-1"><ChoicePills name={name} count={st.choices || 0} /></td>
+                <td className="px-2 py-1"><ChoicePills name={name} count={st.choices || 0} answer={script?.answer} /></td>
                 <td className="w-32 px-2 py-1"><ScorePills name={name} kind={kind} /></td>
               </tr>
             )
