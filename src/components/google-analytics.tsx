@@ -26,8 +26,11 @@ export function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
     const search = window.location.search
     const pagePath = search ? `${pathname}?${search}` : pathname
 
-    window.gtag("config", measurementId, {
+    window.gtag("event", "page_view", {
       page_path: pagePath,
+      page_location: window.location.href,
+      page_title: document.title,
+      send_to: measurementId,
     })
   }, [measurementId, pathname])
 
