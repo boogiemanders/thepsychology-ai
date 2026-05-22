@@ -1,11 +1,13 @@
 "use client"
 
 import Link from "next/link"
+import { useRef } from "react"
 import { motion } from "motion/react"
 
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { SectionHeader } from "@/components/section-header"
+import { AnimatedBeam } from "@/components/ui/animated-beam"
 import { FooterSection } from "@/components/sections/footer-section"
 import { PlanMatchClient } from "./plan-match-client"
 
@@ -45,6 +47,12 @@ const fadeUp = {
 }
 
 export function PlanMatchLanding() {
+  const flowContainerRef = useRef<HTMLDivElement>(null)
+  const clientColRef = useRef<HTMLDivElement>(null)
+  const engineColRef = useRef<HTMLDivElement>(null)
+  const clinicianColRef = useRef<HTMLDivElement>(null)
+  const matchOutputRef = useRef<HTMLDivElement>(null)
+
   return (
     <div className="flex flex-col w-full">
       {/* Hero */}
@@ -97,59 +105,56 @@ export function PlanMatchLanding() {
         </SectionHeader>
 
         <div className="w-full max-w-6xl mx-auto px-6 py-16">
-          {/* Relative wrapper so the SVG flow overlay can span columns + output card. */}
-          <div className="relative">
-          {/* Flow lines: hidden on mobile, drawn on scroll into view */}
-          <motion.svg
-            aria-hidden
-            className="pointer-events-none absolute inset-0 hidden lg:block w-full h-full"
-            viewBox="0 0 1000 1000"
-            preserveAspectRatio="none"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {/* A: left column bottom-right -> engine top-left */}
-            <motion.path
-              d="M 280 360 C 360 380, 380 440, 420 480"
-              fill="none"
-              stroke="hsl(var(--primary))"
-              strokeOpacity="0.55"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-              variants={{ hidden: { pathLength: 0 }, visible: { pathLength: 1 } }}
-              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+          {/* Relative wrapper so the AnimatedBeam SVGs can span columns + output card. */}
+          <div ref={flowContainerRef} className="relative">
+          {/* Animated flow beams: hidden on mobile, follow DOM refs */}
+          <div className="hidden lg:block">
+            <AnimatedBeam
+              containerRef={flowContainerRef}
+              fromRef={clientColRef}
+              toRef={engineColRef}
+              curvature={0}
+              duration={4}
+              delay={0}
+              pathColor="hsl(var(--border))"
+              pathOpacity={0.4}
+              pathWidth={1.5}
+              gradientStartColor="hsl(var(--primary))"
+              gradientStopColor="hsl(var(--primary))"
             />
-            {/* B: right column bottom-left -> engine top-right */}
-            <motion.path
-              d="M 720 360 C 640 380, 620 440, 580 480"
-              fill="none"
-              stroke="hsl(var(--primary))"
-              strokeOpacity="0.55"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-              variants={{ hidden: { pathLength: 0 }, visible: { pathLength: 1 } }}
-              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+            <AnimatedBeam
+              containerRef={flowContainerRef}
+              fromRef={clinicianColRef}
+              toRef={engineColRef}
+              curvature={0}
+              duration={4}
+              delay={0.5}
+              reverse
+              pathColor="hsl(var(--border))"
+              pathOpacity={0.4}
+              pathWidth={1.5}
+              gradientStartColor="hsl(var(--primary))"
+              gradientStopColor="hsl(var(--primary))"
             />
-            {/* C: engine bottom -> output card top */}
-            <motion.path
-              d="M 500 720 L 500 880"
-              fill="none"
-              stroke="hsl(var(--primary))"
-              strokeOpacity="0.55"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-              variants={{ hidden: { pathLength: 0 }, visible: { pathLength: 1 } }}
-              transition={{ duration: 0.7, delay: 1.0, ease: "easeOut" }}
+            <AnimatedBeam
+              containerRef={flowContainerRef}
+              fromRef={engineColRef}
+              toRef={matchOutputRef}
+              curvature={0}
+              duration={3}
+              delay={1.5}
+              pathColor="hsl(var(--border))"
+              pathOpacity={0.4}
+              pathWidth={1.5}
+              gradientStartColor="hsl(var(--primary))"
+              gradientStopColor="hsl(var(--primary))"
             />
-          </motion.svg>
+          </div>
 
           {/* Three columns: client / engine / psychologist. Borders separate, not cards. */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-12 lg:gap-0 lg:divide-x lg:divide-border/60">
             <motion.div
+              ref={clientColRef}
               {...fadeUp}
               transition={{ duration: 0.5 }}
               className="flex flex-col lg:pr-10"
@@ -175,6 +180,7 @@ export function PlanMatchLanding() {
             </motion.div>
 
             <motion.div
+              ref={engineColRef}
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.15 }}
               className="flex flex-col lg:px-10"
@@ -209,6 +215,7 @@ export function PlanMatchLanding() {
             </motion.div>
 
             <motion.div
+              ref={clinicianColRef}
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col lg:pl-10"
@@ -245,6 +252,7 @@ export function PlanMatchLanding() {
             </div>
 
             <motion.div
+              ref={matchOutputRef}
               className="rounded-xl border border-primary/30 bg-primary/[0.02] p-6 space-y-4 shadow-sm w-full max-w-md"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
