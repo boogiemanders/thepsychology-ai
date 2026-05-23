@@ -118,6 +118,8 @@ Same daily structure. These domains need less intensive work since they were mid
 
 Do not cram this week. You will not learn meaningful new content in 7 days. Your job this week is to stay sharp and stay calm.
 
+Want a study plan that adjusts week to week instead of one you have to manually re-plan? [Try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=free-eppp-study-plan). It builds either of the schedules below for you, with your actual diagnostic scores as the input.
+
 ## The 6-Month EPPP Study Plan
 
 This plan is for candidates who are working full-time, completing postdoc hours, or have other significant time constraints. The pace is slower, but the total study hours end up in the same 150-250 range.

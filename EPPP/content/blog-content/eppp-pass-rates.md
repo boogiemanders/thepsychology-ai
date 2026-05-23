@@ -52,6 +52,8 @@ APA-accredited programs generally produce higher pass rates, likely due to stand
 
 If you're from a non-accredited program, you can absolutely pass, but you should plan for more structured self-study to fill potential curriculum gaps. A diagnostic practice exam will tell you exactly where those gaps are.
 
+Your individual pass probability depends on your domain scores far more than on your degree type. [Take a free diagnostic on thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-pass-rates) and you'll know exactly where you stand on each of the 8 EPPP domains in 15 minutes. That number predicts your outcome better than any population statistic.
+
 ## Pass Rates by Attempt Number
 
 | Attempt | Approximate Pass Rate |

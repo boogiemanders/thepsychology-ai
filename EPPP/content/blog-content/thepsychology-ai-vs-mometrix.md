@@ -28,6 +28,10 @@ Mometrix's pricing is reasonable. Their study guide and flashcard bundles are in
 
 ---
 
+Want to compare with your own eyes before reading further? [Start the free trial here](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=thepsychology-ai-vs-mometrix) — no credit card, 7 days, full adaptive platform. Try both and pick what actually feels useful.
+
+---
+
 ## Where Mometrix Does Well
 
 **Free practice test.** Mometrix offers a free EPPP practice test online. If you want a quick baseline with zero commitment, that's useful.

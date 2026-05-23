@@ -135,6 +135,8 @@ The final stretch. You're not learning new material. You're sharpening what you 
 
 Light review in the morning if it calms you. No more than 30 minutes. Then stop. Trust your preparation. You've done the work.
 
+A 30-day timeline requires high-yield prep every single session. [Try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=pass-eppp-in-30-days) — adaptive question selection means every minute lands on your weakest domain. No wasted hours on stuff you already know.
+
 ## What a Typical Day Looks Like
 
 Here's a concrete example of Day 7, when you're in Phase 2:

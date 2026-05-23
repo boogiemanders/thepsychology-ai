@@ -47,6 +47,8 @@ At 10% of the exam, Bio Bases is important but not the highest-yield place to sp
 
 **Strategy:** Classic social psychology experiments are high-yield: Milgram, Asch, Zimbardo, Sherif. Know the findings, not just the names. For multicultural content, focus on acculturation models, identity development models (Cross, Helms, Sue and Sue), and how cultural factors influence assessment and treatment decisions. This domain frequently overlaps with Ethics in its application questions.
 
+Curious how you'd actually score on each domain right now? [Take a free diagnostic on thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-domain-weights) to compare your scores side by side with the EPPP's domain weights. The biggest study leverage is in the gap between the two.
+
 ### Domain 4: Growth and Lifespan Development (~12%)
 
 **What it covers:** Developmental psychology from prenatal through end of life. Stage theories, attachment, aging, developmental psychopathology.

@@ -27,6 +27,10 @@ Both platforms use subscriptions with free trials, which is a better model than 
 
 ---
 
+Want to compare with your own eyes before reading further? [Start the free trial here](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=thepsychology-ai-vs-prepjet) — no credit card, 7 days, full adaptive platform. Run them side by side and see which question style actually feels closer to the EPPP.
+
+---
+
 ## Where PrepJet Does Well
 
 **Also subscription-based with a free trial.** Like us, PrepJet lets you try before you buy. That's better than the legacy model.

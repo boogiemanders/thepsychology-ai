@@ -30,6 +30,10 @@ We charge $20/month after a free week. If you pass in two months (which three of
 
 ---
 
+Want to compare with your own eyes before reading further? [Start the free trial here](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=thepsychology-ai-vs-aatbs) — no credit card, 7 days, full adaptive platform. Worth the 15 minutes before you commit $1,000+ to AATBS.
+
+---
+
 ## Where AATBS Does Well
 
 **Brand recognition and track record.** AATBS has been around since 1976. Thousands of psychologists have passed using their materials. There's comfort in that. Your supervisor probably used them. That social proof matters.

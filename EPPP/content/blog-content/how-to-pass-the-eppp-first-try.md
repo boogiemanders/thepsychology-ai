@@ -105,6 +105,8 @@ You're about to be a licensed psychologist. Use what you know.
 
 **What to do:** Set a daily study cutoff time. Take one full day off per week. Use ACT defusion techniques when exam anxiety spikes. Prioritize 7-8 hours of sleep over extra study hours. Monitor yourself for signs of burnout the way you'd monitor a client.
 
+The 4-step method works best when steps 1 and 2 (diagnose + prioritize) are done for you. [Try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=how-to-pass-the-eppp-first-try) — the platform runs the diagnostic, picks your weak domains, and queues the right questions each session.
+
 ## Domain-by-Domain Strategy
 
 The EPPP covers 8 content domains. Here's a brief breakdown of each one, what to expect, and where to focus your energy.

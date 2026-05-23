@@ -41,6 +41,8 @@ Your weak domains determine your workload more than your strong ones. Someone wh
 
 This one is underrated. If you're using active recall and spaced repetition, you'll retain more per hour of study than someone who's passively reading textbooks. I've seen people study for 8 months using passive methods and still fail, while others pass in 10 weeks using quiz-based methods. The method matters as much as the time.
 
+The honest answer depends on your starting diagnostic. [Take one free on thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=how-long-to-study-for-the-eppp) — 15 minutes, then you'll have a realistic timeline instead of a guess.
+
 ## Sample Timelines
 
 Here are three realistic scenarios. Find the one closest to your situation.

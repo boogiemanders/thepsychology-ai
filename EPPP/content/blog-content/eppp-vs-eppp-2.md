@@ -28,6 +28,10 @@ Part 1 tests whether you *know* the material. Can you identify the correct diagn
 
 ---
 
+Whether your state requires Part 2 yet or not, Part 1 is still the bottleneck for licensure. [Take a free diagnostic on thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-vs-eppp-2) to see where you stand on the 8 knowledge domains it actually tests.
+
+---
+
 ## EPPP Part 2: The Skills Exam
 
 EPPP-2 is a newer, separate assessment developed by ASPPB (Association of State and Provincial Psychology Boards). It's designed to test competencies that a multiple-choice exam can't capture.

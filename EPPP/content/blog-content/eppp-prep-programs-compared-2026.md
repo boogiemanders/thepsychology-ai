@@ -36,6 +36,10 @@ The range matters here. Most programs tier their pricing based on whether you wa
 
 ---
 
+Want to test thePsychology.ai before you finish the rest of the review? [Start the free trial here](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-prep-programs-compared-2026) — no credit card, 7 days, full adaptive platform. Comparison reads better when you can match it against your own experience.
+
+---
+
 ## AATBS Review
 
 ### The Legacy Player

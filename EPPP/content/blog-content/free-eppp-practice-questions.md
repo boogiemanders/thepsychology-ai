@@ -276,6 +276,10 @@ Aversive racism (Gaertner & Dovidio) describes the phenomenon where individuals 
 
 ---
 
+Want unlimited practice questions that adapt to your weak domains instead of working through a fixed list? [Try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=free-eppp-practice-questions). Same application-based style as the questions above, but the platform picks what you need next based on what you got wrong.
+
+---
+
 ## Growth and Lifespan Development (approximately 12% of the EPPP)
 
 ### Question 19

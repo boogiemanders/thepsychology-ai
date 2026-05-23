@@ -28,6 +28,10 @@ PsychPrep's pricing depends heavily on which tier you choose. The basic package 
 
 ---
 
+Want to compare with your own eyes before reading further? [Start the free trial here](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=thepsychology-ai-vs-psychprep) — no credit card, 7 days, full adaptive platform. See whether the question style actually matches the EPPP better than PsychPrep's.
+
+---
+
 ## Where PsychPrep Does Well
 
 **Human coaching.** This is PsychPrep's biggest advantage over us. If you want a real person reviewing your progress, answering questions, and adjusting your plan — PsychPrep offers that. We don't. Our system is AI-powered, which is effective but different.

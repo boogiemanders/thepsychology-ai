@@ -27,6 +27,10 @@ But that number hides important variation:
 
 ---
 
+Hard relative to what? Your current diagnostic score answers that better than a population pass rate. [Take one free on thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=is-the-eppp-hard) — 15 minutes, no card required.
+
+---
+
 ## What Makes It Hard
 
 **Breadth, not depth.** The EPPP covers 8 content domains spanning the entire field of psychology — from neuroscience to ethics, from lifespan development to statistics. Most doctoral programs don't cover all of this equally. You almost certainly have gaps.

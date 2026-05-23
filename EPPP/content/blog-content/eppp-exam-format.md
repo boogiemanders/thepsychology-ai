@@ -44,6 +44,10 @@ Assessment, Ethics, and Treatment account for roughly 47% of the scored question
 
 ---
 
+Want to practice under the same 68-second-per-question pressure before test day? [Try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-exam-format). The platform mirrors the real EPPP's pacing and vignette style across all 8 domains.
+
+---
+
 ## Time Management
 
 4 hours 15 minutes for 225 questions = approximately 68 seconds per question.

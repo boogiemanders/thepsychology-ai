@@ -37,6 +37,10 @@ This is the most well-documented finding in educational psychology (which, ironi
 
 ---
 
+Want to know which of these mistakes you're already making? [Take a free diagnostic on thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=common-eppp-mistakes) and see your weakest domain in 15 minutes. The platform then builds your study plan around your real gaps, not someone else's.
+
+---
+
 ## 3. Ignoring Weak Domains
 
 Human nature: we gravitate toward what we're already good at. If you're a clinical psychologist, you'll happily study Treatment and Assessment all day. Research Methods and Biological Bases? Those get pushed to "later."

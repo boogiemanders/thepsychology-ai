@@ -95,6 +95,8 @@ The administrative side of retaking the EPPP varies by jurisdiction, so you'll n
 
 Start the re-registration process early so that administrative delays don't eat into your study timeline.
 
+The single biggest retake mistake is studying the exact same way again. [Take a free diagnostic on thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=what-to-do-after-failing-the-eppp) to see precisely which domains dragged your score down, then attack those with adaptive practice instead of starting over from scratch.
+
 ## The 3 Most Common Reasons People Fail (and How to Fix Them)
 
 After years of working with EPPP candidates, I see the same three patterns over and over.

@@ -69,6 +69,8 @@ That 75 is **not** out of 100. It is New York's internal scale label for the sam
 
 If you are licensing in New York, your target on the actual exam is the same 500 you would aim for in any other state.
 
+The state passing score is 500. The number you should actually be tracking is your diagnostic score per domain. [Get one free on thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-passing-score-by-state) — 15 minutes, no credit card required.
+
 ## The Supervised Practice Variation, and Why Most Doctoral Candidates Can Ignore It
 
 If you have read this far you might be wondering: where is the 450 cutoff in all of this?

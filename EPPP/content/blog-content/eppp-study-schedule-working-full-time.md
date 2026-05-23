@@ -45,6 +45,8 @@ This isn't just my opinion. Decades of cognitive psychology research (the same m
 
 The math works out. If every hour of your studying is high-yield, you need fewer hours total.
 
+Want a study plan that fits inside 6-8 weekly hours instead of fighting against them? [Try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-study-schedule-working-full-time). It builds your weekly schedule around your weak domains and the hours you actually have, not 15-hour fantasy weeks.
+
 ## Finding Study Time: 5 Strategies That Actually Work
 
 The biggest obstacle isn't motivation. It's logistics. Where do these 6-8 hours come from when your day is already full? Here are the five time slots I used, and that I've seen work for hundreds of postdocs since.
