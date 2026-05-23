@@ -3,7 +3,7 @@ title: "Aetna Just Cut Alma Psychologist Rates by 43.6%. Here's the Real Number 
 slug: aetna-alma-rate-cut-2026
 description: "Aetna is dropping 90837 reimbursement from $200.31 to $113 on Alma starting July 15, 2026. That is a 43.6% cut for doctoral psychologists. Here is what is actually changing."
 date: 2026-05-23
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, PsyD
 tags: [aetna, alma, reimbursement, insurance, private-practice]
 ---
 
@@ -163,4 +163,4 @@ I send one email per month to the mailing list. Industry data, no fluff. You can
 
 ---
 
-*Dr. Anders Chan, Psy.D. is a clinical psychologist and the founder of thepsychology.ai. He writes about the economics of clinical practice and the systems that fail clinicians. The data and rates in this post were confirmed against the Alma provider portal and public statements from Aetna, Alma, and the American Psychological Association.*
+*Anders Chan, PsyD is a clinical psychologist and the founder of thepsychology.ai. He writes about the economics of clinical practice and the systems that fail clinicians. The data and rates in this post were confirmed against the Alma provider portal and public statements from Aetna, Alma, and the American Psychological Association.*

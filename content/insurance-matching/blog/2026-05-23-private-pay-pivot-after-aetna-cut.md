@@ -3,7 +3,7 @@ title: "How Psychologists Are Building Private Pay Panels After the Aetna Cut"
 slug: private-pay-pivot-after-aetna-cut
 description: "Aetna just cut Alma rates by 43.6%. A growing number of doctoral psychologists are responding by building cash-pay panels. Here is the math and the playbook."
 date: 2026-05-23
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, PsyD
 tags: [private-pay, cash-pay, private-practice, aetna, alma, psychology-business]
 ---
 
@@ -155,4 +155,4 @@ I send one email per month to the mailing list. Industry data, no fluff. You can
 
 ---
 
-*Dr. Anders Chan, Psy.D. is a clinical psychologist and the founder of thepsychology.ai. He writes about the economics of clinical practice and the systems that fail clinicians.*
+*Anders Chan, PsyD is a clinical psychologist and the founder of thepsychology.ai. He writes about the economics of clinical practice and the systems that fail clinicians.*

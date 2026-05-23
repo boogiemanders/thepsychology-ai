@@ -3,7 +3,7 @@ title: "Should You Leave Alma After the Aetna Rate Cut? A PhD Decision Framework
 slug: leave-alma-decision-framework
 description: "Aetna's July 15, 2026 rate cut takes Alma's 90837 reimbursement from $200.31 to $113. Here is a clear framework for deciding whether to stay or go, with the actual math."
 date: 2026-05-23
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, PsyD
 tags: [alma, aetna, direct-contract, credentialing, private-practice]
 ---
 
@@ -161,4 +161,4 @@ I send one email per month to the mailing list. Industry data, no fluff. You can
 
 ---
 
-*Dr. Anders Chan, Psy.D. is a clinical psychologist and the founder of thepsychology.ai. He writes about the economics of clinical practice and the systems that fail clinicians.*
+*Anders Chan, PsyD is a clinical psychologist and the founder of thepsychology.ai. He writes about the economics of clinical practice and the systems that fail clinicians.*
