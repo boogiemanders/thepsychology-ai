@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -43,11 +44,27 @@ export function ProviderWaitlistForm({ source }: ProviderWaitlistFormProps) {
 
   if (status === "success") {
     return (
-      <div className="w-full max-w-md mx-auto rounded-lg border border-border bg-card p-5 text-center">
-        <p className="text-sm font-medium">Thanks. You are on the list.</p>
-        <p className="mt-1 text-sm text-muted-foreground">
-          I will send pilot updates as we build. No spam.
-        </p>
+      <div className="w-full max-w-md mx-auto rounded-lg border border-border bg-card p-5 text-center space-y-4">
+        <div>
+          <p className="text-sm font-medium">Thanks. You are on the list.</p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            I will send pilot updates as we build. No spam.
+          </p>
+        </div>
+        <div className="pt-4 border-t border-border space-y-2">
+          <p className="text-sm font-medium">Want to be first in line?</p>
+          <p className="text-xs text-muted-foreground">
+            Fill out your full clinician profile now — license, modalities,
+            populations served — and you will be matched first when the
+            pilot goes live.
+          </p>
+          <Link
+            href="/login?next=/provider/onboard"
+            className="inline-block w-full rounded-md bg-foreground text-background text-sm font-medium px-4 py-2 hover:opacity-90"
+          >
+            Prep my profile
+          </Link>
+        </div>
       </div>
     )
   }
