@@ -7,11 +7,16 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json().catch(() => null)
     const email = typeof body?.email === 'string' ? body.email.trim().toLowerCase() : ''
+    const name = typeof body?.name === 'string' ? body.name.trim().slice(0, 200) : ''
+    const phone = typeof body?.phone === 'string' ? body.phone.trim().slice(0, 50) : null
     const note = typeof body?.note === 'string' ? body.note.trim().slice(0, 2000) : null
     const source = typeof body?.source === 'string' ? body.source.trim().slice(0, 200) : null
 
     if (!email || !EMAIL_RE.test(email)) {
       return NextResponse.json({ error: 'Please enter a valid email.' }, { status: 400 })
+    }
+    if (!name) {
+      return NextResponse.json({ error: 'Please enter your name.' }, { status: 400 })
     }
 
     const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
@@ -22,7 +27,7 @@ export async function POST(request: NextRequest) {
     const { error } = await supabase
       .from('provider_waitlist')
       .upsert(
-        { email, note, source },
+        { email, name, phone, note, source },
         { onConflict: 'email' }
       )
 

@@ -10,21 +10,23 @@ interface ProviderWaitlistFormProps {
 }
 
 export function ProviderWaitlistForm({ source }: ProviderWaitlistFormProps) {
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
   const [note, setNote] = useState("")
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email.trim()) return
+    if (!email.trim() || !name.trim()) return
     setStatus("submitting")
     setErrorMsg(null)
     try {
       const res = await fetch("/api/provider/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, note, source }),
+        body: JSON.stringify({ name, email, phone, note, source }),
       })
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
@@ -54,6 +56,17 @@ export function ProviderWaitlistForm({ source }: ProviderWaitlistFormProps) {
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-3 text-left">
       <div className="space-y-1.5">
         <Input
+          type="text"
+          required
+          placeholder="Your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          disabled={status === "submitting"}
+          aria-label="Name"
+        />
+      </div>
+      <div className="space-y-1.5">
+        <Input
           type="email"
           required
           placeholder="your@email.com"
@@ -61,6 +74,16 @@ export function ProviderWaitlistForm({ source }: ProviderWaitlistFormProps) {
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "submitting"}
           aria-label="Email address"
+        />
+      </div>
+      <div className="space-y-1.5">
+        <Input
+          type="tel"
+          placeholder="Phone (optional, for SMS pilot updates)"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          disabled={status === "submitting"}
+          aria-label="Phone number, optional"
         />
       </div>
       <div className="space-y-1.5">
@@ -75,7 +98,7 @@ export function ProviderWaitlistForm({ source }: ProviderWaitlistFormProps) {
       </div>
       <Button
         type="submit"
-        disabled={status === "submitting" || !email.trim()}
+        disabled={status === "submitting" || !email.trim() || !name.trim()}
         className="w-full"
       >
         {status === "submitting" ? "Joining..." : "Join the early access list"}
@@ -84,7 +107,7 @@ export function ProviderWaitlistForm({ source }: ProviderWaitlistFormProps) {
         <p className="text-sm text-destructive text-center">{errorMsg}</p>
       )}
       <p className="text-xs text-muted-foreground text-center">
-        Email only. No account needed. Unsubscribe anytime.
+        No account needed. Unsubscribe anytime.
       </p>
     </form>
   )
