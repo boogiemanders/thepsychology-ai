@@ -160,7 +160,7 @@ The specific traps are breadth (8 domains, much of which you have not touched in
 
 You do not need 600 hours like a med student. You need roughly 200 to 400 hours of focused, diagnostic-driven prep. The candidates who pass on the first try are not the smartest. They are the ones who measured their gaps early and spent their time where it mattered.
 
-If you want adaptive prep that prioritizes your weakest, highest-yield domains, [try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-vs-usmle-vs-nclex-vs-lcsw). Free trial, no credit card. After that, $20 a month until you pass.
+If you want adaptive prep that prioritizes your weakest, highest-yield domains, [try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-vs-usmle-vs-nclex-vs-lcsw). Free trial, no credit card. After that, $30 a month until you pass.
 
 Compare exams less. Study smarter. That is how you walk in ready.
 

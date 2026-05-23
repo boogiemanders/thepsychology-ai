@@ -185,6 +185,6 @@ The opportunity score method is not a hack. It is just the math. Multiply how mu
 
 A 200-hour plan organized by opportunity score outperforms a 300-hour plan organized by chapter order. I have watched it happen. The candidates who pass on the first try are not studying more. They are studying what matters most.
 
-If you want a platform that does this math for you, recalculates as you improve, and pulls your weakest high-yield domains to the top automatically, [try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-study-hours-by-domain). Free trial, no credit card. After that, $20 a month until you pass.
+If you want a platform that does this math for you, recalculates as you improve, and pulls your weakest high-yield domains to the top automatically, [try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-study-hours-by-domain). Free trial, no credit card. After that, $30 a month until you pass.
 
 Study less, score higher. That is the whole idea.

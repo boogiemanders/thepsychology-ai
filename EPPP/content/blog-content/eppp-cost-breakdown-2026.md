@@ -50,14 +50,14 @@ This is the line item with the biggest spread, and the one most people overspend
 
 | Program | Price |
 |---------|-------|
-| thePsychology.ai | Free for 7 days, then $20/month |
+| thePsychology.ai | Free for 7 days, then $30/month |
 | Academic Review | $99 to $139/month |
 | PrepJet | $159 to $429/month |
 | Taylor Study Method | $199 to $299/month |
 | PsychPrep | $499 to $1,369 (one-time) |
 | AATBS | $999 to $1,649 (one-time) |
 
-If you study for 3 months at $20 per month, that is $60. If you buy AATBS at the premium tier, that is $1,649. Both options have produced people who passed and people who failed. The price tag is not the variable that determines whether you pass.
+If you study for 3 months at $30 per month, that is $90. If you buy AATBS at the premium tier, that is $1,649. Both options have produced people who passed and people who failed. The price tag is not the variable that determines whether you pass.
 
 What does determine it: whether your study tool gives you adaptive feedback, application-style questions, and a clear way to prioritize your weakest domains. A static $1,500 textbook and question bank can lose to a $20 adaptive platform if the platform is actually identifying your gaps in real time.
 
@@ -99,7 +99,7 @@ If you fail once and retake, add roughly $700 to $800 in direct fees and another
 
 The single biggest decision in this budget is not which prep program you buy. It is whether your prep gives you a real chance of passing the first time. The $1,649 AATBS package that does not move you off your diagnostic baseline is more expensive than the $20 adaptive platform that does, because the math runs through the cost of the retake.
 
-If you want a platform that runs the diagnostic, prioritizes your weakest high-weight domains, and adapts as you study, [try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-cost-breakdown-2026). Three users have passed using the platform so far, with prep times of 1 to 2 months. At $20 a month, the cost of a failed first attempt buys you about three years of prep.
+If you want a platform that runs the diagnostic, prioritizes your weakest high-weight domains, and adapts as you study, [try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_content=inline&utm_campaign=eppp-cost-breakdown-2026). Three users have passed using the platform so far, with prep times of 1 to 2 months. At $30 a month, the cost of a single failed attempt buys you nearly two years of prep.
 
 ## How to Cut the Bill Without Cutting Your Odds
 
@@ -135,7 +135,7 @@ The single highest-leverage purchase in this entire process is whatever prep too
 
 Spend smart. Study less, score higher. That is the whole point.
 
-[Try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-cost-breakdown-2026). Free trial, no credit card. After that, $20 a month, less than your monthly coffee budget, until you pass.
+[Try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-cost-breakdown-2026). Free trial, no credit card. After that, $30 a month until you pass.
 
 ## Sources Verified
 
