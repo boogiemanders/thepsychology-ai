@@ -19,19 +19,6 @@ const tiers = [
     cta: "Join Early Access",
     highlighted: false,
   },
-  {
-    name: "Later",
-    price: "Pilot",
-    period: " group",
-    features: [
-      "Small first group once the product is real",
-      "Guided setup instead of fake instant signup",
-      "Your first 5 matched clients are free",
-      "Built with feedback from real clinicians",
-    ],
-    cta: "Request Pilot Info",
-    highlighted: true,
-  },
 ]
 
 export function ProviderPricingSection() {
@@ -46,7 +33,7 @@ export function ProviderPricingSection() {
         </h2>
       </SectionHeader>
 
-      <div className="w-full max-w-3xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="w-full max-w-md mx-auto px-6 py-12">
         {tiers.map((tier, index) => (
           <motion.div
             key={tier.name}
@@ -83,7 +70,7 @@ export function ProviderPricingSection() {
                 </li>
               ))}
             </ul>
-            <Link href="/contact">
+            <Link href="#provider-waitlist-cta">
               <InteractiveHoverButton
                 text={tier.cta}
                 hoverText="Contact us"

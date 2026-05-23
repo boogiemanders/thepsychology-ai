@@ -38,7 +38,7 @@ export function ProviderCTASection() {
   }
 
   return (
-    <section className="flex flex-col items-center justify-center w-full py-16 md:py-24 px-6">
+    <section id="provider-waitlist-cta" className="flex flex-col items-center justify-center w-full py-16 md:py-24 px-6 scroll-mt-24">
       <div className="max-w-xl mx-auto text-center space-y-6">
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-balance">
           Want to help shape the provider pilot?

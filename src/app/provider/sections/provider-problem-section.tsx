@@ -42,10 +42,11 @@ const competitors = [
   },
   {
     name: "Alma",
-    stat: "30%",
-    statLabel: "rate cuts + $125/month fee",
+    stat: "43.6%",
+    statLabel: "Aetna 90837 cut on July 15, 2026",
     points: [
-      "BBB rating: 2.6 out of 5. 67% one-star reviews.",
+      "Aetna reimbursement on Alma drops from $200.31 to $113 on July 15, 2026 — a 43.6% cut for doctoral psychologists.",
+      "$125/month platform fee. BBB rating: 2.6 out of 5. 67% one-star reviews.",
       "Its AI notes added abuse history, substance use, and suicidal thoughts that were never said. Alma called it a \u20181% error rate.\u2019",
     ],
     quotes: [
