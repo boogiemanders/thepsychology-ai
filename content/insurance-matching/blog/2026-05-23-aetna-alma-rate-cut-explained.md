@@ -143,23 +143,18 @@ The next two posts in this series cover those choices in detail. The decision fr
 
 ## A different model for clinicians
 
-I am building thepsychology.ai — a matching system that connects clients to psychologists based on clinical fit, not insurance bureaucracy.
+I am building the provider platform I wish existed. No rate cuts. No surprise take-backs. No paying for a profile that sends you nothing.
 
-The model is structured differently than Alma or Headway:
+What the early access tier is about:
 
-- **You hold the contract.** Insurance billing, if you do it, runs through your name — not ours. We are not in the middle of your payer relationship.
-- **You set your rate.** Private pay or insurance. No percentage cuts.
-- **We charge $8 flat per completed appointment.** That is it. Covers payment processing and platform cost. Nothing else.
-- **We match on clinical fit.** Modality, populations served, specializations, therapeutic style. Not just zip code and copay.
-- **Launching in California and New York first.** Telehealth.
+- **Better-fit referrals.** Clients matched on modality, populations served, and clinical fit — not just zip code and copay.
+- **Your practice. Your rates. Your rules.** Simple flat pricing if and when this launches. No clawbacks. No hidden fees.
+- **Your reviews stay yours.** If a client reviews you on the platform, you can take it with you. It does not stay trapped inside someone else's platform.
+- **Pilot group gets the first 5 matched clients free.** Small first group, guided setup, built with feedback from real clinicians.
 
-The math: Alma's effective cut on a $125 Aetna session is around $46. Ours would be $8. That is $38 per session back to you. Or, if you go private pay, you skip the insurance squeeze entirely and we still only charge $8.
+**Join early access:** [thepsychology.ai/provider](https://thepsychology.ai/provider)
 
-This is for clinicians who are tired of platform dependency and want a tool that does not take a percentage of their work.
-
-**Join the waitlist:** [thepsychology.ai/for-therapists/waitlist](https://thepsychology.ai/for-therapists/waitlist)
-
-I send one email per month to the mailing list. Industry data, no fluff. You can unsubscribe anytime.
+Tell me what would actually make this worth joining. I send pilot updates as we build.
 
 ---
 
