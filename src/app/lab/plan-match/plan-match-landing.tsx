@@ -1,43 +1,65 @@
 "use client"
 
 import Link from "next/link"
-import { useRef } from "react"
 import { motion } from "motion/react"
+import { ChevronDown } from "lucide-react"
 
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { SectionHeader } from "@/components/section-header"
-import { AnimatedBeam } from "@/components/ui/animated-beam"
 import { FooterSection } from "@/components/sections/footer-section"
 import { PlanMatchClient } from "./plan-match-client"
 
-const clientStems = [
-  "What are you working on?",
-  "Any therapy approach you're drawn to?",
-  "In your own words, what brings you here?",
-  "Any style preference? Warm or direct. Structured or open.",
-  "Anything about them that matters? Language, identity, faith.",
-  "When can you meet? Telehealth okay?",
-  "Gender or age preference for your psychologist?",
+type MapKey = "treat" | "modality" | "style" | "cultural" | "filter" | "demographic" | null
+
+// Lab collaborator brand palette (from /lab/timeline COLLAB_COLORS)
+const MAP_DOT: Record<Exclude<MapKey, null>, string> = {
+  treat: "bg-[#F39E3A]", // orange
+  modality: "bg-[#4EBFD4]", // cyan
+  style: "bg-[#F5ED43]", // yellow
+  cultural: "bg-[#E7437D]", // pink
+  filter: "bg-[#AC80AF]", // purple
+  demographic: "bg-[#B6D458]", // lime
+}
+
+const clientStems: { q: string; m: MapKey }[] = [
+  { q: "In your own words, what brings you here?", m: "treat" },
+  { q: "Your insurance plan and state.", m: "filter" },
+  { q: "What are you working on?", m: "treat" },
+  { q: "Any therapy approach you're drawn to?", m: "modality" },
+  { q: "Any style preference? Warm or direct. Structured or open.", m: "style" },
+  { q: "Anything about them that matters? Language, identity, faith.", m: "cultural" },
+  { q: "Gender or age preference for your psychologist?", m: "demographic" },
+  { q: "When can you meet? Telehealth okay?", m: null },
 ]
 
-const providerStems = [
-  "License, NPI, and states you can practice in.",
-  "What you treat. Modalities, conditions, populations.",
-  "Therapeutic style. Four sliders, 1 to 10.",
-  "Languages spoken. LGBTQ+ affirming. Faith-integrated.",
-  "Insurance networks, self-pay rate, sliding scale.",
-  "Bio and approach in your own words.",
-  "Verified before you go live.",
+const providerStems: { q: string; m: MapKey }[] = [
+  { q: "Bio and approach in your own words.", m: "treat" },
+  { q: "License, NPI, states you can practice in, and insurance networks.", m: "filter" },
+  { q: "What you treat. Conditions, populations.", m: "treat" },
+  { q: "Modalities. CBT, DBT, EMDR, IFS, ACT, somatic.", m: "modality" },
+  { q: "Therapeutic style. Four sliders, 1 to 10.", m: "style" },
+  { q: "Languages spoken. LGBTQ+ affirming. Faith-integrated.", m: "cultural" },
+  { q: "Gender, age, and identity they bring to the room.", m: "demographic" },
+  { q: "Self-pay rate and sliding scale.", m: null },
 ]
 
-const engineDimensions = [
-  { label: "Insurance + state", note: "Hard filter. Out-of-network is opt-in.", weight: "Filter" },
-  { label: "Clinical fit", note: "Overlap between what you need and what they treat.", weight: "35%" },
-  { label: "Modality", note: "CBT, EMDR, IFS, ACT, somatic. Whatever you want, whatever they do.", weight: "20%" },
-  { label: "Style", note: "Four sliders matched against four sliders. Closer is better.", weight: "20%" },
-  { label: "Cultural fit", note: "Language. Identity. Faith if it matters to you.", weight: "13%" },
-  { label: "Practical", note: "Telehealth, hours, location.", weight: "12%" },
+const engineDimensions: { label: string; weight: string; m: MapKey }[] = [
+  { label: "Insurance + state", weight: "Filter", m: "filter" },
+  { label: "Clinical fit", weight: "35%", m: "treat" },
+  { label: "Modality", weight: "20%", m: "modality" },
+  { label: "Style", weight: "20%", m: "style" },
+  { label: "Cultural fit", weight: "13%", m: "cultural" },
+  { label: "Practical + demographic", weight: "12%", m: "demographic" },
+]
+
+const sarahMatches: { label: string; m: MapKey }[] = [
+  { label: "Aetna in-network, CA-licensed", m: "filter" },
+  { label: "Anxiety, trauma, identity", m: "treat" },
+  { label: "CBT + EMDR", m: "modality" },
+  { label: "Warm, structured", m: "style" },
+  { label: "Speaks Mandarin, LGBTQ+ affirming", m: "cultural" },
+  { label: "She/her, 30s", m: "demographic" },
 ]
 
 const fadeUp = {
@@ -46,13 +68,45 @@ const fadeUp = {
   viewport: { once: true, amount: 0.3 },
 }
 
-export function PlanMatchLanding() {
-  const flowContainerRef = useRef<HTMLDivElement>(null)
-  const clientColRef = useRef<HTMLDivElement>(null)
-  const engineColRef = useRef<HTMLDivElement>(null)
-  const clinicianColRef = useRef<HTMLDivElement>(null)
-  const matchOutputRef = useRef<HTMLDivElement>(null)
+function StepEyebrow({ n, label }: { n: string; label: string }) {
+  return (
+    <div className="flex items-center gap-4 mb-8">
+      <span className="font-mono text-xs text-primary tabular-nums">{n}</span>
+      <span className="h-px flex-1 bg-border/60" />
+      <h3 className="text-lg font-medium tracking-tight">{label}</h3>
+    </div>
+  )
+}
 
+function MapDot({ m, className = "" }: { m: MapKey; className?: string }) {
+  if (!m) return <span className={`inline-block size-1.5 shrink-0 ${className}`} aria-hidden />
+  return (
+    <span
+      className={`inline-block size-1.5 rounded-full shrink-0 ${MAP_DOT[m]} ${className}`}
+      aria-hidden
+    />
+  )
+}
+
+function StemList({ items }: { items: { q: string; m: MapKey }[] }) {
+  return (
+    <ol className="space-y-4">
+      {items.map((it, i) => (
+        <li key={it.q} className="flex gap-3 items-start">
+          <span className="font-mono text-[10px] text-muted-foreground/40 pt-1 shrink-0 tabular-nums">
+            {String(i + 1).padStart(2, "0")}
+          </span>
+          <MapDot m={it.m} className="mt-[7px]" />
+          <span className="text-[14px] text-foreground/85 leading-relaxed">
+            {it.q}
+          </span>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
+export function PlanMatchLanding() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero */}
@@ -84,16 +138,12 @@ export function PlanMatchLanding() {
           </p>
 
           <a href="#try-it">
-            <InteractiveHoverButton
-              text="Try it"
-              hoverText="Try it"
-              inverted
-            />
+            <InteractiveHoverButton text="Try it" hoverText="Try it" inverted />
           </a>
         </div>
       </section>
 
-      {/* Centerpiece: the matching engine flow */}
+      {/* Centerpiece: 3-step vertical flow */}
       <section className="flex flex-col items-center justify-center w-full relative">
         <SectionHeader>
           <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
@@ -104,107 +154,61 @@ export function PlanMatchLanding() {
           </p>
         </SectionHeader>
 
-        <div className="w-full max-w-6xl mx-auto px-6 py-16">
-          {/* Relative wrapper so the AnimatedBeam SVGs can span columns + output card. */}
-          <div ref={flowContainerRef} className="relative">
-          {/* Animated flow beams: hidden on mobile, follow DOM refs */}
-          <div className="hidden lg:block">
-            <AnimatedBeam
-              containerRef={flowContainerRef}
-              fromRef={clientColRef}
-              toRef={engineColRef}
-              curvature={0}
-              duration={4}
-              delay={0}
-              pathColor="hsl(var(--border))"
-              pathOpacity={0.4}
-              pathWidth={1.5}
-              gradientStartColor="hsl(var(--primary))"
-              gradientStopColor="hsl(var(--primary))"
-            />
-            <AnimatedBeam
-              containerRef={flowContainerRef}
-              fromRef={clinicianColRef}
-              toRef={engineColRef}
-              curvature={0}
-              duration={4}
-              delay={0.5}
-              reverse
-              pathColor="hsl(var(--border))"
-              pathOpacity={0.4}
-              pathWidth={1.5}
-              gradientStartColor="hsl(var(--primary))"
-              gradientStopColor="hsl(var(--primary))"
-            />
-            <AnimatedBeam
-              containerRef={flowContainerRef}
-              fromRef={engineColRef}
-              toRef={matchOutputRef}
-              curvature={0}
-              duration={3}
-              delay={1.5}
-              pathColor="hsl(var(--border))"
-              pathOpacity={0.4}
-              pathWidth={1.5}
-              gradientStartColor="hsl(var(--primary))"
-              gradientStopColor="hsl(var(--primary))"
-            />
+        <div className="w-full max-w-3xl mx-auto px-6 py-16 space-y-12">
+          {/* Step 01: Two short forms */}
+          <motion.div {...fadeUp} transition={{ duration: 0.5 }}>
+            <StepEyebrow n="01" label="Two short forms" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+              <div>
+                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-4">
+                  Client
+                </p>
+                <StemList items={clientStems} />
+              </div>
+              <div>
+                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-4">
+                  Clinician
+                </p>
+                <StemList items={providerStems} />
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="flex justify-center">
+            <ChevronDown className="size-5 text-muted-foreground/40" />
           </div>
 
-          {/* Three columns: client / engine / psychologist. Borders separate, not cards. */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-12 lg:gap-0 lg:divide-x lg:divide-border/60">
-            <motion.div
-              ref={clientColRef}
-              {...fadeUp}
-              transition={{ duration: 0.5 }}
-              className="flex flex-col lg:pr-10"
-            >
-              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-4">
-                Client
-              </p>
-              <h3 className="text-lg font-medium tracking-tight mb-8">
-                Seven questions. About five minutes.
-              </h3>
-              <ol className="space-y-5 flex-1">
-                {clientStems.map((stem, i) => (
-                  <li key={stem} className="flex gap-4">
-                    <span className="font-mono text-[10px] text-muted-foreground/40 pt-1 shrink-0 tabular-nums">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-[14px] text-foreground/85 leading-relaxed">
-                      {stem}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </motion.div>
-
-            <motion.div
-              ref={engineColRef}
-              {...fadeUp}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className="flex flex-col lg:px-10"
-            >
-              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-primary mb-4">
-                Matching engine
-              </p>
-              <h3 className="text-lg font-medium tracking-tight mb-8">
-                How we rank.
-              </h3>
-              <ul className="space-y-5 flex-1">
+          {/* Step 02: The engine */}
+          <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.1 }}>
+            <StepEyebrow n="02" label="One ranking" />
+            <div className="relative rounded-xl border border-primary/30 bg-primary/[0.02] p-6 md:p-8 shadow-sm">
+              <div className="flex items-center gap-2 mb-6">
+                <motion.span
+                  className="size-1.5 rounded-full bg-primary"
+                  animate={{ opacity: [0.4, 1, 0.4] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-primary">
+                  Matching engine
+                </p>
+              </div>
+              <ul className="space-y-4">
                 {engineDimensions.map((dim) => (
                   <li
                     key={dim.label}
-                    className="flex items-baseline justify-between gap-4"
+                    className="flex items-center justify-between gap-4 border-b border-border/30 pb-3 last:border-b-0 last:pb-0"
                   >
-                    <span className="text-[14px] text-foreground/85">
-                      {dim.label}
+                    <span className="flex items-center gap-3">
+                      <MapDot m={dim.m} />
+                      <span className="text-[14px] text-foreground/90">
+                        {dim.label}
+                      </span>
                     </span>
                     <span
                       className={
                         dim.weight === "Filter"
                           ? "text-[10px] font-mono uppercase tracking-wider text-primary shrink-0"
-                          : "text-sm font-mono tabular-nums text-muted-foreground shrink-0"
+                          : "text-sm font-mono tabular-nums text-foreground shrink-0"
                       }
                     >
                       {dim.weight}
@@ -212,82 +216,60 @@ export function PlanMatchLanding() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            <motion.div
-              ref={clinicianColRef}
-              {...fadeUp}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col lg:pl-10"
-            >
-              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 mb-4">
-                Clinician
-              </p>
-              <h3 className="text-lg font-medium tracking-tight mb-8">
-                Seven questions. Verified before they go live.
-              </h3>
-              <ol className="space-y-5 flex-1">
-                {providerStems.map((stem, i) => (
-                  <li key={stem} className="flex gap-4">
-                    <span className="font-mono text-[10px] text-muted-foreground/40 pt-1 shrink-0 tabular-nums">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-[14px] text-foreground/85 leading-relaxed">
-                      {stem}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </motion.div>
+          <div className="flex justify-center">
+            <ChevronDown className="size-5 text-muted-foreground/40" />
           </div>
 
-          {/* Output: Sarah Chen card */}
-          <div id="match-output" className="relative z-10 mt-20 flex flex-col items-center gap-4">
-            <div className="flex items-center gap-2 text-muted-foreground/70">
-              <div className="h-px w-12 bg-border" />
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em]">
-                Example output
-              </span>
-              <div className="h-px w-12 bg-border" />
-            </div>
-
+          {/* Step 03: The match */}
+          <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }}>
+            <StepEyebrow n="03" label="Match found" />
             <motion.div
-              ref={matchOutputRef}
-              className="rounded-xl border border-primary/30 bg-primary/[0.02] p-6 space-y-4 shadow-sm w-full max-w-md"
+              className="rounded-xl border border-primary/30 bg-primary/[0.02] p-6 md:p-8 shadow-sm w-full max-w-md mx-auto space-y-5"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/50">
-                Match found
-              </h3>
-              <div className="space-y-3">
+              <div className="flex items-baseline justify-between">
                 <p className="text-base font-semibold tracking-tight">
                   Dr. Sarah Chen, Psy.D.
                 </p>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <span>Match score:</span>
-                  <span className="text-foreground font-semibold">94%</span>
+                <span className="text-2xl font-bold tracking-tighter text-foreground tabular-nums">
+                  94%
+                </span>
+              </div>
+
+              <ul className="space-y-2.5">
+                {sarahMatches.map((it) => (
+                  <li key={it.label} className="flex items-center gap-3 text-[13px]">
+                    <MapDot m={it.m} />
+                    <span className="text-foreground/85 flex-1">{it.label}</span>
+                    <span className="text-muted-foreground text-[11px]">matched</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="border-t border-border/40 pt-4 space-y-1.5">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-sm text-muted-foreground">Your copay</span>
+                  <span className="text-lg font-bold tracking-tighter text-foreground">$25</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-muted-foreground">Your copay:</span>
-                  <span className="text-2xl font-bold tracking-tighter text-foreground">
-                    $25
-                  </span>
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Next available: Tomorrow, 2:00 PM
-                </div>
-                <div className="pt-2">
-                  <div className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">
-                    Example flow
-                  </div>
+                <div className="flex items-baseline justify-between">
+                  <span className="text-sm text-muted-foreground">Next available</span>
+                  <span className="text-sm text-foreground/85">Tomorrow, 2:00 PM</span>
                 </div>
               </div>
+
+              <div className="pt-1">
+                <span className="inline-flex items-center rounded-md bg-primary/10 text-primary px-3 py-1 text-[11px] font-medium uppercase tracking-wider">
+                  Example flow
+                </span>
+              </div>
             </motion.div>
-          </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
