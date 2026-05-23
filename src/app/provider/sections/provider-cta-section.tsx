@@ -2,17 +2,17 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { useAuth } from "@/context/auth-context"
 import { supabase } from "@/lib/supabase"
 import Link from "next/link"
+import { ProviderWaitlistForm } from "./provider-waitlist-form"
 
 export function ProviderCTASection() {
   const { user, isProvider } = useAuth()
   const router = useRouter()
   const [joining, setJoining] = useState(false)
 
-  const handleJoin = async () => {
+  const handleOnboardClick = async () => {
     if (!user) {
       router.push("/login?next=/provider")
       return
@@ -44,25 +44,32 @@ export function ProviderCTASection() {
           Want to help shape the provider pilot?
         </h2>
         <p className="text-muted-foreground">
-          Tell us about your practice, the biggest problems you have with other
-          platforms, and what would make a first version worth trying.
+          Leave your email and tell us about your practice, the biggest problems
+          you have with other platforms, and what would make a first version
+          worth trying.
         </p>
+        <ProviderWaitlistForm source="provider-bottom-cta" />
+
         {isProvider ? (
-          <Link href="/provider/onboard">
-            <InteractiveHoverButton
-              text="Continue Onboarding"
-              hoverText="Go to profile"
-              inverted
-            />
+          <Link
+            href="/provider/onboard"
+            className="block text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground"
+          >
+            Continue onboarding
           </Link>
         ) : (
-          <div onClick={handleJoin} className={joining ? "pointer-events-none opacity-60" : "cursor-pointer"}>
-            <InteractiveHoverButton
-              text={joining ? "Joining..." : "Join Early Access"}
-              hoverText={user ? "Start onboarding" : "Sign in first"}
-              inverted
-            />
-          </div>
+          <button
+            type="button"
+            onClick={handleOnboardClick}
+            disabled={joining}
+            className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground disabled:opacity-60"
+          >
+            {joining
+              ? "Starting..."
+              : user
+                ? "Or skip ahead — start the full onboarding"
+                : "Or skip ahead — sign in to start onboarding"}
+          </button>
         )}
       </div>
     </section>

@@ -3,17 +3,17 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { useAuth } from "@/context/auth-context"
 import { supabase } from "@/lib/supabase"
 import Link from "next/link"
+import { ProviderWaitlistForm } from "./provider-waitlist-form"
 
 export function ProviderHeroSection() {
   const { user, isProvider } = useAuth()
   const router = useRouter()
   const [joining, setJoining] = useState(false)
 
-  const handleJoin = async () => {
+  const handleOnboardClick = async () => {
     if (!user) {
       router.push("/login?next=/provider")
       return
@@ -30,7 +30,6 @@ export function ProviderHeroSection() {
         headers: { Authorization: `Bearer ${session.session?.access_token}` },
       })
       if (res.ok) {
-        // Small delay to let auth context pick up the new role before navigating
         await new Promise((r) => setTimeout(r, 500))
         window.location.href = "/provider/onboard"
       }
@@ -57,26 +56,34 @@ export function ProviderHeroSection() {
         </h1>
 
         <p className="max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
-          If this would help your practice, join early access and tell us what
+          If this would help your practice, leave your email and tell us what
           would make the pilot worth joining.
         </p>
 
+        <div className="w-full pt-2">
+          <ProviderWaitlistForm source="provider-hero" />
+        </div>
+
         {isProvider ? (
-          <Link href="/provider/onboard">
-            <InteractiveHoverButton
-              text="Continue Onboarding"
-              hoverText="Go to profile"
-              inverted
-            />
+          <Link
+            href="/provider/onboard"
+            className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground"
+          >
+            Continue onboarding
           </Link>
         ) : (
-          <div onClick={handleJoin} className={joining ? "pointer-events-none opacity-60" : "cursor-pointer"}>
-            <InteractiveHoverButton
-              text={joining ? "Joining..." : "Join as Provider"}
-              hoverText={user ? "Start onboarding" : "Sign in first"}
-              inverted
-            />
-          </div>
+          <button
+            type="button"
+            onClick={handleOnboardClick}
+            disabled={joining}
+            className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground disabled:opacity-60"
+          >
+            {joining
+              ? "Starting..."
+              : user
+                ? "Or skip ahead — start the full onboarding"
+                : "Or skip ahead — sign in to start onboarding"}
+          </button>
         )}
       </div>
     </section>
