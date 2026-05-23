@@ -67,8 +67,8 @@ export function ProviderCTASection() {
             {joining
               ? "Starting..."
               : user
-                ? "Or skip ahead — start the full onboarding"
-                : "Or skip ahead — sign in to start onboarding"}
+                ? "Already credentialed elsewhere? Prep your profile so you're first in line."
+                : "Already credentialed elsewhere? Sign in to prep your profile."}
           </button>
         )}
       </div>
