@@ -38,7 +38,7 @@
 
 ## Angle 3: The Founder's Proof (Trust-building angle)
 
-- **The angle:** Dr. Chan scored 19% on his first EPPP practice exam. He poured $1K into other programs, studied for a month, and passed on his first try. Then he built the program he wished he had — and made it free for every postdoc who can't afford what he paid.
+- **The angle:** Anders Chan scored 19% on his first EPPP practice exam. He poured $1K into other programs, studied for a month, and passed on his first try. Then he built the program he wished he had — and made it free for every postdoc who can't afford what he paid.
 
 - **Why it works:** This is the most powerful trust mechanic in the entire brand. It works on three levels: (1) **Empathy** — "I was where you are, I was scared too." (2) **Proof** — "I actually did it, here's my score." (3) **Mission** — "I'm not doing this for profit, I'm doing it because the system failed me too." The 19% → pass on first try arc is a STORY, not a claim. Stories bypass skepticism. The fact that he's a psychologist building for psychologists adds identity-level trust.
 
@@ -90,7 +90,7 @@
 
 **Mechanism (second scroll):** Angle 2 (Anti-Waste) — explain WHY it's better: the adaptive loop. "Study less. Score higher." This is where the orbiting loop section lives.
 
-**Trust (third scroll):** Angle 3 (Founder's Proof) — Dr. Chan's 19% → passed story. The human proof that this works.
+**Trust (third scroll):** Angle 3 (Founder's Proof) — Anders Chan's 19% → passed story. The human proof that this works.
 
 **Differentiation (features section):** Angle 4 (Whole-Person) — the wellness feature as unique differentiator. Not the lead, but the thing that makes them say "nobody else has this."
 
