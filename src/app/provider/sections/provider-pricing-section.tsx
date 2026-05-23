@@ -1,10 +1,8 @@
 "use client"
 
 import { SectionHeader } from "@/components/section-header"
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
-import Link from "next/link"
 
 const tiers = [
   {
@@ -16,7 +14,6 @@ const tiers = [
       "Get updates as we build the pilot",
       "Help us decide what the first useful version should do",
     ],
-    cta: "Join Early Access",
     highlighted: false,
   },
 ]
@@ -70,14 +67,6 @@ export function ProviderPricingSection() {
                 </li>
               ))}
             </ul>
-            <Link href="#provider-waitlist-cta">
-              <InteractiveHoverButton
-                text={tier.cta}
-                hoverText="Contact us"
-                inverted={tier.highlighted}
-                className="w-full justify-center"
-              />
-            </Link>
           </motion.div>
         ))}
       </div>
