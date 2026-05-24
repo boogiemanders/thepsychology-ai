@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { trackLeadEvent } from '@/lib/utm-tracking'
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -32,6 +33,7 @@ export function LicenseWatchForm() {
         throw new Error(body.error || 'Something went wrong')
       }
 
+      trackLeadEvent('license_watch')
       setState('success')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong')

@@ -130,3 +130,61 @@ export function formatUTMForAPI(params: UTMParams): UTMParams {
     utm_term: params.utm_term || null,
   }
 }
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
+
+const SIGNUP_FIRED_KEY = 'thepsychology_signup_fired'
+
+function fireGAEvent(eventName: string, extras: Record<string, unknown>): void {
+  if (typeof window === 'undefined') return
+  if (typeof window.gtag !== 'function') return
+
+  const utm = formatUTMForAPI(getStoredUTMParams())
+
+  window.gtag('event', eventName, {
+    page_path: window.location.pathname,
+    page_referrer: typeof document !== 'undefined' ? document.referrer : '',
+    utm_source: utm.utm_source,
+    utm_medium: utm.utm_medium,
+    utm_campaign: utm.utm_campaign,
+    utm_content: utm.utm_content,
+    utm_term: utm.utm_term,
+    ...extras,
+  })
+}
+
+/**
+ * Fire GA4 `sign_up` event with stored first-touch UTM params attached.
+ * Guarded: fires at most once per browser per user (keyed by userId if provided).
+ * Safe to call from any signup flow; no-op if gtag is unavailable.
+ */
+export function trackSignupEvent(
+  method: string,
+  extras: Record<string, unknown> = {},
+  userId?: string
+): void {
+  if (typeof window === 'undefined') return
+
+  const marker = userId ? `${SIGNUP_FIRED_KEY}:${userId}` : SIGNUP_FIRED_KEY
+  try {
+    if (localStorage.getItem(marker)) return
+    localStorage.setItem(marker, new Date().toISOString())
+  } catch {
+    // localStorage unavailable; fire anyway rather than lose the event
+  }
+
+  fireGAEvent('sign_up', { method, ...extras })
+}
+
+/**
+ * Fire GA4 `generate_lead` event with stored UTM params.
+ * Use for lead-magnet captures (email-only forms, watch-lists, waitlists)
+ * where the visitor has not created a full account.
+ */
+export function trackLeadEvent(leadType: string, extras: Record<string, unknown> = {}): void {
+  fireGAEvent('generate_lead', { lead_type: leadType, ...extras })
+}

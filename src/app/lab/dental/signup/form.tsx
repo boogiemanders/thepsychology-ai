@@ -9,6 +9,7 @@ import {
   formatUTMForAPI,
   getStoredUTMParams,
   storeUTMParams,
+  trackSignupEvent,
 } from '@/lib/utm-tracking'
 import {
   DENTAL_REFERRAL_SOURCE,
@@ -149,6 +150,8 @@ export function DentalSignupForm() {
         const errorData = await profileResponse.json().catch(() => null)
         throw new Error(`Failed to create profile: ${errorData?.error || 'Please try again.'}`)
       }
+
+      trackSignupEvent('email', { referral_source: DENTAL_REFERRAL_SOURCE, signup_source: DENTAL_SIGNUP_SOURCE }, userId)
 
       clearStoredUTMParams()
 

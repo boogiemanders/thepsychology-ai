@@ -12,6 +12,7 @@ import "./globals.css"
 import { SessionWarningDialog } from "@/components/session-warning-dialog"
 import { Analytics } from "@vercel/analytics/next"
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { UTMCapture } from "@/components/utm-capture"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -110,6 +111,7 @@ export default function RootLayout({
       </head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background`} suppressHydrationWarning>
+        <UTMCapture />
         <AuthProvider>
           <SessionWarningDialog />
           <ActivityProvider>

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { supabase } from "@/lib/supabase"
 import { CATEGORY_LABELS, getReferralSourcesByCategory } from "@/lib/referral-sources"
-import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI } from "@/lib/utm-tracking"
+import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI, trackSignupEvent } from "@/lib/utm-tracking"
 
 // Retry helper for critical API calls (profile creation)
 async function fetchWithRetry(url: string, options: RequestInit, retries = 3): Promise<Response> {
@@ -164,15 +164,7 @@ export function PricingSection() {
         throw new Error(`Failed to create profile: ${errorData?.error || "Please try again"}`)
       }
 
-      // Track sign-up in Google Analytics
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "sign_up", {
-          method: "email",
-          referral_source: finalReferralSource,
-          page_path: window.location.pathname,
-          page_referrer: document.referrer,
-        })
-      }
+      trackSignupEvent("email", { referral_source: finalReferralSource }, userId)
 
       const hasGoalDetails = Boolean(formData.goals.trim() || formData.examDate)
       if (hasGoalDetails) {

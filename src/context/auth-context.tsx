@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase'
 import { handleUserSwitch, hydrateQuizDataFromServer } from '@/lib/local-study-storage'
 import { safeSessionStorageSetItem } from '@/lib/safe-storage'
 import { getSignupProvisioning } from '@/lib/signup-provisioning'
+import { trackSignupEvent } from '@/lib/utm-tracking'
 
 // Session timeout configuration (in milliseconds)
 const IDLE_TIMEOUT_MS = 2 * 60 * 60 * 1000 // 2 hours idle timeout
@@ -269,6 +270,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 })
                 if (res.ok) {
                   const { data: newProfile } = await res.json()
+                  const provider = (session.user.app_metadata as { provider?: string } | null)?.provider || 'email'
+                  trackSignupEvent(
+                    provider,
+                    {
+                      referral_source: meta.referral_source || provisioning.defaultReferralSource || null,
+                      signup_source: provisioning.signupSource,
+                    },
+                    session.user.id
+                  )
                   setUserProfile(newProfile?.[0] || {
                     id: session.user.id,
                     email: session.user.email || '',
