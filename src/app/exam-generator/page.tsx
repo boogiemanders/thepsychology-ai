@@ -136,6 +136,7 @@ export default function ExamGeneratorPage() {
   const questionTelemetryRef = useRef<Record<number, QuestionTelemetry>>({})
   const lastQuestionIndexRef = useRef<number | null>(null)
   const timeRemainingRef = useRef(0)
+  const lastServerSyncRef = useRef(0)
   const activeUserId = user?.id ?? userId ?? null
 
   const getTelemetry = useCallback((index: number): QuestionTelemetry => {
@@ -466,6 +467,34 @@ export default function ExamGeneratorPage() {
       // Don't break exam flow if storage quota is exceeded.
       console.error('Failed to persist exam progress:', error)
     }
+
+    // Mirror to server so paused exams survive localStorage eviction (iOS ITP,
+    // browser cleanup, device switch). Debounce autosaves to 5s; always sync
+    // on manual pause. beforeunload can't reliably await fetch, so we rely on
+    // the most recent autosave (within the last 5s) to have the latest state.
+    const now = Date.now()
+    const shouldSync = reason === 'manual' || now - lastServerSyncRef.current >= 5000
+    if (shouldSync && reason !== 'beforeunload') {
+      lastServerSyncRef.current = now
+      void (async () => {
+        try {
+          const { data: { session } } = await supabase.auth.getSession()
+          const token = session?.access_token
+          if (!token) return
+          await fetch('/api/paused-exam', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({ exam_state: pausedState }),
+            keepalive: true,
+          })
+        } catch (err) {
+          console.error('Failed to sync paused exam to server:', err)
+        }
+      })()
+    }
   }, [
     assignmentId,
     currentQuestion,
@@ -779,6 +808,18 @@ export default function ExamGeneratorPage() {
       }
       setHasPausedExam(false)
 
+      // Clear server-side paused exam so the resume button doesn't keep
+      // pointing at a now-submitted exam on other devices.
+      try {
+        await fetch('/api/paused-exam', {
+          method: 'DELETE',
+          headers: { Authorization: `Bearer ${token}` },
+          keepalive: true,
+        })
+      } catch (err) {
+        console.error('Failed to clear paused exam on server:', err)
+      }
+
       // Navigate with just the result ID (no more URI_TOO_LONG!)
       router.push(`/prioritize?id=${data.resultId}`)
     } catch (error) {
@@ -811,44 +852,95 @@ export default function ExamGeneratorPage() {
         router.push(`/prioritize?id=${state.submittedResultId}`)
         return
       }
+      // Validate saved state before restoring. Silently deleting a corrupt
+      // state leaves the user staring at a blank dashboard with no clue why
+      // their exam vanished.
+      if (!state.examType || !state.mode || !Array.isArray(state.questions) || state.questions.length === 0) {
+        throw new Error('Saved exam is incomplete or corrupted.')
+      }
       // Restore all exam state
       setExamType(state.examType)
       setMode(state.mode)
       setQuestions(state.questions)
-      setCurrentQuestion(state.currentQuestion)
-      setSelectedAnswers(state.selectedAnswers)
+      setCurrentQuestion(typeof state.currentQuestion === 'number' ? state.currentQuestion : 0)
+      setSelectedAnswers(state.selectedAnswers || {})
       setFlaggedQuestions(state.flaggedQuestions || {})
       setTextFormats(state.textFormats || {})
-      setTimeRemaining(state.timeRemaining)
-      setAssignmentId(state.assignmentId)
+      setTimeRemaining(typeof state.timeRemaining === 'number' ? state.timeRemaining : 0)
+      setAssignmentId(state.assignmentId ?? null)
       setIsExamStarted(true)
       setHasPausedExam(false)
+      setError(null)
       // Don't show pause modal on manual resume - user explicitly clicked to resume
     } catch (error) {
       console.error('Failed to restore paused exam:', error)
+      // Clear the bad state so the resume button doesn't keep failing on every
+      // visit, and surface the error to the user instead of going silent.
       localStorage.removeItem('pausedExamState')
       setHasPausedExam(false)
+      setError(
+        error instanceof Error && error.message
+          ? `Could not resume your paused exam: ${error.message} Please start a new exam — your previous answers could not be recovered.`
+          : 'Could not resume your paused exam. Please start a new exam — your previous answers could not be recovered.',
+      )
     }
   }
 
-  // Check for paused exam on mount (detect only, don't auto-restore)
+  // Check for paused exam on mount (detect only, don't auto-restore).
+  // If localStorage is empty (e.g. browser cleared, different device), fall
+  // back to the server copy so multi-day pauses survive.
   useEffect(() => {
-    const pausedState = localStorage.getItem('pausedExamState')
-    if (pausedState && !isExamStarted) {
+    if (isExamStarted) return
+    let cancelled = false
+
+    const localState = localStorage.getItem('pausedExamState')
+    if (localState) {
       try {
-        const state = JSON.parse(pausedState)
-        // Just detect the paused exam, don't auto-restore
+        const state = JSON.parse(localState)
         setHasPausedExam(true)
         setLastExamWasSubmitted(Boolean(state.submittedResultId))
+        return
       } catch (error) {
         console.error('Failed to parse paused exam:', error)
         localStorage.removeItem('pausedExamState')
-        setHasPausedExam(false)
-        setLastExamWasSubmitted(false)
       }
-    } else if (!pausedState) {
-      setHasPausedExam(false)
-      setLastExamWasSubmitted(false)
+    }
+
+    setHasPausedExam(false)
+    setLastExamWasSubmitted(false)
+
+    void (async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession()
+        const token = session?.access_token
+        if (!token || cancelled) return
+        const res = await fetch('/api/paused-exam', {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+        if (!res.ok || cancelled) return
+        const data = await res.json()
+        const serverExam = data?.paused_exam
+        if (!serverExam?.exam_state) return
+        const examState = {
+          ...serverExam.exam_state,
+          ...(serverExam.submitted_result_id ? { submittedResultId: serverExam.submitted_result_id } : {}),
+        }
+        try {
+          localStorage.setItem('pausedExamState', JSON.stringify(examState))
+        } catch {
+          // localStorage full — server copy still authoritative.
+        }
+        if (!cancelled) {
+          setHasPausedExam(true)
+          setLastExamWasSubmitted(Boolean(serverExam.submitted_result_id))
+        }
+      } catch (err) {
+        console.error('Failed to hydrate paused exam from server:', err)
+      }
+    })()
+
+    return () => {
+      cancelled = true
     }
   }, [isExamStarted])
 

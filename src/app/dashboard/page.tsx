@@ -442,11 +442,47 @@ export default function DashboardPage() {
   // Pre-generation disabled: exams are served from pre-made files in
   // diagnosticGPT/ and examsGPT/, so calling OpenAI here wastes money.
 
-  // Check for paused exam on mount
+  // Check for paused exam on mount. If localStorage is empty, fall back to
+  // the server copy so a paused exam survives browser cleanup / device switch.
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const pausedState = localStorage.getItem('pausedExamState')
-      setHasPausedExam(!!pausedState)
+    if (typeof window === 'undefined') return
+    const localState = localStorage.getItem('pausedExamState')
+    if (localState) {
+      setHasPausedExam(true)
+      return
+    }
+    setHasPausedExam(false)
+
+    let cancelled = false
+    void (async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession()
+        const token = session?.access_token
+        if (!token || cancelled) return
+        const res = await fetch('/api/paused-exam', {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+        if (!res.ok || cancelled) return
+        const data = await res.json()
+        const serverExam = data?.paused_exam
+        if (!serverExam?.exam_state) return
+        const examState = {
+          ...serverExam.exam_state,
+          ...(serverExam.submitted_result_id ? { submittedResultId: serverExam.submitted_result_id } : {}),
+        }
+        try {
+          localStorage.setItem('pausedExamState', JSON.stringify(examState))
+        } catch {
+          // localStorage full — server is still authoritative.
+        }
+        if (!cancelled) setHasPausedExam(true)
+      } catch (err) {
+        console.error('Failed to hydrate paused exam from server:', err)
+      }
+    })()
+
+    return () => {
+      cancelled = true
     }
   }, [])
 

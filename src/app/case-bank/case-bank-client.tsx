@@ -12,6 +12,7 @@ import { Separator } from "@/components/ui/separator"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useAuth } from "@/context/auth-context"
 import { supabase } from "@/lib/supabase"
+import { hasProAccess as checkProAccess } from "@/lib/subscription-utils"
 
 type CaseSummary = {
   id: string
@@ -82,7 +83,9 @@ export function CaseBankClient() {
   const domainFilter = searchParams.get("domain")
 
   const { userProfile } = useAuth()
-  const hasProAccess = userProfile?.subscription_tier === "pro"
+  // Source of truth for pro access: Stripe subscriber OR active trial OR legacy pro tier.
+  // Checking subscription_tier alone misses Stripe payers whose tier column wasn't updated.
+  const hasProAccess = checkProAccess(userProfile)
 
   const [listState, setListState] = useState<LoadState>("idle")
   const [cases, setCases] = useState<CaseSummary[]>([])
