@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "examId": "warmup-12-16",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.490Z"
+  },
+  "questions": [
+    {
+      "stem": "Which prefrontal cortex region, when damaged, leads to impulsivity, social inappropriateness, lack of empathy, and emotional dysregulation?",
+      "options": [
+        "Ventrolateral prefrontal cortex (VLPFC)",
+        "Dorsolateral prefrontal cortex (DLPFC)",
+        "Orbitofrontal cortex (OFC)",
+        "Ventromedial prefrontal cortex (VMPFC)"
+      ],
+      "answer": "Orbitofrontal cortex (OFC)",
+      "explanation": "1. The correct answer is the **orbitofrontal cortex (OFC)** because damage to this area is associated with impulsivity, social inappropriateness, lack of empathy, and emotional dysregulation. The OFC plays a crucial role in emotion regulation and social behaviors, and when it is impaired, individuals may exhibit behaviors such as immature conduct, inappropriate jocularity, and aggressive actions, all of which reflect difficulties in managing emotions and social interactions.\n\n2. The **ventrolateral prefrontal cortex (VLPFC)** is incorrect because it primarily contributes to decision-making and emotional self-control, and damage here leads to impairments in these areas rather than impulsivity or social inappropriateness. The **dorsolateral prefrontal cortex (DLPFC)** is also incorrect; while it is involved in executive functions and goal-directed behavior, damage results in impaired judgment and apathy, not specifically impulsivity or emotional dysregulation. Finally, the **ventromedial prefrontal cortex (VMPFC)** is not the correct answer because damage to this area affects decision-making and social cognition, leading to moral judgment impairments rather than the impulsivity and emotional dysregulation characteristic of OFC damage.",
+      "kn": "KN1",
+      "kn_explanation": "This question addresses the neurobiological underpinnings of emotional and social regulation functions, aligned with KN1.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed question that differentiates closely related prefrontal regions to test precise localization knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::28",
+      "isScored": true
+    },
+    {
+      "stem": "Which type of interference occurs when newly learned information impairs the recall of previously acquired information?",
+      "options": [
+        "Proactive interference",
+        "Retroactive interference",
+        "Decay interference",
+        "Semantic interference"
+      ],
+      "answer": "Retroactive interference",
+      "explanation": "1. **Retroactive interference** is the correct answer because it specifically refers to the phenomenon where newly acquired information disrupts the ability to recall previously learned information. According to interference theory, this occurs when the new information interferes with the retrieval of older memories, making it difficult to recall what was learned before.\n\n2. **Proactive interference** is incorrect because it describes the situation where previously learned information interferes with the learning or recall of new information, not the other way around. **Decay interference** is not a recognized term in the provided material; the relevant theory discussed is trace decay theory, which suggests that memories deteriorate over time but does not specifically address interference between memories. Lastly, **semantic interference** is also not mentioned in the reference material; it implies interference based on the meanings of words or concepts, which is not the focus of the interference theory discussed.",
+      "kn": "KN8",
+      "kn_explanation": "This question covers memory forgetting theories and interference effects, core topics in the study of memory under KN8.",
+      "difficulty": "medium",
+      "quality_comment": "The question provides common interference types, requiring test-takers to distinguish between the directionality of interference effects.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::66",
+      "isScored": true
+    },
+    {
+      "stem": "According to Latane and Darley's model of bystander intervention, which step involves a bystander deciding that someone else will take responsibility for helping, thereby reducing their own likelihood of intervening?",
+      "options": [
+        "Step 2 – Interpreting the event",
+        "Step 3 – Assuming responsibility",
+        "Step 4 – Determining how to help",
+        "Step 5 – Deciding whether or not to help"
+      ],
+      "answer": "Step 3 – Assuming responsibility",
+      "explanation": "1. \"Step 3 – Assuming responsibility\" is the correct answer because it specifically addresses the phenomenon of diffusion of responsibility. In this step, a bystander may conclude that others present are willing to assist, leading them to feel less personally responsible for intervening in the emergency situation. This reduction in perceived responsibility decreases the likelihood that they will take action.\n\n2. \n- **Step 2 – Interpreting the event:** This step involves the bystander determining whether the situation is an emergency, which does not directly relate to feelings of responsibility but rather to understanding the urgency of the situation.\n- **Step 4 – Determining how to help:** This step focuses on the bystander’s ability to figure out the appropriate way to assist the victim, which is separate from the decision of whether or not they feel responsible to help.\n- **Step 5 – Deciding whether or not to help:** This step pertains to the final decision to help, which may be influenced by various factors, including evaluation apprehension, but does not specifically address the assumption of responsibility that occurs earlier in the process.",
+      "kn": "KN15",
+      "kn_explanation": "This question relates to social cognition theories regarding altruistic behavior and social influence in emergencies, pertinent to social interaction and relationships (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a specific step in a well-known model and distractors are similarly plausible steps, improving discriminability.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::33",
+      "isScored": true
+    },
+    {
+      "stem": "Which treatment approach is described as focusing on changing the client’s behavior or perceptions so they can adapt to the environment rather than changing external circumstances?",
+      "options": [
+        "Alloplastic intervention",
+        "Autoplastic intervention",
+        "Ethical intervention",
+        "Cultural adaptation"
+      ],
+      "answer": "Autoplastic intervention",
+      "explanation": "1. **Correct Answer: Autoplastic intervention**  \nThe correct answer is \"autoplastic intervention\" because this approach focuses on making changes within the client, such as altering their behavior or perceptions, to help them adapt to their environment. This contrasts with changing external circumstances, which is the focus of other intervention types.\n\n2. **Incorrect Options:**\n- **Alloplastic intervention:** This option is incorrect because alloplastic interventions aim to change the external environment or situation to better suit the client’s needs, rather than focusing on internal changes within the client.\n- **Ethical intervention:** This term is not defined in the reference material, making it irrelevant to the context of treatment approaches discussed.\n- **Cultural adaptation:** This option is incorrect because cultural adaptation involves modifying evidence-based treatments to align with a client's cultural context, rather than focusing solely on changing the client's internal behavior or perceptions.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The options include related but distinct terms, providing a clear test of conceptual knowledge of intervention strategies.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::23",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the pattern of mean-level change in the 'Big Five' personality traits during adulthood?",
+      "options": [
+        "Neuroticism and openness increase; agreeableness and conscientiousness decrease",
+        "Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly",
+        "All five traits remain highly stable with no significant mean-level changes",
+        "Extraversion and neuroticism increase; openness and conscientiousness decrease"
+      ],
+      "answer": "Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly",
+      "explanation": "1. The correct answer, \"Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly,\" accurately reflects the findings from studies on personality traits during adulthood. Research indicates that neuroticism tends to decrease as individuals age, while agreeableness and conscientiousness show a tendency to increase. Additionally, extraversion remains relatively stable or may experience a slight decrease, aligning with the observed patterns of mean-level change in personality traits among adults (McCrae et al., 2000; Soto et al., 2011).\n\n2. The first incorrect option, \"Neuroticism and openness increase; agreeableness and conscientiousness decrease,\" is wrong because it contradicts the established finding that neuroticism decreases and that agreeableness and conscientiousness increase during adulthood. The second incorrect option, \"All five traits remain highly stable with no significant mean-level changes,\" is incorrect as it overlooks the predictable mean-level changes observed in specific traits like neuroticism, agreeableness, and conscientiousness. Lastly, the third incorrect option, \"Extraversion and neuroticism increase; openness and conscientiousness decrease,\" is inaccurate because it misrepresents the trends that show neuroticism decreasing and does not reflect the increases in conscientiousness and agreeableness that occur during adulthood.",
+      "kn": "KN21",
+      "kn_explanation": "This question tests understanding of personality development and change, a key component of normal lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Options are balanced and reflect plausible trait patterns, requiring specific recall of personality developmental trends, appropriate for medium difficulty.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::24",
+      "isScored": true
+    },
+    {
+      "stem": "Which personality trait is most closely associated with avoidant personality disorder?",
+      "options": [
+        "Extraversion",
+        "Agreeableness",
+        "Neuroticism",
+        "Low self-esteem"
+      ],
+      "answer": "Low self-esteem",
+      "explanation": "Low self-esteem is a core feature of avoidant personality disorder, leading individuals to avoid social situations due to feelings of inadequacy. While neuroticism may also be present, it is not as directly linked as low self-esteem. Extraversion and agreeableness are not characteristic of avoidant personality disorder.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of personality traits related to avoidant personality disorder.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Low self-esteem is a significant trait associated with avoidant personality disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::46",
+      "isScored": true
+    },
+    {
+      "stem": "Which statistical concept is crucial to avoid misinterpretation of rare symptoms in psychological assessment, particularly when base rates are low?",
+      "options": [
+        "Base rate fallacy",
+        "Confirmation bias",
+        "Overconfidence effect",
+        "Anchoring bias"
+      ],
+      "answer": "Base rate fallacy",
+      "explanation": "1. **Base rate fallacy** is the correct answer because it refers to the error in reasoning that occurs when people ignore the base rate (the general prevalence) of a condition or symptom in the population. In psychological assessment, particularly with rare symptoms, failing to consider low base rates can lead to overestimating the likelihood of a disorder, resulting in misinterpretation of assessment results.\n\n2. **Confirmation bias** is incorrect because it involves favoring information that confirms existing beliefs rather than considering all relevant data, which is not specifically about the misinterpretation of rare symptoms based on their prevalence. **Overconfidence effect** is wrong as it pertains to an individual’s excessive confidence in their knowledge or predictions, rather than a misunderstanding of statistical prevalence. **Anchoring bias** is also incorrect since it refers to relying too heavily on the first piece of information encountered (the \"anchor\") when making decisions, rather than the statistical base rates of symptoms.",
+      "kn": "KN37",
+      "kn_explanation": "This question addresses evidence-based interpretation of data and cognitive biases relevant to psychological assessment and diagnosis (KN37).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively integrates statistical reasoning with clinical assessment, testing conceptual understanding of common biases.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json::16",
+      "isScored": true
+    },
+    {
+      "stem": "Which source of validity evidence includes systematic review by subject matter experts to ensure representativeness of test items?",
+      "options": [
+        "Evidence based on test content",
+        "Evidence based on internal structure",
+        "Evidence based on relationships with other variables",
+        "Evidence based on consequences of testing"
+      ],
+      "answer": "Evidence based on test content",
+      "explanation": "1. \"Evidence based on test content\" is the correct answer because it specifically involves the systematic review of test items by subject matter experts to ensure that the items accurately reflect the domain being assessed. This process is crucial for establishing content validity, as it ensures that the test items represent all important aspects of the intended content or behavior domains.\n\n2. The option \"Evidence based on internal structure\" is incorrect because it pertains to the relationships among test items and the underlying constructs, rather than the representativeness of test items. \"Evidence based on relationships with other variables\" is not correct because it focuses on how test scores correlate with other measures, rather than the content of the test items themselves. Finally, \"Evidence based on consequences of testing\" is incorrect because it examines the outcomes and implications of test use, rather than the initial content and item representativeness established during test development.",
+      "kn": "KN29",
+      "kn_explanation": "This question highlights a key process in establishing test content validity, integral to psychometric theories and test construction (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The item clearly distinguishes among types of validity evidence with plausible distractors, making it effective for knowledge assessment.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "In cognitive-behavioral therapy for suicide prevention, what does the 'chain analysis' technique primarily involve?",
+      "options": [
+        "Evaluating the efficacy of safety plans after discharge",
+        "Identifying the series of events and thoughts leading up to the suicide attempt",
+        "Teaching relaxation skills to manage suicidal urges",
+        "Disputing irrational beliefs about self-worth and hopelessness"
+      ],
+      "answer": "Identifying the series of events and thoughts leading up to the suicide attempt",
+      "explanation": "1. The correct answer, \"Identifying the series of events and thoughts leading up to the suicide attempt,\" accurately describes the chain analysis technique used in cognitive-behavioral therapy for suicide prevention (CT-SP). This technique focuses on understanding the specific circumstances and cognitive processes that culminate in a suicidal crisis, allowing both the therapist and client to explore the connections between events and thoughts that contribute to suicidal behavior, thereby informing safety planning and coping strategies.\n\n2. The option \"Evaluating the efficacy of safety plans after discharge\" is incorrect because chain analysis is concerned with understanding the antecedents to a suicide attempt rather than assessing post-discharge interventions. \"Teaching relaxation skills to manage suicidal urges\" is not correct as chain analysis does not focus on skill acquisition but rather on the sequence of events and thoughts leading to the crisis. Lastly, \"Disputing irrational beliefs about self-worth and hopelessness\" is misleading because while addressing irrational beliefs is a component of cognitive therapies, chain analysis specifically aims to map the events and thoughts rather than directly disputing beliefs.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and focused on a practical CBT technique, with plausible distractors enhancing differentiation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::33",
+      "isScored": true
+    },
+    {
+      "stem": "What does an F ratio in ANOVA represent?",
+      "options": [
+        "The ratio of between-group variance to within-group variance",
+        "The total variance in the data",
+        "The average of the dependent variable",
+        "The correlation between independent and dependent variables"
+      ],
+      "answer": "The ratio of between-group variance to within-group variance",
+      "explanation": "The correct answer is 'The ratio of between-group variance to within-group variance' because the F ratio is calculated to determine whether the means of different groups are significantly different by comparing the variance explained by the group differences to the variance within the groups. The other options do not accurately describe the F ratio.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests a fundamental aspect of ANOVA.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "The F ratio represents the ratio of between-group variance to within-group variance.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "Dr. Navarro is preparing to lead a new therapy group for adults with social anxiety. Regarding confidentiality in the group setting, what is the MOST accurate statement about his ethical obligations?",
+      "options": [
+        "He can guarantee confidentiality by having all group members sign a confidentiality agreement",
+        "He should decline to run the group because confidentiality cannot be maintained in group settings",
+        "He cannot guarantee confidentiality but should discuss its importance during screening, the first session, subsequent sessions as needed, and the final session",
+        "He is ethically required to inform members that everything discussed in group will be reported to their individual therapists"
+      ],
+      "answer": "He cannot guarantee confidentiality but should discuss its importance during screening, the first session, subsequent sessions as needed, and the final session",
+      "explanation": "The lesson explicitly states that therapists cannot guarantee confidentiality in group therapy because group members are not bound by professional ethics or legal liability. However, the therapist's role is risk reduction: discussing confidentiality during screening interviews, the first session, subsequent sessions as needed, and the final session. Option A is wrong because even with a signed agreement, confidentiality cannot be guaranteed since group members are not legally bound. Option B is wrong because the inability to guarantee confidentiality does not mean groups should not be run—risk reduction strategies are appropriate. Option D is fabricated and not an ethical requirement.",
+      "kn": "KN61",
+      "kn_explanation": "APA ethical principles regarding confidentiality standards in group therapy",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests the key distinction that confidentiality cannot be guaranteed in groups, with the correct risk-reduction approach clearly supported by the lesson.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "#### Group Therapy",
+      "lessonExcerpt": "You cannot guarantee confidentiality in group therapy. Why? Because group members aren't bound by professional ethics or legal liability if they breach confidentiality. Your job is risk reduction: Discuss confidentiality importance during screening interviews, Revisit it in the first session, subsequent sessions as needed, and the final session.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 24,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "According to Krumboltz’s Social Learning Theory of Career Decision-Making, what type of generalization involves beliefs about one’s own attitudes, values, and skills that influence career choices?",
+      "options": [
+        "Instrumental generalizations",
+        "Self-observation generalizations",
+        "Worldview generalizations",
+        "Task approach generalizations"
+      ],
+      "answer": "Self-observation generalizations",
+      "explanation": "1. \"Self-observation generalizations\" is the correct answer because, according to Krumboltz’s Social Learning Theory of Career Decision-Making, these generalizations refer to beliefs individuals have about their own attitudes, values, interests, and skills. These beliefs significantly influence career choices by shaping how individuals perceive their capabilities and preferences in the context of their career decisions.\n\n2. The incorrect options are as follows:\n- **Instrumental generalizations**: This term refers to beliefs about the consequences of actions taken in the career decision-making process, rather than beliefs about one’s own attributes.\n- **Worldview generalizations**: These involve beliefs about the world and its opportunities, which help predict future events but do not pertain to personal attitudes or skills.\n- **Task approach generalizations**: This category includes beliefs about how to approach tasks and solve problems, focusing on performance standards rather than self-perception of skills and values.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible-sounding terms but only one correctly matches the theory’s terminology, enhancing discriminability.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Careers Develop.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Careers Develop.json::11",
+      "isScored": true
+    }
+  ]
+}

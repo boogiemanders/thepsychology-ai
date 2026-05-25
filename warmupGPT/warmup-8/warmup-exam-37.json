@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "examId": "warmup-8-37",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "A 71-year-old client is referred for neuropsychological evaluation. He presents with a resting tremor, cogwheel muscle rigidity, bradykinesia, and a shuffling gait. His neurologist has confirmed a diagnosis of Parkinson's disease. The motor symptoms of this disorder result primarily from the progressive loss of dopaminergic neurons in which brain structure?",
+      "options": [
+        "Caudate nucleus and putamen, which form the dorsal striatum",
+        "Locus coeruleus, the primary norepinephrine-producing nucleus",
+        "Substantia nigra, located in the midbrain",
+        "Cerebellum, which coordinates voluntary movement and balance"
+      ],
+      "answer": "Substantia nigra, located in the midbrain",
+      "explanation": "Parkinson's disease is caused by the degeneration of dopaminergic neurons in the substantia nigra, a midbrain structure. Loss of dopamine output from this region to the striatum disrupts the smooth regulation of voluntary movement, producing the cardinal motor features. Option A (caudate nucleus and putamen) is incorrect—these are the structures destroyed in Huntington's disease, as the lesson notes the disease 'destroys cells in the caudate nucleus and putamen.' Option B (locus coeruleus) is a norepinephrine-producing nucleus unrelated to Parkinson's primary pathology. Option D (cerebellum) damage produces ataxia and unsteady movement, not the rigidity and resting tremor characteristic of Parkinson's.",
+      "kn": "KN1",
+      "kn_explanation": "Identifying the brain regions affected in specific neurological movement disorders is core Biological Bases of Behavior content, linking neuroanatomy to clinical presentation.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with an excellent distractor in Option A that tests whether examinees can differentiate Parkinson's from Huntington's at the anatomical level",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## Midbrain: The Alert System and Movement Moderator",
+      "lessonExcerpt": "The disease destroys cells in the caudate nucleus and putamen (parts of the basal ganglia), plus the cerebral cortex, cerebellum, and thalamus. [Note: this quote describes Huntington's disease; the substantia nigra section in the midbrain was present but truncated in the lesson file.]",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::18",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "Which type of memory encoding involves the transformation of sensory input into a form that can be stored in long-term memory?",
+      "options": [
+        "Semantic encoding",
+        "Visual encoding",
+        "Acoustic encoding",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "All three types of encoding—semantic, visual, and acoustic—are methods through which sensory input is transformed into a storable format in long-term memory. Semantic encoding focuses on the meaning of information, visual encoding on images, and acoustic encoding on sounds. Each plays a role in memory processes.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of memory encoding types.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## The Three-Store Model: How Information Moves Through Your Brain",
+      "lessonExcerpt": "Information moves from short-term to long-term memory through encoding, connecting new information to something already stored in long-term memory.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::40",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Heider's balance theory suggests that if Patricia (P) likes Oscar (O) but Oscar dislikes country music (X), which Patricia likes, Patricia will likely be:",
+      "options": [
+        "Motivated to change her attitude toward country music or Oscar to restore balance",
+        "Unconcerned because relationships are independent of attitudes toward objects",
+        "Motivated to reinforce her liking of Oscar without changing her attitude toward country music",
+        "Likely to ignore Oscar’s attitude since it does not affect her attitude"
+      ],
+      "answer": "Motivated to change her attitude toward country music or Oscar to restore balance",
+      "explanation": "1. The correct answer, \"Motivated to change her attitude toward country music or Oscar to restore balance,\" aligns with Heider's balance theory, which posits that individuals seek consistency among their attitudes and relationships. In this scenario, Patricia (P) likes Oscar (O) but he dislikes country music (X), which she likes; this creates an unbalanced state that leads to cognitive discomfort, motivating her to adjust her attitudes toward either Oscar or country music to re-establish balance.\n\n2. The option \"Unconcerned because relationships are independent of attitudes toward objects\" is incorrect because balance theory specifically emphasizes the interdependence of attitudes and relationships; discomfort arises precisely because they are connected. The statement \"Motivated to reinforce her liking of Oscar without changing her attitude toward country music\" is wrong because it ignores the necessity of addressing the inconsistency between her liking of Oscar and her fondness for country music, which creates dissonance. Lastly, \"Likely to ignore Oscar’s attitude since it does not affect her attitude\" is incorrect because balance theory asserts that conflicting attitudes within a relational context cannot be easily ignored; they compel the individual to resolve the inconsistency.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question presents a clear, practical example of the theory, with plausible distractors, making it well suited for applied knowledge testing.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::16",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "What does current research suggest about the genetic determination of handedness?",
+      "options": [
+        "It is entirely determined by genetics",
+        "It is influenced by both genetics and environment",
+        "It is solely a result of environmental factors",
+        "It is determined by birth order"
+      ],
+      "answer": "It is influenced by both genetics and environment",
+      "explanation": "The correct answer is 'It is influenced by both genetics and environment', as research indicates that while there is a genetic component to handedness, environmental factors also play a significant role. The other options are incorrect as they oversimplify the complexity of handedness determination.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the interplay between genetics and environment.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## The Core Debate: What Makes Us Who We Are?",
+      "lessonExcerpt": "Current research suggests that handedness is influenced by both genetic and environmental factors.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::8",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best summarizes the treatment outcome finding for combining therapy and medication in tobacco use disorder?",
+      "options": [
+        "Combination of therapy and medication yields higher quit rates than either alone",
+        "Medication alone is more effective than therapy or combination treatment",
+        "Therapy alone is sufficient for most patients without medication",
+        "Neither therapy nor medication shows significant benefit alone or combined"
+      ],
+      "answer": "Combination of therapy and medication yields higher quit rates than either alone",
+      "explanation": "1. The correct answer, \"Combination of therapy and medication yields higher quit rates than either alone,\" is supported by the reference material, which states that studies evaluating treatments for tobacco use disorder show that both therapy and medication are effective when used individually, but their combination is most effective. Specifically, therapy that includes critical thinking skills training and social support, alongside medications like nicotine nasal spray and varenicline, leads to better outcomes than using either treatment modality alone.\n\n2. The option \"Medication alone is more effective than therapy or combination treatment\" is incorrect because the reference material indicates that while medication can be effective, it does not outperform the combination of therapy and medication. The statement \"Therapy alone is sufficient for most patients without medication\" is also wrong, as the material emphasizes that although therapy is beneficial, it is not as effective when used without medication compared to the combination approach. Lastly, \"Neither therapy nor medication shows significant benefit alone or combined\" is incorrect because the material clearly indicates that both therapy and medication have demonstrated effectiveness, especially when combined, contradicting the assertion that neither shows significant benefit.",
+      "kn": "KN40",
+      "kn_explanation": "This question addresses measuring outcomes and changes due to intervention, highlighting evidence-based efficacy (KN40).",
+      "difficulty": "medium",
+      "quality_comment": "A clear clinically relevant item about intervention efficacy that broadens assessment coverage in outcome measurement.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json::17",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "During Jungian analysis, a client who consistently presents himself as entirely selfless and accommodating expresses intense, seemingly disproportionate contempt for colleagues he describes as 'exploitative and narcissistic.' His analyst hypothesizes that the client is engaged in shadow projection. Which of the following most accurately describes the theoretical basis for this formulation within Jungian analytical psychology?",
+      "options": [
+        "The client is displacing superego-driven moral condemnation onto external authority figures, re-enacting the relationship with an internalized punitive parental object",
+        "Disowned material from both the personal unconscious — individually repressed traits — and the collective unconscious — universal dark archetypes shared by all humanity — is being attributed to others rather than recognized in oneself",
+        "The client's anima is in irreconcilable conflict with his persona, generating compensatory idealization of the persona and projection of animus qualities onto male colleagues",
+        "Unresolved transference from early attachment figures is distorting perception of colleagues through the object-relational mechanism of projective identification"
+      ],
+      "answer": "Disowned material from both the personal unconscious — individually repressed traits — and the collective unconscious — universal dark archetypes shared by all humanity — is being attributed to others rather than recognized in oneself",
+      "explanation": "In Jungian theory, the shadow is the archetype representing the dark, unacceptable, and disowned dimensions of the self that are excluded from the persona (the public identity). The shadow draws from two sources: (1) the personal unconscious, which contains individually repressed memories, impulses, and traits unique to the person's history, and (2) the collective unconscious, which contains universal, inherited archetypal patterns of human darkness shared across all people and cultures. Shadow projection occurs when a person attributes these disowned qualities to external others rather than integrating them. In this case, the client's accommodation persona likely conceals disowned self-serving impulses that he projects as contemptible narcissism in colleagues. The superego/parental object explanation belongs to Freudian object-relations theory. The anima/animus formulation is a distinct Jungian concept involving contrasexual archetypes. Projective identification is an object-relations term (Kleinian) unrelated to Jungian shadow theory.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent doctoral-level question requiring integration of multiple Jungian constructs; distractors demand precise discrimination between Jungian, classical Freudian, and object-relational frameworks.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "## Jung's Analytical Psychology: Beyond Freud",
+      "lessonExcerpt": "Personal unconscious: Your own forgotten or repressed memories (similar to Freud's idea). Collective unconscious: Memories shared by all humans, passed down through generations. The collective unconscious contains archetypes. Universal patterns of thought and imagery that predispose us to act in similar ways... Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 20,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::9",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "In predictive modeling, which of the following best describes the role of multiple predictor variables?",
+      "options": [
+        "They are used to manipulate the dependent variable directly.",
+        "They help estimate the criterion variable by examining their combined effects.",
+        "They serve solely to increase the complexity of the model.",
+        "They are irrelevant to the outcome of the predictive analysis."
+      ],
+      "answer": "They help estimate the criterion variable by examining their combined effects.",
+      "explanation": "The correct answer is that multiple predictor variables are used to estimate the criterion variable by examining their combined effects. This is fundamental to predictive modeling, where the goal is to understand how various factors influence an outcome. The other options misrepresent the role of predictors in modeling.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of predictive modeling concepts.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## Why Correlation and Regression Matter for Your Psychology Career",
+      "lessonExcerpt": "These tools help you evaluate whether a new therapy actually works, determine if a psychological test is worth using, and understand research that guides your clinical decisions.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::5",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary ethical consideration regarding confidentiality of a deceased client's information?",
+      "options": [
+        "A) The psychologist can disclose any information without restrictions.",
+        "B) Confidentiality obligations cease upon the client's death.",
+        "C) The psychologist must consider the potential impact on the deceased client's family before disclosing information.",
+        "D) The psychologist can disclose information only if it is in the public interest."
+      ],
+      "answer": "C) The psychologist must consider the potential impact on the deceased client's family before disclosing information.",
+      "explanation": "The correct answer is C because ethical considerations regarding confidentiality extend beyond a client's death, particularly concerning the potential impact on surviving family members. Option A is incorrect as confidentiality does not allow for unrestricted disclosure. Option B is incorrect because confidentiality obligations do not automatically cease with death. Option D is also incorrect as public interest does not override ethical considerations regarding family impact.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses understanding of posthumous confidentiality ethics.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
+      "lessonExcerpt": "The APA considers whether your personal actions overlap with your professional role.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 32,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::23",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

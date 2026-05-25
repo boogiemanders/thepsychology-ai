@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "examId": "warmup-12-10",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.486Z"
+  },
+  "questions": [
+    {
+      "stem": "Cri-du-chat syndrome is primarily caused by a deletion on which chromosome?",
+      "options": [
+        "Chromosome 5",
+        "Chromosome 4",
+        "Chromosome 7",
+        "Chromosome 21"
+      ],
+      "answer": "Chromosome 5",
+      "explanation": "Cri-du-chat syndrome is caused by a deletion on chromosome 5, specifically affecting the 5p region. The other options do not correspond to the genetic basis of this syndrome.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to chromosomal abnormalities and their genetic implications.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly tests knowledge of genetic syndromes.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Huntington's Disease: The Genetic Movement Disorder",
+      "lessonExcerpt": "Cri-du-chat syndrome is caused by a deletion on chromosome 5.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::29",
+      "isScored": true
+    },
+    {
+      "stem": "Why is backward conditioning generally considered ineffective in classical conditioning procedures?",
+      "options": [
+        "Because the US precedes the CS, preventing the CS from predicting the US",
+        "Because the CS and US are presented simultaneously, making discrimination difficult",
+        "Because the CS is repeatedly presented without the US, leading to extinction",
+        "Because multiple CSs compete for association with the US"
+      ],
+      "answer": "Because the US precedes the CS, preventing the CS from predicting the US",
+      "explanation": "### Explanation of the Correct Answer\nThe correct answer, \"Because the US precedes the CS, preventing the CS from predicting the US,\" is accurate because, in backward conditioning, the unconditioned stimulus (US) is presented before the conditioned stimulus (CS). This sequence disrupts the ability of the CS to signal or predict the occurrence of the US, which is essential for effective classical conditioning. Without this predictive relationship, the CS fails to elicit the conditioned response (CR).\n\n### Explanation of Incorrect Options\n- **\"Because the CS and US are presented simultaneously, making discrimination difficult\":** This statement is incorrect because simultaneous conditioning involves the CS and US being presented at the same time, not in the backward conditioning procedure where the US precedes the CS.\n\n- **\"Because the CS is repeatedly presented without the US, leading to extinction\":** This option is wrong as it describes a scenario of classical extinction rather than backward conditioning. In backward conditioning, the CS is not presented alone but rather follows the US.\n\n- **\"Because multiple CSs compete for association with the US\":** This option is incorrect because backward conditioning does not involve multiple CSs competing; it specifically refers to a single CS following the US, which does not allow for the necessary conditioning to occur. \n\nBy understanding these principles, we can see how the timing of stimulus presentation is crucial for effective classical conditioning.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests understanding of the importance of stimulus order and contingency in classical conditioning, central to learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible alternative procedures, helping assess grasp of temporal factors affecting conditioning efficacy.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json::26",
+      "isScored": true
+    },
+    {
+      "stem": "What psychological effect is most likely to occur in individuals living in overcrowded environments?",
+      "options": [
+        "Increased feelings of social support and community.",
+        "Heightened levels of stress and anxiety.",
+        "Improved cognitive functioning and creativity.",
+        "Enhanced interpersonal relationships."
+      ],
+      "answer": "Heightened levels of stress and anxiety.",
+      "explanation": "The correct answer reflects research indicating that overcrowding can lead to increased stress and anxiety due to the lack of personal space and increased competition for resources. The other options are generally contrary to the effects of overcrowding.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of environmental psychology.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## Why Your Brain Takes Shortcuts (And How That Shows Up on the EPPP)",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "In Sellers et al.’s Multidimensional Model of Racial Identity, how do 'private regard' and 'public regard' differ?",
+      "options": [
+        "Private regard refers to others' views of the racial group; public regard reflects personal feelings toward the group",
+        "Private regard and public regard are identical constructs measuring positive feelings about race",
+        "Private regard refers to a person's own feelings toward African Americans; public regard refers to perceived others’ views",
+        "Private regard deals with political beliefs; public regard deals with cultural practices"
+      ],
+      "answer": "Private regard refers to a person's own feelings toward African Americans; public regard refers to perceived others’ views",
+      "explanation": "1. The correct answer, \"Private regard refers to a person's own feelings toward African Americans; public regard refers to perceived others’ views,\" accurately captures the distinction made by Sellers et al. in their Multidimensional Model of Racial Identity. Private regard pertains to an individual's internal feelings about their racial group, while public regard reflects how they believe society views that group, highlighting the difference between personal self-perception and social perception.\n\n2. The first incorrect option, \"Private regard refers to others' views of the racial group; public regard reflects personal feelings toward the group,\" is wrong because it reverses the definitions of private and public regard, misrepresenting their meanings. The second option, \"Private regard and public regard are identical constructs measuring positive feelings about race,\" is incorrect because it fails to recognize that private and public regard are distinct constructs measuring different aspects of racial identity. The third option, \"Private regard deals with political beliefs; public regard deals with cultural practices,\" is incorrect as it inaccurately attributes political and cultural dimensions to private and public regard, which are specifically about personal and societal perceptions of racial identity.",
+      "kn": "KN19",
+      "kn_explanation": "This question requires knowledge of racial identity dimensions and social perceptions central to identity studies and cultural psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are detailed and similar in length, requiring precise conceptual understanding to identify the correct definitions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::13",
+      "isScored": true
+    },
+    {
+      "stem": "Which parenting style is most likely to foster the development of conscience in children?",
+      "options": [
+        "Authoritarian",
+        "Permissive",
+        "Authoritative",
+        "Neglectful"
+      ],
+      "answer": "Authoritative",
+      "explanation": "The correct answer is 'Authoritative' because this parenting style is characterized by warmth, support, and appropriate expectations, which fosters healthy conscience development. The other styles either lack support or impose too much control.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of parenting styles and their effects.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Foundation: Piaget's Three-Stage Theory",
+      "lessonExcerpt": "Understanding how families and schools shape development isn't just academic trivia.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following theories of intelligence emphasizes planning, attention, simultaneous processing, and sequential processing as four interdependent functions?",
+      "options": [
+        "Das, Naglieri, and Kirby's PASS theory",
+        "Gardner's Theory of Multiple Intelligences",
+        "Sternberg's Triarchic Theory of Successful Intelligence",
+        "Spearman's Two-Factor Theory"
+      ],
+      "answer": "Das, Naglieri, and Kirby's PASS theory",
+      "explanation": "1. \"Das, Naglieri, and Kirby's PASS theory\" is the correct answer because it specifically identifies four interdependent functions of intelligence: planning, attention, simultaneous processing, and sequential processing. This theory is rooted in Luria's research on cognitive functions and emphasizes how these functions interact with a person's knowledge to facilitate intelligent behavior.\n\n2. The incorrect options are as follows: \n- **Gardner's Theory of Multiple Intelligences** focuses on the existence of multiple distinct intelligences that vary in strength among individuals, rather than interdependent cognitive functions.\n- **Sternberg's Triarchic Theory of Successful Intelligence** comprises three components—analytical, creative, and practical intelligence—rather than the four functions outlined in the PASS theory.\n- **Spearman's Two-Factor Theory** distinguishes between a general intelligence factor (g) and specific factors (s) affecting performance on cognitive tasks, without addressing the specific functions of planning, attention, simultaneous processing, and sequential processing.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "Distractor theories are well-known and plausible but distinct; this tests precise recognition of the PASS theory.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::20",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following symptoms is NOT characteristic of obsessive-compulsive personality disorder?",
+      "options": [
+        "Preoccupation with orderliness and rules",
+        "True obsessions and compulsions",
+        "Excessive devotion to work and productivity",
+        "Reluctance to delegate tasks without control"
+      ],
+      "answer": "True obsessions and compulsions",
+      "explanation": "1. \"True obsessions and compulsions\" is the correct answer because obsessive-compulsive personality disorder (OCPD) is characterized by a pervasive pattern of preoccupation with orderliness, perfectionism, and control, but it does not involve the true obsessions and compulsions found in obsessive-compulsive disorder (OCD). OCPD focuses on a rigid adherence to rules and order rather than the intrusive thoughts and repetitive behaviors that characterize OCD.\n\n2. \n- **Preoccupation with orderliness and rules:** This symptom is characteristic of OCPD, as individuals with this disorder are often excessively focused on details, rules, and schedules, which can hinder the overall purpose of their activities.\n- **Excessive devotion to work and productivity:** This behavior is also typical of OCPD, where individuals may prioritize work and productivity to the exclusion of leisure activities and personal relationships, reflecting their perfectionistic tendencies.\n- **Reluctance to delegate tasks without control:** This symptom is indicative of OCPD as well, since people with this disorder often prefer to maintain control over tasks and are hesitant to delegate unless they can ensure the work is done to their standards.",
+      "kn": "KN36",
+      "kn_explanation": "This question distinguishes between personality disorder and anxiety disorder symptomatology, relating to classification and diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect core features of OCPD, contrasted with the key feature of OCD, clarifying common misconceptions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::10",
+      "isScored": true
+    },
+    {
+      "stem": "A newly developed self-report sociability test shows a high correlation with a teacher report sociability test and a low correlation with a teacher report impulsivity test. This pattern of correlations primarily demonstrates:",
+      "options": [
+        "Both convergent and divergent validity",
+        "Face validity only",
+        "Only content validity",
+        "Criterion-related validity"
+      ],
+      "answer": "Both convergent and divergent validity",
+      "explanation": "1. The correct answer is \"Both convergent and divergent validity\" because the self-report sociability test demonstrates a high correlation with the teacher report sociability test, indicating convergent validity, which shows that the tests measure the same construct. Additionally, the low correlation with the teacher report impulsivity test provides evidence of divergent validity, confirming that the sociability test does not measure an unrelated trait, thus supporting its validity in measuring sociability.\n\n2. \"Face validity only\" is incorrect because face validity refers to how valid a test appears to examinees, which does not assess the actual measurement properties like convergent and divergent validity. \"Only content validity\" is wrong because content validity focuses on whether the test items represent the domain being measured, not on the correlation patterns observed in this case. \"Criterion-related validity\" is also incorrect because this type of validity assesses how well one measure predicts an outcome based on another measure, which is not the focus of the correlation pattern described.",
+      "kn": "KN29",
+      "kn_explanation": "The question targets understanding of construct validity components and their interpretation using correlation patterns within validation research (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The scenario-based question integrates concepts well, with distractors reflecting common validity misconceptions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "Health promotion strategies in psychological interventions primarily aim to:",
+      "options": [
+        "Reduce severity and duration of diagnosed disorders",
+        "Target individuals already receiving treatment",
+        "Enhance resilience and well-being before onset of disorder",
+        "Focus exclusively on pharmacological treatments"
+      ],
+      "answer": "Enhance resilience and well-being before onset of disorder",
+      "explanation": "1. The correct answer, \"Enhance resilience and well-being before onset of disorder,\" aligns with the goals of primary prevention, which focuses on reducing the occurrence of new cases of mental or physical disorders. This approach emphasizes health promotion strategies that improve overall well-being and resilience in populations, thereby preventing the development of disorders before they manifest.\n\n2. The option \"Reduce severity and duration of diagnosed disorders\" is incorrect because it pertains to tertiary prevention, which targets individuals who have already received a diagnosis and aims to mitigate the impact of existing disorders. The option \"Target individuals already receiving treatment\" is wrong as it suggests a focus on secondary or tertiary prevention rather than the proactive health promotion associated with primary prevention strategies. Lastly, \"Focus exclusively on pharmacological treatments\" is incorrect because health promotion strategies in psychological interventions encompass a broader range of approaches, including psychological, social, and educational interventions, rather than being limited to pharmacological methods.",
+      "kn": "KN51",
+      "kn_explanation": "This item assesses knowledge of health promotion, risk reduction, and wellness concepts in prevention (KN51).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contrast stages of intervention to ensure understanding of health promotion's proactive nature.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::46",
+      "isScored": true
+    },
+    {
+      "stem": "What does the biserial coefficient primarily measure?",
+      "options": [
+        "The strength of the relationship between two continuous variables",
+        "The strength of the relationship between a continuous variable and a dichotomous variable",
+        "The difference between two means",
+        "The variance within a single group"
+      ],
+      "answer": "The strength of the relationship between a continuous variable and a dichotomous variable",
+      "explanation": "The correct answer is 'The strength of the relationship between a continuous variable and a dichotomous variable' because the biserial coefficient is specifically used to assess the correlation between these types of variables. The other options do not accurately describe the purpose of the biserial coefficient.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of correlation coefficients.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## Choosing the Right Correlation Coefficient",
+      "lessonExcerpt": "The biserial coefficient measures the strength of the relationship between a continuous variable and a dichotomous variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::10",
+      "isScored": true
+    },
+    {
+      "stem": "How should psychologists manage dual relationships that occur in social settings?",
+      "options": [
+        "They should avoid all social interactions with clients.",
+        "They can engage in social activities as long as they maintain professional boundaries.",
+        "They must disclose all social interactions to their clients.",
+        "They should only engage in social activities if they are beneficial to the client."
+      ],
+      "answer": "They can engage in social activities as long as they maintain professional boundaries.",
+      "explanation": "Psychologists can engage in social activities with clients as long as they maintain clear professional boundaries to avoid conflicts of interest or exploitation. Avoiding all social interactions is impractical and not required.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of dual relationship management.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Multiple Relationships: The Most Complex Standard",
+      "lessonExcerpt": "Only those that 'could reasonably be expected to impair objectivity, competence, or effectiveness' or risk exploitation or harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 28,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::13",
+      "isScored": true
+    },
+    {
+      "stem": "The contrast error in subjective performance ratings occurs when:",
+      "options": [
+        "Raters give systematically low or high ratings regardless of actual performance",
+        "A rater’s evaluation of an employee is influenced by the performance of a previously rated employee",
+        "A rater’s single impression of an employee influences ratings on all performance dimensions",
+        "Raters give higher ratings to individuals perceived as similar to themselves"
+      ],
+      "answer": "A rater’s evaluation of an employee is influenced by the performance of a previously rated employee",
+      "explanation": "1. The correct answer, \"A rater’s evaluation of an employee is influenced by the performance of a previously rated employee,\" accurately describes the contrast error. This type of rater bias occurs when the evaluation of an employee is affected by the performance of another employee who was rated just prior, leading to skewed ratings based on relative comparisons rather than the actual performance of the current employee.\n\n2. The option \"Raters give systematically low or high ratings regardless of actual performance\" is incorrect because it describes distribution errors, specifically leniency and strictness biases, rather than the contrast error. The statement \"A rater’s single impression of an employee influences ratings on all performance dimensions\" is wrong because it refers to the halo error, where one dimension affects ratings across all others, not the influence of previous ratings. Lastly, \"Raters give higher ratings to individuals perceived as similar to themselves\" is incorrect because it pertains to the similarity bias, where personal similarities influence ratings, rather than the effect of previous evaluations as described in the contrast error.",
+      "kn": "KN34",
+      "kn_explanation": "The question evaluates knowledge of common rater biases in subjective ratings within organizational assessments (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "This question uses a clear example of contrast error with plausible distractors to enhance discriminability.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json::17",
+      "isScored": true
+    }
+  ]
+}

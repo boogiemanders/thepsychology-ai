@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "examId": "warmup-8-9",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.484Z"
+  },
+  "questions": [
+    {
+      "stem": "What effect does administering a drug that inhibits RNA synthesis around the time of training have on memory formation?",
+      "options": [
+        "Prevents formation of long-term but not short-term memories",
+        "Prevents formation of short-term but not long-term memories",
+        "Enhances both short-term and long-term memory formation",
+        "Has no effect on memory formation"
+      ],
+      "answer": "Prevents formation of long-term but not short-term memories",
+      "explanation": "1. The correct answer, \"Prevents formation of long-term but not short-term memories,\" is supported by research indicating that administering a drug that inhibits RNA synthesis around the time of training disrupts the formation of long-term memories. This is because long-term memory formation relies on the synthesis of RNA, which is necessary for protein synthesis and the structural changes in synapses that occur during this process. In contrast, short-term memories do not depend on these long-term changes and can still be formed without RNA synthesis.\n\n2. The incorrect option \"Prevents formation of short-term but not long-term memories\" is wrong because short-term memory formation does not require the same processes that are necessary for long-term memory, allowing it to remain intact despite RNA synthesis inhibition. The option \"Enhances both short-term and long-term memory formation\" is incorrect as inhibiting RNA synthesis would not enhance memory formation; rather, it impedes the ability to form long-term memories. Lastly, the option \"Has no effect on memory formation\" is incorrect because the established research clearly shows that inhibiting RNA synthesis specifically affects long-term memory formation, indicating a significant impact on memory processes.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem and correct use of neuroscience terms make this a strong question on memory physiology.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json::26",
+      "isScored": true
+    },
+    {
+      "stem": "In the serial position effect observed in the multi-store model of memory, why do individuals recall more words from the end of a list immediately after presentation?",
+      "options": [
+        "Because words at the end of the list enter sensory memory and are easily recognized",
+        "Because words at the end remain in short-term memory",
+        "Because words at the end are stored in long-term memory due to rehearsal",
+        "Because words in the middle are repeated more often"
+      ],
+      "answer": "Because words at the end remain in short-term memory",
+      "explanation": "1. The correct answer, \"Because words at the end remain in short-term memory,\" is accurate because, according to the multi-store model of memory, items presented at the end of a list are still within the limited duration of short-term memory (approximately 20 seconds) at the time of recall. This allows individuals to easily access and retrieve these words immediately after presentation, demonstrating the recency effect associated with short-term memory.\n\n2. The option \"Because words at the end of the list enter sensory memory and are easily recognized\" is incorrect because sensory memory only holds information for a very brief period (iconic memory for about half a second and echoic memory for about two seconds) and does not account for the immediate recall of words after they have been processed into short-term memory. \n\nThe statement \"Because words at the end are stored in long-term memory due to rehearsal\" is misleading because words at the end of the list are typically not rehearsed sufficiently to be transferred into long-term memory before recall; they remain in short-term memory instead. \n\nLastly, \"Because words in the middle are repeated more often\" is incorrect because, in the serial position effect, words in the middle of the list are often less recalled due to a lack of rehearsal and are not as readily accessible as those at the beginning or end of the list, which can benefit from the primacy and recency effects, respectively.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests understanding of classic memory phenomena explained by theoretical models of memory, appropriate for KN8.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly focuses on a key memory phenomenon and offers plausible distractors that differentiate key memory concepts.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::57",
+      "isScored": true
+    },
+    {
+      "stem": "Which bias explains why individuals tend to attribute their own failures to situational factors but their successes to dispositional factors?",
+      "options": [
+        "Actor-observer effect",
+        "Group attribution error",
+        "Self-serving bias",
+        "Ultimate attribution error"
+      ],
+      "answer": "Self-serving bias",
+      "explanation": "1. The \"self-serving bias\" is the correct answer because it specifically refers to the tendency of individuals to attribute their successes to internal, dispositional factors while attributing their failures to external, situational factors. This bias serves to protect self-esteem by allowing individuals to take credit for positive outcomes while deflecting blame for negative outcomes onto external circumstances.\n\n2. The \"actor-observer effect\" is incorrect because it describes the tendency to attribute one's own behaviors to situational factors and others' behaviors to dispositional factors, rather than focusing specifically on successes and failures. The \"group attribution error\" is also wrong because it pertains to the erroneous belief that an individual member’s characteristics reflect the group as a whole, rather than individual attribution patterns of success and failure. Lastly, the \"ultimate attribution error\" is not applicable here, as it involves attributing behaviors of in-group and out-group members differently, rather than focusing on an individual’s own successes and failures.",
+      "kn": "KN14",
+      "kn_explanation": "This question targets understanding of attributional biases relevant to self-perception, a key concept within social cognition research covered in KN14.",
+      "difficulty": "medium",
+      "quality_comment": "Clear wording and well-chosen distractors that refer to related biases enhance the question’s diagnostic value.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::20",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist is evaluating risk and protective factors for an 8-year-old child growing up in a high-conflict household with limited financial resources. Which of the following would be considered the STRONGEST protective factor contributing to resilience in this child?",
+      "options": [
+        "High intelligence quotient (IQ above 130)",
+        "A secure attachment relationship with at least one competent, caring adult",
+        "Enrollment in an academically rigorous private school",
+        "Absence of any diagnosable psychiatric condition"
+      ],
+      "answer": "A secure attachment relationship with at least one competent, caring adult",
+      "explanation": "Research consistently identifies a warm, stable relationship with at least one caring and competent adult as the single most powerful protective factor for children facing adversity. This finding aligns with attachment theory and the broader resilience literature. While higher intelligence can serve as a protective factor, an IQ above 130 specifically is not identified as the strongest protective factor. Attending a rigorous school addresses only one domain and does not provide the relational security that is most critical. The absence of psychiatric diagnosis is not itself a protective factor—it describes the absence of a risk factor, which is conceptually different from the presence of a protective one.",
+      "kn": "KN27",
+      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
+      "difficulty": "medium",
+      "quality_comment": "Clinically grounded scenario testing a well-established finding in the resilience literature. The lesson discusses attachment extensively though the specific resilience research is implied rather than directly stated.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
+      "lessonExcerpt": "Attachment refers to the deep emotional bond between people that creates feelings of security and comfort.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following environmental factors has NOT been identified as a risk factor for bipolar disorder?",
+      "options": [
+        "Early parental loss",
+        "Childhood emotional abuse",
+        "Chronic medical illnesses like irritable bowel syndrome",
+        "Excessive caffeine intake"
+      ],
+      "answer": "Excessive caffeine intake",
+      "explanation": "1. **Excessive caffeine intake** is the correct answer because it is not mentioned in the reference material as an environmental risk factor for bipolar disorder. The material specifically identifies factors such as early parental loss, childhood maltreatment (especially emotional abuse), and medical comorbidities like irritable bowel syndrome as significant contributors to the risk of developing bipolar disorder, but does not include caffeine consumption.\n\n2. **Early parental loss** is incorrect because it is explicitly listed as an environmental risk factor for bipolar disorder, indicating that such loss can contribute to the development of the disorder. **Childhood emotional abuse** is also incorrect as it is categorized under childhood maltreatment, which is recognized as a risk factor for bipolar disorder. Lastly, **chronic medical illnesses like irritable bowel syndrome** are mentioned in the reference material as environmental risk factors, highlighting their association with an increased likelihood of developing bipolar disorder.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are credible; the question tests etiological knowledge effectively.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "Which core process in Acceptance and Commitment Therapy (ACT) counters attempts to alter or avoid unpleasant private experiences by promoting an open and accepting attitude toward them?",
+      "options": [
+        "Cognitive fusion",
+        "Experiential acceptance",
+        "Attentional rigidity",
+        "Committed action"
+      ],
+      "answer": "Experiential acceptance",
+      "explanation": "1. \"Experiential acceptance\" is the correct answer because it is defined in Acceptance and Commitment Therapy (ACT) as the active and aware embrace of private experiences—such as thoughts and emotions—without unnecessary attempts to change their frequency or form. This core process directly counters experiential avoidance by fostering an open and accepting attitude towards unpleasant experiences, promoting psychological flexibility.\n\n2. The incorrect options are as follows:\n- **Cognitive fusion** refers to the tendency to become entangled with one's thoughts and feelings, viewing them as reality rather than as separate experiences, which can hinder acceptance.\n- **Attentional rigidity** involves a narrow focus on the past or future, which can prevent individuals from being present and accepting their current experiences, thus not promoting an open attitude.\n- **Committed action** pertains to the commitment to act in ways consistent with one’s values, which is a proactive approach rather than a process that directly addresses the acceptance of unpleasant experiences.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are ACT-related but conceptually distinct, requiring examinees to differentiate among nuanced therapeutic targets.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::34",
+      "isScored": true
+    },
+    {
+      "stem": "Which statistical test is generally more powerful when data meet the required assumptions?",
+      "options": [
+        "Nonparametric chi-square test",
+        "Parametric t-test",
+        "Wilcoxon signed-rank test",
+        "Mann-Whitney U test"
+      ],
+      "answer": "Parametric t-test",
+      "explanation": "1. The \"Parametric t-test\" is the correct answer because it is a type of inferential statistical test that is more powerful than nonparametric tests when the data meet the required assumptions of normality and homogeneity of variance. Parametric tests, such as the t-test, utilize the specific characteristics of the data distribution, allowing for more sensitive detection of significant effects compared to nonparametric tests.\n\n2. The \"Nonparametric chi-square test\" is incorrect because it is designed for nominal data and does not take advantage of the parametric assumptions that can increase statistical power. The \"Wilcoxon signed-rank test\" is also incorrect as it is a nonparametric test that, while useful for paired data, lacks the power of parametric tests when the assumptions are met. Lastly, the \"Mann-Whitney U test\" is incorrect because it is a nonparametric test used for comparing two independent samples, which is less powerful than the t-test when the data meet parametric assumptions.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are appropriate examples of nonparametric tests, providing a meaningful challenge for test takers.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::32",
+      "isScored": true
+    },
+    {
+      "stem": "According to data from the Association of State and Provincial Psychology Boards (ASPPB), which of the following represents the most frequently cited category of disciplinary action against psychologists?",
+      "options": [
+        "Sexual misconduct with clients",
+        "Unprofessional conduct",
+        "Negligence in providing standard of care",
+        "Violations of confidentiality"
+      ],
+      "answer": "Unprofessional conduct",
+      "explanation": "According to ASPPB data from 1974 to 2023 as presented in the lesson, unprofessional conduct is the number one reason psychologists face disciplinary action, followed by sexual misconduct at number two, and negligence at number three. Confidentiality violations are not listed in the top ten. Option A (sexual misconduct) is the second most common. Option C (negligence) is third. Option D (confidentiality violations) is not among the top ten categories listed.",
+      "kn": "KN67",
+      "kn_explanation": "This question is best aligned with KN67 because it tests Emerging social, legal, ethical, and policy issues and their impact on psychological practice.",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward factual question directly supported by lesson content with specific ranking data.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "Based on data from 1974 to 2023, here are the top ten reasons: 1. Unprofessional conduct (the catch-all category) 2. Sexual misconduct (any sexual contact with clients) 3. Negligence (failing to meet standards of care)",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::63",
+      "isScored": true
+    }
+  ]
+}

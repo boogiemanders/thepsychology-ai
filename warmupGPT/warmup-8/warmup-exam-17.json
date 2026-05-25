@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "examId": "warmup-8-17",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.491Z"
+  },
+  "questions": [
+    {
+      "stem": "Methadone is primarily used in the treatment of which condition and why?",
+      "options": [
+        "Generalized anxiety disorder, due to its calming properties.",
+        "Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.",
+        "Chronic pain management, since it has no risk of tolerance or dependence.",
+        "Nicotine addiction treatment, by mimicking nicotine effects."
+      ],
+      "answer": "Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.",
+      "explanation": "1. The correct answer is \"Heroin detoxification, because it reduces withdrawal symptoms and cravings without typical heroin euphoria.\" Methadone is a synthetic opioid that is specifically used to treat opioid dependence, particularly for individuals detoxifying from heroin. It helps manage withdrawal symptoms and cravings without producing the same euphoric effects associated with heroin, making it effective for stabilizing individuals during the detoxification process.\n\n2. The option \"Generalized anxiety disorder, due to its calming properties\" is incorrect because methadone is not primarily indicated for anxiety disorders; instead, it is used for opioid addiction treatment. The choice \"Chronic pain management, since it has no risk of tolerance or dependence\" is also wrong, as methadone does carry a risk of tolerance and dependence, similar to other opioids. Lastly, the statement \"Nicotine addiction treatment, by mimicking nicotine effects\" is incorrect because methadone is not used for nicotine addiction; instead, medications like bupropion or nicotine replacement therapies are indicated for that purpose.",
+      "kn": "KN2",
+      "kn_explanation": "This item assesses understanding of opioid pharmacotherapy in substance use disorders, a drug mechanism and clinical application topic in KN2.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible drugs but irrelevant for the treatment described, maintaining focus on opioid pharmacology.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json::27",
+      "isScored": true
+    },
+    {
+      "stem": "What is the maximum capacity of working memory as proposed by Miller's theory?",
+      "options": [
+        "5 items",
+        "7 items",
+        "9 items",
+        "11 items"
+      ],
+      "answer": "7 items",
+      "explanation": "The correct answer is B because Miller's theory states that the capacity of working memory is approximately 7 plus or minus 2 items. Option A is incorrect as it underestimates the capacity. Option C is incorrect as it overestimates the capacity. Option D is incorrect as it also overestimates the capacity.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of working memory.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Short-Term Memory: The Temporary Workspace",
+      "lessonExcerpt": "Miller's famous finding. 7 Plus or minus 2 units of information.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::37",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best exemplifies the confirmation bias in social cognition?",
+      "options": [
+        "Remembering events that contradict your beliefs but discounting those that support them",
+        "Seeking out news sources that align with your political views while ignoring opposing viewpoints",
+        "Overestimating the relationship between two unrelated variables",
+        "Believing you can influence a random event by your actions"
+      ],
+      "answer": "Seeking out news sources that align with your political views while ignoring opposing viewpoints",
+      "explanation": "1. The correct answer, \"Seeking out news sources that align with your political views while ignoring opposing viewpoints,\" exemplifies the confirmation bias because it reflects the tendency to seek and pay attention to information that confirms existing beliefs while disregarding information that contradicts them. This behavior aligns with the definition of confirmation bias, which is rooted in the desire to maintain one’s self-concept and beliefs, as noted in self-verification theory.\n\n2. The first incorrect option, \"Remembering events that contradict your beliefs but discounting those that support them,\" is wrong because it describes a different cognitive process where contradictory information is acknowledged but not valued, rather than actively seeking confirming information. The second incorrect option, \"Overestimating the relationship between two unrelated variables,\" does not relate to confirmation bias; it instead describes illusory correlation, where individuals mistakenly perceive a relationship between variables that are not truly connected. Lastly, \"Believing you can influence a random event by your actions\" is incorrect because it illustrates illusory control, which involves the false belief in one’s ability to affect outcomes that are actually random, rather than the selective attention to confirming information characteristic of confirmation bias.",
+      "kn": "KN14",
+      "kn_explanation": "This question pertains to major research-based theories and models of social cognition, specifically cognitive biases and processing errors.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear and the distractors are plausible cognitive errors, making it a strong question for testing knowledge of confirmation bias.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::11",
+      "isScored": true
+    },
+    {
+      "stem": "Research on 'helicopter parents' has linked this parenting style primarily to which child or emerging adult outcomes?",
+      "options": [
+        "Increased autonomy and academic motivation",
+        "High emotional and behavioral self-regulation",
+        "Increased stress, anxiety, entitlement, and poor emotional regulation",
+        "Improved social competence and decision-making skills"
+      ],
+      "answer": "Increased stress, anxiety, entitlement, and poor emotional regulation",
+      "explanation": "1. The correct answer, \"Increased stress, anxiety, entitlement, and poor emotional regulation,\" reflects the negative outcomes associated with helicopter parenting. Research indicates that this parenting style leads to high levels of stress and anxiety in children, as well as an increased sense of entitlement and low levels of emotional and behavioral self-regulation. These outcomes arise because helicopter parents over-involve themselves in their children's lives, preventing them from developing autonomy and coping skills necessary for healthy emotional development.\n\n2. \n\n- **Increased autonomy and academic motivation**: This option is incorrect because helicopter parenting is characterized by over-involvement, which actually undermines children's autonomy and can decrease their academic motivation rather than enhance it.\n  \n- **High emotional and behavioral self-regulation**: This is wrong because the research indicates that children of helicopter parents struggle with emotional and behavioral self-regulation, not that they exhibit high levels of it.\n  \n- **Improved social competence and decision-making skills**: This option is incorrect as well; helicopter parenting is associated with poorer social competence and decision-making skills due to the lack of opportunities for children to navigate challenges independently.",
+      "kn": "KN25",
+      "kn_explanation": "Focuses on family functioning and parenting’s effect on development, specifically psychological outcomes during transition to adulthood (KN25).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are reasonable and the correct answer clearly reflects the evidence-based outcomes of helicopter parenting.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::30",
+      "isScored": true
+    },
+    {
+      "stem": "Which theoretical model underlies the Community Reinforcement Approach (CRA) to substance use treatment?",
+      "options": [
+        "Operant conditioning principles focusing on positive reinforcement",
+        "Psychodynamic theory emphasizing unconscious conflict resolution",
+        "Biological model targeting neurochemical imbalances",
+        "Cognitive dissonance theory addressing conflicting beliefs"
+      ],
+      "answer": "Operant conditioning principles focusing on positive reinforcement",
+      "explanation": "1. The correct answer, \"Operant conditioning principles focusing on positive reinforcement,\" aligns with the Community Reinforcement Approach (CRA) because CRA is explicitly based on operant conditioning principles. This approach helps individuals arrange their lifestyles so that healthy, drug-free living becomes rewarding, thereby competing with substance use, which is a key aspect of positive reinforcement.\n\n2. The option \"Psychodynamic theory emphasizing unconscious conflict resolution\" is incorrect because CRA does not focus on unconscious processes or conflicts; instead, it emphasizes behavior modification through reinforcement strategies. The \"Biological model targeting neurochemical imbalances\" is also wrong, as CRA does not primarily address neurochemical factors but rather behavioral changes through environmental adjustments. Lastly, \"Cognitive dissonance theory addressing conflicting beliefs\" is incorrect because CRA does not center on resolving cognitive conflicts; it focuses on modifying behaviors by enhancing the rewards of healthy living rather than addressing belief discrepancies.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question introduces theoretical foundations, clearly distinct from existing items, with credible and comparable distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "A depressed client tells her therapist, 'My coworker didn't say hello to me this morning, so she must hate me.' According to Beck's cognitive therapy, this thought is best classified as which type of cognitive distortion?",
+      "options": [
+        "Selective abstraction, because the client is focusing on one negative detail",
+        "Arbitrary inference, because the client is drawing a negative conclusion without supporting evidence",
+        "Personalization, because the client is assuming she caused the coworker's behavior",
+        "Emotional reasoning, because the client is using her feelings as evidence for the conclusion"
+      ],
+      "answer": "Arbitrary inference, because the client is drawing a negative conclusion without supporting evidence",
+      "explanation": "According to Beck's cognitive therapy as described in the lesson, arbitrary inference involves 'Drawing negative conclusions without evidence.' The client's example—concluding a coworker hates her based solely on not receiving a greeting—perfectly illustrates this distortion. There are many possible reasons the coworker didn't say hello, but the client jumps to a negative conclusion without evidence. Option A (selective abstraction) would involve focusing on one negative detail while ignoring other information. Option C (personalization) involves assuming you caused something—while related, the core distortion here is the unfounded conclusion about hatred, not self-blame for causing it. Option D (emotional reasoning) involves using feelings as facts (e.g., 'I feel anxious so something bad must be happening').",
+      "kn": "KN43",
+      "kn_explanation": "Identifying cognitive distortions within Beck's theoretical model",
+      "difficulty": "medium",
+      "quality_comment": "Good discrimination question. The distractors represent cognitive distortions that could superficially apply but are technically distinct from arbitrary inference.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### The Three Core Components",
+      "lessonExcerpt": "Arbitrary Inference | Drawing negative conclusions without evidence | 'My boss didn't smile at me this morning, so I'm probably getting fired'",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::10",
+      "isScored": true
+    },
+    {
+      "stem": "Which factor is NOT controllable by the researcher to increase statistical power?",
+      "options": [
+        "Increasing sample size",
+        "Increasing effect size by intervention intensity",
+        "Using more powerful parametric tests when assumptions are met",
+        "Increasing population heterogeneity"
+      ],
+      "answer": "Increasing population heterogeneity",
+      "explanation": "1. \"Increasing population heterogeneity\" is the correct answer because it is a factor that cannot be controlled by the researcher. The reference material states that population homogeneity refers to the similarity of individuals within a population regarding the dependent variable, and the more homogeneous the population, the easier it is to detect group differences. Researchers cannot alter the inherent characteristics of the population to increase heterogeneity, making this factor uncontrollable.\n\n2. The option \"Increasing sample size\" is incorrect because researchers can control the number of participants they include in a study, which directly affects statistical power. \"Increasing effect size by intervention intensity\" is also incorrect; researchers can manipulate the intensity of an intervention to produce a greater effect, thereby enhancing statistical power. Lastly, \"Using more powerful parametric tests when assumptions are met\" is incorrect as well, since researchers can choose appropriate statistical tests based on the data characteristics, thus increasing the power of their analyses.",
+      "kn": "KN56",
+      "kn_explanation": "This question involves understanding factors influencing power, part of statistical interpretation (KN56).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible active research decisions, while the correct answer highlights an uncontrollable factor, demanding good conceptual clarity.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::28",
+      "isScored": true
+    },
+    {
+      "stem": "When is using deception in research ethically justifiable?",
+      "options": [
+        "When the deception will increase the likelihood of participant enjoyment.",
+        "If the deception involves physical pain but is brief.",
+        "If alternative nondeceptive procedures are unavailable and the study has significant scientific or educational value.",
+        "If participants are told about the deception only after publication."
+      ],
+      "answer": "If alternative nondeceptive procedures are unavailable and the study has significant scientific or educational value.",
+      "explanation": "1. The correct answer, \"If alternative nondeceptive procedures are unavailable and the study has significant scientific or educational value,\" aligns with Standard 8.07 of the APA Ethics Code. This standard stipulates that deception in research must be justified by the study's significant prospective scientific, educational, or applied value and that researchers must demonstrate that no nondeceptive alternatives exist. Thus, the ethical justification for using deception hinges on both the absence of other options and the potential value of the research findings.\n\n2. The first incorrect option, \"When the deception will increase the likelihood of participant enjoyment,\" is wrong because ethical guidelines do not justify deception based solely on enhancing enjoyment; the justification must be rooted in scientific or educational value. The second incorrect option, \"If the deception involves physical pain but is brief,\" is incorrect as it violates the requirement that participants must not be deceived about procedures likely to cause physical pain or severe emotional distress. Lastly, the option \"If participants are told about the deception only after publication\" is incorrect because the Ethics Code requires that participants be informed about the deception as early as feasible, preferably at the conclusion of their participation, not post-publication.",
+      "kn": "KN69",
+      "kn_explanation": "This question is best aligned with KN69 because it tests ethical issues in the conduct of research.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear with plausible distractors that reflect common misconceptions, good for testing ethical decision-making understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::16",
+      "isScored": true
+    }
+  ]
+}

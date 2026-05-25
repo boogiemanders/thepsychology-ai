@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "examId": "warmup-8-40",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following actions is primarily regulated by the sympathetic nervous system during a stressful situation?",
+      "options": [
+        "Increased salivation",
+        "Increased heart rate",
+        "Decreased respiration",
+        "Pupil dilation"
+      ],
+      "answer": "Increased heart rate",
+      "explanation": "1. \"Increased heart rate\" is the correct answer because the sympathetic nervous system is responsible for preparing the body for action during stressful situations, commonly referred to as the fight-or-flight response. Activation of the sympathetic nervous system leads to physiological changes that include increased heart rate, which helps to pump more blood to muscles and vital organs, enhancing physical readiness and response to threats.\n\n2. \n- **Increased salivation:** This option is incorrect because the sympathetic nervous system inhibits salivation as part of its response to stress, redirecting resources away from non-essential functions like digestion.\n- **Decreased respiration:** This option is wrong because the sympathetic nervous system actually increases respiration rates to ensure more oxygen is available for the body during stressful situations.\n- **Pupil dilation:** Although pupil dilation occurs during sympathetic activation, it is not the primary action regulated in the context of stress compared to increased heart rate, which is a more direct response to prepare the body for immediate action.",
+      "difficulty": "easy",
+      "kn": "KN1",
+      "kn_explanation": "The item focuses on autonomic nervous system functions, specifically sympathetic responses, relating to biological bases of behavior (KN1).",
+      "quality_comment": "This question effectively tests understanding of the sympathetic nervous system's role in stress responses.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurons and Neurotransmitters.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurons and Neurotransmitters.json::30",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "LeDoux’s two-system theory of fear distinguishes between a subcortical and a cortical system. What is the primary role of the subcortical system?",
+      "options": [
+        "To process sensory information consciously and generate the feeling of fear",
+        "To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors",
+        "To regulate hormonal responses via communication with the pituitary gland",
+        "To integrate episodic and semantic memory during fear evaluation"
+      ],
+      "answer": "To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors",
+      "explanation": "1. The correct answer, \"To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors,\" accurately reflects the primary role of the subcortical system in LeDoux’s two-system theory. This system, primarily involving the amygdala, responds rapidly and automatically to threatening stimuli, triggering physiological reactions and defensive behaviors without the need for conscious processing. This immediate response is crucial for survival, allowing for quick reactions to potential dangers.\n\n2. The option \"To process sensory information consciously and generate the feeling of fear\" is incorrect because this function is associated with the cortical system, which involves conscious processing and evaluation of sensory information to determine if a stimulus warrants a fear response. The statement \"To regulate hormonal responses via communication with the pituitary gland\" is also wrong, as this role pertains more to the hypothalamus, which regulates hormonal responses in conjunction with the autonomic nervous system. Lastly, the option \"To integrate episodic and semantic memory during fear evaluation\" is inaccurate because the integration of memory types is a function of the cortical system, which processes information and evaluates the emotional significance of stimuli, rather than the subcortical system that reacts automatically.",
+      "kn": "KN10",
+      "kn_explanation": "This question concerns brain mechanisms underlying emotion, specifically fear, which falls under research-based emotion theories in KN10.",
+      "difficulty": "medium",
+      "quality_comment": "Options are similarly detailed and technically accurate, prompting test-takers to carefully recall specifics of neural substrates of fear.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::27",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "An HIV prevention program targets at-risk young adults by presenting information showing that the majority of their peers practice safe sex behaviors. This intervention strategy is most directly based on which of the following?",
+      "options": [
+        "The health belief model's emphasis on perceived susceptibility",
+        "The influence of descriptive social norms on behavior",
+        "Classical conditioning of fear responses to risky behavior",
+        "The elaboration likelihood model's central route to persuasion"
+      ],
+      "answer": "The influence of descriptive social norms on behavior",
+      "explanation": "Descriptive social norms refer to perceptions of what most people actually do. Presenting data that peers practice safe sex leverages descriptive norms to influence behavior change. The health belief model's perceived susceptibility (A) focuses on personal risk perception, not peer behavior. Classical conditioning (C) would involve pairing stimuli, not presenting normative information. The elaboration likelihood model's central route (D) involves effortful processing of argument quality, not normative influence.",
+      "kn": "KN13",
+      "kn_explanation": "This question is best aligned with KN13 because it tests the influence of psychosocial factors on cognitions/beliefs and behaviors.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant question combining social norms with health behavior. The lesson on attitudes mentions subjective norms in the Theory of Planned Behavior but does not specifically address HIV prevention or descriptive norms.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "### Theory of Planned Behavior",
+      "lessonExcerpt": "Subjective norms: What you believe others think you should do.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::0",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which principle is central to Montessori education?",
+      "options": [
+        "Strict adherence to a standardized curriculum",
+        "Emphasis on child-led learning and exploration",
+        "Focus on competitive academic achievement",
+        "Use of traditional lecture-based teaching methods"
+      ],
+      "answer": "Emphasis on child-led learning and exploration",
+      "explanation": "Montessori education is characterized by its emphasis on child-led learning and exploration, allowing children to learn at their own pace. The other options do not accurately reflect Montessori principles.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of Montessori education principles.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
+      "lessonExcerpt": "This theory combines both biological readiness and social environment.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::1",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which physiological finding has been associated with conduct disorder in children?",
+      "options": [
+        "Elevated resting heart rate compared to healthy peers",
+        "Lower physiological reactions to aversive stimuli",
+        "Heightened skin conductance responses",
+        "Increased cardiovascular reactivity during stress"
+      ],
+      "answer": "Lower physiological reactions to aversive stimuli",
+      "explanation": "1. \"Lower physiological reactions to aversive stimuli\" is the correct answer because research has shown that children with conduct disorder (CD) exhibit reduced physiological responses, such as lower heart rate and skin conductance, when exposed to stressful situations. Studies indicate that compared to healthy children, those with CD do not experience the typical increase in physiological arousal in response to aversive stimuli, suggesting a discrepancy between their emotional and physiological reactions.\n\n2. The option \"Elevated resting heart rate compared to healthy peers\" is incorrect because children with conduct disorder typically have a lower resting heart rate, which is associated with their reduced physiological reactivity. \"Heightened skin conductance responses\" is wrong because evidence indicates that children with CD have lower skin conductance responses, not heightened ones, in stressful situations. Lastly, \"Increased cardiovascular reactivity during stress\" is incorrect as children with CD do not show the expected increase in cardiovascular responses, further highlighting their atypical physiological functioning in response to stressors.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "hard",
+      "quality_comment": "The distractors include physiological responses that are plausible but incorrect, increasing item difficulty and discriminability.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::4",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "What is the main focus of Cognitive Behavioral Therapy (CBT) in treating anxiety disorders?",
+      "options": [
+        "Enhancing emotional insight",
+        "Reducing anxiety symptoms through cognitive restructuring",
+        "Exploring childhood experiences",
+        "Promoting self-actualization"
+      ],
+      "answer": "Reducing anxiety symptoms through cognitive restructuring",
+      "explanation": "1. The correct answer, \"Reducing anxiety symptoms through cognitive restructuring,\" aligns with the principles of Cognitive Behavioral Therapy (CBT), which focuses on identifying and changing negative thought patterns that contribute to anxiety. CBT aims to alleviate anxiety symptoms by helping clients reframe their thoughts and beliefs, thus reducing their emotional distress and improving their coping strategies.\n\n2. The option \"Enhancing emotional insight\" is incorrect because it primarily relates to therapies that emphasize understanding and processing emotions, rather than the cognitive restructuring focus of CBT. \"Exploring childhood experiences\" is wrong as it pertains more to psychodynamic approaches that delve into past experiences to understand current behavior, which is not a primary goal of CBT. Lastly, \"Promoting self-actualization\" is not applicable here, as it is more relevant to humanistic approaches that emphasize personal growth and fulfillment, rather than the symptom-focused approach of CBT in treating anxiety.",
+      "difficulty": "easy",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of treatment goals and therapeutic interventions, which falls under treatment techniques and their effectiveness (KN44).",
+      "quality_comment": "This question effectively tests knowledge of a specific therapy's goal, similar to the IPT focus.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::20",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is true about a confounding variable in research?",
+      "options": [
+        "It is an unintended variable related to the independent variable affecting the dependent variable",
+        "It is a type of mediator variable explaining the relationship between independent and dependent variables",
+        "It changes the strength or direction of a relationship between variables",
+        "It is a variable that the researcher manipulates intentionally"
+      ],
+      "answer": "It is an unintended variable related to the independent variable affecting the dependent variable",
+      "explanation": "1. The correct answer, \"It is an unintended variable related to the independent variable affecting the dependent variable,\" accurately describes a confounding variable because it is an extraneous variable that inadvertently influences the relationship between the independent and dependent variables. This means that the confounding variable can obscure the true effect of the independent variable on the dependent variable, making it difficult to determine causation in a research study.\n\n2. The option \"It is a type of mediator variable explaining the relationship between independent and dependent variables\" is incorrect because a mediator variable specifically clarifies how or why an independent variable influences a dependent variable, rather than confounding the relationship. The statement \"It changes the strength or direction of a relationship between variables\" is wrong because this describes a moderator variable, which does influence the relationship but is not necessarily an unintended variable. Finally, \"It is a variable that the researcher manipulates intentionally\" is incorrect because confounding variables are not manipulated; they are extraneous factors that can affect the results without the researcher’s intent.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "The question clarifies an important subtype of extraneous variables, distinguishing it from mediators or moderators with effective distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json::17",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What is a psychologist's ethical responsibility when addressing a misdiagnosis that may have led to inappropriate medication being prescribed?",
+      "options": [
+        "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
+        "To ignore the misdiagnosis if the client seems to be responding well to the medication.",
+        "To wait for the client to bring up concerns about their medication before taking action.",
+        "To document the misdiagnosis but take no further action."
+      ],
+      "answer": "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
+      "explanation": "The correct answer emphasizes the psychologist's duty to ensure client welfare by addressing misdiagnosis and collaborating on treatment. Ignoring the issue or waiting for the client to express concerns neglects ethical responsibilities. Documenting without action does not fulfill the duty of care.",
+      "kn": "KN67",
+      "kn_explanation": "This question is best aligned with KN67 because it tests Emerging social, legal, ethical, and policy issues and their impact on psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of ethical responsibilities in clinical settings.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "Your job? Make sure you're meeting that duty of care consistently, so those other dominoes never fall.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::44",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "examId": "warmup-12-40",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which brain area is primarily responsible for the consolidation of long-term declarative memories and spatial memory?",
+      "options": [
+        "Hippocampus",
+        "Amygdala",
+        "Basal Ganglia",
+        "Prefrontal Cortex"
+      ],
+      "answer": "Hippocampus",
+      "explanation": "1. The \"Hippocampus\" is the correct answer because it plays a crucial role in the consolidation of long-term declarative memories, which involves transferring information from short-term to long-term memory. Additionally, the hippocampus is involved in spatial memory, helping individuals remember the locations of objects and places, as evidenced by research conducted on patients like H.M. who suffered memory deficits following damage to this brain area.\n\n2. The \"Amygdala\" is incorrect because it primarily attaches emotions to memories rather than consolidating long-term declarative memories or spatial memory. The \"Basal Ganglia\" is also incorrect, as it is essential for procedural and implicit memories, not for the consolidation of declarative memories. Lastly, the \"Prefrontal Cortex\" is not the correct answer because, while it is important for aspects of memory such as working memory and source memory, it does not specifically handle the consolidation of long-term declarative memories or spatial memory like the hippocampus does.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is straightforward with plausible distractors representing different memory-related brain structures, clearly testing memory system knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json::17",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "Which statement accurately reflects Cannon-Bard theory of emotion?",
+      "options": [
+        "Emotion is experienced only after physiological arousal is perceived",
+        "Emotion and physiological arousal occur simultaneously but independently",
+        "Emotion results from labeling physiological arousal according to situational cues",
+        "Cognitive appraisal precedes physiological responses"
+      ],
+      "answer": "Emotion and physiological arousal occur simultaneously but independently",
+      "explanation": "1. The statement \"Emotion and physiological arousal occur simultaneously but independently\" accurately reflects Cannon-Bard theory because this theory posits that when an environmental stimulus is encountered, the thalamus sends signals to both the cerebral cortex (which processes the emotional experience) and the sympathetic nervous system (which triggers physiological arousal) at the same time. This means that emotional experience and physiological responses do not rely on one another and occur concurrently.\n\n2. The option \"Emotion is experienced only after physiological arousal is perceived\" is incorrect because it aligns with the James-Lange theory, which suggests that physiological arousal precedes and leads to the experience of emotion. The option \"Emotion results from labeling physiological arousal according to situational cues\" is wrong because it describes Schachter and Singer’s Two-Factor Theory, which emphasizes the role of cognitive labeling after physiological arousal. Lastly, the statement \"Cognitive appraisal precedes physiological responses\" is incorrect as it reflects Lazarus’s Cognitive Appraisal Theory, which asserts that emotional responses are based on cognitive appraisal before any physiological changes occur.",
+      "kn": "KN10",
+      "kn_explanation": "This question assesses understanding of a major theory of emotion emphasizing simultaneity of arousal and experience, a core topic within KN10.",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast major theories well, requiring candidates to carefully distinguish Cannon-Bard theory, suitable for EPPP-level rigor.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::32",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which ethnic group has been identified as having a higher prevalence of hypertension according to health disparities research?",
+      "options": [
+        "Caucasian",
+        "African American",
+        "Asian American",
+        "Hispanic"
+      ],
+      "answer": "African American",
+      "explanation": "African American is the correct answer as research indicates that this group has a higher prevalence of hypertension compared to other ethnic groups. The other options do not reflect the same level of prevalence identified in health disparities research.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of health disparities related to hypertension.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
+      "lessonExcerpt": "Research indicates that African Americans have a higher prevalence of hypertension compared to other ethnic groups.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::25",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "In Atkinson, Morten, and Sue’s R/CID Model, what therapist preference is typical of individuals in the Conformity stage?",
+      "options": [
+        "Preference for a therapist from their own minority group",
+        "No preference and openness to any therapist",
+        "Preference for a therapist from the majority group",
+        "Preference for a therapist unfamiliar with cultural issues"
+      ],
+      "answer": "Preference for a therapist from the majority group",
+      "explanation": "1. The correct answer, \"Preference for a therapist from the majority group,\" reflects the attitudes of individuals in the Conformity stage of Atkinson, Morten, and Sue’s R/CID Model. In this stage, individuals typically hold positive attitudes toward members of the majority group and negative or neutral attitudes toward their own minority group. They often accept negative stereotypes of their own group and view the majority group's values as superior, leading them to prefer a therapist from that group.\n\n2. The option \"Preference for a therapist from their own minority group\" is incorrect because individuals in the Conformity stage tend to reject their own cultural identity and prefer the majority group, not their own. \n\nThe option \"No preference and openness to any therapist\" is not accurate, as individuals in this stage are likely to have a clear preference for a majority group therapist due to their acceptance of majority values. \n\nLastly, the option \"Preference for a therapist unfamiliar with cultural issues\" is incorrect because individuals in the Conformity stage generally prefer therapists who align with the majority culture, reflecting their lack of appreciation for their own culture, rather than seeking someone unfamiliar with cultural dynamics.",
+      "kn": "KN19",
+      "kn_explanation": "This question integrates clinical application with cultural identity theory, focusing on therapeutic preferences in identity development stages.",
+      "difficulty": "medium",
+      "quality_comment": "Plausible distractors make the question appropriately challenging; clear linkage to counseling implications enhances relevance.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::12",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which factor is associated with an increased risk of early onset puberty in girls?",
+      "options": [
+        "Presence of biological father in the home",
+        "High maternal education level",
+        "Presence of stepfather or maternal boyfriend in the home",
+        "Later menarche in the mother"
+      ],
+      "answer": "Presence of stepfather or maternal boyfriend in the home",
+      "explanation": "1. The correct answer, \"Presence of stepfather or maternal boyfriend in the home,\" is associated with an increased risk of early onset puberty in girls due to the influence of family dynamics and environmental stressors. Research indicates that such familial situations, characterized by instability or discord, can lead to earlier sexual maturation and developmental changes in girls (Ellis & Garber, 2000).\n\n2. The option \"Presence of biological father in the home\" is incorrect because having a biological father present is generally associated with stability and protective factors that may delay puberty rather than hasten it. \"High maternal education level\" is incorrect as higher maternal education often correlates with better parenting practices and stability, which can contribute to later onset puberty. Lastly, \"Later menarche in the mother\" is incorrect because if a mother experiences later menarche, it is typically associated with her daughter also experiencing later puberty, not earlier onset.",
+      "kn": "KN21",
+      "kn_explanation": "This question taps into developmental influences on puberty timing in adolescence, part of normal growth and lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors relate to plausible family environment factors, enhancing the discriminative power of the question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::26",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the General Ability Index (GAI) on the WAIS-IV?",
+      "options": [
+        "A summary score combining Verbal Comprehension and Perceptual Reasoning Indexes that minimizes working memory and processing speed effects",
+        "An index score that combines all four WAIS-IV indexes to provide a composite IQ score",
+        "A score measuring processing speed and working memory only",
+        "A score derived from supplemental subtests assessing social cognition"
+      ],
+      "answer": "A summary score combining Verbal Comprehension and Perceptual Reasoning Indexes that minimizes working memory and processing speed effects",
+      "explanation": "1. The correct answer, \"A summary score combining Verbal Comprehension and Perceptual Reasoning Indexes that minimizes working memory and processing speed effects,\" accurately describes the General Ability Index (GAI) on the WAIS-IV. The GAI is specifically derived from the Verbal Comprehension Index (VCI) and the Perceptual Reasoning Index (PRI) scores, providing a summary of an individual's cognitive abilities while reducing the influence of working memory (WMI) and processing speed (PSI) scores, which can be affected by various factors.\n\n2. The first incorrect option, \"An index score that combines all four WAIS-IV indexes to provide a composite IQ score,\" is wrong because the GAI only combines the VCI and PRI, not all four indexes. The second incorrect option, \"A score measuring processing speed and working memory only,\" is incorrect as the GAI does not focus on these aspects but rather excludes them to highlight general cognitive ability. Lastly, the option \"A score derived from supplemental subtests assessing social cognition\" is incorrect because the GAI is not based on supplemental subtests but strictly on the primary indexes of verbal comprehension and perceptual reasoning.",
+      "kn": "KN32",
+      "kn_explanation": "This question relates to interpretation and scoring of intelligence tests, focusing on derived indexes used clinically and in assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible alternate index conceptualizations, requiring knowledge of WAIS-IV scoring and clinical use.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::25",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Under DSM-5-TR, a child previously diagnosed with Asperger's disorder would now receive which diagnosis?",
+      "options": [
+        "Social (pragmatic) communication disorder",
+        "Autism spectrum disorder",
+        "Autism spectrum disorder with language impairment specifier",
+        "Unspecified neurodevelopmental disorder"
+      ],
+      "answer": "Autism spectrum disorder",
+      "explanation": "The DSM-5-TR combined what were previously separate diagnoses—autistic disorder, Asperger's disorder, and PDD-NOS—into a single diagnosis of autism spectrum disorder (ASD). A child who would have previously received an Asperger's diagnosis (characterized by social communication deficits and restricted interests without significant language delay) now receives an ASD diagnosis. The key is that ASD requires both social communication/interaction deficits AND restricted, repetitive behaviors. Social (pragmatic) communication disorder (A) would apply only if restricted/repetitive behaviors were absent. Option C is incorrect because Asperger's was characterized by the absence of language impairment, not its presence. Option D is a residual category, not the appropriate primary diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question is about DSM-5-TR classification systems and how diagnostic categories have been reorganized (Asperger's folded into Autism Spectrum Disorder), which falls under classification systems and their underlying rationales.",
+      "difficulty": "medium",
+      "quality_comment": "Tests an important DSM-5 structural change that is high-yield for the EPPP and clinically relevant.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Autism Spectrum Disorder (ASD)",
+      "lessonExcerpt": "ASD has gone through several name changes and classification updates. The current DSM-5-TR combines what used to be separate diagnoses (autistic disorder, Asperger's disorder) into one spectrum.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json::4",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Consensual observer drift is most likely to affect the reliability of which type of assessment?",
+      "options": [
+        "Subjectively scored ratings by multiple raters",
+        "Objective multiple-choice cognitive tests",
+        "Self-report personality inventories",
+        "Physiological measures"
+      ],
+      "answer": "Subjectively scored ratings by multiple raters",
+      "explanation": "1. \"Subjectively scored ratings by multiple raters\" is the correct answer because consensual observer drift occurs when raters communicate while assigning scores, leading to increased consistency among their ratings but often at the expense of accuracy. This phenomenon is particularly relevant in subjective assessments where personal interpretation can vary significantly, making the reliability of the ratings susceptible to bias introduced by interactions between raters.\n\n2. \n- **Objective multiple-choice cognitive tests**: These tests are scored based on predetermined correct answers, so their reliability is not influenced by rater subjectivity or communication between raters.\n- **Self-report personality inventories**: While these assessments rely on individuals' self-reports, they do not involve multiple raters assessing the same responses, thus reducing the risk of observer drift affecting reliability.\n- **Physiological measures**: These measures are based on objective data (e.g., heart rate, blood pressure) rather than subjective interpretation, making them less susceptible to the biases associated with consensual observer drift.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding factors affecting inter-rater reliability for subjective measures is important in psychometric theory and assessment (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed question targeting nuances of rater-related reliability error, with plausible alternatives.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::26",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the social model of disability?",
+      "options": [
+        "Disability results primarily from biological impairments intrinsic to the individual",
+        "Disability is a functional inability to perform work or social roles",
+        "Disability arises from barriers created by societal attitudes and environments",
+        "Disability requires legal proof of impairment to determine benefits"
+      ],
+      "answer": "Disability arises from barriers created by societal attitudes and environments",
+      "explanation": "1. The correct answer, \"Disability arises from barriers created by societal attitudes and environments,\" aligns with the social model of disability, which views disability as a difference rather than an abnormality. This model emphasizes that societal factors, such as negative attitudes and physical barriers, create obstacles for individuals with disabilities, rather than the disabilities being solely intrinsic medical conditions. Therefore, interventions should focus on changing societal structures and attitudes to improve accessibility and inclusion.\n\n2. The option \"Disability results primarily from biological impairments intrinsic to the individual\" is incorrect because it reflects the biomedical model, which sees disabilities as medical conditions that deviate from the norm, focusing on treating the individual rather than addressing societal barriers. The statement \"Disability is a functional inability to perform work or social roles\" is misleading as it represents the functional model, which recognizes disabilities but emphasizes the need for accommodations rather than societal change. Lastly, the option \"Disability requires legal proof of impairment to determine benefits\" is wrong because it describes the forensic model, which focuses on legal criteria and motivations for seeking disability recognition, rather than addressing the societal context of disability.",
+      "kn": "KN44",
+      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
+      "difficulty": "medium",
+      "quality_comment": "Options clearly differentiate between models, testing knowledge of disability conceptual frameworks.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::36",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the difference between frequentist confidence intervals and Bayesian credibility intervals?",
+      "options": [
+        "Confidence intervals provide the exact probability that a parameter lies within the interval, while credibility intervals do not.",
+        "Confidence intervals are interpreted in terms of repeated sampling, whereas credibility intervals express the probability the parameter lies within the interval for the observed data.",
+        "Both intervals provide identical interpretations of parameter uncertainty.",
+        "Credibility intervals are calculated only when the sample size is very large."
+      ],
+      "answer": "Confidence intervals are interpreted in terms of repeated sampling, whereas credibility intervals express the probability the parameter lies within the interval for the observed data.",
+      "explanation": "1. The correct answer states that \"Confidence intervals are interpreted in terms of repeated sampling, whereas credibility intervals express the probability the parameter lies within the interval for the observed data.\" This distinction arises from the definitions of the two types of intervals: frequentist confidence intervals are based on the idea that if a study were replicated many times, a certain percentage of those intervals would contain the true population parameter. In contrast, Bayesian credibility intervals provide a probability statement about the parameter being within the interval based on the current data and prior knowledge, reflecting the researcher’s degree of belief.\n\n2. The first incorrect option, \"Confidence intervals provide the exact probability that a parameter lies within the interval, while credibility intervals do not,\" is wrong because confidence intervals do not provide the exact probability of containing the parameter; instead, they indicate the proportion of intervals that would contain the parameter across repeated samples. The second incorrect option, \"Both intervals provide identical interpretations of parameter uncertainty,\" is incorrect because the interpretations differ fundamentally, with confidence intervals relying on repeated sampling and credibility intervals on the probability of the parameter given the data. Lastly, the option \"Credibility intervals are calculated only when the sample size is very large\" is also incorrect, as credibility intervals can be calculated with any sample size and are not restricted to large samples; their computation is based on Bayesian methods rather than sample size alone.",
+      "kn": "KN56",
+      "kn_explanation": "This question is best aligned with KN56 because it tests Statistical interpretation (e.g., power, effect size, causation vs. association, clinical vs. statistical significance).",
+      "difficulty": "hard",
+      "quality_comment": "The distractors include common misconceptions, which strengthens the question’s ability to distinguish between novice and advanced understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::25",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What is the psychologist's duty when they become aware of a client's threat of violence?",
+      "options": [
+        "To maintain confidentiality at all costs.",
+        "To warn the potential victim and authorities if necessary.",
+        "To ignore the threat unless it is imminent.",
+        "To discuss the threat with the client only."
+      ],
+      "answer": "To warn the potential victim and authorities if necessary.",
+      "explanation": "Psychologists have a duty to warn potential victims if a client poses a threat of violence, which may involve notifying authorities. Maintaining confidentiality is not permissible in such cases.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the duty to warn.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "### Getting Institutional Approval",
+      "lessonExcerpt": "You must take reasonable steps to resolve it.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::3",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "When evaluating whether a company's training needs are being met, which type of analysis would be most appropriate for identifying if the training aligns with broader organizational goals?",
+      "options": [
+        "Task analysis",
+        "Organizational analysis",
+        "Person analysis",
+        "Demographic analysis"
+      ],
+      "answer": "Organizational analysis",
+      "explanation": "1. **Organizational analysis** is the correct answer because it specifically focuses on identifying organizational goals and determining whether employee performance problems stem from a lack of training or other factors. This analysis ensures that the training aligns with the broader objectives of the organization, making it essential for evaluating training needs in relation to overall organizational performance.\n\n2. **Task analysis** is incorrect because it identifies the specific tasks required for job performance and the knowledge, skills, abilities, and other characteristics (KSAOs) needed, rather than assessing alignment with organizational goals. \n\n   **Person analysis** is also incorrect, as it focuses on determining which employees have deficiencies that require training, rather than evaluating how training fits into the larger organizational context. \n\n   **Demographic analysis** is not suitable either, as it identifies the training needs of specific groups of workers (e.g., age differences) instead of examining the alignment of training with organizational goals.",
+      "difficulty": "hard",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of training analysis in a more complex context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json::22",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

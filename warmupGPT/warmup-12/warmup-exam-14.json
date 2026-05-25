@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "examId": "warmup-12-14",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.489Z"
+  },
+  "questions": [
+    {
+      "stem": "What is the primary mechanism of action for drug agonists?",
+      "options": [
+        "They block neurotransmitter receptors.",
+        "They increase neurotransmitter activity.",
+        "They inhibit neurotransmitter release.",
+        "They decrease neurotransmitter reuptake."
+      ],
+      "answer": "They increase neurotransmitter activity.",
+      "explanation": "The correct answer describes the primary function of drug agonists, which enhance neurotransmitter activity. The other options describe mechanisms associated with antagonists or reuptake inhibitors.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of pharmacological principles.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Agonists increase neurotransmitter activity (either directly or indirectly).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::21",
+      "isScored": true
+    },
+    {
+      "stem": "What is the typical behavioral response observed during an extinction burst in operant conditioning?",
+      "options": [
+        "A sudden increase in the frequency of the undesired behavior.",
+        "A gradual decrease in the frequency of the undesired behavior.",
+        "An immediate cessation of the undesired behavior.",
+        "A consistent performance of the desired behavior."
+      ],
+      "answer": "A sudden increase in the frequency of the undesired behavior.",
+      "explanation": "An extinction burst refers to a temporary increase in the frequency of a behavior when reinforcement is removed, as the individual attempts to regain the lost reinforcement. Option B describes a decrease, which is not characteristic of an extinction burst, while Option C incorrectly states that the behavior ceases immediately, and Option D is unrelated to the concept.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of extinction bursts in operant conditioning.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
+      "lessonExcerpt": "The smart approach to applying these interventions starts with a functional behavioral assessment (FBA).",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "According to the elaboration likelihood model, attitude change that is strong, enduring, and predictive of behavior is most likely to occur through which processing route?",
+      "options": [
+        "Peripheral route, relying on source attractiveness",
+        "Peripheral route, relying on message length",
+        "Central route, involving thoughtful evaluation of message content",
+        "Central route, involving reliance on heuristics"
+      ],
+      "answer": "Central route, involving thoughtful evaluation of message content",
+      "explanation": "1. The correct answer, \"Central route, involving thoughtful evaluation of message content,\" is accurate because, according to the elaboration likelihood model, attitude change that is strong, enduring, and predictive of behavior occurs through a high level of elaborative processing. This central route is characterized by careful evaluation of the message when the individual perceives the message as personally relevant and has the cognitive ability to process it, leading to a more substantial and lasting change in attitude.\n\n2. The incorrect options are as follows:\n- **Peripheral route, relying on source attractiveness:** This option is incorrect because the peripheral route involves low elaboration and relies on superficial cues, such as the attractiveness of the source, which does not lead to strong or enduring attitude change.\n- **Peripheral route, relying on message length:** This option is also incorrect as the peripheral route focuses on low-level processing and cues like message length rather than the content, resulting in temporary attitude changes that are not predictive of behavior.\n- **Central route, involving reliance on heuristics:** This option is incorrect because reliance on heuristics pertains to the peripheral route, where individuals make quick judgments based on mental shortcuts rather than engaging in thoughtful evaluation of the message content, leading to less stable attitude changes.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question contrasts central and peripheral routes effectively, with distractors based on peripheral cues, encouraging discrimination of key theoretical concepts.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "Which stage in Troiden’s Model of Homosexual Identity Development is marked by internalized acceptance of one's sexual orientation and comfort disclosing it to others?",
+      "options": [
+        "Sensitization",
+        "Identity Confusion",
+        "Identity Assumption",
+        "Identity Commitment"
+      ],
+      "answer": "Identity Commitment",
+      "explanation": "1. **Identity Commitment** is the correct answer because it represents the final stage in Troiden’s Model of Homosexual Identity Development, where individuals have fully internalized their gay or lesbian identity. At this stage, they are comfortable disclosing their sexual orientation to others, including heterosexual individuals, and have accepted homosexuality as a valid and integral part of their lives.\n\n2. The other options are incorrect for the following reasons:\n\n- **Sensitization** is the initial stage during childhood characterized by feelings of difference from same-sex peers, but it does not involve acceptance or disclosure of sexual orientation.\n  \n- **Identity Confusion** occurs in middle or late adolescence when individuals begin to feel attraction to the same sex and experience uncertainty and anxiety about their sexual identity, but they have not yet reached a point of acceptance.\n\n- **Identity Assumption** is the stage where individuals begin to accept a gay or lesbian identity and seek social relationships within the LGBTQ+ community, but they may not yet be fully comfortable disclosing their orientation to heterosexual individuals.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "medium",
+      "quality_comment": "The options reflect distinct stages clearly described in the model, offering well-balanced alternatives that require understanding of developmental progression.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::15",
+      "isScored": true
+    },
+    {
+      "stem": "According to Thomas and Chess's temperament categories, which characteristics best describe a 'slow-to-warm-up' child?",
+      "options": [
+        "Positive mood, adapts easily, regular routines",
+        "Negative mood, cries frequently, irregular routines",
+        "Mildly negative mood, low activity, slow adaptation",
+        "Very active, responds negatively to new situations"
+      ],
+      "answer": "Mildly negative mood, low activity, slow adaptation",
+      "explanation": "1. The correct answer, \"mildly negative mood, low activity, slow adaptation,\" accurately describes a 'slow-to-warm-up' child according to Thomas and Chess's temperament categories. These children exhibit a mildly negative mood and take time to adapt to new people and situations, which aligns with the characteristics outlined in the reference material. Additionally, they tend to have low levels of activity and moderately regular feeding and sleeping routines, further supporting this classification.\n\n2. The first incorrect option, \"positive mood, adapts easily, regular routines,\" describes an 'easy child,' who is characterized by a positive mood and adaptability, which contradicts the traits of a slow-to-warm-up child. The second incorrect option, \"negative mood, cries frequently, irregular routines,\" aligns with the characteristics of a 'difficult child,' who exhibits a negative mood and high activity levels, thus not fitting the slow-to-warm-up profile. Lastly, the third incorrect option, \"very active, responds negatively to new situations,\" describes a 'difficult child' as well, who is characterized by high activity and intense negative reactions, which does not represent the low activity level of a slow-to-warm-up child.",
+      "kn": "KN21",
+      "kn_explanation": "This question pertains to temperament development in early childhood, a key part of normal growth and development across the lifespan (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible temperament profiles, but only one correctly matches the slow-to-warm-up description, making it a clear but challenging question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::20",
+      "isScored": true
+    },
+    {
+      "stem": "Raven’s Standard Progressive Matrices (SPM) is best described as:",
+      "options": [
+        "A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences",
+        "A receptive vocabulary test using picture stimuli and verbal prompts to assess verbal comprehension",
+        "A group-administered test assessing verbal, quantitative, and nonverbal domains for students in grades 2-12",
+        "A test measuring motor, cognitive, and language development in infants up to 42 months"
+      ],
+      "answer": "A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences",
+      "explanation": "1. The correct answer, \"A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences,\" accurately describes Raven’s Standard Progressive Matrices (SPM) because it is designed to assess abstract reasoning through nonverbal tasks, thus focusing on fluid intelligence rather than learned knowledge. Additionally, the test is structured to reduce the impact of educational background and cultural factors, making it a fair assessment across diverse populations.\n\n2. The first incorrect option, \"A receptive vocabulary test using picture stimuli and verbal prompts to assess verbal comprehension,\" is wrong because it describes the Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5), which focuses on receptive vocabulary rather than abstract reasoning. \n\nThe second incorrect option, \"A group-administered test assessing verbal, quantitative, and nonverbal domains for students in grades 2-12,\" is incorrect as it refers to the Cognitive Abilities Test, Form 7 (CogAT7), which evaluates multiple cognitive domains in a group setting rather than focusing solely on nonverbal abstract reasoning like the SPM. \n\nThe third incorrect option, \"A test measuring motor, cognitive, and language development in infants up to 42 months,\" is inaccurate because it describes the Bayley Scales of Infant and Toddler Development, Fourth Edition (Bayley-4), which assesses developmental status rather than abstract reasoning in older children and adults as Raven’s SPM does.",
+      "kn": "KN35",
+      "kn_explanation": "This question is best aligned with KN35 because it tests Criteria for selection and adaptation of assessment methods (e.g., evidenced-based knowledge of assessment limitations, cultural appropriateness, trans-cultural adaptation, and language accommodations).",
+      "difficulty": "medium",
+      "quality_comment": "This question has clearly differentiated options referencing different tests and domains, facilitating discrimination of knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::26",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best distinguishes a manic episode from a hypomanic episode according to DSM-5-TR criteria?",
+      "options": [
+        "Manic episodes last at least four days and do not cause significant impairment, while hypomanic episodes last at least seven days and cause marked impairment.",
+        "Manic episodes require at least three symptoms and cause marked impairment or hospitalization, while hypomanic episodes require three symptoms but do not cause marked impairment or psychotic features.",
+        "Manic episodes involve irritability only, while hypomanic episodes always involve an elevated mood.",
+        "Hypomanic episodes require psychotic features, while manic episodes do not."
+      ],
+      "answer": "Manic episodes require at least three symptoms and cause marked impairment or hospitalization, while hypomanic episodes require three symptoms but do not cause marked impairment or psychotic features.",
+      "explanation": "Manic episodes last at least one week and cause marked impairment, hospitalization, or psychotic features, while hypomanic episodes last at least four days, have three or more symptoms, but do not cause severe impairment or psychosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of diagnostic criteria for mood episodes, which involves understanding DSM-5-TR classification systems and diagnostic criteria (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible and test the nuances of diagnostic criteria, making it suitable for EPPP preparation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "A test has a reliability coefficient of .81. What is the reliability index (index of reliability), as defined by taking the square root of the coefficient?",
+      "options": [
+        "0.90",
+        "0.81",
+        "0.18",
+        "1.62"
+      ],
+      "answer": "0.90",
+      "explanation": "1. The correct answer is \"0.90\" because the reliability index, or index of reliability, is calculated by taking the square root of the reliability coefficient. In this case, the reliability coefficient is .81, and when you take the square root of .81, you get approximately 0.90 (√.81 = 0.90). This value represents the theoretical correlation between the observed test scores and the true test scores.\n\n2. The option \"0.81\" is incorrect because it simply restates the reliability coefficient rather than providing the reliability index, which requires taking the square root. The option \"0.18\" is wrong as it does not relate to the square root of .81 and is significantly lower than expected; it may arise from a misunderstanding of the calculation. Lastly, \"1.62\" is incorrect because it exceeds the maximum value of 1.0 for reliability indices, which is not possible as reliability coefficients range from 0 to 1.0.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding the relationship between reliability coefficients and their indices is part of psychometric measurement concepts (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Numerical but basic calculation question, with distractors that test misunderstandings of the formula.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::21",
+      "isScored": true
+    },
+    {
+      "stem": "Which strategy is most appropriate for clients in the contemplation stage of the Transtheoretical Model?",
+      "options": [
+        "Stimulus control to prevent relapse",
+        "Self-reevaluation to evaluate feelings about change",
+        "Contingency management to reinforce new behavior",
+        "Assigning the sick role to manage symptoms"
+      ],
+      "answer": "Self-reevaluation to evaluate feelings about change",
+      "explanation": "1. \"Self-reevaluation to evaluate feelings about change\" is the correct answer because, in the contemplation stage of the Transtheoretical Model, clients are ambivalent about making changes. This strategy helps them assess their feelings regarding their current behaviors and the potential for change, facilitating their transition to the preparation stage where they can commit to action.\n\n2. The option \"Stimulus control to prevent relapse\" is incorrect because stimulus control is primarily utilized in the action stage to help clients manage their environment and prevent relapse after they have initiated behavior change. \"Contingency management to reinforce new behavior\" is also incorrect as it is a strategy meant for clients in the action stage, where they are actively changing their behaviors and need reinforcement. Lastly, \"Assigning the sick role to manage symptoms\" is not applicable here since this strategy is part of interpersonal psychotherapy aimed at helping clients view their symptoms as temporary and treatable, rather than a focus for clients who are contemplating change.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "medium",
+      "quality_comment": "Options include plausible therapeutic strategies, but only one is stage-matched, effectively assessing clinical application.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "A behavioral psychologist tracks a single client's frequency of panic attacks across baseline and treatment phases using an ABAB design. A colleague argues that the findings are limited because they cannot be generalized to a broader population. The behavioral psychologist's BEST response would be that single-subject designs:",
+      "options": [
+        "Use random assignment to ensure internal validity, which compensates for limited generalizability",
+        "Are intended to establish population-level norms rather than individual treatment effects",
+        "Prioritize an idiographic approach focused on understanding the individual, with generalizability established through replication across individuals rather than large samples",
+        "Have equivalent external validity to group designs when multiple baseline phases are included"
+      ],
+      "answer": "Prioritize an idiographic approach focused on understanding the individual, with generalizability established through replication across individuals rather than large samples",
+      "explanation": "Single-subject designs reflect an idiographic approach — they focus on understanding the individual case in depth rather than deriving general laws from group averages (the nomothetic approach). The lesson describes single-subject designs as 'powerful tools for clinical practice' that study one person across phases, while group designs compare across many participants. Generalizability in single-subject research is established through direct and systematic replication across individuals, not through large sample sizes. Option A is incorrect because single-subject designs do not use random assignment. Option B reverses the purpose — group designs establish norms, not single-subject designs. Option D overstates external validity claims.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "The lesson covers single-subject designs thoroughly but does not use the terms 'idiographic' or 'nomothetic' explicitly. The concepts are clearly implied by the distinction between single-subject and group designs.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Single-Subject Designs: When One Person Is Enough",
+      "lessonExcerpt": "Single-subject designs are powerful tools for clinical practice. They share key features: at least two phases: baseline (A) and treatment (B), multiple measurements during each phase, you don't start treatment until baseline is stable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "What is the ethical guideline regarding the termination of therapy when a client poses a threat to themselves or others?",
+      "options": [
+        "Therapy should continue until the client is stable.",
+        "Termination is not allowed under any circumstances.",
+        "Therapy should be terminated immediately.",
+        "The psychologist should assess the risk and consult with colleagues."
+      ],
+      "answer": "The psychologist should assess the risk and consult with colleagues.",
+      "explanation": "Ethically, psychologists must assess the risk and consider the best course of action, which may include consultation with colleagues before making a decision about termination. Immediate termination is not always the best option.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of ethical termination in therapy.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "### Evaluating Student Performance",
+      "lessonExcerpt": "You must take reasonable steps to resolve it. Discuss it with those involved, consult colleagues, prioritize the affected person's best interests.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "The forced distribution method of performance appraisal is best described as:",
+      "options": [
+        "Comparing each employee to all others in pairs for evaluation",
+        "Assigning employees to predetermined performance categories based on a fixed percentage distribution",
+        "Rating employee behaviors according to defined behavioral anchors",
+        "Recording exceptional positive and negative job-related incidents"
+      ],
+      "answer": "Assigning employees to predetermined performance categories based on a fixed percentage distribution",
+      "explanation": "1. The correct answer, \"Assigning employees to predetermined performance categories based on a fixed percentage distribution,\" accurately describes the forced distribution method of performance appraisal. This method requires raters to categorize a specific percentage of employees into defined performance levels, such as poor, average, or excellent, which helps alleviate biases like central tendency, leniency, and strictness by enforcing a distribution of ratings.\n\n2. The option \"Comparing each employee to all others in pairs for evaluation\" is incorrect because this describes the paired comparison technique, which involves evaluating employees against each other in pairs rather than assigning them to fixed categories. The option \"Rating employee behaviors according to defined behavioral anchors\" is incorrect as it refers to behaviorally anchored rating scales (BARS), which use specific behavioral descriptions for rating rather than a fixed percentage distribution. Finally, \"Recording exceptional positive and negative job-related incidents\" is incorrect because it describes the critical incident technique, which focuses on specific instances of performance rather than categorizing employees based on a predetermined distribution.",
+      "kn": "KN34",
+      "kn_explanation": "This item evaluates knowledge of subjective rating scale techniques used in performance assessment within organizations (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "The answer and distractors clearly correspond to different appraisal methods, encouraging precise understanding of forced distribution advantages and limitations.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json::11",
+      "isScored": true
+    }
+  ]
+}

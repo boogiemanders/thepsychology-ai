@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "examId": "warmup-12-38",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Parkinson’s disease symptoms such as tremors and rigidity result primarily from degeneration in which midbrain structure?",
+      "options": [
+        "Substantia nigra",
+        "Basal ganglia",
+        "Thalamus",
+        "Amygdala"
+      ],
+      "answer": "Substantia nigra",
+      "explanation": "1. The \"substantia nigra\" is the correct answer because it is a midbrain structure that plays a crucial role in motor control and is involved in reward-seeking behaviors. Degeneration of dopamine-producing cells in the substantia nigra is specifically linked to the motor symptoms of Parkinson's disease, including tremors and rigidity.\n\n2. The \"basal ganglia\" is incorrect as it refers to a group of structures involved in motor control, but it is the substantia nigra within the basal ganglia that specifically degenerates in Parkinson's disease. The \"thalamus\" is also incorrect because it serves primarily as a relay station for sensory information and does not directly cause the motor symptoms associated with Parkinson's disease. Lastly, the \"amygdala\" is incorrect as it is primarily involved in processing emotions and memory, not in the motor control deficits seen in Parkinson's disease.",
+      "kn": "KN1",
+      "kn_explanation": "This question focuses on neurological substrates of disease, integrating neurobiology and pathology within biological bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are functionally relevant but serve as effective foil to test understanding of Parkinson’s neurobiology.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::23",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "Which of these best describes the difference between implosive therapy and systematic desensitization?",
+      "options": [
+        "Implosive therapy involves exaggerated feared imagery and psychodynamic conflicts, systematic desensitization involves relaxation training and gradual exposure",
+        "Implosive therapy uses rapid eye movements, systematic desensitization uses flooding techniques",
+        "Implosive therapy is always conducted in vivo, systematic desensitization is imaginal",
+        "Implosive therapy is based on operant conditioning, systematic desensitization is classical extinction"
+      ],
+      "answer": "Implosive therapy involves exaggerated feared imagery and psychodynamic conflicts, systematic desensitization involves relaxation training and gradual exposure",
+      "explanation": "1. The correct answer, \"Implosive therapy involves exaggerated feared imagery and psychodynamic conflicts, systematic desensitization involves relaxation training and gradual exposure,\" accurately contrasts the two therapies. Implosive therapy focuses on the client exaggerating their imagined fears while incorporating psychodynamic elements related to underlying conflicts, which intensifies anxiety. In contrast, systematic desensitization employs a structured approach that includes relaxation training and a gradual exposure hierarchy to help clients replace anxiety responses with relaxation responses.\n\n2. The first incorrect option, \"Implosive therapy uses rapid eye movements, systematic desensitization uses flooding techniques,\" is wrong because implosive therapy does not involve rapid eye movements; that technique is associated with EMDR. The second incorrect option, \"Implosive therapy is always conducted in vivo, systematic desensitization is imaginal,\" is incorrect because implosive therapy is conducted solely in imagination, whereas systematic desensitization involves both imaginal and real-life exposure. The third incorrect option, \"Implosive therapy is based on operant conditioning, systematic desensitization is classical extinction,\" is incorrect because both therapies are rooted in classical conditioning principles, with systematic desensitization specifically utilizing classical extinction to reduce anxiety responses.",
+      "kn": "KN7",
+      "kn_explanation": "This question compares classical conditioning-based interventions, evaluating knowledge of their specific features in learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Cleverly juxtaposes two concepts with some overlapping features, requiring detailed knowledge for accurate selection.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::17",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "A clinical psychologist completes a particularly successful assessment with a complex client and attributes the outcome to her advanced training and clinical intuition. The following week, she conducts an assessment that goes poorly and attributes the outcome to the client's lack of motivation and the referring provider's inadequate background information. This pattern of attribution BEST illustrates:",
+      "options": [
+        "The actor-observer effect",
+        "The self-serving bias",
+        "The fundamental attribution error",
+        "The false consensus effect"
+      ],
+      "answer": "The self-serving bias",
+      "explanation": "The self-serving bias involves taking credit for successes (internal attribution) while blaming external factors for failures (external attribution). Here, the psychologist attributes her successful assessment to internal factors (her training and intuition) but attributes the unsuccessful assessment to external factors (client motivation, referral information). The actor-observer effect (A) involves attributing one's own behavior to situations but others' behavior to personality—it doesn't specifically address the success/failure asymmetry. The fundamental attribution error (C) involves overestimating dispositional factors when explaining others' behavior, not the self-protective pattern of attributing one's own outcomes differently based on valence. The false consensus effect (D) involves overestimating how many others share one's opinions, which is unrelated to this scenario.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical scenario that clearly differentiates self-serving bias from related attribution concepts by showing the asymmetric internal/external pattern across success and failure.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "### The Self-Serving Bias",
+      "lessonExcerpt": "The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::4",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "The 'own-race bias' refers to which phenomenon observed in the perception of faces?",
+      "options": [
+        "Greater accuracy in perceiving and identifying faces of one's own race compared to other races",
+        "Difficulty recalling faces of individuals of any race after a delay",
+        "Tendency to confuse faces of one’s own age group more than other age groups",
+        "Higher false alarm rates when identifying same-race faces over other-race faces"
+      ],
+      "answer": "Greater accuracy in perceiving and identifying faces of one's own race compared to other races",
+      "explanation": "1. The correct answer, \"Greater accuracy in perceiving and identifying faces of one's own race compared to other races,\" accurately describes the phenomenon known as own-race bias (ORB). Research indicates that individuals are more adept at recognizing and recalling faces of their own racial group due to increased exposure and familiarity, which enhances their ability to perceive subtle differences among those faces (Anthony et al., 1992). This bias has significant implications, particularly in contexts such as eyewitness testimony, where misidentifications are more likely to occur with individuals of different races (Meissner et al., 2005).\n\n2. The option \"Difficulty recalling faces of individuals of any race after a delay\" is incorrect because it does not specifically address the comparative accuracy related to own-race bias; rather, it suggests a general memory issue that applies universally. The statement \"Tendency to confuse faces of one’s own age group more than other age groups\" is wrong because it conflates age-related recognition with race-related recognition, which are distinct biases. Lastly, \"Higher false alarm rates when identifying same-race faces over other-race faces\" is inaccurate because it contradicts the findings of ORB, which actually shows higher false alarm rates for cross-race identifications, not same-race faces.",
+      "kn": "KN14",
+      "kn_explanation": "This question concerns social cognition and person perception processes, which fall under major research-based theories/models of social cognition (KN14).",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem and plausible distractors make the question appropriate for testing foundational knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::22",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary characteristic of sexual dimorphism in humans?",
+      "options": [
+        "Differences in height and weight",
+        "Variations in skin color",
+        "Differences in brain structure",
+        "Variations in reproductive anatomy"
+      ],
+      "answer": "Variations in reproductive anatomy",
+      "explanation": "The correct answer is 'Variations in reproductive anatomy', as sexual dimorphism refers to the distinct differences in male and female reproductive systems and secondary sexual characteristics. The other options may reflect differences among individuals but do not specifically pertain to sexual dimorphism.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of biological differences between sexes.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
+      "lessonExcerpt": "Sexual dimorphism refers to the distinct differences in male and female reproductive systems.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::17",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "What does the standard error of measurement (SEM) indicate in the context of psychological testing?",
+      "options": [
+        "It reflects the degree to which a test score can vary due to measurement error.",
+        "It measures the reliability of a test based on the number of items it contains.",
+        "It indicates the validity of a test by comparing it to other established measures.",
+        "It determines the average score of a population on a specific test."
+      ],
+      "answer": "It reflects the degree to which a test score can vary due to measurement error.",
+      "explanation": "The SEM quantifies the amount of error associated with a test score, providing insight into the precision of the measurement. The other options misinterpret the purpose of SEM or confuse it with other testing concepts.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of SEM in psychological assessment.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The standard error of measurement (SEM) indicates the degree to which a test score can vary due to measurement error.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::14",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the role of base rates and bias in interpreting conduct disorder assessment data?",
+      "options": [
+        "Ignoring base rates leads to accurate interpretation of clinical symptoms.",
+        "High prevalence of CD in a population decreases false alarms in diagnosis.",
+        "Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor.",
+        "Base rates are irrelevant when clinical interviews are comprehensive."
+      ],
+      "answer": "Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor.",
+      "explanation": "1. The correct answer, \"Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor,\" reflects how cognitive biases can influence clinical judgment. When assessors are recently exposed to vivid cases of conduct disorder (CD), they may overestimate its prevalence in their evaluations due to the ease with which these examples come to mind, leading to a skewed interpretation of assessment data. This can result in an inflated perception of the disorder's occurrence in the population, affecting diagnosis and treatment decisions.\n\n2. The option \"Ignoring base rates leads to accurate interpretation of clinical symptoms\" is incorrect because disregarding base rates can often lead to misdiagnosis or overdiagnosis, as clinicians may not accurately contextualize symptoms within the larger population. The statement \"High prevalence of CD in a population decreases false alarms in diagnosis\" is misleading; a high prevalence could actually increase the likelihood of false positives if assessors do not consider base rates properly, as they may assume that symptoms are more indicative of CD than they are. Lastly, \"Base rates are irrelevant when clinical interviews are comprehensive\" is incorrect because comprehensive clinical interviews still need to consider base rates to avoid misinterpretation; understanding the prevalence of CD helps clinicians contextualize individual cases within the broader population, ensuring more accurate diagnoses.",
+      "kn": "KN37",
+      "kn_explanation": "This item pertains to evidence-based interpretation of data, biases, and heuristics in assessment (KN37), crucial for accurate diagnosis of conduct disorder.",
+      "difficulty": "medium",
+      "quality_comment": "The options include common misunderstandings, allowing clear assessment of knowledge about bias and base rate usage in clinical judgment.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::12",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist uses a selection test with a validity coefficient of .60 to predict job performance. The criterion measure (supervisor ratings) has a standard deviation of 8. If the validity coefficient were increased to .80 while the criterion SD remained the same, what would happen to the standard error of estimate?",
+      "options": [
+        "It would increase from 6.4 to 7.2",
+        "It would decrease from 6.4 to 4.8",
+        "It would remain unchanged because the criterion SD is the same",
+        "It would decrease from 4.8 to 3.2"
+      ],
+      "answer": "It would decrease from 6.4 to 4.8",
+      "explanation": "The standard error of estimate formula is: SEE = SD of criterion × √(1 - validity coefficient²). With validity = .60: SEE = 8 × √(1 - .36) = 8 × √.64 = 8 × .8 = 6.4. With validity = .80: SEE = 8 × √(1 - .64) = 8 × √.36 = 8 × .6 = 4.8. Thus, increasing the validity coefficient from .60 to .80 decreases the SEE from 6.4 to 4.8. This illustrates the inverse relationship between the validity coefficient and the standard error of estimate: as the predictor becomes more valid, prediction errors become smaller. The criterion SD alone does not determine the SEE; both the criterion SD and the validity coefficient jointly determine it.",
+      "kn": "KN29",
+      "kn_explanation": "Validity coefficients, criterion measures, and prediction of job performance are core psychometric concepts (reliability and validity).",
+      "difficulty": "hard",
+      "quality_comment": "Excellent computational question that requires applying the SEE formula and understanding the inverse relationship between validity and prediction error.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "### The Standard Error of Estimate",
+      "lessonExcerpt": "Here's the formula: Standard Error = SD of criterion × √(1 - validity coefficient²)... Example calculation: Your job performance measure has a standard deviation of 5, and your hiring test has a validity coefficient of .60. Step 1: Square the coefficient: .60² = .36. Step 2: Subtract from 1: 1 - .36 = .64. Step 3: Take the square root: √.64 = .8. Step 4: Multiply by criterion SD: 5 × .8 = 4.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json::2",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A school psychologist consults with a teacher who consistently struggles to work effectively with students from a particular cultural background. The psychologist suspects the teacher's personal biases are interfering with her professional objectivity. According to Caplan's consultation model, this situation is BEST addressed through which type of consultation?",
+      "options": [
+        "Client-centered case consultation focused on developing a plan for a specific student",
+        "Program-centered administrative consultation to restructure classroom procedures",
+        "Consultee-centered case consultation to address the teacher's theme interference",
+        "Consultee-centered administrative consultation to improve school-wide cultural competency"
+      ],
+      "answer": "Consultee-centered case consultation to address the teacher's theme interference",
+      "explanation": "Consultee-centered case consultation focuses on building the consultee's professional skills, particularly when personal biases interfere with objectivity. The lesson states: 'Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.' Theme interference is a specific concept within consultee-centered case consultation where the consultee's personal issues affect their work with certain clients. Client-centered case consultation (A) focuses on solving the immediate client problem, not the consultee's underlying bias. Program-centered administrative consultation (B) addresses existing program problems, not individual practitioner skills. Consultee-centered administrative consultation (D) builds administrators' program management skills, not frontline practitioners' clinical objectivity.",
+      "kn": "KN47",
+      "kn_explanation": "Research-based consultation process with a teacher about cultural competence",
+      "difficulty": "hard",
+      "quality_comment": "Excellent application question requiring integration of theme interference concept with correct consultation type. Well-supported by lesson content.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Caplan's Four Types of Consultation",
+      "lessonExcerpt": "Consultee-Centered Case Consultation shifts focus to building the consultee's skills... Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::2",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which qualitative research method focuses on understanding the lived experiences of individuals and often involves in-depth interviews?",
+      "options": [
+        "Case Study",
+        "Phenomenology",
+        "Grounded Theory",
+        "Narrative Analysis"
+      ],
+      "answer": "Phenomenology",
+      "explanation": "1. **Phenomenology** is the correct answer because it specifically aims to gain an in-depth understanding of the \"lived experience\" of participants. This approach focuses on how individuals perceive, describe, and make sense of their experiences, often utilizing in-depth interviews as the primary method of data collection.\n\n2. **Case Study** is incorrect because it involves collecting in-depth information about a particular individual, group, or situation, but does not specifically focus on understanding lived experiences as phenomenology does. **Grounded Theory** is also incorrect; while it seeks to derive a general, abstract theory based on participants' views, it does not primarily focus on the lived experiences in the same way as phenomenology. Lastly, **Narrative Analysis** is incorrect because it involves analyzing personal stories and accounts but does not emphasize the in-depth exploration of lived experiences as phenomenology does.",
+      "difficulty": "easy",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "quality_comment": "This question effectively tests knowledge of qualitative research methods by focusing on a specific approach.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::36",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist in private practice submits insurance claims electronically and wants to ensure compliance with ethical standards for protecting client confidentiality during billing transmissions. Which of the following practices BEST addresses this obligation?",
+      "options": [
+        "Including only the client's first name and diagnosis code in electronic transmissions",
+        "Sending billing information only through encrypted electronic systems and limiting transmitted information to the minimum necessary for reimbursement",
+        "Requiring clients to submit their own insurance claims to eliminate the psychologist's liability",
+        "Avoiding electronic billing entirely and using only paper claims sent through certified mail"
+      ],
+      "answer": "Sending billing information only through encrypted electronic systems and limiting transmitted information to the minimum necessary for reimbursement",
+      "explanation": "Ethical standards require psychologists to take reasonable precautions to protect confidential information in electronic transmissions, which includes using encryption and limiting disclosed information to only what is necessary. Option A is insufficient because using only a first name does not constitute adequate protection and diagnosis codes still constitute protected information. Option C incorrectly attempts to shift the psychologist's ethical responsibility to the client. Option D is impractical and not required by the Ethics Code, which recognizes electronic communication as acceptable when proper safeguards are in place.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "Practical question testing application of confidentiality principles to modern billing practices. Distractors represent common misconceptions.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 6: Record Keeping and Fees",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 26,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::26",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best characterizes a programmed decision in an organization?",
+      "options": [
+        "A novel and complex decision requiring creative problem-solving",
+        "A routine decision governed by established rules and policies",
+        "A decision focused on developing new products and services",
+        "A high-level decision involving legal issue response"
+      ],
+      "answer": "A routine decision governed by established rules and policies",
+      "explanation": "1. \"A routine decision governed by established rules and policies\" is the correct answer because programmed decisions are characterized as repetitive and routine, made according to established guidelines. These decisions are typically made by lower-level personnel and involve predictable scenarios, such as hiring or billing, which align with the definition provided in the reference material.\n\n2. The option \"A novel and complex decision requiring creative problem-solving\" is incorrect because this describes nonprogrammed decisions, which are unique and require judgment and creativity, contrasting with the routine nature of programmed decisions. The option \"A decision focused on developing new products and services\" is wrong because such decisions are typically nonprogrammed, involving complexity and the need for innovative solutions rather than established rules. Lastly, \"A high-level decision involving legal issue response\" is incorrect as it also pertains to nonprogrammed decisions, which are usually made by upper-level personnel and require unique problem-solving rather than following routine procedures.",
+      "kn": "KN16",
+      "kn_explanation": "This question relates to group and systems processes within organizations, specifically organizational decision-making classifications.",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward and clearly distinguishes between programmed and nonprogrammed decisions with plausible distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Workplace Decisions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Workplace Decisions.json::4",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

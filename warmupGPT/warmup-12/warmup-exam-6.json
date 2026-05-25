@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "examId": "warmup-12-6",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.483Z"
+  },
+  "questions": [
+    {
+      "stem": "Which statement best describes the typical pattern of sleep stage duration changes across a single night?",
+      "options": [
+        "REM sleep duration increases and stage N3 sleep duration decreases as the night progresses",
+        "Stage N3 duration increases while REM sleep decreases throughout the night",
+        "REM and stage N3 durations remain constant throughout the night",
+        "Stage N1 sleep predominates in the second half of the night"
+      ],
+      "answer": "REM sleep duration increases and stage N3 sleep duration decreases as the night progresses",
+      "explanation": "1. The statement \"REM sleep duration increases and stage N3 sleep duration decreases as the night progresses\" is correct because, according to the reference material, as the sleep cycle continues throughout the night, the duration of REM sleep increases while the duration of stage N3 sleep decreases. This pattern indicates that while the initial part of the night is characterized by more deep sleep (stage N3), later cycles favor longer periods of REM sleep.\n\n2. The incorrect option \"Stage N3 duration increases while REM sleep decreases throughout the night\" is wrong because it contradicts the established pattern that shows a decrease in stage N3 sleep duration as REM sleep duration increases. The option \"REM and stage N3 durations remain constant throughout the night\" is incorrect since the material explicitly states that these durations change, with REM sleep increasing and N3 sleep decreasing. Lastly, the option \"Stage N1 sleep predominates in the second half of the night\" is incorrect because the reference material does not indicate that stage N1 sleep becomes predominant; rather, it highlights the increasing duration of REM sleep during this period.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect sleep pattern descriptions that require detailed sleep knowledge, enhancing discrimination.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json::30",
+      "isScored": true
+    },
+    {
+      "stem": "Which learning theory emphasizes the role of consequences in shaping behavior?",
+      "options": [
+        "Cognitive theory",
+        "Behaviorism",
+        "Constructivism",
+        "Humanistic theory"
+      ],
+      "answer": "Behaviorism",
+      "explanation": "Behaviorism emphasizes the role of consequences (reinforcements and punishments) in shaping behavior. Cognitive theory focuses on mental processes, constructivism on knowledge construction, and humanistic theory on personal growth and self-actualization.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of foundational learning theories.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "## Understanding Operant Conditioning: The Psychology of Consequences",
+      "lessonExcerpt": "This is operant conditioning in action.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::20",
+      "isScored": true
+    },
+    {
+      "stem": "According to Kelly's Personal Construct Theory, how do individuals use their constructs to anticipate future events?",
+      "options": [
+        "Individuals rely solely on past experiences to predict future outcomes.",
+        "Constructs are used to create a framework for understanding and predicting future events.",
+        "Individuals do not use constructs to anticipate future events.",
+        "Constructs are fixed and do not change over time."
+      ],
+      "answer": "Constructs are used to create a framework for understanding and predicting future events.",
+      "explanation": "This answer correctly reflects Kelly's theory that individuals use personal constructs to interpret and anticipate future experiences. The other options misrepresent the role of constructs in prediction.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of Personal Construct Theory.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## What Are Causal Attributions?",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::9",
+      "isScored": true
+    },
+    {
+      "stem": "A researcher studying depression wants to determine whether a Western-developed depression inventory is valid for use with individuals from a collectivist Southeast Asian culture. The researcher's assumption that the same construct and measurement tool should apply universally across cultures reflects which perspective?",
+      "options": [
+        "An emic perspective",
+        "An etic perspective",
+        "An alloplastic perspective",
+        "A culturally encapsulated perspective"
+      ],
+      "answer": "An etic perspective",
+      "explanation": "The etic perspective assumes that behavior is universal and that the same theories and interventions work across cultures. Using a Western-developed instrument across cultures without modification reflects this assumption. Option A (emic) is incorrect because the emic perspective holds that behavior is culture-bound and requires different tools for different cultural contexts. Option C (alloplastic) refers to changing the environment to fit the client, not a research perspective on cultural universality. Option D (culturally encapsulated) describes therapists who impose their worldview on clients; while related, it describes a clinical failing rather than a research perspective.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Clearly grounded in the lesson's definitions of emic vs. etic perspectives.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Etic vs. Emic: Universal or Culture-Specific?",
+      "lessonExcerpt": "Etic perspective: Behavior is universal. The same theories and interventions work across cultures. Emic perspective: Behavior is culture-bound. What works for one group may not work for another.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is a source of resilience that can help individuals overcome adversity?",
+      "options": [
+        "Social support",
+        "Genetic predisposition",
+        "Financial resources",
+        "All of the above"
+      ],
+      "answer": "Social support",
+      "explanation": "The correct answer is social support, as it is a key source of resilience that helps individuals cope with adversity. While genetic predisposition and financial resources can play roles, they are not as universally impactful as social support in fostering resilience.",
+      "kn": "KN27",
+      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of resilience factors.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
+      "lessonExcerpt": "Social support is a crucial source of resilience in overcoming adversity.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist selects Raven's Standard Progressive Matrices (SPM) to assess a 10-year-old child with autism spectrum disorder who has limited verbal abilities. This choice is most appropriate because Raven's SPM:",
+      "options": [
+        "Provides separate scores for crystallized and fluid intelligence, allowing comparison across domains",
+        "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
+        "Was specifically normed on populations with autism spectrum disorder and intellectual disabilities",
+        "Measures Spearman's g factor by assessing both verbal comprehension and perceptual reasoning equally"
+      ],
+      "answer": "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
+      "explanation": "Raven's SPM measures abstract reasoning and fluid intelligence through nonverbal pattern completion tasks, making it relatively free from cultural and educational influences. Critically, research shows it is less likely than Wechsler tests to underestimate intelligence in people with ASD. Option A is wrong because Raven's only measures fluid intelligence/abstract reasoning, not crystallized intelligence. Option C is wrong because Raven's was not specifically normed on ASD populations — it simply performs better with this population. Option D is wrong because Raven's does not assess verbal comprehension at all; while it is considered a good measure of Spearman's g, it achieves this through nonverbal means only.",
+      "kn": "KN35",
+      "kn_explanation": "Selecting an appropriate assessment instrument based on the client's characteristics (ASD, limited verbal ability) involves criteria for selection and adaptation of assessment methods, including cultural appropriateness and accommodations for specific populations.",
+      "difficulty": "medium",
+      "quality_comment": "Integrates test selection rationale with knowledge of Spearman's g and ASD assessment considerations.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "research has shown Raven's SPM is less likely than Wechsler tests to underestimate intelligence in people with autism spectrum disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Which characteristic symptom is NOT typical of Childhood-Onset Fluency Disorder (stuttering)?",
+      "options": [
+        "Sound and syllable repetitions",
+        "Audible or silent blocking",
+        "Monosyllabic whole-word repetitions",
+        "Use of atypical facial grimaces in speech"
+      ],
+      "answer": "Use of atypical facial grimaces in speech",
+      "explanation": "1. \"Use of atypical facial grimaces in speech\" is the correct answer because it is not listed as one of the symptoms associated with Childhood-Onset Fluency Disorder (stuttering). The reference material identifies specific symptoms of stuttering, such as sound and syllable repetitions and blocking, but does not mention atypical facial grimaces as a characteristic feature of this disorder.\n\n2. \n- **Sound and syllable repetitions:** This is a typical symptom of Childhood-Onset Fluency Disorder, where individuals may repeat sounds or syllables as part of their speech difficulties.\n- **Audible or silent blocking:** This symptom refers to the interruption of speech flow, which can be audible (a pause) or silent (a moment of inability to speak), and is recognized as a common characteristic of stuttering.\n- **Monosyllabic whole-word repetitions:** This symptom involves repeating entire words, such as saying \"I-I-I want\" instead of \"I want,\" and is also a recognized feature of Childhood-Onset Fluency Disorder.",
+      "kn": "KN36",
+      "kn_explanation": "Assessing core diagnostic features of a communication disorder fits within classification and diagnostic criteria knowledge (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "All options are speech-related behaviors, but only one is not a core stuttering symptom, providing a well-constructed discrimination item.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "What happens to the criterion-related validity coefficient when a predictor test is cross-validated on a new sample?",
+      "options": [
+        "It tends to shrink due to reduction of chance correlations",
+        "It increases because the new sample is independent",
+        "It remains exactly the same as in the original study",
+        "It doubles as new variability is accounted for"
+      ],
+      "answer": "It tends to shrink due to reduction of chance correlations",
+      "explanation": "1. The correct answer, \"It tends to shrink due to reduction of chance correlations,\" reflects the phenomenon known as shrinkage in criterion-related validity. When a predictor test is cross-validated on a new sample, the initial high correlations observed may have been influenced by chance factors unique to the original sample, which are not present in the new sample. As a result, the validity coefficient is likely to decrease as it provides a more accurate estimate of the true relationship between the predictor and criterion.\n\n2. \n- **It increases because the new sample is independent:** This option is incorrect because, while the new sample is indeed independent, the presence of chance correlations in the original sample can lead to an overestimation of the validity coefficient, which is more accurately reflected in the cross-validated sample.\n  \n- **It remains exactly the same as in the original study:** This option is wrong because the validity coefficient is expected to change upon cross-validation; it is unlikely to remain the same due to the reduction of chance factors that may have inflated the original coefficient.\n\n- **It doubles as new variability is accounted for:** This statement is incorrect because the validity coefficient does not double; instead, it typically decreases due to the elimination of chance correlations, rather than increasing from accounting for new variability.",
+      "kn": "KN29",
+      "kn_explanation": "This question covers an important psychometric concept about validity coefficient stability and generalizability, relevant to understanding test validation procedures.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear and the distractors are plausible misconceptions, offering a solid test of understanding of cross-validation effects.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "In the context of positive psychology, which intervention is most supported by empirical research to improve physical health?",
+      "options": [
+        "Exposure therapy",
+        "Mindfulness meditation",
+        "Positive psychology interventions focusing on optimism and positive emotions",
+        "Catharsis through emotional release"
+      ],
+      "answer": "Positive psychology interventions focusing on optimism and positive emotions",
+      "explanation": "1. The correct answer, \"Positive psychology interventions focusing on optimism and positive emotions,\" is supported by empirical research that links positive emotions and optimism to increased longevity and improved physical health. Positive psychology emphasizes valued subjective experiences and the scientific evaluation of interventions, demonstrating that fostering optimism and positive emotions can lead to significant health benefits (Park et al., 2016).\n\n2. The incorrect options are as follows:\n- **Exposure therapy**: This intervention is primarily used to treat anxiety disorders and phobias by gradually exposing clients to feared stimuli, but it is not specifically linked to improving physical health through positive emotions or optimism.\n- **Mindfulness meditation**: While mindfulness meditation can enhance mental well-being and reduce stress, the reference material does not specifically indicate its direct empirical support for improving physical health within the framework of positive psychology.\n- **Catharsis through emotional release**: Although catharsis may provide emotional relief, the reference material does not support it as an effective intervention within the context of positive psychology for enhancing physical health outcomes.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "The question integrates empirical support with positive psychology concepts, promoting clinical rationale at EPPP level.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::25",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist conducts a study examining the correlation between years of clinical experience and client satisfaction ratings across a large, unrestricted sample of therapists ranging from newly licensed to 30+ years of practice. Based on what is typically found in psychological research involving related professional variables, which of the following Pearson r values would be the most realistic estimate of this correlation?",
+      "options": [
+        "r = +0.95",
+        "r = +0.35",
+        "r = -0.72",
+        "r = +0.00"
+      ],
+      "answer": "r = +0.35",
+      "explanation": "A moderate positive correlation of +0.35 is the most realistic estimate. In psychological research, correlations between related professional variables are typically low to moderate in magnitude because human behavior is influenced by many factors simultaneously. An r of +0.95 (A) would indicate a near-perfect relationship, which is virtually never found between distinct psychological or professional variables — such values are typically only seen in reliability coefficients. An r of -0.72 (C) is unrealistic both in direction (more experience would logically relate positively, not strongly negatively, to satisfaction) and in magnitude for behavioral variables. An r of 0.00 (D) would indicate no relationship whatsoever, which is unlikely given that experience and client satisfaction are conceptually related, though many other factors also influence satisfaction.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "Tests practical statistical reasoning about effect sizes in psychology. The lesson covers correlation interpretation extensively but does not provide specific benchmark values for professional variable correlations, so the question relies on general principles from the lesson about how correlations work and the multi-determined nature of psychological variables.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "Most correlation coefficients range from -1.0 to +1.0, and they're usually symbolized with the letter 'r.'",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 12,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "After providing emergency services outside their usual competence, what should a psychologist do when alternative providers become available?",
+      "options": [
+        "Continue services indefinitely to maintain client stability",
+        "Transfer or refer the client to an appropriately competent professional as soon as possible",
+        "Evaluate and document that emergency services were unnecessary",
+        "Reduce services gradually rather than terminating abruptly"
+      ],
+      "answer": "Transfer or refer the client to an appropriately competent professional as soon as possible",
+      "explanation": "1. The correct answer, \"Transfer or refer the client to an appropriately competent professional as soon as possible,\" aligns with Standard 2.02 of the APA Ethics Code, which allows psychologists to provide services in emergency situations even if they lack adequate training. However, once alternative services become available, psychologists are ethically obligated to refer the client to a competent professional to ensure the client receives the appropriate care needed for their situation.\n\n2. The option \"Continue services indefinitely to maintain client stability\" is incorrect because it violates the ethical obligation to provide services only within one's competence, which could risk the client's well-being if the psychologist lacks the necessary expertise. \"Evaluate and document that emergency services were unnecessary\" is wrong because it dismisses the need for appropriate referral once competent alternatives are available, undermining the client’s right to effective care. Lastly, \"Reduce services gradually rather than terminating abruptly\" is inappropriate, as it implies delaying the referral process rather than promptly transferring the client to a qualified professional, which is necessary for their ongoing care.",
+      "kn": "KN61",
+      "kn_explanation": "This question assesses ethical standards tied to competence and emergency practice, a key area of professional ethical behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors resemble reasonable clinical options, requiring careful understanding of ethical mandates.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::28",
+      "isScored": true
+    },
+    {
+      "stem": "According to Kobasa's model, which personality trait increases resistance to the harmful effects of stress?",
+      "options": [
+        "Type A behavior pattern",
+        "Hardiness",
+        "Low self-esteem",
+        "Neuroticism"
+      ],
+      "answer": "Hardiness",
+      "explanation": "1. **Hardiness** is the correct answer because it is identified by Kobasa (1982) as a personality trait that enhances an individual's resistance to the harmful effects of stress. Hardy individuals possess a sense of control over their lives, a commitment to their work and family, and view challenges as opportunities rather than threats, which helps them cope better with stress.\n\n2. The **Type A behavior pattern** is incorrect because, although it is associated with increased susceptibility to stress and negative health effects, it does not promote resistance to stress; rather, it heightens the risk for stress-related issues. **Low self-esteem** is also incorrect since it is linked to being more affected by stress and less effective in coping, which diminishes resistance to stress. Lastly, **neuroticism** is incorrect because it is characterized by emotional instability and a tendency to experience negative emotions, which increases vulnerability to stress rather than enhancing resistance.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include related but incorrect traits, encouraging critical thinking about stress resilience.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::8",
+      "isScored": true
+    }
+  ]
+}

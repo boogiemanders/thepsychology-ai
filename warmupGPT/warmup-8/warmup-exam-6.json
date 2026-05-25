@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "examId": "warmup-8-6",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.483Z"
+  },
+  "questions": [
+    {
+      "stem": "A patient experiences a seizure that begins with involuntary twitching of the right index finger, progressively spreads to the hand, then the wrist, and finally the entire arm. Consciousness remains intact throughout the episode. This presentation is BEST classified as a:",
+      "options": [
+        "Focal onset impaired awareness seizure originating in the temporal lobe",
+        "Generalized onset motor seizure with tonic-clonic progression",
+        "Focal onset aware seizure originating in the frontal lobe",
+        "Generalized onset non-motor seizure with focal features"
+      ],
+      "answer": "Focal onset aware seizure originating in the frontal lobe",
+      "explanation": "This describes a Jacksonian seizure, which is a type of simple partial (focal onset aware) seizure originating in the frontal lobe. The hallmark feature is the 'march' — a localized motor seizure that progressively spreads to adjacent body areas (finger → hand → arm), reflecting the sequential activation of adjacent areas in the motor cortex. Consciousness remains intact, ruling out focal onset impaired awareness seizures (Option A) and generalized seizures (Options B and D). Temporal lobe seizures typically present with auras involving taste/smell and autonomic symptoms, not progressive motor spread.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of seizure classification and neurological disorders, a biological bases topic.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content. Clinical presentation clearly maps to Jacksonian seizure description.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "### Focal Onset Seizures: Starting in One Location",
+      "lessonExcerpt": "Jacksonian seizures are a type of simple partial frontal lobe seizure. They start with a localized motor seizure that 'marches' to adjacent areas. Example: starts in a finger, then spreads to the hand, then the whole arm.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::9",
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary effect of proactive inhibition on learning new information?",
+      "options": [
+        "It enhances the ability to recall new information.",
+        "It causes interference from previously learned information.",
+        "It has no effect on the learning process.",
+        "It facilitates the encoding of new memories."
+      ],
+      "answer": "It causes interference from previously learned information.",
+      "explanation": "Proactive inhibition refers to the phenomenon where previously learned information interferes with the ability to learn or recall new information. The other options incorrectly suggest that proactive inhibition has a positive effect or no effect on learning.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses knowledge of memory processes.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Interference in Learning: Proactive Inhibition",
+      "lessonExcerpt": "Proactive inhibition occurs when previously learned information interferes with the learning of new information.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 25,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "In Milgram's original obedience study, what factor did he identify as the main reason subjects continued to deliver shocks despite apparent harm to the learner?",
+      "options": [
+        "Subjects experienced psychological reactance leading to compliance",
+        "Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes",
+        "Subjects conformed due to normative social influence",
+        "Subjects received financial incentives to continue"
+      ],
+      "answer": "Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes",
+      "explanation": "1. The correct answer, \"Subjects were placed in an agentic state, seeing themselves as agents carrying out another’s wishes,\" reflects Milgram's conclusion that participants obeyed the experimenter because they perceived themselves as instruments executing the authority's commands. This agentic state diminished their sense of personal responsibility for the learner’s suffering, allowing them to continue administering shocks despite the apparent harm.\n\n2. The option \"Subjects experienced psychological reactance leading to compliance\" is incorrect because psychological reactance refers to a response where individuals resist perceived threats to their freedom, often resulting in defiance rather than compliance. The statement \"Subjects conformed due to normative social influence\" is also incorrect, as normative social influence involves conforming to group norms to avoid ridicule or rejection, which does not adequately explain the obedience seen in Milgram's study. Lastly, the option \"Subjects received financial incentives to continue\" is wrong because Milgram's study did not involve any financial rewards for participants; rather, it focused on the psychological dynamics of obedience to authority.",
+      "kn": "KN16",
+      "kn_explanation": "This question addresses social influence theories and group processes—specifically obedience to authority—categorized under group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible alternatives related to social influence concepts, making the question a solid test of key conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json::16",
+      "isScored": true
+    },
+    {
+      "stem": "What role does play serve in child development according to developmental psychology?",
+      "options": [
+        "It is merely a form of entertainment.",
+        "It helps children develop social skills and emotional regulation.",
+        "It has no significant impact on cognitive development.",
+        "It is primarily a way for children to expend energy."
+      ],
+      "answer": "It helps children develop social skills and emotional regulation.",
+      "explanation": "The correct answer reflects the understanding that play is crucial for developing social skills and emotional regulation, as it allows children to practice interactions and manage their emotions. The other options underestimate the importance of play in development.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of the role of play in development.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Play helps children develop social skills and emotional regulation.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "Which pharmacological treatment is recommended by the APA Clinical Practice Guideline as a second-line option for PTSD in adults?",
+      "options": [
+        "Serotonin-norepinephrine reuptake inhibitor (SNRI) venlafaxine",
+        "Benzodiazepines for acute anxiety management",
+        "Tricyclic antidepressants as first-line treatment",
+        "Antipsychotics for core PTSD symptoms"
+      ],
+      "answer": "Serotonin-norepinephrine reuptake inhibitor (SNRI) venlafaxine",
+      "explanation": "1. The correct answer, \"Serotonin-norepinephrine reuptake inhibitor (SNRI) venlafaxine,\" is recommended by the APA Clinical Practice Guideline as a second-line pharmacological treatment for PTSD in adults. This guideline suggests that while first-line treatments for PTSD include cognitive processing therapy, prolonged exposure, and trauma-focused cognitive behavioral therapy (CBT), venlafaxine is recognized for its utility in alleviating core PTSD symptoms, particularly when depression is also present.\n\n2. The incorrect options are as follows:  \n- **Benzodiazepines for acute anxiety management**: Benzodiazepines are not recommended for PTSD treatment as they do not address the core symptoms of PTSD and may even worsen symptoms over time.  \n- **Tricyclic antidepressants as first-line treatment**: The guideline does not classify tricyclic antidepressants as first-line treatments; instead, it emphasizes cognitive therapies and specific SSRIs and SNRIs.  \n- **Antipsychotics for core PTSD symptoms**: Antipsychotics are not recommended for treating core PTSD symptoms according to the guideline, as they do not effectively target the specific symptoms associated with PTSD.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent plausible but incorrect medication choices, making the question clinically relevant and clear.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "During a Gestalt therapy session, a client describes a recurring dream in which she is lost in a dark forest while a bright light shines from a distant tower. The therapist asks the client to \"become\" the dark forest and speak as the forest, then to \"become\" the bright light and speak as the light. This approach to dream interpretation reflects which Gestalt principle?",
+      "options": [
+        "Dream elements are symbolic representations of unconscious wishes that require the therapist's interpretation",
+        "Each element of the dream represents a projected or disowned aspect of the dreamer's own personality",
+        "Dreams reveal archetypal patterns from the collective unconscious that guide individuation",
+        "Dream content should be analyzed for latent meaning through free association to manifest elements"
+      ],
+      "answer": "Each element of the dream represents a projected or disowned aspect of the dreamer's own personality",
+      "explanation": "In Gestalt therapy, dreams are not interpreted symbolically by the therapist (as in psychoanalysis). Instead, clients role-play different elements of their dreams because each part is treated as a disowned aspect of the client's own personality. By 'becoming' the forest and the light, the client can access and integrate these different aspects of self. Option A describes Freudian dream interpretation with therapist-delivered symbolic analysis. Option C describes Jungian interpretation involving collective unconscious archetypes. Option D describes the psychoanalytic free association approach to manifest dream content.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question differentiating Gestalt dream work from psychoanalytic and Jungian approaches. Directly supported by lesson content.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Gestalt Therapy: Awareness and Contact",
+      "lessonExcerpt": "Dream work: Unlike Freud's symbolic interpretation, Gestalt therapists have clients role-play different elements of their dreams, treating each part as a disowned aspect of the client's own personality.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 29,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following strategies is most effective for optimizing external validity in research?",
+      "options": [
+        "Using a diverse sample",
+        "Controlling for extraneous variables",
+        "Increasing sample size",
+        "Using complex statistical models"
+      ],
+      "answer": "Using a diverse sample",
+      "explanation": "The correct answer is 'Using a diverse sample' because a diverse sample enhances the generalizability of the findings to a broader population, which is the essence of external validity. While controlling for extraneous variables and increasing sample size are important, they do not directly address the generalizability of results across different populations.",
+      "kn": "KN57",
+      "kn_explanation": "This question is best aligned with KN57 because it tests Critical appraisal and application of research findings (e.g., adequacy of design and statistics, limitations to generalizability, threats to internal and external validity, design flaws, level of evidence).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of external validity considerations.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## Breaking Down External Validity Into Five Parts",
+      "lessonExcerpt": "Using a diverse sample is crucial for optimizing external validity.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Dr. Patel has been treating a client for anxiety for several months. The client mentions that her husband, who is Dr. Patel's neighbor, would like to start therapy for work-related stress. According to the APA Ethics Code, under what conditions would it be permissible for Dr. Patel to accept the husband as a client?",
+      "options": [
+        "It is never permissible to treat two members of the same family simultaneously",
+        "Only if the husband's presenting problem is unrelated to the wife's treatment",
+        "Only if the relationship could not reasonably be expected to impair objectivity, competence, or effectiveness or risk exploitation or harm",
+        "Only if both spouses provide written consent acknowledging the dual relationship"
+      ],
+      "answer": "Only if the relationship could not reasonably be expected to impair objectivity, competence, or effectiveness or risk exploitation or harm",
+      "explanation": "The APA Ethics Code does not categorically prohibit all multiple relationships. Standard 3.05 specifies that multiple relationships are only prohibited when they 'could reasonably be expected to impair objectivity, competence, or effectiveness' or risk exploitation or harm. Option A is incorrect because the Ethics Code does not impose a blanket ban on all multiple relationships. Option B is incorrect because the presenting problem alone does not determine permissibility; the key factor is the potential for impairment or harm. Option D is incorrect because while informed consent is important, written consent from both parties does not automatically make a potentially harmful multiple relationship ethical.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "Strong question testing understanding of the nuanced standard on multiple relationships rather than a blanket prohibition.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Multiple Relationships: The Most Complex Standard",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that 'could reasonably be expected to impair objectivity, competence, or effectiveness' or risk exploitation or harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 21,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::6",
+      "isScored": true
+    }
+  ]
+}

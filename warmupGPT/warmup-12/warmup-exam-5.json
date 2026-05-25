@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "examId": "warmup-12-5",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.482Z"
+  },
+  "questions": [
+    {
+      "stem": "What is the major pharmacological action of beta-blockers such as propranolol when used to reduce anxiety symptoms?",
+      "options": [
+        "Inhibition of norepinephrine reuptake in the central nervous system",
+        "Blockade of alpha-1 adrenergic receptors to reduce anxiety-associated tremor",
+        "Inhibition of beta-adrenergic receptors to reduce sympathetic nervous system stimulation",
+        "Enhancement of GABAergic neurotransmission to promote relaxation"
+      ],
+      "answer": "Inhibition of beta-adrenergic receptors to reduce sympathetic nervous system stimulation",
+      "explanation": "1. The correct answer, \"Inhibition of beta-adrenergic receptors to reduce sympathetic nervous system stimulation,\" accurately describes the pharmacological action of beta-blockers like propranolol. These medications work by inhibiting the activity of the sympathetic nervous system, which helps alleviate somatic symptoms of anxiety, such as increased heart rate and tremors, thus providing a calming effect during anxiety-provoking situations.\n\n2. The first incorrect option, \"Inhibition of norepinephrine reuptake in the central nervous system,\" is wrong because beta-blockers do not primarily act on norepinephrine reuptake; this action is characteristic of norepinephrine reuptake inhibitors, not beta-blockers. The second incorrect option, \"Blockade of alpha-1 adrenergic receptors to reduce anxiety-associated tremor,\" is incorrect because beta-blockers primarily target beta-adrenergic receptors rather than alpha-1 receptors, which are not the main mechanism involved in reducing anxiety. Finally, the option \"Enhancement of GABAergic neurotransmission to promote relaxation\" is incorrect because this action is associated with benzodiazepines and other drugs that enhance GABA activity, rather than with beta-blockers, which do not have a direct effect on GABAergic neurotransmission.",
+      "kn": "KN2",
+      "kn_explanation": "This question assesses understanding of the pharmacodynamics of beta-blockers in anxiety treatment, consistent with drug mechanism knowledge in KN2.",
+      "difficulty": "medium",
+      "quality_comment": "The options provide plausible pharmacological actions, requiring precise knowledge of adrenergic receptor pharmacology.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json::38",
+      "isScored": true
+    },
+    {
+      "stem": "How does performance distribution affect an individual's perception of their capability?",
+      "options": [
+        "It has no impact on self-perception.",
+        "It influences self-efficacy based on social comparisons.",
+        "It leads to increased anxiety about performance.",
+        "It decreases motivation to improve."
+      ],
+      "answer": "It influences self-efficacy based on social comparisons.",
+      "explanation": "Performance distribution can affect how individuals perceive their capabilities, particularly through social comparison processes, which can enhance or diminish self-efficacy. The other options do not accurately capture the relationship between performance distribution and self-perception.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of social perception and self-efficacy.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Performance distribution can affect how individuals perceive their capabilities, particularly through social comparison processes.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "A community health program aims to increase cervical cancer screening rates among women who already believe the procedure is effective but nonetheless fail to schedule appointments. According to the Theory of Planned Behavior, which intervention MOST directly targets the subjective norm component in order to strengthen behavioral intention?",
+      "options": [
+        "Distributing pamphlets with vivid statistics about cervical cancer incidence and mortality to increase perceived susceptibility",
+        "Providing transportation vouchers and extended clinic hours to eliminate logistical barriers to scheduling",
+        "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
+        "Offering guided practice in navigating the online scheduling system to build procedural self-efficacy"
+      ],
+      "answer": "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
+      "explanation": "Subjective norms in the Theory of Planned Behavior reflect what a person believes important referent others think she should do. An intervention communicating that trusted social figures (physicians, family, community leaders) endorse the behavior directly strengthens this component and, through it, behavioral intention. Option A targets perceived severity, a component from the Health Belief Model rather than subjective norms. Option B addresses perceived behavioral control by removing structural barriers. Option D also targets perceived behavioral control by building confidence in one's ability to perform the scheduling behavior. All three TPB components contribute to intention, but only Option C specifically addresses subjective norms.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Well-anchored in lesson content; distractors each map to a distinct competing construct, making this an effective test of TPB component differentiation.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Three Models for Predicting Behavior from Attitudes",
+      "lessonExcerpt": "Subjective norms | What you believe others think you should do | 'My family and doctor think I should quit' ... All three need to align for strong behavioral intention. It's like needing three keys to open a vault.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::9",
+      "isScored": true
+    },
+    {
+      "stem": "An African American college student who has always admired White cultural values experiences a racially motivated incident on campus. She begins to question her previous assumptions and develops a growing interest in learning about her African American heritage. According to Cross's Nigrescence model, this student is most likely in the:",
+      "options": [
+        "Pre-Encounter stage",
+        "Encounter stage",
+        "Immersion-Emersion stage",
+        "Internalization stage"
+      ],
+      "answer": "Encounter stage",
+      "explanation": "In Cross's Nigrescence model, the Encounter stage occurs when something happens that forces awareness of racism's impact, triggering questioning and interest in one's own culture. The student previously idealized White culture (Pre-Encounter) but a racially motivated incident has shaken her assumptions, leading to new cultural curiosity—hallmarks of the Encounter stage. Pre-Encounter would involve continued idealization of White culture without questioning. Immersion-Emersion involves complete rejection of White culture and intense immersion in Black culture. Internalization involves a secure Black identity with tolerance for racial differences.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed scenario that tests stage identification in Cross's model with clear behavioral indicators.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Cross's Black Racial Identity Development Model",
+      "lessonExcerpt": "Encounter: Something happens that forces awareness of racism's impact. It's like suddenly noticing a pattern you'd been blind to... This triggers questioning and interest in their own culture.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::1",
+      "isScored": true
+    },
+    {
+      "stem": "Which personality trait, according to Costa, Terracciano, and McCrae's research, do women tend to score higher on consistently across cultures?",
+      "options": [
+        "Assertiveness",
+        "Neuroticism",
+        "Openness to ideas",
+        "Extraversion"
+      ],
+      "answer": "Neuroticism",
+      "explanation": "1. \"Neuroticism\" is the correct answer because research by Costa, Terracciano, and McCrae (2001) indicates that women consistently score higher on neuroticism across different cultures. Neuroticism is characterized by mood instability and a tendency to experience negative emotions such as sadness, fear, and irritability, which are traits that have been observed to be more pronounced in women compared to men.\n\n2. The incorrect options are as follows:\n\n- **Assertiveness:** Men tend to score higher on assertiveness, which reflects confidence and the ability to express oneself forcefully, rather than women.\n  \n- **Openness to ideas:** This trait shows relatively stable scores between genders, with no consistent evidence indicating that women score higher than men across cultures.\n\n- **Extraversion:** While extraversion can vary, studies generally show that men and women score similarly on this trait, with no consistent advantage for women in terms of overall extraversion levels.",
+      "kn": "KN21",
+      "kn_explanation": "This question focuses on cross-cultural personality trait differences, pertinent to personality development and individual differences within lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "The options are traits commonly investigated in personality research, making it a solid question for assessing knowledge of sex differences in personality.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::28",
+      "isScored": true
+    },
+    {
+      "stem": "Which best describes a theoretical model underlying the 16 Personality Factor Questionnaire (16 PF)?",
+      "options": [
+        "A lexical hypothesis where language encodes fundamental personality traits identified by factor analysis",
+        "A typology based on Jungian psychological functions and attitudes",
+        "A system of ipsative scoring contrasting human needs",
+        "A hierarchical model of five broad traits with specific facets"
+      ],
+      "answer": "A lexical hypothesis where language encodes fundamental personality traits identified by factor analysis",
+      "explanation": "1. The correct answer, \"A lexical hypothesis where language encodes fundamental personality traits identified by factor analysis,\" accurately describes the theoretical model of the 16 Personality Factor Questionnaire (16 PF) because it was developed by Cattell using a lexical strategy to identify personality traits. This approach assumes that significant personality traits are embedded in language, and Cattell utilized factor analysis to distill these traits into 16 primary traits and five broader global traits.\n\n2. The incorrect options are as follows:  \n- \"A typology based on Jungian psychological functions and attitudes\" is wrong because the 16 PF is not based on Jung's typology; instead, it is rooted in Cattell’s lexical approach and factor analysis.  \n- \"A system of ipsative scoring contrasting human needs\" is incorrect because the 16 PF does not use ipsative scoring or focus on human needs, which is characteristic of the Edwards Personal Preference Schedule (EPPS).  \n- \"A hierarchical model of five broad traits with specific facets\" is misleading as it describes the structure of the NEO Personality Inventory-3 (NEO-PI-3), which assesses the Big Five traits, whereas the 16 PF focuses on 16 primary traits and five global traits without the same hierarchical facet structure.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed item distinguishing theoretical foundations, enhancing domain-relevant conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Personality Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Personality Tests.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes a key feature of the gender-affirmative model of care for gender diverse youth?",
+      "options": [
+        "Gender is a fluid and culturally variable construct that is not always binary",
+        "Gender dysphoria in children is typically a transient phase that resolves without intervention",
+        "Social transition should be delayed until adolescence to confirm gender identity",
+        "Psychological problems in gender diverse youth primarily stem from intrinsic gender identity conflicts"
+      ],
+      "answer": "Gender is a fluid and culturally variable construct that is not always binary",
+      "explanation": "1. The correct answer, \"Gender is a fluid and culturally variable construct that is not always binary,\" aligns with the gender-affirmative model, which posits that gender variations are diverse and can differ across cultures. This model acknowledges that individuals may identify outside the traditional binary framework and emphasizes the importance of supporting youth in exploring their authentic gender identities at any developmental stage.\n\n2. The option \"Gender dysphoria in children is typically a transient phase that resolves without intervention\" is incorrect because the gender-affirmative model does not assume that dysphoria is transient; rather, it supports children in expressing their gender identity, regardless of whether it persists. The statement \"Social transition should be delayed until adolescence to confirm gender identity\" is also incorrect, as the gender-affirmative model allows for social transition at any age, based on the child's understanding of their identity. Lastly, the option \"Psychological problems in gender diverse youth primarily stem from intrinsic gender identity conflicts\" is misleading because the model asserts that psychological issues often arise from negative societal reactions (such as transphobia) rather than from the gender identity itself.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast important aspects of gender-affirmative care and common misconceptions, aiding discrimination and conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::15",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following factors tends to increase the reliability coefficient of a test?",
+      "options": [
+        "Homogeneity of test content",
+        "Restriction of test score range",
+        "Increased guessing probability on test items",
+        "Use of short test forms"
+      ],
+      "answer": "Homogeneity of test content",
+      "explanation": "1. **Homogeneity of test content** is the correct answer because tests that are homogeneous with regard to content tend to have larger reliability coefficients than heterogeneous tests. This is especially true for internal consistency reliability, as a consistent focus on a single content domain enhances the test's ability to measure the intended construct accurately and consistently.\n\n2. The **restriction of test score range** is incorrect because reliability coefficients are larger when test scores are unrestricted; a restricted range can lead to an underestimation of reliability. **Increased guessing probability on test items** is also incorrect, as higher chances of guessing correctly can lower the reliability coefficient, making it less reliable overall. Finally, the **use of short test forms** is incorrect because shorter tests tend to be less reliable than longer ones; reliability coefficients are typically underestimated when tests are shorter.",
+      "kn": "KN29",
+      "kn_explanation": "The question addresses factors affecting reliability magnitude, essential in psychometric test evaluation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors address common misconceptions, enhancing discriminability for test-takers.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::18",
+      "isScored": true
+    },
+    {
+      "stem": "According to Freudian psychoanalysis, which aspect of personality operates according to the reality principle and attempts to satisfy the id's desires in realistic ways?",
+      "options": [
+        "Id",
+        "Superego",
+        "Ego",
+        "Collective unconscious"
+      ],
+      "answer": "Ego",
+      "explanation": "1. The correct answer is \"Ego\" because, according to Freudian psychoanalysis, the ego develops at about six months of age and operates according to the reality principle. It seeks to satisfy the id's desires in a realistic and rational manner, balancing the instinctual demands of the id and the moral constraints of the superego.\n\n2. The option \"Id\" is incorrect because the id operates according to the pleasure principle, seeking immediate gratification of instinctual needs without regard for reality. The \"Superego\" is also incorrect as it represents internalized societal values and standards, functioning as the conscience that tries to block the id's instincts rather than satisfy them. Lastly, \"Collective unconscious\" is incorrect because it is a concept from Jung’s analytical psychology, referring to shared memories and archetypes among all people, rather than a component of Freud's structural model of personality.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and distractors are plausible, testing a fundamental Freudian concept appropriate for EPPP exam level.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "Which sampling method involves selecting participants who are easiest to access, often leading to potential sampling bias?",
+      "options": [
+        "Convenience sampling",
+        "Stratified random sampling",
+        "Snowball sampling",
+        "Simple random sampling"
+      ],
+      "answer": "Convenience sampling",
+      "explanation": "1. **Convenience sampling** is the correct answer because it involves selecting participants who are readily accessible to the researcher, such as students in a class or individuals in a particular location. This method often leads to potential sampling bias, as the sample may not accurately represent the broader population due to the non-random criteria used for selection.\n\n2. **Stratified random sampling** is incorrect because it involves dividing the population into subgroups based on relevant characteristics and then randomly selecting samples from each subgroup, ensuring a more representative sample. **Snowball sampling** is also incorrect because it relies on existing participants to recommend others, which can introduce bias but is not based on ease of access like convenience sampling. Lastly, **simple random sampling** is incorrect because it ensures that every member of the population has an equal chance of being selected, thereby minimizing sampling bias compared to convenience sampling.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "The item clearly contrasts convenience sampling with other common sampling techniques, aiding differentiation and conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::33",
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary legal obligation of psychologists under the Tarasoff rulings?",
+      "options": [
+        "A. To maintain confidentiality at all costs.",
+        "B. To warn potential victims when a client poses a serious threat.",
+        "C. To report all client information to law enforcement.",
+        "D. To provide therapy to clients who express harmful thoughts."
+      ],
+      "answer": "B. To warn potential victims when a client poses a serious threat.",
+      "explanation": "Option B is correct as the Tarasoff rulings establish the duty to warn potential victims when a client poses a serious threat. Option A is incorrect because confidentiality can be breached in cases of imminent harm. Option C is incorrect as not all client information must be reported. Option D is misleading as therapy is not a legal obligation in this context.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of legal obligations.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
+      "lessonExcerpt": "Your job? Make sure you're meeting that duty of care consistently, so those other dominoes never fall.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 14,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::28",
+      "isScored": true
+    },
+    {
+      "stem": "According to Herzberg’s Two-Factor Theory, what is the effect of improving hygiene factors like pay and working conditions on worker motivation?",
+      "options": [
+        "They increase motivation and satisfaction equally",
+        "They prevent dissatisfaction but do not increase motivation",
+        "They increase motivation but have no effect on dissatisfaction",
+        "They have no impact on either satisfaction or dissatisfaction"
+      ],
+      "answer": "They prevent dissatisfaction but do not increase motivation",
+      "explanation": "1. The correct answer, \"They prevent dissatisfaction but do not increase motivation,\" aligns with Herzberg’s Two-Factor Theory, which states that hygiene factors (such as pay and working conditions) fulfill lower-order needs and can lead to dissatisfaction if inadequate. However, the presence of adequate hygiene factors does not contribute to job satisfaction or motivation; only motivator factors can enhance these aspects.\n\n2. The option \"They increase motivation and satisfaction equally\" is incorrect because hygiene factors do not increase motivation; only motivator factors can achieve that. The statement \"They increase motivation but have no effect on dissatisfaction\" is wrong because improving hygiene factors does not enhance motivation, and their absence can lead to dissatisfaction. Lastly, \"They have no impact on either satisfaction or dissatisfaction\" is incorrect because inadequate hygiene factors can indeed lead to dissatisfaction, highlighting their importance in the workplace.",
+      "kn": "KN9",
+      "kn_explanation": "This question concerns Herzberg’s motivation theory, focusing on factors affecting job satisfaction and motivation (KN9).",
+      "difficulty": "medium",
+      "quality_comment": "The options are nuanced and reflect common misconceptions, effectively testing discriminative understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json::17",
+      "isScored": true
+    }
+  ]
+}

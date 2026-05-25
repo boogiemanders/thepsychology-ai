@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "examId": "warmup-8-27",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Damage to which hindbrain structure is MOST likely to result in life-threatening disruptions to respiration, heart rate, and blood pressure?",
+      "options": [
+        "Pons",
+        "Cerebellum",
+        "Medulla oblongata",
+        "Reticular formation"
+      ],
+      "answer": "Medulla oblongata",
+      "explanation": "1. The \"Medulla oblongata\" is the correct answer because it is responsible for regulating vital autonomic functions such as respiration, heart rate, and blood pressure. Damage to the medulla can disrupt these critical functions and potentially lead to death, as it controls involuntary movements necessary for survival.\n\n2. The \"Pons\" is incorrect because, while it plays a role in respiration and coordinating movements, it does not directly regulate vital autonomic functions to the extent that the medulla does. The \"Cerebellum\" is also incorrect as it primarily coordinates voluntary movements and balance rather than autonomic functions. Lastly, the \"Reticular formation\" is not the correct answer because, although it is involved in consciousness and arousal, it does not directly control respiration, heart rate, or blood pressure like the medulla oblongata does.",
+      "kn": "KN1",
+      "kn_explanation": "This question examines knowledge of neurobiological bases of vital autonomic functions, relevant to the biological bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and the distractors are neuroanatomically plausible, enhancing discrimination of knowledge on brainstem function.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::20",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "According to Thorndike's law of effect, how are behaviors influenced by their consequences?",
+      "options": [
+        "Behaviors followed by satisfying consequences are less likely to occur again.",
+        "Behaviors followed by dissatisfying consequences are more likely to be repeated.",
+        "Behaviors followed by satisfying consequences are more likely to recur.",
+        "The likelihood of a behavior is unrelated to its consequences."
+      ],
+      "answer": "Behaviors followed by satisfying consequences are more likely to recur.",
+      "explanation": "1. The correct answer, \"Behaviors followed by satisfying consequences are more likely to recur,\" aligns with Thorndike's law of effect, which states that behaviors that yield positive outcomes are reinforced and will be repeated in the future. Thorndike’s experiments with cats demonstrated that the likelihood of a behavior being repeated is contingent upon the satisfaction it produces, leading to a decrease in the time taken to perform the successful behavior over trials.\n\n2. The first incorrect option, \"Behaviors followed by satisfying consequences are less likely to occur again,\" contradicts the law of effect, which specifically states that satisfying consequences increase the likelihood of behavior recurrence. The second incorrect option, \"Behaviors followed by dissatisfying consequences are more likely to be repeated,\" is incorrect because the law of effect asserts that negative outcomes decrease the likelihood of those behaviors being repeated. Lastly, the option \"The likelihood of a behavior is unrelated to its consequences\" is wrong because Thorndike emphasized the direct relationship between behavior and its consequences, indicating that consequences are fundamental in shaping future behavior.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of a fundamental principle of learning related to operant conditioning, best categorized under theories and principles of learning (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly targets a foundational concept with distractors that are plausible misconceptions, suitable for EPPP-level assessment.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::29",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "In the context of motivation theories, which of the following statements best differentiates intrinsic from extrinsic motivation?",
+      "options": [
+        "Intrinsic motivation is driven by external rewards, while extrinsic motivation is driven by internal satisfaction.",
+        "Intrinsic motivation leads to more sustainable behavior change than extrinsic motivation.",
+        "Extrinsic motivation is always more effective than intrinsic motivation in achieving long-term goals.",
+        "Intrinsic motivation is less likely to be influenced by social factors compared to extrinsic motivation."
+      ],
+      "answer": "Intrinsic motivation leads to more sustainable behavior change than extrinsic motivation.",
+      "explanation": "The correct answer emphasizes the greater sustainability of intrinsic motivation compared to extrinsic. The other options misrepresent the definitions or effectiveness of intrinsic and extrinsic motivation.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately tests knowledge of motivation theories and their implications.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## Why Causal Attributions Matter in Your Career as a Psychologist",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP, but it's also essential for your future clinical work.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::6",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which type of inheritance refers to a characteristic influenced by multiple genes, such as height or intelligence?",
+      "options": [
+        "Polygenic inheritance",
+        "Single gene-pair inheritance",
+        "Sex-linked inheritance",
+        "Mitochondrial inheritance"
+      ],
+      "answer": "Polygenic inheritance",
+      "explanation": "1. **Correct Answer: Polygenic inheritance**  \nPolygenic inheritance refers to characteristics that are influenced by multiple genes, rather than a single gene pair. This is applicable to traits such as height and intelligence, which are determined by the cumulative effects of many genes, reflecting the complexity of developmental influences outlined in the reference material.\n\n2. **Incorrect Options:**  \n- **Single gene-pair inheritance:** This type of inheritance occurs when a characteristic is influenced by a single pair of genes, typically involving two recessive genes or one dominant and one recessive gene, which does not apply to traits like height or intelligence.  \n- **Sex-linked inheritance:** This refers to characteristics influenced by genes located on sex chromosomes, most often the X chromosome, and does not encompass traits that are polygenic in nature.  \n- **Mitochondrial inheritance:** This involves traits transmitted through mitochondrial DNA, which is inherited only from the mother, and is not relevant to polygenic traits like height or intelligence that involve multiple genes.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible genetic inheritance types, testing precise understanding of genetic influences on development.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::13",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following symptom durations is required for a diagnosis of brief psychotic disorder according to DSM-5-TR?",
+      "options": [
+        "At least one day but less than one month",
+        "At least one week but less than two months",
+        "At least one month but less than six months",
+        "At least six months continuously"
+      ],
+      "answer": "At least one day but less than one month",
+      "explanation": "1. The correct answer, \"At least one day but less than one month,\" aligns with the DSM-5-TR criteria for diagnosing brief psychotic disorder. This disorder requires the presence of one or more characteristic symptoms, including delusions, hallucinations, or disorganized speech, for a duration that meets this specific time frame, distinguishing it from other psychotic disorders that have longer duration requirements.\n\n2. The option \"At least one week but less than two months\" is incorrect because it does not fit within the specified duration for brief psychotic disorder, which is limited to less than one month. The option \"At least one month but less than six months\" is wrong because this duration applies to schizophreniform disorder, not brief psychotic disorder. Lastly, \"At least six months continuously\" is incorrect as it describes the duration required for a diagnosis of schizophrenia, which involves continuous signs of the disorder for at least six months, far exceeding the criteria for brief psychotic disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on diagnostic criteria, which is part of classification systems and applying diagnostic classification rationales and limitations (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear and options reflect durations from related disorders, enhancing the plausibility of distractors and testing precise knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Psychosis.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Psychosis.json::1",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is true about the use of decision balance in Motivational Interviewing?",
+      "options": [
+        "It is contraindicated when the goal is to maintain neutrality about change direction.",
+        "It helps resolve ambivalence by focusing on only the pros of change.",
+        "It is useful to maintain a neutral stance when assessing readiness for change.",
+        "It always promotes change by highlighting negative consequences of current behavior."
+      ],
+      "answer": "It is useful to maintain a neutral stance when assessing readiness for change.",
+      "explanation": "1. The correct answer, \"It is useful to maintain a neutral stance when assessing readiness for change,\" reflects the role of decisional balance in Motivational Interviewing (MI). According to Miller and Rollnick, decisional balance is appropriate when the clinician aims to maintain neutrality while evaluating a client's readiness for change. This approach allows clients to explore both the pros and cons of changing without feeling pressured, which can help clarify their ambivalence and readiness.\n\n2. The option \"It is contraindicated when the goal is to maintain neutrality about change direction\" is incorrect because it misrepresents the utility of decisional balance; it is actually beneficial for maintaining neutrality. The statement \"It helps resolve ambivalence by focusing on only the pros of change\" is wrong because effective decisional balance requires exploring both pros and cons, not just focusing on the positives. Lastly, the option \"It always promotes change by highlighting negative consequences of current behavior\" is inaccurate as highlighting negatives can sometimes decrease a client's willingness to change, rather than promote it.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "hard",
+      "quality_comment": "The distractors are nuanced and conceptually challenging, suitable for higher-level comprehension.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::15",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "What is a key advantage of using MANOVA over ANOVA?",
+      "options": [
+        "It reduces the risk of Type I error",
+        "It is simpler to conduct",
+        "It requires fewer assumptions",
+        "It can only analyze one dependent variable"
+      ],
+      "answer": "It reduces the risk of Type I error",
+      "explanation": "MANOVA reduces the risk of Type I error by allowing researchers to test multiple dependent variables simultaneously, which is its primary advantage over ANOVA. The other options are incorrect as MANOVA is more complex, has similar assumptions, and analyzes multiple dependent variables.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights a key advantage of MANOVA.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Two Main Families of Statistical Tests",
+      "lessonExcerpt": "MANOVA reduces the risk of Type I error by testing multiple dependent variables simultaneously.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::11",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist with strong experience providing CBT to middle-class adults is asked to begin treatment with a recently arrived refugee family whose care will require knowledge of language, cultural context, and trauma-related migration issues that the psychologist does not currently possess. Under Standard 2.01(b), what is the most ethical course of action?",
+      "options": [
+        "Begin treatment immediately because general CBT skills are sufficient across populations",
+        "Avoid discussing cultural factors so therapy stays focused on universal symptoms",
+        "Provide services only after obtaining the necessary knowledge and training, or make an appropriate referral if that cannot be done adequately",
+        "Accept the case as long as the family signs an informed consent acknowledging the psychologist's limitations"
+      ],
+      "answer": "Provide services only after obtaining the necessary knowledge and training, or make an appropriate referral if that cannot be done adequately",
+      "explanation": "This is the best answer because Standard 2.01(b) makes competence population-specific when cultural and related factors are essential for effective service. Starting immediately is wrong because general skill with CBT does not automatically establish competence with every population. Avoiding cultural issues is wrong because those issues are central, not optional, in the scenario. The informed-consent option is wrong because a client's awareness of a psychologist's limitations does not substitute for competence.",
+      "kn": "KN64",
+      "kn_explanation": "This question tests identification and management of an ethical competence issue involving cultural knowledge and referral decisions.",
+      "difficulty": "hard",
+      "quality_comment": "Good population-competence item with realistic distractors that reflect common overgeneralizations.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Staying Within Your Boundaries",
+      "lessonExcerpt": "If understanding issues related to gender, gender identity, race, ethnicity, or other characteristics is essential for effective service, you must have the necessary knowledge and training. If you don't, make appropriate referrals.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::2",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

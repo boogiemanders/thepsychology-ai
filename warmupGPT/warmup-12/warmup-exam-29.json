@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "examId": "warmup-12-29",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "A neuropsychologist is evaluating a patient who sustained a stroke affecting the parietal lobe. The patient can see and hear normally but cannot recognize objects placed in her hand without looking at them, and she frequently fails to identify which of her fingers the examiner is touching. Which of the following BEST describes the primary function of the brain region affected?",
+      "options": [
+        "Processing auditory information and language comprehension",
+        "Processing touch, pressure, temperature, pain, and body position",
+        "Initiating purposeful voluntary movements",
+        "Processing and interpreting visual information"
+      ],
+      "answer": "Processing touch, pressure, temperature, pain, and body position",
+      "explanation": "The parietal lobe contains the somatosensory cortex, which processes touch, pressure, temperature, pain, and body position. The patient's inability to recognize objects by touch (tactile agnosia) and difficulty identifying fingers (finger agnosia, a component of Gerstmann's syndrome) are consistent with parietal lobe damage. Processing auditory information and language comprehension (option A) is a temporal lobe function. Initiating voluntary movements (option C) is a frontal lobe function (primary motor cortex). Processing visual information (option D) is an occipital lobe function.",
+      "kn": "KN1",
+      "kn_explanation": "This question assesses knowledge of cerebral cortex localization, specifically the somatosensory processing functions of the parietal lobe.",
+      "difficulty": "medium",
+      "quality_comment": "Good integration of clinical presentation with anatomical function. Distractors represent other lobe functions for clear differentiation.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## The Parietal Lobe: Touch, Body Awareness, and Skilled Movement",
+      "lessonExcerpt": "The parietal lobe sits at the top-back of your brain and contains the somatosensory cortex, which processes touch, pressure, temperature, pain, and body position.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::2",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "According to the Yerkes-Dodson law, what is the relationship between arousal and performance in decision-making tasks?",
+      "options": [
+        "Higher arousal always leads to better performance",
+        "There is an optimal level of arousal for peak performance",
+        "Arousal has no effect on performance",
+        "Performance decreases as arousal increases"
+      ],
+      "answer": "There is an optimal level of arousal for peak performance",
+      "explanation": "The correct answer is 'There is an optimal level of arousal for peak performance' because the Yerkes-Dodson law posits that performance improves with arousal up to a certain point, after which it can decline. The other options are incorrect as they misrepresent the relationship outlined by the law.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a nuanced understanding of the Yerkes-Dodson law.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "The Yerkes-Dodson law posits that performance improves with arousal up to a certain point, after which it can decline.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::8",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "An experienced concert violinist who has performed the same concerto hundreds of times is asked, on the same evening, to sight-read an unfamiliar contemporary piece she has never rehearsed. Both performances occur before a packed concert hall. According to Zajonc's drive theory of social facilitation, which outcome is MOST predicted?",
+      "options": [
+        "Audience presence will improve both performances because the violinist's general expertise generalizes the facilitation effect across tasks",
+        "Audience presence will improve her performance on the familiar concerto but impair her performance on the unfamiliar sight-reading piece",
+        "Audience effects will occur only if the audience is perceived as evaluative; a supportive audience will enhance performance on both pieces equally",
+        "The heightened arousal from the audience will disrupt automatic motor programs regardless of task familiarity, uniformly impairing both performances"
+      ],
+      "answer": "Audience presence will improve her performance on the familiar concerto but impair her performance on the unfamiliar sight-reading piece",
+      "explanation": "Zajonc's drive theory holds that the mere presence of others increases physiological arousal, which energizes the dominant response for any given task. For the well-practiced concerto, the dominant response is correct and fluent execution, so arousal facilitates performance. For the unfamiliar sight-reading piece, the dominant response is hesitant and error-prone, so the same arousal impairs performance. Option A incorrectly assumes that expertise generalizes the facilitation benefit to all tasks — Zajonc's model is explicit that the task's degree of mastery, not the performer's overall expertise, determines the direction of the effect. Option C describes evaluation apprehension theory (Cottrell et al., 1968), not Zajonc's mere-presence account, which attributes effects to arousal from presence alone rather than perceived evaluation. Option D incorrectly predicts uniform impairment, contradicting the differential prediction central to drive theory.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Precisely constructed two-condition vignette that demands differential prediction; the Cottrell distractor effectively tests ability to distinguish competing theoretical accounts of the same phenomenon.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Zajonc's drive theory explains why this happens. The presence of others increases your physiological arousal...This arousal strengthens whatever response is dominant (most likely to occur) in that situation. For well-learned tasks, your dominant response is the correct one, so arousal helps. For difficult or new tasks, your dominant response is often incorrect or hesitant, so arousal hurts your performance.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::25",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "A recent immigrant maintains strong ties to her original culture, speaks her home language with family, and continues longstanding traditions, while also participating actively in the broader culture at work and in her neighborhood. Berry would describe this acculturation strategy as:",
+      "options": [
+        "Assimilation",
+        "Separation",
+        "Integration",
+        "Marginalization"
+      ],
+      "answer": "Integration",
+      "explanation": "Integration is the best answer because the client is maintaining her original culture while also adopting and participating in the majority culture. Assimilation is wrong because it involves rejecting the original culture. Separation is wrong because it involves maintaining the original culture while rejecting the majority culture. Marginalization is wrong because it involves rejecting both cultural frameworks.",
+      "kn": "KN18",
+      "kn_explanation": "This question assesses cultural psychology by testing knowledge of acculturation strategies.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward acculturation item with clearly parallel options and no giveaway wording.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Acculturation: Navigating Between Two Cultural Worlds",
+      "lessonExcerpt": "Integration: Keeping your original culture while also adopting the majority culture.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::0",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "At the time of birth, a full-term neonate's brain contains approximately what proportion of the neurons it will have in adulthood?",
+      "options": [
+        "About 25%, with most neurons generated during the first two years",
+        "About 50%, with rapid neurogenesis continuing through early childhood",
+        "Nearly all neurons are present at birth, with postnatal growth driven primarily by synaptogenesis and myelination",
+        "About 75%, with the remaining neurons generated during adolescent brain maturation"
+      ],
+      "answer": "Nearly all neurons are present at birth, with postnatal growth driven primarily by synaptogenesis and myelination",
+      "explanation": "The lesson explicitly states that most neurons are already present at birth. Postnatal brain growth—from 25% of adult weight at birth to 80% by age two—is driven not by new neuron creation but by synaptogenesis (forming new connections), dendritic growth (more branches), and myelination (insulating axons to speed neural transmission). The 25% figure refers to brain weight, not neuron count. The options suggesting 50% or 75% of neurons are present at birth incorrectly conflate brain weight with neuron number.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Tests an important and commonly confused distinction between neuron count and brain weight at birth. Directly supported by lesson content.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "### Early Brain Development: The First Two Years",
+      "lessonExcerpt": "Most neurons are already present at birth. Instead, three major processes are happening: Synaptogenesis... Dendritic growth... Myelination",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 18,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::3",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "The Stroop Color and Word Test is sensitive to deficits primarily in which brain region?",
+      "options": [
+        "Temporal lobe",
+        "Occipital lobe",
+        "Parietal lobe",
+        "Frontal lobe"
+      ],
+      "answer": "Frontal lobe",
+      "explanation": "1. The correct answer is \"Frontal lobe\" because the Stroop Color and Word Test assesses cognitive flexibility, selective attention, and response inhibition, which are functions primarily associated with the frontal lobe. Poor performance on this test has been linked to frontal lobe dysfunction, indicating that this brain region plays a crucial role in managing the cognitive processes required to inhibit a habitual response in favor of a less familiar one.\n\n2. The incorrect options are as follows:\n   - **Temporal lobe**: This region is primarily involved in auditory processing and memory, not the cognitive flexibility and inhibition tasks assessed by the Stroop Test.\n   - **Occipital lobe**: The occipital lobe is mainly responsible for visual processing, which does not directly relate to the cognitive functions measured by the Stroop Test.\n   - **Parietal lobe**: While the parietal lobe is involved in sensory integration and spatial awareness, it is not primarily associated with the executive functions of inhibition and attention that the Stroop Test evaluates.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "easy",
+      "quality_comment": "Simple, anatomically focused question with plausible distractors that test neuropsychological knowledge relevant to the EPPP.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::92",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A clinical psychologist is educating a family about the genetic contribution to bipolar I disorder. When discussing concordance rates in twin studies, which of the following most accurately reflects the research findings?",
+      "options": [
+        "Concordance is approximately 10-15% for monozygotic twins and 2-5% for dizygotic twins",
+        "Concordance is approximately 40-80% for monozygotic twins and 5-30% for dizygotic twins",
+        "Concordance is approximately 90-95% for monozygotic twins and 40-60% for dizygotic twins",
+        "Concordance rates for monozygotic and dizygotic twins are approximately equal at 30-40%"
+      ],
+      "answer": "Concordance is approximately 40-80% for monozygotic twins and 5-30% for dizygotic twins",
+      "explanation": "Twin studies of bipolar disorder show concordance rates of 40-80% for monozygotic (identical) twins and 5-30% for dizygotic (fraternal) twins, reflecting high heritability (60-90%). Option A underestimates the concordance rates significantly. Option C overestimates the monozygotic rate and dramatically overestimates the dizygotic rate. Option D incorrectly suggests similar concordance regardless of zygosity, which would indicate minimal genetic contribution — contradicting the strong genetic evidence for bipolar disorder.",
+      "kn": "KN39",
+      "kn_explanation": "Twin study concordance rates for bipolar I disorder relate to major research-based theories and models of psychopathology, specifically the genetic/biological underpinnings of mental disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific quantitative knowledge about bipolar genetics that is commonly examined on the EPPP.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "### The Genetics Are Strong",
+      "lessonExcerpt": "Monozygotic (identical) twins: 40-80%. Dizygotic (fraternal) twins: 5-30%.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::0",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A researcher is conducting a longitudinal study to determine the stability of a cognitive ability test over a period of five years. Which reliability method should the researcher utilize to ensure that the test scores remain consistent across this time frame?",
+      "options": [
+        "Test-retest reliability",
+        "Alternate forms reliability",
+        "Internal consistency reliability",
+        "Inter-rater reliability"
+      ],
+      "answer": "Test-retest reliability",
+      "explanation": "1. **Test-retest reliability** is the correct answer because it specifically assesses the consistency of test scores over time. In a longitudinal study, this method involves administering the same cognitive ability test to the same group of examinees at two different points in time and correlating the scores to determine stability, which is crucial for evaluating changes or consistency in cognitive ability over five years.\n\n2. **Alternate forms reliability** is incorrect because it evaluates the consistency of scores between different forms of the same test rather than the same test over time, which is not applicable in a longitudinal study focusing on stability. **Internal consistency reliability** is not suitable in this context as it measures the consistency of scores across different items on a single test at one point in time, rather than over multiple time points. Lastly, **inter-rater reliability** is inappropriate here because it assesses the agreement between different raters scoring the same test rather than the stability of test scores over time.",
+      "difficulty": "hard",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses knowledge of reliability assessment methods critical to test construction and evaluation under psychometric theories (KN29).",
+      "quality_comment": "This question challenges the test-taker to apply the concept of test-retest reliability in a complex, real-world research context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::33",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A client who recently began attending Alcoholics Anonymous states: 'I used to think I was just weak-willed and could stop if I really tried. Now I understand I have a condition — I literally cannot drink even one glass of wine without losing control. It's not about willpower.' This statement most directly reflects which foundational premise of AA's theoretical framework?",
+      "options": [
+        "The moral model, which locates the source of addiction in correctable character defects addressed through spiritual inventory",
+        "The disease model, which conceptualizes alcoholism as a chronic, progressive condition characterized by loss of control over substance use",
+        "The biopsychosocial model, which distributes causal weight equally across biological, psychological, and social contributing factors",
+        "The harm reduction model, which supports moderated drinking as a realistic and acceptable treatment goal for most alcoholics"
+      ],
+      "answer": "The disease model, which conceptualizes alcoholism as a chronic, progressive condition characterized by loss of control over substance use",
+      "explanation": "AA was founded on the disease model of alcoholism, and the client's statement captures its central tenets precisely: (1) alcoholism is not a moral failing or willpower deficit but a condition, and (2) even a single drink triggers loss of control — the 'allergy' conceptualization that underpins AA's insistence on total abstinence. The client explicitly contrasts this view with the moral model (weak-willed), correctly distinguishing between them. The biopsychosocial model is broader and does not mandate abstinence as a universal requirement. The harm reduction model, by definition, accepts reduced drinking as a legitimate goal — a position fundamentally incompatible with AA's philosophy. AA's alignment with tertiary prevention (managing an existing chronic condition) reflects this disease framing.",
+      "kn": "KN45",
+      "kn_explanation": "This question is best aligned with KN45 because it tests methods and their evidence base for prevention, intervention, and rehabilitation with diverse and special populations.",
+      "difficulty": "medium",
+      "quality_comment": "Effective use of a client quote to test theoretical model identification; distractors require meaningful discrimination between models that are superficially similar.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## The Three Faces of Prevention: Stopping Problems Before They Start",
+      "lessonExcerpt": "Alcoholics Anonymous meetings all fall under tertiary prevention. You're managing an existing condition and preventing it from getting worse.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::19",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "When conducting multiple t-tests, what is the primary concern regarding Type I error rates?",
+      "options": [
+        "The Type I error rate remains constant regardless of the number of tests conducted.",
+        "The Type I error rate increases with each additional t-test performed.",
+        "The Type I error rate decreases as more tests are conducted.",
+        "The Type I error rate is irrelevant when using t-tests."
+      ],
+      "answer": "The Type I error rate increases with each additional t-test performed.",
+      "explanation": "The correct answer highlights that conducting multiple t-tests increases the likelihood of making at least one Type I error, which is a common issue in statistical testing. The other options incorrectly state the behavior of Type I error rates in relation to multiple tests.",
+      "kn": "KN56",
+      "kn_explanation": "This question is best aligned with KN56 because it tests Statistical interpretation (e.g., power, effect size, causation vs. association, clinical vs. statistical significance).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests a critical understanding of statistical principles.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "### Type I Error: The False Alarm",
+      "lessonExcerpt": "If α = .05, you're accepting a 5% chance of a false positive. If you conduct multiple tests, the overall Type I error rate increases.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::16",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following security measures is explicitly recommended by the APA Ethics Code and APA Record Keeping Guidelines for protecting client confidentiality in digital records?",
+      "options": [
+        "Encrypting client records and communications using HIPAA-compliant cloud providers.",
+        "Storing all client data on personal devices without password protection.",
+        "Using unsecured public Wi-Fi networks for transmitting sensitive client information.",
+        "Allowing direct access to client files by all clinic staff irrespective of role."
+      ],
+      "answer": "Encrypting client records and communications using HIPAA-compliant cloud providers.",
+      "explanation": "1. The correct answer, \"Encrypting client records and communications using HIPAA-compliant cloud providers,\" is explicitly recommended by the APA Ethics Code under Standard 6.02, which emphasizes the importance of maintaining confidentiality in records. This standard highlights that psychologists should use techniques like encryption to protect client information from unauthorized access, ensuring compliance with legal and ethical obligations regarding confidentiality.\n\n2. The option \"Storing all client data on personal devices without password protection\" is incorrect because it poses a significant risk to client confidentiality by exposing sensitive information to unauthorized access. \"Using unsecured public Wi-Fi networks for transmitting sensitive client information\" is wrong as it increases vulnerability to data breaches, compromising the confidentiality of client communications. Lastly, \"Allowing direct access to client files by all clinic staff irrespective of role\" is inappropriate because it violates the principle of confidentiality, as not all staff members may need access to sensitive client information, thus increasing the risk of unauthorized disclosure.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question addresses practical application of ethical standards in digital confidentiality, balancing technical and ethical knowledge with plausible distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::37",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "In Fiedler’s model, which situational factor would NOT contribute to a very favorable situation for a leader?",
+      "options": [
+        "Strong position power",
+        "Good leader-member relations",
+        "Unstructured task",
+        "High task structure"
+      ],
+      "answer": "Unstructured task",
+      "explanation": "1. \"Unstructured task\" is the correct answer because, according to Fiedler's Contingency Model, a very favorable situation for a leader is characterized by high task structure. An unstructured task lacks clear guidelines and objectives, making it difficult for leaders to exert influence and achieve performance goals, thereby contributing to an unfavorable situation.\n\n2. \n- **Strong position power**: This option is incorrect because strong position power enhances a leader’s ability to influence subordinates, contributing to a favorable situation.\n- **Good leader-member relations**: This option is incorrect because positive leader-member relations foster trust and respect, which are essential for creating a favorable situation.\n- **High task structure**: This option is incorrect as high task structure provides clear guidelines and expectations, facilitating effective leadership and contributing to a very favorable situation.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Clear distractors focus on key situational elements; discriminates well between knowledge levels about leadership contingencies.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json::15",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

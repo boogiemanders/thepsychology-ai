@@ -1,20 +1,22 @@
 // Exam History Storage and Tracking
-// Tracks which exams have been completed (diagnostic/practice, study/test modes)
+// Tracks which exams have been completed (warmup/diagnostic/practice, study/test modes)
 // Used for: default selection logic, prioritizer recommendations, progress tracking
 
-export type ExamType = "diagnostic" | "practice"
+export type ExamType = "diagnostic" | "practice" | "warmup"
 export type ExamMode = "study" | "test"
+export type WarmupLength = 8 | 12
 
 export interface ExamCompletion {
   id: string // Unique identifier (UUID)
   userId?: string // Supabase user ID (optional for local storage)
-  examType: ExamType // "diagnostic" or "practice"
+  examType: ExamType // "diagnostic", "practice", or "warmup"
   examMode: ExamMode // "study" or "test"
   score: number // Percentage score (0-100)
   totalQuestions: number // Total questions in exam
   correctAnswers: number // Number correct
   timestamp: number // When exam was completed
   topics?: string[] // Topics covered (if applicable)
+  warmupLength?: WarmupLength // For warmup exams only: 8 or 12
 }
 
 export interface ExamHistorySummary {
@@ -22,8 +24,11 @@ export interface ExamHistorySummary {
   lastDiagnosticTest?: ExamCompletion
   lastPracticeStudy?: ExamCompletion
   lastPracticeTest?: ExamCompletion
+  lastWarmupStudy?: ExamCompletion
+  lastWarmupTest?: ExamCompletion
   totalDiagnosticCompleted: number
   totalPracticeCompleted: number
+  totalWarmupCompleted: number
   allCompletions: ExamCompletion[]
 }
 
@@ -66,6 +71,7 @@ export function getExamHistory(): ExamHistorySummary {
     return {
       totalDiagnosticCompleted: 0,
       totalPracticeCompleted: 0,
+      totalWarmupCompleted: 0,
       allCompletions: [],
     }
   }
@@ -80,6 +86,7 @@ export function getExamHistory(): ExamHistorySummary {
   const summary: ExamHistorySummary = {
     totalDiagnosticCompleted: 0,
     totalPracticeCompleted: 0,
+    totalWarmupCompleted: 0,
     allCompletions,
   }
 
@@ -99,6 +106,14 @@ export function getExamHistory(): ExamHistorySummary {
       }
       if (completion.examMode === "test" && !summary.lastPracticeTest) {
         summary.lastPracticeTest = completion
+      }
+    } else if (completion.examType === "warmup") {
+      summary.totalWarmupCompleted++
+      if (completion.examMode === "study" && !summary.lastWarmupStudy) {
+        summary.lastWarmupStudy = completion
+      }
+      if (completion.examMode === "test" && !summary.lastWarmupTest) {
+        summary.lastWarmupTest = completion
       }
     }
   }
@@ -184,17 +199,22 @@ export function getExamStatistics() {
 
   const diagnosticScores = getExamsOfType("diagnostic").map((e) => e.score)
   const practiceScores = getExamsOfType("practice").map((e) => e.score)
+  const warmupScores = getExamsOfType("warmup").map((e) => e.score)
 
   const avgDiagnosticScore = diagnosticScores.length > 0 ? diagnosticScores.reduce((a, b) => a + b) / diagnosticScores.length : 0
 
   const avgPracticeScore = practiceScores.length > 0 ? practiceScores.reduce((a, b) => a + b) / practiceScores.length : 0
 
+  const avgWarmupScore = warmupScores.length > 0 ? warmupScores.reduce((a, b) => a + b) / warmupScores.length : 0
+
   return {
     totalExamsCompleted: history.allCompletions.length,
     diagnosticCount: history.totalDiagnosticCompleted,
     practiceCount: history.totalPracticeCompleted,
+    warmupCount: history.totalWarmupCompleted,
     avgDiagnosticScore: Math.round(avgDiagnosticScore),
     avgPracticeScore: Math.round(avgPracticeScore),
+    avgWarmupScore: Math.round(avgWarmupScore),
     highestScore: Math.max(...history.allCompletions.map((e) => e.score), 0),
   }
 }

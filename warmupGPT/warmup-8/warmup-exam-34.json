@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "examId": "warmup-8-34",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following symptoms is most commonly associated with post-concussion syndrome following a head injury?",
+      "options": [
+        "Severe headaches",
+        "Increased appetite",
+        "Heightened sense of smell",
+        "Improved memory function"
+      ],
+      "answer": "Severe headaches",
+      "explanation": "Severe headaches are a hallmark symptom of post-concussion syndrome, often persisting long after the initial injury. Increased appetite, heightened sense of smell, and improved memory function are not typical symptoms associated with this condition.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies because it relates to the neurological effects of head injury, specifically post-concussion syndrome.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of post-concussion syndrome symptoms.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Traumatic Brain Injury: When the Brain Gets Shaken or Pierced",
+      "lessonExcerpt": "After someone regains consciousness from a TBI, they typically experience a mix of problems: **Memory issues** are particularly important to understand: - **Anterograde amnesia** (also called post-traumatic amnesia): Can't form new memories after the injury.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::23",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "In functional behavioral assessment, what is the purpose of systematically altering antecedents and consequences during the third step?",
+      "options": [
+        "To test hypotheses about the function of the behavior",
+        "To reinforce appropriate alternative behaviors",
+        "To evaluate the effectiveness of the interventions",
+        "To collect indirect information from family reports"
+      ],
+      "answer": "To test hypotheses about the function of the behavior",
+      "explanation": "1. The correct answer, \"To test hypotheses about the function of the behavior,\" is accurate because the third step of a functional behavioral assessment (FBA) involves systematically altering antecedents and consequences to observe how these changes affect the target behavior. This process allows the practitioner to determine whether the initial hypotheses about what maintains the behavior are correct, thereby gaining insight into the function of the behavior.\n\n2. The option \"To reinforce appropriate alternative behaviors\" is incorrect because the focus of systematically altering antecedents and consequences is to observe the effects on the target behavior, not to implement reinforcement strategies at this stage. The option \"To evaluate the effectiveness of the interventions\" is wrong because evaluation occurs in the final step of the FBA process, not during the systematic alteration phase. Finally, \"To collect indirect information from family reports\" is incorrect as this step is about testing hypotheses through direct manipulation and observation, rather than gathering additional indirect information.",
+      "kn": "KN7",
+      "kn_explanation": "Understanding functional assessment procedures is part of applied learning theory and intervention selection, aligning with KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a key step in functional behavioral assessment with plausible distractors representing other steps.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::29",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which factor is most influential in determining whether a bystander will help a person in distress in urban versus rural settings?",
+      "options": [
+        "Where the bystander was born and socialized",
+        "Whether the bystander has received formal emergency training",
+        "The bystander’s current location during the emergency",
+        "The severity of the victim’s injury"
+      ],
+      "answer": "The bystander’s current location during the emergency",
+      "explanation": "1. \"The bystander’s current location during the emergency\" is the correct answer because research indicates that a bystander is less likely to help a person in distress when the incident occurs in an urban area compared to a rural area, regardless of where the bystander was born and raised. This suggests that the immediate environment plays a crucial role in influencing a bystander's willingness to intervene, primarily due to factors like stimulus overload and the presence of more potential distractions in urban settings (Steblay, 1987).\n\n2. The option \"Where the bystander was born and socialized\" is incorrect because studies suggest that the current location of the bystander has a more significant impact on helping behavior than their background or socialization. \"Whether the bystander has received formal emergency training\" is not a primary factor in the context of urban versus rural settings, as the emphasis is on location rather than training. Lastly, \"The severity of the victim’s injury\" is also incorrect because while it may influence the decision to help, the research primarily highlights the environmental context (urban vs. rural) as the most critical determinant of bystander intervention.",
+      "kn": "KN15",
+      "kn_explanation": "This item relates to social environmental influences on prosocial behavior and bystander intervention, fitting social interaction and relationships (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "This question targets empirical evidence distinguishing location effects, offering realistic but distinct distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::45",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary benefit of early stimulation in infants regarding motor skill development?",
+      "options": [
+        "Increased muscle mass",
+        "Enhanced cognitive abilities",
+        "Improved sensory integration",
+        "Faster neural connections"
+      ],
+      "answer": "Improved sensory integration",
+      "explanation": "Early stimulation is crucial for motor skill development as it enhances sensory integration, allowing infants to better coordinate their movements with sensory feedback. While cognitive abilities and neural connections may also benefit, the primary focus of early stimulation is on sensory integration.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of motor skill development.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Early Brain Development: The First Two Years",
+      "lessonExcerpt": "Early stimulation is crucial for motor skill development, enhancing sensory integration.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 24,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::16",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which neuropathological feature is considered a hallmark of Alzheimer's disease?",
+      "options": [
+        "Lewy bodies consisting of alpha-synuclein deposits",
+        "Multiple sclerosis plaques in the white matter",
+        "Amyloid plaques and neurofibrillary tangles disrupting cell-to-cell communication",
+        "Basal ganglia degeneration causing psychomotor retardation"
+      ],
+      "answer": "Amyloid plaques and neurofibrillary tangles disrupting cell-to-cell communication",
+      "explanation": "Alzheimer's disease is characterized by extracellular amyloid plaques composed of beta-amyloid protein and intracellular neurofibrillary tangles made of abnormal tau protein, which interfere with neuronal communication.",
+      "kn": "KN35",
+      "kn_explanation": "This question is best aligned with KN35 because it tests Criteria for selection and adaptation of assessment methods (e.g., evidenced-based knowledge of assessment limitations, cultural appropriateness, trans-cultural adaptation, and language accommodations).",
+      "difficulty": "medium",
+      "quality_comment": "Options include other neurological features to mislead, but the correct response is clearly the signature pathological hallmark of Alzheimer's.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json::2",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of these statements best exemplifies 'change talk' in Motivational Interviewing?",
+      "options": [
+        "\"I'm just not ready to quit smoking.\"",
+        "\"If I stopped smoking, I’d probably feel much better.\"",
+        "\"You don’t understand what I’m going through.\"",
+        "\"I don’t think changing will make a difference.\""
+      ],
+      "answer": "\"If I stopped smoking, I’d probably feel much better.\"",
+      "explanation": "1. The statement \"If I stopped smoking, I’d probably feel much better\" exemplifies 'change talk' in Motivational Interviewing because it expresses a desire for change and reflects the client's recognition of the potential benefits of stopping smoking. Change talk consists of statements that favor change, highlighting the client's internal motivation and willingness to consider the positive outcomes of altering their behavior.\n\n2. The statement \"I'm just not ready to quit smoking\" is incorrect because it represents sustain talk, indicating the client's ambivalence and resistance to change rather than a desire for it. \"You don’t understand what I’m going through\" is also incorrect; this statement signals discord in the therapist-client relationship and does not reflect any inclination towards change. Finally, \"I don’t think changing will make a difference\" is incorrect as it conveys a lack of belief in the efficacy of change, reinforcing the status quo rather than promoting a shift in behavior.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "easy",
+      "quality_comment": "Options represent distinct client attitudes, making the correct answer clear to those familiar with MI concepts.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::9",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary goal of Community-Based Participatory Research (CBPR)?",
+      "options": [
+        "To test hypotheses in a controlled laboratory environment.",
+        "To develop abstract theories based solely on academic researchers’ perspectives.",
+        "To collaborate with community partners to generate knowledge and promote social change.",
+        "To utilize exclusively quantitative methods to study public health problems."
+      ],
+      "answer": "To collaborate with community partners to generate knowledge and promote social change.",
+      "explanation": "1. The correct answer, \"To collaborate with community partners to generate knowledge and promote social change,\" accurately reflects the primary goal of Community-Based Participatory Research (CBPR). CBPR emphasizes equitable partnerships between researchers and community members, recognizing their unique strengths and fostering collaboration throughout the research process to address issues of importance to the community and achieve social change (Kellogg Community Health Scholars Program, 2001).\n\n2. The option \"To test hypotheses in a controlled laboratory environment\" is incorrect because CBPR is not limited to laboratory settings; it aims to engage with communities in real-world contexts to address relevant social issues. The statement \"To develop abstract theories based solely on academic researchers’ perspectives\" is wrong as CBPR prioritizes community input and perspectives rather than relying solely on those of academic researchers. Lastly, \"To utilize exclusively quantitative methods to study public health problems\" is inaccurate because CBPR can employ both qualitative and quantitative methods, focusing on a collaborative approach rather than adhering to a single methodology.",
+      "kn": "KN59",
+      "kn_explanation": "This question pertains to community involvement and participatory research approaches within research methods (KN59).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors clearly contrast with key CBPR principles, making the correct answer stand out while testing conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::27",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What ethical obligation does a psychologist have when testifying as a fact witness?",
+      "options": [
+        "To provide only opinions based on personal beliefs.",
+        "To disclose all information about the client without restrictions.",
+        "To testify truthfully based on their observations and knowledge.",
+        "To advocate for the client's interests during testimony."
+      ],
+      "answer": "To testify truthfully based on their observations and knowledge.",
+      "explanation": "As a fact witness, a psychologist is obligated to provide truthful testimony based on their observations and knowledge, without bias or personal opinion. The other options misrepresent the role and responsibilities of a fact witness.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses knowledge of ethical obligations in legal contexts.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "The lesson does not specifically address the obligations of fact witnesses, indicating a gap in coverage.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 29,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::12",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

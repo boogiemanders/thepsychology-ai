@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "examId": "warmup-8-19",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.492Z"
+  },
+  "questions": [
+    {
+      "stem": "How is akathisia best defined in the context of movement disorders?",
+      "options": [
+        "Involuntary muscle contractions",
+        "Restlessness and an inability to stay still",
+        "Loss of coordination",
+        "Tremors and shaking"
+      ],
+      "answer": "Restlessness and an inability to stay still",
+      "explanation": "Akathisia is characterized by a subjective feeling of restlessness and an objective inability to sit still, often resulting from certain medications. Involuntary muscle contractions, loss of coordination, and tremors are not accurate definitions of akathisia.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of akathisia.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
+      "lessonExcerpt": "Akathisia is characterized by a subjective feeling of restlessness and an objective inability to sit still.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::25",
+      "isScored": true
+    },
+    {
+      "stem": "When a rat learns to press a lever only when a blinking light is on, the blinking light functions as what in operant conditioning?",
+      "options": [
+        "Conditioned stimulus",
+        "Positive discriminative stimulus",
+        "Negative punishment",
+        "Primary reinforcer"
+      ],
+      "answer": "Positive discriminative stimulus",
+      "explanation": "1. The correct answer, \"positive discriminative stimulus,\" is appropriate because the blinking light signals to the rat that pressing the lever will result in reinforcement (food). In this scenario, the blinking light indicates the availability of reinforcement, thereby controlling the behavior of lever pressing; hence, it serves as a cue that prompts the rat to perform the desired behavior only in its presence.\n\n2. The option \"conditioned stimulus\" is incorrect because, in operant conditioning, a conditioned stimulus typically refers to a stimulus that has been paired with an unconditioned stimulus to elicit a conditioned response, which is not the case here. \"Negative punishment\" is wrong because it involves the removal of a stimulus to decrease a behavior, whereas the blinking light is not removing anything but rather signaling reinforcement. Lastly, \"primary reinforcer\" is incorrect because a primary reinforcer is an inherent stimulus that satisfies basic needs (like food), while the blinking light does not fulfill a need but instead indicates when reinforcement is available.",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses understanding of stimulus control, an important operant conditioning process and component of learning models (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors include related conditioning terms, encouraging precise understanding of discrimination stimuli.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::40",
+      "isScored": true
+    },
+    {
+      "stem": "Which statement best describes opinion change due to minority influence compared to majority influence, according to Moscovici?",
+      "options": [
+        "Minority influence leads to public compliance without private acceptance",
+        "Majority influence leads to private acceptance, while minority influence leads to public compliance",
+        "Minority influence is more likely to lead to private acceptance (conversion) of opinion",
+        "Both minority and majority influence lead only to public conformity"
+      ],
+      "answer": "Minority influence is more likely to lead to private acceptance (conversion) of opinion",
+      "explanation": "1. The statement \"Minority influence is more likely to lead to private acceptance (conversion) of opinion\" is correct because, according to Moscovici (1980), individuals with a minority opinion persuade the majority through a consistent expression of their views, which can lead to genuine changes in beliefs. This process results in private acceptance, meaning that individuals truly adopt the minority opinion as their own, rather than merely conforming publicly.\n\n2. The option \"Minority influence leads to public compliance without private acceptance\" is incorrect because Moscovici suggests that minority influence is more effective in fostering private acceptance, not just public compliance. The statement \"Majority influence leads to private acceptance, while minority influence leads to public compliance\" is wrong because it reverses the roles; majority influence typically results in public compliance rather than genuine private acceptance. Finally, the option \"Both minority and majority influence lead only to public conformity\" is incorrect because it overlooks the distinct outcomes of each influence type; minority influence can lead to private acceptance, while majority influence often leads to public conformity.",
+      "kn": "KN16",
+      "kn_explanation": "The question tests understanding of mechanisms and effects of social influence on opinion change within groups, central to KN16.",
+      "difficulty": "medium",
+      "quality_comment": "The options are carefully crafted to test subtle distinctions between types of social influence and their effects.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::36",
+      "isScored": true
+    },
+    {
+      "stem": "What is the main focus of Rothbart's definition of temperament?",
+      "options": [
+        "Behavioral style categorized into three types",
+        "Constitutional differences in reactivity and self-regulation",
+        "Tendency to withdraw from unfamiliar situations",
+        "Biological maturation without environmental influence"
+      ],
+      "answer": "Constitutional differences in reactivity and self-regulation",
+      "explanation": "1. The correct answer, \"Constitutional differences in reactivity and self-regulation,\" aligns with Rothbart's definition of temperament, which emphasizes the inherent biological makeup of individuals that influences their reactivity to stimuli and their ability to self-regulate those reactions. Rothbart describes temperament as involving two key components: reactivity, which encompasses the intensity and duration of responses to stimuli, and self-regulation, which refers to the processes that help manage those responses effectively.\n\n2. The first incorrect option, \"Behavioral style categorized into three types,\" is wrong because it refers to Thomas and Chess's classification of temperament, which categorizes children into easy, difficult, and slow-to-warm-up types, rather than Rothbart's focus on reactivity and self-regulation. The second incorrect option, \"Tendency to withdraw from unfamiliar situations,\" is incorrect as it specifically describes Kagan's concept of behavioral inhibition, not Rothbart's broader definition of temperament. Lastly, the option \"Biological maturation without environmental influence\" is incorrect because Rothbart acknowledges that temperament is influenced by both heredity and environmental experiences, contrary to the suggestion that it is solely determined by biological maturation.",
+      "kn": "KN21",
+      "kn_explanation": "This question addresses temperament as a biologically influenced dimension of development, under the umbrella of growth and lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "The options reflect common temperament concepts; the correct answer requires specific knowledge of Rothbart's model, providing appropriate challenge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::21",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the nature of symptoms in Functional Neurological Symptom Disorder (Conversion Disorder)?",
+      "options": [
+        "Symptoms mimic known neurological or medical conditions but are intentionally produced for external gain",
+        "Symptoms involve voluntary motor or sensory dysfunction incompatible with recognized medical conditions and cause significant distress",
+        "Symptoms arise as part of a psychotic disorder and involve delusions related to paralysis",
+        "Symptoms exclusively involve impaired cognitive functioning without physical symptoms"
+      ],
+      "answer": "Symptoms involve voluntary motor or sensory dysfunction incompatible with recognized medical conditions and cause significant distress",
+      "explanation": "1. The correct answer, \"Symptoms involve voluntary motor or sensory dysfunction incompatible with recognized medical conditions and cause significant distress,\" accurately describes Functional Neurological Symptom Disorder (Conversion Disorder) as it specifically highlights the nature of symptoms that manifest as disturbances in voluntary motor or sensory functions. These symptoms are not attributable to any known neurological or medical conditions, and they result in significant distress or impairment in functioning, aligning with the diagnostic criteria outlined in the reference material.\n\n2. The first incorrect option, \"Symptoms mimic known neurological or medical conditions but are intentionally produced for external gain,\" is wrong because it describes malingering rather than Functional Neurological Symptom Disorder, which does not involve intentional symptom production for external rewards. The second incorrect option, \"Symptoms arise as part of a psychotic disorder and involve delusions related to paralysis,\" is incorrect because Functional Neurological Symptom Disorder does not involve psychotic features or delusions; rather, it focuses on non-psychotic symptoms of motor or sensory dysfunction. Lastly, the option \"Symptoms exclusively involve impaired cognitive functioning without physical symptoms\" is incorrect because Functional Neurological Symptom Disorder specifically includes disturbances in motor or sensory functions rather than solely cognitive impairments.",
+      "kn": "KN36",
+      "kn_explanation": "This question tests knowledge of diagnostic criteria for somatic symptom and related disorders (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all plausible but incorrect; the question requires precise understanding of conversion disorder criteria.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json::11",
+      "isScored": true
+    },
+    {
+      "stem": "A parent in Adlerian family therapy reports that her 9-year-old refuses to bring an umbrella on rainy days despite the parent's repeated warnings. The Adlerian therapist instructs the parent to stop arguing, say nothing further, and allow the child to arrive at school wet. The therapist explains that the child needs to experience the direct outcome of his own choice in order to develop social interest and responsibility. The therapist is recommending which Adlerian concept?",
+      "options": [
+        "Logical consequences, because the child experiences a planned, parent-arranged outcome that is logically connected to the misbehavior",
+        "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
+        "Encouragement, because the parent is withdrawing negative reinforcement in order to build the child's intrinsic motivation",
+        "Mistaken goals correction, because the parent is interrupting the child's pursuit of undue attention through the conflict over the umbrella"
+      ],
+      "answer": "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
+      "explanation": "In Adlerian theory, natural consequences are the direct, automatic results of a child's behavior as produced by the physical or social environment without adult intervention (getting wet because one did not bring an umbrella). They are distinguished from logical consequences, which are arranged by a parent or teacher, are logically related to the misbehavior, and require adult action to deliver. Encouragement is a broader Adlerian principle of building self-efficacy and is not a consequence type. Mistaken goals correction refers to identifying and redirecting the mistaken purpose behind misbehavior, which is distinct from the specific disciplinary strategy described.",
+      "kn": "KN9",
+      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Clearly constructed question testing a clinically important Adlerian distinction. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "## Adlerian Theory",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "What is the advantage of using a one-way ANOVA instead of multiple t-tests when comparing three or more group means?",
+      "options": [
+        "It controls the overall experimentwise error rate, reducing the risk of Type I error inflation",
+        "It increases statistical power by ignoring variance within groups",
+        "It allows for separate hypothesis testing for each pair of groups independently",
+        "It requires fewer assumptions about normality and homogeneity of variance"
+      ],
+      "answer": "It controls the overall experimentwise error rate, reducing the risk of Type I error inflation",
+      "explanation": "1. The correct answer, \"It controls the overall experimentwise error rate, reducing the risk of Type I error inflation,\" is accurate because using a one-way ANOVA allows researchers to make all comparisons between group means simultaneously while maintaining the alpha level set by the researcher. In contrast, conducting multiple t-tests increases the probability of making at least one Type I error, as each t-test carries its own risk of error, leading to an inflated overall error rate.\n\n2. The option \"It increases statistical power by ignoring variance within groups\" is incorrect because a one-way ANOVA does not ignore variance; instead, it accounts for both between-group and within-group variance to assess differences. The statement \"It allows for separate hypothesis testing for each pair of groups independently\" is wrong because a one-way ANOVA tests all groups together rather than treating each pairwise comparison as an independent hypothesis test. Lastly, the option \"It requires fewer assumptions about normality and homogeneity of variance\" is misleading because a one-way ANOVA still requires these assumptions, and if they are violated, alternative methods or nonparametric tests should be considered.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clearly phrased; distractors are reasonable misunderstandings, making it effective for assessing inferential statistics knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::20",
+      "isScored": true
+    },
+    {
+      "stem": "What is a key strategy for managing dual relationships in therapy?",
+      "options": [
+        "Avoiding all forms of social interaction with clients",
+        "Establishing clear boundaries and discussing them with clients",
+        "Only engaging in dual relationships with close friends",
+        "Limiting therapy sessions to business hours"
+      ],
+      "answer": "Establishing clear boundaries and discussing them with clients",
+      "explanation": "The best practice for managing dual relationships is to establish and communicate clear boundaries with clients to prevent conflicts of interest and ensure ethical practice. Avoiding all social interaction is impractical, and limiting sessions to business hours does not address the complexities of dual relationships.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of boundary-setting in therapeutic relationships.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## The Four Sections of the Ethics Code",
+      "lessonExcerpt": "When a potentially harmful multiple relationship occurs anyway, you must take reasonable steps to resolve it.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::41",
+      "isScored": true
+    }
+  ]
+}

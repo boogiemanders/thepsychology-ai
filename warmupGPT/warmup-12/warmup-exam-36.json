@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "examId": "warmup-12-36",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following drugs is FDA approved for slowing progression in moderate to severe Alzheimer's disease and exerts its effects potentially by regulating glutamate activity?",
+      "options": [
+        "Donepezil",
+        "Galantamine",
+        "Memantine",
+        "Rivastigmine"
+      ],
+      "answer": "Memantine",
+      "explanation": "1. **Correct Answer - Memantine:** Memantine is the FDA-approved NMDA receptor antagonist specifically indicated for moderate to severe Alzheimer's disease. It is believed to exert its effects by regulating the activity of glutamate, which is important for learning and memory functions that are impaired in Alzheimer's disease.\n\n2. **Incorrect Options:**\n   - **Donepezil:** Donepezil is a cholinesterase inhibitor approved for mild and moderate Alzheimer's disease, but it does not specifically target glutamate activity or is indicated for severe Alzheimer's disease.\n   - **Galantamine:** Similar to donepezil, galantamine is also a cholinesterase inhibitor approved for mild to moderate Alzheimer's disease and does not have a mechanism related to glutamate regulation.\n   - **Rivastigmine:** Rivastigmine is another cholinesterase inhibitor used for mild to moderate Alzheimer's disease and does not function through the regulation of glutamate activity.",
+      "kn": "KN2",
+      "kn_explanation": "This assesses knowledge of Alzheimer's pharmacotherapy and drug mechanisms outside classical neurotransmitter systems, fitting in KN2.",
+      "difficulty": "hard",
+      "quality_comment": "Options are all cholinesterase inhibitors except memantine, challenging examinees to recall specific drug mechanisms.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json::32",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "Tolman’s concept of latent learning was best demonstrated by rats in a maze who:",
+      "options": [
+        "Gradually improved maze performance only when reinforced from the start",
+        "Formed cognitive maps of the maze without reinforcement and improved when reinforcement was introduced",
+        "Showed insight by suddenly solving the maze without trial-and-error learning",
+        "Learned to avoid the maze after experiencing shocks"
+      ],
+      "answer": "Formed cognitive maps of the maze without reinforcement and improved when reinforcement was introduced",
+      "explanation": "1. The correct answer, \"Formed cognitive maps of the maze without reinforcement and improved when reinforcement was introduced,\" accurately reflects Tolman's findings from his research with rats. In his study, rats that initially received no reinforcement were able to navigate the maze and demonstrate improved performance once reinforcement was provided, indicating they had formed cognitive maps of the maze during the initial trials. This illustrates the concept of latent learning, where learning occurs without immediate reinforcement and is later exhibited when a reward is introduced.\n\n2. The option \"Gradually improved maze performance only when reinforced from the start\" is incorrect because it misrepresents Tolman's findings; the rats in Group 3 did not improve until reinforcement was introduced after a delay, demonstrating latent learning without initial reinforcement. The option \"Showed insight by suddenly solving the maze without trial-and-error learning\" is wrong because insight learning, as described by Kohler, involves sudden problem-solving, which is not applicable to Tolman’s rats that learned through cognitive mapping rather than immediate insight. Lastly, the option \"Learned to avoid the maze after experiencing shocks\" is incorrect because Tolman's study did not involve punishment or avoidance learning; instead, it focused on how the rats learned the layout of the maze without reinforcement.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible maze learning scenarios but differ clearly from Tolman’s latent learning, requiring comprehension of specific experimental results.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::64",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "In Asch's conformity experiments, what was a key finding that differentiated his work from Sherif's autokinetic effect studies?",
+      "options": [
+        "Asch found conformity only occurred in ambiguous situations",
+        "Asch found conformity even when the correct answer was obvious and unambiguous",
+        "Sherif’s study demonstrated conformity only in unambiguous situations",
+        "Sherif’s study involved foot-in-the-door compliance tactics"
+      ],
+      "answer": "Asch found conformity even when the correct answer was obvious and unambiguous",
+      "explanation": "1. The correct answer, \"Asch found conformity even when the correct answer was obvious and unambiguous,\" highlights a significant distinction in Asch's experiments compared to Sherif's. In Asch's studies, participants conformed to the group norm even when the correct answer was clear, demonstrating that social influence can occur in situations where there is no ambiguity. This contrasts with Sherif's work, where conformity was primarily observed in ambiguous situations, such as the autokinetic effect, where individuals were uncertain about the correct response.\n\n2. The option \"Asch found conformity only occurred in ambiguous situations\" is incorrect because Asch's findings specifically show that conformity happened in clear, unambiguous scenarios, which is a key difference from Sherif's research. The statement \"Sherif’s study demonstrated conformity only in unambiguous situations\" is also wrong, as Sherif's research focused on ambiguous situations, where participants were unsure of the light's movement. Lastly, the option \"Sherif’s study involved foot-in-the-door compliance tactics\" is incorrect because Sherif's study did not utilize compliance tactics like foot-in-the-door; it was primarily an investigation into conformity based on ambiguous stimuli rather than compliance techniques.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding these seminal studies in conformity highlights group dynamics and social influences, core topics within group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast the key differences between landmark studies; distractors are credible misconceptions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json::19",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes a microinvalidation as defined by Sue et al. (2007)?",
+      "options": [
+        "An explicit derogatory name-calling based on race.",
+        "Assigning intelligence level based on a person’s race.",
+        "Assuming a minority group member is a foreigner and complimenting their English skills.",
+        "Demeaning nonverbal communication styles of people of color."
+      ],
+      "answer": "Assuming a minority group member is a foreigner and complimenting their English skills.",
+      "explanation": "1. The correct answer, \"Assuming a minority group member is a foreigner and complimenting their English skills,\" exemplifies a microinvalidation because it negates the individual's identity and experiences by implying they do not belong or are not from the country, despite their fluency. Sue et al. (2007) define microinvalidations as communications that exclude or nullify the psychological reality of a person of color, and this statement fits that definition by dismissing the minority individual's status as a member of the local culture.\n\n2. The first incorrect option, \"An explicit derogatory name-calling based on race,\" describes a microassault, which is characterized by intentional and overt derogation rather than a subtle invalidation. The second incorrect option, \"Assigning intelligence level based on a person’s race,\" is a form of microinsult, as it devalues an individual based on racial stereotypes but does not specifically negate their experiences or identity. Lastly, \"Demeaning nonverbal communication styles of people of color\" also represents a microinsult, as it involves insensitivity to cultural communication styles rather than the exclusion of the individual's reality, which is the hallmark of microinvalidations.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Options represent distinct microaggression types; the question requires precise recall, making it suitable for EPPP-level assessment.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::14",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "What cognitive decline is commonly observed in aging adults as measured by the WAIS-IV?",
+      "options": [
+        "Increased verbal comprehension",
+        "Decreased processing speed",
+        "Enhanced working memory",
+        "Improved fluid intelligence"
+      ],
+      "answer": "Decreased processing speed",
+      "explanation": "The correct answer is 'Decreased processing speed' as aging is associated with slower cognitive processing, which is a common finding in WAIS-IV assessments. The other options do not accurately reflect typical cognitive changes in aging.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and tests knowledge of cognitive aging.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::16",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which statement best characterizes the Rancho Scale of Cognitive Functioning (Revised)?",
+      "options": [
+        "It quantifies severity of depression during neurorehabilitation.",
+        "It assesses adaptive behavior from birth to 90 years of age.",
+        "It rates levels of cognitive recovery after head injury across ten levels.",
+        "It measures visual memory deficits in children over 8 years."
+      ],
+      "answer": "It rates levels of cognitive recovery after head injury across ten levels.",
+      "explanation": "1. The correct answer, \"It rates levels of cognitive recovery after head injury across ten levels,\" accurately describes the Rancho Scale of Cognitive Functioning Revised. This scale evaluates cognitive recovery in patients following a head injury by categorizing their level of response and assistance needs into ten distinct levels, ranging from unresponsive to purposeful and appropriate responses.\n\n2. The incorrect options are as follows:\n- \"It quantifies severity of depression during neurorehabilitation.\" This statement is incorrect because the Rancho Scale does not assess depression; it focuses specifically on cognitive recovery levels after brain injury.\n- \"It assesses adaptive behavior from birth to 90 years of age.\" This option is wrong as it describes the Vineland Adaptive Behavior Scales, not the Rancho Scale, which is specifically aimed at cognitive functioning post-injury.\n- \"It measures visual memory deficits in children over 8 years.\" This statement is incorrect because it pertains to tests like the Benton Visual Retention Test, while the Rancho Scale evaluates cognitive recovery levels, not visual memory.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "This question effectively discriminates test knowledge relevant to post-injury recovery assessment with plausible distractors describing other clinical measures.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::93",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the prognosis and course of vascular neurocognitive disorder?",
+      "options": [
+        "A rapid, always steadily progressive decline similar to Alzheimer’s disease",
+        "A stepwise decline or fluctuating symptom severity often related to cerebrovascular events",
+        "A stable cognitive deficit with no further deterioration",
+        "Primarily a reversible disorder with rapid full recovery"
+      ],
+      "answer": "A stepwise decline or fluctuating symptom severity often related to cerebrovascular events",
+      "explanation": "1. The correct answer, \"A stepwise decline or fluctuating symptom severity often related to cerebrovascular events,\" accurately describes the prognosis and course of vascular neurocognitive disorder (NCD). This disorder is characterized by symptoms that are consistent with a vascular etiology, often showing a temporal relationship with cerebrovascular events such as strokes. The course of vascular NCD can involve a stepwise decline, where cognitive function may fluctuate in severity and can experience plateaus, reflecting the impact of these vascular events.\n\n2. The option \"A rapid, always steadily progressive decline similar to Alzheimer’s disease\" is incorrect because vascular NCD does not follow a continuous and uniform progression like Alzheimer’s disease; instead, it can exhibit fluctuations and stepwise changes. The statement \"A stable cognitive deficit with no further deterioration\" is wrong because vascular NCD typically does not remain stable; it is characterized by changes in cognitive function over time, often linked to cerebrovascular incidents. Lastly, \"Primarily a reversible disorder with rapid full recovery\" is inaccurate because, while some vascular NCDs can improve if the underlying medical condition is treated, they are not primarily reversible, and rapid full recovery is not a typical expectation.",
+      "kn": "KN36",
+      "kn_explanation": "This question addresses clinical course and prognosis relevant to diagnosis of neurocognitive disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly differentiates vascular NCD from other neurocognitive disorders, useful for exam preparation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json::7",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In the context of construct validity, how does the multitrait-multimethod matrix aid in understanding measurement error?",
+      "options": [
+        "By differentiating method effects from trait effects through varying methods and traits",
+        "By directly measuring test-retest reliability over time",
+        "By assessing face validity of test items through expert ratings",
+        "By correlating test scores with external behavioral criteria"
+      ],
+      "answer": "By differentiating method effects from trait effects through varying methods and traits",
+      "explanation": "1. The correct answer, \"By differentiating method effects from trait effects through varying methods and traits,\" is accurate because the multitrait-multimethod matrix explicitly involves administering tests that measure the same trait using different methods and tests that measure different traits using the same and different methods. This approach allows researchers to isolate and identify the influence of measurement methods on test scores, thereby clarifying whether observed correlations are due to the traits being measured or the methods used to measure them, which is essential for understanding measurement error in construct validity.\n\n2. The first incorrect option, \"By directly measuring test-retest reliability over time,\" is wrong because the multitrait-multimethod matrix does not focus on test-retest reliability; instead, it assesses the validity of a test through correlations with other measures and methods. The second incorrect option, \"By assessing face validity of test items through expert ratings,\" is incorrect because face validity is not a formal type of validity and does not provide evidence of the underlying constructs measured by the tests. Lastly, \"By correlating test scores with external behavioral criteria\" is incorrect because this describes criterion-related validity rather than the specific purpose of the multitrait-multimethod matrix, which is to evaluate convergent and divergent validity through the comparison of multiple traits and methods.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The item targets higher-level understanding of the multitrait-multimethod approach, adding depth to the question bank with well-crafted distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::14",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A client with alcohol use disorder reports experiencing intense cravings whenever he drives past the bar where he used to drink regularly. From a behavioral perspective, this craving response is BEST explained by:",
+      "options": [
+        "Operant conditioning, in which the bar serves as a positive discriminative stimulus signaling reinforcement availability",
+        "Classical conditioning, in which the bar has become a conditioned stimulus eliciting a conditioned craving response",
+        "Negative reinforcement, in which drinking at the bar previously removed withdrawal symptoms",
+        "Both classical conditioning creating the cue-triggered craving and operant conditioning maintaining drinking through positive reinforcement"
+      ],
+      "answer": "Both classical conditioning creating the cue-triggered craving and operant conditioning maintaining drinking through positive reinforcement",
+      "explanation": "Addictive behaviors are maintained through the interplay of both classical and operant conditioning. Through classical conditioning, environmental cues (the bar) become conditioned stimuli that elicit conditioned craving responses. Through operant conditioning, the drinking behavior is maintained by positive reinforcement (pleasurable effects of alcohol) and negative reinforcement (removal of withdrawal symptoms or stress). The lesson on cue exposure therapy explains: 'With addiction, certain cues become powerfully associated with use... These become conditioned stimuli that trigger cravings and use.' Meanwhile, operant principles explain why the behavior persists. Option A captures only the operant component; Option B captures only the classical component; Option C is partially correct but incomplete, addressing only one type of reinforcement.",
+      "kn": "KN44",
+      "kn_explanation": "Behavioral conceptualization of cravings informing treatment intervention",
+      "difficulty": "hard",
+      "quality_comment": "Tests integration of two learning paradigms in addiction—a common EPPP application question format.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### Cue Exposure Therapy",
+      "lessonExcerpt": "With addiction, certain cues become powerfully associated with use. The smell of cigarette smoke in a bar, the sight of friends you used to drink with, even the specific route home that passes your dealer's corner. These become conditioned stimuli that trigger cravings and use.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::5",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "A behavior analyst uses an ABAB reversal design to evaluate a token economy for reducing aggressive behavior in a child with conduct disorder. During both treatment phases, aggressive behavior decreases substantially. However, during the second baseline phase, aggressive behavior does NOT return to original baseline levels. What is the MOST likely methodological concern?",
+      "options": [
+        "The treatment lacks internal validity because the results were not replicated across phases",
+        "Carryover effects from the treatment may have produced lasting behavioral change that prevents a true return to baseline",
+        "The failure to return to baseline indicates that maturation rather than the treatment caused the improvement",
+        "The design should be abandoned in favor of a multiple baseline design whenever behavior fails to reverse"
+      ],
+      "answer": "Carryover effects from the treatment may have produced lasting behavioral change that prevents a true return to baseline",
+      "explanation": "The ABAB design relies on behavior returning to baseline levels when treatment is withdrawn to demonstrate experimental control. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT reverse, this undermines the logic of the design. The most likely explanation is carryover — the treatment produced learning or behavioral change that persists even after formal treatment withdrawal. Option A is partially correct but doesn't identify the mechanism. Option C is less likely since maturation would produce gradual change, not the pattern described. Option D is too absolute — the design may still provide useful information even without perfect reversal.",
+      "kn": "KN54",
+      "kn_explanation": "ABAB reversal design is an experimental study design",
+      "difficulty": "hard",
+      "quality_comment": "Strong conceptual question that tests understanding of the fundamental logic of reversal designs and their limitations. Clinically realistic scenario.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### ABAB Design: More Convincing",
+      "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::4",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist is preparing a report that includes findings from a previous assessment conducted by another clinician. What is the most ethical way to present this information?",
+      "options": [
+        "Cite the previous clinician's findings without any caveats",
+        "Clearly state the source of the findings and any limitations",
+        "Only include the findings if the previous clinician is present",
+        "Use the findings but claim them as your own"
+      ],
+      "answer": "Clearly state the source of the findings and any limitations",
+      "explanation": "1. The correct answer, \"Clearly state the source of the findings and any limitations,\" aligns with Standard 9.01(b) of the APA Ethics Code, which emphasizes the importance of transparency when using assessment results from other professionals. Psychologists must communicate any limitations of the conclusions drawn from such assessments, ensuring that the context and potential impact on their own conclusions are clearly articulated.\n\n2. The option \"Cite the previous clinician's findings without any caveats\" is incorrect because it fails to acknowledge the limitations of the previous assessment, which is essential for ethical reporting as per Standard 9.01(b). The choice \"Only include the findings if the previous clinician is present\" is misleading; ethical practice does not require the presence of the original clinician to report their findings, but rather the proper attribution and contextualization of the data. Finally, the option \"Use the findings but claim them as your own\" is unethical and violates the principles of honesty and integrity set forth in the APA Ethics Code, as it misrepresents the original source of the findings.",
+      "difficulty": "easy",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "quality_comment": "This question effectively tests understanding of ethical reporting standards in psychology.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::32",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "Which training method is characterized by teaching employees how to perform the essential tasks of other workers to improve team flexibility and coverage?",
+      "options": [
+        "Job rotation",
+        "Cross-training",
+        "Apprenticeship",
+        "Behavior modeling"
+      ],
+      "answer": "Cross-training",
+      "explanation": "1. **Cross-training** is the correct answer because it involves teaching employees how to perform the essential tasks of other workers. This method is specifically designed to improve team flexibility and coverage, allowing team members to step in for one another as needed, which enhances overall team performance and adaptability.\n\n2. **Job rotation** is incorrect because it refers to having trainees rotate through a predetermined set of jobs within the organization, primarily aimed at training managers rather than teaching tasks of other workers for team flexibility. **Apprenticeship** is not the correct answer as it typically involves a formalized training relationship where inexperienced employees learn a specific trade or skill under the guidance of a skilled worker, rather than learning multiple roles within a team context. **Behavior modeling** is also incorrect because it focuses on trainees observing a model perform desired behaviors and practicing those behaviors, rather than specifically teaching them to perform the tasks of other workers for improved team coverage.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are relevant training methods offering a good challenge by contrasting approaches that involve different kinds of employee exposure.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json::18",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

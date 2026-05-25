@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "examId": "warmup-12-21",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which neurotransmitter deficiency is primarily responsible for the motor symptoms observed in Parkinson’s disease?",
+      "options": [
+        "GABA",
+        "Dopamine",
+        "Acetylcholine",
+        "Glutamate"
+      ],
+      "answer": "Dopamine",
+      "explanation": "1. **Dopamine** is the correct answer because Parkinson’s disease is primarily characterized by the degeneration of dopamine-producing cells in the substantia nigra, which leads to a significant reduction in dopamine levels in the basal ganglia. This deficiency in dopamine is directly linked to the prominent motor symptoms of Parkinson's disease, including resting tremor, rigidity, bradykinesia, and postural instability.\n\n2. The other options are incorrect for the following reasons:\n- **GABA**: While GABA is an important inhibitory neurotransmitter in the brain, it is not primarily implicated in the motor symptoms of Parkinson’s disease.\n- **Acetylcholine**: Although low levels of acetylcholine are associated with gait and balance impairments in Parkinson's disease, it is not the primary neurotransmitter deficiency responsible for the motor symptoms.\n- **Glutamate**: Excessive glutamate activity has been linked to the progression of Parkinson's disease, but it is not a deficiency; thus, it does not account for the primary motor symptoms observed in the disorder.",
+      "kn": "KN1",
+      "kn_explanation": "This question focuses on neurochemical processes underlying Parkinson’s disease motor symptoms, fitting the neurobiological bases domain (KN1).",
+      "difficulty": "easy",
+      "quality_comment": "The options focus on neurotransmitters implicated in neurological conditions, making a clear, straightforward question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::47",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "What is the optimal timing for reinforcement to enhance learning according to behavioral psychology?",
+      "options": [
+        "Immediate reinforcement",
+        "Delayed reinforcement",
+        "Random reinforcement",
+        "No reinforcement"
+      ],
+      "answer": "Immediate reinforcement",
+      "explanation": "Immediate reinforcement is most effective for enhancing learning because it provides clear feedback and strengthens the association between the behavior and the consequence. Delayed reinforcement can weaken this association, while random reinforcement may lead to confusion about what behavior is being rewarded.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a solid understanding of reinforcement principles.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
+      "lessonExcerpt": "The fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::18",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "A school psychologist is consulting with a racially divided middle school where two student groups have developed sustained intergroup hostility. A sensitivity training workshop produced no lasting change. The psychologist redesigns an academic unit so that each student in a multiethnic group is assigned a unique segment of the material; all group members must learn from and teach each other for the group to complete the project successfully. Hostility between the groups decreases significantly. The operative mechanism in this intervention is BEST described as:",
+      "options": [
+        "The contact hypothesis, because structured positive intergroup exposure reduces prejudice over time",
+        "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
+        "The jigsaw classroom technique, which operates through a different mechanism than superordinate goal strategies",
+        "The minimal group paradigm, which reframes group boundaries by creating new shared category memberships"
+      ],
+      "answer": "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
+      "explanation": "Superordinate goals are objectives that can only be achieved through active cooperation between previously hostile groups, as demonstrated in Sherif's Robbers Cave study. The lesson explicitly identifies the jigsaw classroom as an educational application of superordinate goal principles. The correct answer identifies the underlying mechanism. Option A (contact hypothesis) is insufficient — mere contact without structured interdependence does not reliably reduce hostility. Option C is a trap: the jigsaw classroom IS an application of superordinate goals, not a distinct mechanism; describing it as operating through a 'different mechanism' is factually incorrect. The minimal group paradigm is a laboratory research paradigm demonstrating how easily intergroup bias develops from arbitrary categorization — it is not an intervention strategy and does not involve cooperative interdependence.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "High-difficulty question requiring conceptual understanding of the jigsaw classroom as an application of superordinate goals rather than a separate technique; tests hierarchical concept structure rather than surface-level naming.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "Reducing Conflict Through Cooperation",
+      "lessonExcerpt": "The solution? Superordinate goals. Objectives that could only be achieved through cooperation between groups. When the water supply 'broke' and both groups had to work together to fix it, hostility decreased. This principle led to the jigsaw classroom technique.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::29",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which sexual identity status in Worthington et al.'s model is defined by purposeful exploration, evaluation, or experimentation of one’s sexual values, orientation, or preferences?",
+      "options": [
+        "Unexplored commitment",
+        "Active exploration",
+        "Diffusion",
+        "Synthesis"
+      ],
+      "answer": "Active exploration",
+      "explanation": "1. \"Active exploration\" is the correct answer because it is specifically defined in Worthington et al.'s model as the status involving purposeful exploration, evaluation, or experimentation of one’s sexual needs, values, orientation, and preferences. This stage emphasizes the active engagement in understanding one's sexual identity, distinguishing it from other statuses that do not involve such proactive inquiry.\n\n2. \n- **Unexplored commitment** is incorrect because it reflects a sexual identity that is shaped by societal and familial mandates without any active self-exploration or personal evaluation of one's sexual orientation.\n- **Diffusion** is wrong as it is characterized by a lack of active exploration and commitment, indicating confusion about identity rather than purposeful exploration of sexual values or preferences.\n- **Synthesis** is not the correct answer because it pertains to the integration of one’s sexual identity with other identities, rather than the active exploration of sexual orientation or preferences.",
+      "kn": "KN19",
+      "kn_explanation": "This question assesses understanding of models of sexual identity development, relevant to identity diversity and intersectionality.",
+      "difficulty": "medium",
+      "quality_comment": "Options are clearly described statuses that differ conceptually, providing well-balanced answer choices.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::11",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes a key feature of the induction style of parental discipline?",
+      "options": [
+        "Explaining why a behavior is wrong and emphasizing its effect on others",
+        "Withholding affection as a means of reducing undesirable behavior",
+        "Imposing strict consequences without explanation",
+        "Allowing children to do as they please without limits"
+      ],
+      "answer": "Explaining why a behavior is wrong and emphasizing its effect on others",
+      "explanation": "1. The correct answer, \"Explaining why a behavior is wrong and emphasizing its effect on others,\" accurately reflects the induction style of parental discipline. This approach focuses on helping children understand the reasons behind their actions and the consequences for others, promoting advanced levels of moral reasoning. Research indicates that this style fosters a deeper comprehension of moral standards compared to other disciplinary methods.\n\n2. The option \"Withholding affection as a means of reducing undesirable behavior\" is incorrect because it describes a power assertion style of discipline, which relies on emotional manipulation rather than reasoning. \"Imposing strict consequences without explanation\" is also incorrect, as it reflects an authoritarian approach that does not involve the child in understanding the rationale behind rules or consequences. Lastly, \"Allowing children to do as they please without limits\" is incorrect because it suggests a lack of guidance or boundaries, which is contrary to the structured and educational nature of the induction style that aims to teach moral reasoning.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "This item tests understanding of key parenting practices relevant to moral socialization with plausible distractors reflecting common disciplinary practices.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::21",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "What aspect of a creativity exam is most closely related to its validity?",
+      "options": [
+        "The number of items on the test",
+        "The diversity of the test-takers",
+        "The alignment of test content with creative tasks",
+        "The time allowed for completion"
+      ],
+      "answer": "The alignment of test content with creative tasks",
+      "explanation": "The validity of a creativity exam is primarily determined by how well the test content aligns with actual creative tasks and processes. The other options do not directly influence the validity of the test.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of test validity principles.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "The validity of a creativity exam is determined by the alignment of test content with creative tasks.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::2",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following criteria must be met for a diagnosis of pedophilic disorder according to DSM-5-TR?",
+      "options": [
+        "Sexual arousal focused on children under 16, with onset before age 18",
+        "Recurrent sexual arousal involving children 13 years or younger, with the individual at least 16 years old and five years older than the child",
+        "Sexual attraction to prepubescent and adolescent children without acting on urges",
+        "Persistent distress caused by urges involving consenting underage partners"
+      ],
+      "answer": "Recurrent sexual arousal involving children 13 years or younger, with the individual at least 16 years old and five years older than the child",
+      "explanation": "1. The correct answer, \"Recurrent sexual arousal involving children 13 years or younger, with the individual at least 16 years old and five years older than the child,\" aligns with the DSM-5-TR criteria for pedophilic disorder. It specifies that the individual must experience recurrent and intense sexual arousal related to fantasies, urges, or behaviors involving sexual activity with children 13 years of age or younger, and the individual must be at least 16 years old and at least five years older than the child to meet the diagnostic criteria.\n\n2. The first incorrect option, \"Sexual arousal focused on children under 16, with onset before age 18,\" is wrong because it inaccurately includes children up to age 15 and does not specify the age difference required between the individual and the child. The second incorrect option, \"Sexual attraction to prepubescent and adolescent children without acting on urges,\" is incorrect because the diagnosis requires that the individual has acted on these urges or experienced significant distress due to them. The third incorrect option, \"Persistent distress caused by urges involving consenting underage partners,\" is incorrect because the diagnosis does not consider consent from underage individuals; it focuses on the individual's arousal and actions toward children who are not able to consent.",
+      "kn": "KN36",
+      "kn_explanation": "The question assesses diagnostic criteria for a paraphilic disorder, focusing on assessment and diagnosis (KN36).",
+      "difficulty": "hard",
+      "quality_comment": "Distractors contain partially correct but inaccurate age or consent descriptions to thoughtfully challenge recall of specific DSM criteria.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::7",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist is evaluating a cognitive ability test that has a standard deviation of 15. She notes that the standard error of measurement (SEM) for this test could theoretically range from:",
+      "options": [
+        "0.0 to 1.0",
+        "0.0 to 15",
+        "-15 to +15",
+        "0.0 to 225"
+      ],
+      "answer": "0.0 to 15",
+      "explanation": "The SEM ranges from 0.0 to the standard deviation of the test (SDx). When reliability is perfect (1.0), SEM = SD × √(1-1.0) = 0. When reliability is 0, SEM = SD × √(1-0) = SD. Therefore, for a test with SD = 15, SEM ranges from 0 to 15. Option A (0 to 1.0) confuses SEM range with the range of the reliability coefficient itself. Option C (-15 to +15) incorrectly applies the range of a correlation coefficient. Option D (0 to 225) confuses SEM with variance (SD²).",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of measurement and standard deviation are fundamental psychometric/test characteristics.",
+      "difficulty": "hard",
+      "quality_comment": "Tests understanding of the mathematical relationship between SEM, reliability, and SD — a frequently tested psychometric concept.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement: Embracing Uncertainty",
+      "lessonExcerpt": "The standard error of the measurement has a range from 0.0 to SDx.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::5",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which stage in group therapy, according to Yalom and Leszcz, is characterized by group members competing for power, expressing hostility, and establishing a pecking order?",
+      "options": [
+        "Conflict, dominance, and rebellion stage",
+        "Initial orientation and hesitant participation stage",
+        "Development of cohesiveness stage",
+        "Termination and separation stage"
+      ],
+      "answer": "Conflict, dominance, and rebellion stage",
+      "explanation": "1. The \"Conflict, dominance, and rebellion stage\" is the correct answer because, in this stage, group members actively compete for power and control within the group. They often express hostility towards one another and may become critical of each other as they attempt to establish a pecking order, reflecting their struggle for dominance and influence.\n\n2. The \"Initial orientation and hesitant participation stage\" is incorrect because this stage focuses on members clarifying the group's purpose and relying on the leader for guidance, rather than competing for power. The \"Development of cohesiveness stage\" is also incorrect, as it is characterized by decreased conflict and increased trust among members, leading to a supportive and unified group environment. Lastly, the \"Termination and separation stage\" is not applicable here, as it pertains to the conclusion of the group therapy process rather than the dynamics of power struggles and conflict that occur during the earlier stages.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are stages from group therapy development with one being incorrect (termination), making this a clear but valid test of knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::11",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best exemplifies cluster sampling in research?",
+      "options": [
+        "Selecting every tenth person from a list of registered voters.",
+        "Randomly choosing a few schools from a district and surveying all students within those schools.",
+        "Surveying individuals from different socioeconomic backgrounds across a city.",
+        "Choosing participants based on their availability and willingness to participate."
+      ],
+      "answer": "Randomly choosing a few schools from a district and surveying all students within those schools.",
+      "explanation": "The correct answer illustrates cluster sampling, where entire groups (clusters) are selected, and all individuals within those clusters are surveyed. The other options describe different sampling methods.",
+      "kn": "KN53",
+      "kn_explanation": "This question is best aligned with KN53 because it tests Sampling and data collection methods.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of sampling techniques.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "Cluster sampling involves selecting entire groups and surveying all individuals within those groups.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::19",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary purpose of the Preamble in the APA Ethics Code?",
+      "options": [
+        "To define mandatory rules psychologists must follow under penalty of sanction",
+        "To state that the Code applies to all activities of psychologists, including personal behavior",
+        "To emphasize the welfare and protection of individuals and to educate members and the public about ethical standards",
+        "To specify details of reporting procedures for ethical violations"
+      ],
+      "answer": "To emphasize the welfare and protection of individuals and to educate members and the public about ethical standards",
+      "explanation": "1. The correct answer, \"To emphasize the welfare and protection of individuals and to educate members and the public about ethical standards,\" aligns with the Preamble's stated primary goals in the APA Ethics Code. The Preamble explicitly highlights the importance of ensuring the welfare and protection of individuals and groups with whom psychologists work, as well as educating members and the public about ethical standards in the discipline. This foundational intent sets the tone for the ethical principles and standards that follow in the Code.\n\n2. The option \"To define mandatory rules psychologists must follow under penalty of sanction\" is incorrect because it refers to the Ethical Standards section, which contains enforceable rules, rather than the aspirational nature of the Preamble. The statement \"To state that the Code applies to all activities of psychologists, including personal behavior\" is misleading, as the Preamble clarifies that the Code applies specifically to psychologists' professional roles, not personal behavior. Lastly, the option \"To specify details of reporting procedures for ethical violations\" is incorrect because reporting procedures are addressed in Standard 1 (Resolving Ethical Issues), not in the Preamble, which focuses on overarching ethical principles rather than specific procedural details.",
+      "kn": "KN61",
+      "kn_explanation": "This question tests knowledge of ethical principles and codes, specifically the foundational purpose of the Ethics Code as outlined in the Preamble.",
+      "difficulty": "easy",
+      "quality_comment": "The options are clearly worded and represent common misconceptions, making the question effective for foundational understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::25",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "A new assessment tool designed to measure leadership skills shows a strong correlation with existing measures of emotional intelligence but no correlation with physical fitness tests. This scenario exemplifies which type of validity?",
+      "options": [
+        "Content validity",
+        "Construct validity",
+        "Criterion-related validity",
+        "Incremental validity"
+      ],
+      "answer": "Construct validity",
+      "explanation": "This example demonstrates construct validity as it shows that the leadership assessment correlates with a related construct (emotional intelligence) while not correlating with an unrelated construct (physical fitness).",
+      "difficulty": "easy",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "quality_comment": "The question effectively tests understanding of construct validity through a clear and relatable example.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Do Hiring Tools Work.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Do Hiring Tools Work.json::16",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

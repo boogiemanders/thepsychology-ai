@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "examId": "warmup-8-22",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following functions is primarily associated with the limbic system?",
+      "options": [
+        "Motor control",
+        "Language processing",
+        "Emotional regulation",
+        "Visual processing"
+      ],
+      "answer": "Emotional regulation",
+      "explanation": "The limbic system is primarily involved in emotional regulation, memory, and motivation. Motor control is associated with the basal ganglia, language processing with the temporal lobe, and visual processing with the occipital lobe.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "The question is straightforward and tests a fundamental aspect of brain function.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## The Big Picture: Four Lobes, Each With Its Own Job",
+      "lessonExcerpt": "The limbic system is primarily involved in emotional regulation, memory, and motivation.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::13",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "In the context of teaching a child to tie their shoes, which of the following best illustrates the process of shaping?",
+      "options": [
+        "Reinforcing the child for making a loop with the laces.",
+        "Rewarding the child for tying the laces together.",
+        "Encouraging the child to pull the laces tight.",
+        "Praising the child for picking up the laces."
+      ],
+      "answer": "Reinforcing the child for making a loop with the laces.",
+      "explanation": "1. \"Reinforcing the child for making a loop with the laces\" is the correct answer because it exemplifies the process of shaping, where successive approximations of the desired behavior are reinforced. In this case, making a loop is a step towards the final goal of tying shoes, and by reinforcing this specific action, the child is gradually guided toward mastering the complete task.\n\n2. The option \"Rewarding the child for tying the laces together\" is incorrect because it refers to the final desired behavior rather than a step in the shaping process; shaping focuses on reinforcing intermediate steps. \"Encouraging the child to pull the laces tight\" is also incorrect as it does not represent a successive approximation towards the goal of tying shoes, but rather a different aspect of the task. Lastly, \"Praising the child for picking up the laces\" is incorrect because this action does not directly contribute to the specific skill of tying shoes and is not a step in the process leading to that behavior.",
+      "difficulty": "easy",
+      "kn": "KN7",
+      "kn_explanation": "This question evaluates understanding of core operant conditioning procedures, which aligns with theories and principles of learning under KN7.",
+      "quality_comment": "This question effectively assesses understanding of shaping by applying it to a relatable scenario.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::41",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "According to Helms's model of racial identity development, which stage involves individuals actively seeking to understand their racial identity and the implications of racism?",
+      "options": [
+        "Pre-encounter",
+        "Encounter",
+        "Immersion-Emersion",
+        "Internalization"
+      ],
+      "answer": "Immersion-Emersion",
+      "explanation": "The Immersion-Emersion stage in Helms's model is characterized by individuals immersing themselves in their racial identity and grappling with the implications of racism. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts awareness, and the Internalization stage involves a more integrated sense of self. Therefore, Immersion-Emersion is the correct answer.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "hard",
+      "quality_comment": "Well-structured question that assesses knowledge of racial identity stages.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "### Stages of Racial Identity Development",
+      "lessonExcerpt": "The Immersion-Emersion stage involves individuals actively seeking to understand their racial identity and the implications of racism.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::7",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "According to Piaget's theory, what process occurs when a child modifies an existing cognitive schema to accommodate new information?",
+      "options": [
+        "Equilibration",
+        "Assimilation",
+        "Accommodation",
+        "Transduction"
+      ],
+      "answer": "Accommodation",
+      "explanation": "1. **Correct Answer: Accommodation**  \n\"Accommodation\" is the correct answer because, according to Piaget’s theory, it refers to the process through which a child modifies an existing cognitive schema or creates a new schema in response to new information that does not fit into their current understanding. This process is essential for restoring equilibrium when a child encounters new experiences that challenge their existing cognitive frameworks.\n\n2. **Incorrect Options:**  \n- **Equilibration:** This term refers to the overall process of balancing assimilation and accommodation to achieve a stable understanding of the world, not the specific act of modifying a schema.\n- **Assimilation:** Assimilation is the process of integrating new information into an existing schema without changing the schema itself, which is the opposite of what occurs during accommodation.\n- **Transduction:** Transduction, or transductive reasoning, is a type of reasoning characteristic of the preoperational stage where children link unrelated events causally; it does not pertain to the modification of cognitive schemas.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests knowledge of Piaget’s constructivist theory, a major research-based developmental theory under KN23.",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly tests a fundamental Piagetian concept, with distractors that are related but distinct, supporting effective assessment of understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::33",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which theory of depression attributes the disorder to decreased response-contingent social reinforcement leading to social isolation and low self-esteem?",
+      "options": [
+        "Learned helplessness model",
+        "Cognitive triad theory",
+        "Social reinforcement theory",
+        "Hopelessness theory"
+      ],
+      "answer": "Social reinforcement theory",
+      "explanation": "1. **Correct Answer: Social reinforcement theory**  \nSocial reinforcement theory, proposed by Lewinsohn, attributes depression to a low rate of response-contingent reinforcement for social behaviors. This lack of reinforcement can lead to social isolation and low self-esteem, which further exacerbates depressive symptoms. The theory emphasizes the role of environmental factors and social interactions in the development of depression.\n\n2. **Incorrect Options:**\n- **Learned helplessness model:** This model, developed by Seligman, links depression to repeated exposure to uncontrollable negative life events, leading to a sense of helplessness rather than focusing on social reinforcement.\n- **Cognitive triad theory:** Beck's cognitive theory posits that depression arises from a negative cognitive triad involving negative thoughts about oneself, the world, and the future, which does not specifically address social reinforcement.\n- **Hopelessness theory:** This theory, a revision of learned helplessness, suggests that a sense of hopelessness is the proximal cause of depression, emphasizing cognitive styles rather than the impact of social reinforcement on behavior.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are well chosen as they represent other important depression theories, encouraging careful recall.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::10",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which brief therapy explicitly assigns clients the 'sick role' to reduce self-blame for their symptoms?",
+      "options": [
+        "Solution-Focused Therapy",
+        "Interpersonal Psychotherapy",
+        "Motivational Interviewing",
+        "Brief Psychodynamic Psychotherapy"
+      ],
+      "answer": "Interpersonal Psychotherapy",
+      "explanation": "1. **Interpersonal Psychotherapy (IPT)** is the correct answer because it explicitly assigns clients the \"sick role\" during the initial stage of therapy. This approach allows clients to view their illnesses as temporary and treatable, thereby reducing self-blame for their symptoms. By focusing on interpersonal factors contributing to their current symptoms, IPT aims to facilitate symptom relief and improved functioning.\n\n2. **Solution-Focused Therapy** is incorrect because it emphasizes identifying solutions and personal strengths rather than assigning roles or addressing self-blame related to symptoms. \n\n**Motivational Interviewing** is also incorrect as it focuses on enhancing intrinsic motivation and resolving ambivalence about change, without the concept of assigning a \"sick role\" to clients. \n\nLastly, **Brief Psychodynamic Psychotherapy** is incorrect because, while it addresses psychological issues, it does not specifically assign the \"sick role\" to clients; instead, it focuses on understanding unconscious conflicts or dysfunctional patterns without explicitly reducing self-blame in the same manner as IPT.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Options are prominent brief therapies, promoting integration of conceptual and procedural knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::14",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "In a one-way ANOVA, what is the primary purpose of the analysis?",
+      "options": [
+        "To compare means across multiple groups",
+        "To assess the correlation between two variables",
+        "To test the difference between two means",
+        "To evaluate the reliability of a measure"
+      ],
+      "answer": "To compare means across multiple groups",
+      "explanation": "The primary purpose of a one-way ANOVA is to compare means across multiple groups, making it the correct answer. The other options refer to different statistical analyses: correlation assesses relationships, t-tests compare two means, and reliability tests evaluate consistency.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of ANOVA and its purpose.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Making Decisions: The Four Possible Outcomes",
+      "lessonExcerpt": "One-way ANOVA is used to compare means across multiple groups.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::8",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "Dr. Sato casually recommends a colleague, Dr. Fenn, to a friend who mentions needing therapy for marital problems. Dr. Sato has no formal referral arrangement with Dr. Fenn. If Dr. Fenn subsequently provides substandard care that harms the friend, what is Dr. Sato's ethical liability for this outcome?",
+      "options": [
+        "Dr. Sato is equally liable because the referral created a duty of care to the friend",
+        "Dr. Sato is liable only if she received financial compensation for the referral",
+        "Dr. Sato generally has no ethical liability for an informal referral made outside a professional context",
+        "Dr. Sato is liable because psychologists are responsible for the conduct of all colleagues they recommend"
+      ],
+      "answer": "Dr. Sato generally has no ethical liability for an informal referral made outside a professional context",
+      "explanation": "An informal recommendation made in a personal context does not establish a professional duty of care or create ethical liability under the APA Ethics Code. The Ethics Code applies to professional activities, and a casual suggestion to a friend does not constitute a formal professional referral. Option A is incorrect because a casual recommendation does not establish a professional duty of care. Option B is incorrect because while accepting referral fees creates additional ethical obligations (Standard 6.07), the absence of compensation is not what determines liability — the informal nature of the referral is the key factor. Option D is incorrect because psychologists are not vicariously liable for the conduct of every colleague they mention or recommend informally.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of the scope of professional vs. personal conduct. The lesson discusses when the Ethics Code applies to professional activities.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Section A: Introduction and Applicability",
+      "lessonExcerpt": "The Ethics Code applies to your professional activities as a psychologist. But the APA can also take action against you for things outside your direct professional role... Does this personal action seem at least partially professional?",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 18,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::16",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

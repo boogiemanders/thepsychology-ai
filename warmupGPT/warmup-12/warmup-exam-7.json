@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "examId": "warmup-12-7",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.483Z"
+  },
+  "questions": [
+    {
+      "stem": "Electrical stimulation of the hypothalamus can elicit emotional responses such as rage or laughter, indicating its involvement in:",
+      "options": [
+        "Motor control regulation",
+        "Emotional processing",
+        "Procedural memory",
+        "Sensory relay"
+      ],
+      "answer": "Emotional processing",
+      "explanation": "1. \"Emotional processing\" is the correct answer because the hypothalamus plays a key role in regulating emotions, as evidenced by studies showing that electrical stimulation of different areas can elicit strong emotional responses such as rage or laughter. This demonstrates its significant influence on emotional behavior and responses, linking it directly to emotional processing.\n\n2. The option \"Motor control regulation\" is incorrect because, while the hypothalamus influences various bodily functions, its primary role is not in the direct regulation of motor control, which is more associated with structures like the basal ganglia and cerebellum. The option \"Procedural memory\" is also incorrect since procedural memory is primarily processed and stored in the cerebellum and basal ganglia, rather than the hypothalamus. Lastly, \"Sensory relay\" is incorrect because the thalamus, not the hypothalamus, serves as the primary relay station for sensory information to the cortex, except for smell.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors address other brain functions but are distinct enough to require applied knowledge of emotional neuroanatomy.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::25",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes negative reinforcement in the context of behavior modification?",
+      "options": [
+        "The addition of an unpleasant stimulus to decrease a behavior.",
+        "The removal of an unpleasant stimulus to increase a behavior.",
+        "The introduction of a neutral stimulus to modify behavior.",
+        "The reinforcement of a behavior through positive feedback."
+      ],
+      "answer": "The removal of an unpleasant stimulus to increase a behavior.",
+      "explanation": "Negative reinforcement involves increasing a behavior by removing an aversive stimulus, thereby providing relief. Option A describes positive punishment, while Option C misrepresents the concept, and Option D refers to positive reinforcement.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of negative reinforcement.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Negative reinforcement increases/maintains behavior by removing something unpleasant.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "What is the actor-observer bias in attribution theory?",
+      "options": [
+        "The tendency to attribute one's own actions to external factors while attributing others' actions to their character.",
+        "The inclination to see one's own behavior as a reflection of personality traits.",
+        "The belief that others' behavior is influenced more by situational factors than by their personality.",
+        "The tendency to overestimate the role of situational factors in one's own behavior."
+      ],
+      "answer": "The tendency to attribute one's own actions to external factors while attributing others' actions to their character.",
+      "explanation": "This answer correctly defines the actor-observer bias, which highlights the double standard in attributions. The other options misrepresent the bias or confuse it with other attribution concepts.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses understanding of the actor-observer bias.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
+      "lessonExcerpt": "The actor-observer effect highlights a double standard we all use: We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "According to Sue and Sue's Racial/Cultural Identity Development (R/CID) model, an individual who initially idealized the dominant culture but now actively rejects dominant cultural values and immerses in their own cultural heritage is most likely in which stage?",
+      "options": [
+        "Conformity",
+        "Dissonance",
+        "Resistance and immersion",
+        "Integrative awareness"
+      ],
+      "answer": "Resistance and immersion",
+      "explanation": "In the R/CID model, the resistance and immersion stage is characterized by active rejection of the dominant culture and full embrace of one's own cultural group. Conformity (A) involves preference for dominant cultural values. Dissonance (B) involves conflict and questioning but not yet full rejection. Integrative awareness (D) represents the final stage where the individual develops a balanced appreciation of both their own and other cultures. The active rejection described in the stem is the defining feature of resistance and immersion.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of stage progression in a widely tested identity model.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Atkinson, Morten, and Sue's R/CID Model",
+      "lessonExcerpt": "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model... This is your foundational model. It applies broadly to members of any racial or cultural minority group.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "In adoption studies examining the heritability of intelligence, researchers have found that as adopted children grow older, their IQ scores tend to show:",
+      "options": [
+        "Increasing correlation with adoptive parents' IQ and decreasing correlation with biological parents' IQ",
+        "Increasing correlation with biological parents' IQ and decreasing correlation with adoptive parents' IQ",
+        "Equal and stable correlations with both biological and adoptive parents' IQ",
+        "No significant correlation with either biological or adoptive parents' IQ"
+      ],
+      "answer": "Increasing correlation with biological parents' IQ and decreasing correlation with adoptive parents' IQ",
+      "explanation": "Adoption studies consistently demonstrate that as adopted children age, their IQ scores become more similar to their biological parents and less similar to their adoptive parents, supporting a strong genetic contribution to intelligence. This reflects the concept of active gene-environment correlation, where individuals increasingly select environments matching their genetic predispositions. Option A reverses the actual finding. Option C incorrectly suggests equal contributions that remain static. Option D contradicts the well-established finding that IQ has substantial heritability.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of adoption study findings. Lesson covers adoption study methodology and that resemblance to biological parents suggests genetic influence, but doesn't give specific age-trend data.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "### Adoption Studies",
+      "lessonExcerpt": "By comparing adopted children to both biological and adoptive parents, researchers can separate genetic from environmental transmission. If adopted children resemble biological parents they never lived with, this suggests genetic influence.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 12,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is TRUE regarding the Wechsler Memory Scale – Fourth Edition (WMS-IV)?",
+      "options": [
+        "It exclusively assesses long-term visual memory in individuals over 90 years old.",
+        "It provides separate index scales for auditory memory, visual memory, and visual working memory.",
+        "It is normed only for children and adolescents between 10 and 18 years of age.",
+        "It does not allow comparison of memory performance to general intellectual ability."
+      ],
+      "answer": "It provides separate index scales for auditory memory, visual memory, and visual working memory.",
+      "explanation": "1. The statement \"It provides separate index scales for auditory memory, visual memory, and visual working memory\" is correct because the Wechsler Memory Scale – Fourth Edition (WMS-IV) includes specific index scales that measure distinct aspects of memory. These index scales are the Auditory Memory Index (AMI), Visual Memory Index (VMI), and Visual Working Memory Index (VWMI), each assessing immediate and delayed recall for auditory and visual information, thereby offering a comprehensive evaluation of memory functions.\n\n2. The option \"It exclusively assesses long-term visual memory in individuals over 90 years old\" is incorrect because the WMS-IV is designed for individuals aged 16 to 90 years, and it evaluates both immediate and delayed memory rather than focusing solely on long-term visual memory. The statement \"It is normed only for children and adolescents between 10 and 18 years of age\" is false since the WMS-IV is normed for a broader age range, specifically from ages 16 to 90 years, including both adults and older adults. Lastly, the claim \"It does not allow comparison of memory performance to general intellectual ability\" is incorrect because the WMS-IV is co-normed with the WAIS-IV, allowing for comparisons between memory performance and general intellectual ability, particularly through the examination of subtest scores.",
+      "kn": "KN32",
+      "kn_explanation": "This question pertains to knowledge about specific assessment instruments and their constructs measured, a core part of clinical assessment (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contain partially true and false statements enhancing discrimination; question promotes integration of test knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::91",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following statements regarding intermittent explosive disorder (IED) is TRUE?",
+      "options": [
+        "IED involves premeditated aggressive acts aimed at achieving tangible outcomes.",
+        "Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage.",
+        "Aggressive outbursts in IED are proportional to the provocation or social stressor.",
+        "The disorder can be diagnosed in children younger than six years old."
+      ],
+      "answer": "Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage.",
+      "explanation": "1. The statement \"Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage\" is correct because it aligns with the diagnostic criteria for intermittent explosive disorder (IED). According to the reference material, IED is characterized by recurrent behavioral outbursts due to a failure to control aggressive impulses, which can manifest as verbal or physical aggression occurring at least twice weekly for a minimum of three months. Importantly, these outbursts do not result in damage or destruction to property or physical injury to others.\n\n2. The incorrect options are as follows:\n- \"IED involves premeditated aggressive acts aimed at achieving tangible outcomes\": This is incorrect because IED requires that outbursts are not premeditated and are not committed with the intention of achieving a tangible outcome.\n- \"Aggressive outbursts in IED are proportional to the provocation or social stressor\": This statement is false because the level of aggressiveness in IED must not be proportional to the provocation or any precipitating social stressor, indicating a disproportionate response.\n- \"The disorder can be diagnosed in children younger than six years old\": This is incorrect as the diagnosis of IED requires that the individual be at least six years old or at the equivalent developmental level, thus excluding younger children.",
+      "kn": "KN36",
+      "kn_explanation": "This question tests knowledge of classification criteria and diagnostic thresholds for impulse-control disorders (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Options include common misconceptions and diagnostic nuances, effectively assessing detailed knowledge of IED diagnostic criteria.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "A test has a reliability coefficient of .81. According to the relationship between reliability and validity, what is the highest possible criterion-related validity coefficient this test can achieve?",
+      "options": [
+        "0.90",
+        "0.81",
+        "0.95",
+        "1.00"
+      ],
+      "answer": "0.90",
+      "explanation": "1. The correct answer is \"0.90\" because the relationship between reliability and validity states that a predictor's criterion-related validity coefficient can be no greater than its reliability index. Since the reliability coefficient of the test is .81, the highest possible validity coefficient is the square root of .81, which equals approximately .90.\n\n2. The option \"0.81\" is incorrect because it suggests that the validity coefficient can be equal to the reliability coefficient, which is not the maximum possible value. \"0.95\" is wrong because it exceeds the highest achievable validity coefficient based on the test's reliability, which is capped at .90. Lastly, \"1.00\" is incorrect as it implies a perfect correlation, which cannot be achieved given the reliability coefficient of .81; the maximum validity cannot exceed the reliability index.",
+      "kn": "KN29",
+      "kn_explanation": "This question highlights the fundamental limitation that reliability places on validity, a key concept in the psychometric evaluation of tests.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests candidate knowledge of mathematical relationships between reliability and validity, with well-balanced answer options.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "Self-instructional training (Meichenbaum) aims to improve children's impulsivity mainly by teaching them to:",
+      "options": [
+        "Verbalize internal task instructions progressively from modeling to covert self-guidance",
+        "Avoid stressful stimuli through role playing and relaxation techniques",
+        "Modify core beliefs through disputation of irrational thoughts",
+        "Develop cognitive schemas during early childhood"
+      ],
+      "answer": "Verbalize internal task instructions progressively from modeling to covert self-guidance",
+      "explanation": "1. The correct answer, \"Verbalize internal task instructions progressively from modeling to covert self-guidance,\" reflects the five stages of self-instructional training developed by Meichenbaum. This approach begins with cognitive modeling, where children observe a model verbalizing instructions, and progresses through stages where they gradually take on more responsibility for verbalizing these instructions themselves, ultimately leading to covert self-instruction. This method is specifically designed to enhance problem-solving skills and reduce impulsivity by fostering self-guidance and self-regulation.\n\n2. The option \"Avoid stressful stimuli through role playing and relaxation techniques\" is incorrect because self-instructional training focuses on teaching task-related verbalization rather than avoidance strategies. The option \"Modify core beliefs through disputation of irrational thoughts\" is wrong as it pertains to Rational Emotive Behavior Therapy (REBT), which targets irrational beliefs, not self-instructional training. Lastly, \"Develop cognitive schemas during early childhood\" is incorrect because self-instructional training does not aim to develop cognitive schemas but rather to teach children specific self-instruction strategies to manage tasks and impulsivity.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "The question offers concise but distinct options that require knowledge of the sequential stages in self-instructional training.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::31",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following employee selection methods is most appropriate for assessing multiple skills in candidates?",
+      "options": [
+        "A structured interview focusing on past experiences.",
+        "A cognitive ability test.",
+        "A work sample test that simulates job tasks.",
+        "A personality inventory."
+      ],
+      "answer": "A work sample test that simulates job tasks.",
+      "explanation": "A work sample test is designed to assess a candidate's ability to perform specific tasks related to the job, making it ideal for evaluating multiple skills. The other options focus on narrower aspects of candidate evaluation.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of effective employee selection methods.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Introduction: Why Inferential Statistics Matter for Your Psychology Career",
+      "lessonExcerpt": "A work sample test is designed to assess a candidate's ability to perform specific tasks related to the job.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::15",
+      "isScored": true
+    },
+    {
+      "stem": "Dr. Torres terminated therapy with a client 18 months ago. The former client has now contacted Dr. Torres expressing romantic interest. According to APA Ethics Code Standard 10.08, which of the following is MOST accurate regarding the permissibility of a sexual relationship?",
+      "options": [
+        "Sexual relationships with former clients are permanently prohibited under all circumstances",
+        "Sexual relationships are prohibited for at least two years after termination, and even after two years the psychologist bears the burden of demonstrating no exploitation",
+        "Sexual relationships are permissible once 12 months have passed since the last professional contact",
+        "Sexual relationships are permissible at any time after termination as long as the client initiates"
+      ],
+      "answer": "Sexual relationships are prohibited for at least two years after termination, and even after two years the psychologist bears the burden of demonstrating no exploitation",
+      "explanation": "APA Ethics Code Standard 10.08 establishes a minimum two-year prohibition on sexual relationships with former clients. After the two-year period, such relationships are not automatically permissible — the psychologist must demonstrate that there has been no exploitation, considering factors such as the nature and duration of therapy, circumstances of termination, the client's personal history, the client's current mental status, and any statements or actions by the therapist suggesting a romantic relationship was possible. At 18 months, Dr. Torres is still within the prohibited period. Option A is incorrect because the prohibition is not permanent, though it is extremely difficult to justify such relationships even after two years. Option C is incorrect because the minimum period is two years, not 12 months. Option D is incorrect because who initiates the relationship is irrelevant to the ethical standard.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP topic with strong distractors. The lesson covers post-therapy relationships in Standards 9 & 10 content.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 10: Therapy",
+      "lessonExcerpt": "post-therapy friendships... These relationships still count as problematic because they prevent the former client from returning to therapy",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::15",
+      "isScored": true
+    },
+    {
+      "stem": "Which leadership style is most characteristic of female leaders compared to male leaders, based on meta-analyses by Eagly and colleagues?",
+      "options": [
+        "More directive and autocratic",
+        "Higher use of laissez-faire behaviors",
+        "More participative and transformational leadership",
+        "Management-by-exception with active monitoring"
+      ],
+      "answer": "More participative and transformational leadership",
+      "explanation": "1. The correct answer, \"More participative and transformational leadership,\" reflects findings from meta-analyses by Eagly and colleagues, which indicate that female leaders are more likely to adopt a participative (democratic) leadership style compared to their male counterparts, who tend to be more directive (autocratic). Additionally, female leaders are found to be more inclined towards transformational leadership, characterized by inspiring and motivating employees while fostering their growth, which contrasts with the more transactional styles often associated with male leaders.\n\n2. \n- **More directive and autocratic**: This option is incorrect because it describes a leadership style more commonly associated with male leaders, who are generally found to adopt a more directive (autocratic) approach, while female leaders are more participative.\n- **Higher use of laissez-faire behaviors**: This is wrong because female leaders are not characterized by laissez-faire behaviors; rather, they engage more actively in leadership through participative and transformational styles.\n- **Management-by-exception with active monitoring**: This option is incorrect as it pertains to male leaders who are more likely to engage in management-by-exception, whereas female leaders tend to focus on transformational leadership, which emphasizes development and support rather than corrective measures.",
+      "kn": "KN46",
+      "kn_explanation": "This question relates to differences in leadership styles by gender, which informs intervention strategies and supervision approaches (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Options reflect nuanced leadership distinctions by gender; distractors are scientifically grounded yet distinguishable.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json::4",
+      "isScored": true
+    }
+  ]
+}

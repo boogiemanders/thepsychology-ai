@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "examId": "warmup-12-26",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "How does signal detection theory account for decision-making under conditions of uncertainty in stimulus perception?",
+      "options": [
+        "By assuming sensory input is always clear and reliable.",
+        "By separating the sensory processing from decision processes and incorporating response bias and sensitivity.",
+        "By predicting a linear relationship between stimulus intensity and sensation.",
+        "By relying solely on the strength of the stimulus to determine perception."
+      ],
+      "answer": "By separating the sensory processing from decision processes and incorporating response bias and sensitivity.",
+      "explanation": "1. The correct answer, \"By separating the sensory processing from decision processes and incorporating response bias and sensitivity,\" accurately reflects the principles of signal detection theory (SDT). SDT posits that perception is influenced by both sensory information and decision-making processes, which include the perceiver's sensitivity to stimuli and their decision criterion or bias. This separation allows for a more nuanced understanding of how individuals make judgments about stimuli in the presence of uncertainty and background noise.\n\n2. The option \"By assuming sensory input is always clear and reliable\" is incorrect because SDT explicitly acknowledges that perception occurs in the presence of uncertainty and noise, rather than assuming clarity. The statement \"By predicting a linear relationship between stimulus intensity and sensation\" is wrong as SDT does not rely on linear relationships; it recognizes that the relationship can vary based on individual differences in sensitivity and decision criteria. Lastly, the option \"By relying solely on the strength of the stimulus to determine perception\" is incorrect because SDT emphasizes that perception is not determined solely by stimulus strength but also by the decision-making processes influenced by factors like motivation, fatigue, and background noise.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "hard",
+      "quality_comment": "Complex concept clearly presented with well-designed distractors, appropriate for advanced EPPP items.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Sensory Perception.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Sensory Perception.json::13",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "According to Bandura's social cognitive theory, which of the following is NOT one of the four mediational processes required for observational learning?",
+      "options": [
+        "Attention",
+        "Encoding",
+        "Retention",
+        "Motivation"
+      ],
+      "answer": "Encoding",
+      "explanation": "1. **Why \"Encoding\" is the Correct Answer**: \"Encoding\" is the correct answer because it is not one of the four mediational processes identified by Bandura in his social cognitive theory. The four processes are attention, retention, production, and motivation, which describe the steps necessary for observational learning to occur. Encoding, while related to memory processes, is not explicitly mentioned as a mediational process in Bandura's framework.\n\n2. **Why Each Incorrect Option is Wrong**:\n   - **Attention**: Attention is essential because the learner must notice and focus on the model's behavior for observational learning to take place.\n   - **Retention**: Retention refers to the learner's ability to store information about the model's behavior in memory, which is crucial for later imitation.\n   - **Motivation**: Motivation is necessary as it determines whether the learner is willing to perform the observed behavior, influenced by various forms of reinforcement.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses major theories of learning, specifically observational learning, covered in KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors include three correct mediational processes and one related but incorrect term, requiring precise knowledge of Bandura's theory.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::61",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following describes the typical relationship between intelligence and susceptibility to persuasion?",
+      "options": [
+        "An inverted U-shaped relationship where moderate intelligence is most susceptible",
+        "Higher intelligence is associated with higher susceptibility to persuasion",
+        "Lower intelligence is associated with higher susceptibility to persuasion",
+        "No consistent relationship exists between intelligence and persuasion"
+      ],
+      "answer": "Lower intelligence is associated with higher susceptibility to persuasion",
+      "explanation": "1. The correct answer, \"Lower intelligence is associated with higher susceptibility to persuasion,\" is supported by the research findings of Rhodes and Wood (1992), which indicate a linear relationship between intelligence and influenceability. Specifically, their meta-analysis revealed that individuals with lower intelligence levels exhibit higher susceptibility to persuasive messages.\n\n2. The first incorrect option, \"An inverted U-shaped relationship where moderate intelligence is most susceptible,\" is wrong because the research indicates a linear relationship rather than an inverted U-shape, meaning susceptibility increases as intelligence decreases. The second incorrect option, \"Higher intelligence is associated with higher susceptibility to persuasion,\" is incorrect because it contradicts the research findings, which state that lower intelligence correlates with higher susceptibility. Lastly, the option \"No consistent relationship exists between intelligence and persuasion\" is incorrect because the research clearly demonstrates a consistent linear relationship where lower intelligence leads to greater susceptibility to persuasion.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding recipient characteristics influencing persuasion fits within social cognitive processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors cover common patterns to distinguish test-takers' familiarity with intelligence and persuasion data.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::15",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "According to Helms's WRID Model, which status is characterized by denial of racism and satisfaction with the racial status quo, often accompanied by limited contact with racial minorities?",
+      "options": [
+        "Contact",
+        "Reintegration",
+        "Disintegration",
+        "Autonomy"
+      ],
+      "answer": "Contact",
+      "explanation": "1. **Why \"Contact\" is Correct:** The \"Contact\" status in Helms's White Racial Identity Development (WRID) Model is characterized by a lack of awareness of racism and a sense of satisfaction with the existing racial status quo. Individuals in this status typically have limited interactions with racial minorities, leading to an obliviousness regarding the complexities of race relations.\n\n2. **Why Each Incorrect Option is Wrong:**\n   - **Reintegration:** This status involves an attempt to resolve moral dilemmas about race by believing in the superiority of Whites over minority groups, which is contrary to the denial of racism seen in \"Contact.\"\n   - **Disintegration:** In this status, individuals become aware of race-related contradictions and experience confusion and anxiety, indicating a recognition of racism rather than denial.\n   - **Autonomy:** This status reflects a developed nonracist White identity and an appreciation for diversity, which is a significant departure from the denial of racism present in the \"Contact\" status.",
+      "kn": "KN19",
+      "kn_explanation": "This question tests understanding of stages in racial identity development in White individuals, relevant to cultural and social psychology.",
+      "difficulty": "easy",
+      "quality_comment": "Clear distinction between statuses in the WRID model and concise stem make this question straightforward and useful for foundational knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::14",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary risk associated with teratogen exposure during the embryonic period of prenatal development?",
+      "options": [
+        "Minor functional problems",
+        "Severe structural abnormalities",
+        "Increased birth weight",
+        "Enhanced cognitive abilities"
+      ],
+      "answer": "Severe structural abnormalities",
+      "explanation": "The correct answer is 'Severe structural abnormalities', as the embryonic period (weeks 3-8) is when major organs and body structures are forming, making it the time of greatest vulnerability to teratogens. The other options do not accurately reflect the risks during this critical period.",
+      "kn": "KN27",
+      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of prenatal vulnerabilities.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## The Embryonic Period (Weeks 3-8)",
+      "lessonExcerpt": "This is the high-stakes period... exposure to harmful substances (called teratogens) causes the most serious damage.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::6",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following personality disorders is characterized by a pervasive pattern of disregard for the rights of others?",
+      "options": [
+        "Borderline Personality Disorder",
+        "Narcissistic Personality Disorder",
+        "Antisocial Personality Disorder",
+        "Avoidant Personality Disorder"
+      ],
+      "answer": "Antisocial Personality Disorder",
+      "explanation": "Antisocial Personality Disorder is defined by a pervasive pattern of disregard for the rights of others, including deceit and manipulation. The other options describe different patterns of behavior and interpersonal relationships.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of personality disorder characteristics.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Antisocial Personality Disorder is characterized by a pervasive pattern of disregard for the rights of others.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::3",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist is evaluating a 32-year-old patient who has experienced a single episode of markedly elevated mood, decreased need for sleep, pressured speech, and grandiose delusions lasting 10 days, requiring hospitalization. The patient has never experienced a major depressive episode. Based on DSM-5 criteria, what is the MOST appropriate diagnosis?",
+      "options": [
+        "Bipolar II disorder",
+        "Bipolar I disorder",
+        "Cyclothymic disorder",
+        "Unspecified bipolar and related disorder"
+      ],
+      "answer": "Bipolar I disorder",
+      "explanation": "Bipolar I disorder requires at least one manic episode lasting at least one week (or any duration if hospitalization is required). This patient meets criteria with a 10-day episode requiring hospitalization. Critically, Bipolar I does NOT require a depressive episode—only one manic episode is needed. Bipolar II requires at least one hypomanic AND one major depressive episode, and by definition the person has never had a full manic episode. Cyclothymic disorder involves chronic fluctuating hypomanic and depressive symptoms that never meet full episode criteria. Unspecified bipolar disorder is inappropriate when full criteria for a specific diagnosis are met.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the critical distinction that Bipolar I requires only ONE manic episode and does NOT require depression; a common exam trap",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## The Bipolar Disorders: Different Combinations, Different Diagnoses",
+      "lessonExcerpt": "Bipolar I only requires ONE manic episode. That person might never have depression, but they still have Bipolar I.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::2",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist obtains a z-score of +1.5 on a standardized measure for a client. The psychologist needs to convert this to a T-score for reporting purposes. What is the equivalent T-score?",
+      "options": [
+        "55",
+        "60",
+        "65",
+        "72.5"
+      ],
+      "answer": "65",
+      "explanation": "T-scores have a mean of 50 and a standard deviation of 10. To convert a z-score to a T-score, use the formula: T = 50 + 10(z). With z = +1.5: T = 50 + 10(1.5) = 50 + 15 = 65. Option A (55) would correspond to z = +0.5. Option B (60) would correspond to z = +1.0. Option D (72.5) incorrectly uses a different conversion formula. Understanding standardized score conversions is essential for interpreting psychological test results across different metric systems.",
+      "kn": "KN55",
+      "kn_explanation": "Converting z-scores to T-scores involves descriptive statistics and probability theory (score transformations).",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward calculation question.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## T-Scores",
+      "lessonExcerpt": "T-scores have a mean of 50 and a standard deviation of 10. They're essentially z-scores that have been rescaled to avoid negative numbers and decimals.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::1",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In research assessing telepsychology for anxiety disorders, which statement is best supported?",
+      "options": [
+        "Videoconferencing therapy is generally less effective than in-person therapy",
+        "Videoconferencing therapy shows equivalent improvements and similar dropout rates compared to in-person therapy",
+        "Telepsychology is only effective for individual anxiety disorders, not comorbid conditions",
+        "Therapeutic alliance cannot be established effectively via telepsychology"
+      ],
+      "answer": "Videoconferencing therapy shows equivalent improvements and similar dropout rates compared to in-person therapy",
+      "explanation": "1. The statement \"Videoconferencing therapy shows equivalent improvements and similar dropout rates compared to in-person therapy\" is correct because research indicates that psychotherapy delivered via telepsychology, particularly cognitive-behavioral therapy (CBT), is effective for treating anxiety disorders and shows no significant differences in outcomes when compared to in-person therapy. Studies, such as those by Berryhill and colleagues, demonstrate that videoconferencing therapy leads to significant improvements in anxiety symptoms, with controlled studies reporting similar dropout rates for both modalities.\n\n2. The option \"Videoconferencing therapy is generally less effective than in-person therapy\" is incorrect because research has shown that the effectiveness of telepsychology for anxiety disorders is comparable to that of in-person therapy, not less effective. The statement \"Telepsychology is only effective for individual anxiety disorders, not comorbid conditions\" is false since studies have indicated that telepsychology is effective for treating both individual anxiety disorders and comorbid conditions. Lastly, the option \"Therapeutic alliance cannot be established effectively via telepsychology\" is misleading because while some therapists reported challenges in developing rapport, many studies have found that therapeutic alliances can still be effectively established through telepsychology.",
+      "kn": "KN49",
+      "kn_explanation": "Concerns telepsychology and technology-assisted psychological services (KN49).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors probe common misconceptions about teletherapy, forcing examinees to recall empirical findings.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::40",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "A variable measured by assigning individuals to categories such as 'strongly agree,' 'agree,' 'disagree,' and 'strongly disagree' is an example of which scale of measurement?",
+      "options": [
+        "Nominal scale",
+        "Interval scale",
+        "Ordinal scale",
+        "Ratio scale"
+      ],
+      "answer": "Ordinal scale",
+      "explanation": "1. The correct answer is \"Ordinal scale\" because this scale divides individuals into ordered categories that reflect the magnitude of their responses. In this case, the categories 'strongly agree,' 'agree,' 'disagree,' and 'strongly disagree' indicate a ranking of agreement, allowing us to determine that one response is more or less favorable than another, but not how much more or less.\n\n2. The \"Nominal scale\" is incorrect because it categorizes individuals into unordered categories without any inherent ranking or magnitude, such as gender or eye color. The \"Interval scale\" is also incorrect because it involves ordered categories with equal differences between adjacent values, but does not have an absolute zero point, as seen in temperature or IQ scores. Lastly, the \"Ratio scale\" is wrong because it assigns ordered categories with equal differences and an absolute zero point, allowing for meaningful comparisons of ratios, such as weight or height, which is not applicable to the categories of agreement.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem with straightforward options; distractors are plausible but test basic knowledge of measurement levels.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json::10",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "A judge orders a defendant to attend anger management therapy as a condition of probation. After several sessions, the prosecuting attorney subpoenas the therapist's records. Who holds the psychotherapist-client privilege in this situation?",
+      "options": [
+        "The court holds the privilege because it ordered the treatment",
+        "The therapist holds the privilege and may assert it independently",
+        "The client holds the privilege, as privilege belongs to the client even in court-ordered therapy",
+        "No privilege exists in court-ordered therapy; all records are automatically available to the court"
+      ],
+      "answer": "The client holds the privilege, as privilege belongs to the client even in court-ordered therapy",
+      "explanation": "The lesson clearly states that privilege is a 'Legal right' where the 'Client holds it; client decides to claim or waive.' While the lesson lists 'Court-ordered competency evaluations' as a common exception to privilege, court-ordered therapy (treatment) is distinct from court-ordered evaluations. In court-ordered treatment, the client generally retains the privilege. The therapist can assert privilege on behalf of the client. Option A incorrectly assigns privilege to the court—courts determine exceptions but don't hold privilege. Option B is partially correct in that therapists can assert privilege, but they do so on behalf of the client who holds it. Option D overstates the exception; court-ordered treatment does not automatically eliminate all privilege.",
+      "kn": "KN63",
+      "kn_explanation": "Court-ordered therapy, subpoena, and privileged communication laws",
+      "difficulty": "hard",
+      "quality_comment": "Tests privilege vs. confidentiality distinction in court-ordered therapy. Lesson covers court-ordered evaluation and privilege ownership.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Confidentiality versus Privilege: Understanding the Difference",
+      "lessonExcerpt": "Court-ordered evaluation: The court/attorney who retained you — Objective assessment; limited confidentiality.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 16,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::4",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "Which construct refers to employees' perceptions of their value as members of their organization and relates to their resistance to job stress?",
+      "options": [
+        "Hardiness",
+        "Organizational justice",
+        "Organization-based self-esteem (OBSE)",
+        "Continuance commitment"
+      ],
+      "answer": "Organization-based self-esteem (OBSE)",
+      "explanation": "1. **Correct Answer: Organization-based self-esteem (OBSE)**  \nOrganization-based self-esteem (OBSE) refers to employees' perceptions of their value as members of their organization. This construct is significant because it has been linked to job stress; individuals with low levels of OBSE are more adversely affected by stress and tend to cope with it in a more passive manner, whereas those with high OBSE exhibit greater resistance to job stress.\n\n2. **Incorrect Options:**\n- **Hardiness:** While hardiness is a personality trait that increases resistance to stress, it does not specifically relate to employees' perceptions of their value within an organization, which is the focus of the question.\n- **Organizational justice:** This construct pertains to the fairness of outcomes and procedures within an organization, but it does not directly address employees' self-perceptions or their resistance to job stress.\n- **Continuance commitment:** This type of commitment refers to an employee's belief that they must stay with the organization for financial or alternative opportunity reasons, rather than their self-esteem or value as a member, making it unrelated to the perception of value in the context of stress resistance.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are related constructs, making the question appropriate for assessing nuanced knowledge in this area.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::10",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

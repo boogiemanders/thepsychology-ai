@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "examId": "warmup-12-30",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "According to the dopamine hypothesis, which of the following is believed to contribute to the symptoms of psychotic disorders?",
+      "options": [
+        "Increased serotonin levels",
+        "Decreased dopamine activity",
+        "Increased dopamine activity",
+        "Decreased serotonin levels"
+      ],
+      "answer": "Increased dopamine activity",
+      "explanation": "The dopamine hypothesis suggests that increased dopamine activity, particularly in certain brain pathways, is associated with the positive symptoms of psychotic disorders. Increased serotonin levels and decreased dopamine activity do not align with this hypothesis.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of the dopamine hypothesis in relation to psychosis.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "The dopamine hypothesis suggests that increased dopamine activity is associated with the positive symptoms of psychotic disorders.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::14",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "A client with social anxiety avoids making phone calls because doing so eliminates the distressing feelings of anticipatory anxiety. Over time, the client's avoidance behavior has increased significantly. This pattern is BEST explained by:",
+      "options": [
+        "Positive reinforcement, because the client gains a sense of control by avoiding the situation",
+        "Negative reinforcement, because the avoidance behavior is strengthened by the removal of an aversive stimulus",
+        "Positive punishment, because the anxiety serves as an added consequence that suppresses phone use",
+        "Negative punishment, because the client loses social opportunities as a result of avoidance"
+      ],
+      "answer": "Negative reinforcement, because the avoidance behavior is strengthened by the removal of an aversive stimulus",
+      "explanation": "Negative reinforcement occurs when a behavior increases because it results in the removal of an aversive stimulus. In this case, avoidance of phone calls removes anticipatory anxiety (the aversive stimulus), which strengthens the avoidance behavior. This is a classic example of avoidance conditioning maintained through negative reinforcement. Option A is incorrect because positive reinforcement involves adding a pleasant stimulus, not removing an unpleasant one. Option C is incorrect because positive punishment would decrease behavior, not increase it. Option D is incorrect because negative punishment involves removing a desirable stimulus to decrease behavior, which describes a consequence of avoidance but not the mechanism maintaining it.",
+      "kn": "KN7",
+      "kn_explanation": "Negative reinforcement and avoidance learning are core learning principles",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant scenario that tests the commonly confused distinction between negative reinforcement and punishment. The avoidance context is highly testable on the EPPP.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### Escape and Avoidance Conditioning",
+      "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation. Note that the medication itself isn't the reinforcer, the removal of pain is what reinforces taking the medication.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::1",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "What is a common adjustment outcome for children raised by gay and lesbian parents compared to those raised by heterosexual parents?",
+      "options": [
+        "Children of gay and lesbian parents show higher rates of psychological distress.",
+        "Children of gay and lesbian parents have lower levels of social competence.",
+        "Children of gay and lesbian parents exhibit similar adjustment outcomes to those raised by heterosexual parents.",
+        "Children of gay and lesbian parents are more likely to experience bullying."
+      ],
+      "answer": "Children of gay and lesbian parents exhibit similar adjustment outcomes to those raised by heterosexual parents.",
+      "explanation": "This answer reflects research findings that indicate no significant differences in adjustment outcomes between children of gay and lesbian parents and those of heterosexual parents. The other options inaccurately suggest negative outcomes associated with being raised by gay and lesbian parents.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and accurately assesses knowledge of family dynamics.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
+      "lessonExcerpt": "Research consistently shows children of gay and lesbian parents exhibit similar adjustment outcomes to those raised by heterosexual parents.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::4",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "In the context of Sue's worldview framework, which worldview is characterized by a belief in personal responsibility but an external locus of control?",
+      "options": [
+        "Internal locus of control and external locus of responsibility (IC-ER)",
+        "External locus of control and internal locus of responsibility (EC-IR)",
+        "External locus of control and external locus of responsibility (EC-ER)",
+        "Internal locus of control and internal locus of responsibility (IC-IR)"
+      ],
+      "answer": "External locus of control and internal locus of responsibility (EC-IR)",
+      "explanation": "The EC-IR worldview suggests that individuals feel responsible for their actions but believe that their outcomes are largely influenced by external factors, which is a key distinction in Sue's framework.",
+      "difficulty": "easy",
+      "kn": "KN18",
+      "kn_explanation": "This question addresses cultural psychology concepts, specifically different worldviews influenced by culture, which falls under cultural and sociopolitical psychology (KN18).",
+      "quality_comment": "This question effectively tests understanding of the relationship between locus of control and responsibility within Sue's framework.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::27",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "A 4-year-old child tells her father that the sun went to sleep because it was tired. This statement best illustrates which characteristic of preoperational thought?",
+      "options": [
+        "Egocentrism",
+        "Animism",
+        "Transductive reasoning",
+        "Centration"
+      ],
+      "answer": "Animism",
+      "explanation": "Animism is the preoperational tendency to attribute life and lifelike qualities (such as feelings, intentions, and fatigue) to inanimate objects. The child is attributing the human experience of tiredness and sleeping to the sun. Egocentrism involves difficulty understanding others' perspectives, not attributing life to objects. Transductive reasoning involves believing co-occurring events are causally related. Centration refers to focusing on one perceptual aspect while ignoring others, typically demonstrated in conservation tasks.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "Classic application-level question requiring differentiation among preoperational characteristics with a clear clinical vignette.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
+      "lessonExcerpt": "Animism: Attributing life to inanimate objects",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::8",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "What are the diagnostic criteria for separation anxiety disorder?",
+      "options": [
+        "Excessive fear of separation from home or attachment figures lasting at least four weeks.",
+        "Persistent worry about losing a significant other or event causing separation.",
+        "Fear of social situations leading to avoidance behavior.",
+        "Recurrent panic attacks occurring unexpectedly."
+      ],
+      "answer": "Excessive fear of separation from home or attachment figures lasting at least four weeks.",
+      "explanation": "The primary diagnostic criterion for separation anxiety disorder includes excessive fear of separation that lasts for at least four weeks. The other options describe different anxiety-related disorders.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of separation anxiety disorder.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The diagnostic criteria for separation anxiety disorder include excessive fear of separation from home or attachment figures lasting at least four weeks.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::70",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A patient with insomnia complains of worry about the consequences of poor sleep and frequently checks the clock at night, which worsens their difficulty sleeping. According to cognitive therapy for insomnia (CT-I), what are these behaviors termed?",
+      "options": [
+        "Sleep hygiene violations",
+        "Maladaptive safety behaviors",
+        "Sleep restriction techniques",
+        "Stimulus control errors"
+      ],
+      "answer": "Maladaptive safety behaviors",
+      "explanation": "1. The correct answer, \"maladaptive safety behaviors,\" refers to actions that individuals engage in to try to gain control over their sleep but ultimately exacerbate their insomnia. In this case, the patient's worry about the consequences of poor sleep and the act of frequently checking the clock are counterproductive strategies that increase anxiety and reinforce negative beliefs about sleep, thereby worsening their sleep difficulties.\n\n2. **Sleep hygiene violations:** This option is incorrect because sleep hygiene refers to practices that promote good sleep quality, such as maintaining a consistent sleep schedule or creating a comfortable sleep environment; the patient's behaviors do not fall under this category. \n\n**Sleep restriction techniques:** This option is incorrect because sleep restriction is a component of cognitive behavior therapy for insomnia (CBT-I) designed to improve sleep efficiency by limiting time in bed to the actual amount of sleep; the patient's behaviors do not align with this therapeutic approach.\n\n**Stimulus control errors:** This option is incorrect because stimulus control involves establishing the bed and bedroom as cues for sleep, such as going to bed only when tired; the patient's behaviors of worrying and clock-checking do not reflect errors in this strategy but rather maladaptive attempts to manage anxiety about sleep.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible sleep-related terms, allowing for meaningful discrimination based on CT-I theory.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json::11",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Inter-rater reliability is most accurately estimated by which statistic that accounts for chance agreement when two raters assign nominal ratings?",
+      "options": [
+        "Cohen’s kappa coefficient",
+        "Percent agreement",
+        "Cronbach’s alpha",
+        "Spearman-Brown prophecy formula"
+      ],
+      "answer": "Cohen’s kappa coefficient",
+      "explanation": "1. **Cohen’s kappa coefficient** is the correct answer because it is specifically designed to measure inter-rater reliability for nominal ratings while accounting for chance agreement between raters. This means it provides a more accurate assessment of the consistency of ratings assigned by different raters compared to other methods that do not consider chance agreement.\n\n2. **Percent agreement** is incorrect because it does not account for chance agreement, which can lead to an overestimate of reliability. **Cronbach’s alpha** is not suitable because it evaluates internal consistency reliability, not inter-rater reliability, and is used for tests measuring a single content domain rather than for comparing ratings from different raters. **Spearman-Brown prophecy formula** is also incorrect as it is used to adjust split-half reliability coefficients and does not pertain to inter-rater reliability assessment.",
+      "kn": "KN29",
+      "kn_explanation": "Inter-rater reliability measurement techniques are integral to psychometric evaluation in assessment (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Good clarity and plausible distractors, focusing the test-taker on differences between reliability coefficients.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::22",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In Acceptance and Commitment Therapy (ACT), what is the process of 'cognitive defusion' designed to accomplish?",
+      "options": [
+        "Enhance emotional avoidance to reduce distress",
+        "Increase attachment to core beliefs for consistent behavior",
+        "Distance oneself from thoughts and feelings by viewing them as experiences rather than literal truths",
+        "Eliminate unpleasant thoughts through distraction"
+      ],
+      "answer": "Distance oneself from thoughts and feelings by viewing them as experiences rather than literal truths",
+      "explanation": "1. The correct answer, \"Distance oneself from thoughts and feelings by viewing them as experiences rather than literal truths,\" accurately reflects the goal of cognitive defusion in Acceptance and Commitment Therapy (ACT). Cognitive defusion aims to counter cognitive fusion, which is the tendency to identify with one’s thoughts and feelings as reality. By fostering a perspective where thoughts are seen as transient experiences rather than absolute truths, individuals can reduce their psychological inflexibility and enhance their ability to act in accordance with their values.\n\n2. The option \"Enhance emotional avoidance to reduce distress\" is incorrect because ACT promotes experiential acceptance rather than avoidance; it encourages individuals to embrace their thoughts and feelings rather than escape from them. The statement \"Increase attachment to core beliefs for consistent behavior\" is also wrong, as cognitive defusion seeks to reduce attachment to rigid beliefs, allowing for greater flexibility in behavior. Lastly, \"Eliminate unpleasant thoughts through distraction\" is misleading because ACT does not advocate for distraction or elimination of thoughts; instead, it emphasizes accepting thoughts while committing to value-based actions, regardless of their presence.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect plausible misunderstandings of ACT processes, encouraging precise knowledge of its therapeutic components.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::28",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "If the correlation coefficient between job knowledge and job performance is .70, what does the coefficient of determination (.70 squared) indicate?",
+      "options": [
+        "70% of performance variance is due to job knowledge",
+        "49% of performance variance is explained by job knowledge",
+        "30% of performance variance is unexplained error",
+        "The correlation is unreliable due to nonlinear relationship"
+      ],
+      "answer": "49% of performance variance is explained by job knowledge",
+      "explanation": "1. The correct answer, \"49% of performance variance is explained by job knowledge,\" is derived from the coefficient of determination, which is calculated by squaring the correlation coefficient. In this case, with a correlation of .70, squaring it results in .49, indicating that 49% of the variability in job performance can be accounted for by differences in job knowledge. This reflects the shared variability between the two variables, demonstrating how job knowledge influences job performance.\n\n2. The option \"70% of performance variance is due to job knowledge\" is incorrect because it misinterprets the correlation coefficient; the coefficient itself (0.70) does not represent the percentage of variance explained. The option \"30% of performance variance is unexplained error\" is misleading; while it's true that not all variance is explained, this statement does not directly relate to the coefficient of determination, which specifically indicates the explained variance. Lastly, the statement \"The correlation is unreliable due to nonlinear relationship\" is incorrect because the reference material states that the Pearson r correlation is only unreliable when the relationship is nonlinear, but it does not imply that a correlation of .70 is inherently unreliable without evidence of nonlinearity.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "Clear numeric example enhances understanding; distractors test common misconceptions about correlation and variance explained.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::20",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "In a legal setting, which of the following best describes a psychologist's obligation regarding a client's confidentiality when faced with a subpoena?",
+      "options": [
+        "The psychologist must always disclose all client information requested by the subpoena.",
+        "The psychologist can assert psychotherapist-patient privilege unless the client authorizes the release of information.",
+        "The psychologist should ignore the subpoena if they believe it violates confidentiality.",
+        "The psychologist must consult with the court before taking any action regarding the subpoena."
+      ],
+      "answer": "The psychologist can assert psychotherapist-patient privilege unless the client authorizes the release of information.",
+      "explanation": "The correct answer is that the psychologist can assert privilege unless the client authorizes the release. This aligns with the lesson's guidance that states, 'If your client authorizes release? You're good to go (but only release what's specifically requested).' The other options are incorrect because they either misrepresent the obligation to disclose or suggest ignoring legal requests.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of legal obligations regarding confidentiality.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
+      "lessonExcerpt": "If you're sitting in a deposition or courtroom without client authorization, assert psychotherapist-patient privilege on behalf of your client.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 0,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::24",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "Which evaluation component involves determining if a program's effectiveness can be practically measured before conducting a full evaluation?",
+      "options": [
+        "Process evaluation",
+        "Evaluability assessment",
+        "Implementation evaluation",
+        "Needs assessment"
+      ],
+      "answer": "Evaluability assessment",
+      "explanation": "1. **Evaluability assessment** is the correct answer because it specifically aims to determine if evaluating a training program’s effectiveness is possible and practical before a full evaluation is conducted. This step ensures that the evaluation can be effectively designed and implemented, considering the resources and conditions available for measuring outcomes.\n\n2. The **process evaluation** is incorrect because it focuses on evaluating how the program was delivered rather than assessing the feasibility of measuring its effectiveness. The **implementation evaluation** is also wrong, as it monitors the fidelity of the program's delivery rather than addressing whether the evaluation itself can be conducted practically. Lastly, the **needs assessment** is not the correct answer because it identifies the needs of proposed participants and the methods to meet those needs, rather than evaluating the feasibility of measuring program effectiveness.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "hard",
+      "quality_comment": "The question requires knowledge of nuanced evaluation stages with closely related terms as distractors, increasing cognitive challenge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json::15",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

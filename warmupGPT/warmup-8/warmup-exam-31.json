@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "examId": "warmup-8-31",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following best distinguishes between aphasia and apraxia?",
+      "options": [
+        "Aphasia primarily affects language comprehension, while apraxia affects motor planning for speech.",
+        "Aphasia is characterized by impaired speech production, while apraxia involves difficulty in understanding language.",
+        "Aphasia affects the ability to produce speech, while apraxia affects the ability to coordinate the movements necessary for speech.",
+        "Aphasia is a motor disorder, while apraxia is a language disorder."
+      ],
+      "answer": "Aphasia affects the ability to produce speech, while apraxia affects the ability to coordinate the movements necessary for speech.",
+      "explanation": "The correct answer highlights that aphasia is primarily a language production issue, while apraxia involves the motor planning necessary for speech. Option A incorrectly states that aphasia affects comprehension, which is not always the case. Option B misrepresents the nature of both disorders. Option D reverses the definitions of the two conditions.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies because it relates to understanding language and motor disorders, specifically aphasia and apraxia.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses the distinction between two complex disorders.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## The Frontal Lobe: Your Brain's Executive Suite",
+      "lessonExcerpt": "When it's damaged, you get **Broca's aphasia**. Also called expressive or nonfluent aphasia.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::16",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "In educational settings, which of the following non-verbal communication cues is most likely to enhance student learning?",
+      "options": [
+        "Eye contact",
+        "Crossed arms",
+        "Looking at the floor",
+        "Fidgeting"
+      ],
+      "answer": "Eye contact",
+      "explanation": "Eye contact is a powerful non-verbal communication cue that can enhance engagement and learning in educational settings. Crossed arms, looking at the floor, and fidgeting are generally associated with disinterest or anxiety, which can detract from learning.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of effective communication in education.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "This is your immediate response.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::13",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which stage in the Racial/Cultural Identity Development Model involves individuals recognizing their own cultural identity and its significance?",
+      "options": [
+        "Pre-encounter stage",
+        "Encounter stage",
+        "Immersion-Emersion stage",
+        "Internalization stage"
+      ],
+      "answer": "Internalization stage",
+      "explanation": "The Internalization stage is where individuals recognize and embrace their cultural identity, integrating it into their self-concept. The other stages focus on different aspects of identity development, such as awareness or immersion in cultural experiences.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of a specific model of cultural identity development.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
+      "lessonExcerpt": "Individuals recognizing their own cultural identity and its significance occurs in the Internalization stage.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::26",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which term describes bilingual or multilingual speakers’ use of more than one language within a single conversation or interaction?",
+      "options": [
+        "Code-switching",
+        "Language brokering",
+        "Paralanguage",
+        "Overextension"
+      ],
+      "answer": "Code-switching",
+      "explanation": "1. \"Code-switching\" is the correct answer because it specifically refers to bilingual or multilingual speakers’ practice of using more than one language or language variety within a single interaction or conversational turn. This phenomenon often occurs unconsciously, although speakers may also use it consciously for various communicative purposes, such as expressing emotions or compensating for language deficiencies.\n\n2. The term \"language brokering\" is incorrect because it describes the act of translating and interpreting within immigrant families by children and adolescents for their parents and others, rather than the use of multiple languages in conversation. \"Paralanguage\" is also incorrect as it refers to how something is said (such as tone and intonation) rather than the use of different languages in speech. Lastly, \"overextension\" is incorrect because it pertains to a language error where a child uses a word too broadly, such as calling all furry animals \"doggie,\" rather than addressing the mixing of languages in conversation.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Options are all related to language concepts, making distractors plausible and enhancing question validity.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::16",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "A client diagnosed with exhibitionistic disorder must meet which of the following diagnostic requirements according to DSM-5-TR?",
+      "options": [
+        "Recurrent sexual arousal from exposing genitals to consenting adults for at least six months",
+        "Exposure of genitals to unsuspecting persons or significant distress/impairment caused by urges or fantasies lasting six months or more",
+        "Exposing genitals solely to prepubertal children for sexual arousal without acting on urges",
+        "Distress caused by fantasies of exposure without any behavior for less than six months"
+      ],
+      "answer": "Exposure of genitals to unsuspecting persons or significant distress/impairment caused by urges or fantasies lasting six months or more",
+      "explanation": "1. The correct answer, \"Exposure of genitals to unsuspecting persons or significant distress/impairment caused by urges or fantasies lasting six months or more,\" aligns with the DSM-5-TR criteria for exhibitionistic disorder. This disorder requires that the individual experiences recurrent and intense sexual arousal from exposing their genitals to nonconsenting individuals, with the diagnosis being valid if these urges or behaviors have persisted for at least six months and result in significant distress or impairment.\n\n2. The first incorrect option, \"Recurrent sexual arousal from exposing genitals to consenting adults for at least six months,\" is wrong because the disorder specifically pertains to exposure to nonconsenting individuals, not consenting adults. The second option, \"Exposing genitals solely to prepubertal children for sexual arousal without acting on urges,\" is incorrect because the diagnosis requires that the person must have acted on their urges or experienced significant distress, not merely fantasized about it. Lastly, the third option, \"Distress caused by fantasies of exposure without any behavior for less than six months,\" is incorrect as the criteria specify that significant distress or impairment must be linked to actual urges or behaviors and must last for six months or longer.",
+      "kn": "KN36",
+      "kn_explanation": "This question evaluates diagnostic criteria for a paraphilic disorder, specifically focusing on assessment and identification (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Options present nuanced diagnostic features related to duration, consent, and behavior to challenge detailed knowledge of criteria.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::9",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A behavioral psychologist explains that the emotional release experienced during psychoanalytic free association is therapeutically beneficial not because of catharsis per se, but because it allows the client to discuss previously avoided material without negative consequences. This explanation is MOST consistent with which behavioral principle?",
+      "options": [
+        "Systematic desensitization through reciprocal inhibition of anxiety responses",
+        "Extinction of conditioned emotional responses through repeated unreinforced exposure",
+        "Counterconditioning by pairing distressing memories with the positive therapeutic relationship",
+        "Stimulus generalization of relaxation from the therapy setting to real-world situations"
+      ],
+      "answer": "Extinction of conditioned emotional responses through repeated unreinforced exposure",
+      "explanation": "From a behavioral perspective, the catharsis that occurs in psychoanalysis can be understood as extinction. When clients verbalize previously avoided (repressed) thoughts and feelings during free association, they are exposed to conditioned stimuli (the distressing memories and emotions) without the originally feared negative consequences. Over repeated exposures in the safe therapy environment, the conditioned emotional responses gradually extinguish. Option A is incorrect because systematic desensitization involves a structured anxiety hierarchy and relaxation training, not free association. Option C describes counterconditioning, which requires actively pairing the stimulus with an incompatible positive response—this is a related but distinct mechanism from extinction. Option D describes stimulus generalization, which refers to transfer of learning across contexts rather than the in-session emotional release phenomenon.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent integrative question requiring understanding of both psychodynamic concepts and behavioral principles. The lesson mentions catharsis but does not provide the behavioral reinterpretation as extinction.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Freudian Psychoanalysis: The Original Talk Therapy",
+      "lessonExcerpt": "through repeated interpretation, clients experience catharsis (releasing repressed emotions) and insight, which leads to working through. Gradually accepting and integrating these new understandings into their lives.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 32,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::7",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "A dataset of anxiety scores has a positively skewed distribution with a mean of 35, a standard deviation of 8, and a range from 20 to 75. If each score is converted to a z-score, what will be true about the resulting distribution?",
+      "options": [
+        "The distribution will become approximately normal with a mean of 0 and standard deviation of 1",
+        "The distribution will retain its positively skewed shape but will have a mean of 0 and standard deviation of 1",
+        "The distribution will become negatively skewed because the transformation reverses the tail direction",
+        "The distribution will become leptokurtic because z-score conversions compress extreme values"
+      ],
+      "answer": "The distribution will retain its positively skewed shape but will have a mean of 0 and standard deviation of 1",
+      "explanation": "Converting raw scores to z-scores is a linear transformation that changes the mean to 0 and the standard deviation to 1, but it does NOT change the shape of the distribution. A positively skewed distribution remains positively skewed after z-score conversion. The lesson describes the normal distribution properties (mean, median, and mode equal; 68-95-99 rule) but z-score transformations only produce a normal distribution when the original data are already normally distributed. Option A is a common misconception — z-scores standardize the scale but do not normalize skewed data. Option C is wrong because linear transformations preserve the direction of skew. Option D is wrong because z-scores do not compress extreme values; they merely re-express them on a standardized scale.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a very common EPPP misconception. The lesson content discusses normal distributions and skewed distributions but",
+      "suggestedLesson": "7-variables",
+      "suggestedParagraph": "### The Normal Distribution: The Ideal Bell Curve",
+      "lessonExcerpt": "{{M}}If you measure the wait times for appointments at a large clinic and get a normal distribution with a mean of 15 minutes and standard deviation of 5 minutes, you know that about 68% of clients wa",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json::1",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "Dr. Reeves is completing her doctoral dissertation and plans to begin seeing clients under supervision. She creates a website that lists her name followed by 'Doctoral Candidate in Clinical Psychology' and includes her fee schedule. According to APA ethical standards on advertising, this practice is:",
+      "options": [
+        "Prohibited because doctoral candidates cannot advertise services or list fees",
+        "Acceptable as long as her credentials are accurately represented and she discloses her supervised status",
+        "Prohibited because only licensed psychologists may advertise fee schedules",
+        "Acceptable because she is accurately describing her degree status without claiming licensure"
+      ],
+      "answer": "Acceptable as long as her credentials are accurately represented and she discloses her supervised status",
+      "explanation": "Standard 5.01 requires that all public statements about professional activities be accurate and not deceptive. A doctoral candidate may advertise services and fees as long as she accurately represents her status (not claiming to be licensed), discloses that she is working under supervision, and does not misrepresent her credentials. Option A is incorrect because there is no blanket prohibition against doctoral candidates advertising supervised services. Option C is incorrect because non-licensed practitioners working under supervision may advertise fees; the key requirement is accurate representation. Option D, while partially correct about accurate description, is incomplete because it omits the critical requirement to disclose supervised status.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "Good practical question testing advertising standards for pre-licensure professionals. Well-supported by lesson content on Standard 5.01.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "Standard 5.01 establishes the foundation: psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work. This applies to everything. Your website, your LinkedIn profile, what you say in a lecture, your resume, even your listing in a directory.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 17,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::23",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

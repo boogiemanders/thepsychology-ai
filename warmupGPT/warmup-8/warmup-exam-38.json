@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "examId": "warmup-8-38",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "A psychiatrist is considering prescribing an SSRI to a patient diagnosed with bipolar I disorder who is currently experiencing a major depressive episode. The psychiatrist decides to co-prescribe a mood stabilizer. What is the PRIMARY reason for adding the mood stabilizer?",
+      "options": [
+        "To reduce the risk of serotonin syndrome from the SSRI",
+        "To counteract the anticholinergic side effects of the SSRI",
+        "To prevent the SSRI from triggering a manic episode",
+        "To accelerate the therapeutic onset of the SSRI from weeks to days"
+      ],
+      "answer": "To prevent the SSRI from triggering a manic episode",
+      "explanation": "The lesson states that for bipolar disorder, SSRIs are used cautiously and usually combined with a mood stabilizer because SSRIs alone can trigger manic episodes. This is the primary prescribing precaution when using antidepressants in patients with bipolar disorder. Serotonin syndrome (option A) results from combining multiple serotonergic drugs, not from SSRIs alone, and mood stabilizers do not prevent it. SSRIs have fewer anticholinergic effects than TCAs (option B), and mood stabilizers do not address anticholinergic effects. Mood stabilizers do not accelerate SSRI onset (option D); all antidepressants require 2-4 weeks for initial effects regardless of augmentation.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant question. Note: the lesson specifically discusses SSRIs triggering mania, not TCAs specifically. The concept generalizes to antidepressants broadly but the lesson excerpt is SSRI-focused.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### SSRIs: The First-Line Treatment",
+      "lessonExcerpt": "For bipolar disorder, they're used cautiously. Usually combined with a mood stabilizer because SSRIs alone can trigger manic episodes.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::3",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "A behavior therapist is treating a child who engages in frequent head-banging. Rather than applying punishment contingent on each episode, the therapist implements a protocol in which the child receives a preferred edible reinforcer after any interval of a specified duration during which head-banging does not occur. This procedure is identified as differential reinforcement of other behavior (DRO). In operant conditioning terms, the mechanism by which DRO reduces the target behavior is best described as:",
+      "options": [
+        "Punishment by application, in which an aversive stimulus is contingently delivered following each head-banging episode to suppress the behavior",
+        "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
+        "Negative reinforcement, in which removal of the aversive head-banging behavior is itself reinforcing to the supervising therapist",
+        "Stimulus control, in which antecedent cues that previously signaled head-banging are systematically modified to suppress the response"
+      ],
+      "answer": "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
+      "explanation": "DRO operates through two complementary operant mechanisms: (1) extinction—the target behavior (head-banging) receives no reinforcement, allowing it to weaken and decrease; and (2) positive reinforcement delivered contingently on the absence of the target behavior during a specified interval. Together these mechanisms reduce the problem behavior while building more adaptive behavioral repertoires. Option A describes punishment by application, a distinct procedure not used in DRO. Option C misapplies the definition of negative reinforcement, which involves removal of an aversive stimulus contingent on a behavior—not applicable here. Option D describes antecedent-based stimulus control interventions, which modify triggers rather than consequences.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "hard",
+      "quality_comment": "Technically rigorous question requiring precise command of operant conditioning terminology as applied to DRO. Remapped to 2-operant-conditioning-interventions which covers all four DR types in detail.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "### Differential Reinforcement: The Swiss Army Knife of Behavior Change",
+      "lessonExcerpt": "Differential Reinforcement of Other Behavior (DRO): You reinforce ANY behavior except the target problem behavior during specified time intervals. This is less focused than DRI or DRA but sometimes more practical.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 26,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::25",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which strategy in persuasion aims to overcome resistance by increasing approach forces such as maximizing the strength of arguments and using consensus information?",
+      "options": [
+        "Omega strategy",
+        "Beta strategy",
+        "Alpha strategy",
+        "Gamma strategy"
+      ],
+      "answer": "Alpha strategy",
+      "explanation": "1. The correct answer is \"Alpha strategy\" because this strategy aims to overcome resistance to persuasion by increasing approach forces. Specifically, it involves maximizing the strength of arguments presented in a persuasive message and using consensus information to demonstrate that the advocated attitude, belief, or behavior is widely accepted and desirable.\n\n2. The incorrect options are as follows:  \n- **Omega strategy:** This strategy seeks to reduce or neutralize resistance by decreasing avoidance forces, which is the opposite of what the question describes.  \n- **Beta strategy:** This term is not mentioned in the reference material and does not pertain to any recognized persuasion strategies.  \n- **Gamma strategy:** Similar to beta, this term is not defined in the reference material and does not relate to the strategies discussed regarding persuasion.",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on persuasion techniques, which are part of group and systems processes and social influences on functioning (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem with plausible distractors, though use of Greek letter names might slightly cue the test takers; otherwise well-constructed.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::5",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist reviewing longitudinal research on childhood aggression would most accurately conclude that:",
+      "options": [
+        "Aggressive behavior in early childhood rarely persists beyond the preschool years due to rapid socialization",
+        "Physical aggression peaks around age 2 and transitions into verbal and relational forms by age 4, with aggressive patterns showing notable stability across development",
+        "Aggression is entirely situational and shows no trait-like consistency from childhood into adolescence",
+        "Only hostile aggression demonstrates stability over time, while instrumental aggression is transient and age-limited"
+      ],
+      "answer": "Physical aggression peaks around age 2 and transitions into verbal and relational forms by age 4, with aggressive patterns showing notable stability across development",
+      "explanation": "The lesson describes the developmental trajectory of aggression: 'physical instrumental aggression peaks around age 2, then declines as verbal and relational hostile aggression increase around age 4.' Longitudinal research consistently demonstrates that aggression is one of the most stable behavioral characteristics across development. Option A is incorrect because aggressive behavior shows considerable continuity, not rapid dissolution. Option C is incorrect because research clearly demonstrates trait-like stability in aggression. Option D incorrectly claims only hostile aggression is stable; research shows stability applies to aggressive behavior patterns generally, with forms changing but the underlying tendency persisting.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "hard",
+      "quality_comment": "Integrates the lesson's developmental trajectory content with the broader EPPP concept of aggression stability. The lesson covers the shift in aggression forms but Partially supported by lesson content",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Understanding Aggression: Forms, Functions, and Interventions",
+      "lessonExcerpt": "Parent training programs effectively reduce childhood aggression, but their effectiveness is moderated by family SES and symptom severity. Economically disadvantaged families benefit less, especially ",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 25,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::4",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the typical gender ratio and prevalence of Attention-Deficit/Hyperactivity Disorder (ADHD) in childhood?",
+      "options": [
+        "Equal prevalence between males and females; 5% of children diagnosed",
+        "Two times more common in males than females; most prevalent diagnosis among 3- to 17-year-olds",
+        "More prevalent in females; under 1% of children diagnosed",
+        "Four times more common in females; rare diagnosis in childhood"
+      ],
+      "answer": "Two times more common in males than females; most prevalent diagnosis among 3- to 17-year-olds",
+      "explanation": "1. The correct answer, \"Two times more common in males than females; most prevalent diagnosis among 3- to 17-year-olds,\" accurately reflects the findings that ADHD is diagnosed twice as often in males during childhood, with a prevalence rate identified as the highest among youth aged 3 to 17 years. Specifically, surveys indicate that ADHD is the most prevalent diagnosed disorder in this age group, confirming its significant impact on this population.\n\n2. The first incorrect option, \"Equal prevalence between males and females; 5% of children diagnosed,\" is wrong because ADHD is not equally prevalent; it is actually two times more common in males, and the prevalence is higher than 5% among diagnosed children. The second option, \"More prevalent in females; under 1% of children diagnosed,\" is incorrect because ADHD is more prevalent in males, and the diagnosed prevalence in children is approximately 3.2%, not under 1%. Lastly, the fourth option, \"Four times more common in females; rare diagnosis in childhood,\" is false as it misrepresents the gender ratio and the prevalence, which shows ADHD is diagnosed three times more often in males, not females, and is not considered rare in childhood.",
+      "kn": "KN38",
+      "kn_explanation": "This examines epidemiological knowledge regarding prevalence and demographic distribution of ADHD, consistent with epidemiology and base rates (KN38).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors invert gender ratios and prevalence levels, forcing knowledge rather than guesswork.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json::15",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In cognitive-behavioral therapy, what role do cognitive schemas play in influencing a person's emotional responses?",
+      "options": [
+        "They are temporary thoughts that have no lasting impact on emotions.",
+        "They act as filters through which individuals interpret experiences, affecting their emotional reactions.",
+        "They are solely responsible for creating irrational fears and phobias.",
+        "They are unrelated to emotional responses and focus only on behavioral changes."
+      ],
+      "answer": "They act as filters through which individuals interpret experiences, affecting their emotional reactions.",
+      "explanation": "1. The correct answer, \"They act as filters through which individuals interpret experiences, affecting their emotional reactions,\" accurately reflects the role of cognitive schemas in cognitive-behavioral therapy (CBT). Cognitive schemas are core beliefs developed during childhood that shape how individuals perceive and interpret their experiences. These schemas influence automatic thoughts, which can lead to emotional responses; for example, a negative schema may lead to negative automatic thoughts, resulting in feelings of sadness or anxiety.\n\n2. The first incorrect option, \"They are temporary thoughts that have no lasting impact on emotions,\" is wrong because cognitive schemas are enduring beliefs rather than fleeting thoughts, and they significantly influence emotional reactions over time. The second incorrect option, \"They are solely responsible for creating irrational fears and phobias,\" is incorrect because while schemas can contribute to irrational fears, they are not the sole factor; other elements, such as environmental influences and experiences, also play a role. Lastly, the option \"They are unrelated to emotional responses and focus only on behavioral changes\" is incorrect because cognitive schemas are directly tied to emotional responses and are integral to understanding both emotional and behavioral patterns in CBT.",
+      "difficulty": "easy",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "quality_comment": "This question effectively assesses understanding of the role of cognitive schemas in emotional processing.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::35",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which test produces an F-ratio as its main test statistic and is appropriate for comparing means across three or more unrelated groups on an interval or ratio dependent variable?",
+      "options": [
+        "One-way analysis of variance (ANOVA)",
+        "T-test for unrelated samples",
+        "Chi-square test for contingency tables",
+        "T-test for related samples"
+      ],
+      "answer": "One-way analysis of variance (ANOVA)",
+      "explanation": "1. The \"One-way analysis of variance (ANOVA)\" is the correct answer because it is specifically designed to compare means across three or more unrelated groups when the dependent variable is measured on an interval or ratio scale. The one-way ANOVA produces an F-ratio, which assesses the variability between group means relative to the variability within groups, indicating whether the independent variable has a significant effect on the dependent variable.\n\n2. The \"T-test for unrelated samples\" is incorrect because it is only applicable for comparing means between two unrelated groups, not three or more. The \"Chi-square test for contingency tables\" is not suitable because it analyzes nominal data rather than interval or ratio data and does not produce an F-ratio as a test statistic. Lastly, the \"T-test for related samples\" is inappropriate because it is used for comparing means of two related groups, rather than for three or more unrelated groups.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "easy",
+      "quality_comment": "The stem is clear and direct; distractors are appropriate alternatives that help differentiate basic knowledge of statistical tests.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::14",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist's client has an insurance plan that does not cover adjustment disorders. The client's presenting problem is clearly an adjustment disorder with depressed mood. The psychologist considers assigning a major depressive disorder diagnosis instead so the client can receive insurance coverage. According to APA Standard 6.06, which of the following best describes the consequences of this action?",
+      "options": [
+        "It is acceptable if the psychologist documents the clinical rationale for the alternative diagnosis in the client's file",
+        "It is acceptable as long as the client provides informed consent to use the alternative diagnosis",
+        "It constitutes both an ethical violation of accurate billing standards and insurance fraud, which is also illegal",
+        "It is a minor ethical infraction that would result in a warning but no formal sanction"
+      ],
+      "answer": "It constitutes both an ethical violation of accurate billing standards and insurance fraud, which is also illegal",
+      "explanation": "Standard 6.06 requires providing accurate information about diagnosis codes, types of services, who provided services, and fees charged. The lesson explicitly identifies 'Assigning inaccurate diagnosis for insurance coverage' as a practice that is 'both unethical and illegal (fraud).' No amount of documentation or client consent makes misrepresenting a diagnosis acceptable. Option A is incorrect—documenting rationale does not legitimize a knowingly inaccurate diagnosis. Option B is wrong because client consent cannot authorize fraud. Option D understates the severity; insurance fraud carries serious legal and professional consequences.",
+      "kn": "KN50",
+      "kn_explanation": "This question is best aligned with KN50 because it tests healthcare systems, structures, and economics, and how these impact intervention choice.",
+      "difficulty": "easy",
+      "quality_comment": "Clear, well-grounded question testing a commonly tested ethical scenario with strong lesson support.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### Accurate Billing",
+      "lessonExcerpt": "Assigning inaccurate diagnosis for insurance coverage: Misrepresents the client's condition; insurance fraud... These practices are both unethical and illegal (fraud).",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::3",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

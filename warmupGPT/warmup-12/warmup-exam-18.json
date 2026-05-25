@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "examId": "warmup-12-18",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.491Z"
+  },
+  "questions": [
+    {
+      "stem": "A client with a 15-year history of heavy daily alcohol consumption is medically admitted after abrupt cessation of drinking. On day two of admission, he reports seeing insects crawling on the walls and feels them on his skin despite the absence of any visible source. Among the following substances, which withdrawal syndrome is MOST classically associated with these frank perceptual disturbances?",
+      "options": [
+        "Opioid (heroin) withdrawal, which produces autonomic hyperarousal and severe physical distress",
+        "Cocaine withdrawal, which produces pronounced dysphoria and anhedonia",
+        "Alcohol withdrawal, which can produce seizures, delirium, and hallucinations",
+        "Cannabis withdrawal, which produces irritability, anxiety, and insomnia"
+      ],
+      "answer": "Alcohol withdrawal, which can produce seizures, delirium, and hallucinations",
+      "explanation": "Alcohol withdrawal (delirium tremens, or DTs) is the withdrawal syndrome most classically and dangerously associated with hallucinations—including visual, tactile, and auditory perceptual disturbances. The lesson notes that benzodiazepines are used specifically for 'alcohol withdrawal,' reflecting the severity of this syndrome. Opioid withdrawal produces 'flu-like' symptoms including 'runny nose, watery eyes, muscle aches, fever' progressing to 'abdominal cramps, vomiting, diarrhea'—not hallucinations. Cocaine withdrawal produces depressive symptoms and anhedonia without perceptual disturbances. Cannabis withdrawal involves mood and sleep disruption but not hallucinations.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically important question with high real-world relevance; the inclusion of the clinical vignette (insects on walls/skin) grounds the perceptual disturbance concretely",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### Benzodiazepines: Fast Relief with a Catch",
+      "lessonExcerpt": "They're used for anxiety, insomnia, seizures, and alcohol withdrawal... Abrupt discontinuation after long-term use can cause rebound anxiety, seizures, and severe withdrawal.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json::21",
+      "isScored": true
+    },
+    {
+      "stem": "Implosive therapy differs from other exposure techniques primarily because it:",
+      "options": [
+        "Is always conducted in imagination and incorporates psychodynamic conflicts",
+        "Emphasizes gradual exposure from least to most feared stimuli",
+        "Utilizes rapid eye movements to facilitate trauma processing",
+        "Combines exposure with response prevention in vivo"
+      ],
+      "answer": "Is always conducted in imagination and incorporates psychodynamic conflicts",
+      "explanation": "1. The correct answer, \"Is always conducted in imagination and incorporates psychodynamic conflicts,\" accurately describes implosive therapy, which is unique among exposure techniques. Implosive therapy specifically involves the client imagining exaggerated scenarios related to their fears while integrating psychodynamic elements that explore underlying conflicts, such as those related to sexuality or rejection. This approach sets it apart from other techniques that may focus on real-life exposure or systematic desensitization.\n\n2. The option \"Emphasizes gradual exposure from least to most feared stimuli\" is incorrect because this describes graded exposure, a technique that gradually introduces anxiety-arousing stimuli rather than the immediate and intense exposure characteristic of implosive therapy. The statement \"Utilizes rapid eye movements to facilitate trauma processing\" is wrong as it pertains to Eye Movement Desensitization and Reprocessing (EMDR), not implosive therapy, which does not involve eye movements. Lastly, \"Combines exposure with response prevention in vivo\" is incorrect because implosive therapy is conducted solely in imagination and does not involve real-life exposure or the prevention of avoidance behaviors that are central to exposure with response prevention techniques.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses theoretical aspects and components of a classical conditioning-based treatment, fitting under learning theory (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are distinct commonly used techniques, assisting discrimination and reinforcing conceptual clarity.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::11",
+      "isScored": true
+    },
+    {
+      "stem": "In group dynamics, how do individuals typically respond to norm violations within their group?",
+      "options": [
+        "They often ignore the violation to maintain group harmony.",
+        "They may confront the violator to reinforce group norms.",
+        "They are likely to leave the group if norms are violated.",
+        "They will support the violator if they are a close friend."
+      ],
+      "answer": "They may confront the violator to reinforce group norms.",
+      "explanation": "When group norms are violated, individuals often feel compelled to confront the violator to maintain the integrity of the group and reinforce shared norms. Ignoring the violation can lead to further issues, while leaving the group or supporting the violator is less common.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of group dynamics and responses to norm violations.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "They may confront the violator to reinforce group norms.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::20",
+      "isScored": true
+    },
+    {
+      "stem": "Minority stress theory distinguishes proximal and distal stress processes experienced by sexual minority individuals. Which of the following is a proximal stress process?",
+      "options": [
+        "Experiencing verbal harassment due to sexual orientation",
+        "Fearing rejection by family or peers",
+        "Suffering physical assault related to stigmatization",
+        "Encountering workplace discrimination"
+      ],
+      "answer": "Fearing rejection by family or peers",
+      "explanation": "1. \"Fearing rejection by family or peers\" is the correct answer because it represents a proximal stress process, which, according to minority stress theory, occurs within the individual and includes internalized fears and anxieties related to their sexual orientation. This fear directly affects the individual's mental health and well-being, as it stems from their personal experiences and perceptions of potential rejection from close social circles.\n\n2. The other options are incorrect because they represent distal stress processes, which are external to the individual. \"Experiencing verbal harassment due to sexual orientation\" involves external acts of discrimination that arise from societal prejudice. \"Suffering physical assault related to stigmatization\" also refers to external violence and discrimination that individuals face in their environment. Lastly, \"Encountering workplace discrimination\" is another external stressor that reflects systemic issues rather than internal fears, impacting the individual’s experience of stigma in a professional context.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "medium",
+      "quality_comment": "Clear distinction between internal and external stressors with plausible distractors fitting each category improves effectiveness.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::20",
+      "isScored": true
+    },
+    {
+      "stem": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "options": [
+        "Observation, reinforcement, imitation",
+        "Imitation, reinforcement, observation",
+        "Reinforcement, observation, imitation",
+        "Observation, imitation, reinforcement"
+      ],
+      "answer": "Observation, imitation, reinforcement",
+      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "kn": "KN24",
+      "kn_explanation": "This question is best aligned with KN24 because it tests Influence of diverse identities on development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of social learning theory in the context of gender role development.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Personality Development: Classical Theories",
+      "lessonExcerpt": "Children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 17,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary purpose of the Stroop Color Interference Test in cognitive assessment?",
+      "options": [
+        "To measure verbal intelligence and vocabulary.",
+        "To assess cognitive flexibility and processing speed.",
+        "To evaluate memory retention over time.",
+        "To determine the level of emotional distress in individuals."
+      ],
+      "answer": "To assess cognitive flexibility and processing speed.",
+      "explanation": "The Stroop Test evaluates how well individuals can manage conflicting information, which reflects cognitive flexibility and processing speed. The other options do not accurately describe the primary purpose of the test.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the Stroop Test's purpose.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Executive Function Tests",
+      "lessonExcerpt": "The primary purpose of the Stroop Color Interference Test is to assess cognitive flexibility and processing speed.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::16",
+      "isScored": true
+    },
+    {
+      "stem": "Dialectical behavior therapy (DBT) for borderline personality disorder includes all the following components EXCEPT:",
+      "options": [
+        "Group skills training to enhance emotion regulation and mindfulness",
+        "Individual psychotherapy focusing on reducing suicidal and therapy-interfering behaviors",
+        "Intersession coaching to generalize skills and repair the therapeutic relationship",
+        "Medication management emphasizing pharmacotherapy for impulsivity"
+      ],
+      "answer": "Medication management emphasizing pharmacotherapy for impulsivity",
+      "explanation": "1. The correct answer is \"Medication management emphasizing pharmacotherapy for impulsivity\" because dialectical behavior therapy (DBT) does not primarily focus on pharmacotherapy. Instead, DBT is a specific type of cognitive-behavioral therapy that emphasizes skills training, individual psychotherapy, and coaching to help clients manage their emotions and behaviors, particularly in the context of borderline personality disorder.\n\n2. The first incorrect option, \"Group skills training to enhance emotion regulation and mindfulness,\" is wrong because group skills training is a fundamental component of DBT designed to teach clients skills for emotion regulation, distress tolerance, and mindfulness. The second incorrect option, \"Individual psychotherapy focusing on reducing suicidal and therapy-interfering behaviors,\" is incorrect because individual therapy is a core aspect of DBT aimed at addressing self-destructive behaviors and enhancing the client’s emotional skills. Lastly, \"Intersession coaching to generalize skills and repair the therapeutic relationship\" is incorrect as intersession coaching is an essential part of DBT that helps clients apply learned skills to real-life situations and supports the therapeutic alliance.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "Good balance of plausible options reflecting aspects of treatment; distractors are consistent with treatment terminology but clearly differentiated.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following statements accurately describes stanines?",
+      "options": [
+        "Stanines range from 1 to 9, with a mean of 5 and a standard deviation of 2, representing roughly half a standard deviation per unit except for extremes",
+        "Stanines are scores scaled to have a mean of 100 and standard deviation of 15, used mainly for IQ tests",
+        "Stanines have a mean of 50 and SD of 10 and are identical to T-scores",
+        "Stanines represent the percentage of test items an examinee answered correctly"
+      ],
+      "answer": "Stanines range from 1 to 9, with a mean of 5 and a standard deviation of 2, representing roughly half a standard deviation per unit except for extremes",
+      "explanation": "1. The correct statement, \"Stanines range from 1 to 9, with a mean of 5 and a standard deviation of 2, representing roughly half a standard deviation per unit except for extremes,\" accurately describes stanines as they are defined in the reference material. Stanines are a standardized scoring system where each unit represents approximately half a standard deviation around the mean, which is set at 5, with the range of scores being from 1 to 9. This structure allows for a clear interpretation of an examinee's performance relative to a reference group.\n\n2. The first incorrect option, \"Stanines are scores scaled to have a mean of 100 and standard deviation of 15, used mainly for IQ tests,\" is wrong because stanines do not have a mean of 100 or a standard deviation of 15; those characteristics apply to IQ scores, not stanines. The second incorrect option, \"Stanines have a mean of 50 and SD of 10 and are identical to T-scores,\" is incorrect because stanines have a mean of 5 and a standard deviation of 2, which distinguishes them from T-scores, which indeed have a mean of 50 and a standard deviation of 10. Lastly, the statement \"Stanines represent the percentage of test items an examinee answered correctly\" is incorrect because stanines are not percentage scores; they are a ranking system that categorizes performance into nine distinct levels rather than directly measuring the proportion of correct responses.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests knowledge of standard score types and their interpretations (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "All options are plausible but only one accurately reflects stanine characteristics, improving item discrimination.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::9",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the primary goal of Interpersonal Psychotherapy (IPT)?",
+      "options": [
+        "Identifying unconscious conflicts to improve insight",
+        "Symptom relief and improved interpersonal functioning",
+        "Changing maladaptive behavior patterns through reinforcement",
+        "Focusing on future-oriented solutions rather than past problems"
+      ],
+      "answer": "Symptom relief and improved interpersonal functioning",
+      "explanation": "1. The correct answer, \"Symptom relief and improved interpersonal functioning,\" accurately reflects the primary goals of Interpersonal Psychotherapy (IPT). IPT is designed to address the interpersonal factors contributing to a client’s symptoms, particularly in the context of depression and other mental disorders, and aims to alleviate these symptoms while enhancing the client's ability to function in their interpersonal relationships.\n\n2. The first incorrect option, \"Identifying unconscious conflicts to improve insight,\" is wrong because IPT focuses on interpersonal issues rather than unconscious conflicts, which are more characteristic of traditional psychodynamic therapies. The second incorrect option, \"Changing maladaptive behavior patterns through reinforcement,\" is incorrect as IPT does not primarily utilize behavioral reinforcement techniques; instead, it centers on improving interpersonal relationships and functioning. Lastly, the option \"Focusing on future-oriented solutions rather than past problems\" is misleading because, while IPT does have a future-oriented aspect in terms of improving functioning, it specifically addresses current interpersonal issues rather than focusing on solutions without considering the interpersonal context of the client’s symptoms.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible therapy goals but differ clearly from IPT’s focus, providing a good test of conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best characterizes a mediator variable in psychological research?",
+      "options": [
+        "A variable that strengthens or weakens the relationship between two other variables",
+        "A variable that is manipulated by the researcher to measure its effect",
+        "A variable that explains the relationship between an independent and dependent variable",
+        "A variable that is an unintended source of influence on study results"
+      ],
+      "answer": "A variable that explains the relationship between an independent and dependent variable",
+      "explanation": "1. The correct answer, \"A variable that explains the relationship between an independent and dependent variable,\" accurately defines a mediator variable. Mediator variables serve to clarify how or why an independent variable affects a dependent variable by providing an explanatory mechanism within the relationship. For instance, in cognitive therapies, the independent variable (therapy) may lead to changes in dysfunctional thinking (mediator), which subsequently reduces anxiety (dependent variable).\n\n2. The option \"A variable that strengthens or weakens the relationship between two other variables\" is incorrect because this describes a moderator variable, which influences the strength or direction of the relationship rather than explaining it. The statement \"A variable that is manipulated by the researcher to measure its effect\" is wrong because it refers to an independent variable, which is intentionally changed to observe its effect on the dependent variable. Lastly, \"A variable that is an unintended source of influence on study results\" is incorrect as it describes an extraneous variable, which can confound results but does not serve as a mediator in explaining the relationship between independent and dependent variables.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include correct concepts related to variables but selectively differentiate mediator from moderator and extraneous variables, enhancing discrimination.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "In therapy, what is the most ethical approach when a psychologist realizes they lack cultural competence to effectively treat a client?",
+      "options": [
+        "Continue therapy while attempting to learn about the client's culture.",
+        "Refer the client to another professional who has the necessary cultural competence.",
+        "Discuss the psychologist's limitations with the client and seek their input.",
+        "Ignore the issue and focus on the therapeutic goals."
+      ],
+      "answer": "Refer the client to another professional who has the necessary cultural competence.",
+      "explanation": "The correct answer emphasizes the ethical responsibility to ensure clients receive competent care, which may involve referral when a psychologist lacks the necessary cultural understanding. The other options either compromise the client's care or do not adequately address the issue.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of cultural competence ethics.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Standard 3: Human Relations",
+      "lessonExcerpt": "When lacking cultural competence, psychologists should refer the client to another professional who has the necessary cultural competence.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 25,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::24",
+      "isScored": true
+    },
+    {
+      "stem": "Members of a neighborhood watch committee are individually polled before their meeting and each reports moderate support for a curfew ordinance. After one hour of discussion exclusively among themselves, the committee unanimously endorses a far stricter ordinance than any individual had originally favored. Which phenomenon MOST directly accounts for this outcome?",
+      "options": [
+        "Groupthink, in which the desire for unanimity suppresses dissenting viewpoints and critical analysis",
+        "Group polarization, in which discussion among like-minded individuals amplifies their shared initial tendency toward a more extreme position",
+        "Deindividuation, in which members lose personal accountability within the collective and adopt more extreme norms",
+        "Conformity pressure, in which a dominant minority enforces attitude change through normative influence"
+      ],
+      "answer": "Group polarization, in which discussion among like-minded individuals amplifies their shared initial tendency toward a more extreme position",
+      "explanation": "Group polarization refers to the reliable tendency for deliberation among people who share an initial lean to produce a collective position more extreme than their pre-discussion average. Because each committee member already favored the curfew to some degree, discussion reinforced and magnified that lean, yielding an outcome beyond any individual's original position. This is the defining signature of group polarization. Groupthink (Option A) involves specific symptoms—illusion of invulnerability, self-censorship, mindguarding—and primarily concerns the suppression of alternatives to preserve cohesion; it does not require or predict a shift to extremity per se. Deindividuation (Option C) involves reduced self-awareness in crowds and the abandonment of personal restraints, not the amplification of pre-existing attitudes through discussion. Option D (conformity) describes influence exerted by a minority or majority on an individual, not the emergent amplification of an already-shared group tendency.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Scenario precisely exemplifies group polarization and the distractors target the most commonly confused constructs. Remapped to 5-6-workplace-decisions which covers group polarization in depth.",
+      "suggestedLesson": "5-6-workplace-decisions",
+      "suggestedParagraph": "## Group Polarization: When Groups Amplify Extremes",
+      "lessonExcerpt": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone. After discussion, the group shifts toward a more intense version of the average initial position. Either riskier or more cautious.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 23,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Workplace Decisions.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Workplace Decisions.json::0",
+      "isScored": true
+    }
+  ]
+}

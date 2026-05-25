@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "examId": "warmup-8-7",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.483Z"
+  },
+  "questions": [
+    {
+      "stem": "What is the primary purpose of stimulant medications prescribed for ADHD?",
+      "options": [
+        "To increase impulsivity",
+        "To enhance attention and focus",
+        "To induce sedation",
+        "To decrease hyperactivity"
+      ],
+      "answer": "To enhance attention and focus",
+      "explanation": "The correct answer is that stimulant medications are primarily prescribed to enhance attention and focus in individuals with ADHD. The other options misrepresent the intended effects of these medications.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of ADHD treatment.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Sedatives, Hypnotics, and Anxiolytics: The Calming Agents",
+      "lessonExcerpt": "Stimulant medications are primarily prescribed to enhance attention and focus.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json::18",
+      "isScored": true
+    },
+    {
+      "stem": "Which classical conditioning phenomenon illustrates that the conditioned response (CR) is typically weaker than the unconditioned response (UR) and increases with repeated CS-US pairings?",
+      "options": [
+        "Stimulus discrimination",
+        "Magnitude of conditioned response",
+        "Conditioned inhibition",
+        "Experimental neurosis"
+      ],
+      "answer": "Magnitude of conditioned response",
+      "explanation": "1. The \"Magnitude of conditioned response\" is the correct answer because it specifically refers to the strength of the conditioned response (CR) in relation to the unconditioned response (UR). The reference material states that the magnitude of a CR is always less than the magnitude of the UR and that this magnitude increases with repeated pairings of the conditioned stimulus (CS) and unconditioned stimulus (US), indicating a direct relationship between the frequency of pairings and the strength of the CR.\n\n2. The incorrect options are as follows:\n\n- **Stimulus discrimination** is incorrect because it refers to the ability to differentiate between the conditioned stimulus and similar stimuli, rather than the strength or magnitude of the conditioned response itself.\n  \n- **Conditioned inhibition** is incorrect because it involves reducing or eliminating a conditioned response, rather than illustrating the relationship between the magnitude of the CR and the frequency of CS-US pairings.\n  \n- **Experimental neurosis** is incorrect because it describes the unusual behaviors exhibited by subjects when faced with difficult discriminations, not the relationship between the strength of conditioned responses and repeated pairings of stimuli.",
+      "kn": "KN7",
+      "kn_explanation": "Understanding the strength and magnitude of conditioned responses is part of the core principles and mechanisms in classical conditioning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Good item focusing on response magnitude, with distractors addressing other classical conditioning phenomena, supporting comprehension of response dynamics.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json::25",
+      "isScored": true
+    },
+    {
+      "stem": "How does cognitive dissonance typically lead to attitude change?",
+      "options": [
+        "By reinforcing existing beliefs",
+        "By creating discomfort that motivates change",
+        "By providing new information that contradicts beliefs",
+        "By increasing confidence in one's decisions"
+      ],
+      "answer": "By creating discomfort that motivates change",
+      "explanation": "The correct answer is 'By creating discomfort that motivates change' because cognitive dissonance arises when there is a conflict between beliefs and behaviors, leading to psychological discomfort that individuals seek to resolve by changing their attitudes. 'By reinforcing existing beliefs' is incorrect as cognitive dissonance challenges existing beliefs. 'By providing new information that contradicts beliefs' does not capture the essence of dissonance, which is about internal conflict. 'By increasing confidence in one's decisions' is misleading, as dissonance often leads to uncertainty.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## Why Persuasion Matters for Psychologists",
+      "lessonExcerpt": "Cognitive dissonance creates discomfort that motivates individuals to change their attitudes to resolve the conflict.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::1",
+      "isScored": true
+    },
+    {
+      "stem": "A 4-year-old watches as an experimenter pours water from a short, wide beaker into a tall, narrow cylinder and asks whether the amount of water changed. The child says 'there's more now because it's taller,' ignoring that the cylinder is narrower. According to Piaget, the specific cognitive limitation most directly responsible for this error is:",
+      "options": [
+        "Egocentrism, because the child cannot take the experimenter's physical perspective on the containers",
+        "Irreversibility, because the child cannot mentally reverse the pouring action to infer the original amount",
+        "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
+        "Animism, because the child attributes the water's movement to intentional self-directed action"
+      ],
+      "answer": "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
+      "explanation": "Centration is Piaget's term for the preoperational tendency to focus attention on one salient perceptual dimension of a stimulus while failing to simultaneously consider other relevant dimensions. In this conservation task, the child centers on the height of the water column — the most visually salient change — while ignoring that the narrower width compensates for the increased height. The result is an incorrect judgment about quantity. Egocentrism (A) involves difficulty understanding that others hold different perspectives than oneself, not a failure to integrate multiple physical dimensions. Irreversibility (B) refers to the inability to mentally undo an action and is also implicated in conservation failures, but the specific error described — focusing exclusively on height — is most directly attributed to centration rather than irreversibility. Animism (D) involves attributing life or intention to inanimate objects, which is unrelated to this quantity judgment task.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "Strong vignette cleanly mapping to centration; the irreversibility distractor requires careful conceptual discrimination and adds appropriate challenge.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "**2. Preoperational Stage (2 to 7 years)**",
+      "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::32",
+      "isScored": true
+    },
+    {
+      "stem": "What is the most likely reason that exposure therapy for the blood-injection-injury subtype of specific phobia combines exposure with applied tension techniques?",
+      "options": [
+        "To reduce the risk of fainting by increasing heart rate and blood pressure during exposure",
+        "To accelerate extinction of the phobic response through increased muscle relaxation",
+        "To provide cognitive restructuring during phobic stimulus presentation",
+        "To enhance the patient’s focus on the feared object and distract from anxiety"
+      ],
+      "answer": "To reduce the risk of fainting by increasing heart rate and blood pressure during exposure",
+      "explanation": "1. The correct answer, \"To reduce the risk of fainting by increasing heart rate and blood pressure during exposure,\" is accurate because individuals with the blood-injection-injury subtype of specific phobia often experience an initial increase in heart rate and blood pressure, followed by a decrease that can lead to fainting. By combining exposure therapy with applied tension techniques, therapists aim to maintain elevated blood pressure and heart rate, thus preventing fainting during exposure to feared stimuli, which enhances the effectiveness of the treatment.\n\n2. The option \"To accelerate extinction of the phobic response through increased muscle relaxation\" is incorrect because applied tension is designed to increase, not decrease, muscle tension to prevent fainting, rather than to promote relaxation. The option \"To provide cognitive restructuring during phobic stimulus presentation\" is wrong as cognitive restructuring is a separate cognitive-behavioral technique and is not the primary focus of applied tension during exposure therapy. Lastly, the option \"To enhance the patient’s focus on the feared object and distract from anxiety\" is incorrect because applied tension is not intended to distract from anxiety but rather to help manage physiological responses that could lead to fainting during exposure to the phobic stimulus.",
+      "kn": "KN40",
+      "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible treatment components but only the correct response contextualizes the rationale specific to this subtype, improving question validity.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "In Smith, Glass, and Miller's landmark 1980 meta-analysis of psychotherapy outcomes, what was the average effect size for psychotherapy compared to no treatment?",
+      "options": [
+        "0.50, indicating the average therapy patient was better off than 69% of untreated individuals",
+        "0.85, indicating the average therapy patient was better off than 80% of untreated individuals",
+        "1.20, indicating the average therapy patient was better off than 88% of untreated individuals",
+        "0.65, indicating the average therapy patient was better off than 74% of untreated individuals"
+      ],
+      "answer": "0.85, indicating the average therapy patient was better off than 80% of untreated individuals",
+      "explanation": "Smith, Glass, and Miller's pioneering 1980 meta-analysis combined results from 475 studies comparing therapy to no treatment and found an effect size of .85. This means the average therapy patient was better off than 80% of people who didn't receive therapy. This was landmark empirical evidence that psychotherapy is effective, countering Eysenck's earlier controversial claim that therapy was ineffective. The other options present plausible but incorrect effect sizes. This specific finding (.85/80%) is a frequently tested fact on the EPPP.",
+      "kn": "KN44",
+      "kn_explanation": "Meta-analytic evidence for psychotherapy efficacy (Smith, Glass & Miller effect size)",
+      "difficulty": "medium",
+      "quality_comment": "Tests recall of a specific, frequently examined research finding. Distractors use plausible alternative effect sizes with correctly calculated percentile equivalents.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Smith, Glass, and Miller's Meta-Analysis (1980)",
+      "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 18,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::13",
+      "isScored": true
+    },
+    {
+      "stem": "What is the relationship between beta and statistical power in hypothesis testing?",
+      "options": [
+        "Beta is the probability of correctly rejecting the null hypothesis, which is equivalent to power.",
+        "Beta is the probability of making a Type I error and is inversely related to power.",
+        "Beta is the probability of making a Type II error and is inversely related to power.",
+        "Beta is set by the researcher before collecting data to control power."
+      ],
+      "answer": "Beta is the probability of making a Type II error and is inversely related to power.",
+      "explanation": "1. The correct answer, \"Beta is the probability of making a Type II error and is inversely related to power,\" is accurate because beta (β) represents the likelihood of failing to reject a false null hypothesis, which is a Type II error. Statistical power, on the other hand, is defined as the probability of correctly rejecting a false null hypothesis; thus, as beta increases (indicating a higher chance of Type II error), the power decreases, demonstrating an inverse relationship.\n\n2. The first incorrect option states, \"Beta is the probability of correctly rejecting the null hypothesis, which is equivalent to power.\" This is wrong because beta refers specifically to the probability of making a Type II error, not the probability of correctly rejecting the null hypothesis, which is defined as statistical power. \n\nThe second incorrect option claims, \"Beta is the probability of making a Type I error and is inversely related to power.\" This is incorrect because Type I error is represented by alpha (α), not beta; therefore, beta does not relate to Type I error at all.\n\nThe third incorrect option asserts, \"Beta is set by the researcher before collecting data to control power.\" This is misleading because beta is not set by the researcher; instead, it is influenced by factors such as sample size and effect size, and it reflects the probability of a Type II error rather than being a predetermined value.",
+      "kn": "KN56",
+      "kn_explanation": "This question addresses statistical interpretation of error rates and power, critical to hypothesis testing concepts (KN56).",
+      "difficulty": "medium",
+      "quality_comment": "Answer choices provide a balanced set of plausible errors, reinforcing distinctions between error types and power clearly.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::30",
+      "isScored": true
+    },
+    {
+      "stem": "When discussing a client's medication management, what is the psychologist's ethical responsibility?",
+      "options": [
+        "To make medication recommendations without consulting the prescribing physician.",
+        "To collaborate with the client and their prescribing physician when appropriate.",
+        "To discourage clients from taking medication.",
+        "To only focus on therapy and ignore medication discussions."
+      ],
+      "answer": "To collaborate with the client and their prescribing physician when appropriate.",
+      "explanation": "The correct answer emphasizes the importance of collaboration in client care, ensuring that all aspects of treatment are considered. The other options either promote unethical practices or neglect the client's needs.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of collaborative care ethics.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Standard 3: Human Relations (Navigating Professional Boundaries)",
+      "lessonExcerpt": "Psychologists should collaborate with the client and their prescribing physician when appropriate.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 28,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::21",
+      "isScored": true
+    }
+  ]
+}
