@@ -1,0 +1,4 @@
+# Don't commit scraping artifacts — large + regenerable
+raw.txt
+dct_results.csv
+*.log
