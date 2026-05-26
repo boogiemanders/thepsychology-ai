@@ -2,7 +2,7 @@
 title: "EPPP vs EPPP-2: What's the Difference and Do You Need Both?"
 slug: eppp-vs-eppp-2
 description: "EPPP Part 1 vs EPPP Part 2 (EPPP-2) explained. What each tests, which states require Part 2, and what to focus on in 2026."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-04-07
 tags: EPPP, EPPP-2, EPPP Part 2, EPPP vs EPPP 2, psychology licensure
 ---

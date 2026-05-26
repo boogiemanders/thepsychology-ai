@@ -2,7 +2,7 @@
 title: "thePsychology.ai vs Mometrix EPPP: Specialized vs General Test Prep"
 slug: thepsychology-ai-vs-mometrix
 description: "Comparing thePsychology.ai and Mometrix for EPPP exam prep. One is EPPP-specialized, the other covers hundreds of exams. Here's what matters."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-04-09
 tags: EPPP, Mometrix EPPP review, EPPP prep comparison, EPPP practice test, free EPPP practice test
 ---

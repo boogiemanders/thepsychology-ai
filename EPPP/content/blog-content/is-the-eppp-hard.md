@@ -2,7 +2,7 @@
 title: "Is the EPPP Hard? What the Data Actually Says"
 slug: is-the-eppp-hard
 description: "How hard is the EPPP? Pass rates, what makes it difficult, and what the data shows about who passes on the first attempt."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-03-28
 tags: EPPP, EPPP difficulty, EPPP pass rate, is the EPPP hard, EPPP exam prep
 ---

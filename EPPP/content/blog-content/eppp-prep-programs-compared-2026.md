@@ -2,7 +2,7 @@
 title: "EPPP Prep Programs Compared: The 2026 Guide"
 slug: eppp-prep-programs-compared-2026
 description: "Side-by-side comparison of AATBS, PsychPrep, Taylor Study Method, Academic Review, PrepJet & thePsychology.ai. Pricing, features, and real user feedback."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-02-16
 tags: EPPP, EPPP prep, AATBS review, PsychPrep review, EPPP study programs, exam prep comparison, psychology licensing
 ---

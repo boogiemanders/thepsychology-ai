@@ -2,7 +2,7 @@
 title: How to Study for the EPPP While Working Full-Time
 slug: eppp-study-schedule-working-full-time
 description: A realistic EPPP study plan for postdocs working full-time. 6-8 hours/week with active recall beats 15+ hours of passive reading.
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-02-16
 tags: EPPP study tips, EPPP study schedule, EPPP work full time, EPPP study part time, EPPP postdoc, licensing exam preparation
 ---

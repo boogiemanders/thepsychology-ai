@@ -2,7 +2,7 @@
 title: "Free EPPP Study Plan: 3-Month and 6-Month Templates"
 slug: free-eppp-study-plan
 description: "Two proven EPPP study plans you can start today. 3-month intensive and 6-month part-time templates with weekly schedules and domain priorities."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-02-16
 tags: EPPP, study plan, EPPP study schedule, exam prep, EPPP study plan template
 ---

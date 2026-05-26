@@ -77,7 +77,7 @@ export function getAllBlogPosts(): BlogPostEntry[] {
     const slug = data.slug?.trim() || getSlugFromFilename(filename)
     const title = data.title?.trim() || slug.replace(/-/g, " ")
     const description = data.description?.trim() || ""
-    const author = data.author?.trim() || "Dr. Anders Chan, Psy.D."
+    const author = data.author?.trim() || "Anders Chan, Psy.D."
     const publishedAt = data.published_at?.trim() || ""
     const updatedAt = data.updated_at?.trim() || undefined
     const tags = data.tags?.split(",").map((t) => t.trim()).filter(Boolean) || []

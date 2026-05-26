@@ -2,7 +2,7 @@
 title: "How Long to Study for the EPPP: Realistic Timelines That Actually Work"
 slug: how-long-to-study-for-the-eppp
 description: "Most people need 3-6 months to prepare for the EPPP. Here's how to figure out the right timeline based on your schedule, strengths, and time since grad school."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-03-25
 tags: EPPP, EPPP study timeline, how long to study for EPPP, EPPP preparation, EPPP study schedule
 ---

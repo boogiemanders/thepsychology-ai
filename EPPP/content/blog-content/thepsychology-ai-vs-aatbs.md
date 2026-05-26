@@ -2,7 +2,7 @@
 title: "thePsychology.ai vs AATBS: An Honest Comparison"
 slug: thepsychology-ai-vs-aatbs
 description: "Comparing thePsychology.ai and AATBS for EPPP exam prep. Pricing, question quality, study tools, and who each program is best for."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-03-26
 tags: EPPP, AATBS review, AATBS vs, EPPP prep comparison, EPPP exam prep
 ---

@@ -2,7 +2,7 @@
 title: How to Pass the EPPP on Your First Try
 slug: how-to-pass-the-eppp-first-try
 description: I scored 19% on my first EPPP practice exam and still passed on my first try. Here's the exact 4-step method I used, domain by domain.
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-02-16
 tags: EPPP, EPPP tips, EPPP study guide, pass EPPP first try, EPPP study tips, psychology licensing exam
 ---

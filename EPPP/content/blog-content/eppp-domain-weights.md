@@ -2,7 +2,7 @@
 title: "EPPP Domain Weights: Which Sections Matter Most and Where to Focus"
 slug: eppp-domain-weights
 description: "A breakdown of all 8 EPPP domains by exam weight, difficulty, and study strategy. Three domains alone account for 47% of the exam."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-03-25
 tags: EPPP, EPPP domain weights, EPPP sections, hardest EPPP domain, EPPP content areas, EPPP breakdown
 ---

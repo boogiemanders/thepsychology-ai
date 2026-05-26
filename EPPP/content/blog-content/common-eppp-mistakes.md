@@ -2,7 +2,7 @@
 title: "7 Common EPPP Study Mistakes (and How to Fix Them)"
 slug: common-eppp-mistakes
 description: "The most common EPPP study mistakes that lead to failing or underperforming. What to avoid and what to do instead."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-04-11
 tags: EPPP, EPPP tips, EPPP study mistakes, EPPP exam prep, common EPPP mistakes
 ---
