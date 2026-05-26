@@ -2,7 +2,7 @@
 title: "thePsychology.ai vs PrepJet: EPPP Prep Compared"
 slug: thepsychology-ai-vs-prepjet
 description: "Comparing thePsychology.ai and PrepJet for EPPP prep. Both are subscription-based with free trials — here's what's actually different."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-04-04
 tags: EPPP, PrepJet review, EPPP prep comparison, affordable EPPP prep
 ---

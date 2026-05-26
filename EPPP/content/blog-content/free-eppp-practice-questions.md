@@ -2,7 +2,7 @@
 title: "Free EPPP Practice Questions: 50 Sample Questions with Explanations"
 slug: free-eppp-practice-questions
 description: 50 free EPPP practice questions across all 8 domains, with detailed explanations for every answer. Application-based questions that match how the real EPPP tests you.
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-03-17
 tags: EPPP practice questions, EPPP practice questions free, EPPP sample questions, free EPPP practice test, EPPP practice questions and answers, EPPP practice questions by domain
 ---

@@ -1,13 +1,13 @@
 ---
-title: "EPPP Pass Rates: The Complete Data Breakdown (2026)"
+title: "EPPP Pass Rates 2026: First-Time, PsyD vs PhD, and By-Program Data"
 slug: eppp-pass-rates
-description: EPPP pass rates by degree type, program, and attempt number. Real data on who passes, who fails, and what you can do to beat the odds.
-author: Dr. Anders Chan, Psy.D.
+description: EPPP pass rates by degree type, program, and attempt number. First-time pass rate data on who passes, who fails, and what you can do to beat the odds in 2026.
+author: Anders Chan, Psy.D.
 published_at: 2026-03-17
 tags: EPPP pass rate, EPPP fail rate, how hard is the EPPP, EPPP pass rate PsyD vs PhD, EPPP pass rate by program, EPPP difficulty
 ---
 
-# EPPP Pass Rates: The Complete Data Breakdown (2026)
+# EPPP Pass Rates 2026: First-Time, PsyD vs PhD, and By-Program Data
 
 The EPPP pass rate is the first thing most people Google when they start thinking about this exam. And the numbers they find are either outdated, misleading, or both.
 
@@ -140,7 +140,7 @@ ASPPB has announced a new integrated EPPP format launching in Fall 2027. While f
 
 **What this means for pass rates:** It's too early to predict how pass rates will shift under the new format. New exam formats typically show a temporary dip in pass rates as candidates and prep programs adjust. If you're planning to take the EPPP before Fall 2027, you'll take the current version. If you're taking it after, you'll want to follow the updated content specifications closely.
 
-We'll publish a detailed breakdown of the 2027 changes as more information becomes available.
+The 2027 content blueprint has since been approved, and ASPPB has also paused the Part 2 mandate. I cover all of that in the [2026 EPPP pass rates update](/blog/eppp-pass-rates-2026-update), including the new single-exam format, state-by-state passing scores, exam costs, and the latest equity research.
 
 ## What to Do With These Numbers
 

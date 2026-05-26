@@ -2,7 +2,7 @@
 title: How to Pass the EPPP in 30 Days: The Accelerated Study System
 slug: pass-eppp-in-30-days
 description: I passed the EPPP in 30 days after scoring 19% on my diagnostic. Here's the exact accelerated study system I used, day by day, so you can do it too.
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-03-17
 tags: EPPP, pass EPPP in 30 days, EPPP study plan 1 month, EPPP fast prep, EPPP accelerated study plan, EPPP study schedule, EPPP intensive study plan
 ---

@@ -2,6 +2,39 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { siteConfig } from '@/lib/config'
 import { getPricingInfo } from '@/lib/pricing-tiers'
+import { getSupabaseClient } from '@/lib/supabase-server'
+
+const ATTRIBUTION_FIELDS = [
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_content',
+  'utm_term',
+  'referral_source',
+  'referral_code',
+] as const
+
+async function loadAttributionMetadata(userId: string): Promise<Record<string, string>> {
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) return {}
+
+  const { data, error } = await supabase
+    .from('users')
+    .select(ATTRIBUTION_FIELDS.join(','))
+    .eq('id', userId)
+    .single()
+
+  if (error || !data) return {}
+
+  const out: Record<string, string> = {}
+  for (const field of ATTRIBUTION_FIELDS) {
+    const value = (data as Record<string, unknown>)[field]
+    if (typeof value === 'string' && value.length > 0) {
+      out[field] = value.slice(0, 500)
+    }
+  }
+  return out
+}
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 
@@ -49,6 +82,13 @@ export async function POST(req: NextRequest) {
 
     const priceId = getProPriceId()
     const baseUrl = getBaseUrl(req)
+    const attribution = await loadAttributionMetadata(userId)
+
+    const sessionMetadata = {
+      userId,
+      planTier: 'pro',
+      ...attribution,
+    }
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
@@ -62,15 +102,9 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         },
       ],
-      metadata: {
-        userId,
-        planTier: 'pro',
-      },
+      metadata: sessionMetadata,
       subscription_data: {
-        metadata: {
-          userId,
-          planTier: 'pro',
-        },
+        metadata: sessionMetadata,
       },
       success_url: `${baseUrl}/dashboard?upgrade=success`,
       cancel_url: `${baseUrl}/dashboard?upgrade=cancelled`,

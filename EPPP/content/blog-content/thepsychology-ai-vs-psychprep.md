@@ -2,7 +2,7 @@
 title: "thePsychology.ai vs PsychPrep: Which EPPP Prep Is Right for You?"
 slug: thepsychology-ai-vs-psychprep
 description: "Comparing thePsychology.ai and PsychPrep for EPPP exam prep. Pricing, coaching, question quality, and who each is best for."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-03-31
 tags: EPPP, PsychPrep review, EPPP prep comparison, psychology licensure exam prep
 ---

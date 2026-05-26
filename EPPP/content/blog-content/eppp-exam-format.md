@@ -2,7 +2,7 @@
 title: "EPPP Exam Format: Structure, Timing, and What to Expect"
 slug: eppp-exam-format
 description: "EPPP exam format explained: 225 questions, 4 hours 15 minutes, 8 domains. Everything you need to know about the test structure."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-04-02
 tags: EPPP, EPPP exam format, EPPP structure, how many questions on the EPPP, EPPP exam
 ---

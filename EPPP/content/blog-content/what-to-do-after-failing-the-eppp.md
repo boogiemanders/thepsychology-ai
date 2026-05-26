@@ -2,7 +2,7 @@
 title: "What to Do After Failing the EPPP: A Recovery Plan"
 slug: what-to-do-after-failing-the-eppp
 description: "Failed the EPPP? Here's an honest recovery plan from a psychologist who scored 19% on his first practice exam. Real steps, not empty reassurance."
-author: Dr. Anders Chan, Psy.D.
+author: Anders Chan, Psy.D.
 published_at: 2026-02-16
 tags: EPPP, EPPP retake, failed EPPP, EPPP study plan, EPPP recovery, psychology licensure
 ---
