@@ -118,12 +118,10 @@ export function UpgradeBanner() {
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 pr-8">
         <div className="flex-1">
           <p className="text-sm font-medium text-foreground">
-            Your progress is waiting.
+            A retake costs $691.88.
           </p>
           <p className="text-sm text-brand-dusty-rose dark:text-brand-lavender-gray mt-0.5">
-            {pricingInfo.isFoundingPrice
-              ? `Pro is $${pricingInfo.currentPrice}/mo exclusively for early members. This price won't be available for those who join in April.`
-              : `Get everything back for $${pricingInfo.currentPrice}/mo.`}
+            {`Pro is $${pricingInfo.currentPrice} a month. Your diagnostic already found your weak domains. Go close them before test day.`}
           </p>
         </div>
         <button
@@ -131,7 +129,7 @@ export function UpgradeBanner() {
           disabled={checkoutLoading}
           className="shrink-0 rounded-full brand-coral-bg px-4 py-1.5 text-sm font-medium text-white hover:opacity-90 transition-opacity disabled:opacity-50"
         >
-          {checkoutLoading ? 'Loading...' : 'Continue with Pro'}
+          {checkoutLoading ? 'Loading...' : 'Get Pro back'}
         </button>
       </div>
     </div>
