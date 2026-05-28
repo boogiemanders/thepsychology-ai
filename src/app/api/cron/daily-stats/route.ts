@@ -193,6 +193,44 @@ export async function GET(request: NextRequest) {
       ? [``, `🌐 *Web Traffic* (${ga4Date})`, `👁️ Sessions: ${ga4Stats.sessions} · Users: ${ga4Stats.users} · Pageviews: ${ga4Stats.pageviews}`]
       : []
 
+    // Onboarding email funnel: sent today + lifetime cohort conversion per email type.
+    const { data: onboardingRows } = await supabase
+      .from('users')
+      .select('onboarding_day1_sent_at, onboarding_day2_sent_at, onboarding_day3_sent_at, subscription_tier, stripe_customer_id')
+    const obAll = (onboardingRows || []) as Array<{
+      onboarding_day1_sent_at: string | null
+      onboarding_day2_sent_at: string | null
+      onboarding_day3_sent_at: string | null
+      subscription_tier: string | null
+      stripe_customer_id: string | null
+    }>
+    const sentToday = (ts: string | null) => !!ts && new Date(ts) >= todayStart
+    const isPaid = (u: { subscription_tier: string | null; stripe_customer_id: string | null }) =>
+      u.subscription_tier === 'pro' && !!u.stripe_customer_id
+    const tally = (key: 'onboarding_day1_sent_at' | 'onboarding_day2_sent_at' | 'onboarding_day3_sent_at') => {
+      let today = 0, cohort = 0, paid = 0
+      for (const u of obAll) {
+        const ts = u[key]
+        if (sentToday(ts)) today++
+        if (ts) { cohort++; if (isPaid(u)) paid++ }
+      }
+      const rate = cohort ? Math.round((paid / cohort) * 100) : 0
+      return { today, cohort, paid, rate }
+    }
+    const d1 = tally('onboarding_day1_sent_at')
+    const d2 = tally('onboarding_day2_sent_at')
+    const d3 = tally('onboarding_day3_sent_at')
+    const obAnyActivity = d1.today + d2.today + d3.today + d1.cohort + d2.cohort + d3.cohort > 0
+    const onboardingLines = obAnyActivity
+      ? [
+          '',
+          `✉️ *Onboarding Funnel* (sent today · lifetime converted-to-paid)`,
+          `Day 1 (warm):   ${d1.today} today · ${d1.paid}/${d1.cohort} (${d1.rate}%)`,
+          `Day 2 (FOMO):   ${d2.today} today · ${d2.paid}/${d2.cohort} (${d2.rate}%)`,
+          `Day 3 (stakes): ${d3.today} today · ${d3.paid}/${d3.cohort} (${d3.rate}%)`,
+        ]
+      : []
+
     const dailyMessage = [
       `📊 *Daily Stats* (${now.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })})`,
       '',
@@ -201,6 +239,7 @@ export async function GET(request: NextRequest) {
       `❓ Quizzes taken: ${quizzesToday ?? 0}`,
       `👥 Active users (24h): ${activeUsers ?? 0}`,
       ...trafficLines,
+      ...onboardingLines,
       '',
       `💰 MRR: $${estimatedMRR.toLocaleString()} (${proCount} Pro + ${proCoachingCount} Pro+Coaching)`,
     ].join('\n')
