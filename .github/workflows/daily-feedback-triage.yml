@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 jobs:
   triage:
@@ -57,9 +58,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          mode: agent
           mcp_config: .claude/ci.mcp.json
           allowed_tools: "Bash,Read,Write,Edit,Grep,Glob,WebSearch,WebFetch,mcp__eppp__list_feedback,mcp__eppp__get_feedback,mcp__eppp__user_history,mcp__eppp__list_low_rated_questions,mcp__eppp__mark_reviewed,mcp__eppp__mark_resolved,mcp__eppp__send_reply"
-          prompt: |
+          direct_prompt: |
             You are running the daily feedback triage routine for thepsychology.ai (an EPPP exam prep product).
 
             HARD RULES (non-negotiable):
