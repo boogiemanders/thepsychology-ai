@@ -32,6 +32,9 @@ jobs:
 
       - name: Write CI MCP config
         run: |
+          # Remove repo-local .mcp.json so the action does not auto-load it.
+          # That file has macOS-only paths and a bunch of MCP servers we don't need in CI.
+          rm -f .mcp.json
           mkdir -p .claude
           cat > .claude/ci.mcp.json <<'JSON'
           {
