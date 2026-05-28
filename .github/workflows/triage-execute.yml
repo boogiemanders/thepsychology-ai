@@ -1,0 +1,125 @@
+name: Triage Execute (HITL step 2)
+
+on:
+  # cron disabled until end-to-end manual test passes
+  # schedule:
+  #   - cron: '0 13 * * *'  # 9am ET (EDT), one hour after triage-draft
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install MCP server deps
+        working-directory: mcp/eppp-mcp
+        run: npm install
+
+      - name: Configure git
+        run: |
+          git config user.name "feedback-triage-bot"
+          git config user.email "bot@thepsychology.ai"
+
+      - name: Write CI MCP config
+        run: |
+          mkdir -p .claude
+          cat > .claude/ci.mcp.json <<'JSON'
+          {
+            "mcpServers": {
+              "eppp": {
+                "command": "mcp/eppp-mcp/run.sh"
+              }
+            }
+          }
+          JSON
+
+      - name: Run Claude Code executor
+        uses: anthropics/claude-code-action@beta
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFY_EMAIL_FROM: ${{ secrets.NOTIFY_EMAIL_FROM }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          mode: agent
+          mcp_config: .claude/ci.mcp.json
+          allowed_tools: "Bash,Read,Write,Edit,Grep,Glob,mcp__eppp__get_feedback,mcp__eppp__send_reply,mcp__eppp__mark_resolved"
+          direct_prompt: |
+            You are the EXECUTOR for the HITL feedback triage flow at thepsychology.ai.
+
+            Your job: pull rows from triage_drafts where status='approved' and executed_at IS NULL. For each: apply the code change described in draft_fix, commit + PR + merge, send the reply email, update the row to executed, and post a Slack thread confirmation.
+
+            HARD RULES (non-negotiable):
+            - NEVER use em dashes anywhere: not in commits, not in email, not in slack copy, not in code or notes.
+            - NEVER push directly to main. Always: branch + gh pr create + gh pr merge --merge.
+            - If a draft's draft_email_body is empty (harm flag or self-resolution), do NOT send email. Skip to marking executed with a one-line note in admin comments and post a Slack thread saying "marked resolved without reply".
+
+            ENV available to bash: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, RESEND_API_KEY, NOTIFY_EMAIL_FROM, SLACK_BOT_TOKEN, SLACK_CHANNEL_ID, GH_TOKEN.
+
+            HELPER SHAPES:
+
+            Pull approved drafts:
+              curl -s -X GET \
+                "$NEXT_PUBLIC_SUPABASE_URL/rest/v1/triage_drafts?status=eq.approved&executed_at=is.null&order=created_at.asc" \
+                -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+                -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY"
+
+            Mark draft executed:
+              curl -s -X PATCH \
+                "$NEXT_PUBLIC_SUPABASE_URL/rest/v1/triage_drafts?id=eq.$DRAFT_ID" \
+                -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+                -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+                -H "Content-Type: application/json" \
+                -d "$(jq -nc --arg pr "$PR_URL" '{status:"executed", executed_at:"now()", executed_pr_url:$pr}')"
+
+            Post Slack thread reply:
+              curl -s -X POST https://slack.com/api/chat.postMessage \
+                -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+                -H "Content-Type: application/json; charset=utf-8" \
+                -d "$(jq -nc --arg ch "$SLACK_CHANNEL_ID" --arg ts "$SLACK_TS" --arg msg "$MSG" '{channel:$ch, thread_ts:$ts, text:$msg}')"
+
+            WORKFLOW for each approved draft:
+
+            1. Read the row. Parse draft_fix (markdown plan), draft_email_subject, draft_email_body, feedback_id, question_feedback_id, kind, slack_message_ts.
+
+            2. EMPTY-EMAIL PATH (harm flag or self-resolution):
+               - Mark the related feedback resolved via mcp__eppp__mark_resolved if feedback_id is set, with admin_notes from draft_fix.
+               - PATCH the draft row to status=executed (executed_pr_url=null).
+               - Post Slack thread reply: "Marked resolved without reply per approved draft."
+               - Continue to next.
+
+            3. NORMAL PATH:
+               a. Create a fresh branch: git checkout main && git pull && git checkout -b worktree-triage-exec-$DRAFT_ID
+               b. Apply the change described in draft_fix. The plan should be specific (file paths + exact edits). If the plan touches question JSON, validate with python3 -m json.tool after.
+               c. Stage specific files (not git add -A). Commit with a lowercase concise message like "fix(questions): <short description>".
+               d. git push -u origin <branch>
+               e. PR_URL=$(gh pr create --base main --head <branch> --title "..." --body "..." | tail -1)
+                  PR_NUM=$(echo "$PR_URL" | grep -oE '[0-9]+$')
+                  gh pr merge "$PR_NUM" --merge --delete-branch=false
+               f. SEND EMAIL only when kind=feedback. Call mcp__eppp__send_reply with: feedback_id=<row.feedback_id>, subject=draft_email_subject, body=draft_email_body, cc="DrChan@thepsychology.ai". Pass the email exactly as drafted, no edits, no em dashes.
+                  If kind=low_rated: skip send_reply entirely (question_feedback rows have no email recipient). Note in the Slack thread "code change only, no reply sent (low_rated)".
+               g. PATCH the draft row: status=executed, executed_at=now(), executed_pr_url=PR_URL.
+               h. Post Slack thread reply: "Shipped. PR: $PR_URL. Email sent." (or "Email skipped, code only.")
+
+            4. Final summary as your last message: count of drafts executed, broken down by normal vs empty-email. List all PR URLs. Begin.
