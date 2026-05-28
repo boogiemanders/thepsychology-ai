@@ -586,25 +586,25 @@
       ]
     },
     {
-      "stem": "In a longitudinal study on human attachment styles, researchers observed that children who experienced consistent emotional support from their parents developed secure attachments. How does this finding relate to the principles established in Harlow's study?",
+      "stem": "A longitudinal study of human attachment finds that the strongest predictor of secure attachment at 12 months is not the amount of time the caregiver spends in physical contact with the infant, but the caregiver's prompt and appropriate responsiveness to the infant's signals. How does this finding extend the principles established in Harlow's research on rhesus monkeys?",
       "options": [
-        "Secure attachments arise only when parents provide food.",
-        "The emotional support from parents is less important than physical presence.",
-        "Consistent emotional support fosters attachment similar to the comfort provided by the cloth mother.",
-        "Attachment styles are unrelated to early childhood experiences."
+        "It replicates Harlow's findings directly, because both contact comfort and caregiver responsiveness depend on continuous physical proximity to the caregiver.",
+        "It contradicts Harlow's findings by showing that providing nourishment matters more than contact comfort in humans.",
+        "It extends Harlow's findings by showing that, beyond contact comfort, the quality of caregiver responsiveness is critical for human secure attachment — a dimension Harlow's wire-vs-cloth paradigm could not isolate.",
+        "It contradicts Harlow's findings by demonstrating that physical contact is unrelated to attachment in humans."
       ],
-      "answer": "Consistent emotional support fosters attachment similar to the comfort provided by the cloth mother.",
-      "explanation": "1. The statement \"Consistent emotional support fosters attachment similar to the comfort provided by the cloth mother\" is correct because Harlow and Zimmerman's research demonstrated that infant monkeys preferred the comfort of the cloth mother over the wire mother that provided food, highlighting the importance of emotional and physical comfort in forming attachments. This aligns with the finding that children who receive consistent emotional support from their parents are more likely to develop secure attachments, as emotional support is a key component in fostering a strong, affectionate bond with caregivers.\n\n2. The option \"Secure attachments arise only when parents provide food\" is incorrect because Harlow's study emphasized that contact comfort, not just food, is crucial for attachment formation. The statement \"The emotional support from parents is less important than physical presence\" is wrong as it overlooks the significance of emotional support, which is vital for developing secure attachment, as evidenced by Harlow's findings. Lastly, the claim \"Attachment styles are unrelated to early childhood experiences\" is incorrect because extensive research, including Bowlby's ethological theory, establishes that early attachment experiences significantly influence attachment styles throughout life.",
+      "answer": "It extends Harlow's findings by showing that, beyond contact comfort, the quality of caregiver responsiveness is critical for human secure attachment — a dimension Harlow's wire-vs-cloth paradigm could not isolate.",
+      "explanation": "Harlow's wire-vs-cloth mother paradigm isolated one variable — contact comfort versus nutrition — and showed that infant rhesus monkeys preferred the cloth mother for comfort even though the wire mother provided food. Human attachment research (Ainsworth, Bowlby) extends this by adding a second critical variable that Harlow's cloth mother could not test: sensitive, contingent responsiveness to infant signals. The cloth mother provided comfort but no responsiveness; human caregivers who provide both reliably predict secure attachment, which the lesson summarizes as \"attachment forms through contact comfort and responsive caregiving, not just meeting basic needs.\"\n\nOption 1 is wrong because it collapses responsiveness into mere proximity — the lesson explicitly distinguishes responsive caregiving from physical contact alone, and Ainsworth's Strange Situation showed that sensitive responsiveness, not time-in-contact, predicts secure classification. Option 2 reverses Harlow's central finding (he demonstrated comfort > food). Option 4 overcorrects by denying the contact-comfort link entirely, which Harlow's original data already established.",
       "difficulty": "hard",
       "kn": "KN25",
       "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "quality_comment": "This question challenges the test-taker to connect theoretical principles of attachment across different studies and contexts.",
+      "quality_comment": "Tests the extension from Harlow's contact-comfort paradigm to human attachment by adding caregiver responsiveness as a second critical variable. Option 1 (collapsing responsiveness into proximity) is the strongest distractor.",
       "is_lock_in_drill": true,
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
       ],
-      "lessonExcerpt": "Bowlby identified four stages of attachment during the first two years: 1. Preattachment; 2. Attachment-in-the-making; 3. Clear-cut attachment; 4. Formation of reciprocal relationships",
+      "lessonExcerpt": "Attachment forms through contact comfort and responsive caregiving, not just meeting basic needs.",
       "suggestedLesson": "4-bonding-and-attachment",
       "needsReview": false,
       "relatedSections": [
