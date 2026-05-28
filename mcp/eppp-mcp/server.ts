@@ -142,6 +142,7 @@ const tools = [
         subject: { type: "string" },
         body: { type: "string", description: "Plain-text email body. Newlines auto-converted to <br/> for HTML." },
         to_override: { type: "string", description: "Override recipient (otherwise uses feedback.user_email)." },
+        cc: { type: "string", description: "Optional CC recipient email. Single address." },
       },
     },
   },
@@ -401,6 +402,7 @@ async function handle(name: string, args: Record<string, any>): Promise<any> {
         body: JSON.stringify({
           from: NOTIFY_EMAIL_FROM,
           to: [to],
+          ...(args.cc ? { cc: [args.cc] } : {}),
           subject: args.subject,
           text: args.body,
           html,
