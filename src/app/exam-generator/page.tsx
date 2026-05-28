@@ -14,6 +14,14 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogFooter,
+  AlertDialogTitle,
+  AlertDialogDescription,
+} from '@/components/ui/alert-dialog'
 import { ExplanationBlock } from '@/components/explanation-block'
 import { motion } from 'motion/react'
 import { LoadingAnimation } from '@/components/ui/loading-animation'
@@ -107,6 +115,12 @@ export default function ExamGeneratorPage() {
   const [isPaused, setIsPaused] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
   const [lastExamWasSubmitted, setLastExamWasSubmitted] = useState(false)
+  const [pendingExamRequest, setPendingExamRequest] = useState<{
+    chosenExamType: 'diagnostic' | 'practice'
+    chosenMode: 'study' | 'test'
+    pausedExamType: 'diagnostic' | 'practice'
+    pausedAt: string | null
+  } | null>(null)
   const [showQuestionNav, setShowQuestionNav] = useState(false)
   const [isReviewMode, setIsReviewMode] = useState(false)
   const [shouldScrollToStep2, setShouldScrollToStep2] = useState(false)
@@ -1168,12 +1182,35 @@ export default function ExamGeneratorPage() {
 
   const isTimeWarning = timeRemaining > 0 && timeRemaining <= 300
 
-  const handleGenerateExam = async (chosenExamType: 'diagnostic' | 'practice', chosenMode: 'study' | 'test') => {
+  const handleGenerateExam = (chosenExamType: 'diagnostic' | 'practice', chosenMode: 'study' | 'test') => {
     if (isFreeTier && chosenExamType !== 'diagnostic') {
       setError('Practice exams are part of the Pro plan. Upgrade to unlock the full 225-question simulation.')
       return
     }
 
+    // Guard: if there's an unsubmitted paused exam, ask before clobbering it.
+    try {
+      const paused = localStorage.getItem('pausedExamState')
+      if (paused) {
+        const parsed = JSON.parse(paused)
+        if (!parsed.submittedResultId) {
+          setPendingExamRequest({
+            chosenExamType,
+            chosenMode,
+            pausedExamType: parsed.examType,
+            pausedAt: parsed.pausedAt ?? null,
+          })
+          return
+        }
+      }
+    } catch {
+      // If we can't read paused state, fall through and start new.
+    }
+
+    return proceedWithExamGeneration(chosenExamType, chosenMode)
+  }
+
+  const proceedWithExamGeneration = async (chosenExamType: 'diagnostic' | 'practice', chosenMode: 'study' | 'test') => {
     try {
       const startTime = performance.now()
       console.log(`[Exam Gen] Starting exam generation for ${chosenExamType}...`)
@@ -1893,6 +1930,56 @@ export default function ExamGeneratorPage() {
             )}
           </motion.div>
         </div>
+
+        <AlertDialog
+          open={pendingExamRequest !== null}
+          onOpenChange={(open) => { if (!open) setPendingExamRequest(null) }}
+        >
+          <AlertDialogContent className="rounded-none" style={{ fontFamily: 'Tahoma' }}>
+            <AlertDialogHeader>
+              <AlertDialogTitle>You have an exam in progress</AlertDialogTitle>
+              <AlertDialogDescription>
+                Your unfinished {pendingExamRequest?.pausedExamType === 'diagnostic' ? 'diagnostic' : 'practice'} exam
+                {pendingExamRequest?.pausedAt ? ` from ${new Date(pendingExamRequest.pausedAt).toLocaleString()}` : ''}
+                {' '}will be erased if you start a new one.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter className="gap-2 sm:gap-2">
+              <Button
+                variant="ghost"
+                className="rounded-none"
+                onClick={() => setPendingExamRequest(null)}
+              >
+                Cancel
+              </Button>
+              <Button
+                variant="outline"
+                className="rounded-none"
+                onClick={() => {
+                  const req = pendingExamRequest
+                  setPendingExamRequest(null)
+                  try { localStorage.removeItem('pausedExamState') } catch {}
+                  setHasPausedExam(false)
+                  setLastExamWasSubmitted(false)
+                  if (req) {
+                    void proceedWithExamGeneration(req.chosenExamType, req.chosenMode)
+                  }
+                }}
+              >
+                Discard and start new
+              </Button>
+              <Button
+                className="rounded-none"
+                onClick={() => {
+                  setPendingExamRequest(null)
+                  handleResumeLastExam()
+                }}
+              >
+                Resume previous
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </main>
     )
   }
@@ -2022,7 +2109,7 @@ export default function ExamGeneratorPage() {
                 style={{ fontFamily: 'Tahoma' }}
               >
                 <Grid2X2 className="h-4 w-4 mr-2" />
-                Questions
+                Review & Submit
               </Button>
             </div>
           </div>
@@ -2232,7 +2319,7 @@ export default function ExamGeneratorPage() {
         }}>
           <SheetContent side="right" className="w-[320px] p-0 flex h-full min-h-0 flex-col overflow-hidden">
             <SheetHeader className="p-4 pb-2 border-b">
-              <SheetTitle style={{ fontFamily: 'Tahoma' }}>Questions</SheetTitle>
+              <SheetTitle style={{ fontFamily: 'Tahoma' }}>Review & Submit</SheetTitle>
             </SheetHeader>
             <ScrollArea className="min-h-0 flex-1 p-4">
               <div className="grid grid-cols-4 gap-2">
