@@ -204,30 +204,32 @@ export async function GET(request: NextRequest) {
       subscription_tier: string | null
       stripe_customer_id: string | null
     }>
-    const sentToday = (ts: string | null) => !!ts && new Date(ts) >= todayStart
+    // "Recent" = last 24h, so yesterday's 11am EDT nudge run shows up in this morning's 10am EDT digest.
+    const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000)
+    const sentRecent = (ts: string | null) => !!ts && new Date(ts) >= oneDayAgo
     const isPaid = (u: { subscription_tier: string | null; stripe_customer_id: string | null }) =>
       u.subscription_tier === 'pro' && !!u.stripe_customer_id
     const tally = (key: 'onboarding_day1_sent_at' | 'onboarding_day2_sent_at' | 'onboarding_day3_sent_at') => {
-      let today = 0, cohort = 0, paid = 0
+      let recent = 0, cohort = 0, paid = 0
       for (const u of obAll) {
         const ts = u[key]
-        if (sentToday(ts)) today++
+        if (sentRecent(ts)) recent++
         if (ts) { cohort++; if (isPaid(u)) paid++ }
       }
       const rate = cohort ? Math.round((paid / cohort) * 100) : 0
-      return { today, cohort, paid, rate }
+      return { recent, cohort, paid, rate }
     }
     const d1 = tally('onboarding_day1_sent_at')
     const d2 = tally('onboarding_day2_sent_at')
     const d3 = tally('onboarding_day3_sent_at')
-    const obAnyActivity = d1.today + d2.today + d3.today + d1.cohort + d2.cohort + d3.cohort > 0
+    const obAnyActivity = d1.recent + d2.recent + d3.recent + d1.cohort + d2.cohort + d3.cohort > 0
     const onboardingLines = obAnyActivity
       ? [
           '',
-          `✉️ *Onboarding Funnel* (sent today · lifetime converted-to-paid)`,
-          `Day 1 (warm):   ${d1.today} today · ${d1.paid}/${d1.cohort} (${d1.rate}%)`,
-          `Day 2 (FOMO):   ${d2.today} today · ${d2.paid}/${d2.cohort} (${d2.rate}%)`,
-          `Day 3 (stakes): ${d3.today} today · ${d3.paid}/${d3.cohort} (${d3.rate}%)`,
+          `✉️ *Onboarding Funnel* (sent last 24h · lifetime converted-to-paid)`,
+          `Day 1 (warm):   ${d1.recent} · ${d1.paid}/${d1.cohort} (${d1.rate}%)`,
+          `Day 2 (FOMO):   ${d2.recent} · ${d2.paid}/${d2.cohort} (${d2.rate}%)`,
+          `Day 3 (stakes): ${d3.recent} · ${d3.paid}/${d3.cohort} (${d3.rate}%)`,
         ]
       : []
 

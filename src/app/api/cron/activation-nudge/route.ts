@@ -130,12 +130,23 @@ export async function GET(req: NextRequest) {
   })
 
   // Social proof number: distinct users who answered at least one exam question in the last 7 days.
+  // Supabase JS caps each request at 1000 rows, so paginate until we've seen them all.
   const sevenDaysAgo = new Date(Date.now() - 7 * 86400_000).toISOString()
-  const { data: weekActive } = await supabase
-    .from('exam_question_attempts')
-    .select('user_id', { count: 'exact', head: false })
-    .gte('created_at', sevenDaysAgo)
-  const studentsThisWeek = new Set((weekActive || []).map((r: { user_id: string }) => r.user_id)).size
+  const distinctUserIds = new Set<string>()
+  let page = 0
+  const pageSize = 1000
+  while (true) {
+    const { data } = await supabase
+      .from('exam_question_attempts')
+      .select('user_id')
+      .gte('created_at', sevenDaysAgo)
+      .range(page * pageSize, (page + 1) * pageSize - 1)
+    if (!data || data.length === 0) break
+    for (const r of data as Array<{ user_id: string }>) distinctUserIds.add(r.user_id)
+    if (data.length < pageSize) break
+    page++
+  }
+  const studentsThisWeek = distinctUserIds.size
 
   // Pull free users from the last 30 days. Filter in JS so we can join against
   // exam_question_attempts without a complex Postgres view.
