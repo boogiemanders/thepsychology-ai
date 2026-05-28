@@ -36,11 +36,25 @@ jobs:
           git config user.name "feedback-triage-bot"
           git config user.email "bot@thepsychology.ai"
 
-      - name: Remove repo MCP config
-        run: rm -f .mcp.json
+      - name: Write MCP config with secrets
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFY_EMAIL_FROM: ${{ secrets.NOTIFY_EMAIL_FROM }}
+        run: |
+          rm -f .mcp.json
+          jq -nc \
+            --arg cmd "$GITHUB_WORKSPACE/mcp/eppp-mcp/run.sh" \
+            --arg url "$NEXT_PUBLIC_SUPABASE_URL" \
+            --arg key "$SUPABASE_SERVICE_ROLE_KEY" \
+            --arg resend "$RESEND_API_KEY" \
+            --arg from "$NOTIFY_EMAIL_FROM" \
+            '{mcpServers:{eppp:{command:$cmd, env:{NEXT_PUBLIC_SUPABASE_URL:$url, SUPABASE_SERVICE_ROLE_KEY:$key, RESEND_API_KEY:$resend, NOTIFY_EMAIL_FROM:$from}}}}' \
+            > /tmp/mcp-config.json
 
       - name: Run Claude Code executor
-        uses: anthropics/claude-code-action@beta
+        uses: anthropics/claude-code-action@v1
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
@@ -51,31 +65,18 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          mode: agent
-          mcp_config: |
-            {
-              "mcpServers": {
-                "eppp": {
-                  "command": "mcp/eppp-mcp/run.sh",
-                  "env": {
-                    "NEXT_PUBLIC_SUPABASE_URL": "${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}",
-                    "SUPABASE_SERVICE_ROLE_KEY": "${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}",
-                    "RESEND_API_KEY": "${{ secrets.RESEND_API_KEY }}",
-                    "NOTIFY_EMAIL_FROM": "${{ secrets.NOTIFY_EMAIL_FROM }}"
-                  }
-                }
-              }
-            }
-          allowed_tools: "Bash,Read,Write,Edit,Grep,Glob,mcp__eppp__get_feedback,mcp__eppp__send_reply,mcp__eppp__mark_resolved"
-          direct_prompt: |
+          claude_args: |
+            --mcp-config /tmp/mcp-config.json
+            --allowedTools "Bash,Read,Write,Edit,Grep,Glob,mcp__eppp__get_feedback,mcp__eppp__send_reply,mcp__eppp__mark_resolved"
+          prompt: |
             You are the EXECUTOR for the HITL feedback triage flow at thepsychology.ai.
 
-            Your job: pull rows from triage_drafts where status='approved' and executed_at IS NULL. For each: apply the code change described in draft_fix, commit + PR + merge, send the reply email, update the row to executed, and post a Slack thread confirmation.
+            Your job: pull rows from triage_drafts where status='approved' and executed_at IS NULL. For each: apply the code change described in draft_fix, commit + PR + merge, send the reply email, update the row to executed, and post a Slack confirmation.
 
             HARD RULES (non-negotiable):
             - NEVER use em dashes anywhere: not in commits, not in email, not in slack copy, not in code or notes.
             - NEVER push directly to main. Always: branch + gh pr create + gh pr merge --merge.
-            - If a draft's draft_email_body is empty (harm flag or self-resolution), do NOT send email. Skip to marking executed with a one-line note in admin comments and post a Slack thread saying "marked resolved without reply".
+            - If a draft's draft_email_body is empty (harm flag or self-resolution), do NOT send email. Skip to marking executed with a one-line note in admin comments and post a Slack confirmation saying "marked resolved without reply".
 
             ENV available to bash: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, RESEND_API_KEY, NOTIFY_EMAIL_FROM, SLACK_WEBHOOK_FEEDBACK, GH_TOKEN.
 
@@ -126,6 +127,6 @@ jobs:
                f. SEND EMAIL only when kind=feedback. Call mcp__eppp__send_reply with: feedback_id=<row.feedback_id>, subject=draft_email_subject, body=draft_email_body, cc="DrChan@thepsychology.ai". Pass the email exactly as drafted, no edits, no em dashes.
                   If kind=low_rated: skip send_reply entirely (question_feedback rows have no email recipient). Note in the Slack confirmation "code change only, no reply sent (low_rated)".
                g. PATCH the draft row: status=executed, executed_at=now(), executed_pr_url=PR_URL.
-               h. Post Slack confirmation: "Shipped. PR: $PR_URL. Email sent." (or "Email skipped, code only.")
+               h. Post Slack confirmation including the draft id and PR URL: "Shipped draft <DRAFT_ID>. PR: $PR_URL. Email sent." (or "Email skipped, code only.")
 
             4. Final summary as your last message: count of drafts executed, broken down by normal vs empty-email. List all PR URLs. Begin.

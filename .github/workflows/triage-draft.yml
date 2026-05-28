@@ -30,13 +30,23 @@ jobs:
         working-directory: mcp/eppp-mcp
         run: npm install
 
-      - name: Remove repo MCP config
-        # Repo .mcp.json has macOS-absolute paths; the action would auto-load it.
-        # Our mcp_config below registers eppp with a runner-relative path.
-        run: rm -f .mcp.json
+      - name: Write MCP config with secrets
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          # Remove repo .mcp.json so action doesn't auto-load its macOS-absolute paths.
+          rm -f .mcp.json
+          # Build the MCP config as JSON via jq so secret values are properly escaped.
+          jq -nc \
+            --arg cmd "$GITHUB_WORKSPACE/mcp/eppp-mcp/run.sh" \
+            --arg url "$NEXT_PUBLIC_SUPABASE_URL" \
+            --arg key "$SUPABASE_SERVICE_ROLE_KEY" \
+            '{mcpServers:{eppp:{command:$cmd, env:{NEXT_PUBLIC_SUPABASE_URL:$url, SUPABASE_SERVICE_ROLE_KEY:$key}}}}' \
+            > /tmp/mcp-config.json
 
       - name: Run Claude Code drafter
-        uses: anthropics/claude-code-action@beta
+        uses: anthropics/claude-code-action@v1
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
@@ -44,23 +54,10 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          mode: agent
-          mcp_config: |
-            {
-              "mcpServers": {
-                "eppp": {
-                  "command": "mcp/eppp-mcp/run.sh",
-                  "env": {
-                    "NEXT_PUBLIC_SUPABASE_URL": "${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}",
-                    "SUPABASE_SERVICE_ROLE_KEY": "${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}",
-                    "RESEND_API_KEY": "${{ secrets.RESEND_API_KEY }}",
-                    "NOTIFY_EMAIL_FROM": "${{ secrets.NOTIFY_EMAIL_FROM }}"
-                  }
-                }
-              }
-            }
-          allowed_tools: "Bash,Read,Grep,Glob,WebSearch,WebFetch,mcp__eppp__list_feedback,mcp__eppp__get_feedback,mcp__eppp__user_history,mcp__eppp__list_low_rated_questions"
-          direct_prompt: |
+          claude_args: |
+            --mcp-config /tmp/mcp-config.json
+            --allowedTools "Bash,Read,Grep,Glob,WebSearch,WebFetch,mcp__eppp__list_feedback,mcp__eppp__get_feedback,mcp__eppp__user_history,mcp__eppp__list_low_rated_questions"
+          prompt: |
             You are the DRAFTER for the HITL feedback triage flow at thepsychology.ai (an EPPP exam prep product).
 
             Your job: read the feedback queues, evaluate each item, and draft a fix plan + reply email. You do NOT make code changes or send any email. You insert a draft row into the triage_drafts table and post a Slack approval message. A human reviewer will Approve or Reject in Slack. A separate execute workflow handles approved drafts.
