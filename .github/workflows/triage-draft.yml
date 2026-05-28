@@ -67,6 +67,12 @@ jobs:
 
             ENV available to bash: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, SLACK_WEBHOOK_FEEDBACK.
 
+            CRITICAL ON SECRETS:
+            - GitHub Actions automatically masks any secret VALUE as `***` in logs (including in echoed prompts and bash output). The variables themselves are still set correctly in the shell environment.
+            - NEVER echo, print, or inspect env var values to "verify" them. If you see `***` anywhere, that is GH log masking, not the literal value.
+            - Always reference secrets via $VAR_NAME in commands. Do NOT substitute the literal `***` you see in logs into your curl headers or args. The shell expansion uses the real values at runtime.
+            - If a curl returns an auth error, do not assume the env var is empty. Re-read the helper shapes below and run them verbatim.
+
             HELPER SHAPES (use curl in Bash):
 
             Insert draft and capture id:
