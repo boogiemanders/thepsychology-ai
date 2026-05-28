@@ -17,9 +17,15 @@ type MarketingData = {
   usersThisMonth: number
   usersThisWeek: number
   usersToday: number
+  conversion: {
+    converted: number
+    total: number
+    rate: number
+  }
   referralBreakdown: Array<{
     source: string
     count: number
+    converted: number
     percentage: number
   }>
   utmBreakdown: Array<{
@@ -46,6 +52,8 @@ type MarketingData = {
     utm_campaign: string | null
     signup_device: string | null
     created_at: string
+    paid: boolean
+    subscription_status: string | null
   }>
 }
 
@@ -233,6 +241,29 @@ export function MarketingAnalytics() {
         </Card>
       </div>
 
+      {/* Paid Conversion */}
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-sm flex items-center gap-2">
+            <Target className="h-4 w-4" />
+            Paid Conversion ({timeRange === 'all' ? 'all time' : `last ${timeRange}`})
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-baseline gap-3">
+            <span className="text-2xl font-bold text-green-600">
+              {data?.conversion?.converted || 0}
+            </span>
+            <span className="text-sm text-muted-foreground">
+              of {data?.conversion?.total || 0} signups became paying customers
+            </span>
+            <span className="ml-auto text-lg font-semibold">
+              {(data?.conversion?.rate || 0).toFixed(1)}%
+            </span>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Two Column Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Referral Sources */}
@@ -256,6 +287,11 @@ export function MarketingAnalytics() {
                         )}
                       </div>
                       <div className="flex items-center gap-3 shrink-0">
+                        {item.converted > 0 && (
+                          <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-green-600 border-green-600/40">
+                            {item.converted} paid
+                          </Badge>
+                        )}
                         <span className="text-sm font-medium">{item.count}</span>
                         <span className="text-xs text-muted-foreground w-12 text-right">
                           {item.percentage.toFixed(1)}%
@@ -348,6 +384,7 @@ export function MarketingAnalytics() {
                   <TableHead className="text-xs">Name</TableHead>
                   <TableHead className="text-xs">Referral Source</TableHead>
                   <TableHead className="text-xs">UTM</TableHead>
+                  <TableHead className="text-xs">Paid</TableHead>
                   <TableHead className="text-xs">Device</TableHead>
                   <TableHead className="text-xs">Date</TableHead>
                 </TableRow>
@@ -366,6 +403,13 @@ export function MarketingAnalytics() {
                           {user.utm_source}
                           {user.utm_campaign && ` / ${user.utm_campaign}`}
                         </span>
+                      ) : (
+                        <span className="text-muted-foreground">-</span>
+                      )}
+                    </TableCell>
+                    <TableCell className="text-xs">
+                      {user.paid ? (
+                        <Badge className="text-[10px] px-1.5 py-0 bg-green-600 hover:bg-green-600">Paid</Badge>
                       ) : (
                         <span className="text-muted-foreground">-</span>
                       )}

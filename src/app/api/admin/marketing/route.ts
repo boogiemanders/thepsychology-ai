@@ -1,11 +1,51 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { z } from 'zod'
+import Stripe from 'stripe'
 import { getSupabaseClient } from '@/lib/supabase-server'
 
 const QuerySchema = z.object({
   range: z.enum(['7d', '30d', '90d', 'all']).optional().default('30d'),
 })
+
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null
+
+// A subscription in one of these states means the person entered payment and is (or was) actively paying.
+const PAID_SUB_STATUSES = new Set(['active', 'trialing', 'past_due'])
+
+type StripeConversion = { paid: boolean; status: string }
+
+// Build a lowercased-email -> conversion map from all Stripe subscriptions.
+// Volume is small (low hundreds), so a full paginated list on each load is fine.
+async function fetchStripeConversions(): Promise<Map<string, StripeConversion>> {
+  const map = new Map<string, StripeConversion>()
+  if (!stripe) return map
+
+  try {
+    for await (const sub of stripe.subscriptions.list({
+      status: 'all',
+      limit: 100,
+      expand: ['data.customer'],
+    })) {
+      const customer = sub.customer
+      if (!customer || typeof customer === 'string' || customer.deleted) continue
+      const email = customer.email?.trim().toLowerCase()
+      if (!email) continue
+
+      const paid = PAID_SUB_STATUSES.has(sub.status)
+      const existing = map.get(email)
+      // Keep the strongest signal: a paid sub wins over a non-paid one.
+      if (!existing || (paid && !existing.paid)) {
+        map.set(email, { paid, status: sub.status })
+      }
+    }
+  } catch (error) {
+    console.error('[admin/marketing] Failed to fetch Stripe conversions:', error)
+  }
+
+  return map
+}
 
 function getBearerToken(req: NextRequest): string | null {
   const header = req.headers.get('authorization') || ''
@@ -188,20 +228,36 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Failed to fetch user data' }, { status: 500 })
     }
 
-    // Calculate referral breakdown
+    // Stripe conversions: which signups became paying customers
+    const conversions = await fetchStripeConversions()
+    const isPaid = (email: string | null): boolean =>
+      !!email && conversions.get(email.trim().toLowerCase())?.paid === true
+
+    // Calculate referral breakdown (+ how many from each source converted to paid)
     const referralCounts: Record<string, number> = {}
+    const referralConverted: Record<string, number> = {}
     for (const user of rangeUsers || []) {
       const source = user.referral_source || 'unknown'
       referralCounts[source] = (referralCounts[source] || 0) + 1
+      if (isPaid(user.email)) referralConverted[source] = (referralConverted[source] || 0) + 1
     }
     const totalRangeUsers = rangeUsers?.length || 1
     const referralBreakdown = Object.entries(referralCounts)
       .map(([source, count]) => ({
         source,
         count,
+        converted: referralConverted[source] || 0,
         percentage: (count / totalRangeUsers) * 100,
       }))
       .sort((a, b) => b.count - a.count)
+
+    // Top-line conversion: paid signups in range / total signups in range
+    const convertedInRange = (rangeUsers || []).filter((u) => isPaid(u.email)).length
+    const conversion = {
+      converted: convertedInRange,
+      total: rangeUsers?.length || 0,
+      rate: rangeUsers?.length ? (convertedInRange / rangeUsers.length) * 100 : 0,
+    }
 
     // Calculate UTM breakdown
     const utmMap = new Map<string, { utm_source: string | null; utm_medium: string | null; utm_campaign: string | null; count: number }>()
@@ -261,22 +317,28 @@ export async function GET(request: NextRequest) {
       .sort((a, b) => a.date.localeCompare(b.date))
 
     // Recent signups (most recent 50)
-    const recentSignups = (rangeUsers || []).slice(0, 50).map(user => ({
-      id: user.id,
-      email: user.email,
-      full_name: user.full_name,
-      referral_source: user.referral_source,
-      utm_source: user.utm_source,
-      utm_campaign: user.utm_campaign,
-      signup_device: user.signup_device,
-      created_at: user.created_at,
-    }))
+    const recentSignups = (rangeUsers || []).slice(0, 50).map(user => {
+      const conv = user.email ? conversions.get(user.email.trim().toLowerCase()) : undefined
+      return {
+        id: user.id,
+        email: user.email,
+        full_name: user.full_name,
+        referral_source: user.referral_source,
+        utm_source: user.utm_source,
+        utm_campaign: user.utm_campaign,
+        signup_device: user.signup_device,
+        created_at: user.created_at,
+        paid: conv?.paid === true,
+        subscription_status: conv?.status ?? null,
+      }
+    })
 
     return NextResponse.json({
       totalUsers,
       usersThisMonth,
       usersThisWeek,
       usersToday,
+      conversion,
       referralBreakdown,
       utmBreakdown,
       deviceBreakdown,
