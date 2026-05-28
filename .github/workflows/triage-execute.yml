@@ -36,21 +36,8 @@ jobs:
           git config user.name "feedback-triage-bot"
           git config user.email "bot@thepsychology.ai"
 
-      - name: Write CI MCP config
-        run: |
-          # Remove repo-local .mcp.json so the action does not auto-load it.
-          # That file has macOS-only paths and a bunch of MCP servers we don't need in CI.
-          rm -f .mcp.json
-          mkdir -p .claude
-          cat > .claude/ci.mcp.json <<'JSON'
-          {
-            "mcpServers": {
-              "eppp": {
-                "command": "mcp/eppp-mcp/run.sh"
-              }
-            }
-          }
-          JSON
+      - name: Remove repo MCP config
+        run: rm -f .mcp.json
 
       - name: Run Claude Code executor
         uses: anthropics/claude-code-action@beta
@@ -65,7 +52,14 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           mode: agent
-          mcp_config: .claude/ci.mcp.json
+          mcp_config: |
+            {
+              "mcpServers": {
+                "eppp": {
+                  "command": "mcp/eppp-mcp/run.sh"
+                }
+              }
+            }
           allowed_tools: "Bash,Read,Write,Edit,Grep,Glob,mcp__eppp__get_feedback,mcp__eppp__send_reply,mcp__eppp__mark_resolved"
           direct_prompt: |
             You are the EXECUTOR for the HITL feedback triage flow at thepsychology.ai.

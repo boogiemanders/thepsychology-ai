@@ -30,21 +30,10 @@ jobs:
         working-directory: mcp/eppp-mcp
         run: npm install
 
-      - name: Write CI MCP config
-        run: |
-          # Remove repo-local .mcp.json so the action does not auto-load it.
-          # That file has macOS-only paths and a bunch of MCP servers we don't need in CI.
-          rm -f .mcp.json
-          mkdir -p .claude
-          cat > .claude/ci.mcp.json <<'JSON'
-          {
-            "mcpServers": {
-              "eppp": {
-                "command": "mcp/eppp-mcp/run.sh"
-              }
-            }
-          }
-          JSON
+      - name: Remove repo MCP config
+        # Repo .mcp.json has macOS-absolute paths; the action would auto-load it.
+        # Our mcp_config below registers eppp with a runner-relative path.
+        run: rm -f .mcp.json
 
       - name: Run Claude Code drafter
         uses: anthropics/claude-code-action@beta
@@ -56,7 +45,14 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           mode: agent
-          mcp_config: .claude/ci.mcp.json
+          mcp_config: |
+            {
+              "mcpServers": {
+                "eppp": {
+                  "command": "mcp/eppp-mcp/run.sh"
+                }
+              }
+            }
           allowed_tools: "Bash,Read,Grep,Glob,WebSearch,WebFetch,mcp__eppp__list_feedback,mcp__eppp__get_feedback,mcp__eppp__user_history,mcp__eppp__list_low_rated_questions"
           direct_prompt: |
             You are the DRAFTER for the HITL feedback triage flow at thepsychology.ai (an EPPP exam prep product).
