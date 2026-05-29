@@ -7,6 +7,7 @@ import { chunkTextForTts, markdownToSpeakableText, normalizeTextForReadAlong, pr
 import { computeWordProgressMap, findWordIndexForRatio, findWordIndexForEndTimes, countWords, getEffectiveDurationSeconds, estimateSyllables, WORD_REGEX, PLAYBACK_RATE_OPTIONS } from '@/lib/audio-playback-utils'
 import { Highlighter, Pause, Play, Podcast, ScrollText, SkipBack, SkipForward } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import InnerVideoPlayer from '@/components/ui/video-player'
 import { useCustomAudioCheckout } from '@/hooks/use-custom-audio-checkout'
 import { useCustomAudioStatus } from '@/hooks/use-custom-audio-status'
 
@@ -2310,15 +2311,8 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
             <DialogTitle>Podcast Discussion</DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
-            {podcastUrls?.video && (
-              <video
-                controls
-                className="w-full rounded-lg"
-                src={podcastUrls.video}
-                preload="metadata"
-              >
-                Your browser does not support the video element.
-              </video>
+            {podcastUrls?.video && showPodcastModal && (
+              <InnerVideoPlayer src={podcastUrls.video} autoPlay />
             )}
             {podcastUrls?.audio && (
               podcastUrls.video ? (

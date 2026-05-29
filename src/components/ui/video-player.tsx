@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Play, Pause, Volume2, Volume1, VolumeX } from "lucide-react"
+import { Play, Pause, Volume2, Volume1, VolumeX, Maximize, Minimize } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
@@ -55,6 +55,8 @@ const VideoPlayer = ({
   caption?: string
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [isFullscreen, setIsFullscreen] = useState(false)
   const [isPlaying, setIsPlaying] = useState(autoPlay)
   const [volume, setVolume] = useState(1)
   const [progress, setProgress] = useState(0)
@@ -119,8 +121,23 @@ const VideoPlayer = ({
     }
   }
 
+  const toggleFullscreen = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen()
+    } else if (containerRef.current) {
+      containerRef.current.requestFullscreen()
+    }
+  }
+
+  React.useEffect(() => {
+    const onChange = () => setIsFullscreen(!!document.fullscreenElement)
+    document.addEventListener("fullscreenchange", onChange)
+    return () => document.removeEventListener("fullscreenchange", onChange)
+  }, [])
+
   return (
     <motion.div
+      ref={containerRef}
       className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-[#11111198] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-sm"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -224,6 +241,17 @@ const VideoPlayer = ({
                     </Button>
                   </motion.div>
                 ))}
+                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                  <Button
+                    onClick={toggleFullscreen}
+                    variant="ghost"
+                    size="icon"
+                    className="text-white hover:bg-[#111111d1] hover:text-white"
+                    aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                  >
+                    {isFullscreen ? <Minimize className="h-5 w-5" /> : <Maximize className="h-5 w-5" />}
+                  </Button>
+                </motion.div>
               </div>
             </div>
           </motion.div>
