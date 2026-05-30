@@ -15,10 +15,15 @@ export function isMarketingAction(payload: { actions?: Array<{ action_id?: strin
 
 type ResponseBody = { replace_original: true; text: string; blocks: unknown[] }
 
-function reply(payload: any, statusText: string, extra: unknown[] = []): ResponseBody {
+// Build the replacement message and deliver it to Slack's response_url. We POST to
+// response_url (valid for ~30 min) rather than returning the body synchronously,
+// because a blog publish makes GitHub round-trips that blow past Slack's 3s window
+// for the sync reply — by then Slack has discarded the sync body and the card never
+// updates. response_url has no such limit, so the card refreshes once work is done.
+async function reply(payload: any, statusText: string, extra: unknown[] = []): Promise<ResponseBody> {
   const original = Array.isArray(payload.message?.blocks) ? payload.message.blocks : []
   const withoutActions = original.filter((b: any) => b.type !== "actions")
-  return {
+  const body: ResponseBody = {
     replace_original: true,
     text: payload.message?.text || "Marketing draft updated",
     blocks: [
@@ -27,6 +32,20 @@ function reply(payload: any, statusText: string, extra: unknown[] = []): Respons
       ...extra,
     ],
   }
+
+  const url: string | undefined = payload.response_url
+  if (url) {
+    try {
+      await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      })
+    } catch (err) {
+      console.error("[marketing] response_url post failed:", (err as Error).message)
+    }
+  }
+  return body
 }
 
 // supabase is the service-role client from the calling route.
@@ -34,18 +53,18 @@ export async function handleMarketingInteraction(payload: any, supabase: any): P
   const action = (payload.actions || []).find((a: any) => MARKETING_ACTIONS.has(a.action_id))
   const user = payload.user?.username || payload.user?.name || "unknown"
   const draftId: string | undefined = action?.value
-  if (!draftId) return reply(payload, "No draft id on the action.")
+  if (!draftId) return await reply(payload, "No draft id on the action.")
 
   const { data: row } = await supabase.from("marketing_drafts").select("*").eq("id", draftId).single()
   const draft = row as MarketingDraft | null
-  if (!draft) return reply(payload, "Draft not found.")
-  if (draft.status !== "pending") return reply(payload, `Already ${draft.status}.`)
+  if (!draft) return await reply(payload, "Draft not found.")
+  if (draft.status !== "pending") return await reply(payload, `Already ${draft.status}.`)
 
   const now = new Date().toISOString()
 
   if (action.action_id === "reject_draft") {
     await supabase.from("marketing_drafts").update({ status: "rejected", decided_at: now }).eq("id", draftId)
-    return reply(payload, `Rejected by ${user}.`)
+    return await reply(payload, `Rejected by ${user}.`)
   }
 
   // Approve.
@@ -56,15 +75,15 @@ export async function handleMarketingInteraction(payload: any, supabase: any): P
         .from("marketing_drafts")
         .update({ status: "published", published_url: result.url, decided_at: now })
         .eq("id", draftId)
-      return reply(payload, `Published by ${user}: <${result.url}|view post>`)
+      return await reply(payload, `Published by ${user}: <${result.url}|view post>`)
     } catch (err) {
-      return reply(payload, `Approved by ${user}, but publish failed: ${(err as Error).message}`)
+      return await reply(payload, `Approved by ${user}, but publish failed: ${(err as Error).message}`)
     }
   }
 
   // Social (linkedin / tiktok): mark approved and show the copy-paste text inline.
   await supabase.from("marketing_drafts").update({ status: "approved", decided_at: now }).eq("id", draftId)
-  return reply(payload, `Approved by ${user}. Copy-paste below:`, [
+  return await reply(payload, `Approved by ${user}. Copy-paste below:`, [
     { type: "section", text: { type: "mrkdwn", text: draft.body_md.slice(0, 2800) } },
   ])
 }
