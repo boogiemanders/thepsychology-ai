@@ -30,7 +30,7 @@ Here's what you need to memorize:
 
 ## The Frontal Lobe: Your Brain's Executive Suite
 
-The frontal lobes occupy the largest portion of the brain, about **1/3 of the entire brain**. They house three critical areas that will come up repeatedly on the EPPP and in your clinical work.
+The frontal lobes occupy the largest portion of the brain, about **1/3 of the cerebral cortex**. They house three critical areas that will come up repeatedly on the EPPP and in your clinical work.
 
 ### Broca's Area: The Speech Production Center
 
@@ -244,7 +244,9 @@ While both hemispheres work together on most tasks, each is dominant for certain
 - Understanding social context in language (pragmatics) — humor, sarcasm, hyperbole
 - Controls left side of body
 
-**Exception alert:** Smell is different. Odors entering the left nostril go directly to the left hemisphere, and vice versa. Everything else crosses over.
+**Model alert:** The positive/negative emotion split above is the *valence hypothesis*. It's a commonly tested association, but know it as one model, not settled fact. Other models compete with it: that the right hemisphere is dominant for processing *all* emotions, or that the real split is approach vs. withdrawal motivation (e.g., anger is "negative" but approach-driven, so it doesn't fit the simple positive/negative map).
+
+**Exception alert:** Smell is the exception to the crossover rule. Odors entering the left nostril are processed *first* by the left hemisphere (and vice versa), making olfaction the only sense that starts ipsilaterally. It does cross over shortly after, via the anterior commissure, so processing becomes bilateral, but the initial ipsilateral routing is the testable point. Everything else crosses right away.
 
 ### Split-Brain Research: How We Learned About Lateralization
 
