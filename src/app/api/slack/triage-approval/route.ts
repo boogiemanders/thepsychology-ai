@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { getSupabaseClient } from '@/lib/supabase-server'
+import { isMarketingAction, handleMarketingInteraction } from '@/lib/marketing/handle-interaction'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -58,6 +59,12 @@ export async function POST(request: NextRequest) {
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
   if (!supabase) {
     return NextResponse.json({ error: 'supabase unavailable' }, { status: 500 })
+  }
+
+  // Marketing content engine reuses this same endpoint (Slack allows one interactivity
+  // URL per app). Its buttons use distinct action_ids, so dispatch before triage logic.
+  if (isMarketingAction(payload)) {
+    return NextResponse.json(await handleMarketingInteraction(payload, supabase))
   }
 
   const actions: any[] = payload.actions || []
