@@ -7,6 +7,7 @@ const WEBHOOKS = {
   payments: process.env.SLACK_WEBHOOK_PAYMENTS,
   metrics: process.env.SLACK_WEBHOOK_METRICS,
   alerts: process.env.SLACK_WEBHOOK_ALERTS,
+  social: process.env.SLACK_WEBHOOK_SOCIAL,
   default: process.env.SLACK_WEBHOOK_URL,
 } as const
 
@@ -18,7 +19,8 @@ export function isSlackConfigured(channel: SlackChannel = 'default'): boolean {
 
 export async function sendSlackNotification(
   message: string,
-  channel: SlackChannel = 'default'
+  channel: SlackChannel = 'default',
+  blocks?: unknown[]
 ): Promise<void> {
   const webhookUrl = WEBHOOKS[channel] || WEBHOOKS.default
 
@@ -31,7 +33,7 @@ export async function sendSlackNotification(
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: message }),
+      body: JSON.stringify(blocks ? { text: message, blocks } : { text: message }),
     })
 
     if (!response.ok) {
