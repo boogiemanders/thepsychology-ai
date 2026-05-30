@@ -27,7 +27,15 @@ export function buildBlogMarkdown(draft: MarketingDraft, publishedAt: string): s
   const slug = draft.slug || slugify(title)
   const description = fm.description || ""
   const author = fm.author || DEFAULT_AUTHOR
-  const tags = (fm.tags || []).join(", ")
+  // tags may arrive as an array (typed shape) or a comma-string (what an LLM draft
+  // often emits). Coerce both to a clean comma list so publish never crashes on it.
+  const rawTags: unknown = fm.tags
+  const tagList = Array.isArray(rawTags)
+    ? rawTags.map((t) => String(t).trim())
+    : typeof rawTags === "string"
+      ? rawTags.split(",").map((t) => t.trim())
+      : []
+  const tags = tagList.filter(Boolean).join(", ")
 
   const header = [
     "---",
