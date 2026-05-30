@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse, after } from 'next/server'
 import crypto from 'crypto'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { isMarketingAction, handleMarketingInteraction } from '@/lib/marketing/handle-interaction'
@@ -63,8 +63,11 @@ export async function POST(request: NextRequest) {
 
   // Marketing content engine reuses this same endpoint (Slack allows one interactivity
   // URL per app). Its buttons use distinct action_ids, so dispatch before triage logic.
+  // Ack Slack immediately, then do the work (which may include a slow blog publish) and
+  // post the card update to response_url in after() — avoids Slack's 3s sync-reply window.
   if (isMarketingAction(payload)) {
-    return NextResponse.json(await handleMarketingInteraction(payload, supabase))
+    after(handleMarketingInteraction(payload, supabase))
+    return new Response('', { status: 200 })
   }
 
   const actions: any[] = payload.actions || []
