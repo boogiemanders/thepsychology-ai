@@ -152,9 +152,9 @@ A statistically significant result tells you that an effect probably isn't due t
 Calculate it by: (Mean₁. Mean₂) / Pooled SD
 
 Cohen's guidelines:
-- **d < 0.2:** Small effect
-- **d = 0.2 to 0.8:** Medium effect  
-- **d > 0.8:** Large effect
+- **d around 0.2:** Small effect
+- **d around 0.5:** Medium effect
+- **d around 0.8 or higher:** Large effect
 
 {{M}}Imagine two therapy approaches both show statistically significant improvement over a control group. Therapy A has d = 0.3 (small effect), while Therapy B has d = 1.2 (large effect). Both "work," but Therapy B produces much more substantial change.{{/M}}
 
