@@ -117,8 +117,9 @@ async function listDriveVideos(drive, fId) {
     files.push(...(res.data.files || []))
     pageToken = res.data.nextPageToken
   } while (pageToken)
-  // Only real media: Drive folders also hold the lesson .md docs, which we must ignore.
-  return files.filter((f) => (f.mimeType || '').startsWith('video/') || (f.mimeType || '').startsWith('audio/'))
+  // Videos only: the folder also holds lesson .md docs and a domain-wide .m4a audio overview.
+  // Including audio lets the .m4a fuzzy-match a lesson and steal its slot, skipping the real video.
+  return files.filter((f) => (f.mimeType || '').startsWith('video/'))
 }
 
 async function downloadDriveFile(drive, fileId, destPath) {
