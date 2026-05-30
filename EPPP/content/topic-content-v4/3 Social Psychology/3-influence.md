@@ -29,7 +29,7 @@ Before we dive deep into each type, let's get a quick overview:
 
 ### What Milgram Discovered
 
-Stanley Milgram's research in 1974 revealed something disturbing about human nature: ordinary people will follow orders to hurt others when those orders come from someone they perceive as an authority figure. 
+Stanley Milgram's research, run in the early 1960s (and written up in his 1974 book), revealed something disturbing about human nature: ordinary people will follow orders to hurt others when those orders come from someone they perceive as an authority figure. 
 
 Here's how his study worked: Participants thought they were testing how punishment affects learning. They were assigned the role of "teacher" while a confederate (someone secretly working with the researchers) played the "learner." The researcher, wearing a lab coat and clipboard, instructed the teacher to deliver electric shocks to the learner every time they got a word wrong. With each mistake, the shock intensity increased. The learner wasn't actually receiving shocks, but they acted like they were, screaming, begging to stop, and eventually going silent.
 
@@ -62,7 +62,7 @@ These variations tell us something important: obedience isn't absolute. Context 
 
 ### Modern Replications
 
-You might wonder if these results still hold up today. After all, Milgram's studies happened in the 1970s. Wouldn't modern participants, who know about these studies, behave differently?
+You might wonder if these results still hold up today. After all, Milgram's studies happened in the early 1960s. Wouldn't modern participants, who know about these studies, behave differently?
 
 Jerry Burger replicated Milgram's work in 2009, with some ethical modifications. He stopped the study at 150 volts instead of going all the way to 450, and he followed modern informed consent procedures. The results were remarkably similar: 70% of Burger's participants continued delivering shocks at 150 volts, compared to 82.5% in Milgram's original study. That difference wasn't statistically significant, meaning we can't say people have really changed.
 
@@ -164,7 +164,7 @@ Reality: Milgram's participants were ordinary people from all backgrounds. Intel
 
 **Misconception 2: "These findings are outdated. Modern people would behave differently"**
 
-Reality: Burger's 2009 replication showed remarkably similar results to Milgram's 1970s studies. Human social psychology hasn't fundamentally changed.
+Reality: Burger's 2009 replication showed remarkably similar results to Milgram's 1960s studies. Human social psychology hasn't fundamentally changed.
 
 **Misconception 3: "Conformity is always bad"**
 

@@ -75,8 +75,7 @@ Sex chromosomes (X and Y) determine biological sex, but also carry genes affecti
 
 - Incomplete development of secondary sex characteristics
 - Breast tissue development (gynecomastia)
-- Disproportionately long arms and legs
-- Taller than average height
+- Taller than average height, mostly because of long legs
 - Executive function challenges (attention, working memory, cognitive flexibility)
 - Social and communication difficulties
 
@@ -132,7 +131,7 @@ All types share common features:
 - Developmental delays
 - Elevated risk for vision/hearing problems, heart defects, hypothyroidism, and early-onset Alzheimer's disease
 
-**The maternal age connection**: Risk for trisomy 21 increases with maternal age, particularly after age 30, with the risk curve steepening significantly. {{M}}It's like equipment that functions reliably for years, then starts showing wear patterns at a predictable point{{/M}}. Cell division during egg formation becomes more error-prone as women age.
+**The maternal age connection**: Risk for trisomy 21 goes up with maternal age. It climbs slowly at first, then shoots up much faster starting around age 35. Doctors call 35 "advanced maternal age" for this reason. {{M}}It's like equipment that functions reliably for years, then starts showing wear patterns at a predictable point{{/M}}. Cell division during egg formation becomes more error-prone as women age.
 
 However (and this is a common test question trap) **translocation trisomy 21 risk doesn't increase with maternal age**. It can either occur spontaneously during cell division or be inherited from a parent who carries the translocation. When a parent carries the translocation, they may have multiple children with Down syndrome, and other relatives may also be carriers at increased risk.
 

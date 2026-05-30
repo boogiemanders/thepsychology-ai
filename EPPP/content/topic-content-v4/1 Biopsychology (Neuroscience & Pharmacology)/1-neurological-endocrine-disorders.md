@@ -33,7 +33,7 @@ The number one risk factor is **hypertension** (high blood pressure). Other majo
 - **Thrombotic stroke**: A blood clot forms right in a brain artery
 - **Embolic stroke**: A clot forms elsewhere (like the heart) and travels to the brain
 
-There's also something called a **transient ischemic attack (TIA)**, which is like a warning shot. The blockage clears in less than five minutes, symptoms are temporary, but it's a serious sign that a major stroke could be coming. Always treat TIAs as medical emergencies.
+There's also something called a **transient ischemic attack (TIA)**, which is like a warning shot. The symptoms are temporary and go away on their own (usually within an hour or two), and brain scans show no lasting damage. But it is a serious sign that a major stroke could be coming. Always treat TIAs as medical emergencies.
 
 **Hemorrhagic strokes** happen when an artery ruptures and bleeds:
 - **Intracerebral hemorrhage**: Bleeding inside the brain tissue
@@ -91,7 +91,7 @@ The disease destroys cells in the **caudate nucleus** and **putamen** (parts of 
 2. **Middle stage**: Short-term memory problems, poor concentration and judgment, **chorea** (jerky, uncontrollable movements in hands, face, limbs, and torso)
 3. **Late stage**: Severe rigidity and **bradykinesia** (slowed movement), difficulty walking, speaking, and swallowing, possible neurocognitive disorder
 
-Life expectancy after symptom onset is usually 10 to 30 years. There's no cure. Treatment focuses on managing symptoms and maintaining quality of life.
+After symptoms start, people usually live about 10 to 20 years (this matches the DSM-5-TR). There's no cure. Treatment focuses on managing symptoms and maintaining quality of life.
 
 ### Parkinson's Disease: The Dopamine Disorder
 
@@ -187,7 +187,7 @@ Treatment emphasizes lifestyle changes plus possible medications (diuretics, bet
 
 **Addison's Disease:** Undersecretion of corticosteroids (adrenal insufficiency). Symptoms: apathy, weakness, irritability, depression, GI disturbance.
 
-**Cushing's Disease:** Oversecretion of corticosteroids. Symptoms: weight gain, moon face, mood swings, depression, anxiety.
+**Cushing's Syndrome:** Too much corticosteroid (cortisol). When it's caused by a pituitary tumor, it's called Cushing's disease. Symptoms: weight gain, moon face, mood swings, depression, anxiety.
 
 ### Thyroid Disorders
 
@@ -246,7 +246,7 @@ Can be caused by insulin overdose, skipping meals, excessive exercise or alcohol
 
 **Type 2 diabetes**: More common; insufficient insulin production or body can't use it properly; risk factors include genetics, being overweight, sedentary lifestyle, age over 45, certain racial/ethnic groups (Native Americans, African Americans, Hispanic/Latino Americans)
 
-**Gestational Diabetes**: Develops during pregnancy in women without prior diabetes. Occurs in 1-3% of pregnancies. May precede development of Type 2 diabetes later.
+**Gestational Diabetes**: Develops during pregnancy in women without prior diabetes. Happens in about 6 to 9 out of every 100 pregnancies in the U.S. (newer testing finds even more). May precede development of Type 2 diabetes later.
 
 The classic symptoms of diabetes are the "**Three P's**": **P**olyuria (increased urination), **P**olydipsia (increased thirst), and **P**olyphagia (increased appetite).
 

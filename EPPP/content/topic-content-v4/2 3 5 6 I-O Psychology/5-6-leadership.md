@@ -85,7 +85,7 @@ For the exam, remember these are statistical tendencies with considerable overla
 
 ## The Five Bases of Power
 
-French and Raven (1958) identified five types of power leaders use to influence others. This framework is classic EPPP material, so let's make it memorable:
+French and Raven (1959) identified five types of power leaders use to influence others. This framework is classic EPPP material, so let's make it memorable:
 
 | Power Type | Source | Likely Outcome (Yukl, 2002) |
 |-----------|--------|----------------------------|

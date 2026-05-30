@@ -147,9 +147,9 @@ The **normal distribution** is symmetrical and bell-shaped. It has special prope
 1. The mean, median, and mode all equal the same value (they're all at the center peak)
 2. About 68% of scores fall within one standard deviation of the mean
 3. About 95% fall within two standard deviations
-4. About 99% fall within three standard deviations
+4. About 99.7% fall within three standard deviations (this is why people call it the 68-95-99.7 rule)
 
-{{M}}If you measure the wait times for appointments at a large clinic and get a normal distribution with a mean of 15 minutes and standard deviation of 5 minutes, you know that about 68% of clients wait between 10 and 20 minutes, about 95% wait between 5 and 25 minutes, and virtually everyone waits between 0 and 30 minutes.{{/M}}
+{{M}}If you measure the wait times for appointments at a large clinic and get a normal distribution with a mean of 15 minutes and standard deviation of 5 minutes, you know that about 68% of clients wait between 10 and 20 minutes, about 95% wait between 5 and 25 minutes, and virtually everyone (about 99.7%) waits between 0 and 30 minutes.{{/M}}
 
 Many statistical tests assume your data follows a normal distribution, so understanding this pattern matters for analysis decisions.
 
@@ -180,9 +180,9 @@ When data is skewed, the median is usually better than the mean for representing
 
 These describe how pointy or flat a distribution looks compared to a normal curve.
 
-**Leptokurtic distribution**: Sharper peak and flatter tails than normal. {{M}}Picture everyone's scores bunched tightly around the average on a test that had very predictable content. Lots of people got scores right in the middle range, with few very high or very low scores.{{/M}}
+**Leptokurtic distribution**: Sharper peak AND fatter tails than normal. Scores cluster tightly in the middle, but there are also more extreme high and low scores than a normal curve would have. {{M}}Picture most scores bunched tightly around the average, plus a handful of people who scored way higher or way lower than everyone else.{{/M}}
 
-**Platykurtic distribution**: Flatter peak and fatter tails than normal. {{M}}Imagine a test so unpredictable that scores spread out more evenly across the range. No strong clustering in the middle.{{/M}}
+**Platykurtic distribution**: Flatter peak AND thinner tails than normal. Scores spread out more evenly with no strong clustering and fewer extreme outliers. {{M}}Imagine a test where scores spread out across the range with no strong bunching in the middle.{{/M}}
 
 These terms come up less frequently on the EPPP than skewness, but they're worth knowing for recognition purposes.
 

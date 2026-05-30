@@ -19,7 +19,7 @@ The nervous system divides into two major branches that work together constantly
 
 **Spinal cord injury facts for the exam:**
 - Damage at C1-C5 (neck) = paralysis in all four limbs (quadriplegia)
-- Damage at C6-C7 = leg paralysis plus some arm weakness
+- Damage at C6-C7 = all four limbs affected (this is still called tetraplegia). The legs are fully paralyzed and the hands and wrists are weak, but the shoulders and elbows often still work
 - Damage at T1 or lower = leg paralysis only (paraplegia)
 - Even with paralysis, reflexes often still work
 

@@ -91,7 +91,7 @@ Single-subject designs are powerful tools for clinical practice. They share key 
 
 You measure behavior without treatment (baseline), then apply treatment and keep measuring. 
 
-The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history – any one-time event that happens to coincide with treatment.
+The AB design is the weakest single-subject design. It does not rule out history (a one-time outside event that lines up with treatment) or maturation (slow natural changes like getting tired or growing up). If behavior changes when you start treatment, you still cannot be sure the treatment caused it. That is why the ABAB and multiple baseline designs are stronger.
 
 {{M}}Imagine you start meditating and notice your anxiety drops. But did the meditation help, or did you also just finally resolve that conflict with your roommate the same week?{{/M}} That's the history problem.
 

@@ -29,7 +29,7 @@ Interviews come in two main flavors: structured and unstructured.
 
 **Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system. For years, researchers believed structured interviews were clearly superior predictors of job performance.
 
-Here's where it gets interesting: Recent research using more sophisticated statistical methods found something surprising. Both structured and unstructured interviews have the same average validity coefficient of .58. This challenged decades of conventional wisdom. What matters more than the structure is that interviews, in general, are the second-best predictor of job performance (after general mental ability tests).
+Here's the key point: structured interviews predict job performance much better than unstructured ones. A well-built structured interview can reach a validity around .51 to .58, while unstructured interviews fall well below that. So the structure really does matter. Interviews, in general, are the second-best predictor of job performance (after general mental ability tests).
 
 Within structured interviews, you'll encounter two important types:
 
@@ -140,8 +140,8 @@ These approaches can be combined. Organizations might use multiple hurdles to id
 
 ## Common Misconceptions to Avoid
 
-**Misconception #1: "Structured interviews are always better than unstructured ones."**
-Reality: Recent research shows they have equal validity (.58). What matters is that interviews in general are strong predictors, regardless of structure.
+**Misconception #1: "Structured and unstructured interviews predict performance equally well."**
+Reality: Structured interviews are stronger predictors. A good structured interview can reach a validity around .51 to .58, while unstructured interviews fall well below that. The structure really does matter.
 
 **Misconception #2: "Past behavior questions (behavioral interviews) are better than hypothetical ones (situational interviews)."**
 Reality: When questions assess the same job requirements, situational questions actually predict performance better. Intentions may be more predictive than past behavior.
@@ -159,7 +159,7 @@ Reality: While statistical validity is crucial, low face validity can cause appl
 
 **For the exam, memorize this hierarchy of validity:**
 1. General mental ability tests (highest)
-2. Interviews (structured and unstructured equal)
+2. Structured interviews (much stronger than unstructured)
 3. Job knowledge tests
 4. Integrity tests
 5. Everything else falls below these
@@ -187,7 +187,7 @@ Reality: While statistical validity is crucial, low face validity can cause appl
 
 - **General mental ability tests are the single most valid predictor** of job performance across all jobs, but they carry the highest risk of adverse impact on minority groups.
 
-- **Both structured and unstructured interviews have equal validity (.58)**, making them the second-best predictor after cognitive ability tests. This challenges older assumptions.
+- **Structured interviews predict job performance much better than unstructured ones** (a good structured interview reaches a validity around .51 to .58), making structured interviews the second-best predictor after cognitive ability tests.
 
 - **Situational interview questions predict performance better than behavioral questions** when both assess the same job requirements, suggesting intentions matter more than past behavior.
 

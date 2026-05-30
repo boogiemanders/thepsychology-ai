@@ -19,7 +19,7 @@ Structured personality tests work by asking direct questions with fixed response
 
 ### Sixteen Personality Factor Questionnaire (16 PF)
 
-Raymond Cattell created the 16 PF in 1947 using a fascinating approach. He started with the **lexical strategy**, which assumes that if a personality trait is important, people will have created words for it. {{M}}It's like how we now have specific words for texting behaviors ("ghosting," "breadcrumbing," "left on read") because these patterns matter in our social lives{{/M}}. Cattell combed through the English language, found all the personality-describing words, then used factor analysis (a statistical method that groups related items together) to condense thousands of descriptors into manageable categories.
+Raymond Cattell created the 16 PF in 1949 using a fascinating approach. He started with the **lexical strategy**, which assumes that if a personality trait is important, people will have created words for it. {{M}}It's like how we now have specific words for texting behaviors ("ghosting," "breadcrumbing," "left on read") because these patterns matter in our social lives{{/M}}. Cattell combed through the English language, found all the personality-describing words, then used factor analysis (a statistical method that groups related items together) to condense thousands of descriptors into manageable categories.
 
 The result? Sixteen primary traits and five broader global traits:
 
@@ -121,7 +121,7 @@ Here's where interpretation gets interesting. Different response patterns indica
 
 ### Thematic Apperception Test (TAT)
 
-Henry Murray developed the TAT in 1943, building on his theory of human needs (the same framework that informed the EPPS). The test consists of 30 cards, each showing a picture with one or more human figures in various situations. The scenes are deliberately ambiguous. You might see people talking, but you don't know what they're saying or feeling.
+Henry Murray developed the TAT in 1943, building on his theory of human needs (the same framework that informed the EPPS). The full set has 31 cards. Thirty show a picture with one or more people in different situations, and one card is blank. The pictures are deliberately ambiguous. You might see people talking, but you don't know what they're saying or feeling.
 
 **How it works:**
 

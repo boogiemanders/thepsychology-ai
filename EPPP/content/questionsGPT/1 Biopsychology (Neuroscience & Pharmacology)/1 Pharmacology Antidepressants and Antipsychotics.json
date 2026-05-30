@@ -607,7 +607,7 @@
       "kn_explanation": "This question tests knowledge of the mechanisms of action of different classes of antipsychotic medications, which is under KN2.",
       "difficulty": "hard",
       "quality_comment": "The question clearly distinguishes a nuanced pharmacological mechanism with distractors serving as common misconceptions, suitable for higher-difficulty items.",
-      "lessonExcerpt": "**How They Work:** SGAs are dopamine-serotonin antagonists. They block both dopamine receptors (especially D2, D3, and D4) and serotonin receptors (especially 5-HT2A). This dual action is key to their broader effectiveness.",
+      "lessonExcerpt": "**How They Work:** SGAs are dopamine-serotonin antagonists. They block dopamine D2 receptors and also block serotonin 5-HT2A receptors. This mix of the two is what makes them work more broadly. (Some SGAs touch other dopamine receptors like D3 and D4 too, but that changes from drug to drug.)",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
       "needsReview": false,
       "relatedSections": [
@@ -839,7 +839,7 @@
       "kn_explanation": "This question focuses on the mechanistic differences of antipsychotics, particularly the serotonin receptor involvement in SGAs, fitting KN2.",
       "difficulty": "medium",
       "quality_comment": "The question highlights a key pharmacological distinction with well-matched distractors requiring solid content knowledge.",
-      "lessonExcerpt": "**How They Work:** SGAs are dopamine-serotonin antagonists. They block both dopamine receptors (especially D2, D3, and D4) and serotonin receptors (especially 5-HT2A). This dual action is key to their broader effectiveness.",
+      "lessonExcerpt": "**How They Work:** SGAs are dopamine-serotonin antagonists. They block dopamine D2 receptors and also block serotonin 5-HT2A receptors. This mix of the two is what makes them work more broadly. (Some SGAs touch other dopamine receptors like D3 and D4 too, but that changes from drug to drug.)",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
       "needsReview": false,
       "relatedSections": [

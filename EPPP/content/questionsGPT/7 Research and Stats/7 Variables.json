@@ -290,18 +290,18 @@
     {
       "stem": "Which of the following best describes a platykurtic distribution?",
       "options": [
-        "A distribution with a sharp peak and thin tails",
+        "A distribution with a sharp peak and thick tails",
         "Symmetrical distribution where mean, median, and mode are equal",
-        "Flatter peak and thicker tails compared to a normal distribution",
+        "Flatter peak and thinner tails compared to a normal distribution",
         "Distribution with the mean pulled toward an extended tail"
       ],
-      "answer": "Flatter peak and thicker tails compared to a normal distribution",
-      "explanation": "1. The correct answer, \"Flatter peak and thicker tails compared to a normal distribution,\" accurately describes a platykurtic distribution. According to the reference material, a platykurtic distribution is characterized by a flatter shape in the middle and thicker tails than a normal distribution, indicating that scores are more evenly distributed throughout the distribution rather than being concentrated around the mean.\n\n2. The option \"A distribution with a sharp peak and thin tails\" is incorrect because it describes a leptokurtic distribution, which has a sharper peak and thinner tails than a normal distribution. The option \"Symmetrical distribution where mean, median, and mode are equal\" is incorrect as it refers to a normal distribution, not a platykurtic one; platykurtic distributions can still be asymmetrical. Lastly, the option \"Distribution with the mean pulled toward an extended tail\" is incorrect because this describes a skewed distribution, where the mean is affected by extreme scores, rather than the characteristics of a platykurtic distribution.",
+      "answer": "Flatter peak and thinner tails compared to a normal distribution",
+      "explanation": "1. The correct answer, \"Flatter peak and thinner tails compared to a normal distribution,\" accurately describes a platykurtic distribution. According to the reference material, a platykurtic distribution has a flatter peak AND thinner tails than a normal distribution, with scores spread out more evenly and fewer extreme outliers.\n\n2. The option \"A distribution with a sharp peak and thick tails\" is incorrect because it describes a leptokurtic distribution, which has a sharper peak AND fatter tails than a normal distribution. The option \"Symmetrical distribution where mean, median, and mode are equal\" is incorrect as it refers to a normal distribution, not a platykurtic one; platykurtic distributions can still be asymmetrical. Lastly, the option \"Distribution with the mean pulled toward an extended tail\" is incorrect because this describes a skewed distribution, where the mean is affected by extreme scores, rather than the characteristics of a platykurtic distribution.",
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "hard",
       "quality_comment": "This item tests knowledge often confused with leptokurtic and normal distributions; the distractors are appropriately challenging.",
-      "lessonExcerpt": "**Platykurtic distribution**: Flatter peak and fatter tails than normal.",
+      "lessonExcerpt": "**Platykurtic distribution**: Flatter peak AND thinner tails than normal.",
       "suggestedLesson": "7-variables",
       "needsReview": false,
       "relatedSections": [

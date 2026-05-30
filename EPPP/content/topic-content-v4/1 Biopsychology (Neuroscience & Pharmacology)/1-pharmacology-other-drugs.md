@@ -40,7 +40,7 @@ Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment
 
 ### Azapirones: The Safer Alternative
 
-Buspirone (BuSpar) represents a different approach to treating generalized anxiety disorder. The major advantages: no sedation, no dependence, no tolerance. Side effects are relatively mild. Dizziness, dry mouth, nausea, headache. This makes buspirone a good option for patients with a history of substance use or those who need to remain alert for work or driving.
+Buspirone (BuSpar) represents a different approach to treating generalized anxiety disorder. The major advantages: barely any sedation, no dependence, no tolerance. Side effects are relatively mild. Dizziness, dry mouth, nausea, headache. This makes buspirone a good option for patients with a history of substance use or those who need to remain alert for work or driving.
 
 ## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis
 
@@ -90,7 +90,7 @@ Two categories of medications help slow Alzheimer's progression:
 
 ### Psychostimulants: The First-Line Approach
 
-Methylphenidate (Ritalin, Concerta), pemoline (Cylert), and amphetamine-dextroamphetamine (Adderall) are the go-to medications for ADHD. They increase dopamine and norepinephrine activity in the prefrontal cortex, improving attention, concentration, and reducing hyperactivity and impulsivity.
+Methylphenidate (Ritalin, Concerta) and amphetamine-dextroamphetamine (Adderall) are the go-to medications for ADHD. They increase dopamine and norepinephrine activity in the prefrontal cortex, improving attention, concentration, and reducing hyperactivity and impulsivity.
 
 **Important exam point:** While stimulants clearly improve attention and reduce ADHD symptoms, their effects on academic achievement when used alone are unclear. They're most effective when combined with behavioral interventions.
 
@@ -102,7 +102,7 @@ Common side effects: insomnia, nervousness, decreased appetite, weight loss, abd
 
 Prescribed when patients can't tolerate stimulants, don't respond adequately, have significant comorbidities, or are at high risk for stimulant misuse:
 
-**Atomoxetine (Strattera):** A norepinephrine reuptake inhibitor and the most common nonstimulant for ADHD. More effective than stimulants for patients with comorbid tic disorders, sleep disorders, anxiety, or depression.
+**Atomoxetine (Strattera):** A norepinephrine reuptake inhibitor and the most common nonstimulant for ADHD. It does not work as well as stimulants overall, but it can be a better fit when someone has tics that get worse on stimulants, a sleep or anxiety problem, depression, or a risk of misusing stimulants.
 
 **Guanfacine (Intuniv) and Clonidine (Kapvay):** Alpha-2-adrenergic agonists originally developed for high blood pressure. They improve core ADHD symptoms but are typically reserved for patients who also have Tourette's disorder or other tic disorders.
 
@@ -175,9 +175,7 @@ The therapeutic index (TI) measures how safe a drug is:
 - TD50 (toxic dose 50): Minimum dose that had toxic effect in 50% of subjects
 - ED50: Same as above
 
-**Narrow therapeutic window (TI = 1.0 or less):** The therapeutic dose is equal to or higher than the toxic/lethal dose. These drugs are dangerous and require close monitoring. Lithium is a classic example.
-
-**Wide therapeutic window (TI greater than 1.0):** The therapeutic dose is lower than the toxic/lethal dose. These drugs are safer and more desirable.
+**Therapeutic index is relative, not a hard cutoff:** There is no exact number that splits safe from dangerous. The idea is relative: the bigger the gap between the helpful dose and the harmful dose, the higher the TI and the safer the drug. A small gap (low TI) means the drug needs close monitoring. Lithium is a classic low-TI example.
 
 {{M}}Think of therapeutic window like the margin of error in following a recipe (some recipes are forgiving (cookies), while others require exact measurements or they become inedible (soufflés). Drugs with narrow therapeutic windows are like soufflés) precision matters enormously.{{/M}}
 

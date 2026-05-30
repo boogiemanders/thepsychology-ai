@@ -153,7 +153,7 @@ The practical question: Should you refer or treat? Consider:
 
 Standard 2.01(e) addresses situations where there's no consensus about what constitutes competence (like when telepsychology was brand new). You must still take reasonable steps to ensure competence and protect people from harm.
 
-The APA's Guidelines for Telepsychology (2024) recommend that psychologists stay current with evolving competencies through research and literature. When providing telepsychology services without complete effectiveness information, engage clients in thorough, documented informed consent that reviews available information, risks, and benefits.
+The APA's Guidelines for Telepsychology (2013) recommend that psychologists stay current with evolving competencies through research and literature. When providing telepsychology services without complete effectiveness information, engage clients in thorough, documented informed consent that reviews available information, risks, and benefits.
 
 ### Evidence-Based Practice
 

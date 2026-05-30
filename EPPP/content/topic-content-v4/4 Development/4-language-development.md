@@ -46,7 +46,7 @@ The EPPP will test your understanding of language components. Here's a breakdown
 
 | Component | Definition | Example |
 |-----------|------------|---------|
-| **Phonology** | Rules for using phonemes (smallest sound units) | English has ~50 phonemes like "c," "t," "th" |
+| **Phonology** | Rules for using phonemes (smallest sound units) | English has about 44 phonemes, like the sounds for "c," "t," and "th" |
 | **Morphology** | Rules for morphemes (smallest meaning units) | "Unspeakable" = 1 free morpheme (speak) + 2 bound morphemes (un, able) |
 | **Syntax** | Rules for combining words into sentences | "The client signed the form" vs. "The form was signed by the client" |
 | **Semantics** | Literal meaning of words and sentences | "I could eat a horse" = actually wanting to eat a horse |

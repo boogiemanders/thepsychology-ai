@@ -139,7 +139,7 @@ Your plan might include:
 While not in the Ethics Code itself, APA's Record Keeping Guidelines recommend maintaining full records:
 
 - **For adults**: 7 years after the last service date
-- **For minors**: Until 3 years after they reach the age of majority (typically 21 in most states)
+- **For minors**: Keep records until 3 years after the child reaches the age of majority (usually age 18, so often until about age 21)
 
 These are minimums. Many psychologists keep records longer because:
 - State laws may require longer retention

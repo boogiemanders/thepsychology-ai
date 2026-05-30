@@ -52,11 +52,11 @@ Two factors affect this process:
 
 ## Healthy Cultural Paranoia: When Distrust Makes Sense
 
-Ridley distinguished between two types of suspicion in ethnic minority clients:
+Ridley said there are two kinds of distrust in ethnic minority clients:
 
-**Functional paranoia** is unhealthy. It's pervasive distrust toward everyone, regardless of their background. A client with functional paranoia won't open up to any therapist, minority or majority.
+**Pathological (or dysfunctional) paranoia** is unhealthy. It's distrust of everyone, no matter their background. A client with this kind of paranoia won't open up to any therapist, minority or majority.
 
-**Healthy cultural paranoia** is different. It's a rational response to real experiences of prejudice and discrimination. A Black client with healthy cultural paranoia might readily open up to a Black therapist but withhold information from a White therapist. Not because of pathology, but because of learned caution based on experience.
+**Functional paranoia (also called healthy cultural paranoia)** is different. It's a smart, fair response to real prejudice and discrimination. A Black client with functional paranoia might readily open up to a Black therapist but hold back with a White therapist. That's not a sickness. It's learned caution based on real experience.
 
 {{M}}Consider how you behave differently in job interviews versus with close friends. You're not paranoid; you're appropriately adjusting your disclosure level based on context and trust.{{/M}} The same applies to ethnic minority clients navigating therapy.
 
@@ -293,7 +293,7 @@ Reality: Everyone has a culture. Understanding your own cultural assumptions is 
 - Healthy cultural paranoia is a rational response to discrimination, not pathology
 - Microaggressions (assault, insult, invalidation) have cumulative effects on mental health
 - White privilege operates at macro (institutional) and micro (interpersonal) levels
-- Cultural competence requires balancing emic and emic perspectives
+- Cultural competence requires balancing emic and etic perspectives
 - Culturally adapted interventions improve outcomes, especially for clients with greatest cultural differences
 - Population-specific guidelines should inform (not dictate) individual treatment planning
 - Diagnostic overshadowing and own-race bias can lead to clinical errors

@@ -31,7 +31,7 @@ The medulla (also called medulla oblongata) handles the functions you literally 
 
 **Critical EPPP connection:** This is why opioid overdoses are fatal. Opioids suppress the medulla's respiratory centers. When you see a question about substance-related death mechanisms or why naloxone (Narcan) is life-saving, think medulla. When a client presents with opioid use disorder, part of your risk assessment involves understanding that their substance of choice directly threatens this survival center.
 
-**Cranial nerve XII (hypoglossal nerve)** originates in the medulla. Damage to this nerve causes articulation problems similar to those seen in Broca's aphasia.
+**Cranial nerve XII (hypoglossal nerve)** originates in the medulla. Damage to this nerve makes speech slurred and hard to form because the tongue muscles get weak. This is called dysarthria. It's a movement problem, not a language problem like Broca's aphasia.
 
 ### Pons (The Coordinator and Sleep Regulator)
 

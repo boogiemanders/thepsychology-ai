@@ -171,9 +171,11 @@ These examine whether traits run in families and how close the relationship need
 
 Create a mental reference list for common EPPP topics:
 
-- **Very high heritability (0.70-0.90)**: Height, eye color, ADHD, autism spectrum, bipolar disorder
-- **Moderate-high heritability (0.50-0.70)**: Intelligence, schizophrenia, major depression, personality traits
-- **Lower heritability (0.30-0.50)**: Attitudes, specific fears, some personality aspects
+- **Very high heritability (about 0.70-0.90)**: Height, eye color, ADHD, autism spectrum, bipolar disorder, schizophrenia
+- **Moderate-high heritability (0.50-0.70)**: Intelligence, personality traits
+- **Lower heritability (about 0.30-0.50)**: Major depression, attitudes, specific fears, some personality aspects
+
+Major depression is one of the least heritable, around 0.37, so life events and stress play a big role.
 
 ### For Gene-Environment Correlations
 

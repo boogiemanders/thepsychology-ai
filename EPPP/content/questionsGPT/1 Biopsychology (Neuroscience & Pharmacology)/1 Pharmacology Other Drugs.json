@@ -403,7 +403,7 @@
       "quality_comment": "Well-structured question; the SSRI distractor is an excellent foil as it is contraindicated—not merely less effective—in bipolar I, testing nuanced pharmacological reasoning",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Mood Stabilizers",
-      "lessonExcerpt": "Methylphenidate (Ritalin, Concerta), pemoline (Cylert), and amphetamine-dextroamphetamine (Adderall) are the go-to medications for ADHD. They increase dopamine and norepinephrine activity in the prefrontal cortex, improving attention, concentration, and reducing hyperactivity and impulsivity.",
+      "lessonExcerpt": "Methylphenidate (Ritalin, Concerta) and amphetamine-dextroamphetamine (Adderall) are the go-to medications for ADHD. They increase dopamine and norepinephrine activity in the prefrontal cortex, improving attention, concentration, and reducing hyperactivity and impulsivity.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 16,
@@ -636,7 +636,7 @@
       "kn_explanation": "This question targets knowledge about side effect profiles of stimulant treatments for ADHD, focusing on clinical pharmacology in KN2.",
       "difficulty": "easy",
       "quality_comment": "Clear and straightforward, with plausible distractors reflecting other drug side effects, appropriate for standard testing.",
-      "lessonExcerpt": "**Atomoxetine (Strattera):** A norepinephrine reuptake inhibitor and the most common nonstimulant for ADHD. More effective than stimulants for patients with comorbid tic disorders, sleep disorders, anxiety, or depression.",
+      "lessonExcerpt": "**Atomoxetine (Strattera):** A norepinephrine reuptake inhibitor and the most common nonstimulant for ADHD. It does not work as well as stimulants overall, but it can be a better fit when someone has tics that get worse on stimulants, a sleep or anxiety problem, depression, or a risk of misusing stimulants.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "needsReview": false,
       "relatedSections": [

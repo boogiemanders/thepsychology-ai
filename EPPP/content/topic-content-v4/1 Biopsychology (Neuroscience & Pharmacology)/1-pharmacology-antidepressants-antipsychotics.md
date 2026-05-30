@@ -63,7 +63,7 @@ Second-generation antipsychotics (also called "atypical" antipsychotics) represe
 - Olanzapine (Zyprexa)
 - Quetiapine (Seroquel)
 
-**How They Work:** SGAs are dopamine-serotonin antagonists. They block both dopamine receptors (especially D2, D3, and D4) and serotonin receptors (especially 5-HT2A). This dual action is key to their broader effectiveness.
+**How They Work:** SGAs are dopamine-serotonin antagonists. They block dopamine D2 receptors and also block serotonin 5-HT2A receptors. This mix of the two is what makes them work more broadly. (Some SGAs touch other dopamine receptors like D3 and D4 too, but that changes from drug to drug.)
 
 **What They Treat:** SGAs treat both positive and negative symptoms of schizophrenia more effectively than FGAs. Some are FDA-approved for bipolar disorder and as add-on treatments for major depression. Clozapine deserves special mention: it's the only FDA-approved medication for treatment-resistant schizophrenia. Meaning when everything else has failed, clozapine is the option.
 

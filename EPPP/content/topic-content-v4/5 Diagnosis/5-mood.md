@@ -19,7 +19,7 @@ Before we can diagnose any bipolar or depressive disorder, we need to understand
 
 ### Manic Episode: The Accelerator Stuck Down
 
-A **manic episode** involves an abnormally elevated, expansive, or irritable mood plus increased energy lasting at least one week. But it's not just feeling really good after landing a promotion. We're talking about three or more of these symptoms:
+A **manic episode** involves an abnormally elevated, expansive, or irritable mood plus increased energy lasting at least one week. But it's not just feeling really good after landing a promotion. We're talking about three or more of these symptoms (or four or more if the mood is only irritable, not elevated):
 
 - Inflated self-esteem or grandiosity
 - Decreased need for sleep (not just insomnia. They genuinely don't feel tired)
