@@ -19,8 +19,11 @@ import os from 'node:os'
 import { google } from 'googleapis'
 import { S3Client, PutObjectCommand, HeadObjectCommand, CopyObjectCommand } from '@aws-sdk/client-s3'
 
-const CONTENT_DIR = 'EPPP/content/topic-content-v4/1 Biopsychology (Neuroscience & Pharmacology)'
-const LESSON_PREFIX = 'biopsychology-(neuroscience-&-pharmacology)'
+// Domain folder name under topic-content-v4. Override with --domain "2 Learning and Memory".
+const DOMAIN_FOLDER = (() => { const i = process.argv.indexOf('--domain'); return i >= 0 ? process.argv[i + 1] : '1 Biopsychology (Neuroscience & Pharmacology)' })()
+const CONTENT_DIR = `EPPP/content/topic-content-v4/${DOMAIN_FOLDER}`
+// Same slug rule the lesson-manifest route uses: drop leading number, lowercase, spaces -> dashes.
+const LESSON_PREFIX = DOMAIN_FOLDER.replace(/^\d+\s+/, '').toLowerCase().replace(/\s+/g, '-')
 const R2_PREFIX = 'topic-teacher-audio/v2'
 const UPLOAD_DIR = 'podcast-upload'
 const GOOGLE_CREDS = path.join(os.homedir(), '.claude', 'google-credentials.json')
@@ -75,9 +78,16 @@ function folderId(input) {
 }
 
 function driveClient() {
-  const creds = JSON.parse(fs.readFileSync(GOOGLE_CREDS, 'utf8')).installed
   const token = JSON.parse(fs.readFileSync(GOOGLE_TOKEN, 'utf8'))
-  const oauth = new google.auth.OAuth2(creds.client_id, creds.client_secret, creds.redirect_uris?.[0])
+  // Build the OAuth client from the credentials embedded in the token file (authorized_user
+  // format, written by the Sheets MCP). Using google-credentials.json's client_id instead
+  // causes "unauthorized_client" on refresh whenever the two clients differ.
+  let clientId = token.client_id, clientSecret = token.client_secret
+  if (!clientId || !clientSecret) {
+    const creds = JSON.parse(fs.readFileSync(GOOGLE_CREDS, 'utf8')).installed
+    clientId = creds.client_id; clientSecret = creds.client_secret
+  }
+  const oauth = new google.auth.OAuth2(clientId, clientSecret, token.token_uri)
   oauth.setCredentials({ refresh_token: token.refresh_token, access_token: token.token, expiry_date: token.expiry ? Date.parse(token.expiry) : undefined })
   return google.drive({ version: 'v3', auth: oauth })
 }
