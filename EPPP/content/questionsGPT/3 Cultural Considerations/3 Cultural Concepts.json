@@ -26,21 +26,21 @@
     {
       "stem": "A Black client is guarded with a White therapist during the first several sessions but is generally open and relaxed with Black professionals in other settings. There is no evidence of broad distrust toward everyone. Ridley would most likely describe this as:",
       "options": [
-        "Functional paranoia",
-        "Healthy cultural paranoia",
+        "Pathological paranoia",
+        "Functional (healthy cultural) paranoia",
         "Diagnostic overshadowing",
         "Cultural encapsulation"
       ],
-      "answer": "Healthy cultural paranoia",
-      "explanation": "Healthy cultural paranoia is the best answer because the client's caution is selective and grounded in real experiences of prejudice rather than being pervasive distrust toward everyone. Functional paranoia is wrong because that would involve broad, maladaptive distrust across people and contexts. Diagnostic overshadowing is wrong because it refers to overattributing problems to one salient identity or diagnosis. Cultural encapsulation is wrong because it refers to the therapist's inability to work effectively across cultures.",
+      "answer": "Functional (healthy cultural) paranoia",
+      "explanation": "Functional paranoia, also called healthy cultural paranoia, is the best answer. The client's caution is selective and grounded in real experiences of prejudice, and it eases as trust builds, so it is adaptive rather than a sickness. Pathological (dysfunctional) paranoia is wrong because that is pervasive distrust of everyone, no matter their background. Diagnostic overshadowing is wrong because it refers to overattributing problems to one salient identity or diagnosis. Cultural encapsulation is wrong because it refers to the therapist being unable to work effectively across cultures.",
       "kn": "KN18",
       "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
       "difficulty": "medium",
-      "quality_comment": "Good culture-and-clinical-formulation item that distinguishes adaptive caution from psychopathology.",
+      "quality_comment": "Tests adaptive cultural caution (functional/healthy cultural paranoia) versus pathological paranoia. Rewritten after a lesson fact-check corrected Ridley terminology; verify before publishing.",
       "suggestedLesson": "3-cultural-concepts",
       "suggestedParagraph": "## Healthy Cultural Paranoia: When Distrust Makes Sense",
       "lessonExcerpt": "Functional paranoia (also called healthy cultural paranoia) is different. It's a smart, fair response to real prejudice and discrimination.",
-      "needsReview": false,
+      "needsReview": true,
       "inspirationDomain": "SOCIAL PSYCHOLOGY",
       "relatedSections": [
         "Healthy Cultural Paranoia: When Distrust Makes Sense"
@@ -280,22 +280,22 @@
       ]
     },
     {
-      "stem": "What is the primary difference between functional paranoia and healthy cultural paranoia in ethnic minority clients, according to Ridley?",
+      "stem": "According to Ridley, what is the primary difference between functional (healthy cultural) paranoia and pathological paranoia in ethnic minority clients?",
       "options": [
-        "Functional paranoia entails generalized distrust of all therapists; healthy cultural paranoia involves distrust limited to White therapists unless trust is developed.",
-        "Functional paranoia occurs only in ethnic minority clients; healthy cultural paranoia occurs in all clients.",
-        "Functional paranoia is a normal reaction to discrimination; healthy cultural paranoia is pathological distrust.",
-        "Functional paranoia leads to full self-disclosure; healthy cultural paranoia results in complete nondisclosure."
+        "Functional (healthy cultural) paranoia is selective, adaptive caution toward majority-culture therapists that eases as trust builds; pathological paranoia is pervasive, maladaptive distrust of everyone.",
+        "Functional paranoia occurs only in ethnic minority clients; pathological paranoia occurs in all clients.",
+        "Functional paranoia is a sign of mental illness; pathological paranoia is a healthy reaction to discrimination.",
+        "Functional paranoia leads to complete nondisclosure; pathological paranoia leads to full self-disclosure."
       ],
-      "answer": "Functional paranoia entails generalized distrust of all therapists; healthy cultural paranoia involves distrust limited to White therapists unless trust is developed.",
-      "explanation": "Ridley differentiated functional paranoia as pervasive and unhealthy distrust of all therapists, whereas healthy cultural paranoia is a normal protective distrust toward White therapists but openness to ethnic minority therapists under certain conditions.",
+      "answer": "Functional (healthy cultural) paranoia is selective, adaptive caution toward majority-culture therapists that eases as trust builds; pathological paranoia is pervasive, maladaptive distrust of everyone.",
+      "explanation": "Functional paranoia (also called healthy cultural paranoia) is a smart, selective response to real prejudice. A client may hold back with a White therapist but open up with a therapist from their own group, and the caution eases as trust grows. Pathological (dysfunctional) paranoia is unhealthy distrust of everyone, regardless of background, so the client will not open up to any therapist. The key difference is selective and adaptive versus pervasive and maladaptive.",
       "kn": "KN18",
       "kn_explanation": "This question assesses understanding of client reactions to cultural dynamics in therapy related to trust and disclosure, which pertains to cultural and sociopolitical psychology (KN18).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are nuanced and the question is clearly worded, effectively assessing discrimination between similar concepts.",
-      "lessonExcerpt": "**Pathological (or dysfunctional) paranoia** is unhealthy. It's distrust of everyone, no matter their background. A client with this kind of paranoia won't open up to any therapist, minority or majority.",
+      "quality_comment": "Contrasts functional/healthy cultural paranoia with pathological paranoia. Rewritten after a lesson fact-check corrected Ridley terminology (the old version treated functional and healthy cultural paranoia as different things); verify before publishing.",
+      "lessonExcerpt": "Functional paranoia (also called healthy cultural paranoia) is different. It's a smart, fair response to real prejudice and discrimination.",
       "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false,
+      "needsReview": true,
       "relatedSections": [
         "Healthy Cultural Paranoia: When Distrust Makes Sense"
       ]
