@@ -154,6 +154,40 @@ async function repairIncompleteSignupRecord(
   return updatedUser as Record<string, unknown> | null
 }
 
+// signup_device / signup_user_agent are written by POST /api/auth/create-profile,
+// which races this INSERT webhook. When they're missing at email time, poll the
+// users row briefly so the notification can include the real device.
+async function awaitSignupDeviceWrite(
+  userId: string,
+  record: Record<string, unknown>
+): Promise<Record<string, unknown> | null> {
+  const hasRealDevice = (value: unknown) => {
+    const v = asNonEmptyString(value)
+    return v !== null && v !== 'unknown'
+  }
+  if (hasRealDevice(record.signup_device)) return null
+
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) return null
+
+  for (let attempt = 0; attempt < 6; attempt++) {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    const { data, error } = await supabase
+      .from('users')
+      .select('signup_device, signup_user_agent')
+      .eq('id', userId)
+      .maybeSingle()
+    if (error || !data) continue
+    if (hasRealDevice(data.signup_device)) {
+      const merged: Record<string, unknown> = { signup_device: data.signup_device }
+      const userAgent = asNonEmptyString(data.signup_user_agent)
+      if (userAgent) merged.signup_user_agent = userAgent
+      return merged
+    }
+  }
+  return null
+}
+
 const formatTimestamp = (value?: unknown) => {
   if (!value || typeof value !== 'string') return 'unknown'
   const date = new Date(value)
@@ -243,6 +277,35 @@ const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
     const rawDevice = (record.signup_device as string | null | undefined) ?? 'unknown'
     const signupDevice =
       rawDevice === 'desktop' ? 'laptop/desktop' : rawDevice === 'phone' ? 'phone' : 'unknown'
+
+    // Real campaign attribution from UTM params (vs. the self-reported "Referral source" dropdown).
+    const utm = {
+      source: (record.utm_source as string | null | undefined) ?? null,
+      medium: (record.utm_medium as string | null | undefined) ?? null,
+      campaign: (record.utm_campaign as string | null | undefined) ?? null,
+      content: (record.utm_content as string | null | undefined) ?? null,
+      term: (record.utm_term as string | null | undefined) ?? null,
+    }
+    const hasUtm = Object.values(utm).some((v) => v)
+    const utmText = hasUtm
+      ? [
+          `- UTM source: ${utm.source ?? 'none'}`,
+          `- UTM medium: ${utm.medium ?? 'none'}`,
+          `- UTM campaign: ${utm.campaign ?? 'none'}`,
+          ...(utm.content ? [`- UTM content: ${utm.content}`] : []),
+          ...(utm.term ? [`- UTM term: ${utm.term}`] : []),
+        ]
+      : [`- UTM attribution: none (direct / organic)`]
+    const utmHtml = hasUtm
+      ? [
+          `<li><strong>UTM source:</strong> ${utm.source ?? 'none'}</li>`,
+          `<li><strong>UTM medium:</strong> ${utm.medium ?? 'none'}</li>`,
+          `<li><strong>UTM campaign:</strong> ${utm.campaign ?? 'none'}</li>`,
+          ...(utm.content ? [`<li><strong>UTM content:</strong> ${utm.content}</li>`] : []),
+          ...(utm.term ? [`<li><strong>UTM term:</strong> ${utm.term}</li>`] : []),
+        ]
+      : [`<li><strong>UTM attribution:</strong> none (direct / organic)</li>`]
+
     const textLines = [
       `New user profile created`,
       `- Time: ${formatTimestamp(record.created_at)}`,
@@ -250,7 +313,8 @@ const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
       `- Email: ${(record.email as string) || 'unknown'}`,
       `- Full name: ${(record.full_name as string | null | undefined) ?? 'not provided'}`,
       `- Subscription tier: ${(record.subscription_tier as string | null | undefined) ?? 'unknown'}`,
-      `- Referral source: ${(record.referral_source as string | null | undefined) ?? 'unknown'}`,
+      `- Referral source (self-reported): ${(record.referral_source as string | null | undefined) ?? 'unknown'}`,
+      ...utmText,
       `- Promo code: ${(record.promo_code_used as string | null | undefined) ?? 'none'}`,
       `- Stripe customer id: ${(record.stripe_customer_id as string | null | undefined) ?? 'none'}`,
       `- Exam date: ${(record.exam_date as string | null | undefined) ?? 'not set'}`,
@@ -268,7 +332,8 @@ const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
           <li><strong>Email:</strong> ${(record.email as string) || 'unknown'}</li>
           <li><strong>Full name:</strong> ${(record.full_name as string | null | undefined) ?? 'not provided'}</li>
           <li><strong>Subscription tier:</strong> ${(record.subscription_tier as string | null | undefined) ?? 'unknown'}</li>
-          <li><strong>Referral source:</strong> ${(record.referral_source as string | null | undefined) ?? 'unknown'}</li>
+          <li><strong>Referral source (self-reported):</strong> ${(record.referral_source as string | null | undefined) ?? 'unknown'}</li>
+          ${utmHtml.join('\n          ')}
           <li><strong>Promo code:</strong> ${(record.promo_code_used as string | null | undefined) ?? 'none'}</li>
           <li><strong>Stripe customer id:</strong> ${(record.stripe_customer_id as string | null | undefined) ?? 'none'}</li>
           <li><strong>Exam date:</strong> ${(record.exam_date as string | null | undefined) ?? 'not set'}</li>
@@ -321,6 +386,14 @@ export async function POST(request: NextRequest) {
     const repairedRecord = await repairIncompleteSignupRecord(payload)
     if (repairedRecord && payload.record && typeof payload.record === 'object') {
       payload.record = { ...payload.record, ...repairedRecord }
+    }
+
+    const userId = asNonEmptyString(payload.record?.id)
+    if (userId && payload.record && typeof payload.record === 'object') {
+      const deviceFields = await awaitSignupDeviceWrite(userId, payload.record)
+      if (deviceFields) {
+        payload.record = { ...payload.record, ...deviceFields }
+      }
     }
   }
 
