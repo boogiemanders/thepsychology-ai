@@ -4,6 +4,7 @@
 // disappear and the outcome shows inline (no bot token needed).
 
 import { publishBlogDraft } from "./publish-blog"
+import { publishLinkedInDraft } from "./publish-linkedin"
 import type { MarketingDraft } from "./types"
 
 const MARKETING_ACTIONS = new Set(["approve_draft", "reject_draft"])
@@ -81,7 +82,23 @@ export async function handleMarketingInteraction(payload: any, supabase: any): P
     }
   }
 
-  // Social (linkedin / tiktok): mark approved and show the copy-paste text inline.
+  // LinkedIn: auto-publish the text post via Zernio (goes live immediately).
+  if (draft.type === "linkedin") {
+    try {
+      const result = await publishLinkedInDraft(draft)
+      await supabase
+        .from("marketing_drafts")
+        .update({ status: "published", published_url: result.url, decided_at: now })
+        .eq("id", draftId)
+      const link = result.url ? `: <${result.url}|view post>` : " (publishing now)"
+      return await reply(payload, `Published to LinkedIn by ${user}${link}.`)
+    } catch (err) {
+      return await reply(payload, `Approved by ${user}, but LinkedIn publish failed: ${(err as Error).message}`)
+    }
+  }
+
+  // TikTok (and any other social): mark approved and show the copy-paste text inline.
+  // TikTok needs a video the engine doesn't have yet — auto-publish comes later.
   await supabase.from("marketing_drafts").update({ status: "approved", decided_at: now }).eq("id", draftId)
   return await reply(payload, `Approved by ${user}. Copy-paste below:`, [
     { type: "section", text: { type: "mrkdwn", text: draft.body_md.slice(0, 2800) } },
