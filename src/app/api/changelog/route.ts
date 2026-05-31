@@ -46,6 +46,17 @@ const DAY_MS = 24 * 60 * 60 * 1000
 const CANONICAL_CHANGELOG_AUTHOR = 'Anders Chan, Psy.D.'
 const CANONICAL_CHANGELOG_AUTHOR_ALIASES = new Set(['boogiemanders', 'anders chan'])
 
+// Commit authors (GitHub login or commit author name, lowercased) to hide from
+// the user-facing changelog entirely.
+const EXCLUDED_CHANGELOG_AUTHORS = new Set(['katherine.archibald45'])
+
+function isExcludedChangelogAuthor(commit: GitHubCommit): boolean {
+  const candidates = [commit.author?.login, commit.commit?.author?.name]
+  return candidates.some(
+    (c) => typeof c === 'string' && EXCLUDED_CHANGELOG_AUTHORS.has(c.trim().toLowerCase()),
+  )
+}
+
 // Keywords to filter out from user-facing changelog (payment/billing and non-EPPP related)
 const EXCLUDED_CHANGELOG_KEYWORDS = [
   // Payment/billing
@@ -261,6 +272,7 @@ export async function GET(request: NextRequest) {
     // Step 1: cheap exclusions first (merges, message-based filters) so we
     // don't fan out a detail fetch for commits we already know will be dropped.
     const prelim = (Array.isArray(commits) ? commits : [])
+      .filter((commit) => !isExcludedChangelogAuthor(commit))
       .map((commit) => {
         const { title, body } = normalizeCommitMessage(commit.commit?.message || '')
         const author = normalizeChangelogAuthor(commit.author?.login || commit.commit?.author?.name || null)
