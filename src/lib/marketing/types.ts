@@ -10,7 +10,7 @@ export type Topic =
   | "psychology-ai"
   | "pop-culture"
 
-export type DraftStatus = "pending" | "approved" | "rejected" | "published"
+export type DraftStatus = "pending" | "approved" | "rejected" | "published" | "queued"
 
 export type Source = { title: string; url: string }
 
@@ -38,6 +38,7 @@ export type MarketingDraft = {
   slack_channel: string | null
   slack_ts: string | null
   published_url: string | null
+  published_at: string | null
   created_at: string
   decided_at: string | null
 }

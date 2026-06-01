@@ -4,7 +4,6 @@
 // disappear and the outcome shows inline (no bot token needed).
 
 import { publishBlogDraft } from "./publish-blog"
-import { publishLinkedInDraft } from "./publish-linkedin"
 import type { MarketingDraft } from "./types"
 
 const MARKETING_ACTIONS = new Set(["approve_draft", "reject_draft"])
@@ -82,19 +81,14 @@ export async function handleMarketingInteraction(payload: any, supabase: any): P
     }
   }
 
-  // LinkedIn: auto-publish the text post via Zernio (goes live immediately).
+  // LinkedIn: don't publish on approve. Queue it — scripts/marketing/drip-linkedin.ts
+  // drains the queue at most 2x/day so the feed never looks spammy and a backlog builds.
   if (draft.type === "linkedin") {
-    try {
-      const result = await publishLinkedInDraft(draft)
-      await supabase
-        .from("marketing_drafts")
-        .update({ status: "published", published_url: result.url, decided_at: now })
-        .eq("id", draftId)
-      const link = result.url ? `: <${result.url}|view post>` : " (publishing now)"
-      return await reply(payload, `Published to LinkedIn by ${user}${link}.`)
-    } catch (err) {
-      return await reply(payload, `Approved by ${user}, but LinkedIn publish failed: ${(err as Error).message}`)
-    }
+    await supabase
+      .from("marketing_drafts")
+      .update({ status: "queued", decided_at: now })
+      .eq("id", draftId)
+    return await reply(payload, `Queued by ${user} — drip-posts to LinkedIn (max 2/day).`)
   }
 
   // TikTok (and any other social): mark approved and show the copy-paste text inline.
