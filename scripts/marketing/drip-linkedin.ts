@@ -83,7 +83,23 @@ async function main() {
     return
   }
 
-  const result = await publishLinkedInDraft(draft)
+  let result
+  try {
+    result = await publishLinkedInDraft(draft)
+  } catch (pubErr) {
+    // Publish failed (Zernio 409 duplicate, 5xx, auth, etc.). Don't leave it at the
+    // queue head jamming everything behind it — reject it with the reason and move on
+    // (the next run takes the next queued draft). Trade-off: a transient failure also
+    // gets rejected, so re-queue that draft manually if it should still go out.
+    const reason = (pubErr as Error).message.slice(0, 500)
+    await supabase
+      .from("marketing_drafts")
+      .update({ status: "rejected", review_notes: `drip publish failed: ${reason}` })
+      .eq("id", draft.id)
+    console.error(`❌ Publish failed for "${draft.title}" [${draft.id.slice(0, 8)}] — marked rejected, queue unblocked: ${reason}`)
+    return
+  }
+
   const { error: updErr } = await supabase
     .from("marketing_drafts")
     .update({ status: "published", published_url: result.url, published_at: new Date().toISOString() })
