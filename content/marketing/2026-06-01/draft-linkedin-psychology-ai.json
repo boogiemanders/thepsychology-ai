@@ -1,0 +1,13 @@
+{
+  "type": "linkedin",
+  "topic": "psychology-ai",
+  "title": "Clinicians are the most skeptical group on AI therapy. Good.",
+  "body_md": "Clinicians are the most skeptical group on AI therapy. That is not a deficiency.\n\nA 2026 study published in Clinical Psychology & Psychotherapy (Békés et al.) surveyed clinicians, patients, and the general public on their willingness to use AI-based mental health tools.\n\nThe finding that stood out: clinicians rated AI tools the lowest across the board. Not patients. Not the general community. The people with clinical training.\n\nThe strongest predictor of acceptance across all three groups? Prior general attitude toward AI, not clinical training, not familiarity with mental health.\n\nWhat that tells me: clinician skepticism is not resistance to change. It is pattern recognition. We know what the therapeutic relationship does. We know what a genuine risk assessment requires. We know the difference between a structured CBT exercise and CBT.\n\nAI tools will find a place in clinical practice. That place should be defined by people who understand what they are augmenting, not by adoption rates.\n\nIf you are a clinician working with AI tools right now, what is driving your skepticism, or your openness?",
+  "sources": [
+    {
+      "title": "Who Wants to Have an AI Therapist? Acceptance of Using AI for Mental Health Interventions Among Clinicians, Patients and the General Community -- Békés et al. (2026), Clinical Psychology & Psychotherapy",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12831102/"
+    }
+  ],
+  "needs_review": false
+}
