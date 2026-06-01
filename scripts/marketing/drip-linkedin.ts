@@ -1,7 +1,7 @@
-// Drip-publish queued LinkedIn drafts. Run by launchd ~2x/day (e.g. 9am + 2pm local).
-// Each run publishes AT MOST ONE post, and never more than MAX_PER_DAY in a single ET
-// calendar day, so approvals just fill a buffer and the feed drains slowly instead of
-// going out in bursts. Drains FIFO by draft age.
+// Drip-publish queued LinkedIn drafts. Run by a cron ~2x/day (9am + 2pm ET).
+// Each run publishes AT MOST ONE post. The per-day cap is queue-depth aware: a thin
+// backlog drips 1/day to protect runway, a healthy backlog (QUEUE_2X_THRESHOLD+)
+// drips 2/day to drain faster. Approvals just fill the buffer. Drains FIFO by age.
 //
 // Usage: npx tsx scripts/marketing/drip-linkedin.ts [--dry-run]
 
@@ -17,7 +17,9 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 )
 
-const MAX_PER_DAY = 2
+// Effective backlog (still-queued + already-posted-today) at/above this -> 2/day,
+// otherwise 1/day. Caps absolutely at 2/day. 2 in the queue always = 1/day.
+const QUEUE_2X_THRESHOLD = 5
 const DRY_RUN = process.argv.includes("--dry-run")
 
 // Start of "today" in America/New_York, as a UTC ISO string. The founder is ET and
@@ -35,24 +37,19 @@ async function main() {
   const sinceIso = startOfEtDayUtcIso()
 
   // How many LinkedIn posts already went live today (ET)?
-  const { count, error: countErr } = await supabase
+  const { count: publishedCount, error: countErr } = await supabase
     .from("marketing_drafts")
     .select("id", { count: "exact", head: true })
     .eq("type", "linkedin")
     .eq("status", "published")
     .gte("published_at", sinceIso)
   if (countErr) throw new Error(`Count failed: ${countErr.message}`)
+  const publishedToday = publishedCount ?? 0
 
-  const publishedToday = count ?? 0
-  if (publishedToday >= MAX_PER_DAY) {
-    console.log(`Daily cap reached (${publishedToday}/${MAX_PER_DAY}). Nothing to do.`)
-    return
-  }
-
-  // Oldest queued LinkedIn draft (FIFO by draft age).
-  const { data, error } = await supabase
+  // Oldest queued LinkedIn draft (FIFO by draft age) + total queue depth in one query.
+  const { data, count: queuedCount, error } = await supabase
     .from("marketing_drafts")
-    .select("*")
+    .select("*", { count: "exact" })
     .eq("type", "linkedin")
     .eq("status", "queued")
     .order("created_at", { ascending: true })
@@ -65,10 +62,23 @@ async function main() {
     return
   }
 
+  // Decide today's cadence from the effective backlog. Including publishedToday keeps
+  // the decision stable across the 9am/2pm runs (it doesn't shrink after the 1st post).
+  const effectiveDepth = (queuedCount ?? 0) + publishedToday
+  const dailyCap = effectiveDepth >= QUEUE_2X_THRESHOLD ? 2 : 1
+
+  if (publishedToday >= dailyCap) {
+    console.log(
+      `Cadence cap reached today (${publishedToday}/${dailyCap}; backlog ${effectiveDepth}, ` +
+        `2x at ${QUEUE_2X_THRESHOLD}+). Nothing to do.`
+    )
+    return
+  }
+
   if (DRY_RUN) {
     console.log(
       `[dry-run] would publish "${draft.title}" [${draft.id.slice(0, 8)}] ` +
-        `(published today: ${publishedToday}/${MAX_PER_DAY})`
+        `(${publishedToday + 1}/${dailyCap} today; backlog ${effectiveDepth})`
     )
     return
   }
@@ -89,7 +99,7 @@ async function main() {
   }
 
   const link = result.url ? ` → ${result.url}` : " (URL pending)"
-  console.log(`✅ Published "${draft.title}" [${draft.id.slice(0, 8)}]${link} (${publishedToday + 1}/${MAX_PER_DAY} today)`)
+  console.log(`✅ Published "${draft.title}" [${draft.id.slice(0, 8)}]${link} (${publishedToday + 1}/${dailyCap} today, backlog ${effectiveDepth})`)
 }
 
 main().catch((err) => {
