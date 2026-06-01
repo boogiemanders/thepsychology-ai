@@ -108,6 +108,20 @@ export async function POST(req: NextRequest) {
       "unsubscribe" and we'll remove you by hand.</p>`, 500)
   }
 
+  // Best-effort Slack ping. Never let a webhook failure break the unsubscribe.
+  try {
+    const hook = process.env.SLACK_WEBHOOK_SIGNUPS
+    if (hook) {
+      await fetch(hook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: `DCT outreach unsubscribe: ${email}` }),
+      })
+    }
+  } catch {
+    // swallow: notification is non-critical
+  }
+
   return page('Unsubscribed', `<h1>You're unsubscribed</h1>
     <p><strong>${email}</strong> won't receive any further emails from us.
     Thanks, and all the best.</p>`)
