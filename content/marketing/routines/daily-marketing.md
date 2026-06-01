@@ -41,10 +41,26 @@ Run the `last30days` skill for each topic to find what people are actually sayin
 
 Capture the strongest hooks and the source URLs. You will cite these.
 
-## Step 2 — Read what's working
+## Step 2 — Read what's working (ours, then competitors')
 
 Read `content/marketing/whats-working.md` if it exists. Bias today's topics and angles toward
 the posts/topics that actually convert. Mirror winning angles; don't repeat a post already live.
+
+Then read the competitor scorecards in the marketing vault and mirror what is working for the
+creators we track. These scorecards are produced manually (browser-based skills, founder logged
+in) and dropped into the vault. You only READ them here; you do not generate them.
+
+- **In this cloud routine:** use the Google Drive MCP to find files under
+  `Claude Code Vault/raw/marketing/scorecards/`. Read every file with "Scorecard" in its name,
+  plus `_watchlist.md` (the tracked-creator list: LinkedIn and TikTok handles). Use the most
+  recent ones.
+- **Running locally:** read the same files from
+  `/Users/anderschan/Library/CloudStorage/GoogleDrive-dranders@drinzinna.com/My Drive/Claude Code Vault/raw/marketing/scorecards/`.
+
+Pull the hooks, formats, and topics that scored highest (TikTok north star = saves; LinkedIn =
+comments + reposts) and let them shape today's hooks. Adapt the winning pattern to our brand; do
+not copy a competitor's post. If no scorecards exist yet, skip this step and say so in your
+final summary.
 
 ## Step 3 — Generate drafts (cadence)
 
@@ -54,7 +70,18 @@ the posts/topics that actually convert. Mirror winning angles; don't repeat a po
   on other days — thin daily posts hurt SEO.
 
 **LinkedIn:** hook first line, 1 clear idea, plain language, a soft CTA. ~120–200 words.
-**TikTok script:** a spoken script with a 3-second hook, beat/visual cues, and a CTA. ~150 words.
+**TikTok script:** write these with the `ig-reel-script-writer` skill (short-form vertical video
+is the same craft as a Reel; this skill is vendored into the repo at `.claude/skills/`). Invoke
+the skill and give it: the creator context (Dr. Anders Chan, licensed clinical psychologist;
+audience = psychologists and EPPP candidates; voice = sharp, plain, credible, no hype), the chosen
+topic, and a 60s default duration. Pick the hook using the patterns that scored best in the
+competitor scorecards from Step 2. This runs unattended, so do NOT wait for hook approval; pick
+the strongest hook and write the full script yourself. The skill returns a structured script
+(Hook, Build-Up, Value, Payoff, CTA) with a 3-second hook and visual cues; that script is the
+`body_md`. Then apply the brand hard rules to the output: strip any emojis, remove em dashes, and
+keep the no-fabrication rule (the script's `sources` array must still be non-empty). If the skill
+is somehow unavailable, fall back to short-form best practice: a 3-second hook, one specific
+actionable idea, beat/visual cues, and a reciprocity CTA. ~150 words.
 **Blog (SEO):**
 - Pick ONE target keyword (real search phrase a psychologist/EPPP candidate would type).
 - Keyword in the title, the first 100 words, and the meta description.
