@@ -43,6 +43,54 @@ export function parseCSV(text: string): SessionRow[] {
   return rows
 }
 
+export interface ClientPaymentRow {
+  client: string
+  paid: number
+  fee: number
+  charge: number
+}
+
+/**
+ * Parse per-row client payments from the same SimplePractice appointment CSV.
+ * Unlike parseCSV (payroll), this keeps the money columns (Total Fee, Charge,
+ * Paid) and does NOT drop Gregory's rows — SOSA's fee is on the whole practice's
+ * collections, so every client who paid counts.
+ */
+export function parseClientPayments(text: string): ClientPaymentRow[] {
+  const lines = text.split('\n')
+  if (lines.length < 2) return []
+
+  const headers = parseCSVLine(lines[0])
+  const idx: Record<string, number> = {}
+  const want = ['client', 'total fee', 'charge', 'paid']
+  for (let i = 0; i < headers.length; i++) {
+    const h = headers[i].trim().toLowerCase()
+    if (want.includes(h)) idx[h] = i
+  }
+  if (idx['client'] === undefined || idx['paid'] === undefined) return []
+
+  const num = (s: string | undefined): number => {
+    const n = parseFloat((s || '').replace(/[$,]/g, '').replace(/[()]/g, ''))
+    return Number.isFinite(n) ? n : 0
+  }
+
+  const out: ClientPaymentRow[] = []
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim()
+    if (!line) continue
+    const cols = parseCSVLine(line)
+    const client = cols[idx['client']]?.trim()
+    if (!client) continue
+    out.push({
+      client,
+      paid: num(cols[idx['paid']]),
+      fee: idx['total fee'] !== undefined ? num(cols[idx['total fee']]) : 0,
+      charge: idx['charge'] !== undefined ? num(cols[idx['charge']]) : 0,
+    })
+  }
+  return out
+}
+
 /**
  * Parse a single CSV line, handling quoted fields with commas and newlines.
  */

@@ -1,4 +1,5 @@
-import { parseCSV } from '../lib/csv-parser'
+import { parseCSV, parseClientPayments, type ClientPaymentRow } from '../lib/csv-parser'
+import { computeSosa } from '../lib/sosa'
 import { calculatePayrollWithHours, applyManualAddition, applyPendingSession } from '../lib/payroll-engine'
 import { getManualRate, legend } from '../lib/compensation-legend'
 import { formatShortDate } from '../lib/date-utils'
@@ -30,6 +31,9 @@ const copyBtn = document.getElementById('copy-json')!
 const downloadBtn = document.getElementById('download-xlsx')!
 const downloadJwCsvBtn = document.getElementById('download-jw-csv')!
 const statusEl = document.getElementById('status')!
+const sosaScrapeBtn = document.getElementById('sosa-scrape-btn') as HTMLButtonElement
+const sosaRosterStatus = document.getElementById('sosa-roster-status')!
+const sosaStat = document.getElementById('sosa-stat')!
 
 let baseResult: PayrollResultWithHours | null = null
 let currentResult: PayrollResultWithHours | null = null
@@ -70,6 +74,14 @@ function availableCodesFor(clinicianName: string): string[] {
 }
 
 let pendingSessions: PendingSession[] = []
+
+// SOSA self-pay check. clientPayments = money columns from the uploaded payroll
+// CSV (kept here, dropped by the payroll parser). selfPayRoster = client names
+// pulled from SimplePractice's Self-pay filter via the scrape button.
+let clientPayments: ClientPaymentRow[] = []
+let selfPayRoster: string[] = []
+let selfPayCapturedAt = 0
+const SP_SELFPAY_URL = 'https://secure.simplepractice.com/clients?billingType=Self-pay'
 
 // Bret per-client insurance — persists across payroll runs so Carlos only
 // picks once per patient. Keyed by SHA-256 hash of client name (not raw name)
@@ -742,6 +754,7 @@ async function processCsvFile(file: File) {
     return
   }
 
+  clientPayments = parseClientPayments(text)
   baseResult = calculatePayrollWithHours(rows)
   manualEntries = []
   didacticDebugLogged = false
@@ -1034,6 +1047,8 @@ function renderResults(result: PayrollResultWithHours) {
     insuranceStat.classList.add('hidden')
   }
 
+  renderSosa()
+
   for (const c of result.clinicians) {
     const isBret = c.name === 'Bret Boatwright'
     const fill = result.fillData.find(f => f.clinicianName === c.name)
@@ -1183,7 +1198,145 @@ function showStatus(msg: string, type: 'success' | 'error' | 'info') {
   statusEl.className = type
 }
 
-chrome.storage.local.get(['payrollData', 'bretInsuranceMap', 'bretInsuranceMapV2', 'clientRoster'], async (data) => {
+// ---- SOSA self-pay check ---------------------------------------------------
+
+function escHtml(s: string): string {
+  return s.replace(/[&<>"]/g, c => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string))
+}
+
+function setSelfPayRoster(names: string[], capturedAt: number) {
+  selfPayRoster = names
+  selfPayCapturedAt = capturedAt
+}
+
+function saveSelfPayRoster() {
+  chrome.storage.local.set({ selfPayRoster: { names: selfPayRoster, capturedAt: selfPayCapturedAt } })
+}
+
+function updateSosaRosterStatus() {
+  if (!selfPayRoster.length) {
+    sosaRosterStatus.textContent = 'No self-pay roster yet'
+    return
+  }
+  const d = selfPayCapturedAt ? new Date(selfPayCapturedAt).toLocaleDateString() : '?'
+  sosaRosterStatus.textContent = `${selfPayRoster.length} self-pay clients · ${d}`
+}
+
+function renderSosa() {
+  if (!clientPayments.length) {
+    sosaStat.innerHTML = ''
+    sosaStat.classList.add('hidden')
+    return
+  }
+  if (!selfPayRoster.length) {
+    sosaStat.innerHTML =
+      '<div class="ins-stat-row"><span class="ins-stat-label">SOSA self-pay check</span>' +
+      '<span class="ins-stat-meta">No self-pay roster &mdash; click &ldquo;Refresh self-pay roster&rdquo;.</span></div>'
+    sosaStat.classList.remove('hidden')
+    return
+  }
+  const s = computeSosa(clientPayments, selfPayRoster)
+  const top = s.disputable.slice(0, 8)
+    .map(d => `<div class="sosa-line"><span>${escHtml(d.client)}</span><span>$${d.paid.toFixed(2)}</span></div>`)
+    .join('')
+  const more = s.disputable.length > 8
+    ? `<div class="sosa-line sosa-more">+${s.disputable.length - 8} more</div>` : ''
+  const drift = s.driftNew.length
+    ? `<div class="sosa-drift">Verify (full-fee, not in self-pay roster): ${
+        s.driftNew.slice(0, 6).map(d => escHtml(d.client)).join(', ')}${s.driftNew.length > 6 ? '…' : ''}</div>`
+    : ''
+  sosaStat.innerHTML =
+    `<div class="ins-stat-row">
+       <span class="ins-stat-label">Self-pay collected (not fee-eligible)</span>
+       <span class="ins-stat-value">$${s.selfPayCollected.toFixed(2)}</span>
+       <span class="ins-stat-meta">${s.matchedCount} client${s.matchedCount === 1 ? '' : 's'}</span>
+     </div>
+     <div class="ins-stat-row ins-stat-fee">
+       <span class="ins-stat-label">SOSA 8% overcharge on self-pay</span>
+       <span class="ins-stat-value">$${s.overcharge.toFixed(2)}</span>
+     </div>
+     <div class="sosa-detail">${top}${more}</div>
+     ${drift}`
+  sosaStat.classList.remove('hidden')
+}
+
+// Injected into the SimplePractice clients tab. Self-contained (no outer refs):
+// auto-scrolls the lazy list, harvests client-name links, returns the names.
+function scrapeSelfPayInPage(): Promise<string[]> {
+  return (async () => {
+    const SEL = 'a[href*="/clients/"]'
+    const sleep = (ms: number) => new Promise(r => setTimeout(r, ms))
+    const names = new Set<string>()
+    const harvest = () => {
+      document.querySelectorAll(SEL).forEach(a => {
+        const href = a.getAttribute('href') || ''
+        if (!/\/clients\/\d+/.test(href)) return
+        const t = (a.textContent || '').replace(/\s+/g, ' ').trim()
+        if (t && t.length > 1 && !/^clients$/i.test(t)) names.add(t)
+      })
+    }
+    let sc: any = document.querySelector(SEL)
+    while (sc && sc !== document.body) {
+      const oy = getComputedStyle(sc).overflowY
+      if (/(auto|scroll)/.test(oy) && sc.scrollHeight > sc.clientHeight + 20) break
+      sc = sc.parentElement
+    }
+    if (!sc || sc === document.body) sc = document.scrollingElement || document.documentElement
+    let stable = 0, last = -1
+    for (let i = 0; i < 300 && stable < 5; i++) {
+      harvest()
+      sc.scrollTop += Math.max(400, sc.clientHeight * 0.9)
+      window.scrollBy(0, 800)
+      await sleep(250)
+      if (names.size === last) stable++
+      else { stable = 0; last = names.size }
+    }
+    harvest()
+    return [...names].sort((a, b) => a.localeCompare(b))
+  })()
+}
+
+function waitForTabComplete(tabId: number): Promise<void> {
+  return new Promise(resolve => {
+    const listener = (id: number, info: chrome.tabs.TabChangeInfo) => {
+      if (id === tabId && info.status === 'complete') {
+        chrome.tabs.onUpdated.removeListener(listener)
+        resolve()
+      }
+    }
+    chrome.tabs.onUpdated.addListener(listener)
+  })
+}
+
+sosaScrapeBtn.addEventListener('click', async () => {
+  sosaScrapeBtn.disabled = true
+  showStatus('Opening SimplePractice…', 'info')
+  try {
+    const tab = await chrome.tabs.create({ url: SP_SELFPAY_URL, active: true })
+    if (!tab.id) throw new Error('could not open tab')
+    await waitForTabComplete(tab.id)
+    await new Promise(r => setTimeout(r, 1500))   // let the React list mount
+    showStatus('Scraping self-pay list…', 'info')
+    const [inj] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: scrapeSelfPayInPage })
+    const names = (inj?.result as string[]) || []
+    if (names.length === 0) {
+      showStatus('Scraped 0 — log in to SimplePractice and make sure the Self-pay list is showing, then retry.', 'error')
+    } else {
+      setSelfPayRoster(names, Date.now())
+      saveSelfPayRoster()
+      updateSosaRosterStatus()
+      renderSosa()
+      showStatus(`Self-pay roster updated: ${names.length} clients.`, 'success')
+    }
+  } catch (e) {
+    showStatus('Scrape failed: ' + (e as Error).message, 'error')
+  } finally {
+    sosaScrapeBtn.disabled = false
+  }
+})
+
+chrome.storage.local.get(['payrollData', 'bretInsuranceMap', 'bretInsuranceMapV2', 'clientRoster', 'selfPayRoster'], async (data) => {
   // Client roster — load before payroll so renderResults sees roster fallback.
   if (data.clientRoster && Array.isArray(data.clientRoster.records)) {
     const records = (data.clientRoster.records as ClientRecord[]).filter(r =>
@@ -1192,6 +1345,14 @@ chrome.storage.local.get(['payrollData', 'bretInsuranceMap', 'bretInsuranceMapV2
   }
   refreshRosterControls()
   rosterToggleBtn.textContent = `Show roster (${clientRoster.length})`
+
+  // Self-pay roster (from the SimplePractice scrape button) for the SOSA check.
+  if (data.selfPayRoster && Array.isArray(data.selfPayRoster.names)) {
+    setSelfPayRoster(
+      (data.selfPayRoster.names as unknown[]).filter((n): n is string => typeof n === 'string'),
+      typeof data.selfPayRoster.capturedAt === 'number' ? data.selfPayRoster.capturedAt : 0)
+  }
+  updateSosaRosterStatus()
 
   // Long-lived Bret insurance map — load V2 (hashed keys) first.
   if (data.bretInsuranceMapV2 && typeof data.bretInsuranceMapV2 === 'object') {

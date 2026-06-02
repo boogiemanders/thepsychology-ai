@@ -31,6 +31,10 @@
         <input type="search" id="roster-search" placeholder="Search by client or insurance..." />
         <div id="roster-list"></div>
       </div>
+      <div class="sosa-controls">
+        <button id="sosa-scrape-btn" class="btn-small" title="Open SimplePractice and pull the current Self-pay client list">Refresh self-pay roster</button>
+        <span id="sosa-roster-status" class="sosa-roster-status"></span>
+      </div>
     </div>
 
     <div id="results-section" class="hidden">
@@ -43,6 +47,8 @@
       </div>
 
       <div id="insurance-stat" class="insurance-stat hidden"></div>
+
+      <div id="sosa-stat" class="insurance-stat sosa-stat hidden"></div>
 
       <div id="clinician-list"></div>
 

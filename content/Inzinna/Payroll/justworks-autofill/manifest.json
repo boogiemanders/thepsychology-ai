@@ -1,11 +1,12 @@
 {
   "manifest_version": 3,
   "name": "Inzinna JW Autofill",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Calculate clinician pay from SimplePractice CSV and autofill JustWorks time cards",
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": [
-    "https://*.justworks.com/*"
+    "https://*.justworks.com/*",
+    "https://*.simplepractice.com/*"
   ],
   "action": {
     "default_popup": "popup/popup.html",

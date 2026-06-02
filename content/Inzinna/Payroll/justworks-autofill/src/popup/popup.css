@@ -1102,3 +1102,44 @@ h1 {
 .popup::-webkit-scrollbar-thumb:hover {
   background: var(--text-faint);
 }
+
+/* ---------- SOSA self-pay check ---------- */
+.sosa-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.sosa-roster-status {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+.sosa-stat .ins-stat-fee .ins-stat-value {
+  color: #b45309; /* amber — this is money to claw back, not earnings */
+}
+.sosa-detail {
+  margin-top: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: 6px;
+}
+.sosa-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  font-family: var(--mono);
+  color: var(--text-muted);
+}
+.sosa-line + .sosa-line {
+  margin-top: 1px;
+}
+.sosa-more {
+  color: var(--text-faint);
+  justify-content: flex-start;
+}
+.sosa-drift {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text-faint);
+  line-height: 1.4;
+}

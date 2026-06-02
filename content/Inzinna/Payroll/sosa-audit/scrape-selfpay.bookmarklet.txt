@@ -1,0 +1,23 @@
+SimplePractice self-pay scraper — bookmarklet
+
+SETUP (once):
+1. Make a new bookmark (bookmark any page, then edit it).
+2. Name it: "Scrape self-pay".
+3. Paste the entire line below as the URL/Location. Save.
+
+USE (each cycle, zero screenshots):
+1. Go to https://secure.simplepractice.com/clients?billingType=Self-pay
+2. Click the "Scrape self-pay" bookmark.
+3. It auto-scrolls, then downloads self-pay-roster.json (also copies to clipboard).
+4. Move that file into this folder (sosa-audit/), replacing the old roster.
+
+--- BOOKMARKLET (one line, copy all of it) ---
+
+javascript:(async()=>{const S='a[href*="/clients/"]',z=ms=>new Promise(r=>setTimeout(r,ms)),N=new Set(),h=()=>{document.querySelectorAll(S).forEach(a=>{const e=a.getAttribute('href')||'';if(!/\/clients\/\d+/.test(e))return;const t=(a.textContent||'').replace(/\s+/g,' ').trim();if(t&&t.length>1&&!/^clients$/i.test(t))N.add(t)})};let sc=document.querySelector(S);while(sc&&sc!==document.body){const o=getComputedStyle(sc).overflowY;if(/(auto|scroll)/.test(o)&&sc.scrollHeight>sc.clientHeight+20)break;sc=sc.parentElement}if(!sc||sc===document.body)sc=document.scrollingElement||document.documentElement;let st=0,l=-1;for(let i=0;i<300&&st<5;i++){h();sc.scrollTop+=Math.max(400,sc.clientHeight*.9);window.scrollBy(0,800);await z(250);if(N.size===l)st++;else{st=0;l=N.size}}h();const r={_comment:"Scraped from SimplePractice Self-pay filter.",captured:new Date().toISOString().slice(0,10),source:location.href,self_pay:[...N].sort((a,b)=>a.localeCompare(b))},j=JSON.stringify(r,null,2),b=new Blob([j],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='self-pay-roster.json';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(u);try{await navigator.clipboard.writeText(j)}catch(e){}console.log('[selfpay]',N.size,[...N].sort());alert('Scraped '+N.size+' self-pay clients. Downloaded self-pay-roster.json (also copied to clipboard).')})();
+
+--- END ---
+
+Note on couples: this list page may show a couple as a short display name
+(e.g. "Marissa W. & Danny W."). If that differs from the appointment report's
+name, audit.py's "ROSTER DRIFT" section flags the unmatched payer so you can
+add the correct spelling once. Nothing is silently dropped.
