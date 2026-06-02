@@ -104,6 +104,16 @@ const projects = [
     tags: ['Roadmap', 'Monthly View', 'Personal'],
   },
   {
+    id: 21,
+    title: 'WAIS-5 Record Form',
+    description: 'Digital WAIS-5 record form. All 20 subtests, running raw totals, age calculation, auto-save, JSON export/import, and a clean print layout. Scaled scores entered manually from the manual.',
+    category: 'clinical-practice',
+    categoryLabel: '02 Psychologist Tools',
+    href: '/lab/wais5',
+    status: 'dev' as const,
+    tags: ['Assessment', 'WAIS-5', 'Record Form', 'Print-Friendly'],
+  },
+  {
     id: 20,
     title: 'Blind Spot',
     description: 'Multimodal VR psychotherapy. Closed-loop therapy that adapts to your body, not your words. EEG and HRV from a Muse S drive a biofeedback orb in a Quest 3 scene. YC Summer 2026 application in flight.',

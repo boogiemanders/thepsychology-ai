@@ -93,6 +93,14 @@ const EXCLUDED_CHANGELOG_TEXT_PATTERNS = [
   /\btava\b/i,
   /\bga4\b/i,
   /\bgpt\b/i,
+  // PII safety: never expose person names anywhere in title or body
+  /\bdr\.?\s+[A-Z][a-z]/,
+  /\bmr\.?\s+[A-Z][a-z]/,
+  /\bms\.?\s+[A-Z][a-z]/,
+  /\bmrs\.?\s+[A-Z][a-z]/,
+  // PII safety: phrases that indicate a person is being named
+  /\b[A-Z][a-z]+\s+[A-Z][a-z]+\s+(flagged|reported|noticed|asked|emailed|complained|said)\b/,
+  /\b(flagged|reported|noticed|asked|emailed|complained|said)\s+by\s+[A-Z][a-z]+\s+[A-Z][a-z]+\b/,
 ]
 
 // Also exclude commits that mention lab or SENSE in the title
@@ -115,6 +123,72 @@ const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
   /changelog.*filter/i,
   /hide.*commit/i,
   /remove.*github/i,
+  // Internal docs / protocol references
+  /^docs:/i,
+  /^chore:/i,
+  /^ci:/i,
+  /^build:/i,
+  /^refactor:/i,
+  /^style:/i,
+  /^test:/i,
+  /karpathy/i,
+  /emotion code/i,
+  /claude\.md/i,
+  // VR / Unity / Quest internal work
+  /\bvr\b/i,
+  /\bunity\b/i,
+  /\bquest\b/i,
+  /\bxr\b/i,
+  /\boculus\b/i,
+  /\bmuse\b/i,
+  /\bhrv\b/i,
+  /\beeg\b/i,
+  // MCP servers / internal tooling
+  /\bmcp\b/i,
+  /feedback[\s-]mcp/i,
+  /feedback inbox/i,
+  /resend/i,
+  // Chrome extensions / privacy policy edits
+  /zocdoc/i,
+  /chrome[\s-]?web[\s-]?store/i,
+  /\bprivacy policy\b/i,
+  /\bphi\b/i,
+  /^ext-/i,
+  /-ext:/i,
+  // Internal admin / triage work
+  /\binbox\b/i,
+  /\btriage\b/i,
+  /\badmin\b/i,
+  // Internal content folder / research / protocol commits
+  /^content\//i,
+  /\boe research\b/i,
+  /openevidence/i,
+  /\bchronic pain\b/i,
+  /pain neuroscience/i,
+  /\bnpc\b/i,
+  /\bprotocol\b/i,
+  /\bbiomarker/i,
+  /code plan/i,
+  /content plan/i,
+  /content design/i,
+  /content spec/i,
+  /\bcpaq\b/i,
+  /\btsk(-17)?\b/i,
+  /\bbpi(-sf)?\b/i,
+  /\bprt\b/i,
+  /easevrx/i,
+  /\binzi\b/i,
+  /\binzinna\b/i,
+  /\bchatbot\b/i,
+  /clinic manual/i,
+  /employee handbook/i,
+  /brand strategy/i,
+  /google docs?/i,
+  // Block any commit referencing a person ("Dr. Surname", "Mr.", "Ms.", "Mrs.")
+  /\bdr\.?\s+[A-Z]/,
+  /\bmr\.?\s+[A-Z]/,
+  /\bms\.?\s+[A-Z]/,
+  /\bmrs\.?\s+[A-Z]/,
 ]
 
 function normalizeChangelogAuthor(author: string | null | undefined): string | null {
@@ -143,8 +217,34 @@ function toApiEntriesFromFallback(entries: ChangelogEntry[]): ApiChangelogEntry[
   }))
 }
 
+// Words that look capitalized but are NOT person names — don't redact these.
+const NON_NAME_CAPITALIZED_PAIRS = new Set([
+  'Block Design', 'Visual Puzzles', 'Visual Spatial', 'Verbal Comprehension',
+  'Fluid Reasoning', 'Working Memory', 'Processing Speed', 'Matrix Reasoning',
+  'Figure Weights', 'Digit Sequencing', 'Running Digits', 'Symbol Search',
+  'Symbol Span', 'Set Relations', 'Spatial Addition', 'Digits Forward',
+  'Digits Backward', 'Naming Speed', 'Letter Number', 'Letter-Number',
+  'Pearson Blue', 'Google Docs', 'Google Doc', 'Web Store', 'Chrome Web',
+  'Personal Timeline', 'Personal Profile', 'Test Date', 'Birth Date',
+  'Test Age', 'Last Name', 'First Name', 'Sample Item', 'Read Aloud',
+  'Total Raw', 'Raw Score', 'Scaled Score', 'Sum Score', 'Index Score',
+  'Composite Score', 'Critical Value', 'Base Rate', 'Set Errors',
+  'Rotation Errors', 'Dimension Errors', 'Time Bonus', 'Partial Score',
+  'Constructed Design', 'Picture Items', 'New York', 'Hong Kong',
+  'Los Angeles', 'San Francisco', 'United States', 'United Kingdom',
+])
+
+function redactPersonNames(text: string): string {
+  // Replace "FirstName LastName" patterns (two capitalized words) with [user]
+  // unless they're in the allowlist of known non-name phrases.
+  return text.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, (match) => {
+    if (NON_NAME_CAPITALIZED_PAIRS.has(match)) return match
+    return '[user]'
+  })
+}
+
 function sanitizeChangelogText(text: string): string {
-  return text
+  return redactPersonNames(text)
     .replace(/examsGPT\//gi, 'exams folder')
     .replace(/\bexamsGPT\b/gi, 'exams folder')
 }
@@ -212,6 +312,12 @@ function commitTouchesEppp(detail: GitHubCommitDetail | null): boolean {
 function isUserRelevantEntry(entry: ApiChangelogEntry): boolean {
   const text = `${entry.title} ${entry.body || ''}`
   const normalizedText = text.toLowerCase()
+
+  // Exclude commits authored by Claude / bots — those are internal automation
+  const author = (entry.author || '').toLowerCase()
+  if (author === 'claude' || author === 'claude-bot' || author.includes('[bot]')) {
+    return false
+  }
 
   // Check keyword exclusions
   if (EXCLUDED_CHANGELOG_KEYWORDS.some(keyword => normalizedText.includes(keyword))) {
