@@ -32,7 +32,7 @@ const BASE_URL = 'https://thepsychology.ai'
 const DIVIDER = '-'.repeat(60)
 
 const PARAS = [
-  "I'm Anders Chan, a clinical psychologist (UCLA postdoc, LIU Post PsyD). I built an EPPP prep tool, thepsychology.ai, after going through the exam myself. I used it to study and passed, and four postdocs have since passed with it too, most after about a month of prep.",
+  "I'm Anders Chan, a clinical psychologist (UCLA postdoc, LIU Post PsyD). I built an EPPP prep tool, thepsychology.ai, which helped me pass with a month of preparation, and four postdocs have since passed with it too, most after about two months.",
   "Two reasons it might help your students. It's affordable ($30/month vs. the usual $849 to $1,799), and the questions are written the way the EPPP actually words them, so practice scores mean something.",
   "I'd love to give you free access to look around, plus a free trial for any student who wants to try it. If it's useful, please forward it to your graduating cohort. And if it could help program-wide, I'm glad to talk.",
 ]
