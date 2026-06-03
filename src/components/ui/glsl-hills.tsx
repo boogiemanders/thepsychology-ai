@@ -147,17 +147,18 @@ export function GLSLHills({
         varying vec3 vPosition;
 
         void main(void) {
-          float opacity = (96.0 - length(vPosition)) / 256.0 * 0.6;
+          float opacity = max(0.0, (96.0 - length(vPosition)) / 256.0 * 0.6);
           vec3 color = vec3(0.6);
           gl_FragColor = vec4(color, opacity);
         }
       `,
       transparent: true,
+      depthWrite: false,
     })
 
     const mesh = new THREE.Mesh(geometry, material)
 
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true })
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(45, 1, 1, 10000)
