@@ -127,11 +127,14 @@ async function sendOne(c: Contact): Promise<{ ok: boolean; id?: string; error?: 
 }
 
 export async function GET(request: NextRequest) {
-  // Auth: Vercel cron sends x-vercel-cron=1; manual calls use the bearer secret.
+  // Auth: require the bearer secret. Vercel sends Authorization: Bearer
+  // $CRON_SECRET automatically on cron runs when CRON_SECRET is set, so this
+  // covers the real cron and manual canary calls. We do NOT trust the
+  // x-vercel-cron header: it is not stripped from inbound external requests,
+  // so honoring it would let anyone trigger a real send.
   const authHeader = request.headers.get('authorization')
-  const isVercelCron = request.headers.get('x-vercel-cron') === '1'
   const hasValidSecret = CRON_SECRET && authHeader === `Bearer ${CRON_SECRET}`
-  if (!isVercelCron && !hasValidSecret) {
+  if (!hasValidSecret) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
