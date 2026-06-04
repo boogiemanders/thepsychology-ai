@@ -144,10 +144,17 @@ export function scoreMatch(
 ): MatchScore {
   const passed = hardFilter(intake, provider)
 
-  const specialization = jaccard(
+  // Specialization = conditions, deepened by special interest areas when the
+  // client picked any. Clients who skip interest areas are not penalized.
+  const conditionsScore = jaccard(
     intake.conditions_seeking_help,
     provider.conditions_treated
   )
+  const interestScore = intake.interest_areas?.length
+    ? jaccard(intake.interest_areas, provider.interest_areas ?? [])
+    : null
+  const specialization =
+    interestScore == null ? conditionsScore : 0.7 * conditionsScore + 0.3 * interestScore
 
   const modalityRaw = intake.preferred_modalities?.length
     ? jaccard(intake.preferred_modalities, provider.modalities)
@@ -198,6 +205,12 @@ export function scoreMatch(
   )
   if (sharedConditions.length > 0) {
     reasons.push(`Treats ${sharedConditions.slice(0, 3).join(', ')}`)
+  }
+  const sharedInterests = (intake.interest_areas ?? []).filter((a) =>
+    (provider.interest_areas ?? []).includes(a)
+  )
+  if (sharedInterests.length > 0) {
+    reasons.push(`Special focus on ${sharedInterests.slice(0, 2).join(', ')}`)
   }
   if (modalityRaw && modalityRaw > 0 && intake.preferred_modalities) {
     const sharedModalities = intake.preferred_modalities.filter((m) =>

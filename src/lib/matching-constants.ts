@@ -73,6 +73,57 @@ export const CONDITIONS = [
   "Women's Mental Health",
 ] as const
 
+// Secondary specialization tier — finer-grained than CONDITIONS, sourced from
+// the Alma special-interest taxonomy. Deduped against CONDITIONS, POPULATIONS,
+// MODALITIES, and FAITH/RACIAL constants so one signal isn't counted twice.
+export const INTEREST_AREAS = [
+  'AAPI Culture',
+  'Adoption',
+  'Alcohol Use',
+  'Anger',
+  'Anorexia',
+  'ARFID',
+  'Attachment',
+  'BFRBs (Hair Pulling/Skin Picking)',
+  'Black Culture',
+  'Body Positivity',
+  'Bulimia',
+  'Cancer/Psycho-Oncology',
+  'Career Development',
+  'Caregivers',
+  'Christian Counseling',
+  'Compulsive Exercise',
+  'Court-Ordered/Mandated',
+  'Creatives/Artists',
+  'Dating',
+  'Divorce',
+  'Executive Functioning',
+  'Financial Stress',
+  'Forensic',
+  'Gender Dysphoria',
+  'Health Psychology',
+  'HIV',
+  'Indigenous Culture',
+  'Judaism',
+  'Latinx Culture',
+  'Masculinity',
+  'Neurodiversity',
+  'Phobias',
+  'Physical Disabilities',
+  'Polyamory/Non-Monogamy',
+  'Psychedelic Integration',
+  'Sex Positive',
+  'Sexual Abuse Survivors',
+  'Social Justice',
+  'Sports Psychology/Athletes',
+  'Students',
+  'Tic Disorders',
+  'Trans-Affirming Care',
+] as const
+
+export const CLIENT_INTEREST_AREAS_MAX = 3
+export const PROVIDER_INTEREST_AREAS_MAX = 5
+
 export const POPULATIONS = [
   'Adults (18+)',
   'Adolescents (13-17)',

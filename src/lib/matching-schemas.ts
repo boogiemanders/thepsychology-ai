@@ -1,5 +1,9 @@
 import { z } from 'zod'
-import { LAUNCH_STATES } from '@/lib/matching-constants'
+import {
+  LAUNCH_STATES,
+  CLIENT_INTEREST_AREAS_MAX,
+  PROVIDER_INTEREST_AREAS_MAX,
+} from '@/lib/matching-constants'
 
 // --------------------------------------------------------------------------
 // Provider onboarding — per-step schemas
@@ -24,6 +28,10 @@ export const providerSpecializationsSchema = z.object({
   modalities: z.array(z.string()).min(1, 'Select at least one modality'),
   conditions_treated: z.array(z.string()).min(1, 'Select at least one condition'),
   populations_served: z.array(z.string()).min(1, 'Select at least one population'),
+  interest_areas: z
+    .array(z.string())
+    .max(PROVIDER_INTEREST_AREAS_MAX, `Select up to ${PROVIDER_INTEREST_AREAS_MAX}`)
+    .default([]),
 })
 
 export const providerStyleSchema = z.object({
@@ -87,6 +95,10 @@ export const clientConcernsSchema = z.object({
   conditions_seeking_help: z.array(z.string()).min(1, 'Select at least one concern'),
   concern_severity: z.number().int().min(1).max(10),
   presenting_concerns_text: z.string().max(1000).optional(),
+  interest_areas: z
+    .array(z.string())
+    .max(CLIENT_INTEREST_AREAS_MAX, `Select up to ${CLIENT_INTEREST_AREAS_MAX}`)
+    .default([]),
 })
 
 export const clientHistorySchema = z.object({

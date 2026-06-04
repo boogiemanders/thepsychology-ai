@@ -8,8 +8,9 @@ import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '
 import { Checkbox } from '@/components/ui/checkbox'
 import { Textarea } from '@/components/ui/textarea'
 import { Slider } from '@/components/ui/slider'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { clientConcernsSchema } from '@/lib/matching-schemas'
-import { CONDITIONS } from '@/lib/matching-constants'
+import { CONDITIONS, INTEREST_AREAS, CLIENT_INTEREST_AREAS_MAX } from '@/lib/matching-constants'
 import { supabase } from '@/lib/supabase'
 
 type Values = z.infer<typeof clientConcernsSchema>
@@ -22,6 +23,7 @@ export function StepConcerns() {
       conditions_seeking_help: [],
       concern_severity: 5,
       presenting_concerns_text: '',
+      interest_areas: [],
       ...(data as Partial<Values>),
     },
   })
@@ -73,6 +75,48 @@ export function StepConcerns() {
                 </label>
               ))}
             </div>
+            <FormMessage />
+          </FormItem>
+        )} />
+
+        <FormField control={form.control} name="interest_areas" render={({ field }) => (
+          <FormItem>
+            <Collapsible defaultOpen={field.value.length > 0}>
+              <CollapsibleTrigger asChild>
+                <button type="button" className="text-sm font-medium underline-offset-4 hover:underline text-left">
+                  Want to get more specific? (optional)
+                </button>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="pt-3 space-y-2">
+                <p className="text-sm text-muted-foreground">
+                  Pick up to {CLIENT_INTEREST_AREAS_MAX} if anything here fits.{' '}
+                  {field.value.length}/{CLIENT_INTEREST_AREAS_MAX} selected
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                  {INTEREST_AREAS.map((a) => {
+                    const checked = field.value.includes(a)
+                    const disabled = !checked && field.value.length >= CLIENT_INTEREST_AREAS_MAX
+                    return (
+                      <label
+                        key={a}
+                        className={`flex items-center gap-2 text-sm p-2 rounded-md ${disabled ? 'opacity-50' : 'cursor-pointer hover:bg-muted/50'}`}
+                      >
+                        <Checkbox
+                          checked={checked}
+                          disabled={disabled}
+                          onCheckedChange={(isChecked) =>
+                            field.onChange(
+                              isChecked ? [...field.value, a] : field.value.filter((v) => v !== a)
+                            )
+                          }
+                        />
+                        {a}
+                      </label>
+                    )
+                  })}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
             <FormMessage />
           </FormItem>
         )} />
