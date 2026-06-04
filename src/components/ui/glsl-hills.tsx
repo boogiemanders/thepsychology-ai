@@ -148,6 +148,10 @@ export function GLSLHills({
 
         void main(void) {
           float opacity = max(0.0, (96.0 - length(vPosition)) / 256.0 * 0.6);
+          // Fade the far end of the valley to transparent before the grazing
+          // zone. Distant wave crests viewed edge-on compress into shimmering
+          // horizontal streak lines floating above the hills.
+          opacity *= smoothstep(-115.0, -60.0, vPosition.z);
           vec3 color = vec3(0.6);
           gl_FragColor = vec4(color, opacity);
         }
