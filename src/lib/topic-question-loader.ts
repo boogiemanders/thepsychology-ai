@@ -15,6 +15,8 @@ export interface TopicQuestion {
   is_lock_in_drill?: boolean
   lock_in_level?: string
   tags?: string[]
+  // Confirmed to have appeared on the actual EPPP. Force-included in every quiz for its topic.
+  realExam?: boolean
 }
 
 export interface LoadedTopicQuestions {
