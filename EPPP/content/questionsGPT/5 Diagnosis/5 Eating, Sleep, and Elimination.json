@@ -182,6 +182,8 @@
     },
     {
       "stem": "Which medication is the primary pharmacological treatment used specifically to reduce cataplexy in narcolepsy?",
+      "realExam": true,
+      "realExamNote": "Confirmed on the actual EPPP via student feedback 2026-06-01 (user anam68798): 'I got this question in my recent EPPP.' Pinned to always appear in Eating/Sleep/Elimination quizzes.",
       "options": [
         "Modafinil",
         "Venlafaxine",

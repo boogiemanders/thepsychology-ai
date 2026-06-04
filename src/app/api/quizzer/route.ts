@@ -224,11 +224,18 @@ function buildQuizFromLocalQuestions(topicName: string, domain?: string): { ques
     return null
   }
 
-  const selected = shuffleArray(combined).slice(0, 10)
-  const unscoredIndices = new Set<number>()
+  // Real-exam-confirmed questions are pinned: always included, and never relegated to the
+  // unscored experimental slots. Remaining slots are filled with a random draw.
+  const pinned = combined.filter((q) => q.realExam === true)
+  const rest = shuffleArray(combined.filter((q) => q.realExam !== true))
+  const selected = [...shuffleArray(pinned), ...rest].slice(0, 10)
+  const pinnedCount = Math.min(pinned.length, selected.length)
 
-  while (unscoredIndices.size < Math.min(2, selected.length)) {
-    unscoredIndices.add(Math.floor(Math.random() * selected.length))
+  // Draw the 2 unscored (experimental) questions only from the non-pinned tail.
+  const unscoredIndices = new Set<number>()
+  const unscoredTarget = Math.min(2, selected.length - pinnedCount)
+  while (unscoredIndices.size < unscoredTarget) {
+    unscoredIndices.add(pinnedCount + Math.floor(Math.random() * (selected.length - pinnedCount)))
   }
 
   const questions = selected.map((q, idx) => {
