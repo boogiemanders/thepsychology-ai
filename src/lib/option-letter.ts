@@ -1,18 +1,18 @@
-/** Pull the canonical letter (A/B/C/D) out of an option string like
- *  "B. Obtain written consent..." so shuffled options keep the same letter
- *  the explanation text and stored answer reference. Returns "" if no
- *  embedded letter is present, so callers should fall back to a
- *  position-based letter. */
+/** Pull the canonical letter (A-H, covers questions with up to 8 options)
+ *  out of an option string like "B. Obtain written consent..." so shuffled
+ *  options keep the same letter the explanation text and stored answer
+ *  reference. Returns "" if no embedded letter is present, so callers
+ *  should fall back to a position-based letter. */
 export const extractOptionLetter = (text: unknown): string => {
   if (typeof text !== 'string') return ''
-  const match = text.match(/^\s*([A-Da-d])\./)
+  const match = text.match(/^\s*([A-Ha-h])\./)
   return match ? match[1].toUpperCase() : ''
 }
 
-/** Strip leading letter prefix like "A. " or "D. " from option text to avoid
- *  doubling when the renderer already prepends its own A/B/C/D label. */
+/** Strip leading letter prefix like "A. " or "E. " from option text to avoid
+ *  doubling when the renderer already prepends its own letter label. */
 export const stripOptionLetterPrefix = (text: unknown): string =>
-  typeof text === 'string' ? text.replace(/^[A-Da-d]\.\s*/, '') : ''
+  typeof text === 'string' ? text.replace(/^[A-Ha-h]\.\s*/, '') : ''
 
 /** Fisher-Yates in-place shuffle. */
 const fisherYates = <T,>(array: T[]): T[] => {
@@ -35,7 +35,7 @@ const fisherYates = <T,>(array: T[]): T[] => {
  *  for stored / re-shuffled options). */
 export const shuffleOptionsWithCanonicalLetters = (sourceOptions: string[]): string[] => {
   const alreadyPrefixed = sourceOptions.some(
-    (opt) => typeof opt === 'string' && /^\s*[A-Da-d]\./.test(opt),
+    (opt) => typeof opt === 'string' && /^\s*[A-Ha-h]\./.test(opt),
   )
   const prefixed = alreadyPrefixed
     ? [...sourceOptions]

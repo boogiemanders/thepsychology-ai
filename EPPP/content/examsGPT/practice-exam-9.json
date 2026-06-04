@@ -3649,12 +3649,11 @@
       "options": [
         "Denial",
         "Anger",
-        "Bargaining",
         "Acceptance",
         "Resilience"
       ],
       "correct_answer": "Resilience",
-      "explanation": "The correct answer is E because resilience is not one of the stages in Kubler-Ross's model of grief. The other options are all recognized stages of grief. Option A is incorrect as denial is a stage. Option B is incorrect as anger is a stage. Option C is incorrect as bargaining is a stage. Option D is incorrect as acceptance is a stage.",
+      "explanation": "The correct answer is D because resilience is not one of the stages in Kubler-Ross's model of grief. The other options are all recognized stages of grief. Option A is incorrect as denial is a stage. Option B is incorrect as anger is a stage. Option C is incorrect as acceptance is a stage.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
       "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
