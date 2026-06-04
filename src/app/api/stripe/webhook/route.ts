@@ -80,6 +80,68 @@ async function updateUserSubscription(
   }
 }
 
+// Attribution fields copied into checkout session metadata at creation time
+// (see create-checkout-session). Falls back to the users table for sessions
+// that predate the metadata copy.
+const ATTRIBUTION_KEYS = [
+  'referral_source',
+  'landing_page',
+  'landing_referrer',
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_content',
+  'utm_term',
+] as const
+
+async function loadAttribution(
+  metadata: Stripe.Metadata | null,
+  userId: string
+): Promise<Record<string, string | null>> {
+  const out: Record<string, string | null> = {}
+  let hasAny = false
+  for (const key of ATTRIBUTION_KEYS) {
+    const value = metadata?.[key]
+    out[key] = typeof value === 'string' && value.length > 0 ? value : null
+    if (out[key]) hasAny = true
+  }
+  if (hasAny) return out
+
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) return out
+
+  const { data } = await supabase
+    .from('users')
+    .select(ATTRIBUTION_KEYS.join(','))
+    .eq('id', userId)
+    .maybeSingle()
+  if (!data) return out
+
+  for (const key of ATTRIBUTION_KEYS) {
+    const value = (data as unknown as Record<string, unknown>)[key]
+    if (typeof value === 'string' && value.length > 0) out[key] = value
+  }
+  return out
+}
+
+function formatAttributionLines(a: Record<string, string | null>): string[] {
+  const hasUtm = a.utm_source || a.utm_medium || a.utm_campaign || a.utm_content || a.utm_term
+  return [
+    `- Referral source (self-reported): ${a.referral_source ?? 'unknown'}`,
+    `- Landing page (first touch): ${a.landing_page ?? 'unknown'}`,
+    ...(a.landing_referrer ? [`- Landing referrer: ${a.landing_referrer}`] : []),
+    ...(hasUtm
+      ? [
+          `- UTM source: ${a.utm_source ?? 'none'}`,
+          `- UTM medium: ${a.utm_medium ?? 'none'}`,
+          `- UTM campaign: ${a.utm_campaign ?? 'none'}`,
+          ...(a.utm_content ? [`- UTM content: ${a.utm_content}`] : []),
+          ...(a.utm_term ? [`- UTM term: ${a.utm_term}`] : []),
+        ]
+      : ['- UTM attribution: none (direct / organic)']),
+  ]
+}
+
 async function getTierFromSession(session: Stripe.Checkout.Session): Promise<'pro' | null> {
   // First check metadata
   if (session.metadata?.planTier) {
@@ -373,9 +435,23 @@ export async function POST(request: Request) {
 
       // Email notification for new subscription
       if (isNotificationEmailConfigured()) {
+        const attribution = await loadAttribution(session.metadata ?? null, userId).catch((err) => {
+          console.error('[Stripe] Failed to load attribution for payment email:', err)
+          return {} as Record<string, string | null>
+        })
         await sendNotificationEmail({
           subject: `New Pro subscription: ${session.customer_email || 'Unknown'}`,
-          text: `New Pro subscription!\n\nEmail: ${session.customer_email || 'Unknown'}\nUser ID: ${userId}\nStripe Customer: ${stripeCustomerId || 'N/A'}\nSession: ${session.id}`,
+          text: [
+            'New Pro subscription!',
+            '',
+            `Email: ${session.customer_email || 'Unknown'}`,
+            `User ID: ${userId}`,
+            `Stripe Customer: ${stripeCustomerId || 'N/A'}`,
+            `Session: ${session.id}`,
+            '',
+            'Attribution:',
+            ...formatAttributionLines(attribution),
+          ].join('\n'),
         }).catch((err) => console.error('[Stripe] Failed to send payment email:', err))
       }
     }
