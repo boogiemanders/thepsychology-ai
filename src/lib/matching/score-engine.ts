@@ -73,18 +73,62 @@ function culturalScore(intake: ClientIntakeProfile, provider: ProviderProfile): 
     if (provider.faith_integrated) score += 0.2
   }
 
+  // A provider who answered 'prefer_not_to_say' intentionally scores the same
+  // as one who skipped the question: no match credit when a client has a
+  // gender/age preference.
+  if (intake.preferred_therapist_gender && intake.preferred_therapist_gender !== 'no_preference') {
+    weight += 0.25
+    if (provider.gender === intake.preferred_therapist_gender) score += 0.25
+  }
+
+  if (intake.preferred_therapist_age && intake.preferred_therapist_age !== 'no_preference') {
+    weight += 0.1
+    if (provider.age_bracket === intake.preferred_therapist_age) score += 0.1
+  }
+
   if (weight === 0) return 1
   return score / weight
 }
 
+// How a provider's self-pay pricing fits the client's stated budget.
+// null = client gave no budget, so cost is not scored at all.
+export type CostFit = 'within_budget' | 'sliding_scale' | 'rate_unknown' | 'over_budget' | null
+
+export function costFit(intake: ClientIntakeProfile, provider: ProviderProfile): CostFit {
+  if (!intake.interested_in_self_pay || intake.max_self_pay_rate_cents == null) return null
+  const budget = intake.max_self_pay_rate_cents
+  if (!provider.accepts_self_pay) return 'over_budget'
+  if (provider.self_pay_rate_cents != null && provider.self_pay_rate_cents <= budget) {
+    return 'within_budget'
+  }
+  if (
+    provider.sliding_scale_available &&
+    (provider.sliding_scale_min_cents == null || provider.sliding_scale_min_cents <= budget)
+  ) {
+    return 'sliding_scale'
+  }
+  if (provider.self_pay_rate_cents == null) return 'rate_unknown'
+  return 'over_budget'
+}
+
+const COST_FIT_SCORES: Record<NonNullable<CostFit>, number> = {
+  within_budget: 1,
+  sliding_scale: 0.75,
+  rate_unknown: 0.5,
+  over_budget: 0,
+}
+
 function practicalScore(intake: ClientIntakeProfile, provider: ProviderProfile): number {
+  let format = 1
   if (intake.telehealth_preference === 'telehealth_only') {
-    return provider.telehealth_states.length > 0 ? 1 : 0
+    format = provider.telehealth_states.length > 0 ? 1 : 0
+  } else if (intake.telehealth_preference === 'in_person_only') {
+    format = provider.telehealth_only ? 0 : 1
   }
-  if (intake.telehealth_preference === 'in_person_only') {
-    return provider.telehealth_only ? 0 : 1
-  }
-  return 1
+
+  const fit = costFit(intake, provider)
+  if (fit == null) return format
+  return 0.6 * format + 0.4 * COST_FIT_SCORES[fit]
 }
 
 export function hardFilter(
@@ -103,10 +147,22 @@ export function scoreMatch(
 ): MatchScore {
   const passed = hardFilter(intake, provider)
 
-  const specialization = jaccard(
+  // Specialization = conditions, deepened by special interest areas when the
+  // client picked any. Interest areas are a bonus-only term: they can lift a
+  // provider who shares the client's focus, but never penalize one who left
+  // the optional field empty (including all pre-migration profiles) or whose
+  // tags simply don't overlap.
+  const conditionsScore = jaccard(
     intake.conditions_seeking_help,
     provider.conditions_treated
   )
+  const interestScore = intake.interest_areas?.length
+    ? jaccard(intake.interest_areas, provider.interest_areas ?? [])
+    : null
+  const specialization =
+    interestScore == null
+      ? conditionsScore
+      : Math.min(1, conditionsScore + 0.3 * interestScore)
 
   const modalityRaw = intake.preferred_modalities?.length
     ? jaccard(intake.preferred_modalities, provider.modalities)
@@ -158,6 +214,12 @@ export function scoreMatch(
   if (sharedConditions.length > 0) {
     reasons.push(`Treats ${sharedConditions.slice(0, 3).join(', ')}`)
   }
+  const sharedInterests = (intake.interest_areas ?? []).filter((a) =>
+    (provider.interest_areas ?? []).includes(a)
+  )
+  if (sharedInterests.length > 0) {
+    reasons.push(`Special focus on ${sharedInterests.slice(0, 2).join(', ')}`)
+  }
   if (modalityRaw && modalityRaw > 0 && intake.preferred_modalities) {
     const sharedModalities = intake.preferred_modalities.filter((m) =>
       provider.modalities.includes(m)
@@ -171,6 +233,19 @@ export function scoreMatch(
   }
   if (intake.lgbtq_affirming_required && provider.lgbtq_affirming) {
     reasons.push('LGBTQ+ affirming')
+  }
+  const fit = costFit(intake, provider)
+  if (fit === 'within_budget') {
+    reasons.push('Self-pay rate within your budget')
+  } else if (fit === 'sliding_scale') {
+    reasons.push('Offers sliding scale pricing')
+  }
+  if (
+    intake.preferred_therapist_gender &&
+    intake.preferred_therapist_gender !== 'no_preference' &&
+    provider.gender === intake.preferred_therapist_gender
+  ) {
+    reasons.push('Matches your therapist gender preference')
   }
 
   return {

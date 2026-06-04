@@ -24,6 +24,7 @@ export interface ProviderProfile {
   modalities: string[]
   conditions_treated: string[]
   populations_served: string[]
+  interest_areas: string[]
   style_directive: number | null
   style_present_focused: number | null
   style_insight_behavioral: number | null
@@ -33,6 +34,9 @@ export interface ProviderProfile {
   faith_integrated: boolean
   faith_traditions: string[]
   racial_cultural_focus: string[]
+  gender: string | null
+  pronouns: string | null
+  age_bracket: string | null
   insurance_networks: string[]
   accepts_self_pay: boolean
   self_pay_rate_cents: number | null
@@ -52,6 +56,7 @@ export interface ClientIntakeProfile {
   conditions_seeking_help: string[]
   concern_severity: number | null
   presenting_concerns_text: string | null
+  interest_areas: string[]
   has_previous_therapy: boolean | null
   previous_therapy_count: string | null
   what_worked_text: string | null

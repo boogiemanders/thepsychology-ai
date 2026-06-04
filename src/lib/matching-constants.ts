@@ -1,3 +1,7 @@
+// NOTE: These lists are append-only. Values are stored verbatim in
+// provider_profiles and client_intake_profiles arrays — renaming or removing
+// an entry orphans existing data. Expanded 2026-06 from the Alma taxonomy.
+
 export const MODALITIES = [
   'CBT',
   'DBT',
@@ -13,6 +17,26 @@ export const MODALITIES = [
   'Narrative',
   'Gottman Method',
   'EFT',
+  'Attachment-Based',
+  'Biofeedback',
+  'CPT (Cognitive Processing)',
+  'Existential',
+  'Exposure/ERP',
+  'Feminist Therapy',
+  'Gestalt',
+  'Humanistic',
+  'Hypnotherapy',
+  'IPT (Interpersonal)',
+  'Jungian',
+  'MBCT',
+  'MBSR/Mindfulness',
+  'Multicultural',
+  'Positive Psychology',
+  'Prolonged Exposure',
+  'REBT',
+  'Strength-Based',
+  'Structural Family Therapy',
+  'TF-CBT',
 ] as const
 
 export const CONDITIONS = [
@@ -29,7 +53,75 @@ export const CONDITIONS = [
   'Life Transitions',
   'Stress/Burnout',
   'Identity/Self-Esteem',
+  'Autism Spectrum',
+  'Body Image',
+  'Chronic Illness/Pain',
+  'Domestic Violence/Abuse',
+  'Infertility',
+  'Learning Disabilities',
+  'Marriage/Partnership Issues',
+  "Men's Mental Health",
+  'Parenting',
+  'Personality Disorders',
+  'Pregnancy/Postpartum',
+  'Race/Cultural Identity',
+  'Religion/Spirituality',
+  'Schizophrenia/Psychosis',
+  'Self-Harm/Suicidal Thoughts',
+  'Sex & Intimacy',
+  'Sleep Issues',
+  "Women's Mental Health",
 ] as const
+
+// Secondary specialization tier — finer-grained than CONDITIONS, sourced from
+// the Alma special-interest taxonomy. Deduped against CONDITIONS, POPULATIONS,
+// MODALITIES, and FAITH/RACIAL constants so one signal isn't counted twice.
+export const INTEREST_AREAS = [
+  'AAPI Culture',
+  'Adoption',
+  'Alcohol Use',
+  'Anger',
+  'Anorexia',
+  'ARFID',
+  'Attachment',
+  'BFRBs (Hair Pulling/Skin Picking)',
+  'Black Culture',
+  'Body Positivity',
+  'Bulimia',
+  'Cancer/Psycho-Oncology',
+  'Career Development',
+  'Caregivers',
+  'Christian Counseling',
+  'Compulsive Exercise',
+  'Court-Ordered/Mandated',
+  'Creatives/Artists',
+  'Dating',
+  'Divorce',
+  'Executive Functioning',
+  'Financial Stress',
+  'Gender Dysphoria',
+  'Health Psychology',
+  'HIV',
+  'Indigenous Culture',
+  'Judaism',
+  'Latinx Culture',
+  'Masculinity',
+  'Neurodiversity',
+  'Phobias',
+  'Physical Disabilities',
+  'Polyamory/Non-Monogamy',
+  'Psychedelic Integration',
+  'Sex Positive',
+  'Sexual Abuse Survivors',
+  'Social Justice',
+  'Sports Psychology/Athletes',
+  'Students',
+  'Tic Disorders',
+  'Trans-Affirming Care',
+] as const
+
+export const CLIENT_INTEREST_AREAS_MAX = 3
+export const PROVIDER_INTEREST_AREAS_MAX = 5
 
 export const POPULATIONS = [
   'Adults (18+)',
@@ -95,6 +187,23 @@ export const RACIAL_CULTURAL_FOCUS = [
   'South Asian',
   'Immigrant/Refugee',
   'Multicultural/Multiracial',
+] as const
+
+// Provider demographics — values mirror the client preference enums in
+// matching-schemas.ts (preferred_therapist_gender / preferred_therapist_age)
+// so the score engine can compare them directly.
+export const PROVIDER_GENDER_OPTIONS = [
+  { value: 'female', label: 'Female' },
+  { value: 'male', label: 'Male' },
+  { value: 'nonbinary', label: 'Nonbinary' },
+  { value: 'prefer_not_to_say', label: 'Prefer not to say' },
+] as const
+
+export const PROVIDER_AGE_BRACKETS = [
+  { value: '25-35', label: '25-35' },
+  { value: '35-50', label: '35-50' },
+  { value: '50+', label: '50+' },
+  { value: 'prefer_not_to_say', label: 'Prefer not to say' },
 ] as const
 
 export const LAUNCH_STATES = ['CA', 'NY'] as const

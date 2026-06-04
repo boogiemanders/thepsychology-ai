@@ -1,6 +1,8 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 import { useAuth } from '@/context/auth-context'
 import { WizardProvider, WizardStep } from '@/components/wizard'
 import { StepCredentials } from './steps/step-credentials'
@@ -38,6 +40,9 @@ export function ProviderOnboardClient() {
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4 px-6">
         <h1 className="text-2xl font-medium">Sign in to get started</h1>
         <p className="text-muted-foreground">You need to be logged in to set up your provider profile.</p>
+        <Button asChild>
+          <Link href="/login?next=/provider/onboard">Sign in</Link>
+        </Button>
       </div>
     )
   }

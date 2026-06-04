@@ -8,7 +8,13 @@ import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/
 import { Checkbox } from '@/components/ui/checkbox'
 import { Input } from '@/components/ui/input'
 import { providerSpecializationsSchema } from '@/lib/matching-schemas'
-import { MODALITIES, CONDITIONS, POPULATIONS } from '@/lib/matching-constants'
+import {
+  MODALITIES,
+  CONDITIONS,
+  POPULATIONS,
+  INTEREST_AREAS,
+  PROVIDER_INTEREST_AREAS_MAX,
+} from '@/lib/matching-constants'
 import { supabase } from '@/lib/supabase'
 
 type Values = z.infer<typeof providerSpecializationsSchema>
@@ -17,24 +23,35 @@ function CheckboxGrid({
   options,
   selected,
   onChange,
+  max,
 }: {
   options: readonly string[]
   selected: string[]
   onChange: (val: string[]) => void
+  max?: number
 }) {
+  const atMax = max != null && selected.length >= max
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-      {options.map((opt) => (
-        <label key={opt} className="flex items-center gap-2 text-sm cursor-pointer p-2 rounded-md hover:bg-muted/50">
-          <Checkbox
-            checked={selected.includes(opt)}
-            onCheckedChange={(checked) =>
-              onChange(checked ? [...selected, opt] : selected.filter((v) => v !== opt))
-            }
-          />
-          {opt}
-        </label>
-      ))}
+      {options.map((opt) => {
+        const checked = selected.includes(opt)
+        const disabled = atMax && !checked
+        return (
+          <label
+            key={opt}
+            className={`flex items-center gap-2 text-sm p-2 rounded-md ${disabled ? 'opacity-50' : 'cursor-pointer hover:bg-muted/50'}`}
+          >
+            <Checkbox
+              checked={checked}
+              disabled={disabled}
+              onCheckedChange={(isChecked) =>
+                onChange(isChecked ? [...selected, opt] : selected.filter((v) => v !== opt))
+              }
+            />
+            {opt}
+          </label>
+        )
+      })}
     </div>
   )
 }
@@ -47,6 +64,7 @@ export function StepSpecializations() {
       modalities: [],
       conditions_treated: [],
       populations_served: [],
+      interest_areas: [],
       ...(data as Partial<Values>),
     },
   })
@@ -114,6 +132,23 @@ export function StepSpecializations() {
           <FormItem>
             <FormLabel>Populations Served</FormLabel>
             <CheckboxGrid options={POPULATIONS} selected={field.value} onChange={field.onChange} />
+            <FormMessage />
+          </FormItem>
+        )} />
+
+        <FormField control={form.control} name="interest_areas" render={({ field }) => (
+          <FormItem>
+            <FormLabel>Special Interest Areas (optional)</FormLabel>
+            <p className="text-sm text-muted-foreground mb-2">
+              Pick up to {PROVIDER_INTEREST_AREAS_MAX} areas of focused clinical interest, based on
+              your training and experience. {field.value.length}/{PROVIDER_INTEREST_AREAS_MAX} selected
+            </p>
+            <CheckboxGrid
+              options={INTEREST_AREAS}
+              selected={field.value}
+              onChange={field.onChange}
+              max={PROVIDER_INTEREST_AREAS_MAX}
+            />
             <FormMessage />
           </FormItem>
         )} />

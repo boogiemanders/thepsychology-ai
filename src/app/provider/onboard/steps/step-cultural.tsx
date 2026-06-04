@@ -4,13 +4,20 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useWizard, WizardNavigation } from '@/components/wizard'
-import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Switch } from '@/components/ui/switch'
 import { Label } from '@/components/ui/label'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { providerCulturalSchema } from '@/lib/matching-schemas'
 import { Input } from '@/components/ui/input'
-import { LANGUAGES, FAITH_TRADITIONS, RACIAL_CULTURAL_FOCUS } from '@/lib/matching-constants'
+import {
+  LANGUAGES,
+  FAITH_TRADITIONS,
+  RACIAL_CULTURAL_FOCUS,
+  PROVIDER_GENDER_OPTIONS,
+  PROVIDER_AGE_BRACKETS,
+} from '@/lib/matching-constants'
 import { supabase } from '@/lib/supabase'
 
 type Values = z.infer<typeof providerCulturalSchema>
@@ -51,6 +58,7 @@ export function StepCultural() {
       faith_integrated: false,
       faith_traditions: [],
       racial_cultural_focus: [],
+      pronouns: '',
       ...(data as Partial<Values>),
     },
   })
@@ -145,6 +153,56 @@ export function StepCultural() {
             <FormMessage />
           </FormItem>
         )} />
+
+        <div className="space-y-6 rounded-lg border p-4">
+          <div>
+            <p className="text-sm font-medium">About You (optional)</p>
+            <p className="text-sm text-muted-foreground">
+              Some clients prefer a therapist of a particular gender or age. These answers
+              are used for matching only and are never required.
+            </p>
+          </div>
+
+          <FormField control={form.control} name="gender" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Gender</FormLabel>
+              <RadioGroup value={field.value ?? ''} onValueChange={field.onChange} className="flex flex-wrap gap-4 mt-2">
+                {PROVIDER_GENDER_OPTIONS.map((opt) => (
+                  <div key={opt.value} className="flex items-center gap-2">
+                    <RadioGroupItem value={opt.value} id={`provider-gender-${opt.value}`} />
+                    <Label htmlFor={`provider-gender-${opt.value}`}>{opt.label}</Label>
+                  </div>
+                ))}
+              </RadioGroup>
+              <FormMessage />
+            </FormItem>
+          )} />
+
+          <FormField control={form.control} name="pronouns" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Pronouns</FormLabel>
+              <FormControl>
+                <Input placeholder="e.g. she/her" className="max-w-xs" {...field} value={field.value ?? ''} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+
+          <FormField control={form.control} name="age_bracket" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Age Range</FormLabel>
+              <RadioGroup value={field.value ?? ''} onValueChange={field.onChange} className="flex flex-wrap gap-4 mt-2">
+                {PROVIDER_AGE_BRACKETS.map((opt) => (
+                  <div key={opt.value} className="flex items-center gap-2">
+                    <RadioGroupItem value={opt.value} id={`provider-age-${opt.value}`} />
+                    <Label htmlFor={`provider-age-${opt.value}`}>{opt.label}</Label>
+                  </div>
+                ))}
+              </RadioGroup>
+              <FormMessage />
+            </FormItem>
+          )} />
+        </div>
 
         <WizardNavigation submitForm />
       </form>
