@@ -1,6 +1,8 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 import { useAuth } from '@/context/auth-context'
 import { WizardProvider, WizardStep } from '@/components/wizard'
 import { StepConsent } from './steps/step-consent'
@@ -38,6 +40,9 @@ export function IntakeClient() {
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4 px-6">
         <h1 className="text-2xl font-medium">Sign in to get started</h1>
         <p className="text-muted-foreground">You need to be logged in to find a therapist.</p>
+        <Button asChild>
+          <Link href="/login?next=/find-therapist/intake">Sign in</Link>
+        </Button>
       </div>
     )
   }
