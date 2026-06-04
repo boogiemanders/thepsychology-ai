@@ -139,6 +139,23 @@ export const RACIAL_CULTURAL_FOCUS = [
   'Multicultural/Multiracial',
 ] as const
 
+// Provider demographics — values mirror the client preference enums in
+// matching-schemas.ts (preferred_therapist_gender / preferred_therapist_age)
+// so the score engine can compare them directly.
+export const PROVIDER_GENDER_OPTIONS = [
+  { value: 'female', label: 'Female' },
+  { value: 'male', label: 'Male' },
+  { value: 'nonbinary', label: 'Nonbinary' },
+  { value: 'prefer_not_to_say', label: 'Prefer not to say' },
+] as const
+
+export const PROVIDER_AGE_BRACKETS = [
+  { value: '25-35', label: '25-35' },
+  { value: '35-50', label: '35-50' },
+  { value: '50+', label: '50+' },
+  { value: 'prefer_not_to_say', label: 'Prefer not to say' },
+] as const
+
 export const LAUNCH_STATES = ['CA', 'NY'] as const
 export type LaunchState = (typeof LAUNCH_STATES)[number]
 

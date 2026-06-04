@@ -39,6 +39,9 @@ export const providerCulturalSchema = z.object({
   faith_integrated: z.boolean().default(false),
   faith_traditions: z.array(z.string()).default([]),
   racial_cultural_focus: z.array(z.string()).default([]),
+  gender: z.enum(['female', 'male', 'nonbinary', 'prefer_not_to_say']).optional(),
+  pronouns: z.string().max(40).optional().or(z.literal('')),
+  age_bracket: z.enum(['25-35', '35-50', '50+', 'prefer_not_to_say']).optional(),
 })
 
 export const providerPracticalSchema = z.object({

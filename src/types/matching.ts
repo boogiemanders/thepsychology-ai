@@ -33,6 +33,9 @@ export interface ProviderProfile {
   faith_integrated: boolean
   faith_traditions: string[]
   racial_cultural_focus: string[]
+  gender: string | null
+  pronouns: string | null
+  age_bracket: string | null
   insurance_networks: string[]
   accepts_self_pay: boolean
   self_pay_rate_cents: number | null
