@@ -1,3 +1,7 @@
+// NOTE: These lists are append-only. Values are stored verbatim in
+// provider_profiles and client_intake_profiles arrays — renaming or removing
+// an entry orphans existing data. Expanded 2026-06 from the Alma taxonomy.
+
 export const MODALITIES = [
   'CBT',
   'DBT',
@@ -13,6 +17,26 @@ export const MODALITIES = [
   'Narrative',
   'Gottman Method',
   'EFT',
+  'Attachment-Based',
+  'Biofeedback',
+  'CPT (Cognitive Processing)',
+  'Existential',
+  'Exposure/ERP',
+  'Feminist Therapy',
+  'Gestalt',
+  'Humanistic',
+  'Hypnotherapy',
+  'IPT (Interpersonal)',
+  'Jungian',
+  'MBCT',
+  'MBSR/Mindfulness',
+  'Multicultural',
+  'Positive Psychology',
+  'Prolonged Exposure',
+  'REBT',
+  'Strength-Based',
+  'Structural Family Therapy',
+  'TF-CBT',
 ] as const
 
 export const CONDITIONS = [
@@ -29,6 +53,24 @@ export const CONDITIONS = [
   'Life Transitions',
   'Stress/Burnout',
   'Identity/Self-Esteem',
+  'Autism Spectrum',
+  'Body Image',
+  'Chronic Illness/Pain',
+  'Domestic Violence/Abuse',
+  'Infertility',
+  'Learning Disabilities',
+  'Marriage/Partnership Issues',
+  "Men's Mental Health",
+  'Parenting',
+  'Personality Disorders',
+  'Pregnancy/Postpartum',
+  'Race/Cultural Identity',
+  'Religion/Spirituality',
+  'Schizophrenia/Psychosis',
+  'Self-Harm/Suicidal Thoughts',
+  'Sex & Intimacy',
+  'Sleep Issues',
+  "Women's Mental Health",
 ] as const
 
 export const POPULATIONS = [
