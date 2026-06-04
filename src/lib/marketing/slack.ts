@@ -68,11 +68,17 @@ export function buildApprovalBlocks(draft: MarketingDraft): unknown[] {
   return blocks
 }
 
-// Post a draft to #social-approvals (SLACK_WEBHOOK_SOCIAL) for review.
+// Post a draft to #social-approvals (SLACK_WEBHOOK_SOCIAL) for review. Throws if
+// delivery fails so the caller (submit-draft) does not report a false success.
 export async function postDraftForApproval(draft: MarketingDraft): Promise<void> {
-  await sendSlackNotification(
+  const delivered = await sendSlackNotification(
     `New draft for review: ${draft.title}`,
     "social",
     buildApprovalBlocks(draft)
   )
+  if (!delivered) {
+    throw new Error(
+      "Slack delivery to #social-approvals failed (SLACK_WEBHOOK_SOCIAL missing or webhook returned non-ok)"
+    )
+  }
 }

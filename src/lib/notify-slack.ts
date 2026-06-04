@@ -17,16 +17,20 @@ export function isSlackConfigured(channel: SlackChannel = 'default'): boolean {
   return Boolean(WEBHOOKS[channel] || WEBHOOKS.default)
 }
 
+// Returns true if the message was delivered, false if it was not (no webhook
+// configured, or the webhook returned a non-ok status, or the request threw).
+// Callers that need delivery to be reliable (e.g. marketing approvals) should
+// check the return value instead of assuming success.
 export async function sendSlackNotification(
   message: string,
   channel: SlackChannel = 'default',
   blocks?: unknown[]
-): Promise<void> {
+): Promise<boolean> {
   const webhookUrl = WEBHOOKS[channel] || WEBHOOKS.default
 
   if (!webhookUrl) {
     console.warn(`[notify-slack] No webhook configured for channel: ${channel}`)
-    return
+    return false
   }
 
   try {
@@ -39,8 +43,11 @@ export async function sendSlackNotification(
     if (!response.ok) {
       const body = await response.text()
       console.error(`[notify-slack] Failed (${channel}): ${response.status} - ${body}`)
+      return false
     }
+    return true
   } catch (error) {
     console.error(`[notify-slack] Error sending to ${channel}:`, error)
+    return false
   }
 }

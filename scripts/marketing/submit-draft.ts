@@ -70,16 +70,20 @@ async function main() {
   const noteName = `${draft.type}-${slug || slugify(draft.title)}-${draft.id.slice(0, 8)}.md`
   fs.writeFileSync(path.join(dir, noteName), buildObsidianNote(draft), "utf8")
 
-  // Post to #social-approvals for review (via SLACK_WEBHOOK_SOCIAL).
-  let slackInfo = ""
+  // Post to #social-approvals for review (via SLACK_WEBHOOK_SOCIAL). The draft and
+  // note are already saved above, so a Slack failure is recoverable. But it must NOT
+  // be silent: exit non-zero so the scheduled routine surfaces it instead of
+  // reporting a false success when the webhook is missing or returns non-ok.
   try {
     await postDraftForApproval(draft)
-    slackInfo = " · posted to Slack"
   } catch (err) {
-    slackInfo = ` · Slack post skipped: ${(err as Error).message}`
+    console.error(
+      `❌ Saved ${draft.type} "${draft.title}" [${draft.id.slice(0, 8)}] but SLACK POST FAILED: ${(err as Error).message}`
+    )
+    process.exit(1)
   }
 
-  console.log(`Saved ${draft.type} "${draft.title}" [${draft.id.slice(0, 8)}]${slackInfo}`)
+  console.log(`Saved ${draft.type} "${draft.title}" [${draft.id.slice(0, 8)}] · posted to Slack`)
 }
 
 main().catch((err) => {
