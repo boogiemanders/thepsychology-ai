@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { supabase } from "@/lib/supabase"
 import { CATEGORY_LABELS, getReferralSourcesByCategory } from "@/lib/referral-sources"
-import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI } from "@/lib/utm-tracking"
+import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI, getStoredLandingAttribution } from "@/lib/utm-tracking"
 
 // Retry helper for critical API calls (profile creation)
 async function fetchWithRetry(url: string, options: RequestInit, retries = 3): Promise<Response> {
@@ -121,6 +121,7 @@ export function PricingSection() {
       }
 
       const utmParams = formatUTMForAPI(getStoredUTMParams())
+      const landingAttribution = getStoredLandingAttribution()
 
       const { data, error } = await supabase.auth.signUp({
         email: formData.email,
@@ -130,6 +131,7 @@ export function PricingSection() {
             referral_source: finalReferralSource,
             full_name: formData.fullName || null,
             ...utmParams,
+            ...landingAttribution,
           },
         },
       })
@@ -156,6 +158,7 @@ export function PricingSection() {
           referralSource: finalReferralSource,
           referredByCode: referredByCode || undefined,
           ...utmParams,
+          ...landingAttribution,
         }),
       })
 

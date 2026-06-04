@@ -5,6 +5,7 @@ import { AuthProvider } from "@/context/auth-context"
 import { ActivityProvider } from "@/context/activity-context"
 import { OnboardingProvider } from "@/components/onboarding"
 import { CopyProtection } from "@/components/copy-protection"
+import { UTMCapture } from "@/components/utm-capture"
 import { siteConfig } from "@/lib/config"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
@@ -128,6 +129,7 @@ export default function RootLayout({
         </AuthProvider>
         {googleAnalyticsId ? <GoogleAnalytics measurementId={googleAnalyticsId} /> : null}
         <Analytics />
+        <UTMCapture />
       </body>
     </html>
   )
