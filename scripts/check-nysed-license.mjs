@@ -39,6 +39,18 @@ if (!name) {
   process.exit(1);
 }
 
+// NYSED stores names as "LASTNAME FIRSTNAME". If input looks like "First Last", flip it.
+// Heuristic: if no comma and exactly two words, reverse them.
+function toNysedNameFormat(input) {
+  const trimmed = input.trim().toUpperCase();
+  if (trimmed.includes(",")) return trimmed; // already "LAST, FIRST" style — strip comma
+  const parts = trimmed.split(/\s+/);
+  if (parts.length === 2) return `${parts[1]} ${parts[0]}`; // "FIRST LAST" -> "LAST FIRST"
+  return trimmed; // 1 word or 3+ words, pass through as-is
+}
+
+name = toNysedNameFormat(name);
+
 async function sendEmail(subject, text) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.NOTIFY_EMAIL_FROM || "drchan@thepsychology.ai";
@@ -115,52 +127,62 @@ async function queryRosaApi(endpoint, params) {
 }
 
 async function checkLicense() {
-  let data;
+  // First check the license registry (full licensees show up here, not in permit search)
+  let licenseData;
+  try {
+    console.log("Querying NYSED ROSA API (license search)...");
+    licenseData = await queryRosaApi("V2/byProfessionAndName", {
+      name,
+      professionCode,
+    });
+  } catch (err) {
+    console.error("License API query failed:", err.message);
+    licenseData = { content: [] };
+  }
+
+  const licenseResults = licenseData?.content || [];
+
+  // Deduplicate by licenseNumber (the API sometimes returns dupes)
+  const seen = new Set();
+  const uniqueLicenses = licenseResults.filter((item) => {
+    const key = item.licenseNumber?.value || JSON.stringify(item);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  // Also check permit search for Limited Permit status
+  let permitData;
   try {
     console.log("Querying NYSED ROSA API (permit search)...");
-    data = await queryRosaApi("V2/byProfessionAndPermitteeName", {
+    permitData = await queryRosaApi("V2/byProfessionAndPermitteeName", {
       permitteeName: name,
       professionCode,
     });
   } catch (err) {
-    console.error("Direct API query failed:", err.message);
-    process.exit(1);
+    console.error("Permit API query failed:", err.message);
+    permitData = { content: [] };
   }
 
-  const results = data?.content || [];
-  printResults(results);
+  const permitResults = permitData?.content || [];
+
+  console.log("\n--- License Records ---");
+  printResults(uniqueLicenses);
+  console.log("--- Permit Records ---");
+  printResults(permitResults);
 
   if (notifyMode) {
-    const fullLicense = results.find((item) => {
-      const permitType = item.permitType?.value || "";
-      const permitStatus = item.permitStatus?.value || "";
-      const licenseStatus = item.licenseStatus?.value || item.status?.value || "";
-      const isLimited = permitType.toLowerCase().includes("limited");
-      const isValid = permitStatus.toLowerCase().includes("valid") || licenseStatus.toLowerCase().includes("active");
-      return !isLimited && isValid;
-    });
+    const fullLicenseRecord = uniqueLicenses[0];
 
-    const hasFullLicense = results.some((item) => {
-      const type = item.permitType?.value || item.licenseType?.value || "";
-      return (
-        !type.toLowerCase().includes("limited") &&
-        type !== "" &&
-        (item.permitStatus?.value || "").toLowerCase().includes("valid")
-      );
-    });
-
-    if (fullLicense || hasFullLicense) {
-      const record = fullLicense || results.find(r => !r.permitType?.value?.toLowerCase().includes("limited"));
+    if (fullLicenseRecord) {
       const subject = "Your NY Psychology License Has Arrived!";
       const text = [
-        `Your NYSED license status has changed!\n`,
-        `Name: ${record?.name?.value || name}`,
-        `Profession: ${record?.profession?.value || "Psychology (068)"}`,
-        `Type: ${record?.permitType?.value || "Licensed"}`,
-        `Status: ${record?.permitStatus?.value || record?.licenseStatus?.value || ""}`,
-        `Permit #: ${record?.formattedPermitNumber || record?.permitNumber?.value || ""}`,
-        record?.issueDate?.value ? `Issued: ${record.issueDate.value}` : "",
-        record?.expireDate?.value ? `Valid Through: ${record.expireDate.value}` : "",
+        `Your NYSED psychology license is now active!\n`,
+        `Name: ${fullLicenseRecord?.name?.value || name}`,
+        `Profession: ${fullLicenseRecord?.profession?.value || "Psychology (068)"}`,
+        `License #: ${fullLicenseRecord?.licenseNumber?.value || ""}`,
+        fullLicenseRecord?.dateOfLicensure?.value ? `Date of Licensure: ${fullLicenseRecord.dateOfLicensure.value}` : "",
+        fullLicenseRecord?.address?.value ? `Address on file: ${fullLicenseRecord.address.value}` : "",
         `\nChecked: ${new Date().toLocaleString("en-US", { timeZone: "America/New_York" })}`,
         `\nVerify at: https://eservices.nysed.gov/professions/verification-search`,
       ].filter(Boolean).join("\n");
@@ -168,11 +190,11 @@ async function checkLicense() {
       console.log("\n*** FULL LICENSE DETECTED! Sending email... ***\n");
       await sendEmail(subject, text);
     } else {
-      console.log("\nNo full license yet — still Limited Permit. Will check again tomorrow.");
+      console.log("\nNo full license yet. Will check again tomorrow.");
     }
   }
 
-  return data;
+  return { licenseData, permitData };
 }
 
 function printResults(results) {
