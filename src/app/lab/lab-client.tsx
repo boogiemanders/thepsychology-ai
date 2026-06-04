@@ -143,6 +143,13 @@ export default function LabClient({ projects }: { projects: Project[] }) {
     })
   }
 
+  // Hide the global page-frame hairlines (layout border-x + guide rules); they
+  // read as stray vertical lines over the fixed dark hills background.
+  useEffect(() => {
+    document.body.classList.add('lab-page-active')
+    return () => { document.body.classList.remove('lab-page-active') }
+  }, [])
+
   useEffect(() => {
     if (typeof window === 'undefined') return
 

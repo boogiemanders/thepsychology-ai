@@ -768,3 +768,10 @@ strong, b {
 @keyframes box2 { 0% { transform: translate(0, 100%); } 50% { transform: translate(0, 0); } 100% { transform: translate(100%, 0); } }
 @keyframes box3 { 0%, 50% { transform: translate(100%, 100%); } 100% { transform: translate(0, 100%); } }
 @keyframes box4 { 0% { transform: translate(200%, 0); } 50% { transform: translate(200%, 100%); } 100% { transform: translate(100%, 100%); } }
+
+/* /lab landing page: hide the global frame hairlines (container border-x +
+   absolute guide rules in layout.tsx) read as stray vertical lines
+   over the fixed dark hills background. Same pattern as inzi.css. */
+body.lab-page-active .max-w-7xl { border-left: none !important; border-right: none !important; }
+body.lab-page-active .max-w-7xl > .border-l,
+body.lab-page-active .max-w-7xl > .border-r { display: none !important; }
