@@ -99,7 +99,6 @@ export const INTEREST_AREAS = [
   'Divorce',
   'Executive Functioning',
   'Financial Stress',
-  'Forensic',
   'Gender Dysphoria',
   'Health Psychology',
   'HIV',

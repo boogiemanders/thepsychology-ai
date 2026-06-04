@@ -48,6 +48,9 @@ export default async function ProviderDetailPage({
       <div className="mb-8">
         <h1 className="text-2xl font-semibold tracking-tight mb-2">
           {p.license_type || 'Licensed Psychologist'}
+          {p.pronouns ? (
+            <span className="ml-2 text-sm font-normal text-zinc-400 dark:text-zinc-500">({p.pronouns})</span>
+          ) : null}
         </h1>
         <p className="text-sm text-zinc-500 dark:text-zinc-400">
           Licensed in {p.licensed_states?.length ? p.licensed_states.join(', ') : p.license_state}
@@ -95,6 +98,16 @@ export default async function ProviderDetailPage({
             </h3>
             <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
               {p.modalities.join(', ')}
+            </p>
+          </div>
+        )}
+        {(p.interest_areas?.length ?? 0) > 0 && (
+          <div>
+            <h3 className="text-[11px] font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-2">
+              Special Interests
+            </h3>
+            <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+              {p.interest_areas.join(', ')}
             </p>
           </div>
         )}

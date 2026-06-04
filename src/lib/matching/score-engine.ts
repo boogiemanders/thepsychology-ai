@@ -73,6 +73,9 @@ function culturalScore(intake: ClientIntakeProfile, provider: ProviderProfile): 
     if (provider.faith_integrated) score += 0.2
   }
 
+  // A provider who answered 'prefer_not_to_say' intentionally scores the same
+  // as one who skipped the question: no match credit when a client has a
+  // gender/age preference.
   if (intake.preferred_therapist_gender && intake.preferred_therapist_gender !== 'no_preference') {
     weight += 0.25
     if (provider.gender === intake.preferred_therapist_gender) score += 0.25
@@ -145,7 +148,10 @@ export function scoreMatch(
   const passed = hardFilter(intake, provider)
 
   // Specialization = conditions, deepened by special interest areas when the
-  // client picked any. Clients who skip interest areas are not penalized.
+  // client picked any. Interest areas are a bonus-only term: they can lift a
+  // provider who shares the client's focus, but never penalize one who left
+  // the optional field empty (including all pre-migration profiles) or whose
+  // tags simply don't overlap.
   const conditionsScore = jaccard(
     intake.conditions_seeking_help,
     provider.conditions_treated
@@ -154,7 +160,9 @@ export function scoreMatch(
     ? jaccard(intake.interest_areas, provider.interest_areas ?? [])
     : null
   const specialization =
-    interestScore == null ? conditionsScore : 0.7 * conditionsScore + 0.3 * interestScore
+    interestScore == null
+      ? conditionsScore
+      : Math.min(1, conditionsScore + 0.3 * interestScore)
 
   const modalityRaw = intake.preferred_modalities?.length
     ? jaccard(intake.preferred_modalities, provider.modalities)

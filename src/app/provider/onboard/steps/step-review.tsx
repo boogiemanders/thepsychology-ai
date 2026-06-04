@@ -87,6 +87,14 @@ export function StepReview() {
               {((d.populations_served as string[]) ?? []).map((p) => <Badge key={p} variant="secondary">{p}</Badge>)}
             </div>
           </div>
+          {((d.interest_areas as string[]) ?? []).length > 0 && (
+            <div>
+              <p className="text-xs text-muted-foreground mb-1">Special Interest Areas</p>
+              <div className="flex flex-wrap gap-1">
+                {((d.interest_areas as string[]) ?? []).map((a) => <Badge key={a} variant="secondary">{a}</Badge>)}
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
 
