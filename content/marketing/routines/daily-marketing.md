@@ -74,6 +74,13 @@ final summary.
   materials, Feb 13, 2026 (p. X)". Do not invent or extrapolate dates beyond that file.
 - **Mondays only:** also produce **one** deeper SEO blog post (~1000–1500 words). Skip the blog
   on other days — thin daily posts hurt SEO.
+- **Blog EPPP/EPPP2 priority:** while the EPPP2 news is current, Monday blogs should prioritize
+  EPPP and EPPP2 topics (what is changing, the timeline, pass rates, eligibility, what candidates
+  should do now). Use `content/marketing/eppp-news-facts.md` as the primary source for every
+  EPPP/EPPP2 claim and cite it in `sources` as "CA Board of Psychology meeting materials,
+  Feb 13, 2026 (p. X)". These are high-intent search topics (e.g. "EPPP Part 2 cancelled",
+  "EPPP2 2027", "EPPP changes"). Rotate angles week to week; do not repeat a published blog's
+  angle. Do not invent or extrapolate dates beyond the facts file.
 
 **LinkedIn:** hook first line, 1 clear idea, plain language, a soft CTA. ~120–200 words.
 **TikTok script:** write these with the `ig-reel-script-writer` skill (short-form vertical video
