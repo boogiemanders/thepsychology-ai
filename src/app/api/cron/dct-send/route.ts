@@ -162,6 +162,23 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Supabase not configured' }, { status: 500 })
   }
 
+  // Canada is QUEUED BEHIND the US list: both share one Resend daily cap, so
+  // hold all Canadian sends until every US contact is done. The Canada cron can
+  // fire daily harmlessly in the meantime; it just no-ops until US is drained.
+  if (country.toLowerCase() === 'canada') {
+    const { count: usUnsent } = await supabase
+      .from('dct_contacts')
+      .select('email', { count: 'exact', head: true })
+      .eq('country', 'USA')
+      .is('sent_at', null)
+    if ((usUnsent ?? 0) > 0) {
+      return NextResponse.json(
+        { deferred: true, reason: 'US list not finished', us_unsent: usUnsent },
+        { status: 200 }
+      )
+    }
+  }
+
   // 1. Suppression set (lowercased), so an unsubscribe sticks across campaigns.
   const { data: suppRows, error: suppErr } = await supabase.from('dct_suppressions').select('email')
   if (suppErr) {
