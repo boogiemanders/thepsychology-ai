@@ -66,6 +66,12 @@ final summary.
 
 - **Every day:** 2 LinkedIn posts + 2 TikTok scripts, drawn from the strongest hooks across the
   five topics (spread the topics; don't do five posts on the same thing).
+- **LinkedIn EPPP rule:** at least one of the two daily LinkedIn posts must be about the EPPP
+  (exam changes and timelines, pass rates, eligibility, or study strategy). For ANY claim about
+  EPPP changes, timelines, or pass rates, use `content/marketing/eppp-news-facts.md` in this
+  repo. It is page-cited from the California Board of Psychology meeting materials of
+  February 13, 2026. Cite it in the draft's `sources` array as "CA Board of Psychology meeting
+  materials, Feb 13, 2026 (p. X)". Do not invent or extrapolate dates beyond that file.
 - **Mondays only:** also produce **one** deeper SEO blog post (~1000–1500 words). Skip the blog
   on other days — thin daily posts hurt SEO.
 
