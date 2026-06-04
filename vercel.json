@@ -50,6 +50,10 @@
     {
       "path": "/api/cron/dct-send",
       "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/cron/dct-send?country=Canada",
+      "schedule": "0 13 * * *"
     }
   ]
 }
