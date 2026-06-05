@@ -48,6 +48,10 @@ export interface ClientPaymentRow {
   paid: number
   fee: number
   charge: number
+  // Revenue view needs these — SOSA does not, so they're additive and safe.
+  clinician: string
+  date: string        // Date of Service, raw (MM/DD/YYYY HH:mm)
+  code: string        // Billing Code, raw (may be multi-line, '\n'-joined)
 }
 
 /**
@@ -62,7 +66,7 @@ export function parseClientPayments(text: string): ClientPaymentRow[] {
 
   const headers = parseCSVLine(lines[0])
   const idx: Record<string, number> = {}
-  const want = ['client', 'total fee', 'charge', 'paid']
+  const want = ['client', 'total fee', 'charge', 'paid', 'clinician', 'date of service', 'billing code']
   for (let i = 0; i < headers.length; i++) {
     const h = headers[i].trim().toLowerCase()
     if (want.includes(h)) idx[h] = i
@@ -86,6 +90,9 @@ export function parseClientPayments(text: string): ClientPaymentRow[] {
       paid: num(cols[idx['paid']]),
       fee: idx['total fee'] !== undefined ? num(cols[idx['total fee']]) : 0,
       charge: idx['charge'] !== undefined ? num(cols[idx['charge']]) : 0,
+      clinician: idx['clinician'] !== undefined ? (cols[idx['clinician']]?.trim() || '') : '',
+      date: idx['date of service'] !== undefined ? (cols[idx['date of service']]?.trim() || '') : '',
+      code: idx['billing code'] !== undefined ? (cols[idx['billing code']]?.trim() || '') : '',
     })
   }
   return out

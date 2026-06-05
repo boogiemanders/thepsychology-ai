@@ -23,6 +23,13 @@ Could you please:
 1. Issue a credit / corrected invoice for the **$783.68** difference, and
 2. Going forward, calculate the 8% on claim-eligible collections only (insurance payments + copays/coinsurance/deductibles), excluding self-pay.
 
+So this is easy on your end each month, everything needed is already in SimplePractice:
+
+- **Clients → filter "Billing type" to "Self-pay"** — that's the exclusion list (no claims are filed for these clients).
+- Insurance Payments on the income report count in full.
+- For Client Payments, exclude any payment made by a client on that Self-pay list; the rest (copays, coinsurance, deductibles on billed claims) count.
+- Service fee = 8% x (Insurance Payments + claim-related client payments). Same thing as 8% x (total collected minus self-pay collections).
+
 My self-pay figure is on a date-of-service basis from my SimplePractice records; happy to reconcile against your cash-basis numbers if they differ slightly. I can send the client-level breakdown if useful.
 
 Thanks,

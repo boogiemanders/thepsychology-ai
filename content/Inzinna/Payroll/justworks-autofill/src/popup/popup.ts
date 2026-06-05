@@ -1,5 +1,6 @@
 import { parseCSV, parseClientPayments, type ClientPaymentRow } from '../lib/csv-parser'
 import { computeSosa } from '../lib/sosa'
+import { computeRevenue } from '../lib/revenue'
 import { calculatePayrollWithHours, applyManualAddition, applyPendingSession } from '../lib/payroll-engine'
 import { getManualRate, legend } from '../lib/compensation-legend'
 import { formatShortDate } from '../lib/date-utils'
@@ -34,6 +35,10 @@ const statusEl = document.getElementById('status')!
 const sosaScrapeBtn = document.getElementById('sosa-scrape-btn') as HTMLButtonElement
 const sosaRosterStatus = document.getElementById('sosa-roster-status')!
 const sosaStat = document.getElementById('sosa-stat')!
+const tabBtnPayroll = document.getElementById('tab-btn-payroll') as HTMLButtonElement
+const tabBtnRevenue = document.getElementById('tab-btn-revenue') as HTMLButtonElement
+const tabPayroll = document.getElementById('tab-payroll')!
+const tabRevenue = document.getElementById('tab-revenue')!
 
 let baseResult: PayrollResultWithHours | null = null
 let currentResult: PayrollResultWithHours | null = null
@@ -1023,6 +1028,7 @@ downloadJwCsvBtn.addEventListener('click', () => {
 function renderResults(result: PayrollResultWithHours) {
   uploadSection.classList.add('hidden')
   resultsSection.classList.remove('hidden')
+  showTab('payroll')
   clinicianList.innerHTML = ''
 
   // Insurance billing stat — total billed across CPT-coded sessions + 8% of it.
@@ -1048,6 +1054,7 @@ function renderResults(result: PayrollResultWithHours) {
   }
 
   renderSosa()
+  renderRevenue()
 
   for (const c of result.clinicians) {
     const isBret = c.name === 'Bret Boatwright'
@@ -1259,6 +1266,91 @@ function renderSosa() {
      <div class="sosa-detail">${top}${more}</div>
      ${drift}`
   sosaStat.classList.remove('hidden')
+}
+
+// ---- Revenue tab -----------------------------------------------------------
+
+// Tab switching is pure show/hide — no re-parse. The revenue content is already
+// rendered by renderRevenue() at result time, so flipping tabs is just classes.
+function showTab(tab: 'payroll' | 'revenue') {
+  const payroll = tab === 'payroll'
+  tabPayroll.classList.toggle('hidden', !payroll)
+  tabRevenue.classList.toggle('hidden', payroll)
+  tabBtnPayroll.classList.toggle('active', payroll)
+  tabBtnRevenue.classList.toggle('active', !payroll)
+}
+
+tabBtnPayroll.addEventListener('click', () => showTab('payroll'))
+tabBtnRevenue.addEventListener('click', () => showTab('revenue'))
+
+// Per-provider revenue + margin. Reads the same module vars as renderSosa
+// (clientPayments + selfPayRoster) plus currentResult for pay/supervision.
+function renderRevenue() {
+  if (!currentResult || !clientPayments.length) {
+    tabRevenue.innerHTML = '<div class="rev-empty">Upload a CSV to see revenue.</div>'
+    return
+  }
+
+  const rosterHint = !selfPayRoster.length
+    ? '<div class="rev-hint">No self-pay roster — everyone is treated as insurance. Click "Refresh self-pay roster" to split self-pay out.</div>'
+    : ''
+
+  const r = computeRevenue(clientPayments, selfPayRoster, currentResult)
+
+  const money = (n: number) => `$${n.toFixed(2)}`
+  const dash = '&mdash;'
+  const netCls = (n: number) => n >= 0 ? 'rev-net-pos' : 'rev-net-neg'
+  const pct = (m: number) => `${(m * 100).toFixed(0)}%`
+
+  const totalsRow = `
+    <div class="rev-row rev-totals">
+      <div class="rev-main">
+        <span class="rev-name">All providers</span>
+        <span class="rev-total">${money(r.totals.revenueTotal)}</span>
+      </div>
+      <div class="rev-breakdown">ins ${money(r.totals.insuranceBilled)} billed · self-pay ${money(r.totals.selfPayCollected)} collected</div>
+      <div class="rev-meta">
+        <span>${r.totals.sessions} sessions</span>
+        <span>est/mo ${money(r.totals.estMonthly)}</span>
+        <span>pay ${money(r.totals.pay)}</span>
+        <span>supe ${money(r.totals.supeCost)}</span>
+        <span class="${netCls(r.totals.net)}">net ${money(r.totals.net)}</span>
+        <span>${pct(r.totals.margin)} margin</span>
+      </div>
+    </div>`
+
+  const providerRows = r.providers.map(p => {
+    const payCell = p.ownerNoPayroll ? dash : money(p.pay)
+    const supeCell = p.ownerNoPayroll ? dash : money(p.supeCost)
+    const netCell = p.ownerNoPayroll ? dash : `<span class="${netCls(p.net)}">net ${money(p.net)}</span>`
+    const marginCell = p.ownerNoPayroll || p.revenueTotal <= 0 ? '' : `<span>${pct(p.margin)} margin</span>`
+    const supeIncome = p.supeIncome > 0
+      ? `<div class="rev-note">+ ${money(p.supeIncome)} supervision income (from supervisees)</div>`
+      : ''
+    return `
+      <div class="rev-row">
+        <div class="rev-main">
+          <span class="rev-name">${escHtml(p.name)}</span>
+          <span class="rev-total">${money(p.revenueTotal)}</span>
+        </div>
+        <div class="rev-breakdown">ins ${money(p.insuranceBilled)} billed · self-pay ${money(p.selfPayCollected)} collected</div>
+        <div class="rev-meta">
+          <span>${p.sessions} sessions</span>
+          <span>est/mo ${money(p.estMonthly)}</span>
+          <span>pay ${payCell}</span>
+          <span>supe ${supeCell}</span>
+          ${netCell}
+          ${marginCell}
+        </div>
+        ${supeIncome}
+      </div>`
+  }).join('')
+
+  tabRevenue.innerHTML = `
+    ${rosterHint}
+    ${totalsRow}
+    ${providerRows}
+    <div class="rev-footer">Insurance revenue at billed rates — actual reimbursement may be lower. Self-pay at collected. Net = revenue − session pay − supervision cost.</div>`
 }
 
 // Injected into the SimplePractice clients tab. Self-contained (no outer refs):

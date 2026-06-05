@@ -1,4 +1,4 @@
-# JW Autofill v1.1.0 — SOSA Fee Check (for Carlos)
+# JW Autofill v1.2.0 — SOSA Fee Check + Revenue Tab (for Carlos)
 
 The plugin now also checks SOSA's monthly bill. SOSA's 8% fee only applies to
 insurance-related money (claims, copays, deductibles). It does NOT apply to
@@ -61,3 +61,26 @@ Quick sanity checks:
   Small differences are normal; big ones are not.
 
 Flag the overcharge to Dr. Inzinna before paying. He handles the SOSA email.
+
+## 5. Revenue tab (new)
+
+After uploading the CSV, the results now have two tabs at the top:
+**Payroll** (everything you're used to) and **Revenue**.
+
+The Revenue tab shows, per provider:
+
+- **Revenue** — insurance sessions at billed rates + self-pay at what was
+  actually collected (it uses the same self-pay roster as the SOSA box, so do
+  the "Refresh self-pay roster" click first).
+- **est/mo** — monthly estimate. If the CSV covers a short period (like a
+  2-week payroll file), it scales up; a full-month CSV shows as-is.
+- **Pay** — what we pay them (from the payroll calc).
+- **Supe** — supervision cost their sessions generate (paid to Bret on top).
+- **Net** — revenue minus pay minus supe. Green good, red bad.
+
+Notes:
+- Insurance revenue is at BILLED rates. Insurers reimburse less than billed,
+  so treat it as a ceiling, not bank deposits.
+- Dr. Inzinna shows pay "—" because he isn't in payroll.
+- For a true monthly revenue picture, upload a full-month Appointment Status
+  CSV (same report, date range set to the month).
