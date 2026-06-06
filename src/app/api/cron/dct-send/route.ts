@@ -29,6 +29,9 @@ const REPLY_TO = 'DrChan@thepsychology.ai'
 const CC = 'DrChan@thepsychology.ai'
 const SUBJECT = 'An Affordable EPPP Option for Your Students'
 const BASE_URL = 'https://thepsychology.ai'
+// GA attribution for clicks from this campaign. Used as the href in the HTML
+// link only; the visible link text and the plain-text body stay clean.
+const TRACKED_URL = `${BASE_URL}/?utm_source=dct-outreach&utm_medium=email&utm_campaign=eppp-dct`
 const DIVIDER = '-'.repeat(60)
 
 const PARAS = [
@@ -79,7 +82,7 @@ function htmlBody(greeting: string, url: string): string {
     'font-size:15px;line-height:1.55;color:#1a1a2e;max-width:560px">' +
     `<p>${salutationFor(greeting)}</p>` +
     bodyParas +
-    '<p>You can take a look here: <a href="https://thepsychology.ai">https://thepsychology.ai</a></p>' +
+    `<p>You can take a look here: <a href="${TRACKED_URL}">https://thepsychology.ai</a></p>` +
     '<p>Thanks for everything you do for our field.</p>' +
     '<p>Regards,<br>Anders</p>' +
     '<p>Anders Chan, PsyD<br>Founder, Licensed Psychologist - thePsychology.ai</p>' +

@@ -49,11 +49,11 @@
     },
     {
       "path": "/api/cron/dct-send?limit=30",
-      "schedule": "0 12 * * *"
+      "schedule": "0 12 * * 1-5"
     },
     {
       "path": "/api/cron/dct-send?country=Canada",
-      "schedule": "0 13 * * *"
+      "schedule": "0 13 * * 1-5"
     }
   ]
 }
