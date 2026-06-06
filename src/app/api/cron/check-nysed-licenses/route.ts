@@ -9,6 +9,11 @@ const CRON_SECRET = process.env.CRON_SECRET
 // NYSED Office of Professions verification search
 const NYSED_SEARCH_URL = 'https://www.op.nysed.gov/verification-search'
 
+const BASE_URL = 'https://www.thepsychology.ai'
+// GA attribution for clicks from the license-found email. Used as the href
+// only; the visible link text stays clean.
+const PROVIDER_URL = `${BASE_URL}/provider?utm_source=license-watch&utm_medium=email&utm_campaign=provider-signup`
+
 type Signup = {
   id: string
   name: string
@@ -83,6 +88,8 @@ async function sendLicenseFoundEmail(signup: Signup, licenseNumber?: string, det
   const [lastName, firstName] = signup.name.split(',').map(s => s.trim())
   const displayName = firstName ? `${firstName} ${lastName}` : signup.name
 
+  const unsubscribeUrl = `${BASE_URL}/api/license-watch/unsubscribe?id=${signup.id}`
+
   const subject = `Your Psychology License Has Been Posted - ${displayName}`
   const text = [
     `Hi ${firstName || displayName},`,
@@ -97,8 +104,14 @@ async function sendLicenseFoundEmail(signup: Signup, licenseNumber?: string, det
     '',
     `Congratulations, Dr. ${lastName}!`,
     '',
+    `Now that you're licensed, thePsychology.ai matches therapists with new clients. Join as a provider:`,
+    PROVIDER_URL,
+    '',
     `— Dr. Chan`,
     `thePsychology.ai`,
+    '',
+    `To stop receiving these license alerts, unsubscribe here:`,
+    unsubscribeUrl,
   ].filter(Boolean).join('\n')
 
   const html = `
@@ -111,7 +124,14 @@ async function sendLicenseFoundEmail(signup: Signup, licenseNumber?: string, det
         <a href="https://www.op.nysed.gov/verification-search" style="color: #d97706;">NYSED Verification Search</a>
       </p>
       <p>Congratulations, Dr. ${lastName}! 🎉</p>
+      <p style="margin-top: 24px;">Now that you're licensed, thePsychology.ai matches therapists with new clients.</p>
+      <p>
+        <a href="${PROVIDER_URL}" style="display: inline-block; background: #d97706; color: #ffffff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Join as a Provider</a>
+      </p>
       <p style="color: #999; margin-top: 32px;">— Dr. Chan<br/>thePsychology.ai</p>
+      <p style="color: #999; font-size: 12px; margin-top: 24px;">
+        Don't want these license alerts? <a href="${unsubscribeUrl}" style="color: #999;">Unsubscribe</a>
+      </p>
     </div>
   `
 

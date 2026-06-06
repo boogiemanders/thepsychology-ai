@@ -8,7 +8,7 @@
  * Usage:
  *   node scripts/check-nysed-license.mjs "Anders Chan"
  *   node scripts/check-nysed-license.mjs "Anders Chan" --profession 068
- *   node scripts/check-nysed-license.mjs "Anders Chan" --notify   # sends email if full license found
+ *   node scripts/check-nysed-license.mjs "Anders Chan" --notify   # disabled: license #028257 confirmed 2026-06-03
  */
 
 import { config } from "dotenv";
@@ -50,39 +50,6 @@ function toNysedNameFormat(input) {
 }
 
 name = toNysedNameFormat(name);
-
-async function sendEmail(subject, text) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.NOTIFY_EMAIL_FROM || "drchan@thepsychology.ai";
-  const to = "drchan@thepsychology.ai";
-
-  if (!apiKey) {
-    console.error("RESEND_API_KEY not set — skipping email");
-    return;
-  }
-
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from,
-      to: [to],
-      subject,
-      text,
-      html: text.replace(/\n/g, "<br/>"),
-    }),
-  });
-
-  if (!res.ok) {
-    const body = await res.text();
-    console.error(`Resend error ${res.status}: ${body}`);
-  } else {
-    console.log("Email sent successfully!");
-  }
-}
 
 const ROSA_BASE = "https://api.nysed.gov/rosa/";
 const ROSA_KEY = "BRJF4D6U646A5PNMIB77AAW9544QFQKAYAEWI9EPU0TNP72CEEO3L4KGVN5K3R44";
@@ -175,20 +142,10 @@ async function checkLicense() {
     const fullLicenseRecord = uniqueLicenses[0];
 
     if (fullLicenseRecord) {
-      const subject = "Your NY Psychology License Has Arrived!";
-      const text = [
-        `Your NYSED psychology license is now active!\n`,
-        `Name: ${fullLicenseRecord?.name?.value || name}`,
-        `Profession: ${fullLicenseRecord?.profession?.value || "Psychology (068)"}`,
-        `License #: ${fullLicenseRecord?.licenseNumber?.value || ""}`,
-        fullLicenseRecord?.dateOfLicensure?.value ? `Date of Licensure: ${fullLicenseRecord.dateOfLicensure.value}` : "",
-        fullLicenseRecord?.address?.value ? `Address on file: ${fullLicenseRecord.address.value}` : "",
-        `\nChecked: ${new Date().toLocaleString("en-US", { timeZone: "America/New_York" })}`,
-        `\nVerify at: https://eservices.nysed.gov/professions/verification-search`,
-      ].filter(Boolean).join("\n");
-
-      console.log("\n*** FULL LICENSE DETECTED! Sending email... ***\n");
-      await sendEmail(subject, text);
+      // License #028257 confirmed active 2026-06-03. Monitoring is complete.
+      // Notification emails are permanently disabled -- delete any scheduled
+      // trigger that still runs this script with --notify.
+      console.log("\nLicense already confirmed active. Notification emails disabled.");
     } else {
       console.log("\nNo full license yet. Will check again tomorrow.");
     }
