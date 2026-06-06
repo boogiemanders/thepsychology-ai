@@ -25,7 +25,10 @@ const CANADA_SENDS_ENABLED = process.env.CANADA_SENDS_ENABLED === 'true'
 
 // --- send config (ported verbatim from send_dct.py, do not change) ---
 const FROM = 'Dr. Anders Chan <DrChan@thepsychology.ai>'
-const REPLY_TO = 'DrChan@thepsychology.ai'
+// Reply-To routes through the Resend inbound address once DCT_REPLY_TO is set
+// (replies then auto-log to dct_replies via /api/dct-reply and forward to the
+// founder's inbox). Falls back to the direct inbox until inbound DNS is live.
+const REPLY_TO = process.env.DCT_REPLY_TO || 'DrChan@thepsychology.ai'
 const CC = 'DrChan@thepsychology.ai'
 const SUBJECT = 'An Affordable EPPP Option for Your Students'
 const BASE_URL = 'https://thepsychology.ai'
