@@ -1,9 +1,8 @@
 name: Triage Draft (HITL step 1)
 
 on:
-  # cron disabled until end-to-end manual test passes
-  # schedule:
-  #   - cron: '0 12 * * *'  # 8am ET (EDT)
+  schedule:
+    - cron: '0 12 * * *'  # 8am ET (EDT)
   workflow_dispatch:
 
 permissions:
@@ -116,7 +115,12 @@ jobs:
 
             1. Pull queues:
                - mcp__eppp__list_feedback (status="new")
-               - mcp__eppp__list_low_rated_questions (max_rating=2)
+               - mcp__eppp__list_low_rated_questions (max_rating=5)
+               Queue a question_feedback item only if rating <= 2 OR it has a non-empty comment. Skip comment-only items whose comment is pure praise with nothing to evaluate or act on.
+
+            1b. DEDUP. This runs daily, so never draft the same item twice. Fetch existing draft links:
+               curl -s "$NEXT_PUBLIC_SUPABASE_URL/rest/v1/triage_drafts?select=feedback_id,question_feedback_id" -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY"
+               Skip any queued item whose feedback_id or question_feedback_id already appears there, regardless of draft status.
 
             2. If both queues are empty: post a single Slack message via SLACK_WEBHOOK_FEEDBACK with text "Nothing to triage today." and stop. No drafts.
 
@@ -128,6 +132,7 @@ jobs:
                   - For site bugs: read the relevant code path and decide if it is a real bug.
                   - If the user is wrong: draft_fix = "User claim does not check out. Reviewer can reject this draft.", and draft_email_body explains briefly what the lesson actually says.
                   - If the user is right: draft_fix = a precise markdown plan of the exact code change the EXECUTE workflow should make. Include file paths, exact text to change, and a one-line validation step. Be specific enough that another agent can apply the change without re-deriving it.
+                  - If the comment reports the question appeared on the actual EPPP: that IS the action. draft_fix = add "realExam": true plus a short "realExamNote" (who/when confirmed) to that exact question in its EPPP/content/questionsGPT/ JSON file. The quizzer force-includes realExam questions in every quiz for their topic, so no other change is needed.
                d. DRAFT EMAIL using this template verbatim, substituting bracketed sections. NO EM DASHES:
 
                   Subject: Re: your feedback, fixed and live
@@ -149,6 +154,8 @@ jobs:
 
                   Anders H. Chan, Psy.D.
                   Founder - thepsychology.ai
+
+                  If the feedback is useful information rather than a defect (e.g., a real-exam sighting), adapt the email: thank them and say what changed (the question is now prioritized in study materials). Never claim a fix that did not happen.
 
                e. INSERT the row, then POST the Slack message via SLACK_WEBHOOK_FEEDBACK. Incoming webhooks do not return a message ts so leave slack_message_ts null. Use kind="feedback" for items from list_feedback and kind="low_rated" for list_low_rated_questions. For feedback set feedback_id, for low_rated set question_feedback_id.
 
