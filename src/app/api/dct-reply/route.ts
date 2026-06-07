@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createHmac, timingSafeEqual } from 'crypto'
 import { getSupabaseClient } from '@/lib/supabase-server'
+import { classifyReply } from '@/lib/dct/reply-classifier'
 
 // Resend inbound webhook for DCT outreach replies. The cold sender sets
 // Reply-To to an inbound address (DCT_REPLY_TO) whose domain MX-routes to
@@ -42,12 +43,6 @@ function verifySignature(rawBody: string, headers: Headers): boolean {
     if (candidate.length === expected.length && timingSafeEqual(candidate, expected)) return true
   }
   return false
-}
-
-function isAutoReply(subject: string): boolean {
-  return /auto(matic|-?reply|-?response)|out of (the )?office|\booo\b|away from|on vacation|on leave|delivery status|undeliver/i.test(
-    subject
-  )
 }
 
 async function fetchFullEmail(inboundId: string): Promise<{ text: string | null; html: string | null } | null> {
@@ -109,6 +104,11 @@ export async function POST(request: NextRequest) {
   const full = inboundId ? await fetchFullEmail(inboundId) : null
   const bodyText = full?.text || null
 
+  // Auto-classify: regex catches auto-replies/opt-outs, a mini model judges
+  // positive/neutral/negative. Result is also persisted under raw._classification
+  // so the later scorecard can use confidence/source without a schema change.
+  const classification = await classifyReply(subject, bodyText)
+
   const { error: insertErr } = await supabase.from('dct_replies').insert({
     resend_inbound_id: inboundId || null,
     contact_email: contact?.email || null,
@@ -117,8 +117,8 @@ export async function POST(request: NextRequest) {
     to_email: toEmail || null,
     subject: subject || null,
     body_text: bodyText,
-    reply_type: isAutoReply(subject) ? 'auto_reply' : 'unknown',
-    raw: data,
+    reply_type: classification.reply_type,
+    raw: { ...data, _classification: classification },
   })
   // Duplicate webhook deliveries hit the unique resend_inbound_id; treat as ok.
   if (insertErr && !insertErr.message.includes('duplicate')) {
@@ -130,11 +130,12 @@ export async function POST(request: NextRequest) {
     const hook = process.env.SLACK_WEBHOOK_SIGNUPS
     if (hook) {
       const snippet = (bodyText || '').replace(/\s+/g, ' ').slice(0, 200)
+      const tag = `[${classification.reply_type}${classification.confidence ? ` ${Math.round(classification.confidence * 100)}%` : ''}]`
       await fetch(hook, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          text: `DCT reply from ${fromEmail}${contact?.institution ? ` (${contact.institution})` : ''}: ${subject}${snippet ? `\n> ${snippet}` : ''}`,
+          text: `${tag} DCT reply from ${fromEmail}${contact?.institution ? ` (${contact.institution})` : ''}: ${subject}${snippet ? `\n> ${snippet}` : ''}`,
         }),
       })
     }
