@@ -26,6 +26,8 @@ Here is what the record shows:
 
 What this means for you: the EPPP you are preparing for is unchanged. Same format, same eight content domains, same scoring.
 
+The one exception: four jurisdictions still require Part 2 on top of Part 1, the District of Columbia, Georgia, Guam, and Nevada. Everywhere else, Part 1 is the whole exam.
+
 One open question remains: eligibility. A proposal would require future candidates to finish all post-doctoral hours before testing. That rule has not changed yet.
 
 California's 2025 first-time pass rate was 58.7%. If you are in prep right now, the exam in front of you is the one you have.

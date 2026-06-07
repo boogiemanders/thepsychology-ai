@@ -50,6 +50,8 @@ Part 2 tests whether you can *do* the work, not just know the content. Think of 
 
 As of 2026, adoption varies. Some states have adopted EPPP-2 as a requirement, others are in pilot phases, and many haven't made a decision yet.
 
+In October 2024, ASPPB paused its plan to require Part 2 nationwide, so the Skills exam is now optional for jurisdictions rather than mandatory. As of mid-2026, four jurisdictions still require both Part 1 and Part 2 for licensure: the District of Columbia, Georgia, Guam, and Nevada. In every other jurisdiction, Part 1 alone is the licensing exam.
+
 **Check with your state board directly.** ASPPB maintains an updated list of which jurisdictions require Part 2. Don't rely on forum posts or outdated articles — this is changing actively.
 
 ---
