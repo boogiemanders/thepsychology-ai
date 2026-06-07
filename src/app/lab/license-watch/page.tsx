@@ -26,8 +26,12 @@ export default function LicenseWatchPage() {
           NYSED Psych License Check
         </h1>
         <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-          Free. Passed the EPPP and finished your hours? Stop refreshing the NYSED site.
-          We&apos;ll email you the moment your license is posted.
+          Free. Applied for your NY psychology license? Stop refreshing the NYSED site.
+          Sign up and we&apos;ll check daily for you, then email you the moment your license is posted.
+        </p>
+        <p className="mt-3 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          This is the exact tool our founder, Dr. Anders Chan, used to catch his own
+          NY license the day it went live.
         </p>
       </div>
 

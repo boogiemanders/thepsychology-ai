@@ -104,7 +104,7 @@ async function sendLicenseFoundEmail(signup: Signup, licenseNumber?: string, det
     '',
     `Congratulations, Dr. ${lastName}!`,
     '',
-    `Now that you're licensed, thePsychology.ai matches therapists with new clients. Join as a provider:`,
+    `Are you licensed in NY or CA? thePsychology.ai matches therapists with new clients so you can build your caseload. Sign up as a provider:`,
     PROVIDER_URL,
     '',
     `— Dr. Chan`,
@@ -124,7 +124,7 @@ async function sendLicenseFoundEmail(signup: Signup, licenseNumber?: string, det
         <a href="https://www.op.nysed.gov/verification-search" style="color: #d97706;">NYSED Verification Search</a>
       </p>
       <p>Congratulations, Dr. ${lastName}! 🎉</p>
-      <p style="margin-top: 24px;">Now that you're licensed, thePsychology.ai matches therapists with new clients.</p>
+      <p style="margin-top: 24px;">Are you licensed in NY or CA? thePsychology.ai matches therapists with new clients so you can build your caseload.</p>
       <p>
         <a href="${PROVIDER_URL}" style="display: inline-block; background: #d97706; color: #ffffff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Join as a Provider</a>
       </p>
