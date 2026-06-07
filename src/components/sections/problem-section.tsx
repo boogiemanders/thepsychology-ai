@@ -27,7 +27,7 @@ export function ProblemSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           AATBS charges $849 to $1,799. Add the exam fee, testing center, and
-          you&apos;re spending $1,500+ before you sit down. Fail? Another $687.50
+          you&apos;re spending $1,500+ before you sit down. Fail? Another $691.88
           per retake.
         </motion.p>
 
