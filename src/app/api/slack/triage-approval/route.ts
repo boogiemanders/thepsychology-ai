@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse, after } from 'next/server'
 import crypto from 'crypto'
 import { getSupabaseClient } from '@/lib/supabase-server'
-import { isMarketingAction, handleMarketingInteraction } from '@/lib/marketing/handle-interaction'
+import {
+  isMarketingAction,
+  handleMarketingInteraction,
+  isFeedbackButton,
+  handleFeedbackButton,
+  handleFeedbackSubmission,
+} from '@/lib/marketing/handle-interaction'
+import { FEEDBACK_MODAL_CALLBACK_ID } from '@/lib/marketing/slack-modal'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -52,6 +59,23 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'invalid json payload' }, { status: 400 })
   }
 
+  // Modal submit (Feedback flow). view_submission payloads have no actions array, so
+  // branch on type + callback_id. Ack with an empty 200 (closes the modal) within Slack's
+  // 3s window, then enqueue the rewrite in after(). The feedback-rewrite routine (on the
+  // founder's Claude subscription) does the actual rewrite and posts the new card.
+  if (payload.type === 'view_submission') {
+    if (payload.view?.callback_id === FEEDBACK_MODAL_CALLBACK_ID) {
+      const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+      if (supabase) {
+        after(handleFeedbackSubmission(payload, supabase))
+      } else {
+        console.error('[marketing] feedback submission: supabase unavailable')
+      }
+      return new Response('', { status: 200 })
+    }
+    return NextResponse.json({})
+  }
+
   if (payload.type !== 'block_actions') {
     return NextResponse.json({ ok: true })
   }
@@ -59,6 +83,13 @@ export async function POST(request: NextRequest) {
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
   if (!supabase) {
     return NextResponse.json({ error: 'supabase unavailable' }, { status: 500 })
+  }
+
+  // Feedback button: open a modal with the bot token. The trigger_id expires ~3s after the
+  // click, so open synchronously (sub-second) before acking — do NOT defer via after().
+  if (isFeedbackButton(payload)) {
+    await handleFeedbackButton(payload)
+    return new Response('', { status: 200 })
   }
 
   // Marketing content engine reuses this same endpoint (Slack allows one interactivity

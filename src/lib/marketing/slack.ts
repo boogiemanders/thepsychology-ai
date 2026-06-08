@@ -66,6 +66,12 @@ export function buildApprovalBlocks(draft: MarketingDraft): unknown[] {
         action_id: "reject_draft",
         value: draft.id,
       },
+      {
+        type: "button",
+        text: { type: "plain_text", text: "Feedback" },
+        action_id: "feedback_draft",
+        value: draft.id,
+      },
     ],
   })
 

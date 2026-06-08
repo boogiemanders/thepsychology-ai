@@ -51,6 +51,10 @@ headlines just to fill a slot.
 Read `content/marketing/whats-working.md` if it exists. Bias today's topics and angles toward
 the posts/topics that actually convert. Mirror winning angles; don't repeat a post already live.
 
+Also read `content/marketing/voice-learnings.md` — the founder's learned writing preferences
+(distilled from every Feedback rewrite and Approve in #social-approvals). Apply those voice rules
+to today's drafts so they land closer to approval the first time.
+
 Then read the competitor scorecards in the marketing vault and mirror what is working for the
 creators we track. These scorecards are produced manually (browser-based skills, founder logged
 in) and dropped into the vault. You only READ them here; you do not generate them.

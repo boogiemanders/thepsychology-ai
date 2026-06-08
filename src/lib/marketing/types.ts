@@ -23,6 +23,10 @@ export type Source = {
   publication?: string // journal, site, or org name (e.g. "Psychology Today")
 }
 
+// Rows in marketing_feedback: every Feedback submission and every Approve. Raw log
+// behind the learned-voice notebook (content/marketing/voice-learnings.md).
+export type MarketingFeedbackKind = "feedback" | "approved"
+
 export type BlogFrontmatter = {
   title: string
   slug: string
