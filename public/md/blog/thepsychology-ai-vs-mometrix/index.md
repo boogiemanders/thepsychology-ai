@@ -25,7 +25,7 @@ I built thePsychology.ai specifically and only for the EPPP. Here's how the two 
 |  | thePsychology.ai | Mometrix |
 | --- | --- | --- |
 | **Practice test** | Free 7-day trial (full platform) | Free online practice test |
-| **Full access** | $20/month | ~$40–80 (study guide + flashcards + course) |
+| **Full access** | $30/month | ~$40–80 (study guide + flashcards + course) |
 | **Flashcards** | Included in platform | Sold separately |
 | **Study guide** | 80+ audio+text lessons | Physical book or PDF |
 

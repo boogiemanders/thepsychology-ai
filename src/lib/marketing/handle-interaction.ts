@@ -3,7 +3,6 @@
 // draft, publishes blog posts, and returns a replace_original response so the buttons
 // disappear and the outcome shows inline (no bot token needed).
 
-import { publishBlogDraft } from "./publish-blog"
 import {
   openFeedbackModal,
   FEEDBACK_BLOCK_ID,
@@ -101,18 +100,15 @@ export async function handleMarketingInteraction(payload: any, supabase: any): P
   }
 
   // Approve.
+  // Blog: don't publish on approve. Queue it — scripts/marketing/drip-blog.ts publishes
+  // at most ONE queued blog per day, so approvals just fill the buffer and posts space out.
   if (draft.type === "blog") {
-    try {
-      const result = await publishBlogDraft(draft)
-      await supabase
-        .from("marketing_drafts")
-        .update({ status: "published", published_url: result.url, decided_at: now })
-        .eq("id", draftId)
-      await logSignal(supabase, { draft_id: draftId, kind: "approved", original_body: draft.body_md, created_by: user })
-      return await reply(payload, `Published by ${user}: <${result.url}|view post>`)
-    } catch (err) {
-      return await reply(payload, `Approved by ${user}, but publish failed: ${(err as Error).message}`)
-    }
+    await supabase
+      .from("marketing_drafts")
+      .update({ status: "queued", decided_at: now })
+      .eq("id", draftId)
+    await logSignal(supabase, { draft_id: draftId, kind: "approved", original_body: draft.body_md, created_by: user })
+    return await reply(payload, `Queued by ${user} — publishes to the blog (1/day, FIFO).`)
   }
 
   // LinkedIn: don't publish on approve. Queue it — scripts/marketing/drip-linkedin.ts
