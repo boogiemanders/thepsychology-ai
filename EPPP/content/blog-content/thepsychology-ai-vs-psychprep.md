@@ -19,7 +19,7 @@ I built thePsychology.ai, so take my comparison with appropriate skepticism. But
 
 | | thePsychology.ai | PsychPrep |
 |---|---|---|
-| **Price** | $20/month | $499 – $1,369 one-time |
+| **Price** | $30/month | $499 – $1,369 one-time |
 | **Free trial** | 7 days, no credit card | No free trial |
 | **Coaching included** | No (AI-powered) | Yes (human, in premium tiers) |
 | **Workshops** | No | Yes (live and recorded) |
@@ -58,7 +58,7 @@ PsychPrep's pricing depends heavily on which tier you choose. The basic package 
 
 **Built-in anxiety tools.** Evidence-based mental resets for test anxiety. PsychPrep focuses on content; we address the psychological side of test-taking too.
 
-**Price.** $20/month vs $499-$1,369. If money is tight (and for most postdocs, it is), the math speaks for itself.
+**Price.** $30/month vs $499-$1,369. If money is tight (and for most postdocs, it is), the math speaks for itself.
 
 ---
 

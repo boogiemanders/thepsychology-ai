@@ -35,7 +35,7 @@ Before we get into features and content quality, let's start with what most peop
 | **Taylor Study Method** | $199 – $299/mo | Monthly subscription |
 | **Academic Review** | $99 – $139/mo | Monthly subscription |
 | **PrepJet** | $159 – $429/mo | Monthly subscription |
-| **thePsychology.ai** | Free → $20/mo | 1-week free trial, then $20/mo |
+| **thePsychology.ai** | Free → $30/mo | 1-week free trial, then $30/mo |
 
 The range matters here. Most programs tier their pricing based on whether you want just the question bank, or the full package with coaching, study plans, and supplemental materials. We'll break down what you actually get at each price point below.
 
@@ -159,7 +159,7 @@ I built thePsychology.ai, so I'm going to be extra transparent here. I'll tell y
 
 **What we do well:**
 
-- **Price.** You can start for free with a 1-week trial — no credit card required. After the trial, it's $20/month. That's the lowest monthly price of any program in this comparison, and you get the full adaptive platform for that price.
+- **Price.** You can start for free with a 1-week trial — no credit card required. After the trial, it's $30/month. That's the lowest monthly price of any program in this comparison, and you get the full adaptive platform for that price.
 - **AI-adaptive learning loop.** This is the core of what makes us different. The platform continuously adapts to your performance. Miss a question on classical conditioning? The system notes that, adjusts your study plan, and resurfaces that concept with different question angles until you've actually learned it, not just memorized one specific question. Every session recalibrates.
 - **80+ structured lessons.** Content is organized by EPPP content domain, written by psychologists, and designed to be high-yield. We focus on what actually shows up on the exam rather than trying to cover every edge case in a 900-page textbook.
 - **Built by psychologists who took the exam.** I scored 588 on the EPPP. Our content team includes licensed psychologists who've been through this process. We know what the exam feels like, and we built the platform around that experience. This isn't an EdTech company that decided psychology licensing was a market opportunity. It started from the actual problem.
@@ -172,7 +172,7 @@ I built thePsychology.ai, so I'm going to be extra transparent here. I'll tell y
 - **Smaller user community.** With fewer users, there's less peer discussion and community activity compared to platforms that have been around longer. We're growing, but we're not there yet.
 - **No dedicated mobile app yet.** The platform is mobile-responsive (it works well in mobile browsers), but we don't have a native iOS or Android app. If you specifically want to study through an app, this is a limitation. It's on our roadmap, but it's not here today.
 
-**Bottom line:** thePsychology.ai is built for people who want adaptive, efficient studying at a price that doesn't hurt. Free trial, then $20/month — the lowest in this comparison. But if you want a program with a 20-year track record or a native mobile app, we're not there yet. I'd rather you know that upfront than find out after you've committed.
+**Bottom line:** thePsychology.ai is built for people who want adaptive, efficient studying at a price that doesn't hurt. Free trial, then $30/month — the lowest in this comparison. But if you want a program with a 20-year track record or a native mobile app, we're not there yet. I'd rather you know that upfront than find out after you've committed.
 
 ---
 
@@ -182,7 +182,7 @@ Here's how all six programs stack up across the features that matter most:
 
 | Feature | AATBS | PsychPrep | Taylor Study | Academic Review | PrepJet | thePsychology.ai |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Starting Price** | $999 | $499 | $199/mo | $99/mo | $159/mo | $20/mo |
+| **Starting Price** | $999 | $499 | $199/mo | $99/mo | $159/mo | $30/mo |
 | **Question Bank** | 3,000+ | 2,000+ | 1,000+ | 1,500+ | Not disclosed | 2,000+ (unlimited after 4 practice exams) |
 | **Adaptive Learning** | No | No | No | Basic (one-time assessment) | Basic (readiness score) | Yes (continuous) |
 | **Content Quality** | Dense but thorough | Good with detailed rationales | Mixed accuracy reports | Adequate | Mixed reviews on question clarity | High-yield, psychologist-written |
@@ -200,7 +200,7 @@ A few things jump out from this matrix. First, nobody has a native mobile app. T
 
 There's no single best EPPP prep program. There's the best one *for your situation*. Here's how I'd break it down:
 
-**If budget is your primary concern:** Start with [thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-prep-programs-compared-2026). Free trial, no credit card, then $20/month — the lowest price in this comparison by a wide margin. Academic Review is next at $99/month; PrepJet starts at $159/month.
+**If budget is your primary concern:** Start with [thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-prep-programs-compared-2026). Free trial, no credit card, then $30/month — the lowest price in this comparison by a wide margin. Academic Review is next at $99/month; PrepJet starts at $159/month.
 
 **If you want traditional, structured studying:** AATBS is the established choice. You get a textbook-style experience with a large question bank and a clear schedule. It's not exciting, but it's predictable. Some people study best with that kind of structure.
 
