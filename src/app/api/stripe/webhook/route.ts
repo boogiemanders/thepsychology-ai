@@ -427,9 +427,9 @@ export async function POST(request: Request) {
         sessionId: session.id,
       })
 
-      // Slack notification for new subscription
+      // Slack notification for new subscription (no PII: name/email intentionally omitted)
       await sendSlackNotification(
-        `💰 New subscription! ${session.customer_email || 'Unknown'} subscribed to Pro`,
+        `New Pro subscription`,
         'payments'
       )
 
@@ -440,11 +440,11 @@ export async function POST(request: Request) {
           return {} as Record<string, string | null>
         })
         await sendNotificationEmail({
-          subject: `New Pro subscription: ${session.customer_email || 'Unknown'}`,
+          subject: `New Pro subscription`,
           text: [
             'New Pro subscription!',
             '',
-            `Email: ${session.customer_email || 'Unknown'}`,
+            // No PII (name/email) per founder requirement. Look the customer up in Stripe via the IDs below.
             `User ID: ${userId}`,
             `Stripe Customer: ${stripeCustomerId || 'N/A'}`,
             `Session: ${session.id}`,
