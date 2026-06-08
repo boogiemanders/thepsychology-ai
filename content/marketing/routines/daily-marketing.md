@@ -109,6 +109,29 @@ actionable idea, beat/visual cues, and a reciprocity CTA. ~150 words.
 - Frontmatter: `title`, `slug` (kebab-case), `description` (≤155 chars, one line), `author`
   ("Dr. Anders Chan, Psy.D."), `tags` (comma list).
 
+## Sources and citations (APA)
+
+Every claim needs a source, and the approval card now renders your `sources` as an APA
+reference list. Fill in each source object as fully as you can:
+
+- `title` and `url` are required.
+- `author` (a person as "Last, F." like "Dunlosky, J.", or an org like "California Board
+  of Psychology"), `year` (e.g. 2026), and `publication` (the journal, site, or org name)
+  are optional but expected whenever you can find them. No author means the title leads;
+  no year renders as "(n.d.)".
+
+In the body, back a specific stat or claim with a light in-text citation, APA style:
+`(Author, year)`. Example: "Practice testing is the strongest predictor of passing
+(Dunlosky, 2013)." Use it ONLY where a claim needs backing. Do not cite the hook and do
+not wrap every sentence in a citation. The post itself stays plain, punchy, and at a
+13-year-old reading level. The credibility lives in the reference list at the bottom of
+the card, not in academic clutter. Any in-text name and year must match a source in the
+`sources` array.
+
+For EPPP/EPPP2 claims (see the EPPP rule above), structure the CA Board source as:
+`author` "California Board of Psychology", `year` 2026, `publication` "Board meeting
+materials, Feb 13, 2026 (p. X)", with in-text "(California Board of Psychology, 2026)".
+
 ## Step 4 — Fact-check pass
 
 Re-read every draft as a skeptic. For each claim: is it traceable to a source you have? Remove
@@ -133,8 +156,16 @@ Example `draft.json` (LinkedIn):
   "type": "linkedin",
   "topic": "psychology-ai",
   "title": "Why therapy chatbots feel empathic (and where that breaks)",
-  "body_md": "Most people don't realize...",
-  "sources": [{ "title": "Reddit r/therapists thread", "url": "https://..." }],
+  "body_md": "Most people don't realize a chatbot just mirrors your words back as feelings (Weizenbaum, 1966). That is why it feels warm, and exactly where it breaks...",
+  "sources": [
+    {
+      "title": "ELIZA, a computer program for the study of natural language communication",
+      "url": "https://...",
+      "author": "Weizenbaum, J.",
+      "year": 1966,
+      "publication": "Communications of the ACM"
+    }
+  ],
   "needs_review": false
 }
 ```

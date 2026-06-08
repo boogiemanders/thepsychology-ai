@@ -12,7 +12,16 @@ export type Topic =
 
 export type DraftStatus = "pending" | "approved" | "rejected" | "published" | "queued"
 
-export type Source = { title: string; url: string }
+// title + url are required. author/year/publication are optional and power the
+// APA reference list in the Slack approval card and the Obsidian note. When they
+// are missing the reference still renders (title leads, "n.d." for the year).
+export type Source = {
+  title: string
+  url: string
+  author?: string // "Dunlosky, J." or an org as author, e.g. "CA Board of Psychology"
+  year?: number | string // publication year; an LLM may emit a string, so accept both
+  publication?: string // journal, site, or org name (e.g. "Psychology Today")
+}
 
 export type BlogFrontmatter = {
   title: string

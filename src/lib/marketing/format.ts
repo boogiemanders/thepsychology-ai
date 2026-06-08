@@ -1,8 +1,22 @@
 // Pure formatting helpers: slugs, blog frontmatter (matching the blog parser),
 // and Obsidian notes (#mktg tagged). No framework or node-runtime deps beyond strings.
 
-import type { DraftType, MarketingDraft, Topic } from "./types"
+import type { DraftType, MarketingDraft, Source, Topic } from "./types"
 import { DEFAULT_AUTHOR } from "./types"
+
+// Build an APA 7th-style reference string WITHOUT the trailing URL (each surface
+// appends the link in its own syntax: Slack <url>, markdown <url>). Fields degrade
+// gracefully: no author means the title leads, no year becomes "(n.d.)", no
+// publication is simply omitted. Trailing periods are stripped so we never double up.
+export function apaReference(s: Source): string {
+  const strip = (v: string) => v.trim().replace(/\.+$/, "")
+  const year = s.year ? `(${s.year})` : "(n.d.)"
+  const title = strip(s.title)
+  const author = s.author ? strip(s.author) : ""
+  const publication = s.publication ? strip(s.publication) : ""
+  const lead = author ? `${author}. ${year}. ${title}.` : `${title}. ${year}.`
+  return publication ? `${lead} ${publication}.` : lead
+}
 
 export function slugify(input: string): string {
   return input
@@ -72,7 +86,7 @@ const TYPE_LABEL: Record<DraftType, string> = {
 // Tagged #mktg so it surfaces in the user's Obsidian once the repo is synced.
 export function buildObsidianNote(draft: MarketingDraft): string {
   const sources = draft.sources.length
-    ? draft.sources.map((s) => `- [${s.title}](${s.url})`).join("\n")
+    ? draft.sources.map((s) => `- ${apaReference(s)} <${s.url}>`).join("\n")
     : "_none recorded_"
 
   const review = draft.needs_review
