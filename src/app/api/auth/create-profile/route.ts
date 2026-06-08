@@ -46,6 +46,9 @@ export async function POST(request: NextRequest) {
       utm_campaign,
       utm_content,
       utm_term,
+      // First-touch landing attribution
+      landing_page,
+      landing_referrer,
     } = body
 
     // Validate required fields
@@ -116,6 +119,8 @@ export async function POST(request: NextRequest) {
     let resolvedUtmCampaign = (typeof utm_campaign === 'string' && utm_campaign.trim().length > 0) ? utm_campaign.trim() : null
     let resolvedUtmContent = (typeof utm_content === 'string' && utm_content.trim().length > 0) ? utm_content.trim() : null
     let resolvedUtmTerm = (typeof utm_term === 'string' && utm_term.trim().length > 0) ? utm_term.trim() : null
+    let resolvedLandingPage = (typeof landing_page === 'string' && landing_page.trim().length > 0) ? landing_page.trim() : null
+    let resolvedLandingReferrer = (typeof landing_referrer === 'string' && landing_referrer.trim().length > 0) ? landing_referrer.trim() : null
 
     let resolvedAuthCreatedAt = (typeof authCreatedAt === 'string' && authCreatedAt.trim().length > 0)
       ? authCreatedAt.trim()
@@ -133,6 +138,8 @@ export async function POST(request: NextRequest) {
       !resolvedUtmCampaign ||
       !resolvedUtmContent ||
       !resolvedUtmTerm ||
+      !resolvedLandingPage ||
+      !resolvedLandingReferrer ||
       !resolvedAuthCreatedAt ||
       !resolvedSignupSource ||
       resolvedSkipTrial === null
@@ -149,6 +156,9 @@ export async function POST(request: NextRequest) {
           resolvedUtmCampaign = resolvedUtmCampaign || (typeof meta.utm_campaign === 'string' ? meta.utm_campaign : null)
           resolvedUtmContent = resolvedUtmContent || (typeof meta.utm_content === 'string' ? meta.utm_content : null)
           resolvedUtmTerm = resolvedUtmTerm || (typeof meta.utm_term === 'string' ? meta.utm_term : null)
+          resolvedLandingPage = resolvedLandingPage || (typeof meta.landing_page === 'string' ? meta.landing_page : null)
+          resolvedLandingReferrer =
+            resolvedLandingReferrer || (typeof meta.landing_referrer === 'string' ? meta.landing_referrer : null)
           resolvedSignupSource =
             resolvedSignupSource || (typeof meta.signup_source === 'string' ? meta.signup_source : null)
           resolvedSkipTrial =
@@ -224,6 +234,9 @@ export async function POST(request: NextRequest) {
           utm_campaign: resolvedUtmCampaign,
           utm_content: resolvedUtmContent,
           utm_term: resolvedUtmTerm,
+          // First-touch landing attribution (which page brought them in)
+          landing_page: resolvedLandingPage,
+          landing_referrer: resolvedLandingReferrer,
         },
         { onConflict: 'id' }
       )

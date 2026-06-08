@@ -12,6 +12,8 @@ const ATTRIBUTION_FIELDS = [
   'utm_term',
   'referral_source',
   'referral_code',
+  'landing_page',
+  'landing_referrer',
 ] as const
 
 async function loadAttributionMetadata(userId: string): Promise<Record<string, string>> {

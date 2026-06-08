@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase'
 import { handleUserSwitch, hydrateQuizDataFromServer } from '@/lib/local-study-storage'
 import { safeSessionStorageSetItem } from '@/lib/safe-storage'
 import { getSignupProvisioning } from '@/lib/signup-provisioning'
+import { getStoredLandingAttribution } from '@/lib/utm-tracking'
 
 // Session timeout configuration (in milliseconds)
 const IDLE_TIMEOUT_MS = 2 * 60 * 60 * 1000 // 2 hours idle timeout
@@ -243,6 +244,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               try {
                 // Read referral + UTM data from auth user_metadata (stored during signUp)
                 const meta = session.user.user_metadata || {}
+                // OAuth signups never set landing metadata, so fall back to localStorage first-touch
+                const landingAttribution = getStoredLandingAttribution()
                 const provisioning = getSignupProvisioning({
                   subscriptionTier: (meta as { subscription_tier?: unknown }).subscription_tier,
                   signupSource: (meta as { signup_source?: unknown }).signup_source,
@@ -265,6 +268,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                     utm_campaign: meta.utm_campaign || null,
                     utm_content: meta.utm_content || null,
                     utm_term: meta.utm_term || null,
+                    landing_page: meta.landing_page || landingAttribution.landing_page || null,
+                    landing_referrer: meta.landing_referrer || landingAttribution.landing_referrer || null,
                   }),
                 })
                 if (res.ok) {
