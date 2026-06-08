@@ -31,7 +31,10 @@ and reuses prior work (do NOT regenerate what's already decided):
 
 ## Step 1 — Research (daily, all topics)
 
-Run the `last30days` skill for each topic to find what people are actually saying right now:
+Run the `last30days` skill with `--days=2` for each topic to find what people are saying
+**right now**. The `--days=2` flag is required: it caps the search at the last 24 to 48 hours
+so this is a true daily pulse, not a recap of half-year-old headlines. (The skill defaults to a
+30-day window; always override it here.)
 
 - `psychology` — psychology news, debates, viral takes
 - `eppp` — EPPP exam prep, licensing, study struggles
@@ -39,7 +42,9 @@ Run the `last30days` skill for each topic to find what people are actually sayin
 - `psychology-ai` — AI in mental health, therapy chatbots, AI + clinical practice
 - `pop-culture` — a current pop-culture moment with a real psychology angle
 
-Capture the strongest hooks and the source URLs. You will cite these.
+Capture the strongest hooks and the source URLs. You will cite these. If a topic has nothing
+fresh in the last 48 hours, say so and move on. Do NOT widen the window or reach back for older
+headlines just to fill a slot.
 
 ## Step 2 — Read what's working (ours, then competitors')
 
