@@ -4,6 +4,7 @@
 // No bot token and no second Slack app: one app, one interactivity URL, one new webhook.
 
 import type { MarketingDraft } from "./types"
+import { apaReference } from "./format"
 import { sendSlackNotification } from "../notify-slack"
 
 const TYPE_LABEL: Record<MarketingDraft["type"], string> = {
@@ -40,8 +41,11 @@ export function buildApprovalBlocks(draft: MarketingDraft): unknown[] {
   blocks.push({ type: "section", text: { type: "mrkdwn", text: clip(draft.body_md) } })
 
   if (draft.sources.length) {
-    const list = draft.sources.map((s) => `- <${s.url}|${s.title}>`).join("\n")
-    blocks.push({ type: "section", text: { type: "mrkdwn", text: `*Sources:*\n${clip(list, 1500)}` } })
+    // APA 7th reference list: "Author. (Year). Title. Publication. <url>". The
+    // bare <url> stays clickable in Slack. In-text (Author, year) citations live
+    // in body_md; this is the matching reference list at the bottom of the card.
+    const list = draft.sources.map((s) => `- ${apaReference(s)} <${s.url}>`).join("\n")
+    blocks.push({ type: "section", text: { type: "mrkdwn", text: `*Sources (APA)*\n${clip(list, 1500)}` } })
   }
 
   blocks.push({
