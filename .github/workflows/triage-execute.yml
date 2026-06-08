@@ -67,6 +67,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: |
             --mcp-config /tmp/mcp-config.json
+            --model claude-sonnet-4-6
             --allowedTools "Bash,Read,Write,Edit,Grep,Glob,mcp__eppp__get_feedback,mcp__eppp__send_reply,mcp__eppp__mark_resolved"
           prompt: |
             You are the EXECUTOR for the HITL feedback triage flow at thepsychology.ai.

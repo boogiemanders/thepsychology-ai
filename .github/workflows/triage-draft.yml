@@ -55,6 +55,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: |
             --mcp-config /tmp/mcp-config.json
+            --model claude-opus-4-8
             --allowedTools "Bash,Read,Grep,Glob,WebSearch,WebFetch,mcp__eppp__list_feedback,mcp__eppp__get_feedback,mcp__eppp__user_history,mcp__eppp__list_low_rated_questions"
           prompt: |
             You are the DRAFTER for the HITL feedback triage flow at thepsychology.ai (an EPPP exam prep product).
