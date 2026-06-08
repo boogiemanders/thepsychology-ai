@@ -127,6 +127,9 @@ jobs:
                f. SEND EMAIL only when kind=feedback. Call mcp__eppp__send_reply with: feedback_id=<row.feedback_id>, subject=draft_email_subject, body=draft_email_body, cc="DrChan@thepsychology.ai". Pass the email exactly as drafted, no edits, no em dashes.
                   If kind=low_rated: skip send_reply entirely (question_feedback rows have no email recipient). Note in the Slack confirmation "code change only, no reply sent (low_rated)".
                g. PATCH the draft row: status=executed, executed_at=now(), executed_pr_url=PR_URL.
-               h. Post Slack confirmation including the draft id and PR URL: "Shipped draft <DRAFT_ID>. PR: $PR_URL. Email sent." (or "Email skipped, code only.")
+               h. Post Slack confirmation. Include the draft id, the PR URL, and the FULL email that was sent, so it can be read in Slack without opening the inbox. Construct $MSG and post it via the Slack helper above.
+                  - kind=feedback: $MSG = "Shipped draft <DRAFT_ID>. PR: $PR_URL" then a blank line, then "Email sent to <recipient_email>:", then "Subject: <draft_email_subject>", then a blank line, then the full <draft_email_body> verbatim.
+                  - kind=low_rated: $MSG = "Shipped draft <DRAFT_ID>. PR: $PR_URL. Code change only, no reply sent (low_rated)."
+                  Build $MSG with jq --arg so the newlines are escaped safely (the Slack helper above already wraps text via jq).
 
             4. Final summary as your last message: count of drafts executed, broken down by normal vs empty-email. List all PR URLs. Begin.
