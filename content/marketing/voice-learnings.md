@@ -14,9 +14,11 @@ they conflict with a strong, repeated signal.
 - No em dashes. Commas, periods, or parentheses instead.
 - No emojis.
 - Every claim traces to a real source with an inline (Author, Year) cite and a Sources list.
-- Every post ends with a tracked thePsychology.ai link carrying UTM params for Google Analytics:
-  `https://www.thepsychology.ai/?utm_source=<platform>&utm_medium=social&utm_campaign=<topic>`
-  (e.g. utm_source=linkedin, utm_campaign=eppp-cost). The founder requires this on every post.
+- Every post ends with a tracked branded link: `https://www.thepsychology.ai/go/<topic>`
+  (e.g. /go/eppp-cost). The /go route adds the GA UTMs (source=linkedin, medium=social,
+  campaign=<topic>), so use the short /go form in posts, never the raw UTM query string. Use a
+  UNIQUE <topic> slug per post so Google Analytics attributes clicks to the right post. For a
+  non-LinkedIn platform add ?s=<platform> (e.g. /go/eppp-cost?s=tiktok). Required on every post.
 - Keep the founder's voice: a clinical psychologist talking to other clinicians and students, credible but plain-spoken.
 
 ## Learned preferences
