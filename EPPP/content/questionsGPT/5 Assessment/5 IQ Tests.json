@@ -674,6 +674,131 @@
       "relatedSections": [
         "Understanding Intelligence: The Theoretical Foundation"
       ]
+    },
+    {
+      "kn": "KN32",
+      "difficulty": "medium",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "### What's New in the WAIS-V (2024)",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)",
+        "What's New in the WAIS-V (2024)"
+      ],
+      "stem": "How does the WAIS-V (2024) index structure differ from the WAIS-IV?",
+      "options": [
+        "It merged Verbal Comprehension and Working Memory into one index",
+        "It split the Perceptual Reasoning Index into separate Visual Spatial and Fluid Reasoning indexes, giving five primary indexes",
+        "It removed the Processing Speed Index, leaving three indexes",
+        "It replaced the Full Scale IQ with the General Ability Index"
+      ],
+      "answer": "It split the Perceptual Reasoning Index into separate Visual Spatial and Fluid Reasoning indexes, giving five primary indexes",
+      "explanation": "The WAIS-V splits the WAIS-IV Perceptual Reasoning Index into two indexes, Visual Spatial and Fluid Reasoning, so it now has five primary indexes (VCI, VSI, FRI, WMI, PSI) instead of four. This mirrors the change made in the WISC-V. The other options describe changes that did not occur; VCI, WMI, PSI, and the FSIQ were all retained.",
+      "kn_explanation": "Tests structural knowledge of the current Wechsler adult scale.",
+      "quality_comment": "Direct recall of the WAIS-IV to WAIS-V index change. needsReview until skill verifies kn/excerpt.",
+      "lessonExcerpt": "The WAIS-V splits the old Perceptual Reasoning Index (PRI) into two separate indexes, the same move the WISC-V made for kids"
+    },
+    {
+      "kn": "KN32",
+      "difficulty": "medium",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "### What's New in the WAIS-V (2024)",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)",
+        "What's New in the WAIS-V (2024)"
+      ],
+      "stem": "On the WAIS-V, which two new indexes replaced the WAIS-IV Perceptual Reasoning Index?",
+      "options": [
+        "Visual Spatial and Fluid Reasoning",
+        "Verbal Comprehension and Working Memory",
+        "Processing Speed and Working Memory",
+        "Quantitative Reasoning and Auditory Working Memory"
+      ],
+      "answer": "Visual Spatial and Fluid Reasoning",
+      "explanation": "The WAIS-V replaces the Perceptual Reasoning Index with a Visual Spatial Index (Block Design, Visual Puzzles) and a Fluid Reasoning Index (Matrix Reasoning, Figure Weights). Verbal Comprehension, Working Memory, and Processing Speed were already separate indexes on the WAIS-IV and were retained.",
+      "kn_explanation": "Tests knowledge of the specific indexes created by the PRI split.",
+      "quality_comment": "Recall of the VSI/FRI split. needsReview until skill verifies kn/excerpt.",
+      "lessonExcerpt": "So nonverbal ability is now scored as two separate things: how you handle space and shapes (Visual Spatial, built from Block Design and Visual Puzzles) and how you solve brand new problems (Fluid Reasoning, built from Matrix Reasoning and Figure Weights)."
+    },
+    {
+      "kn": "KN32",
+      "difficulty": "medium",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "### What's New in the WAIS-V (2024)",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)",
+        "What's New in the WAIS-V (2024)"
+      ],
+      "stem": "Which subtest is new to the WAIS-V and serves as a core Working Memory subtest?",
+      "options": [
+        "Picture Span",
+        "Picture Completion",
+        "Cancellation",
+        "Letter-Number Sequencing"
+      ],
+      "answer": "Picture Span",
+      "explanation": "Picture Span is a new WAIS-V subtest and takes over the core Working Memory role that Arithmetic played on the WAIS-IV. Picture Completion and Cancellation were dropped in the WAIS-V, and Letter-Number Sequencing moved to a secondary role.",
+      "kn_explanation": "Tests knowledge of WAIS-V subtest additions and core Working Memory composition.",
+      "quality_comment": "Recall of the new Picture Span subtest. needsReview until skill verifies kn/excerpt.",
+      "lessonExcerpt": "Picture Span is new and becomes a core Working Memory subtest, taking over the main role Arithmetic used to play."
+    },
+    {
+      "kn": "KN32",
+      "difficulty": "medium",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "### What's New in the WAIS-V (2024)",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)",
+        "What's New in the WAIS-V (2024)"
+      ],
+      "stem": "On the WAIS-V, the General Ability Index (GAI) is calculated from which indexes?",
+      "options": [
+        "VCI, VSI, and FRI",
+        "VCI and PRI",
+        "WMI and PSI",
+        "All five primary indexes"
+      ],
+      "answer": "VCI, VSI, and FRI",
+      "explanation": "Because the WAIS-V split Perceptual Reasoning into Visual Spatial and Fluid Reasoning, the GAI is now built from VCI, VSI, and FRI. Like the WAIS-IV GAI, it still excludes Working Memory and Processing Speed, giving an ability estimate less affected by processing efficiency. VCI and PRI was the WAIS-IV formula; WMI and PSI form the Cognitive Proficiency Index.",
+      "kn_explanation": "Tests knowledge of the GAI composition under the five-index WAIS-V structure.",
+      "quality_comment": "Application of the GAI definition to the new index structure. needsReview until skill verifies kn/excerpt.",
+      "lessonExcerpt": "The GAI now adds up VCI, VSI, and FRI, and it still leaves out working memory and processing speed."
+    },
+    {
+      "kn": "KN32",
+      "difficulty": "hard",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "### What's New in the WAIS-V (2024)",
+      "needsReview": true,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9,
+      "relatedSections": [
+        "Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)",
+        "What's New in the WAIS-V (2024)"
+      ],
+      "stem": "Independent factor-analytic studies of the WAIS-V standardization sample found that:",
+      "options": [
+        "the five-factor structure was strongly and cleanly confirmed",
+        "Visual Spatial and Fluid Reasoning tended to merge into a single reasoning factor, supporting primary reliance on the Full Scale IQ",
+        "the Processing Speed Index emerged as the dominant factor",
+        "the test lacked adequate reliability for clinical use"
+      ],
+      "answer": "Visual Spatial and Fluid Reasoning tended to merge into a single reasoning factor, supporting primary reliance on the Full Scale IQ",
+      "explanation": "Independent analyses of the WAIS-V standardization sample did not cleanly support five separate factors; Visual Spatial and Fluid Reasoning tended to blend back into a single perceptual/reasoning factor, with a strong general intelligence (g) factor dominating. The practical takeaway is that the Full Scale IQ remains the most trustworthy single score, and clinicians should be cautious about over-interpreting a small VSI versus FRI gap.",
+      "kn_explanation": "Tests awareness of the structural-validity evidence and appropriate interpretive caution.",
+      "quality_comment": "Higher-order item on WAIS-V structural validity. needsReview until skill verifies kn/excerpt.",
+      "lessonExcerpt": "Visual Spatial and Fluid Reasoning kept blending back into a single reasoning factor, just like the old PRI, and one general intelligence (g) factor dominated everything."
     }
   ]
 }
