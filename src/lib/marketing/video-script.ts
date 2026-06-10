@@ -47,11 +47,14 @@ export function extractSpokenScript(bodyMd: string): string {
     // (Checked before the markdown strip below eats the leading "#".)
     const tokens = line.split(/\s+/)
     if (tokens.filter((t) => t.startsWith("#")).length >= Math.max(1, tokens.length / 2)) continue
-    // Markdown emphasis/heading chars and wrapping quote marks would trip up
-    // TTS; strip the symbols first so a bolded "**HOOK (0-3s)**" still gets
+    // Markdown headings ("# TikTok Script: ...") are titles, never speech.
+    // (Hashtag rows like "#EPPP #psychology" have no space after "#" and are
+    // already dropped above.)
+    if (/^#{1,6}\s/.test(line)) continue
+    // Markdown emphasis chars and wrapping quote marks would trip up TTS;
+    // strip the symbols first so a bolded "**HOOK (0-3s)**" still gets
     // recognized as a section header below. Words themselves stay untouched.
     line = line
-      .replace(/^#+\s*/, "")
       .replace(/\*\*([^*]+)\*\*/g, "$1")
       .replace(/\*([^*]+)\*/g, "$1")
       .replace(/^[-•]\s+/, "")

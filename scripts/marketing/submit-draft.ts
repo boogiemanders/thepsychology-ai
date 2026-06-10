@@ -4,15 +4,15 @@
 // Usage: npx tsx scripts/marketing/submit-draft.ts path/to/draft.json
 // The JSON file matches the DraftInput shape in src/lib/marketing/types.ts.
 
+// load-env must be first: notify-slack (via slack.ts) freezes its webhook map
+// at import time, and imports are hoisted above any config() call in this body.
+import "./load-env"
 import { createClient } from "@supabase/supabase-js"
-import { config } from "dotenv"
 import * as fs from "fs"
 import * as path from "path"
 import { slugify, buildObsidianNote } from "../../src/lib/marketing/format"
 import { postDraftForApproval } from "../../src/lib/marketing/slack"
 import type { DraftInput, MarketingDraft } from "../../src/lib/marketing/types"
-
-config({ path: ".env.local" })
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
