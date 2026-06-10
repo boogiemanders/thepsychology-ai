@@ -96,24 +96,37 @@ async function notifySlack(text: string): Promise<void> {
 // Returns the URL of the rendered mp4. Throws with a descriptive message on
 // any API failure (caller marks the draft failed).
 
-async function generateTalkingHeadVideo(spokenText: string, title: string): Promise<string> {
+async function generateTalkingHeadVideo(
+  spokenText: string,
+  title: string,
+  idempotencyKey: string
+): Promise<{ videoUrl: string; subtitleUrl: string | null }> {
   const apiKey = process.env.HEYGEN_API_KEY!
   // v3 create endpoint (POST /v3/videos) replaces v2 /v2/video/generate.
   // We do NOT use the Video Agent endpoint: it rewrites scripts, and these scripts
   // are approved verbatim. The plain "script" field speaks the text as-is.
-  // resolution 720p + aspect_ratio 9:16 is the v3 way to ask for vertical 720x1280.
+  // 1080p costs the same as 720p (only 4K is more); aspect_ratio 9:16 = vertical.
+  // Idempotency-Key (the draft id) makes retries safe: HeyGen replays the original
+  // response for 24h instead of rendering (and charging) twice.
   const createRes = await fetch(`${HEYGEN_API}/v3/videos`, {
     method: "POST",
-    headers: { "x-api-key": apiKey, "Content-Type": "application/json" },
+    headers: {
+      "x-api-key": apiKey,
+      "Content-Type": "application/json",
+      "Idempotency-Key": idempotencyKey,
+    },
     body: JSON.stringify({
       type: "avatar",
       title: title.slice(0, 100),
       avatar_id: process.env.HEYGEN_AVATAR_ID,
       voice_id: process.env.HEYGEN_VOICE_ID,
       script: spokenText,
-      resolution: "720p",
+      resolution: "1080p",
       aspect_ratio: "9:16",
       engine: { type: HEYGEN_ENGINE },
+      // Sidecar SRT (word timings) for the Phase 2 Remotion caption/animation layer.
+      // No style key, so nothing is burned into the picture.
+      caption: { file_format: "srt" },
       // Motion is per-request in v3, not stored on the avatar look. Docs:
       // https://developers.heygen.com/photo-avatar.md
       ...(process.env.HEYGEN_MOTION_PROMPT && { motion_prompt: process.env.HEYGEN_MOTION_PROMPT }),
@@ -139,7 +152,7 @@ async function generateTalkingHeadVideo(spokenText: string, title: string): Prom
     if (status === "completed") {
       const url = statusBody?.data?.video_url
       if (!url) throw new Error(`HeyGen completed but no video_url (video_id=${videoId})`)
-      return url
+      return { videoUrl: url, subtitleUrl: statusBody?.data?.subtitle_url ?? null }
     }
     if (status === "failed") {
       const code = statusBody?.data?.failure_code ?? "unknown"
@@ -232,9 +245,20 @@ async function main() {
 
     try {
       console.log(`▶ Generating ${label} (~${est}s)...`)
-      const videoUrl = await generateTalkingHeadVideo(spoken, draft.title)
-      const filePath = join(OUTPUT_DIR, `${safeFilename(draft.title)}_${timestamp()}.mp4`)
+      const { videoUrl, subtitleUrl } = await generateTalkingHeadVideo(spoken, draft.title, draft.id)
+      const base = `${safeFilename(draft.title)}_${timestamp()}`
+      const filePath = join(OUTPUT_DIR, `${base}.mp4`)
       await downloadTo(videoUrl, filePath)
+      // Best-effort SRT alongside the mp4 (Remotion reads the word timings later).
+      if (subtitleUrl) {
+        try {
+          await downloadTo(subtitleUrl, join(OUTPUT_DIR, `${base}.srt`))
+        } catch (srtErr) {
+          console.warn(`⚠️  SRT download failed for ${draft.id.slice(0, 8)}: ${(srtErr as Error).message}`)
+        }
+      } else {
+        console.warn(`⚠️  No subtitle_url returned for ${draft.id.slice(0, 8)}`)
+      }
       const { error: updErr } = await supabase
         .from("marketing_drafts")
         .update({
