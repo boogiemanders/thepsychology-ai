@@ -38,7 +38,7 @@ export const RemotionRoot: React.FC = () => {
       defaultProps={{
         videoFile: "input.mp4",
         srtFile: "input.srt",
-        captionStyle: "box" as const,
+        captionStyle: "clean" as const,
         captionBottomPercent: 32,
       }}
       calculateMetadata={calculateMetadata}

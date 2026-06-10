@@ -11,6 +11,7 @@ const montserrat = loadMontserrat("normal", {
 const marker = loadMarker("normal", { weights: ["400"], subsets: ["latin"] });
 
 export const CAPTION_STYLE_IDS = [
+  "clean",
   "box",
   "outline",
   "yellow",
@@ -26,6 +27,16 @@ const stroke = (width: number): CSSProperties => ({
 });
 
 export const CAPTION_STYLES: Record<CaptionStyleId, CSSProperties> = {
+  // Founder's pick: white Inter, sentence case, no box. A thin stroke plus
+  // soft shadow keeps it readable over bright frames (white shirt, lights).
+  clean: {
+    fontFamily: inter.fontFamily,
+    fontWeight: 800,
+    fontSize: 54,
+    color: "white",
+    ...stroke(5),
+    textShadow: "0 3px 10px rgba(0,0,0,0.55)",
+  },
   // Clean rounded dark box, white Inter. Credible, reads like app UI.
   box: {
     fontFamily: inter.fontFamily,
