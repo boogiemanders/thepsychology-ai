@@ -104,8 +104,9 @@ the strongest hook and write the full script yourself. The skill returns a struc
 `body_md`. Then apply the brand hard rules to the output: strip any emojis, remove em dashes, and
 keep the no-fabrication rule (the script's `sources` array must still be non-empty). Spoken
 lines feed a TTS talking-head pipeline, so write pronunciations into the speech: "EPPP" as
-"E triple P" and "thepsychology.ai" as "the psychology dot ai" (captions/hashtags keep the
-normal spellings). If the skill
+"E triple P", "thepsychology.ai" as "the psychology dot ai", "WAIS-IV" as "ways four", and
+any other test name or initialism the way it is actually said aloud (captions/hashtags keep
+the normal spellings). If the skill
 is somehow unavailable, fall back to short-form best practice: a 3-second hook, one specific
 actionable idea, beat/visual cues, and a reciprocity CTA. ~150 words.
 **Blog (SEO):**
