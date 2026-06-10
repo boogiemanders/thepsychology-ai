@@ -190,6 +190,33 @@ The four indexes age differently:
 
 This creates the "classic aging pattern". Verbal abilities stay strong while performance (nonverbal) abilities decline earlier. {{M}}It's why your older clients might still have sharp conversation skills but struggle more with puzzles or learning new technology.{{/M}}
 
+### What's New in the WAIS-V (2024)
+
+A newer version, the **WAIS-V**, came out in 2024. Here's the catch: the EPPP item bank gets rebuilt slowly, so most questions you see today still come from the WAIS-IV. Learn the WAIS-IV indexes above first, because that's what's most likely on your exam. Then keep these WAIS-V changes in your back pocket in case a current question shows up.
+
+**The big change: four indexes became five.** The WAIS-V splits the old Perceptual Reasoning Index (PRI) into two separate indexes, the same move the WISC-V made for kids:
+
+| WAIS-IV (4 indexes) | WAIS-V (5 indexes) |
+|---------------------|--------------------|
+| Verbal Comprehension (VCI) | Verbal Comprehension (VCI) |
+| Perceptual Reasoning (PRI) | Visual Spatial (VSI) **and** Fluid Reasoning (FRI) |
+| Working Memory (WMI) | Working Memory (WMI) |
+| Processing Speed (PSI) | Processing Speed (PSI) |
+
+So nonverbal ability is now scored as two separate things: how you handle space and shapes (Visual Spatial, built from Block Design and Visual Puzzles) and how you solve brand new problems (Fluid Reasoning, built from Matrix Reasoning and Figure Weights).
+
+**Subtest changes worth remembering:**
+- **Picture Span** is new and becomes a core Working Memory subtest, taking over the main role Arithmetic used to play.
+- **Figure Weights** got promoted from a backup subtest to a core Fluid Reasoning subtest.
+- **Picture Completion** and **Cancellation** were dropped.
+- The test now has about 20 subtests, and the Full Scale IQ is built from just 7 core subtests (the WAIS-IV used 10).
+
+**What did not change:** Scores are scaled the same way (subtests mean 10, SD 3; indexes and Full Scale IQ mean 100, SD 15), the age range is still 16 to 90, and the **General Ability Index (GAI)** is still here. The GAI now adds up VCI, VSI, and FRI, and it still leaves out working memory and processing speed. The aging pattern and the clinical patterns you memorized for the WAIS-IV still hold, because Processing Speed means the same thing and is still the weak spot in dementia, depression, ADHD, and brain injury.
+
+{{M}}Think of it like a music app that used to give one "instrumental skill" rating, then split it into "rhythm" and "melody." The musician didn't change. The scorecard just got more detailed.{{/M}}
+
+**What the research says (a credibility point you can use):** When independent researchers factor-analyzed the WAIS-V standardization sample in 2026, the data did not cleanly support five separate factors. Visual Spatial and Fluid Reasoning kept blending back into a single reasoning factor, just like the old PRI, and one general intelligence (g) factor dominated everything. The takeaway: the Full Scale IQ is still the most trustworthy single score, so be careful about over-reading a small gap between VSI and FRI.
+
 ## Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)
 
 ### Structure
