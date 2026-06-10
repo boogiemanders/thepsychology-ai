@@ -2,7 +2,9 @@
 // or by hand. For each marketing_drafts row with type='tiktok', status='approved',
 // video_status null: extract the spoken lines, generate a vertical talking-head video
 // of Anders via HeyGen (avatar trained on his footage + his voice), save the mp4 to
-// the Google Drive marketing folder, and mark the row 'generated'.
+// the Google Drive marketing folder, and mark the row 'generated'. Then a local
+// Remotion pass (video-overlay/) composites captions + the question card and saves
+// the deliverable next to the raw mp4 as <name>_final.mp4 (see renderOverlay).
 //
 // Nothing posts anywhere — output goes to Drive for Anders's daily review.
 //
@@ -20,10 +22,16 @@
 // VIDEO_OUTPUT_DIR (default Drive folder)
 
 import { createClient } from "@supabase/supabase-js"
+import { execFileSync } from "child_process"
 import { config } from "dotenv"
-import { mkdirSync, writeFileSync } from "fs"
-import { join } from "path"
-import { extractSpokenScript, estimateDurationSeconds } from "../../src/lib/marketing/video-script"
+import { copyFileSync, existsSync, mkdirSync, rmSync, writeFileSync } from "fs"
+import { tmpdir } from "os"
+import { join, resolve } from "path"
+import {
+  extractSpokenScript,
+  estimateDurationSeconds,
+  parsePracticeQuestion,
+} from "../../src/lib/marketing/video-script"
 import type { MarketingDraft } from "../../src/lib/marketing/types"
 
 config({ path: ".env.local" })
@@ -220,6 +228,57 @@ async function downloadTo(url: string, filePath: string): Promise<void> {
   writeFileSync(filePath, Buffer.from(await res.arrayBuffer()))
 }
 
+// --- Post-render: Remotion overlay (captions + question card) ----------------
+// Composites the final deliverable over the raw HeyGen mp4: chunked captions,
+// plus a floating question card when the script parses as a practice question.
+// Runs after the raw video is on Drive and the DB row says 'generated', so an
+// overlay failure only costs the final cut, never the draft (caller catches).
+// Exported so a final can be re-rendered by hand without touching HeyGen.
+
+const OVERLAY_DIR = resolve(__dirname, "../../video-overlay")
+
+export function renderOverlay(mp4Path: string, srtPath: string, draft: MarketingDraft): string {
+  // The launchd automation checkout (~/thepsychology-ai-marketing) resets via
+  // git, so video-overlay/node_modules may not exist on a first run there.
+  if (!existsSync(join(OVERLAY_DIR, "node_modules"))) {
+    console.log("[overlay] node_modules missing, running npm install in video-overlay/")
+    execFileSync("npm", ["install", "--silent"], { cwd: OVERLAY_DIR, stdio: "inherit" })
+  }
+
+  // Remotion can only read inputs from public/. Per-draft job names keep
+  // parallel runs from clobbering each other's files.
+  const jobId = `job-${draft.id.slice(0, 8)}`
+  const jobMp4 = join(OVERLAY_DIR, "public", `${jobId}.mp4`)
+  const jobSrt = join(OVERLAY_DIR, "public", `${jobId}.srt`)
+  const tmpOut = join(tmpdir(), `${jobId}-final.mp4`)
+  copyFileSync(mp4Path, jobMp4)
+  copyFileSync(srtPath, jobSrt)
+
+  try {
+    const parsed = parsePracticeQuestion(extractSpokenScript(draft.body_md))
+    const props = {
+      videoFile: `${jobId}.mp4`,
+      srtFile: `${jobId}.srt`,
+      captionStyle: "clean",
+      captionBottomPercent: 32,
+      questionStem: parsed?.stem ?? "",
+      choices: parsed?.choices ?? [],
+    }
+    // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
+    // apostrophes in stems) needs no escaping.
+    execFileSync(
+      "npx",
+      ["remotion", "render", "PracticeQuestion", tmpOut, `--props=${JSON.stringify(props)}`],
+      { cwd: OVERLAY_DIR, stdio: "inherit" }
+    )
+    const finalPath = mp4Path.replace(/\.mp4$/, "_final.mp4")
+    copyFileSync(tmpOut, finalPath)
+    return finalPath
+  } finally {
+    for (const f of [jobMp4, jobSrt, tmpOut]) rmSync(f, { force: true })
+  }
+}
+
 async function main() {
   for (const v of ["HEYGEN_API_KEY", "HEYGEN_AVATAR_ID", "HEYGEN_VOICE_ID"]) {
     if (!process.env[v]) {
@@ -264,6 +323,7 @@ async function main() {
 
   let ok = 0
   let failed = 0
+  let finals = 0
   for (const draft of drafts) {
     const label = `"${draft.title}" [${draft.id.slice(0, 8)}]`
     const spoken = extractSpokenScript(draft.body_md)
@@ -323,6 +383,27 @@ async function main() {
       }
       console.log(`✅ ${label} → ${filePath}`)
       ok++
+
+      // Final cut. Raw mp4 + DB row are already in place above, so a Remotion
+      // failure must not mark the draft failed: log, ping Slack, move on.
+      const srtPath = join(OUTPUT_DIR, `${base}.srt`)
+      if (!existsSync(srtPath)) {
+        console.warn(`⚠️  ${label}: no SRT on Drive, skipping overlay (captions impossible)`)
+      } else {
+        try {
+          const finalPath = renderOverlay(filePath, srtPath, draft)
+          console.log(`✅ ${label} final → ${finalPath}`)
+          finals++
+        } catch (overlayErr) {
+          const reason = (overlayErr as Error).message.slice(0, 500)
+          console.error(`❌ ${label}: overlay render failed: ${reason}`)
+          // .catch guard: a Slack outage here would otherwise bubble to the
+          // outer catch and wrongly mark a generated draft as failed.
+          await notifySlack(
+            `Overlay render failed for ${label}, raw video is in Drive: ${reason}`
+          ).catch((e) => console.error(`[slack] ${(e as Error).message}`))
+        }
+      }
     } catch (err) {
       const reason = (err as Error).message.slice(0, 500)
       console.error(`❌ ${label}: ${reason}`)
@@ -337,11 +418,11 @@ async function main() {
 
   if (!DRY_RUN && (ok > 0 || failed > 0)) {
     await notifySlack(
-      `Video pipeline: ${ok} generated${failed ? `, ${failed} failed` : ""}. ` +
+      `Video pipeline: ${ok} generated${finals ? ` (${finals} final cut${finals === 1 ? "" : "s"} with captions)` : ""}${failed ? `, ${failed} failed` : ""}. ` +
         `Ready for review in Drive → thepsychology.ai marketing/videos`
     )
   }
-  console.log(`Done: ${ok} generated, ${failed} failed.`)
+  console.log(`Done: ${ok} generated, ${finals} finals, ${failed} failed.`)
 }
 
 main().catch((err) => {
