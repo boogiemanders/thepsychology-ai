@@ -101,7 +101,7 @@ async function notifySlack(text: string): Promise<void> {
 // So when a script needs pauses we render audio first with SSML <break> tags,
 // then create the video from that audio_url (schema-supported lip-sync path).
 // Authors can write "[pause]" or "[pause 2s]" inline; the signature line
-// "Pause to think of your answer." also gets an automatic 2s thinking beat.
+// "Pause to think of your answer." also gets an automatic 1s thinking beat.
 const SIGNATURE_PAUSE_LINE = "Pause to think of your answer."
 
 function buildSsml(text: string): { ssml: string; hasPauses: boolean } {
@@ -113,7 +113,7 @@ function buildSsml(text: string): { ssml: string; hasPauses: boolean } {
   })
   if (esc.includes(SIGNATURE_PAUSE_LINE)) {
     hasPauses = true
-    esc = esc.split(SIGNATURE_PAUSE_LINE).join(`${SIGNATURE_PAUSE_LINE} <break time="2s"/>`)
+    esc = esc.split(SIGNATURE_PAUSE_LINE).join(`${SIGNATURE_PAUSE_LINE} <break time="1s"/>`)
   }
   return { ssml: `<speak>${esc}</speak>`, hasPauses }
 }
