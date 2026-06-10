@@ -551,6 +551,7 @@ export const siteConfig = {
         { id: 2, title: "Contact", url: "/contact" },
         { id: 3, title: "Blog", url: "/blog" },
         { id: 4, title: "Resources", url: "/resources" },
+        { id: 15, title: "Privacy", url: "/privacy" },
       ],
     },
     {
