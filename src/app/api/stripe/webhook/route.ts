@@ -124,6 +124,43 @@ async function loadAttribution(
   return out
 }
 
+async function loadUserContact(
+  userId: string
+): Promise<{ email: string | null; name: string | null; createdAt: string | null }> {
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) return { email: null, name: null, createdAt: null }
+
+  const { data } = await supabase
+    .from('users')
+    .select('email, full_name, created_at')
+    .eq('id', userId)
+    .maybeSingle()
+  const row = data as {
+    email?: string | null
+    full_name?: string | null
+    created_at?: string | null
+  } | null
+  return {
+    email: row?.email ?? null,
+    name: row?.full_name ?? null,
+    createdAt: row?.created_at ?? null,
+  }
+}
+
+function formatSignupDate(createdAt: string | null): string {
+  if (!createdAt) return 'unknown'
+  const date = new Date(createdAt)
+  if (Number.isNaN(date.getTime())) return 'unknown'
+  const formatted = date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    timeZone: 'America/New_York',
+  })
+  const days = Math.floor((Date.now() - date.getTime()) / 86_400_000)
+  return days >= 1 ? `${formatted} (${days} day${days === 1 ? '' : 's'} ago)` : formatted
+}
+
 function formatAttributionLines(a: Record<string, string | null>): string[] {
   const hasUtm = a.utm_source || a.utm_medium || a.utm_campaign || a.utm_content || a.utm_term
   return [
@@ -434,17 +471,30 @@ export async function POST(request: Request) {
       )
 
       // Email notification for new subscription
+      // PII (email, signup date) is included here but stays out of Slack: this email
+      // goes only to the founder's inbox, Slack goes to a shared channel.
       if (isNotificationEmailConfigured()) {
-        const attribution = await loadAttribution(session.metadata ?? null, userId).catch((err) => {
-          console.error('[Stripe] Failed to load attribution for payment email:', err)
-          return {} as Record<string, string | null>
-        })
+        const [attribution, contact] = await Promise.all([
+          loadAttribution(session.metadata ?? null, userId).catch((err) => {
+            console.error('[Stripe] Failed to load attribution for payment email:', err)
+            return {} as Record<string, string | null>
+          }),
+          loadUserContact(userId).catch((err) => {
+            console.error('[Stripe] Failed to load user contact for payment email:', err)
+            return { email: null, name: null, createdAt: null }
+          }),
+        ])
+        const customerEmail =
+          contact.email ?? session.customer_details?.email ?? session.customer_email ?? 'unknown'
+        const customerName = contact.name ?? session.customer_details?.name ?? null
         await sendNotificationEmail({
-          subject: `New Pro subscription`,
+          subject: `New Pro subscription: ${customerEmail}`,
           text: [
             'New Pro subscription!',
             '',
-            // No PII (name/email) per founder requirement. Look the customer up in Stripe via the IDs below.
+            ...(customerName ? [`Name: ${customerName}`] : []),
+            `Email: ${customerEmail}`,
+            `First signed up: ${formatSignupDate(contact.createdAt)}`,
             `User ID: ${userId}`,
             `Stripe Customer: ${stripeCustomerId || 'N/A'}`,
             `Session: ${session.id}`,
