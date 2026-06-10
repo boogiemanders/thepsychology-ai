@@ -96,7 +96,8 @@ final summary.
 is the same craft as a Reel; this skill is vendored into the repo at `.claude/skills/`). Invoke
 the skill and give it: the creator context (Dr. Anders Chan, licensed clinical psychologist;
 audience = psychologists and EPPP candidates; voice = sharp, plain, credible, no hype), the chosen
-topic, and a 60s default duration. Pick the hook using the patterns that scored best in the
+topic, and a 30-60s duration (hard cap ~150 spoken words — approved scripts feed an automated
+talking-head video pipeline whose cost scales with length). Pick the hook using the patterns that scored best in the
 competitor scorecards from Step 2. This runs unattended, so do NOT wait for hook approval; pick
 the strongest hook and write the full script yourself. The skill returns a structured script
 (Hook, Build-Up, Value, Payoff, CTA) with a 3-second hook and visual cues; that script is the

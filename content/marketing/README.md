@@ -60,6 +60,31 @@ reuses that same auth. Nothing to do here.
   on the founder's Claude subscription via the feedback-rewrite routine.
 - Deploy. The Slack endpoint already exists, so no Request URL change is needed.
 
+## Video generation (talking-head videos from approved TikTok scripts)
+
+`scripts/marketing/generate-videos.ts` turns every approved TikTok script (status `approved`,
+`video_status` null) into a vertical talking-head video of Anders via the HeyGen API (avatar
+trained on his real footage + voice clone), saves the mp4 to Google Drive →
+`thepsychology.ai marketing/videos/`, and marks the row `video_status='generated'`.
+Nothing posts automatically — Drive is a review queue. Failures mark `video_status='failed'`
+with the error and ping #social-approvals; reset `video_status` to null to retry.
+
+One-time setup:
+- Apply `supabase/migrations/20260609_add_video_generation.sql`.
+- Create a HeyGen account, train an avatar on ~2 min of Anders's TikTok footage (HeyGen
+  requires a recorded consent clip), clone the voice, buy pay-as-you-go API credits.
+- Add `HEYGEN_API_KEY`, `HEYGEN_AVATAR_ID`, `HEYGEN_VOICE_ID` to `.env.local` (and the
+  `~/thepsychology-ai-marketing` checkout's copy). Optional: `VIDEO_DAILY_CAP` (default 12,
+  the cost guard) and `VIDEO_OUTPUT_DIR`.
+- launchd: `~/Library/LaunchAgents/ai.thepsychology.video-generate.plist` runs
+  `~/.thepsychology-automation/run-video-generate.sh` at 10am/1pm/4pm/7pm local
+  (`launchctl load` it once the env vars exist and this code is on origin/main).
+
+The spoken text is extracted from `body_md` by `src/lib/marketing/video-script.ts`
+(strips section headers, `[Visual: ...]` directions, hashtag rows — never rewrites the
+approved sentences). HeyGen is isolated behind one function in `generate-videos.ts` so a
+different provider (Seedance, OmniHuman) can swap in later.
+
 ## Manual runs (for testing before scheduling)
 
 ```
