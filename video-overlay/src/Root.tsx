@@ -1,7 +1,11 @@
 import "./index.css";
 import { CalculateMetadataFunction, Composition, staticFile } from "remotion";
 import { Input, ALL_FORMATS, UrlSource } from "mediabunny";
-import { PracticeQuestion, PracticeQuestionProps } from "./PracticeQuestion";
+import {
+  PracticeQuestion,
+  PracticeQuestionProps,
+  practiceQuestionSchema,
+} from "./PracticeQuestion";
 
 const FPS = 30;
 
@@ -30,7 +34,13 @@ export const RemotionRoot: React.FC = () => {
       fps={FPS}
       width={1080}
       height={1920}
-      defaultProps={{ videoFile: "input.mp4", srtFile: "input.srt" }}
+      schema={practiceQuestionSchema}
+      defaultProps={{
+        videoFile: "input.mp4",
+        srtFile: "input.srt",
+        captionStyle: "box" as const,
+        captionBottomPercent: 32,
+      }}
       calculateMetadata={calculateMetadata}
     />
   );

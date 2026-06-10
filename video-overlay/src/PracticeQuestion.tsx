@@ -12,16 +12,29 @@ import {
 import { Video } from "@remotion/media";
 import { parseSrt } from "@remotion/captions";
 import type { Caption } from "@remotion/captions";
+import { z } from "zod";
 import { applySpellingMap } from "./spelling-map";
+import { CAPTION_STYLES, CAPTION_STYLE_IDS } from "./caption-styles";
 
-export type PracticeQuestionProps = {
-  videoFile: string;
-  srtFile: string;
-};
+export const practiceQuestionSchema = z.object({
+  videoFile: z.string(),
+  srtFile: z.string(),
+  captionStyle: z.enum(CAPTION_STYLE_IDS),
+  // Distance of the caption block from the bottom edge, in % of video height.
+  // TikTok UI (caption text, buttons, progress bar) covers roughly the bottom
+  // quarter, so stay above ~28.
+  captionBottomPercent: z.number().min(0).max(80),
+});
 
-// One caption chunk. Pops in with a quick scale/fade; sits in the lower third
-// but above TikTok's UI safe zone (bottom ~20% is covered by captions/buttons).
-const CaptionChunk: React.FC<{ text: string }> = ({ text }) => {
+export type PracticeQuestionProps = z.infer<typeof practiceQuestionSchema>;
+
+// One caption chunk. Pops in with a quick scale/fade. Look comes from the
+// selected entry in CAPTION_STYLES; position from captionBottomPercent.
+const CaptionChunk: React.FC<{
+  text: string;
+  style: React.CSSProperties;
+  bottomPercent: number;
+}> = ({ text, style, bottomPercent }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -35,21 +48,13 @@ const CaptionChunk: React.FC<{ text: string }> = ({ text }) => {
     <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center" }}>
       <div
         style={{
-          marginBottom: "26%",
+          marginBottom: `${bottomPercent}%`,
           maxWidth: "82%",
           opacity: progress,
           transform: `scale(${0.92 + 0.08 * progress})`,
-          backgroundColor: "rgba(0, 0, 0, 0.55)",
-          borderRadius: 18,
-          padding: "14px 28px",
-          fontFamily:
-            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          fontSize: 54,
-          fontWeight: 800,
           lineHeight: 1.25,
-          color: "white",
           textAlign: "center",
-          textShadow: "0 2px 8px rgba(0,0,0,0.6)",
+          ...style,
         }}
       >
         {text}
@@ -61,6 +66,8 @@ const CaptionChunk: React.FC<{ text: string }> = ({ text }) => {
 export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   videoFile,
   srtFile,
+  captionStyle,
+  captionBottomPercent,
 }) => {
   const { fps } = useVideoConfig();
   const [captions, setCaptions] = useState<Caption[] | null>(null);
@@ -108,7 +115,11 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         );
         return (
           <Sequence key={i} from={from} durationInFrames={duration}>
-            <CaptionChunk text={cue.text} />
+            <CaptionChunk
+              text={cue.text}
+              style={CAPTION_STYLES[captionStyle]}
+              bottomPercent={captionBottomPercent}
+            />
           </Sequence>
         );
       })}
