@@ -102,7 +102,10 @@ competitor scorecards from Step 2. This runs unattended, so do NOT wait for hook
 the strongest hook and write the full script yourself. The skill returns a structured script
 (Hook, Build-Up, Value, Payoff, CTA) with a 3-second hook and visual cues; that script is the
 `body_md`. Then apply the brand hard rules to the output: strip any emojis, remove em dashes, and
-keep the no-fabrication rule (the script's `sources` array must still be non-empty). If the skill
+keep the no-fabrication rule (the script's `sources` array must still be non-empty). Spoken
+lines feed a TTS talking-head pipeline, so write pronunciations into the speech: "EPPP" as
+"E triple P" and "thepsychology.ai" as "the psychology dot ai" (captions/hashtags keep the
+normal spellings). If the skill
 is somehow unavailable, fall back to short-form best practice: a 3-second hook, one specific
 actionable idea, beat/visual cues, and a reciprocity CTA. ~150 words.
 **Blog (SEO):**
