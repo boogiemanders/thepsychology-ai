@@ -16,7 +16,8 @@
 // Usage: npx tsx scripts/marketing/generate-videos.ts [--dry-run]
 //
 // Env (.env.local): HEYGEN_API_KEY, HEYGEN_AVATAR_ID, HEYGEN_VOICE_ID
-// Optional: VIDEO_DAILY_CAP (default 12), VIDEO_OUTPUT_DIR (default Drive folder)
+// Optional: HEYGEN_ENGINE (default avatar_iv), VIDEO_DAILY_CAP (default 12),
+// VIDEO_OUTPUT_DIR (default Drive folder)
 
 import { createClient } from "@supabase/supabase-js"
 import { config } from "dotenv"
@@ -39,6 +40,15 @@ const OUTPUT_DIR =
   "/Users/anderschan/Library/CloudStorage/GoogleDrive-dranders@drinzinna.com/My Drive/thepsychology.ai marketing/videos"
 
 const HEYGEN_API = "https://api.heygen.com"
+// v3 rendering engine, set via HEYGEN_ENGINE for the avatar A/B test:
+//   "avatar_iv" = Avatar IV, the standard tier and the v3 default (cheapest engine
+//                 documented on v3, so it is our default and the budget arm)
+//   "avatar_v"  = Avatar V, the newest premium engine (more natural motion/lip-sync;
+//                 the avatar must be opted in / eligible for it)
+// Note: Avatar III ("avatar_iii") only exists on the old v1/v2 endpoints. The docs
+// say it is not accessible via v3, so it cannot be an arm here.
+// Docs: https://developers.heygen.com/models.md
+const HEYGEN_ENGINE = process.env.HEYGEN_ENGINE || "avatar_iv"
 const POLL_INTERVAL_MS = 15_000
 const POLL_TIMEOUT_MS = 20 * 60_000 // HeyGen renders can take a while at queue peaks
 // Soft sanity bound: ~90s of speech ≈ 225 words. Longer scripts still generate
@@ -88,27 +98,22 @@ async function notifySlack(text: string): Promise<void> {
 
 async function generateTalkingHeadVideo(spokenText: string, title: string): Promise<string> {
   const apiKey = process.env.HEYGEN_API_KEY!
-  const createRes = await fetch(`${HEYGEN_API}/v2/video/generate`, {
+  // v3 create endpoint (POST /v3/videos) replaces v2 /v2/video/generate.
+  // We do NOT use the Video Agent endpoint: it rewrites scripts, and these scripts
+  // are approved verbatim. The plain "script" field speaks the text as-is.
+  // resolution 720p + aspect_ratio 9:16 is the v3 way to ask for vertical 720x1280.
+  const createRes = await fetch(`${HEYGEN_API}/v3/videos`, {
     method: "POST",
-    headers: { "X-Api-Key": apiKey, "Content-Type": "application/json" },
+    headers: { "x-api-key": apiKey, "Content-Type": "application/json" },
     body: JSON.stringify({
+      type: "avatar",
       title: title.slice(0, 100),
-      video_inputs: [
-        {
-          character: {
-            type: "avatar",
-            avatar_id: process.env.HEYGEN_AVATAR_ID,
-            avatar_style: "normal",
-          },
-          voice: {
-            type: "text",
-            voice_id: process.env.HEYGEN_VOICE_ID,
-            input_text: spokenText,
-            speed: 1.0,
-          },
-        },
-      ],
-      dimension: { width: 720, height: 1280 }, // 9:16 vertical for TikTok/Reels
+      avatar_id: process.env.HEYGEN_AVATAR_ID,
+      voice_id: process.env.HEYGEN_VOICE_ID,
+      script: spokenText,
+      resolution: "720p",
+      aspect_ratio: "9:16",
+      engine: { type: HEYGEN_ENGINE },
     }),
   })
   const createBody = await createRes.json().catch(() => null)
@@ -122,10 +127,9 @@ async function generateTalkingHeadVideo(spokenText: string, title: string): Prom
   const deadline = Date.now() + POLL_TIMEOUT_MS
   while (Date.now() < deadline) {
     await new Promise((r) => setTimeout(r, POLL_INTERVAL_MS))
-    const statusRes = await fetch(
-      `${HEYGEN_API}/v1/video_status.get?video_id=${encodeURIComponent(videoId)}`,
-      { headers: { "X-Api-Key": apiKey } }
-    )
+    const statusRes = await fetch(`${HEYGEN_API}/v3/videos/${encodeURIComponent(videoId)}`, {
+      headers: { "x-api-key": apiKey },
+    })
     const statusBody = await statusRes.json().catch(() => null)
     const status = statusBody?.data?.status
     if (status === "completed") {
@@ -134,11 +138,13 @@ async function generateTalkingHeadVideo(spokenText: string, title: string): Prom
       return url
     }
     if (status === "failed") {
+      const code = statusBody?.data?.failure_code ?? "unknown"
+      const msg = statusBody?.data?.failure_message ?? "no failure_message"
       throw new Error(
-        `HeyGen render failed (video_id=${videoId}): ${JSON.stringify(statusBody?.data?.error)?.slice(0, 400)}`
+        `HeyGen render failed (video_id=${videoId}): [${code}] ${String(msg).slice(0, 400)}`
       )
     }
-    // waiting | pending | processing → keep polling
+    // pending | processing → keep polling
   }
   throw new Error(`HeyGen render timed out after ${POLL_TIMEOUT_MS / 60000}min (video_id=${videoId})`)
 }
