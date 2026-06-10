@@ -114,6 +114,10 @@ async function generateTalkingHeadVideo(spokenText: string, title: string): Prom
       resolution: "720p",
       aspect_ratio: "9:16",
       engine: { type: HEYGEN_ENGINE },
+      // Motion is per-request in v3, not stored on the avatar look. Docs:
+      // https://developers.heygen.com/photo-avatar.md
+      ...(process.env.HEYGEN_MOTION_PROMPT && { motion_prompt: process.env.HEYGEN_MOTION_PROMPT }),
+      ...(process.env.HEYGEN_EXPRESSIVENESS && { expressiveness: process.env.HEYGEN_EXPRESSIVENESS }),
     }),
   })
   const createBody = await createRes.json().catch(() => null)
