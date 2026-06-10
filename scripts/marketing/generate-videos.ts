@@ -96,12 +96,51 @@ async function notifySlack(text: string): Promise<void> {
 // Returns the URL of the rendered mp4. Throws with a descriptive message on
 // any API failure (caller marks the draft failed).
 
+// Pause control. The /v3/videos "script" field is plain text (no SSML flag in
+// its schema), but /v3/voices/speech accepts SSML on this voice (verified live).
+// So when a script needs pauses we render audio first with SSML <break> tags,
+// then create the video from that audio_url (schema-supported lip-sync path).
+// Authors can write "[pause]" or "[pause 2s]" inline; the signature line
+// "Pause to think of your answer." also gets an automatic 2s thinking beat.
+const SIGNATURE_PAUSE_LINE = "Pause to think of your answer."
+
+function buildSsml(text: string): { ssml: string; hasPauses: boolean } {
+  let hasPauses = false
+  let esc = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+  esc = esc.replace(/\[pause(?: ([\d.]+)s)?\]/gi, (_m, secs) => {
+    hasPauses = true
+    return `<break time="${secs || "1"}s"/>`
+  })
+  if (esc.includes(SIGNATURE_PAUSE_LINE)) {
+    hasPauses = true
+    esc = esc.split(SIGNATURE_PAUSE_LINE).join(`${SIGNATURE_PAUSE_LINE} <break time="2s"/>`)
+  }
+  return { ssml: `<speak>${esc}</speak>`, hasPauses }
+}
+
+async function renderSsmlAudio(ssml: string, apiKey: string): Promise<string> {
+  const res = await fetch(`${HEYGEN_API}/v3/voices/speech`, {
+    method: "POST",
+    headers: { "x-api-key": apiKey, "Content-Type": "application/json" },
+    body: JSON.stringify({ text: ssml, voice_id: process.env.HEYGEN_VOICE_ID, input_type: "ssml" }),
+  })
+  const body = await res.json().catch(() => null)
+  if (!res.ok || !body?.data?.audio_url) {
+    throw new Error(`HeyGen TTS (SSML) failed (${res.status}): ${JSON.stringify(body)?.slice(0, 300)}`)
+  }
+  return body.data.audio_url
+}
+
 async function generateTalkingHeadVideo(
   spokenText: string,
   title: string,
   idempotencyKey: string
 ): Promise<{ videoUrl: string; subtitleUrl: string | null }> {
   const apiKey = process.env.HEYGEN_API_KEY!
+  // Scripts with pause markers go audio-first (SSML TTS -> lip-sync); plain
+  // scripts use the simple text path.
+  const { ssml, hasPauses } = buildSsml(spokenText)
+  const audioUrl = hasPauses ? await renderSsmlAudio(ssml, apiKey) : null
   // v3 create endpoint (POST /v3/videos) replaces v2 /v2/video/generate.
   // We do NOT use the Video Agent endpoint: it rewrites scripts, and these scripts
   // are approved verbatim. The plain "script" field speaks the text as-is.
@@ -119,8 +158,10 @@ async function generateTalkingHeadVideo(
       type: "avatar",
       title: title.slice(0, 100),
       avatar_id: process.env.HEYGEN_AVATAR_ID,
-      voice_id: process.env.HEYGEN_VOICE_ID,
-      script: spokenText,
+      // audio_url is mutually exclusive with script/voice_id in the v3 schema.
+      ...(audioUrl
+        ? { audio_url: audioUrl }
+        : { voice_id: process.env.HEYGEN_VOICE_ID, script: spokenText }),
       resolution: "1080p",
       aspect_ratio: "9:16",
       engine: { type: HEYGEN_ENGINE },
