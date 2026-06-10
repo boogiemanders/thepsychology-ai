@@ -15,6 +15,7 @@ import type { Caption } from "@remotion/captions";
 import { z } from "zod";
 import { applySpellingMap } from "./spelling-map";
 import { CAPTION_STYLES, CAPTION_STYLE_IDS } from "./caption-styles";
+import { QuestionCard } from "./QuestionCard";
 
 export const practiceQuestionSchema = z.object({
   videoFile: z.string(),
@@ -24,6 +25,10 @@ export const practiceQuestionSchema = z.object({
   // TikTok UI (caption text, buttons, progress bar) covers roughly the bottom
   // quarter, so stay above ~28.
   captionBottomPercent: z.number().min(0).max(80),
+  // The exam question shown as a full-screen card while it is read aloud.
+  // Empty stem = no card (non-practice-question videos).
+  questionStem: z.string(),
+  choices: z.array(z.string()),
 });
 
 export type PracticeQuestionProps = z.infer<typeof practiceQuestionSchema>;
@@ -68,6 +73,8 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   srtFile,
   captionStyle,
   captionBottomPercent,
+  questionStem,
+  choices,
 }) => {
   const { fps } = useVideoConfig();
   const [captions, setCaptions] = useState<Caption[] | null>(null);
@@ -101,6 +108,30 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     });
   }, [captions]);
 
+  // The card covers the window from the first stem cue to the cue that opens
+  // the reveal ("The answer is..."), so question + choices + thinking pause
+  // all show the full exam-style screen. Located by text match against the
+  // transcript, so it survives timing differences between renders.
+  const norm = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const cardWindow = useMemo(() => {
+    if (!questionStem || cues.length === 0) return null;
+    const stemNorm = norm(questionStem);
+    const start = cues.find(
+      (c) => norm(c.text).length > 0 && stemNorm.startsWith(norm(c.text))
+    );
+    const end = cues.find((c) => norm(c.text).startsWith("the answer is"));
+    if (!start || !end || end.startMs <= start.startMs) return null;
+    return { fromMs: start.startMs, toMs: end.startMs };
+  }, [cues, questionStem]);
+
+  const cardFrom = cardWindow ? Math.round((cardWindow.fromMs / 1000) * fps) : 0;
+  const cardDuration = cardWindow
+    ? Math.round(((cardWindow.toMs - cardWindow.fromMs) / 1000) * fps)
+    : 0;
+
+  const inCardWindow = (ms: number) =>
+    cardWindow !== null && ms >= cardWindow.fromMs && ms < cardWindow.toMs;
+
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
       <Video
@@ -108,6 +139,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
       {cues.map((cue, i) => {
+        if (inCardWindow(cue.startMs)) return null;
         const from = Math.round((cue.startMs / 1000) * fps);
         const duration = Math.max(
           1,
@@ -123,6 +155,11 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           </Sequence>
         );
       })}
+      {cardWindow ? (
+        <Sequence from={cardFrom} durationInFrames={cardDuration}>
+          <QuestionCard stem={questionStem} choices={choices} />
+        </Sequence>
+      ) : null}
     </AbsoluteFill>
   );
 };

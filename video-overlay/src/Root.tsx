@@ -40,6 +40,14 @@ export const RemotionRoot: React.FC = () => {
         srtFile: "input.srt",
         captionStyle: "clean" as const,
         captionBottomPercent: 32,
+        questionStem:
+          "A court mandates that an individual convicted of domestic violence attend therapy as a condition of probation. During the course of treatment, the prosecution subpoenas the therapist's records. In this court-ordered treatment scenario, who holds the therapist-client privilege?",
+        choices: [
+          "The client retains privilege and can prevent disclosure of therapy records",
+          "The therapist holds privilege and decides whether to disclose records",
+          "Privilege is typically waived or significantly limited because treatment was court-ordered",
+          "The client's defense attorney holds privilege on behalf of the client",
+        ],
       }}
       calculateMetadata={calculateMetadata}
     />
