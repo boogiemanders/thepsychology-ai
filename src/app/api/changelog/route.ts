@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { CHANGELOG_ENTRIES, type ChangelogEntry } from '@/lib/changelog'
 import { filterAndSanitizeChangelogEntries } from '@/lib/changelog-display'
+import { displayChangelogTitle, redactSensitiveText } from '@/lib/changelog-humanize'
 
 type ApiChangelogEntry = {
   id: string
@@ -52,9 +53,17 @@ const EXCLUDED_CHANGELOG_AUTHORS = new Set(['katherine.archibald45'])
 
 function isExcludedChangelogAuthor(commit: GitHubCommit): boolean {
   const candidates = [commit.author?.login, commit.commit?.author?.name]
-  return candidates.some(
-    (c) => typeof c === 'string' && EXCLUDED_CHANGELOG_AUTHORS.has(c.trim().toLowerCase()),
-  )
+  return candidates.some((c) => {
+    if (typeof c !== 'string') return false
+    const normalized = c.trim().toLowerCase()
+    return (
+      EXCLUDED_CHANGELOG_AUTHORS.has(normalized) ||
+      // Claude / bot commits are internal automation
+      normalized === 'claude' ||
+      normalized === 'claude-bot' ||
+      normalized.includes('[bot]')
+    )
+  })
 }
 
 // Keywords to filter out from user-facing changelog (payment/billing and non-EPPP related)
@@ -71,6 +80,8 @@ const EXCLUDED_CHANGELOG_KEYWORDS = [
   'topic-content-v3', 'topic-content-v4',
   // Marketing/testimonials
   'testimonial',
+  // Internal test posts
+  'smoke test', 'smoke-test',
   // Internal compensation / employment agreement changes
   'didactic', 'licensed agreement', 'agreement v2', '90791', '90837',
 ]
@@ -123,14 +134,15 @@ const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
   /changelog.*filter/i,
   /hide.*commit/i,
   /remove.*github/i,
-  // Internal docs / protocol references
-  /^docs:/i,
-  /^chore:/i,
-  /^ci:/i,
-  /^build:/i,
-  /^refactor:/i,
-  /^style:/i,
-  /^test:/i,
+  // Internal docs / protocol references (with or without a (scope))
+  /^docs[(:]/i,
+  /^chore[(:]/i,
+  /^ci[(:]/i,
+  /^build[(:]/i,
+  /^refactor[(:]/i,
+  /^style[(:]/i,
+  /^test[(:]/i,
+  /^revert\b/i,
   /karpathy/i,
   /emotion code/i,
   /claude\.md/i,
@@ -198,7 +210,8 @@ function normalizeChangelogAuthor(author: string | null | undefined): string | n
 
   const normalized = trimmed.toLowerCase()
   if (CANONICAL_CHANGELOG_AUTHOR_ALIASES.has(normalized)) return CANONICAL_CHANGELOG_AUTHOR
-  return trimmed
+  // Never display anyone else's real name as a byline.
+  return null
 }
 
 function clampInt(value: string | null, fallback: number, min: number, max: number): number {
@@ -217,34 +230,8 @@ function toApiEntriesFromFallback(entries: ChangelogEntry[]): ApiChangelogEntry[
   }))
 }
 
-// Words that look capitalized but are NOT person names — don't redact these.
-const NON_NAME_CAPITALIZED_PAIRS = new Set([
-  'Block Design', 'Visual Puzzles', 'Visual Spatial', 'Verbal Comprehension',
-  'Fluid Reasoning', 'Working Memory', 'Processing Speed', 'Matrix Reasoning',
-  'Figure Weights', 'Digit Sequencing', 'Running Digits', 'Symbol Search',
-  'Symbol Span', 'Set Relations', 'Spatial Addition', 'Digits Forward',
-  'Digits Backward', 'Naming Speed', 'Letter Number', 'Letter-Number',
-  'Pearson Blue', 'Google Docs', 'Google Doc', 'Web Store', 'Chrome Web',
-  'Personal Timeline', 'Personal Profile', 'Test Date', 'Birth Date',
-  'Test Age', 'Last Name', 'First Name', 'Sample Item', 'Read Aloud',
-  'Total Raw', 'Raw Score', 'Scaled Score', 'Sum Score', 'Index Score',
-  'Composite Score', 'Critical Value', 'Base Rate', 'Set Errors',
-  'Rotation Errors', 'Dimension Errors', 'Time Bonus', 'Partial Score',
-  'Constructed Design', 'Picture Items', 'New York', 'Hong Kong',
-  'Los Angeles', 'San Francisco', 'United States', 'United Kingdom',
-])
-
-function redactPersonNames(text: string): string {
-  // Replace "FirstName LastName" patterns (two capitalized words) with [user]
-  // unless they're in the allowlist of known non-name phrases.
-  return text.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, (match) => {
-    if (NON_NAME_CAPITALIZED_PAIRS.has(match)) return match
-    return '[user]'
-  })
-}
-
 function sanitizeChangelogText(text: string): string {
-  return redactPersonNames(text)
+  return redactSensitiveText(text)
     .replace(/examsGPT\//gi, 'exams folder')
     .replace(/\bexamsGPT\b/gi, 'exams folder')
 }
@@ -266,12 +253,15 @@ function stripClaudeAttribution(message: string): string {
   return filtered.join('\n').trim()
 }
 
+// Returns the RAW title/body. Relevance filters run on the raw text (so
+// patterns like "reported by First Last" can still match), then the displayed
+// title is humanized + sanitized at the end and the body is dropped entirely.
 function normalizeCommitMessage(message: string): { title: string; body?: string } {
   const trimmed = stripClaudeAttribution(message).trim()
   if (!trimmed) return { title: 'Update' }
   const [firstLine, ...rest] = trimmed.split('\n')
-  const title = sanitizeChangelogText((firstLine || '').trim())
-  const body = sanitizeChangelogText(rest.join('\n').trim())
+  const title = (firstLine || '').trim()
+  const body = rest.join('\n').trim()
   return body ? { title, body } : { title }
 }
 
@@ -312,12 +302,6 @@ function commitTouchesEppp(detail: GitHubCommitDetail | null): boolean {
 function isUserRelevantEntry(entry: ApiChangelogEntry): boolean {
   const text = `${entry.title} ${entry.body || ''}`
   const normalizedText = text.toLowerCase()
-
-  // Exclude commits authored by Claude / bots — those are internal automation
-  const author = (entry.author || '').toLowerCase()
-  if (author === 'claude' || author === 'claude-bot' || author.includes('[bot]')) {
-    return false
-  }
 
   // Check keyword exclusions
   if (EXCLUDED_CHANGELOG_KEYWORDS.some(keyword => normalizedText.includes(keyword))) {
@@ -402,9 +386,15 @@ export async function GET(request: NextRequest) {
       })),
     )
 
+    // Commit bodies are free-form internal text (user feedback, names, emails
+    // can appear there), so they are never displayed — title, date, author only.
     const entries: ApiChangelogEntry[] = detailed
       .filter(({ detail }) => commitTouchesEppp(detail))
-      .map(({ entry }) => entry)
+      .map(({ entry }) => ({
+        ...entry,
+        title: displayChangelogTitle(entry.title),
+        body: undefined,
+      }))
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
     const payload: ApiChangelogResponse = {
