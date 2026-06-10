@@ -12,6 +12,10 @@ export type Topic =
 
 export type DraftStatus = "pending" | "approved" | "rejected" | "published" | "queued"
 
+// Talking-head video generation state (TikTok drafts only). null = not processed yet;
+// 'failed' rows are skipped — reset video_status to null to retry.
+export type VideoStatus = "generated" | "failed"
+
 // title + url are required. author/year/publication are optional and power the
 // APA reference list in the Slack approval card and the Obsidian note. When they
 // are missing the reference still renders (title leads, "n.d." for the year).
@@ -54,6 +58,10 @@ export type MarketingDraft = {
   published_at: string | null
   created_at: string
   decided_at: string | null
+  video_status: VideoStatus | null
+  video_path: string | null
+  video_error: string | null
+  video_generated_at: string | null
 }
 
 // Input shape the generation agent produces (a JSON file handed to submit-draft.ts).
