@@ -115,6 +115,11 @@ function buildSsml(text: string): { ssml: string; hasPauses: boolean } {
     hasPauses = true
     esc = esc.split(SIGNATURE_PAUSE_LINE).join(`${SIGNATURE_PAUSE_LINE} <break time="1s"/>`)
   }
+  // Reveal beat: "The answer is C." [pause] then the explanation.
+  esc = esc.replace(/(The answer is [A-D]\.)/g, (m) => {
+    hasPauses = true
+    return `${m} <break time="1s"/>`
+  })
   return { ssml: `<speak>${esc}</speak>`, hasPauses }
 }
 
