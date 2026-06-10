@@ -28,17 +28,27 @@ export const QuestionCard: React.FC<{
     easing: Easing.bezier(0.16, 1, 0.3, 1),
   });
 
+  // Content-sized panel over the video, not a full-screen takeover: the
+  // HeyGen footage stays visible above and below the card.
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: SITE_BG,
-        opacity: progress,
         justifyContent: "center",
-        padding: "0 84px",
-        fontFamily: "Geist, -apple-system, sans-serif",
-        color: "#fafafa",
+        alignItems: "center",
+        opacity: progress,
       }}
     >
+      <div
+        style={{
+          backgroundColor: SITE_BG,
+          borderRadius: 28,
+          width: "92%",
+          padding: "56px 48px",
+          fontFamily: "Geist, -apple-system, sans-serif",
+          color: "#fafafa",
+          boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
+        }}
+      >
       <div
         style={{
           fontSize: 46,
@@ -76,6 +86,7 @@ export const QuestionCard: React.FC<{
             <span>{choice}</span>
           </div>
         ))}
+        </div>
       </div>
     </AbsoluteFill>
   );
