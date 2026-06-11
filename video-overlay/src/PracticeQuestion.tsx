@@ -457,10 +457,12 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           inCardWindow(cue.startMs) ||
           inRevealWindow(cue.startMs) ||
           inWrongStrike(cue.startMs) ||
-          inEndCardWindow(cue.startMs) ||
-          inCueOverlay(cue.startMs)
+          inEndCardWindow(cue.startMs)
         )
           return null;
+        // Captions stay up during animation cues (founder rule); they just
+        // drop below the clip/diagram panel so the two never collide.
+        const underAnimation = inCueOverlay(cue.startMs);
         const from = Math.round((cue.startMs / 1000) * fps);
         const duration = Math.max(
           1,
@@ -471,7 +473,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
             <CaptionChunk
               text={cue.text}
               style={CAPTION_STYLES[captionStyle]}
-              bottomPercent={captionBottomPercent}
+              bottomPercent={underAnimation ? 20 : captionBottomPercent}
               // Stakes-word accent only in the opening hook ("...possible to
               // pass...") — later mentions of "pass" stay plain.
               accentPass={cue.startMs < 10000}
