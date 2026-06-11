@@ -12,6 +12,7 @@
     "@remotion/google-fonts": "^4.0.475",
     "@remotion/media": "4.0.475",
     "@remotion/tailwind-v4": "4.0.475",
+    "@remotion/webcodecs": "^4.0.475",
     "geist": "^1.7.2",
     "mediabunny": "^1.46.0",
     "react": "19.2.3",

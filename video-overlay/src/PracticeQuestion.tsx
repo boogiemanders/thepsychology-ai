@@ -13,7 +13,7 @@ import { Video } from "@remotion/media";
 import { parseSrt } from "@remotion/captions";
 import type { Caption } from "@remotion/captions";
 import { z } from "zod";
-import { applySpellingMap } from "./spelling-map";
+import { applySpellingMap, applySpellingToText } from "./spelling-map";
 import { CAPTION_STYLES, CAPTION_STYLE_IDS } from "./caption-styles";
 import { ACCENT, QuestionCard, SITE_BG } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
@@ -167,6 +167,10 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   // straight to the component (Remotion hands the component the input shape).
   animationCues = [],
 }) => {
+  // Card/strike text is parsed from the spoken script, so phonetic spellings
+  // ("ways four", "E triple P") must map back to written forms on screen.
+  questionStem = applySpellingToText(questionStem);
+  choices = choices.map(applySpellingToText);
   const { fps, durationInFrames } = useVideoConfig();
   const [captions, setCaptions] = useState<Caption[] | null>(null);
   const { delayRender, continueRender, cancelRender } = useDelayRender();
