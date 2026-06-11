@@ -417,9 +417,6 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     return out.filter((o) => o.toMs > o.fromMs);
   }, [animationCues, cues, cardWindow, revealWindow, wrongStrikes, endCardFromMs]);
 
-  const inCueOverlay = (ms: number) =>
-    cueOverlays.some((o) => ms >= o.fromMs && ms < o.toMs);
-
   // Founder rule: captions show at most 3 words at a time. HeyGen cues run
   // 3-6 words, so split each cue for DISPLAY only, dividing its time span by
   // word share. Overlay windows above keep matching the original cues (their
@@ -460,9 +457,6 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           inEndCardWindow(cue.startMs)
         )
           return null;
-        // Captions stay up during animation cues (founder rule); they just
-        // drop below the clip/diagram panel so the two never collide.
-        const underAnimation = inCueOverlay(cue.startMs);
         const from = Math.round((cue.startMs / 1000) * fps);
         const duration = Math.max(
           1,
@@ -473,7 +467,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
             <CaptionChunk
               text={cue.text}
               style={CAPTION_STYLES[captionStyle]}
-              bottomPercent={underAnimation ? 20 : captionBottomPercent}
+              bottomPercent={captionBottomPercent}
               // Stakes-word accent only in the opening hook ("...possible to
               // pass...") — later mentions of "pass" stay plain.
               accentPass={cue.startMs < 10000}

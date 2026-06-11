@@ -35,14 +35,14 @@ export const ClipCue: React.FC<{
         // below the chin instead: % padding resolves against width (1080),
         // so 96% puts the top at ~54% of the 1920 frame, clear of the open
         // mouth even when the head bobs.
-        paddingTop: "96%",
+        paddingTop: "7%",
       }}
     >
       <div
         style={{
           backgroundColor: SITE_BG,
           borderRadius: 28,
-          width: "58%",
+          width: "50%",
           padding: 22,
           fontFamily: "Geist, -apple-system, sans-serif",
           boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
