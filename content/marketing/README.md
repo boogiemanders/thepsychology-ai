@@ -85,6 +85,13 @@ The spoken text is extracted from `body_md` by `src/lib/marketing/video-script.t
 approved sentences). HeyGen is isolated behind one function in `generate-videos.ts` so a
 different provider (Seedance, OmniHuman) can swap in later.
 
+After each raw video lands, the script automatically renders the final cut via the
+`video-overlay/` Remotion project (chunked captions + the question card for
+practice-question scripts) and saves it next to the raw mp4 as `<name>_final.mp4`.
+If the overlay render fails the draft stays `generated` (raw video is already on Drive);
+it just logs + pings Slack. First run on a fresh checkout auto-runs `npm install` in
+`video-overlay/`. No SRT next to the mp4 = overlay skipped (captions impossible).
+
 ## Manual runs (for testing before scheduling)
 
 ```

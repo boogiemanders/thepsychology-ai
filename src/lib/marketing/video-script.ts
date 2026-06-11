@@ -77,3 +77,37 @@ export function estimateDurationSeconds(spokenText: string): number {
   const words = spokenText.split(/\s+/).filter(Boolean).length
   return Math.round((words / 150) * 60)
 }
+
+// Practice-question scripts (post-extractSpokenScript, so plain spoken lines):
+//
+//   Is it possible to pass the psychology licensure exam? Let's find out with a question on X.
+//   <stem, 1+ lines>
+//   A... <choice>   B... / C... / D... on the next three lines
+//   Pause to think of your answer.
+//   The answer is <letter>. ...
+//
+// The Remotion overlay shows the stem + choices as an on-screen card, so the
+// text must come out verbatim (only the "X... " prefixes are stripped; the
+// card renders its own letters). Returns null when the script is not this
+// shape (non-question videos get captions but no card).
+export function parsePracticeQuestion(
+  spokenText: string
+): { stem: string; choices: string[] } | null {
+  const lines = spokenText
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean)
+  // The four choice lines must be consecutive and in A-D order.
+  const choiceIdx = lines.findIndex((_, i) =>
+    ["A", "B", "C", "D"].every((letter, j) => lines[i + j]?.startsWith(`${letter}... `))
+  )
+  if (choiceIdx === -1) return null
+  const introIdx = lines.findIndex((l) => l.startsWith("Is it possible"))
+  if (introIdx === -1 || introIdx >= choiceIdx) return null
+  const stem = lines.slice(introIdx + 1, choiceIdx).join(" ")
+  if (!stem) return null
+  const choices = lines
+    .slice(choiceIdx, choiceIdx + 4)
+    .map((l) => l.slice("A... ".length))
+  return { stem, choices }
+}
