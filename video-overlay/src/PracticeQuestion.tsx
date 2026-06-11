@@ -247,13 +247,39 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   const inHookWindow = (ms: number) =>
     hookWindow !== null && ms >= hookWindow.fromMs && ms < hookWindow.toMs;
 
+  // Founder rule: captions show at most 3 words at a time. HeyGen cues run
+  // 3-6 words, so split each cue for DISPLAY only, dividing its time span by
+  // word share. Overlay windows above keep matching the original cues (their
+  // trigger phrases, "The answer is", "exam?", would not survive splitting).
+  const MAX_CAPTION_WORDS = 3;
+  const captionChunks = useMemo(
+    () =>
+      cues.flatMap((cue) => {
+        const words = cue.text.split(/\s+/).filter(Boolean);
+        if (words.length <= MAX_CAPTION_WORDS) return [cue];
+        const pieces: typeof cues = [];
+        const span = cue.endMs - cue.startMs;
+        for (let w = 0; w < words.length; w += MAX_CAPTION_WORDS) {
+          const slice = words.slice(w, w + MAX_CAPTION_WORDS);
+          pieces.push({
+            ...cue,
+            text: slice.join(" "),
+            startMs: cue.startMs + (span * w) / words.length,
+            endMs: cue.startMs + (span * Math.min(w + MAX_CAPTION_WORDS, words.length)) / words.length,
+          });
+        }
+        return pieces;
+      }),
+    [cues]
+  );
+
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
       <Video
         src={staticFile(videoFile)}
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
-      {cues.map((cue, i) => {
+      {captionChunks.map((cue, i) => {
         if (
           inCardWindow(cue.startMs) ||
           inRevealWindow(cue.startMs) ||
