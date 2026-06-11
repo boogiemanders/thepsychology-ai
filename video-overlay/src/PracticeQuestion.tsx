@@ -18,7 +18,6 @@ import { CAPTION_STYLES, CAPTION_STYLE_IDS } from "./caption-styles";
 import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
 import { EndCard } from "./EndCard";
-import { HookTitle } from "./HookTitle";
 import { WrongStrike } from "./WrongStrike";
 
 export const practiceQuestionSchema = z.object({
@@ -218,35 +217,6 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   const inWrongStrike = (ms: number) =>
     wrongStrikes.some((s) => ms >= s.fromMs && ms < s.toMs);
 
-  // Opening hook: when the video starts with "Is it possible...", the cues up
-  // to and including the "exam?" cue become one large accumulating title
-  // instead of chunked captions. Everything else outranks the hook, so its
-  // window is clamped to the start of any overlapping overlay (in practice
-  // they all come later).
-  const hookWindow = useMemo(() => {
-    if (cues.length === 0) return null;
-    if (!norm(cues[0].text).startsWith("is it possible")) return null;
-    const endIdx = cues.findIndex((c) => c.text.includes("exam?"));
-    if (endIdx === -1) return null;
-    const hookCues = cues.slice(0, endIdx + 1);
-    const fromMs = hookCues[0].startMs;
-    let toMs = hookCues[endIdx].endMs;
-    const caps = [
-      cardWindow?.fromMs,
-      revealWindow?.fromMs,
-      endCardFromMs ?? undefined,
-      ...wrongStrikes.map((s) => s.fromMs),
-    ];
-    for (const cap of caps) {
-      if (cap !== undefined && cap > fromMs && cap < toMs) toMs = cap;
-    }
-    if (toMs <= fromMs) return null;
-    return { fromMs, toMs, cues: hookCues };
-  }, [cues, cardWindow, revealWindow, endCardFromMs, wrongStrikes]);
-
-  const inHookWindow = (ms: number) =>
-    hookWindow !== null && ms >= hookWindow.fromMs && ms < hookWindow.toMs;
-
   // Founder rule: captions show at most 3 words at a time. HeyGen cues run
   // 3-6 words, so split each cue for DISPLAY only, dividing its time span by
   // word share. Overlay windows above keep matching the original cues (their
@@ -284,7 +254,6 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           inCardWindow(cue.startMs) ||
           inRevealWindow(cue.startMs) ||
           inWrongStrike(cue.startMs) ||
-          inHookWindow(cue.startMs) ||
           inEndCardWindow(cue.startMs)
         )
           return null;
@@ -303,21 +272,6 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           </Sequence>
         );
       })}
-      {hookWindow ? (
-        <Sequence
-          from={Math.round((hookWindow.fromMs / 1000) * fps)}
-          durationInFrames={Math.max(
-            1,
-            Math.round(((hookWindow.toMs - hookWindow.fromMs) / 1000) * fps)
-          )}
-        >
-          <HookTitle
-            cues={hookWindow.cues}
-            windowStartMs={hookWindow.fromMs}
-            bottomPercent={captionBottomPercent}
-          />
-        </Sequence>
-      ) : null}
       {wrongStrikes.map((s, i) => (
         <Sequence
           key={`strike-${i}`}
