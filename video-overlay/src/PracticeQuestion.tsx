@@ -18,6 +18,8 @@ import { CAPTION_STYLES, CAPTION_STYLE_IDS } from "./caption-styles";
 import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
 import { EndCard } from "./EndCard";
+import { HookTitle } from "./HookTitle";
+import { WrongStrike } from "./WrongStrike";
 
 export const practiceQuestionSchema = z.object({
   videoFile: z.string(),
@@ -34,6 +36,8 @@ export const practiceQuestionSchema = z.object({
 });
 
 export type PracticeQuestionProps = z.infer<typeof practiceQuestionSchema>;
+
+const REVEAL_SECONDS = 3.5;
 
 // One caption chunk. Pops in with a quick scale/fade. Look comes from the
 // selected entry in CAPTION_STYLES; position from captionBottomPercent.
@@ -145,10 +149,13 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     return null;
   }, [cues, questionStem, choices]);
 
-  const REVEAL_SECONDS = 3.5;
-  const revealWindow = reveal
-    ? { fromMs: reveal.fromMs, toMs: reveal.fromMs + REVEAL_SECONDS * 1000 }
-    : null;
+  const revealWindow = useMemo(
+    () =>
+      reveal
+        ? { fromMs: reveal.fromMs, toMs: reveal.fromMs + REVEAL_SECONDS * 1000 }
+        : null,
+    [reveal]
+  );
   const revealFrom = revealWindow
     ? Math.round((revealWindow.fromMs / 1000) * fps)
     : 0;
@@ -183,6 +190,63 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   const inEndCardWindow = (ms: number) =>
     endCardFromMs !== null && ms >= endCardFromMs;
 
+  // "X is wrong" explanation cues each get a strike-through moment: the named
+  // choice row slides in and gets crossed out for the cue's duration. Card and
+  // reveal outrank strikes, so any cue already inside those windows is skipped.
+  const wrongStrikes = useMemo(() => {
+    if (choices.length === 0) return [];
+    const out: { fromMs: number; toMs: number; index: number }[] = [];
+    for (const c of cues) {
+      const m = c.text.match(/\b([A-D]) is wrong/);
+      if (!m) continue;
+      const index = "ABCD".indexOf(m[1]);
+      if (index >= choices.length) continue;
+      const inCard =
+        cardWindow !== null &&
+        c.startMs >= cardWindow.fromMs &&
+        c.startMs < cardWindow.toMs;
+      const inReveal =
+        revealWindow !== null &&
+        c.startMs >= revealWindow.fromMs &&
+        c.startMs < revealWindow.toMs;
+      if (inCard || inReveal) continue;
+      out.push({ fromMs: c.startMs, toMs: c.endMs, index });
+    }
+    return out;
+  }, [cues, choices, cardWindow, revealWindow]);
+
+  const inWrongStrike = (ms: number) =>
+    wrongStrikes.some((s) => ms >= s.fromMs && ms < s.toMs);
+
+  // Opening hook: when the video starts with "Is it possible...", the cues up
+  // to and including the "exam?" cue become one large accumulating title
+  // instead of chunked captions. Everything else outranks the hook, so its
+  // window is clamped to the start of any overlapping overlay (in practice
+  // they all come later).
+  const hookWindow = useMemo(() => {
+    if (cues.length === 0) return null;
+    if (!norm(cues[0].text).startsWith("is it possible")) return null;
+    const endIdx = cues.findIndex((c) => c.text.includes("exam?"));
+    if (endIdx === -1) return null;
+    const hookCues = cues.slice(0, endIdx + 1);
+    const fromMs = hookCues[0].startMs;
+    let toMs = hookCues[endIdx].endMs;
+    const caps = [
+      cardWindow?.fromMs,
+      revealWindow?.fromMs,
+      endCardFromMs ?? undefined,
+      ...wrongStrikes.map((s) => s.fromMs),
+    ];
+    for (const cap of caps) {
+      if (cap !== undefined && cap > fromMs && cap < toMs) toMs = cap;
+    }
+    if (toMs <= fromMs) return null;
+    return { fromMs, toMs, cues: hookCues };
+  }, [cues, cardWindow, revealWindow, endCardFromMs, wrongStrikes]);
+
+  const inHookWindow = (ms: number) =>
+    hookWindow !== null && ms >= hookWindow.fromMs && ms < hookWindow.toMs;
+
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
       <Video
@@ -193,6 +257,8 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         if (
           inCardWindow(cue.startMs) ||
           inRevealWindow(cue.startMs) ||
+          inWrongStrike(cue.startMs) ||
+          inHookWindow(cue.startMs) ||
           inEndCardWindow(cue.startMs)
         )
           return null;
@@ -211,6 +277,33 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           </Sequence>
         );
       })}
+      {hookWindow ? (
+        <Sequence
+          from={Math.round((hookWindow.fromMs / 1000) * fps)}
+          durationInFrames={Math.max(
+            1,
+            Math.round(((hookWindow.toMs - hookWindow.fromMs) / 1000) * fps)
+          )}
+        >
+          <HookTitle
+            cues={hookWindow.cues}
+            windowStartMs={hookWindow.fromMs}
+            bottomPercent={captionBottomPercent}
+          />
+        </Sequence>
+      ) : null}
+      {wrongStrikes.map((s, i) => (
+        <Sequence
+          key={`strike-${i}`}
+          from={Math.round((s.fromMs / 1000) * fps)}
+          durationInFrames={Math.max(
+            1,
+            Math.round(((s.toMs - s.fromMs) / 1000) * fps)
+          )}
+        >
+          <WrongStrike letter={"ABCD"[s.index]} choice={choices[s.index]} />
+        </Sequence>
+      ))}
       {cardWindow ? (
         <Sequence from={cardFrom} durationInFrames={cardDuration}>
           <QuestionCard stem={questionStem} choices={choices} />
