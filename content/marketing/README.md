@@ -85,6 +85,31 @@ The spoken text is extracted from `body_md` by `src/lib/marketing/video-script.t
 approved sentences). HeyGen is isolated behind one function in `generate-videos.ts` so a
 different provider (Seedance, OmniHuman) can swap in later.
 
+## Pinterest references (Animation Reference board)
+
+Pulls the founder's Pinterest board into the vault folder
+`Claude Code Vault/raw/marketing/animation-references/` as `pin-<id>.<ext>` files plus a
+regenerated `_index.md`. Auth once, then pull on demand:
+
+```
+# one-time OAuth (opens the browser, saves tokens to .env.local)
+npx tsx scripts/marketing/pinterest-auth.ts
+
+# pull new pins (default board "Animation Reference"; --board "Name" to override)
+npx tsx scripts/marketing/pinterest-pull-board.ts
+```
+
+Setup notes:
+- The redirect URI `http://localhost:8085/` must be registered in the Pinterest app
+  settings (developers.pinterest.com) or the consent page will reject the request.
+- Needs `PINTEREST_APP_ID` and `PINTEREST_APP_SECRET` in `.env.local`. The auth script
+  adds `PINTEREST_ACCESS_TOKEN`, `PINTEREST_REFRESH_TOKEN`, `PINTEREST_TOKEN_EXPIRES_AT`.
+- The puller refreshes the access token automatically when it is within 7 days of
+  expiring (Pinterest access tokens last ~30 days, refresh tokens ~1 year, and the
+  refresh may rotate the refresh token, which gets saved back to `.env.local`).
+- Already-downloaded pins are skipped by pin id, so the earlier RSS pull is not
+  re-downloaded.
+
 ## Manual runs (for testing before scheduling)
 
 ```
