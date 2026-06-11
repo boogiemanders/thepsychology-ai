@@ -31,6 +31,17 @@ export type Source = {
 // behind the learned-voice notebook (content/marketing/voice-learnings.md).
 export type MarketingFeedbackKind = "feedback" | "approved"
 
+// One Remotion animation moment on a TikTok draft. Fires when the spoken
+// transcript contains `trigger`. Payload by type — diagram: {nodes, arrows,
+// labels?}; illustration: {image} or {prompt} (pipeline generates the art and
+// rewrites it to image); pullquote: {text}.
+// Rendering lives in video-overlay/src/PracticeQuestion.tsx.
+export type AnimationCue = {
+  trigger: string
+  type: "diagram" | "illustration" | "pullquote"
+  payload: Record<string, unknown>
+}
+
 export type BlogFrontmatter = {
   title: string
   slug: string
@@ -62,6 +73,9 @@ export type MarketingDraft = {
   video_path: string | null
   video_error: string | null
   video_generated_at: string | null
+  // Optional until the 20260611_add_animation_cues migration is applied —
+  // rows selected before then simply lack the key.
+  animation_cues?: AnimationCue[]
 }
 
 // Input shape the generation agent produces (a JSON file handed to submit-draft.ts).
@@ -76,6 +90,8 @@ export type DraftInput = {
   seo?: { keyword?: string; internal_links?: string[] }
   needs_review?: boolean
   review_notes?: string
+  // TikTok practice-question/explainer scripts only (1-3 cues).
+  animation_cues?: AnimationCue[]
 }
 
 export const DEFAULT_AUTHOR = "Dr. Anders Chan, Psy.D."

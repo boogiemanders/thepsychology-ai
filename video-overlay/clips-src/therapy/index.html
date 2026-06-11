@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=960, height=720" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 960px;
+        height: 720px;
+        overflow: hidden;
+        background: #18181b;
+      }
+      .ln {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .draw {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+      }
+      #threadDot {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="4.5"
+      data-width="960"
+      data-height="720"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="4.5"
+        data-track-index="1"
+      >
+        <svg id="art" width="960" height="720" viewBox="0 0 960 720">
+          <!-- floor -->
+          <path
+            id="floor"
+            class="ln draw"
+            pathLength="100"
+            d="M 120 596 C 320 588, 660 588, 850 596"
+            stroke="#71717a"
+            stroke-width="3"
+          />
+          <!-- therapist's armchair (left, facing right) -->
+          <path
+            class="ln draw chair"
+            pathLength="100"
+            d="M 158 596 L 154 408 C 152 366, 178 348, 206 354"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw chair"
+            pathLength="100"
+            d="M 206 442 C 248 432, 304 434, 342 448 C 354 454, 358 470, 352 482"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw chair"
+            pathLength="100"
+            d="M 352 482 L 354 596"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw chair"
+            pathLength="100"
+            d="M 160 560 C 220 570, 310 572, 352 564"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <!-- client's armchair (right, facing left) -->
+          <path
+            class="ln draw chair"
+            pathLength="100"
+            d="M 802 596 L 806 408 C 808 366, 782 348, 754 354"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw chair"
+            pathLength="100"
+            d="M 754 442 C 712 432, 656 434, 618 448 C 606 454, 602 470, 608 482"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw chair"
+            pathLength="100"
+            d="M 608 482 L 606 596"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw chair"
+            pathLength="100"
+            d="M 800 560 C 740 570, 650 572, 608 564"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <!-- side table + plant between them -->
+          <path
+            class="ln draw table"
+            pathLength="100"
+            d="M 420 502 C 436 493, 524 493, 540 502 C 524 511, 436 511, 420 502 Z"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw table"
+            pathLength="100"
+            d="M 479 511 L 476 588"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw table"
+            pathLength="100"
+            d="M 448 591 C 462 586, 494 586, 508 591"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw table"
+            pathLength="100"
+            d="M 452 468 C 468 461, 492 461, 508 468 L 502 498 C 490 502, 470 502, 458 498 Z"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw table"
+            pathLength="100"
+            d="M 480 462 C 478 442, 477 426, 480 410"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw table"
+            pathLength="100"
+            d="M 479 432 C 460 422, 450 404, 454 386 C 468 396, 478 412, 479 428"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw table"
+            pathLength="100"
+            d="M 481 424 C 498 414, 506 398, 503 382 C 490 390, 482 406, 481 420"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <!-- therapist (left): head, torso, arm with notepad -->
+          <circle
+            class="ln draw person"
+            pathLength="100"
+            cx="262"
+            cy="318"
+            r="23"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <path
+            class="ln draw person"
+            pathLength="100"
+            d="M 260 342 C 250 368, 246 398, 250 432"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <path
+            class="ln draw person"
+            pathLength="100"
+            d="M 254 366 C 280 380, 298 394, 310 410"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <path
+            class="ln draw person"
+            pathLength="100"
+            d="M 300 412 L 340 398"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <path
+            class="ln draw person"
+            pathLength="100"
+            d="M 306 424 L 346 410"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <!-- client (right): head, torso, gesturing arm -->
+          <circle
+            class="ln draw person"
+            pathLength="100"
+            cx="698"
+            cy="318"
+            r="23"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <path
+            class="ln draw person"
+            pathLength="100"
+            d="M 700 342 C 710 368, 714 398, 710 432"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <path
+            class="ln draw person"
+            pathLength="100"
+            d="M 704 366 C 678 378, 654 374, 636 358"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <path
+            class="ln draw person"
+            pathLength="100"
+            d="M 636 358 C 629 353, 627 346, 632 340"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <!-- the worked-through thought: one line that starts tangled over
+               the client and resolves into a calm coil over the therapist -->
+          <path
+            id="thread"
+            class="ln draw"
+            pathLength="100"
+            d="M 700 288 C 714 258, 738 244, 756 222 C 776 198, 752 170, 726 182 C 700 194, 712 226, 744 224 C 772 222, 778 192, 754 178 C 728 164, 696 176, 700 204 C 703 224, 734 230, 748 212 C 760 196, 740 186, 724 196 C 690 212, 668 200, 640 192 C 600 181, 576 196, 540 192 C 500 187, 480 172, 444 178 C 408 184, 392 198, 358 194 C 326 190, 314 176, 290 178 C 254 182, 230 178, 222 196 C 214 216, 238 230, 256 220 C 270 212, 268 196, 254 192 C 244 189, 238 196, 242 204"
+            stroke="#d97757"
+            stroke-width="4.5"
+          />
+          <circle id="threadDot" cx="242" cy="205" r="6" fill="#d97757" />
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Room draws in first, then the people.
+      tl.to("#floor", { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 0.05);
+      tl.to(".chair", { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut", stagger: 0.06 }, 0.15);
+      tl.to(".table", { strokeDashoffset: 0, duration: 0.45, ease: "power2.inOut", stagger: 0.05 }, 0.35);
+      tl.to(".person", { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut", stagger: 0.07 }, 0.6);
+
+      // The thread travels from the client's tangle to the therapist's calm
+      // coil — the one slow, deliberate move in the clip.
+      tl.to("#thread", { strokeDashoffset: 0, duration: 2.1, ease: "power1.inOut" }, 1.55);
+      tl.to("#threadDot", { opacity: 1, duration: 0.3, ease: "power2.out" }, 3.65);
+
+      // Barely-there drift so the hold never feels frozen.
+      tl.to("#art", { scale: 1.015, duration: 2.6, ease: "sine.inOut", transformOrigin: "50% 45%" }, 1.9);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

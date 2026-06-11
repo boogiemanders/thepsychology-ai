@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=960, height=720" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 960px;
+        height: 720px;
+        overflow: hidden;
+        background: #18181b;
+      }
+      .ln {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      /* pathLength="100" on every path lets dashoffset draw-on without
+         measuring real path lengths. */
+      .draw {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+      }
+      #ring,
+      .tick {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="4.5"
+      data-width="960"
+      data-height="720"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="4.5"
+        data-track-index="1"
+      >
+        <svg id="art" width="960" height="720" viewBox="0 0 960 720">
+          <!-- floor -->
+          <path
+            id="floor"
+            class="ln draw"
+            pathLength="100"
+            d="M 220 590 C 380 583, 600 583, 760 590"
+            stroke="#71717a"
+            stroke-width="3"
+          />
+          <!-- sound block: striker plate on a small pedestal -->
+          <g id="plate">
+            <path
+              class="ln draw plate-line"
+              pathLength="100"
+              d="M 384 462 C 396 447, 564 445, 576 461 C 566 476, 396 478, 384 462 Z"
+              stroke="#a1a1aa"
+              stroke-width="4"
+            />
+            <path
+              class="ln draw plate-line"
+              pathLength="100"
+              d="M 384 464 C 381 472, 383 479, 390 483 C 420 493, 543 493, 570 481 C 576 477, 578 470, 576 463"
+              stroke="#a1a1aa"
+              stroke-width="4"
+            />
+            <path
+              class="ln draw plate-line"
+              pathLength="100"
+              d="M 428 491 L 422 524 C 452 535, 510 536, 540 523 L 534 491"
+              stroke="#a1a1aa"
+              stroke-width="4"
+            />
+            <path
+              class="ln draw plate-line"
+              pathLength="100"
+              d="M 404 538 C 438 548, 522 549, 558 537"
+              stroke="#a1a1aa"
+              stroke-width="4"
+            />
+          </g>
+          <!-- impact accents (hidden until the strike) -->
+          <circle
+            id="ring"
+            cx="500"
+            cy="444"
+            r="70"
+            class="ln"
+            stroke="#d97757"
+            stroke-width="4"
+          />
+          <path
+            class="ln draw tick"
+            pathLength="100"
+            d="M 432 392 L 408 362"
+            stroke="#d97757"
+            stroke-width="5"
+          />
+          <path
+            class="ln draw tick"
+            pathLength="100"
+            d="M 474 374 L 468 338"
+            stroke="#d97757"
+            stroke-width="5"
+          />
+          <path
+            class="ln draw tick"
+            pathLength="100"
+            d="M 522 380 L 544 348"
+            stroke="#d97757"
+            stroke-width="5"
+          />
+          <!-- gavel: barrel is a vertical capsule in local coords, handle
+               along +x; static transform poses it tilted over the plate.
+               GSAP rotates #gavelPivot around the hand end of the handle. -->
+          <g id="gavelPivot">
+            <g transform="translate(452 372) rotate(-32)">
+              <path
+                class="ln draw gavel-line"
+                pathLength="100"
+                d="M -32 -56 C -34 -78, -26 -89, 0 -88 C 27 -88, 34 -77, 32 -55 L 32 56 C 33 78, 26 88, 0 88 C -27 89, -33 77, -32 56 Z"
+                stroke="#fafafa"
+                stroke-width="5"
+              />
+              <path
+                class="ln draw gavel-line"
+                pathLength="100"
+                d="M -32 -50 C -10 -55, 12 -55, 32 -51"
+                stroke="#fafafa"
+                stroke-width="4"
+              />
+              <path
+                class="ln draw gavel-line"
+                pathLength="100"
+                d="M -32 52 C -10 56, 12 56, 32 53"
+                stroke="#fafafa"
+                stroke-width="4"
+              />
+              <path
+                class="ln draw gavel-line"
+                pathLength="100"
+                d="M 34 2 C 88 -3, 142 2, 196 -1"
+                stroke="#fafafa"
+                stroke-width="5"
+              />
+              <circle
+                class="ln draw gavel-line"
+                pathLength="100"
+                cx="206"
+                cy="-1"
+                r="9"
+                stroke="#fafafa"
+                stroke-width="5"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Draw-on: floor, then block, then gavel. Fast, so the strike still
+      // lands inside a short overlay window.
+      tl.to("#floor", { strokeDashoffset: 0, duration: 0.45, ease: "power2.inOut" }, 0.05);
+      tl.to(".plate-line", { strokeDashoffset: 0, duration: 0.4, ease: "power2.inOut", stagger: 0.06 }, 0.1);
+      tl.to(".gavel-line", { strokeDashoffset: 0, duration: 0.42, ease: "power2.inOut", stagger: 0.05 }, 0.18);
+
+      // One calm strike: small raise, drop, settle. Pivot = hand position.
+      tl.to("#gavelPivot", { rotation: 14, svgOrigin: "618 267", duration: 0.32, ease: "power2.inOut" }, 0.62);
+      tl.to("#gavelPivot", { rotation: -2.5, svgOrigin: "618 267", duration: 0.14, ease: "power3.in" }, 0.94);
+      tl.to("#gavelPivot", { rotation: 0, svgOrigin: "618 267", duration: 0.45, ease: "power2.out" }, 1.08);
+
+      // Impact: one accent ring + three ticks, then gone. Block dips 4px.
+      tl.fromTo(
+        "#ring",
+        { scale: 0.35, opacity: 0.9, svgOrigin: "500 444" },
+        { scale: 1.5, opacity: 0, duration: 0.7, ease: "power2.out", immediateRender: false },
+        1.08
+      );
+      tl.set(".tick", { opacity: 1 }, 1.08);
+      tl.to(".tick", { strokeDashoffset: 0, duration: 0.22, ease: "power2.out", stagger: 0.03 }, 1.08);
+      tl.to(".tick", { opacity: 0, duration: 0.3, ease: "power1.out" }, 1.45);
+      tl.to("#plate", { y: 4, duration: 0.09, ease: "power2.out" }, 1.08);
+      tl.to("#plate", { y: 0, duration: 0.35, ease: "power2.out" }, 1.18);
+
+      // Calm hold: barely-there drift so the long tail never feels frozen.
+      tl.to("#art", { scale: 1.018, duration: 2.7, ease: "sine.inOut", transformOrigin: "50% 55%" }, 1.8);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

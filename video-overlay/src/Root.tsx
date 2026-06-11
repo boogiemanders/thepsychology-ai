@@ -48,6 +48,20 @@ export const RemotionRoot: React.FC = () => {
           "Privilege is typically waived or significantly limited because treatment was court-ordered",
           "The client's defense attorney holds privilege on behalf of the client",
         ],
+        animationCues: [
+          {
+            trigger: "keeps an interest",
+            type: "diagram" as const,
+            payload: {
+              nodes: ["Court", "Therapy", "Records"],
+              arrows: [
+                [0, 1],
+                [1, 2],
+              ],
+              labels: ["orders", "stays open to"],
+            },
+          },
+        ],
       }}
       calculateMetadata={calculateMetadata}
     />

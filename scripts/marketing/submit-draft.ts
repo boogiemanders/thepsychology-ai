@@ -49,6 +49,9 @@ async function main() {
     status: "pending" as const,
     needs_review: input.needs_review ?? false,
     review_notes: input.review_notes ?? null,
+    // Only included when present: the animation_cues column does not exist
+    // until the 20260611 migration runs, and inserts must keep working.
+    ...(input.animation_cues?.length ? { animation_cues: input.animation_cues } : {}),
   }
 
   const { data, error } = await supabase

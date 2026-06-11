@@ -32,7 +32,7 @@ import {
   estimateDurationSeconds,
   parsePracticeQuestion,
 } from "../../src/lib/marketing/video-script"
-import type { MarketingDraft } from "../../src/lib/marketing/types"
+import type { AnimationCue, MarketingDraft } from "../../src/lib/marketing/types"
 
 config({ path: ".env.local" })
 
@@ -237,7 +237,75 @@ async function downloadTo(url: string, filePath: string): Promise<void> {
 
 const OVERLAY_DIR = resolve(__dirname, "../../video-overlay")
 
-export function renderOverlay(mp4Path: string, srtPath: string, draft: MarketingDraft): string {
+// Every generated illustration cue shares the brand drawing style; the cue's
+// prompt only describes WHAT to draw.
+const ILLUSTRATION_STYLE_PREFIX =
+  "Hand-drawn editorial line illustration, loose confident ink strokes, minimal color " +
+  "with warm coral accents on dark charcoal background, in the style of calm " +
+  "tech-explainer visuals. No text in the image. "
+
+async function generateIllustration(prompt: string, outPath: string): Promise<void> {
+  const apiKey = process.env.OPENAI_API_KEY
+  if (!apiKey) throw new Error("OPENAI_API_KEY not set")
+  const res = await fetch("https://api.openai.com/v1/images/generations", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: "gpt-image-1",
+      prompt: ILLUSTRATION_STYLE_PREFIX + prompt,
+      size: "1024x1024",
+    }),
+  })
+  const body = await res.json().catch(() => null)
+  const b64 = body?.data?.[0]?.b64_json
+  if (!res.ok || !b64) {
+    throw new Error(
+      `OpenAI image generation failed (${res.status}): ${JSON.stringify(body)?.slice(0, 300)}`
+    )
+  }
+  writeFileSync(outPath, Buffer.from(b64, "base64"))
+}
+
+// Illustration cues authored as { prompt } need their art generated before the
+// render; the cue is rewritten to { image } pointing into public/. A failed
+// generation skips just that cue (warn + continue) — the render still happens.
+// Returns the resolved cue list plus the generated files (deleted after render
+// like the job mp4/srt).
+async function resolveAnimationCues(
+  cues: AnimationCue[],
+  draftId: string
+): Promise<{ cues: AnimationCue[]; generatedFiles: string[] }> {
+  const resolved: AnimationCue[] = []
+  const generatedFiles: string[] = []
+  let n = 0
+  for (const cue of cues) {
+    const prompt = cue.payload?.prompt
+    if (cue.type === "illustration" && !cue.payload?.image && typeof prompt === "string") {
+      n++
+      const rel = `illustrations/${draftId.slice(0, 8)}-${n}.png`
+      const abs = join(OVERLAY_DIR, "public", rel)
+      try {
+        mkdirSync(join(OVERLAY_DIR, "public", "illustrations"), { recursive: true })
+        await generateIllustration(prompt, abs)
+        generatedFiles.push(abs)
+        resolved.push({ ...cue, payload: { ...cue.payload, image: rel } })
+      } catch (err) {
+        console.warn(
+          `⚠️  illustration cue "${cue.trigger}" skipped: ${(err as Error).message.slice(0, 300)}`
+        )
+      }
+    } else {
+      resolved.push(cue)
+    }
+  }
+  return { cues: resolved, generatedFiles }
+}
+
+export async function renderOverlay(
+  mp4Path: string,
+  srtPath: string,
+  draft: MarketingDraft
+): Promise<string> {
   // The launchd automation checkout (~/thepsychology-ai-marketing) resets via
   // git, so video-overlay/node_modules may not exist on a first run there.
   if (!existsSync(join(OVERLAY_DIR, "node_modules"))) {
@@ -254,6 +322,12 @@ export function renderOverlay(mp4Path: string, srtPath: string, draft: Marketing
   copyFileSync(mp4Path, jobMp4)
   copyFileSync(srtPath, jobSrt)
 
+  // animation_cues only exists on the row once the 20260611 migration ran.
+  const { cues: animationCues, generatedFiles } = await resolveAnimationCues(
+    draft.animation_cues ?? [],
+    draft.id
+  )
+
   try {
     const parsed = parsePracticeQuestion(extractSpokenScript(draft.body_md))
     const props = {
@@ -263,6 +337,7 @@ export function renderOverlay(mp4Path: string, srtPath: string, draft: Marketing
       captionBottomPercent: 32,
       questionStem: parsed?.stem ?? "",
       choices: parsed?.choices ?? [],
+      animationCues,
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.
@@ -275,7 +350,7 @@ export function renderOverlay(mp4Path: string, srtPath: string, draft: Marketing
     copyFileSync(tmpOut, finalPath)
     return finalPath
   } finally {
-    for (const f of [jobMp4, jobSrt, tmpOut]) rmSync(f, { force: true })
+    for (const f of [jobMp4, jobSrt, tmpOut, ...generatedFiles]) rmSync(f, { force: true })
   }
 }
 
@@ -391,7 +466,7 @@ async function main() {
         console.warn(`⚠️  ${label}: no SRT on Drive, skipping overlay (captions impossible)`)
       } else {
         try {
-          const finalPath = renderOverlay(filePath, srtPath, draft)
+          const finalPath = await renderOverlay(filePath, srtPath, draft)
           console.log(`✅ ${label} final → ${finalPath}`)
           finals++
         } catch (overlayErr) {
