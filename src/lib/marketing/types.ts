@@ -34,11 +34,12 @@ export type MarketingFeedbackKind = "feedback" | "approved"
 // One Remotion animation moment on a TikTok draft. Fires when the spoken
 // transcript contains `trigger`. Payload by type — diagram: {nodes, arrows,
 // labels?}; illustration: {image} or {prompt} (pipeline generates the art and
-// rewrites it to image); pullquote: {text}.
+// rewrites it to image); pullquote: {text}; clip: {video} (pre-rendered mp4
+// under video-overlay/public/, e.g. clips/studying.mp4).
 // Rendering lives in video-overlay/src/PracticeQuestion.tsx.
 export type AnimationCue = {
   trigger: string
-  type: "diagram" | "illustration" | "pullquote"
+  type: "diagram" | "illustration" | "pullquote" | "clip"
   payload: Record<string, unknown>
 }
 

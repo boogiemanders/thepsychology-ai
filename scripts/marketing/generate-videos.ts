@@ -330,6 +330,20 @@ export async function renderOverlay(
 
   try {
     const parsed = parsePracticeQuestion(extractSpokenScript(draft.body_md))
+    // Founder-standing rule: every practice-question script opens on the
+    // "psychology licensure exam" hook line, so every one of those videos
+    // gets the studying clip there. Draft-authored cues come after; the
+    // cue windowing in PracticeQuestion.tsx already prevents overlap
+    // stacking (an earlier cue hands off when the next one starts).
+    const standingCues: AnimationCue[] = parsed
+      ? [
+          {
+            trigger: "psychology licensure exam",
+            type: "clip",
+            payload: { video: "clips/studying.mp4" },
+          },
+        ]
+      : []
     const props = {
       videoFile: `${jobId}.mp4`,
       srtFile: `${jobId}.srt`,
@@ -337,7 +351,7 @@ export async function renderOverlay(
       captionBottomPercent: 32,
       questionStem: parsed?.stem ?? "",
       choices: parsed?.choices ?? [],
-      animationCues,
+      animationCues: [...standingCues, ...animationCues],
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.
