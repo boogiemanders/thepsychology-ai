@@ -109,6 +109,18 @@ any other test name or initialism the way it is actually said aloud (captions/ha
 the normal spellings). If the skill
 is somehow unavailable, fall back to short-form best practice: a 3-second hook, one specific
 actionable idea, beat/visual cues, and a reciprocity CTA. ~150 words.
+**TikTok animation cues:** for practice-question or explainer scripts, also emit an
+`animation_cues` array (1-3 cues) on the draft JSON. Each cue is
+`{ "trigger": "...", "type": "diagram" | "illustration" | "pullquote", "payload": { ... } }`:
+- `trigger` = an exact 2-4 word phrase copied from the spoken script. The video overlay fires
+  the cue at the moment that phrase is spoken, so it must appear verbatim in the script.
+- `diagram` for a relationship between 2-3 things: payload
+  `{ "nodes": ["Court", "Therapy"], "arrows": [[0, 1]], "labels": ["orders"] }` (labels optional,
+  one per arrow, a short verb phrase).
+- `illustration` for the single most memorable concept image in the script: payload
+  `{ "prompt": "what to draw", "caption": "optional one-liner" }`. Describe only the scene; the
+  pipeline adds the house drawing style and generates the art.
+- `pullquote` for one key sentence worth staring at: payload `{ "text": "the sentence" }`.
 **Blog (SEO):**
 - Pick ONE target keyword (real search phrase a psychologist/EPPP candidate would type).
 - Keyword in the title, the first 100 words, and the meta description.

@@ -16,7 +16,10 @@ import { SITE_BG } from "./QuestionCard";
 export const WrongStrike: React.FC<{
   letter: string;
   choice: string;
-}> = ({ letter, choice }) => {
+  // Short why-it's-wrong clause extracted from the transcript (see
+  // PracticeQuestion). Rendered dimmed under the struck row, no strike.
+  reason?: string;
+}> = ({ letter, choice, reason }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const ease = Easing.bezier(0.16, 1, 0.3, 1);
@@ -27,6 +30,12 @@ export const WrongStrike: React.FC<{
     easing: ease,
   });
   const strike = interpolate(frame, [0.25 * fps, 0.65 * fps], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: ease,
+  });
+  // Reason fades in as the strike sweep lands.
+  const reasonIn = interpolate(frame, [0.45 * fps, 0.85 * fps], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: ease,
@@ -104,6 +113,20 @@ export const WrongStrike: React.FC<{
             </span>
           </div>
         </div>
+        {reason ? (
+          <div
+            style={{
+              marginTop: 18,
+              fontSize: 30,
+              fontWeight: 400,
+              lineHeight: 1.4,
+              color: "#a1a1aa",
+              opacity: reasonIn,
+            }}
+          >
+            {reason}
+          </div>
+        ) : null}
       </div>
     </AbsoluteFill>
   );
