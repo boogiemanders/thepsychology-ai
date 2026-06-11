@@ -22,14 +22,16 @@ import { WrongStrike } from "./WrongStrike";
 import { DomainBadge } from "./DomainBadge";
 import { ConceptDiagram } from "./ConceptDiagram";
 import { IllustrationCue } from "./IllustrationCue";
+import { ClipCue } from "./ClipCue";
 
-// Script-authored animation moments. Each cue fires when a transcript cue's
-// normalized text contains the normalized trigger phrase; payload shape
-// depends on type (diagram: {nodes, arrows, labels?}, illustration:
-// {image, caption?}, pullquote: {text}).
+// Script-authored animation moments. Each cue fires at the transcript cue
+// where its normalized trigger phrase begins (the phrase may span several
+// short HeyGen cues); payload shape depends on type (diagram: {nodes, arrows,
+// labels?}, illustration: {image, caption?}, pullquote: {text}, clip:
+// {video, caption?} where video is a public-relative mp4 path).
 export const animationCueSchema = z.object({
   trigger: z.string(),
-  type: z.enum(["diagram", "illustration", "pullquote"]),
+  type: z.enum(["diagram", "illustration", "pullquote", "clip"]),
   payload: z.record(z.string(), z.any()),
 });
 
@@ -366,28 +368,53 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         ? [{ fromMs: endCardFromMs, toMs: Infinity }]
         : []),
     ];
+    // HeyGen cues run only 2-5 words, so trigger phrases regularly span cue
+    // boundaries. Match against the whole word stream and map the first word
+    // of the match back to its cue. Occurrences inside another overlay's
+    // window are skipped (e.g. the same phrase read aloud inside the card),
+    // so the next clean occurrence still fires.
+    const words: { word: string; cueIndex: number }[] = [];
+    cues.forEach((c, cueIndex) => {
+      for (const word of norm(c.text).split(" ")) {
+        if (word) words.push({ word, cueIndex });
+      }
+    });
+    const findTriggerMs = (trigger: string): number | null => {
+      const target = trigger.split(" ").filter(Boolean);
+      if (target.length === 0) return null;
+      for (let i = 0; i + target.length <= words.length; i++) {
+        if (!target.every((w, j) => words[i + j].word === w)) continue;
+        const fromMs = cues[words[i].cueIndex].startMs;
+        if (!overlayWindows.some((w) => fromMs >= w.fromMs && fromMs < w.toMs))
+          return fromMs;
+      }
+      return null;
+    };
     const out: { fromMs: number; toMs: number; cue: AnimationCue }[] = [];
     for (const cue of animationCues) {
-      const trigger = norm(cue.trigger);
-      if (!trigger) continue;
       // Malformed payloads are skipped, never rendered half-broken.
       if (cue.type === "diagram" && !Array.isArray(cue.payload.nodes)) continue;
       if (cue.type === "illustration" && typeof cue.payload.image !== "string")
         continue;
       if (cue.type === "pullquote" && typeof cue.payload.text !== "string")
         continue;
-      const hit = cues.find((c) => norm(c.text).includes(trigger));
-      if (!hit) continue;
-      const fromMs = hit.startMs;
-      if (overlayWindows.some((w) => fromMs >= w.fromMs && fromMs < w.toMs))
+      if (cue.type === "clip" && typeof cue.payload.video !== "string")
         continue;
+      const fromMs = findTriggerMs(norm(cue.trigger));
+      if (fromMs === null) continue;
       const nextWindowMs = Math.min(
         fromMs + ANIMATION_CUE_MAX_MS,
         ...overlayWindows.filter((w) => w.fromMs > fromMs).map((w) => w.fromMs)
       );
       out.push({ fromMs, toMs: nextWindowMs, cue });
     }
-    return out;
+    // Animation cues never stack: an earlier cue hands the panel off the
+    // moment the next one starts.
+    out.sort((a, b) => a.fromMs - b.fromMs);
+    for (let i = 0; i < out.length - 1; i++) {
+      out[i].toMs = Math.min(out[i].toMs, out[i + 1].fromMs);
+    }
+    return out.filter((o) => o.toMs > o.fromMs);
   }, [animationCues, cues, cardWindow, revealWindow, wrongStrikes, endCardFromMs]);
 
   const inCueOverlay = (ms: number) =>
@@ -470,6 +497,11 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           ) : o.cue.type === "illustration" ? (
             <IllustrationCue
               image={o.cue.payload.image as string}
+              caption={o.cue.payload.caption as string | undefined}
+            />
+          ) : o.cue.type === "clip" ? (
+            <ClipCue
+              video={o.cue.payload.video as string}
               caption={o.cue.payload.caption as string | undefined}
             />
           ) : (
