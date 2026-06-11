@@ -16,6 +16,9 @@ import { z } from "zod";
 import { applySpellingMap } from "./spelling-map";
 import { CAPTION_STYLES, CAPTION_STYLE_IDS } from "./caption-styles";
 import { QuestionCard } from "./QuestionCard";
+import { AnswerReveal } from "./AnswerReveal";
+import { EndCard } from "./EndCard";
+import { WrongStrike } from "./WrongStrike";
 
 export const practiceQuestionSchema = z.object({
   videoFile: z.string(),
@@ -32,6 +35,8 @@ export const practiceQuestionSchema = z.object({
 });
 
 export type PracticeQuestionProps = z.infer<typeof practiceQuestionSchema>;
+
+const REVEAL_SECONDS = 3.5;
 
 // One caption chunk. Pops in with a quick scale/fade. Look comes from the
 // selected entry in CAPTION_STYLES; position from captionBottomPercent.
@@ -76,7 +81,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   questionStem,
   choices,
 }) => {
-  const { fps } = useVideoConfig();
+  const { fps, durationInFrames } = useVideoConfig();
   const [captions, setCaptions] = useState<Caption[] | null>(null);
   const { delayRender, continueRender, cancelRender } = useDelayRender();
   const [handle] = useState(() => delayRender("Loading SRT captions"));
@@ -129,8 +134,114 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     ? Math.round(((cardWindow.toMs - cardWindow.fromMs) / 1000) * fps)
     : 0;
 
+  // The reveal re-shows the card for ~3.5s with the correct row highlighted,
+  // starting at the "The answer is X" cue. The letter comes from the cue text
+  // itself, so it always matches what the avatar says.
+  const reveal = useMemo(() => {
+    if (!questionStem || cues.length === 0) return null;
+    for (const c of cues) {
+      const m = norm(c.text).match(/^the answer is ([a-d])\b/);
+      if (!m) continue;
+      const index = "abcd".indexOf(m[1]);
+      return index < choices.length ? { fromMs: c.startMs, index } : null;
+    }
+    return null;
+  }, [cues, questionStem, choices]);
+
+  const revealWindow = useMemo(
+    () =>
+      reveal
+        ? { fromMs: reveal.fromMs, toMs: reveal.fromMs + REVEAL_SECONDS * 1000 }
+        : null,
+    [reveal]
+  );
+  const revealFrom = revealWindow
+    ? Math.round((revealWindow.fromMs / 1000) * fps)
+    : 0;
+  const revealDuration = revealWindow
+    ? Math.max(
+        1,
+        Math.min(Math.round(REVEAL_SECONDS * fps), durationInFrames - revealFrom)
+      )
+    : 0;
+
+  // Final CTA cue: the last cue containing the site URL (spoken or written
+  // form). The end card runs from there to the end of the video.
+  const endCardFromMs = useMemo(() => {
+    for (let i = cues.length - 1; i >= 0; i--) {
+      const t = norm(cues[i].text);
+      if (t.includes("thepsychology ai") || t.includes("the psychology dot ai")) {
+        return cues[i].startMs;
+      }
+    }
+    return null;
+  }, [cues]);
+
+  const endCardFrom =
+    endCardFromMs !== null ? Math.round((endCardFromMs / 1000) * fps) : 0;
+  const endCardDuration =
+    endCardFromMs !== null ? Math.max(1, durationInFrames - endCardFrom) : 0;
+
   const inCardWindow = (ms: number) =>
     cardWindow !== null && ms >= cardWindow.fromMs && ms < cardWindow.toMs;
+  const inRevealWindow = (ms: number) =>
+    revealWindow !== null && ms >= revealWindow.fromMs && ms < revealWindow.toMs;
+  const inEndCardWindow = (ms: number) =>
+    endCardFromMs !== null && ms >= endCardFromMs;
+
+  // "X is wrong" explanation cues each get a strike-through moment: the named
+  // choice row slides in and gets crossed out for the cue's duration. Card and
+  // reveal outrank strikes, so any cue already inside those windows is skipped.
+  const wrongStrikes = useMemo(() => {
+    if (choices.length === 0) return [];
+    const out: { fromMs: number; toMs: number; index: number }[] = [];
+    for (const c of cues) {
+      const m = c.text.match(/\b([A-D]) is wrong/);
+      if (!m) continue;
+      const index = "ABCD".indexOf(m[1]);
+      if (index >= choices.length) continue;
+      const inCard =
+        cardWindow !== null &&
+        c.startMs >= cardWindow.fromMs &&
+        c.startMs < cardWindow.toMs;
+      const inReveal =
+        revealWindow !== null &&
+        c.startMs >= revealWindow.fromMs &&
+        c.startMs < revealWindow.toMs;
+      if (inCard || inReveal) continue;
+      out.push({ fromMs: c.startMs, toMs: c.endMs, index });
+    }
+    return out;
+  }, [cues, choices, cardWindow, revealWindow]);
+
+  const inWrongStrike = (ms: number) =>
+    wrongStrikes.some((s) => ms >= s.fromMs && ms < s.toMs);
+
+  // Founder rule: captions show at most 3 words at a time. HeyGen cues run
+  // 3-6 words, so split each cue for DISPLAY only, dividing its time span by
+  // word share. Overlay windows above keep matching the original cues (their
+  // trigger phrases, "The answer is", "exam?", would not survive splitting).
+  const MAX_CAPTION_WORDS = 3;
+  const captionChunks = useMemo(
+    () =>
+      cues.flatMap((cue) => {
+        const words = cue.text.split(/\s+/).filter(Boolean);
+        if (words.length <= MAX_CAPTION_WORDS) return [cue];
+        const pieces: typeof cues = [];
+        const span = cue.endMs - cue.startMs;
+        for (let w = 0; w < words.length; w += MAX_CAPTION_WORDS) {
+          const slice = words.slice(w, w + MAX_CAPTION_WORDS);
+          pieces.push({
+            ...cue,
+            text: slice.join(" "),
+            startMs: cue.startMs + (span * w) / words.length,
+            endMs: cue.startMs + (span * Math.min(w + MAX_CAPTION_WORDS, words.length)) / words.length,
+          });
+        }
+        return pieces;
+      }),
+    [cues]
+  );
 
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
@@ -138,8 +249,14 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         src={staticFile(videoFile)}
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
-      {cues.map((cue, i) => {
-        if (inCardWindow(cue.startMs)) return null;
+      {captionChunks.map((cue, i) => {
+        if (
+          inCardWindow(cue.startMs) ||
+          inRevealWindow(cue.startMs) ||
+          inWrongStrike(cue.startMs) ||
+          inEndCardWindow(cue.startMs)
+        )
+          return null;
         const from = Math.round((cue.startMs / 1000) * fps);
         const duration = Math.max(
           1,
@@ -155,9 +272,38 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           </Sequence>
         );
       })}
+      {wrongStrikes.map((s, i) => (
+        <Sequence
+          key={`strike-${i}`}
+          from={Math.round((s.fromMs / 1000) * fps)}
+          durationInFrames={Math.max(
+            1,
+            Math.round(((s.toMs - s.fromMs) / 1000) * fps)
+          )}
+        >
+          <WrongStrike letter={"ABCD"[s.index]} choice={choices[s.index]} />
+        </Sequence>
+      ))}
       {cardWindow ? (
         <Sequence from={cardFrom} durationInFrames={cardDuration}>
           <QuestionCard stem={questionStem} choices={choices} />
+        </Sequence>
+      ) : null}
+      {reveal ? (
+        <Sequence from={revealFrom} durationInFrames={revealDuration}>
+          <AnswerReveal
+            stem={questionStem}
+            choices={choices}
+            correctIndex={reveal.index}
+            // No card on screen before the reveal (stem cue not found):
+            // play the entrance fade instead of continuing seamlessly.
+            animateIn={cardWindow === null}
+          />
+        </Sequence>
+      ) : null}
+      {endCardFromMs !== null ? (
+        <Sequence from={endCardFrom} durationInFrames={endCardDuration}>
+          <EndCard bottomPercent={captionBottomPercent} />
         </Sequence>
       ) : null}
     </AbsoluteFill>
