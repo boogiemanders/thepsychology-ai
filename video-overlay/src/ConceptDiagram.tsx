@@ -39,7 +39,7 @@ export const ConceptDiagram: React.FC<{
   const arrowIn = (i: number) => t(0.95 + i * 0.5, 0.55);
 
   // Fixed SVG geometry per arrow cell; the line reveals via dash offset.
-  const AW = 168;
+  const AW = 132;
   const AH = 44;
   const x1 = 8;
   const x2 = AW - 22;
@@ -62,7 +62,7 @@ export const ConceptDiagram: React.FC<{
           backgroundColor: SITE_BG,
           borderRadius: 28,
           width: "92%",
-          padding: "56px 44px",
+          padding: "48px 34px",
           fontFamily: "Geist, -apple-system, sans-serif",
           boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
           opacity: panel,
@@ -138,11 +138,15 @@ export const ConceptDiagram: React.FC<{
                   backgroundColor: "#27272a",
                   border: "1px solid #3f3f46",
                   borderRadius: 18,
-                  padding: "26px 34px",
-                  fontSize: 38,
+                  padding: "22px 26px",
+                  fontSize: 33,
                   fontWeight: 600,
                   color: "#fafafa",
-                  whiteSpace: "nowrap",
+                  // Wrap to a second line instead of spilling past the panel:
+                  // node phrases can be 1-3 words, so a fixed width would clip.
+                  maxWidth: 168,
+                  textAlign: "center",
+                  lineHeight: 1.15,
                   opacity: np,
                   transform: `translateY(${(1 - np) * 14}px)`,
                 }}

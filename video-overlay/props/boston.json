@@ -1,0 +1,33 @@
+{
+ "videoFile": "boston.mp4",
+ "srtFile": "boston.srt",
+ "captionStyle": "clean",
+ "captionBottomPercent": 32,
+ "questionStem": "A senior neuropsychologist is supervising a postdoc who, during a ways four Block Design administration, continued past the standard discontinue rule, gave the patient extra time on one item, and offered a non-standard cue to observe problem-solving strategy. The supervisor recognizes this as deliberate methodology, not error. Which approach is the postdoc using?",
+ "choices": [
+  "Halstead-Reitan fixed battery approach",
+  "Luria-Nebraska standardized approach",
+  "Boston Process Approach",
+  "Computerized adaptive testing"
+ ],
+ "animationCues": [
+  {
+   "trigger": "psychology licensure exam",
+   "type": "clip",
+   "payload": { "video": "clips/studying.mp4" }
+  },
+  {
+   "trigger": "on the fly",
+   "type": "diagram",
+   "payload": {
+    "nodes": ["Standard test", "Modify live", "See strategy"],
+    "arrows": [[0, 1], [1, 2]]
+   }
+  },
+  {
+   "trigger": "rigid protocol",
+   "type": "pullquote",
+   "payload": { "text": "Adaptive testing still follows a rigid protocol." }
+  }
+ ]
+}

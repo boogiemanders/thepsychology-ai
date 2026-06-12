@@ -279,28 +279,62 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   const inEndCardWindow = (ms: number) =>
     endCardFromMs !== null && ms >= endCardFromMs;
 
-  // "X is wrong" explanation cues each get a strike-through moment: the named
-  // choice row slides in and gets crossed out for the cue's duration. Card and
-  // reveal outrank strikes, so any cue already inside those windows is skipped.
+  // Elimination cues each get a strike-through moment: the named choice row
+  // slides in and gets crossed out while the avatar explains why it is wrong.
+  // Card and reveal outrank strikes, so any cue inside those windows is
+  // skipped. The scripts phrase eliminations many ways, so detection covers a
+  // conservative, deterministic set:
+  //   single  "<L> is wrong" / "<L> is incorrect" / "<L> fails"
+  //           ("So A is wrong" is covered — the letter is still a word match)
+  //   pair    "<L> and <L> are wrong/incorrect" / "... fail" / "... lag"
+  //   pair    "<L> and <L> are <phrase>" only when that phrase reads as a
+  //           ruling-out (ELIMINATIVE below). If unsure we skip: the reveal
+  //           already dimmed the wrong rows, so a missed strike is harmless.
   //
   // Each strike also carries a short reason chip: the clause spoken right
-  // after "is wrong". HeyGen cues run only 2-5 words, so the clause keeps
+  // after the verdict. HeyGen cues run only 2-5 words, so the clause keeps
   // absorbing following cues until the sentence ends or 9 words are in hand,
-  // then clamps to 9 whole words ("..." only when something was cut).
+  // then clamps to 9 whole words ("..." only when something was cut). The
+  // strike holds for the whole clause so it stays up while the reason is read.
   const wrongStrikes = useMemo(() => {
     if (choices.length === 0) return [];
-    const out: {
-      fromMs: number;
-      toMs: number;
-      index: number;
-      reason?: string;
-    }[] = [];
+    type Strike = { fromMs: number; toMs: number; index: number; reason?: string };
+    const out: Strike[] = [];
+
+    // Words that mark a choice as ruled out. Only used to confirm the
+    // "<L> and <L> are <phrase>" pattern, which names two choices without an
+    // explicit "wrong/fail/lag" verb (e.g. "A and B are fixed batteries that
+    // must stay standardized"). Conservative on purpose.
+    const ELIMINATIVE =
+      /\b(wrong|incorrect|fails?|lags?|trap|rigid|fixed|standardi[sz]ed|must (?:stay|remain|be)|not|never|cannot|can'?t|only|too|less|fall short|falls short|lacks?|ineffective|counterproductive|wors[et])\b/i;
+
+    // Why-it's-wrong clause spoken after `afterText`, absorbing following short
+    // cues until the sentence ends or 9 words land. Returns the clause and the
+    // end of the last cue it consumed (so the strike spans the explanation).
+    const clauseFrom = (afterText: string, startIdx: number) => {
+      let words = afterText.split(/\s+/).filter(Boolean);
+      let lastIdx = startIdx;
+      for (
+        let j = startIdx + 1;
+        words.length < 9 &&
+        j < cues.length &&
+        !/[.;!?]$/.test(words[words.length - 1] ?? "");
+        j++
+      ) {
+        words = words.concat(cues[j].text.split(/\s+/).filter(Boolean));
+        lastIdx = j;
+      }
+      const clamped = words.length > 9;
+      const reason = clamped
+        ? `${words.slice(0, 9).join(" ").replace(/[,;:]$/, "")}...`
+        : words.join(" ");
+      // Drop a leading verdict verb so the chip reads as the explanation only.
+      const display = reason.replace(/^(are (?:wrong|incorrect)|fails?|lags?|are)\b[,.:;\s]*/i, "");
+      return { reason: display || undefined, clauseEndMs: cues[lastIdx].endMs };
+    };
+
     for (let i = 0; i < cues.length; i++) {
       const c = cues[i];
-      const m = c.text.match(/\b([A-D]) is wrong/);
-      if (!m) continue;
-      const index = "ABCD".indexOf(m[1]);
-      if (index >= choices.length) continue;
       const inCard =
         cardWindow !== null &&
         c.startMs >= cardWindow.fromMs &&
@@ -311,33 +345,56 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         c.startMs < revealWindow.toMs;
       if (inCard || inReveal) continue;
 
-      const after = c.text
-        .slice(c.text.indexOf(m[0]) + m[0].length)
-        .replace(/^[,.:;\s]+/, "");
-      let words = after.split(/\s+/).filter(Boolean);
-      for (
-        let j = i + 1;
-        words.length < 9 &&
-        j < cues.length &&
-        !/[.;!?]$/.test(words[words.length - 1] ?? "");
-        j++
-      ) {
-        words = words.concat(cues[j].text.split(/\s+/).filter(Boolean));
+      // Pair first: "<L> and <L>" + an eliminative verdict.
+      const pair = c.text.match(/\b([A-D]) and ([A-D])\b/);
+      if (pair) {
+        const i1 = "ABCD".indexOf(pair[1]);
+        const i2 = "ABCD".indexOf(pair[2]);
+        const after = c.text
+          .slice(c.text.indexOf(pair[0]) + pair[0].length)
+          .replace(/^[,.:;\s]+/, "");
+        const { reason, clauseEndMs } = clauseFrom(after, i);
+        const explicit = /^(?:are (?:wrong|incorrect)|fails?|lags?)\b/i.test(after);
+        const ruledOut = /^are\b/i.test(after) && ELIMINATIVE.test(after + " " + (reason ?? ""));
+        if (
+          (explicit || ruledOut) &&
+          i1 >= 0 &&
+          i2 >= 0 &&
+          i1 !== i2 &&
+          i1 < choices.length &&
+          i2 < choices.length
+        ) {
+          // Two sequential windows so the strikes never stack: first letter
+          // holds the first half of the clause, second letter the rest.
+          const mid = Math.round((c.startMs + clauseEndMs) / 2);
+          out.push({ fromMs: c.startMs, toMs: mid, index: i1, reason });
+          out.push({ fromMs: mid, toMs: clauseEndMs, index: i2, reason });
+          continue;
+        }
       }
-      const clamped = words.length > 9;
-      const reason = clamped
-        ? `${words.slice(0, 9).join(" ").replace(/[,;:]$/, "")}...`
-        : words.join(" ");
 
-      out.push({
-        fromMs: c.startMs,
-        toMs: c.endMs,
-        index,
-        reason: reason || undefined,
-      });
+      // Single verdict.
+      const single = c.text.match(/\b([A-D]) (?:is wrong|is incorrect|fails?)\b/);
+      if (single) {
+        const index = "ABCD".indexOf(single[1]);
+        if (index < 0 || index >= choices.length) continue;
+        const after = c.text
+          .slice(c.text.indexOf(single[0]) + single[0].length)
+          .replace(/^[,.:;\s]+/, "");
+        const { reason, clauseEndMs } = clauseFrom(after, i);
+        out.push({ fromMs: c.startMs, toMs: clauseEndMs, index, reason });
+      }
     }
-    return out;
-  }, [cues, choices, cardWindow, revealWindow]);
+
+    // Strikes never overlap: clamp each to the next strike's start (and to the
+    // end card if one is set) so the windows play back to back.
+    out.sort((a, b) => a.fromMs - b.fromMs);
+    for (let i = 0; i < out.length; i++) {
+      if (i < out.length - 1) out[i].toMs = Math.min(out[i].toMs, out[i + 1].fromMs);
+      if (endCardFromMs !== null) out[i].toMs = Math.min(out[i].toMs, endCardFromMs);
+    }
+    return out.filter((s) => s.toMs > s.fromMs);
+  }, [cues, choices, cardWindow, revealWindow, endCardFromMs]);
 
   const inWrongStrike = (ms: number) =>
     wrongStrikes.some((s) => ms >= s.fromMs && ms < s.toMs);
