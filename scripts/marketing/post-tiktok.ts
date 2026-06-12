@@ -30,9 +30,11 @@ const supabase = createClient(
 const DRY_RUN = process.argv.includes("--dry-run")
 const PER_RUN_CAP = Number(process.env.TIKTOK_POSTS_PER_RUN || 2)
 
+// Same channel routing as generate-videos.ts: video approvals channel first,
+// #social-approvals as fallback until SLACK_WEBHOOK_VIDEO is configured.
 async function notifySlack(text: string): Promise<void> {
-  const webhook = process.env.SLACK_WEBHOOK_SOCIAL
-  if (!webhook) return console.warn("[slack] SLACK_WEBHOOK_SOCIAL not set, skipping notify")
+  const webhook = process.env.SLACK_WEBHOOK_VIDEO || process.env.SLACK_WEBHOOK_SOCIAL
+  if (!webhook) return console.warn("[slack] SLACK_WEBHOOK_VIDEO/SOCIAL not set, skipping notify")
   const res = await fetch(webhook, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
