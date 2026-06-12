@@ -5,7 +5,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { ACCENT, SITE_BG } from "./QuestionCard";
+import { ACCENT, BADGE_BG, FONT_GEIST, TEXT_PRIMARY } from "./design";
 
 // Small domain chip ("ETHICS") shown top-center while the avatar names the
 // question's domain ("...a question on ethics."), until the question card
@@ -40,16 +40,14 @@ export const DomainBadge: React.FC<{ domain: string }> = ({ domain }) => {
           style={{
             border: `4px solid ${ACCENT}`,
             borderRadius: 999,
-            // Slightly translucent site background keeps the chip legible
-            // over bright frames without reading as a solid card.
-            backgroundColor: `${SITE_BG}d9`,
+            backgroundColor: BADGE_BG,
             padding: "14px 38px",
-            fontFamily: "Geist, -apple-system, sans-serif",
+            fontFamily: FONT_GEIST,
             fontWeight: 600,
             fontSize: 34,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#fafafa",
+            color: TEXT_PRIMARY,
           }}
         >
           {domain}

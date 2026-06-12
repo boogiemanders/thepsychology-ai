@@ -1,5 +1,12 @@
 import type { CSSProperties } from "react";
 import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
+import {
+  CAPTION_COLOR,
+  CAPTION_FONT_SIZE,
+  CAPTION_FONT_SIZE_UPPER,
+  CAPTION_STROKE_COLOR,
+  CAPTION_YELLOW,
+} from "./design";
 import { loadFont as loadMontserrat } from "@remotion/google-fonts/Montserrat";
 import { loadFont as loadMarker } from "@remotion/google-fonts/PermanentMarker";
 
@@ -22,7 +29,7 @@ export type CaptionStyleId = (typeof CAPTION_STYLE_IDS)[number];
 // Picked in Remotion Studio (right panel) or via --props. Text stroke uses
 // paint-order so the outline sits behind the fill instead of eating it.
 const stroke = (width: number): CSSProperties => ({
-  WebkitTextStroke: `${width}px black`,
+  WebkitTextStroke: `${width}px ${CAPTION_STROKE_COLOR}`,
   paintOrder: "stroke fill",
 });
 
@@ -32,8 +39,8 @@ export const CAPTION_STYLES: Record<CaptionStyleId, CSSProperties> = {
   clean: {
     fontFamily: inter.fontFamily,
     fontWeight: 800,
-    fontSize: 54,
-    color: "white",
+    fontSize: CAPTION_FONT_SIZE,
+    color: CAPTION_COLOR,
     ...stroke(5),
     textShadow: "0 3px 10px rgba(0,0,0,0.55)",
   },
@@ -41,8 +48,8 @@ export const CAPTION_STYLES: Record<CaptionStyleId, CSSProperties> = {
   box: {
     fontFamily: inter.fontFamily,
     fontWeight: 800,
-    fontSize: 54,
-    color: "white",
+    fontSize: CAPTION_FONT_SIZE,
+    color: CAPTION_COLOR,
     backgroundColor: "rgba(0, 0, 0, 0.55)",
     borderRadius: 18,
     padding: "14px 28px",
@@ -52,8 +59,8 @@ export const CAPTION_STYLES: Record<CaptionStyleId, CSSProperties> = {
   outline: {
     fontFamily: montserrat.fontFamily,
     fontWeight: 900,
-    fontSize: 58,
-    color: "white",
+    fontSize: CAPTION_FONT_SIZE_UPPER,
+    color: CAPTION_COLOR,
     textTransform: "uppercase",
     letterSpacing: "0.01em",
     ...stroke(10),
@@ -63,8 +70,8 @@ export const CAPTION_STYLES: Record<CaptionStyleId, CSSProperties> = {
   yellow: {
     fontFamily: montserrat.fontFamily,
     fontWeight: 900,
-    fontSize: 58,
-    color: "#FFE135",
+    fontSize: CAPTION_FONT_SIZE_UPPER,
+    color: CAPTION_YELLOW,
     textTransform: "uppercase",
     letterSpacing: "0.01em",
     ...stroke(10),
@@ -76,7 +83,7 @@ export const CAPTION_STYLES: Record<CaptionStyleId, CSSProperties> = {
     fontFamily: marker.fontFamily,
     fontWeight: 400,
     fontSize: 56,
-    color: "white",
+    color: CAPTION_COLOR,
     ...stroke(6),
     textShadow: "0 4px 14px rgba(0,0,0,0.55)",
   },

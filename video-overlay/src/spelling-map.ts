@@ -55,3 +55,14 @@ export function applySpellingMap(captions: Caption[]): Caption[] {
     }))
     .filter((c) => c.text.length > 0);
 }
+
+// Plain-string version for non-caption text (question card stem/choices,
+// strike reasons) which is parsed from the SPOKEN script and so arrives
+// phonetic ("ways four"). Longest phrases first, same map as captions.
+export function applySpellingToText(text: string): string {
+  let out = text
+  for (const [phonetic, written] of SPELLING_MAP) {
+    out = out.replace(new RegExp(phonetic.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi"), written)
+  }
+  return out
+}

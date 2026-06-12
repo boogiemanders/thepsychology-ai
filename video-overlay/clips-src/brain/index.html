@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=960, height=720" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 960px;
+        height: 720px;
+        overflow: hidden;
+        background: #18181b;
+      }
+      .ln {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      /* pathLength="100" on every path lets dashoffset draw-on without
+         measuring real path lengths. */
+      .draw {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+      }
+      #ring,
+      #ring2,
+      .spark,
+      .tick {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="4.5"
+      data-width="960"
+      data-height="720"
+    >
+      <div
+        id="scene"
+        class="clip"
+        data-start="0"
+        data-duration="4.5"
+        data-track-index="1"
+      >
+        <svg id="art" width="960" height="720" viewBox="0 0 960 720">
+          <!-- brain: a loose lumpy silhouette, central fissure + a few gyri,
+               with a small brain stem. Then an accent node deep inside fires
+               twice (the activation: SAM arousal / amygdala / neural signal). -->
+          <!-- outer outline -->
+          <path
+            id="outline"
+            class="ln draw"
+            pathLength="100"
+            d="M 480 178
+               C 452 168, 404 186, 392 214
+               C 372 206, 338 224, 344 258
+               C 318 270, 310 310, 326 332
+               C 312 354, 322 394, 348 404
+               C 356 432, 396 454, 424 444
+               C 444 472, 516 472, 536 444
+               C 564 454, 604 432, 612 404
+               C 638 394, 648 354, 634 332
+               C 650 310, 642 270, 616 258
+               C 622 224, 588 206, 568 214
+               C 556 186, 508 168, 480 178 Z"
+            stroke="#fafafa"
+            stroke-width="5"
+          />
+          <!-- central fissure -->
+          <path
+            class="ln draw gyrus"
+            pathLength="100"
+            d="M 480 196 C 470 250, 490 300, 478 350 C 468 398, 486 436, 480 460"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <!-- gyri folds -->
+          <path
+            class="ln draw gyrus"
+            pathLength="100"
+            d="M 362 296 C 398 286, 422 306, 402 332 C 388 350, 412 372, 446 362"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw gyrus"
+            pathLength="100"
+            d="M 598 296 C 562 286, 538 306, 558 332 C 572 350, 548 372, 514 362"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw gyrus"
+            pathLength="100"
+            d="M 420 224 C 444 240, 470 236, 482 220"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <path
+            class="ln draw gyrus"
+            pathLength="100"
+            d="M 540 224 C 516 240, 494 236, 482 220"
+            stroke="#a1a1aa"
+            stroke-width="3.5"
+          />
+          <!-- brain stem -->
+          <path
+            id="stem"
+            class="ln draw"
+            pathLength="100"
+            d="M 466 460 C 462 486, 466 508, 482 516 C 498 508, 502 486, 498 460"
+            stroke="#fafafa"
+            stroke-width="4"
+          />
+          <!-- activation accents (hidden until the firing beats) -->
+          <circle
+            id="ring"
+            cx="446"
+            cy="360"
+            r="56"
+            class="ln"
+            stroke="#d97757"
+            stroke-width="4"
+          />
+          <circle
+            id="ring2"
+            cx="446"
+            cy="360"
+            r="56"
+            class="ln"
+            stroke="#d97757"
+            stroke-width="4"
+          />
+          <circle id="spark" class="spark" cx="446" cy="360" r="15" fill="#d97757" />
+          <path class="ln draw tick" pathLength="100" d="M 444 332 L 440 308" stroke="#d97757" stroke-width="5" />
+          <path class="ln draw tick" pathLength="100" d="M 424 348 L 400 332" stroke="#d97757" stroke-width="5" />
+          <path class="ln draw tick" pathLength="100" d="M 470 350 L 494 336" stroke="#d97757" stroke-width="5" />
+          <path class="ln draw tick" pathLength="100" d="M 446 388 L 444 412" stroke="#d97757" stroke-width="5" />
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Sketch-in: outline, then the folds, then the stem. Fast so the firing
+      // beats land inside a short overlay window.
+      tl.to("#outline", { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut" }, 0.05);
+      tl.to(".gyrus", { strokeDashoffset: 0, duration: 0.45, ease: "power2.inOut", stagger: 0.06 }, 0.45);
+      tl.to("#stem", { strokeDashoffset: 0, duration: 0.4, ease: "power2.inOut" }, 0.7);
+
+      // First firing beat: the node pops in, a ring expands, ticks radiate.
+      tl.fromTo("#spark", { scale: 0.3, opacity: 0, svgOrigin: "446 360" }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(2)", immediateRender: false }, 1.35);
+      tl.fromTo("#ring", { scale: 0.35, opacity: 0.9, svgOrigin: "446 360" }, { scale: 1.6, opacity: 0, duration: 0.7, ease: "power2.out", immediateRender: false }, 1.4);
+      tl.set(".tick", { opacity: 1 }, 1.42);
+      tl.to(".tick", { strokeDashoffset: 0, duration: 0.24, ease: "power2.out", stagger: 0.03 }, 1.42);
+      tl.to(".tick", { opacity: 0, duration: 0.3, ease: "power1.out" }, 1.85);
+
+      // Node pulses (heartbeat) between beats so the long tail never freezes.
+      tl.to("#spark", { scale: 1.25, svgOrigin: "446 360", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 1 }, 1.7);
+
+      // Second firing beat: another ring + a fresh tick sweep.
+      tl.fromTo("#ring2", { scale: 0.35, opacity: 0.85, svgOrigin: "446 360" }, { scale: 1.6, opacity: 0, duration: 0.7, ease: "power2.out", immediateRender: false }, 2.85);
+      tl.set(".tick", { opacity: 1, strokeDashoffset: 100 }, 2.88);
+      tl.to(".tick", { strokeDashoffset: 0, duration: 0.24, ease: "power2.out", stagger: 0.03 }, 2.88);
+      tl.to(".tick", { opacity: 0, duration: 0.3, ease: "power1.out" }, 3.3);
+
+      // Calm hold: barely-there drift so the tail never feels frozen.
+      tl.to("#art", { scale: 1.018, duration: 2.4, ease: "sine.inOut", transformOrigin: "50% 50%" }, 2.0);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

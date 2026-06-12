@@ -13,9 +13,17 @@ import { Video } from "@remotion/media";
 import { parseSrt } from "@remotion/captions";
 import type { Caption } from "@remotion/captions";
 import { z } from "zod";
-import { applySpellingMap } from "./spelling-map";
+import { applySpellingMap, applySpellingToText } from "./spelling-map";
 import { CAPTION_STYLES, CAPTION_STYLE_IDS } from "./caption-styles";
-import { ACCENT, QuestionCard, SITE_BG } from "./QuestionCard";
+import {
+  ACCENT,
+  FONT_GEIST,
+  PANEL_RADIUS,
+  PANEL_SHADOW,
+  SITE_BG,
+  TEXT_PRIMARY,
+} from "./design";
+import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
 import { EndCard } from "./EndCard";
 import { WrongStrike } from "./WrongStrike";
@@ -23,15 +31,17 @@ import { DomainBadge } from "./DomainBadge";
 import { ConceptDiagram } from "./ConceptDiagram";
 import { IllustrationCue } from "./IllustrationCue";
 import { ClipCue } from "./ClipCue";
+import { AnimatedArt } from "./AnimatedArt";
 
 // Script-authored animation moments. Each cue fires at the transcript cue
 // where its normalized trigger phrase begins (the phrase may span several
 // short HeyGen cues); payload shape depends on type (diagram: {nodes, arrows,
 // labels?}, illustration: {image, caption?}, pullquote: {text}, clip:
-// {video, caption?} where video is a public-relative mp4 path).
+// {video, caption?} where video is a public-relative mp4 path, art:
+// {image, caption?} where image is founder artwork under public/art/).
 export const animationCueSchema = z.object({
   trigger: z.string(),
-  type: z.enum(["diagram", "illustration", "pullquote", "clip"]),
+  type: z.enum(["diagram", "illustration", "pullquote", "clip", "art"]),
   payload: z.record(z.string(), z.any()),
 });
 
@@ -135,15 +145,15 @@ const PullQuote: React.FC<{ text: string }> = ({ text }) => {
       <div
         style={{
           backgroundColor: SITE_BG,
-          borderRadius: 28,
+          borderRadius: PANEL_RADIUS,
           width: "88%",
           padding: "52px 56px",
-          fontFamily: "Geist, -apple-system, sans-serif",
+          fontFamily: FONT_GEIST,
           fontSize: 46,
           fontWeight: 500,
           lineHeight: 1.45,
-          color: "#fafafa",
-          boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
+          color: TEXT_PRIMARY,
+          boxShadow: PANEL_SHADOW,
           opacity: progress,
           transform: `translateY(${(1 - progress) * 24}px)`,
         }}
@@ -167,6 +177,10 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   // straight to the component (Remotion hands the component the input shape).
   animationCues = [],
 }) => {
+  // Card/strike text is parsed from the spoken script, so phonetic spellings
+  // ("ways four", "E triple P") must map back to written forms on screen.
+  questionStem = applySpellingToText(questionStem);
+  choices = choices.map(applySpellingToText);
   const { fps, durationInFrames } = useVideoConfig();
   const [captions, setCaptions] = useState<Caption[] | null>(null);
   const { delayRender, continueRender, cancelRender } = useDelayRender();
@@ -275,28 +289,62 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   const inEndCardWindow = (ms: number) =>
     endCardFromMs !== null && ms >= endCardFromMs;
 
-  // "X is wrong" explanation cues each get a strike-through moment: the named
-  // choice row slides in and gets crossed out for the cue's duration. Card and
-  // reveal outrank strikes, so any cue already inside those windows is skipped.
+  // Elimination cues each get a strike-through moment: the named choice row
+  // slides in and gets crossed out while the avatar explains why it is wrong.
+  // Card and reveal outrank strikes, so any cue inside those windows is
+  // skipped. The scripts phrase eliminations many ways, so detection covers a
+  // conservative, deterministic set:
+  //   single  "<L> is wrong" / "<L> is incorrect" / "<L> fails"
+  //           ("So A is wrong" is covered — the letter is still a word match)
+  //   pair    "<L> and <L> are wrong/incorrect" / "... fail" / "... lag"
+  //   pair    "<L> and <L> are <phrase>" only when that phrase reads as a
+  //           ruling-out (ELIMINATIVE below). If unsure we skip: the reveal
+  //           already dimmed the wrong rows, so a missed strike is harmless.
   //
   // Each strike also carries a short reason chip: the clause spoken right
-  // after "is wrong". HeyGen cues run only 2-5 words, so the clause keeps
+  // after the verdict. HeyGen cues run only 2-5 words, so the clause keeps
   // absorbing following cues until the sentence ends or 9 words are in hand,
-  // then clamps to 9 whole words ("..." only when something was cut).
+  // then clamps to 9 whole words ("..." only when something was cut). The
+  // strike holds for the whole clause so it stays up while the reason is read.
   const wrongStrikes = useMemo(() => {
     if (choices.length === 0) return [];
-    const out: {
-      fromMs: number;
-      toMs: number;
-      index: number;
-      reason?: string;
-    }[] = [];
+    type Strike = { fromMs: number; toMs: number; index: number; reason?: string };
+    const out: Strike[] = [];
+
+    // Words that mark a choice as ruled out. Only used to confirm the
+    // "<L> and <L> are <phrase>" pattern, which names two choices without an
+    // explicit "wrong/fail/lag" verb (e.g. "A and B are fixed batteries that
+    // must stay standardized"). Conservative on purpose.
+    const ELIMINATIVE =
+      /\b(wrong|incorrect|fails?|lags?|trap|rigid|fixed|standardi[sz]ed|must (?:stay|remain|be)|not|never|cannot|can'?t|only|too|less|fall short|falls short|lacks?|ineffective|counterproductive|wors[et])\b/i;
+
+    // Why-it's-wrong clause spoken after `afterText`, absorbing following short
+    // cues until the sentence ends or 9 words land. Returns the clause and the
+    // end of the last cue it consumed (so the strike spans the explanation).
+    const clauseFrom = (afterText: string, startIdx: number) => {
+      let words = afterText.split(/\s+/).filter(Boolean);
+      let lastIdx = startIdx;
+      for (
+        let j = startIdx + 1;
+        words.length < 9 &&
+        j < cues.length &&
+        !/[.;!?]$/.test(words[words.length - 1] ?? "");
+        j++
+      ) {
+        words = words.concat(cues[j].text.split(/\s+/).filter(Boolean));
+        lastIdx = j;
+      }
+      const clamped = words.length > 9;
+      const reason = clamped
+        ? `${words.slice(0, 9).join(" ").replace(/[,;:]$/, "")}...`
+        : words.join(" ");
+      // Drop a leading verdict verb so the chip reads as the explanation only.
+      const display = reason.replace(/^(are (?:wrong|incorrect)|fails?|lags?|are)\b[,.:;\s]*/i, "");
+      return { reason: display || undefined, clauseEndMs: cues[lastIdx].endMs };
+    };
+
     for (let i = 0; i < cues.length; i++) {
       const c = cues[i];
-      const m = c.text.match(/\b([A-D]) is wrong/);
-      if (!m) continue;
-      const index = "ABCD".indexOf(m[1]);
-      if (index >= choices.length) continue;
       const inCard =
         cardWindow !== null &&
         c.startMs >= cardWindow.fromMs &&
@@ -307,33 +355,56 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         c.startMs < revealWindow.toMs;
       if (inCard || inReveal) continue;
 
-      const after = c.text
-        .slice(c.text.indexOf(m[0]) + m[0].length)
-        .replace(/^[,.:;\s]+/, "");
-      let words = after.split(/\s+/).filter(Boolean);
-      for (
-        let j = i + 1;
-        words.length < 9 &&
-        j < cues.length &&
-        !/[.;!?]$/.test(words[words.length - 1] ?? "");
-        j++
-      ) {
-        words = words.concat(cues[j].text.split(/\s+/).filter(Boolean));
+      // Pair first: "<L> and <L>" + an eliminative verdict.
+      const pair = c.text.match(/\b([A-D]) and ([A-D])\b/);
+      if (pair) {
+        const i1 = "ABCD".indexOf(pair[1]);
+        const i2 = "ABCD".indexOf(pair[2]);
+        const after = c.text
+          .slice(c.text.indexOf(pair[0]) + pair[0].length)
+          .replace(/^[,.:;\s]+/, "");
+        const { reason, clauseEndMs } = clauseFrom(after, i);
+        const explicit = /^(?:are (?:wrong|incorrect)|fails?|lags?)\b/i.test(after);
+        const ruledOut = /^are\b/i.test(after) && ELIMINATIVE.test(after + " " + (reason ?? ""));
+        if (
+          (explicit || ruledOut) &&
+          i1 >= 0 &&
+          i2 >= 0 &&
+          i1 !== i2 &&
+          i1 < choices.length &&
+          i2 < choices.length
+        ) {
+          // Two sequential windows so the strikes never stack: first letter
+          // holds the first half of the clause, second letter the rest.
+          const mid = Math.round((c.startMs + clauseEndMs) / 2);
+          out.push({ fromMs: c.startMs, toMs: mid, index: i1, reason });
+          out.push({ fromMs: mid, toMs: clauseEndMs, index: i2, reason });
+          continue;
+        }
       }
-      const clamped = words.length > 9;
-      const reason = clamped
-        ? `${words.slice(0, 9).join(" ").replace(/[,;:]$/, "")}...`
-        : words.join(" ");
 
-      out.push({
-        fromMs: c.startMs,
-        toMs: c.endMs,
-        index,
-        reason: reason || undefined,
-      });
+      // Single verdict.
+      const single = c.text.match(/\b([A-D]) (?:is wrong|is incorrect|fails?)\b/);
+      if (single) {
+        const index = "ABCD".indexOf(single[1]);
+        if (index < 0 || index >= choices.length) continue;
+        const after = c.text
+          .slice(c.text.indexOf(single[0]) + single[0].length)
+          .replace(/^[,.:;\s]+/, "");
+        const { reason, clauseEndMs } = clauseFrom(after, i);
+        out.push({ fromMs: c.startMs, toMs: clauseEndMs, index, reason });
+      }
     }
-    return out;
-  }, [cues, choices, cardWindow, revealWindow]);
+
+    // Strikes never overlap: clamp each to the next strike's start (and to the
+    // end card if one is set) so the windows play back to back.
+    out.sort((a, b) => a.fromMs - b.fromMs);
+    for (let i = 0; i < out.length; i++) {
+      if (i < out.length - 1) out[i].toMs = Math.min(out[i].toMs, out[i + 1].fromMs);
+      if (endCardFromMs !== null) out[i].toMs = Math.min(out[i].toMs, endCardFromMs);
+    }
+    return out.filter((s) => s.toMs > s.fromMs);
+  }, [cues, choices, cardWindow, revealWindow, endCardFromMs]);
 
   const inWrongStrike = (ms: number) =>
     wrongStrikes.some((s) => ms >= s.fromMs && ms < s.toMs);
@@ -395,6 +466,8 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
       // Malformed payloads are skipped, never rendered half-broken.
       if (cue.type === "diagram" && !Array.isArray(cue.payload.nodes)) continue;
       if (cue.type === "illustration" && typeof cue.payload.image !== "string")
+        continue;
+      if (cue.type === "art" && typeof cue.payload.image !== "string")
         continue;
       if (cue.type === "pullquote" && typeof cue.payload.text !== "string")
         continue;
@@ -498,6 +571,11 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           ) : o.cue.type === "clip" ? (
             <ClipCue
               video={o.cue.payload.video as string}
+              caption={o.cue.payload.caption as string | undefined}
+            />
+          ) : o.cue.type === "art" ? (
+            <AnimatedArt
+              image={o.cue.payload.image as string}
               caption={o.cue.payload.caption as string | undefined}
             />
           ) : (

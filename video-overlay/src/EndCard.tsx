@@ -7,7 +7,14 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { ACCENT, SITE_BG } from "./QuestionCard";
+import {
+  ACCENT,
+  FONT_GEIST,
+  PANEL_SHADOW,
+  SITE_BG,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+} from "./design";
 
 // Lower-third CTA shown from the final "thepsychology.ai" cue to the end of
 // the video. The founder is still talking, so this is not a takeover: the
@@ -37,11 +44,13 @@ export const EndCard: React.FC<{ bottomPercent: number }> = ({
         style={{
           marginBottom: `${bottomPercent}%`,
           backgroundColor: SITE_BG,
+          // Slightly tighter radius than PANEL_RADIUS: this is a lower-third
+          // chip, not a full panel.
           borderRadius: 24,
           padding: "40px 64px",
           textAlign: "center",
-          fontFamily: "Geist, -apple-system, sans-serif",
-          boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
+          fontFamily: FONT_GEIST,
+          boxShadow: PANEL_SHADOW,
           opacity: progress,
           transform: `translateY(${(1 - progress) * 32}px)`,
         }}
@@ -54,24 +63,14 @@ export const EndCard: React.FC<{ bottomPercent: number }> = ({
             gap: 22,
           }}
         >
-          {/* Hand-drawn glasses logo. Brown ink needs a light tile to read on
-              the dark panel; warm off-white keeps it in the house palette. */}
-          <div
-            style={{
-              backgroundColor: "#f5efe7",
-              borderRadius: 16,
-              padding: "10px 12px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <Img src={staticFile("logo.png")} style={{ width: 72, height: 36, objectFit: "contain" }} />
-          </div>
+          {/* Full bunny-with-glasses logo: white silhouette on transparent
+              bg, reads directly against the dark panel. */}
+          <Img src={staticFile("logo.png")} style={{ width: 84, height: 130, objectFit: "contain" }} />
           <div
             style={{
               fontSize: 58,
               fontWeight: 700,
-              color: "#fafafa",
+              color: TEXT_PRIMARY,
               lineHeight: 1.2,
             }}
           >
@@ -82,12 +81,12 @@ export const EndCard: React.FC<{ bottomPercent: number }> = ({
           style={{
             fontSize: 30,
             fontWeight: 400,
-            color: "#a1a1aa",
+            color: TEXT_MUTED,
             marginTop: 14,
             opacity: subProgress,
           }}
         >
-          Free EPPP practice questions
+          EPPP Prep
         </div>
       </div>
     </AbsoluteFill>
