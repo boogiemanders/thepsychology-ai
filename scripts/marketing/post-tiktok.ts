@@ -17,7 +17,8 @@
 
 import { createClient } from "@supabase/supabase-js"
 import { config } from "dotenv"
-import { existsSync } from "fs"
+import { existsSync, mkdirSync, renameSync } from "fs"
+import { basename, dirname, join } from "path"
 import { publishTikTokVideo } from "../../src/lib/marketing/publish-tiktok"
 import type { MarketingDraft } from "../../src/lib/marketing/types"
 
@@ -126,6 +127,22 @@ async function main() {
       continue
     }
 
+    // Published: move the draft's trio (raw mp4, SRT, final) into videos/done
+    // so the review folder only holds unposted work (founder ask 2026-06-12).
+    // Best-effort — a failed move must not block marking the row posted.
+    let newRawPath = draft.video_path!
+    try {
+      const doneDir = join(dirname(draft.video_path!), "done")
+      mkdirSync(doneDir, { recursive: true })
+      const srtPath = draft.video_path!.replace(/\.mp4$/, ".srt")
+      for (const p of [draft.video_path!, srtPath, finalPath]) {
+        if (existsSync(p)) renameSync(p, join(doneDir, basename(p)))
+      }
+      newRawPath = join(doneDir, basename(draft.video_path!))
+    } catch (moveErr) {
+      console.warn(`⚠️  ${label}: move to done/ failed (files stay put): ${(moveErr as Error).message}`)
+    }
+
     const { error: updErr } = await supabase
       .from("marketing_drafts")
       .update({
@@ -133,6 +150,7 @@ async function main() {
         tiktok_post_id: result.postId,
         tiktok_post_error: null,
         tiktok_posted_at: new Date().toISOString(),
+        video_path: newRawPath,
       })
       .eq("id", draft.id)
     // The post is already live at this point. If the DB write fails the row stays

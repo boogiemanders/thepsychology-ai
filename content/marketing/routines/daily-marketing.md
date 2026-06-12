@@ -120,7 +120,11 @@ the normal spellings). If the skill
 is somehow unavailable, fall back to short-form best practice: a 3-second hook, one specific
 actionable idea, beat/visual cues, and a reciprocity CTA. ~150 words.
 **TikTok animation cues:** for practice-question or explainer scripts, also emit an
-`animation_cues` array (1-3 cues) on the draft JSON. Each cue is
+`animation_cues` array on the draft JSON. RULE (founder, 2026-06-12): every explanation
+beat needs a visual — the correct-answer explanation and EACH wrong-answer explanation.
+Two ways to satisfy a beat: (a) phrase the wrong-answer line as "<letter> is wrong
+because ..." (the overlay auto-renders a strike-through with the reason, no cue needed),
+or (b) attach an explicit cue to that beat. Mix both; do not leave a beat bare. Each cue is
 `{ "trigger": "...", "type": "diagram" | "illustration" | "pullquote", "payload": { ... } }`:
 - `trigger` = an exact 2-4 word phrase copied from the spoken script. The video overlay fires
   the cue at the moment that phrase is spoken, so it must appear verbatim in the script.

@@ -9,8 +9,13 @@ const SPELLING_MAP: [phonetic: string, written: string][] = [
   // article ("go to the thepsychology.ai") — collapse that first.
   ["the thepsychology.ai", "thepsychology.ai"],
   ["the psychology dot ai", "thepsychology.ai"],
+  // ASR misspelling seen in a real transcript ("go to thepsychoology.ai").
+  ["thepsychoology.ai", "thepsychology.ai"],
   ["E triple P", "EPPP"],
   ["ways four", "WAIS-IV"],
+  // Display-only grammar fix (founder, 2026-06-12): scripts/audio say
+  // "overweights", captions and cards show the correct verb.
+  ["overweights", "overweighs"],
 ];
 
 type Word = { text: string; cueIdx: number };

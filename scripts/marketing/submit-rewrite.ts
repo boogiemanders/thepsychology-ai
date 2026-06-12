@@ -61,6 +61,11 @@ async function main() {
     status: "pending" as const,
     needs_review: input.needs_review ?? false,
     review_notes: input.review_notes ?? null,
+    // Same optional pass-throughs as submit-draft.ts — without these a rewrite
+    // silently drops the on-video title, post caption, and animation cues.
+    ...(input.animation_cues?.length ? { animation_cues: input.animation_cues } : {}),
+    ...(input.video_title ? { video_title: input.video_title } : {}),
+    ...(input.tiktok_caption ? { tiktok_caption: input.tiktok_caption } : {}),
   }
 
   const { data, error } = await supabase.from("marketing_drafts").insert(insert).select("*").single()

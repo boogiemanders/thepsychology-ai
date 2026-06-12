@@ -549,9 +549,16 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         <TitleBlock
           line1={titleLine1}
           line2={titleLine2}
-          hideWindows={cueOverlays
-            .filter((o) => o.cue.type === "clip" || o.cue.type === "art")
-            .map((o) => ({ fromMs: o.fromMs, toMs: o.toMs }))}
+          hideWindows={[
+            ...cueOverlays
+              .filter((o) => o.cue.type === "clip" || o.cue.type === "art")
+              .map((o) => ({ fromMs: o.fromMs, toMs: o.toMs })),
+            // The card and reveal panels start above the lowered title, so the
+            // title steps aside for those too (founder: title clashed with the
+            // question card).
+            ...(cardWindow ? [cardWindow] : []),
+            ...(revealWindow ? [revealWindow] : []),
+          ]}
         />
       ) : null}
       {cueOverlays.map((o, i) => (
