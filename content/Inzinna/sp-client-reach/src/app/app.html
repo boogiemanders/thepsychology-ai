@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SP Client Reach</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>SP Client Reach</h1>
+      <p class="subtitle">SimplePractice attendance + contacts &rarr; rater8 list + leadership sheet. Everything stays in this tab.</p>
+    </div>
+    <button id="settings-toggle" class="icon-btn" title="Settings">&#9881;</button>
+  </header>
+
+  <section id="settings" class="card hidden">
+    <h2>Settings</h2>
+    <label>Google Sheet web app URL
+      <input type="url" id="webapp-url" placeholder="https://script.google.com/macros/s/.../exec">
+    </label>
+    <label>Shared token
+      <input type="text" id="webapp-token">
+    </label>
+    <p class="hint">From the Apps Script deployment on the leadership sheet. See README for the one-time setup.</p>
+    <button id="save-settings" class="btn secondary">Save</button>
+    <span id="settings-status" class="status"></span>
+  </section>
+
+  <section class="card">
+    <h2>1. Pick a period</h2>
+    <div class="range-row">
+      <select id="preset">
+        <option value="30">Last 30 days</option>
+        <option value="7">Last 7 days</option>
+        <option value="this-month">This month</option>
+        <option value="last-month">Last month</option>
+        <option value="custom">Custom</option>
+      </select>
+      <input type="date" id="start-date">
+      <span class="to">to</span>
+      <input type="date" id="end-date">
+      <button id="fetch-btn" class="btn primary">Pull from SimplePractice</button>
+    </div>
+    <p id="fetch-status" class="status"></p>
+    <details class="manual">
+      <summary>Or use already-downloaded CSVs</summary>
+      <div id="drop-zone">
+        <p>Drop the two report CSVs here (attendance + client details), or</p>
+        <input type="file" id="file-input" accept=".csv,text/csv" multiple>
+        <p class="slots"><span id="slot-attendance" class="slot">attendance: waiting</span> <span id="slot-details" class="slot">client details: waiting</span></p>
+      </div>
+    </details>
+  </section>
+
+  <section id="results" class="card hidden">
+    <h2>2. Results <span id="period-label" class="period"></span></h2>
+    <p id="stats-line" class="stats"></p>
+    <div class="actions">
+      <button id="dl-rater8" class="btn primary">Download rater8 CSV</button>
+      <button id="send-sheet" class="btn primary">Send to Google Sheet</button>
+      <button id="dl-full" class="btn secondary">Download full CSV</button>
+      <button id="copy-emails" class="btn secondary">Copy emails</button>
+      <button id="copy-phones" class="btn secondary">Copy phone numbers</button>
+    </div>
+    <p id="action-status" class="status"></p>
+    <div class="filters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="Manhattan">Manhattan</button>
+      <button class="chip" data-filter="Virtual">Virtual</button>
+      <button class="chip" data-filter="issues">Needs attention</button>
+    </div>
+    <div class="table-wrap">
+      <table id="results-table">
+        <thead>
+          <tr><th>Client</th><th>Location</th><th>Last visit</th><th>Phone</th><th>Email</th><th>Provider</th><th>Match</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>No data leaves this tab except the rows you choose to send to your own Google Sheet. Nothing is stored.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
