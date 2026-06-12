@@ -8,6 +8,9 @@ const WEBHOOKS = {
   metrics: process.env.SLACK_WEBHOOK_METRICS,
   alerts: process.env.SLACK_WEBHOOK_ALERTS,
   social: process.env.SLACK_WEBHOOK_SOCIAL,
+  // Video/graphics publish approvals (review cards + post results). Falls back
+  // to social until the dedicated channel webhook is configured.
+  video: process.env.SLACK_WEBHOOK_VIDEO || process.env.SLACK_WEBHOOK_SOCIAL,
   default: process.env.SLACK_WEBHOOK_URL,
 } as const
 

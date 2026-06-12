@@ -91,9 +91,12 @@ function timestamp(): string {
     .replace("T", "-")
 }
 
+// Video-pipeline traffic goes to the dedicated video/graphics approvals channel
+// (SLACK_WEBHOOK_VIDEO), falling back to #social-approvals until it exists.
+// Script approval cards (submit-draft) stay on SLACK_WEBHOOK_SOCIAL.
 async function notifySlack(text: string, blocks?: unknown[]): Promise<void> {
-  const webhook = process.env.SLACK_WEBHOOK_SOCIAL
-  if (!webhook) return console.warn("[slack] SLACK_WEBHOOK_SOCIAL not set, skipping notify")
+  const webhook = process.env.SLACK_WEBHOOK_VIDEO || process.env.SLACK_WEBHOOK_SOCIAL
+  if (!webhook) return console.warn("[slack] SLACK_WEBHOOK_VIDEO/SOCIAL not set, skipping notify")
   const res = await fetch(webhook, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
