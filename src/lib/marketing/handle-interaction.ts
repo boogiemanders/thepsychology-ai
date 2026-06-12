@@ -11,7 +11,7 @@ import {
 import { sendSlackNotification } from "../notify-slack"
 import type { MarketingDraft, MarketingFeedbackKind } from "./types"
 
-const MARKETING_ACTIONS = new Set(["approve_draft", "reject_draft"])
+const MARKETING_ACTIONS = new Set(["approve_draft", "reject_draft", "post_video", "skip_video"])
 
 // True if this interaction is a marketing approve/reject (vs triage or the feedback button).
 export function isMarketingAction(payload: { actions?: Array<{ action_id?: string }> }): boolean {
@@ -90,6 +90,26 @@ export async function handleMarketingInteraction(payload: any, supabase: any): P
   const { data: row } = await supabase.from("marketing_drafts").select("*").eq("id", draftId).single()
   const draft = row as MarketingDraft | null
   if (!draft) return await reply(payload, "Draft not found.")
+
+  // Video review card (post-render, draft is already 'approved'): Post queues it
+  // for scripts/marketing/post-tiktok.ts; Skip parks it in Drive. 'failed' rows
+  // accept Post again so the founder can retry from the same card.
+  if (action.action_id === "post_video" || action.action_id === "skip_video") {
+    const postStatus = draft.tiktok_post_status ?? null
+    if (postStatus !== "review" && postStatus !== "failed") {
+      return await reply(payload, `Already ${postStatus ?? "unqueued"}.`)
+    }
+    if (action.action_id === "skip_video") {
+      await supabase.from("marketing_drafts").update({ tiktok_post_status: "skipped" }).eq("id", draftId)
+      return await reply(payload, `Skipped by ${user} — stays in Drive, nothing posts.`)
+    }
+    await supabase
+      .from("marketing_drafts")
+      .update({ tiktok_post_status: "queued", tiktok_post_error: null })
+      .eq("id", draftId)
+    return await reply(payload, `Queued by ${user} — posts to TikTok on the next pipeline run (10am/1pm/4pm/7pm ET).`)
+  }
+
   if (draft.status !== "pending") return await reply(payload, `Already ${draft.status}.`)
 
   const now = new Date().toISOString()

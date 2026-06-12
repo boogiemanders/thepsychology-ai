@@ -33,6 +33,7 @@ import {
   parseDomain,
   parsePracticeQuestion,
 } from "../../src/lib/marketing/video-script"
+import { buildFallbackCaption } from "../../src/lib/marketing/publish-tiktok"
 import type { AnimationCue, MarketingDraft } from "../../src/lib/marketing/types"
 
 config({ path: ".env.local" })
@@ -90,15 +91,63 @@ function timestamp(): string {
     .replace("T", "-")
 }
 
-async function notifySlack(text: string): Promise<void> {
+async function notifySlack(text: string, blocks?: unknown[]): Promise<void> {
   const webhook = process.env.SLACK_WEBHOOK_SOCIAL
   if (!webhook) return console.warn("[slack] SLACK_WEBHOOK_SOCIAL not set, skipping notify")
   const res = await fetch(webhook, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text }),
+    body: JSON.stringify(blocks ? { text, blocks } : { text }),
   })
   if (!res.ok) console.error(`[slack] notify failed: ${res.status} ${await res.text()}`)
+}
+
+// After a final cut lands: persist the caption + 'review' status, then post the
+// Slack card with Post to TikTok / Skip buttons (clicks land in
+// handle-interaction.ts; post-tiktok.ts drains the queue next run). Best-effort
+// by design — the video is already in Drive, so a DB or Slack failure here must
+// not mark the draft failed. Pre-migration rows (no tiktok_* columns) just log.
+async function postVideoReviewCard(draft: MarketingDraft, finalPath: string, spoken: string): Promise<void> {
+  const domain = parseDomain(spoken)
+  const caption = draft.tiktok_caption?.trim() || buildFallbackCaption(draft, domain)
+
+  const { error } = await supabase
+    .from("marketing_drafts")
+    .update({ tiktok_caption: caption, tiktok_post_status: "review" })
+    .eq("id", draft.id)
+  if (error) {
+    console.error(`[tiktok] review-status update failed for ${draft.id.slice(0, 8)}: ${error.message}`)
+    return
+  }
+
+  const fileName = finalPath.split("/").pop() || finalPath
+  await notifySlack(`Video ready for TikTok review: ${draft.title}`, [
+    { type: "header", text: { type: "plain_text", text: (draft.video_title || draft.title).slice(0, 150) } },
+    {
+      type: "context",
+      elements: [{ type: "mrkdwn", text: `Final cut ready: *${fileName}* (Drive → thepsychology.ai marketing/videos)` }],
+    },
+    { type: "section", text: { type: "mrkdwn", text: `*TikTok caption*\n${caption.slice(0, 2800)}` } },
+    {
+      type: "actions",
+      block_id: `vid_${draft.id}`,
+      elements: [
+        {
+          type: "button",
+          style: "primary",
+          text: { type: "plain_text", text: "Post to TikTok" },
+          action_id: "post_video",
+          value: draft.id,
+        },
+        {
+          type: "button",
+          text: { type: "plain_text", text: "Skip" },
+          action_id: "skip_video",
+          value: draft.id,
+        },
+      ],
+    },
+  ]).catch((e) => console.error(`[slack] review card failed: ${(e as Error).message}`))
 }
 
 // --- Provider: HeyGen ------------------------------------------------------
@@ -493,6 +542,11 @@ async function main() {
           const finalPath = await renderOverlay(filePath, srtPath, draft)
           console.log(`✅ ${label} final → ${finalPath}`)
           finals++
+          // .catch guard: same reason as the Slack ping below — a hiccup here
+          // must not bubble into the overlay-failure path.
+          await postVideoReviewCard(draft, finalPath, spoken).catch((e) =>
+            console.error(`[tiktok] review card failed: ${(e as Error).message}`)
+          )
         } catch (overlayErr) {
           const reason = (overlayErr as Error).message.slice(0, 500)
           console.error(`❌ ${label}: overlay render failed: ${reason}`)

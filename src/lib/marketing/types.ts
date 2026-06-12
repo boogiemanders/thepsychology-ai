@@ -16,6 +16,11 @@ export type DraftStatus = "pending" | "approved" | "rejected" | "published" | "q
 // 'failed' rows are skipped — reset video_status to null to retry.
 export type VideoStatus = "generated" | "failed"
 
+// TikTok publish state (Zernio). null = no final cut yet; review = Slack card
+// up, waiting on the founder; queued = Post clicked, drains on the next run;
+// failed rows hold the error in tiktok_post_error — reset to 'queued' to retry.
+export type TikTokPostStatus = "review" | "queued" | "skipped" | "posted" | "failed"
+
 // title + url are required. author/year/publication are optional and power the
 // APA reference list in the Slack approval card and the Obsidian note. When they
 // are missing the reference still renders (title leads, "n.d." for the year).
@@ -85,6 +90,14 @@ export type MarketingDraft = {
   // "Breaking Test Rules?"). Optional until the 20260612_add_video_title
   // migration is applied. null/empty hides the line.
   video_title?: string | null
+  // TikTok auto-posting (Zernio). Optional until the 20260612_add_tiktok_posting
+  // migration is applied. tiktok_caption is the exact post text (explanation
+  // teaser + 5 hashtags) shown verbatim on the Slack review card.
+  tiktok_caption?: string | null
+  tiktok_post_status?: TikTokPostStatus | null
+  tiktok_post_id?: string | null
+  tiktok_post_error?: string | null
+  tiktok_posted_at?: string | null
 }
 
 // Input shape the generation agent produces (a JSON file handed to submit-draft.ts).
@@ -104,6 +117,10 @@ export type DraftInput = {
   // TikTok drafts only: short topical hook for the on-video title block
   // (2-5 words, e.g. "Breaking Test Rules?").
   video_title?: string | null
+  // TikTok drafts only: the post caption — 1-2 sentence explanation teaser
+  // (never reveals the answer) + exactly 5 hashtags (#eppp #psychology + 3
+  // topic-relevant).
+  tiktok_caption?: string | null
 }
 
 export const DEFAULT_AUTHOR = "Dr. Anders Chan, Psy.D."
