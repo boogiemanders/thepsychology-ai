@@ -102,7 +102,12 @@ competitor scorecards from Step 2. This runs unattended, so do NOT wait for hook
 the strongest hook and write the full script yourself. The skill returns a structured script
 (Hook, Build-Up, Value, Payoff, CTA) with a 3-second hook and visual cues; that script is the
 `body_md`. Then apply the brand hard rules to the output: strip any emojis, remove em dashes, and
-keep the no-fabrication rule (the script's `sources` array must still be non-empty). Spoken
+keep the no-fabrication rule (the script's `sources` array must still be non-empty). Also set
+`video_title`: the on-screen TikTok title, 2-4 words, founder's taste = a short tension question
+that states the core paradox of the content ("Mistake Or Method?", "Does Scared Straight Work?");
+plain topical works when the subject is itself the hook; no clickbait, no colons, question marks
+welcome. NEVER put the answer (or anything that gives it away) in the title: the title poses the
+tension, the video resolves it. The domain label under it is added automatically as "EPPP: <Domain>". Spoken
 lines feed a TTS talking-head pipeline, so write pronunciations into the speech: "EPPP" as
 "E triple P", "thepsychology.ai" as "the psychology dot ai", "WAIS-IV" as "ways four", and
 any other test name or initialism the way it is actually said aloud (captions/hashtags keep

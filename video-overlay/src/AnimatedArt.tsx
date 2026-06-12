@@ -51,7 +51,9 @@ export const AnimatedArt: React.FC<{
         style={{
           backgroundColor: ART_PANEL_BG,
           borderRadius: PANEL_RADIUS,
-          width: "50%",
+          // 43%: with the top zone starting below the title block, a square
+          // drawing any wider would reach the speaker's head.
+          width: "43%",
           padding: 22,
           fontFamily: FONT_GEIST,
           boxShadow: PANEL_SHADOW,

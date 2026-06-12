@@ -30,6 +30,7 @@ import { join, resolve } from "path"
 import {
   extractSpokenScript,
   estimateDurationSeconds,
+  parseDomain,
   parsePracticeQuestion,
 } from "../../src/lib/marketing/video-script"
 import type { AnimationCue, MarketingDraft } from "../../src/lib/marketing/types"
@@ -329,7 +330,8 @@ export async function renderOverlay(
   )
 
   try {
-    const parsed = parsePracticeQuestion(extractSpokenScript(draft.body_md))
+    const spoken = extractSpokenScript(draft.body_md)
+    const parsed = parsePracticeQuestion(spoken)
     // Founder-standing rule: every practice-question script opens on the
     // "psychology licensure exam" hook line, so every one of those videos
     // gets the founder's hand-drawn studying artwork there (white panel,
@@ -353,6 +355,13 @@ export async function renderOverlay(
       questionStem: parsed?.stem ?? "",
       choices: parsed?.choices ?? [],
       animationCues: [...standingCues, ...animationCues],
+      // Persistent TikTok-style title block. Line 1 is the authored hook
+      // (video_title only exists on the row once the 20260612 migration ran);
+      // line 2 is the EPPP domain named in the script's intro. Empty string
+      // hides a line, so a missing title still shows the domain label.
+      titleLine1: draft.video_title ?? "",
+      // Founder format: the label always reads "EPPP: <Domain>".
+      titleLine2: parseDomain(spoken) ? `EPPP: ${parseDomain(spoken)}` : "",
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.

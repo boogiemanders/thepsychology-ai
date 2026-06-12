@@ -52,6 +52,8 @@ async function main() {
     // Only included when present: the animation_cues column does not exist
     // until the 20260611 migration runs, and inserts must keep working.
     ...(input.animation_cues?.length ? { animation_cues: input.animation_cues } : {}),
+    // Same deal: video_title arrives with the 20260612 migration.
+    ...(input.video_title ? { video_title: input.video_title } : {}),
   }
 
   const { data, error } = await supabase

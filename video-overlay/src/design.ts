@@ -1,5 +1,6 @@
 import { staticFile } from "remotion";
 import { loadFont } from "@remotion/fonts";
+import { loadFont as loadInterTitle } from "@remotion/google-fonts/Inter";
 
 // Single source of truth for the overlay design system. Every color, font,
 // radius, shadow, and screen position the components use lives here — change
@@ -19,13 +20,21 @@ loadFont({
 // Site's dark --background. Every dark panel (card, diagram, pullquote...).
 export const SITE_BG = "#18181B";
 // The one accent color (warm coral, Anthropic-adjacent). Used sparingly:
-// correct-answer highlight, ".ai" in the end card, badge ring, arrowheads.
+// correct-answer highlight, ".ai" in the end card, arrowheads.
 export const ACCENT = "#d97757";
 
 // --- Typography --------------------------------------------------------------
 
 // Product surfaces (panels, cards, badges). Captions use Inter (caption-styles).
 export const FONT_GEIST = "Geist, -apple-system, sans-serif";
+
+// TikTok's own UI font (TikTok Sans, via @remotion/google-fonts). Used only
+// for the title block so it reads like text typed in TikTok's text tool.
+const { fontFamily: interTitle } = loadInterTitle("normal", {
+  weights: ["500", "600", "700"],
+  subsets: ["latin"],
+});
+export const FONT_TIKTOK = `${interTitle}, -apple-system, sans-serif`;
 
 // --- Panel chrome ------------------------------------------------------------
 
@@ -43,11 +52,18 @@ export const TEXT_PRIMARY = "#fafafa"; // stems, letters, headline text
 export const TEXT_BODY = "#d4d4d8"; // answer-choice body text
 export const TEXT_MUTED = "#a1a1aa"; // captions under art, reasons, sublines
 
-// --- Domain badge --------------------------------------------------------------
+// --- Title block (replaces the old domain badge) --------------------------------
 
-// Slightly translucent site background keeps the chip legible over bright
-// frames without reading as a solid card. (d9 = ~85% opacity.)
-export const BADGE_BG = `${SITE_BG}d9`;
+// Two-line TikTok-native title pinned top-center for the whole video, styled
+// like TikTok's text tool: bold white line, then a smaller black-on-white
+// label. Sized/positioned to sit below TikTok's own top UI (search bar zone).
+export const TITLE_TOP_PX = 134; // ~7% of 1920, clear of the app's top chrome
+export const TITLE_LINE1_SIZE = 62; // bold white line ("NBA Finals - Game 4")
+export const TITLE_LINE2_SIZE = 40; // black-on-white label ("Social Psychology")
+export const TITLE_SHADOW = "0 1px 4px rgba(0,0,0,0.45)"; // thin, no stroke
+export const TITLE_LABEL_BG = "#ffffff";
+export const TITLE_LABEL_COLOR = "#111111";
+export const TITLE_LABEL_RADIUS = 10;
 
 // --- Captions (see caption-styles.ts for the per-style recipes) ---------------
 
@@ -64,10 +80,11 @@ export const CAPTION_STROKE_COLOR = "black";
 // quarter, so stay above ~28. Captions never move from this line.
 export const CAPTION_BOTTOM_PERCENT = 32;
 
-// Floating top-zone panel (clips, founder art): pins the panel's top edge
-// just below the speaker's chin. % padding resolves against width (1080),
-// so 7% keeps the panel floating above the head zone, clear of the mouth.
-export const TOP_ZONE_PADDING_TOP = "7%";
+// Floating top-zone panel (clips, founder art): floats between the title
+// block above and the speaker's head below. % padding resolves against width
+// (1080), so 27% (~292px) clears the persistent title (which ends ~280px)
+// while keeping the panel off the face.
+export const TOP_ZONE_PADDING_TOP = "27%";
 
 // Chest-level row (diagram, wrong-answer strike): % padding resolves against
 // width, so 52% lands the element's center around 65% of the 1920 frame.
