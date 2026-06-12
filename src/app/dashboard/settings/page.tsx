@@ -17,6 +17,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 import {
   Accordion,
   AccordionContent,
@@ -59,6 +60,15 @@ import {
 } from 'lucide-react'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 
+const CANCEL_REASONS = [
+  { value: 'passed_exam', label: 'I passed the EPPP' },
+  { value: 'not_studying', label: "I'm not studying right now" },
+  { value: 'content_quality', label: "Quality wasn't what I expected" },
+  { value: 'too_expensive', label: "It's too expensive" },
+  { value: 'switched_service', label: "I'm using a different study tool" },
+  { value: 'other', label: 'Something else' },
+]
+
 interface GraduateProgram {
   id: string
   name: string
@@ -89,6 +99,8 @@ export default function SettingsPage() {
   })
   const [addingProgram, setAddingProgram] = useState(false)
   const [cancellingSubscription, setCancellingSubscription] = useState(false)
+  const [cancelReason, setCancelReason] = useState<string>('')
+  const [cancelComment, setCancelComment] = useState('')
   const [portalLoading, setPortalLoading] = useState(false)
   const [deletingAccount, setDeletingAccount] = useState(false)
   const [deletingData, setDeletingData] = useState(false)
@@ -217,7 +229,9 @@ export default function SettingsPage() {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${session?.session?.access_token}`,
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ reason: cancelReason, comment: cancelComment }),
       })
       const data = await response.json()
       if (!response.ok) {
@@ -225,6 +239,8 @@ export default function SettingsPage() {
       }
       setActionSuccess('Subscription will be cancelled at the end of your billing period.')
       setShowCancelDialog(false)
+      setCancelReason('')
+      setCancelComment('')
       setTimeout(() => setActionSuccess(null), 5000)
     } catch (err) {
       console.error('Failed to cancel subscription:', err)
@@ -461,7 +477,16 @@ export default function SettingsPage() {
                       Your access will continue until the end of your billing period.
                     </p>
                   </div>
-                  <AlertDialog open={showCancelDialog} onOpenChange={setShowCancelDialog}>
+                  <AlertDialog
+                    open={showCancelDialog}
+                    onOpenChange={(open) => {
+                      setShowCancelDialog(open)
+                      if (!open) {
+                        setCancelReason('')
+                        setCancelComment('')
+                      }
+                    }}
+                  >
                     <AlertDialogTrigger asChild>
                       <Button variant="outline" size="sm" className="text-orange-500 hover:text-orange-600">
                         <XCircle className="w-4 h-4 mr-2" />
@@ -476,6 +501,33 @@ export default function SettingsPage() {
                           After that, you&apos;ll lose access to premium features but your study data will be preserved.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
+                      <div className="space-y-3">
+                        <div className="space-y-1.5">
+                          <Label className="text-sm font-medium">Why are you cancelling?</Label>
+                          <Select value={cancelReason} onValueChange={setCancelReason}>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Pick a reason" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {CANCEL_REASONS.map((r) => (
+                                <SelectItem key={r.value} value={r.value}>
+                                  {r.label}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div className="space-y-1.5">
+                          <Label className="text-sm font-medium">Anything else? (optional)</Label>
+                          <Textarea
+                            value={cancelComment}
+                            onChange={(e) => setCancelComment(e.target.value)}
+                            placeholder="Tell us more so we can improve"
+                            rows={3}
+                            maxLength={1000}
+                          />
+                        </div>
+                      </div>
                       <AlertDialogFooter>
                         <AlertDialogCancel disabled={cancellingSubscription}>Keep Subscription</AlertDialogCancel>
                         <AlertDialogAction
@@ -484,7 +536,7 @@ export default function SettingsPage() {
                             handleCancelSubscription()
                           }}
                           className="bg-orange-500 hover:bg-orange-600"
-                          disabled={cancellingSubscription}
+                          disabled={cancellingSubscription || !cancelReason}
                         >
                           {cancellingSubscription ? (
                             <>

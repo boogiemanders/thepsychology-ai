@@ -26,6 +26,17 @@ async function requireAuthedUserId(req: NextRequest): Promise<string | null> {
   return data.user.id
 }
 
+// Maps our reasons to Stripe's fixed cancellation feedback enum so the
+// reason also shows up in the Stripe dashboard.
+const CANCEL_REASONS: Record<string, Stripe.SubscriptionUpdateParams.CancellationDetails.Feedback> = {
+  passed_exam: 'other',
+  content_quality: 'low_quality',
+  too_expensive: 'too_expensive',
+  switched_service: 'switched_service',
+  not_studying: 'unused',
+  other: 'other',
+}
+
 export async function POST(req: NextRequest) {
   if (!stripe) {
     return NextResponse.json({ error: 'Stripe is not configured' }, { status: 500 })
@@ -35,6 +46,10 @@ export async function POST(req: NextRequest) {
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
+
+  const body = (await req.json().catch(() => null)) as { reason?: string; comment?: string } | null
+  const reason = body?.reason && CANCEL_REASONS[body.reason] ? body.reason : null
+  const comment = typeof body?.comment === 'string' ? body.comment.trim().slice(0, 1000) : ''
 
   try {
     const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
@@ -73,11 +88,33 @@ export async function POST(req: NextRequest) {
     // Cancel at end of billing period (graceful cancellation)
     const updatedSubscription = await stripe.subscriptions.update(subscription.id, {
       cancel_at_period_end: true,
+      ...(reason
+        ? {
+            cancellation_details: {
+              feedback: CANCEL_REASONS[reason],
+              comment: [reason, comment].filter(Boolean).join(': '),
+            },
+          }
+        : {}),
     })
+
+    if (reason) {
+      // Feedback is a bonus, never block the cancellation on it
+      const { error: feedbackError } = await supabase.from('cancellation_feedback').insert({
+        user_id: userId,
+        user_email: user.email,
+        reason,
+        comment: comment || null,
+      })
+      if (feedbackError) {
+        console.error('[Stripe] Failed to store cancellation feedback:', feedbackError)
+      }
+    }
 
     console.log('[Stripe] Subscription set to cancel at period end:', {
       userId,
       subscriptionId: subscription.id,
+      reason,
       cancelAt: new Date(updatedSubscription.current_period_end * 1000).toISOString(),
     })
 
