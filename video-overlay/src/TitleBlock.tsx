@@ -53,7 +53,7 @@ export const TitleBlock: React.FC<{ line1: string; line2: string }> = ({
           <div
             style={{
               fontFamily: FONT_TIKTOK,
-              fontWeight: 700,
+              fontWeight: 600,
               fontSize: TITLE_LINE1_SIZE,
               color: "#fff",
               textShadow: TITLE_SHADOW,
@@ -72,7 +72,7 @@ export const TitleBlock: React.FC<{ line1: string; line2: string }> = ({
           <div
             style={{
               fontFamily: FONT_TIKTOK,
-              fontWeight: 600,
+              fontWeight: 500,
               fontSize: TITLE_LINE2_SIZE,
               color: TITLE_LABEL_COLOR,
               backgroundColor: TITLE_LABEL_BG,

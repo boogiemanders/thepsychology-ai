@@ -1,6 +1,6 @@
 import { staticFile } from "remotion";
 import { loadFont } from "@remotion/fonts";
-import { loadFont as loadTikTokSans } from "@remotion/google-fonts/TikTokSans";
+import { loadFont as loadInterTitle } from "@remotion/google-fonts/Inter";
 
 // Single source of truth for the overlay design system. Every color, font,
 // radius, shadow, and screen position the components use lives here — change
@@ -30,11 +30,11 @@ export const FONT_GEIST = "Geist, -apple-system, sans-serif";
 
 // TikTok's own UI font (TikTok Sans, via @remotion/google-fonts). Used only
 // for the title block so it reads like text typed in TikTok's text tool.
-const { fontFamily: tikTokSans } = loadTikTokSans("normal", {
-  weights: ["600", "700"],
+const { fontFamily: interTitle } = loadInterTitle("normal", {
+  weights: ["500", "600", "700"],
   subsets: ["latin"],
 });
-export const FONT_TIKTOK = `${tikTokSans}, -apple-system, sans-serif`;
+export const FONT_TIKTOK = `${interTitle}, -apple-system, sans-serif`;
 
 // --- Panel chrome ------------------------------------------------------------
 
@@ -58,7 +58,7 @@ export const TEXT_MUTED = "#a1a1aa"; // captions under art, reasons, sublines
 // like TikTok's text tool: bold white line, then a smaller black-on-white
 // label. Sized/positioned to sit below TikTok's own top UI (search bar zone).
 export const TITLE_TOP_PX = 134; // ~7% of 1920, clear of the app's top chrome
-export const TITLE_LINE1_SIZE = 58; // bold white line ("NBA Finals - Game 4")
+export const TITLE_LINE1_SIZE = 62; // bold white line ("NBA Finals - Game 4")
 export const TITLE_LINE2_SIZE = 40; // black-on-white label ("Social Psychology")
 export const TITLE_SHADOW = "0 1px 4px rgba(0,0,0,0.45)"; // thin, no stroke
 export const TITLE_LABEL_BG = "#ffffff";
