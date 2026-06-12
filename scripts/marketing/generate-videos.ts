@@ -360,7 +360,8 @@ export async function renderOverlay(
       // line 2 is the EPPP domain named in the script's intro. Empty string
       // hides a line, so a missing title still shows the domain label.
       titleLine1: draft.video_title ?? "",
-      titleLine2: parseDomain(spoken) ?? "",
+      // Founder format: the label always reads "EPPP: <Domain>".
+      titleLine2: parseDomain(spoken) ? `EPPP: ${parseDomain(spoken)}` : "",
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.
