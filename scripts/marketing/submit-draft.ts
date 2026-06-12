@@ -54,6 +54,8 @@ async function main() {
     ...(input.animation_cues?.length ? { animation_cues: input.animation_cues } : {}),
     // Same deal: video_title arrives with the 20260612 migration.
     ...(input.video_title ? { video_title: input.video_title } : {}),
+    // Same deal: tiktok_caption arrives with the 20260612_add_tiktok_posting migration.
+    ...(input.tiktok_caption ? { tiktok_caption: input.tiktok_caption } : {}),
   }
 
   const { data, error } = await supabase

@@ -107,7 +107,12 @@ keep the no-fabrication rule (the script's `sources` array must still be non-emp
 that states the core paradox of the content ("Mistake Or Method?", "Does Scared Straight Work?");
 plain topical works when the subject is itself the hook; no clickbait, no colons, question marks
 welcome. NEVER put the answer (or anything that gives it away) in the title: the title poses the
-tension, the video resolves it. The domain label under it is added automatically as "EPPP: <Domain>". Spoken
+tension, the video resolves it. The domain label under it is added automatically as "EPPP: <Domain>". Also set
+`tiktok_caption`: the post text used when the finished video auto-posts to TikTok. Format, exactly:
+line 1 = the `video_title`; line 2 = a 1-2 sentence explanation teaser that is genuinely about the
+concept (why it matters, what makes it tricky) and NEVER reveals or hints the answer; line 3 =
+exactly 5 hashtags, always `#eppp #psychology` first plus 3 topic-relevant tags (lowercase, no
+made-up tags). No sales CTA in the caption, no emojis, no em dashes. Spoken
 lines feed a TTS talking-head pipeline, so write pronunciations into the speech: "EPPP" as
 "E triple P", "thepsychology.ai" as "the psychology dot ai", "WAIS-IV" as "ways four", and
 any other test name or initialism the way it is actually said aloud (captions/hashtags keep
