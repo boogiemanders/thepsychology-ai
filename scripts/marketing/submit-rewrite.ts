@@ -11,15 +11,17 @@
 //
 // Run: node --env-file=.env.local --import tsx scripts/marketing/submit-rewrite.ts path/to/rewrite.json
 
+// load-env must be first: notify-slack (via slack.ts) freezes its webhook map
+// at import time, and imports are hoisted above any config() call in this body.
+// (Same bug submit-draft.ts had — without this, the approval card silently
+// skips Slack when run from a fresh shell.)
+import "./load-env"
 import { createClient } from "@supabase/supabase-js"
-import { config } from "dotenv"
 import * as fs from "fs"
 import * as path from "path"
 import { slugify, buildObsidianNote } from "../../src/lib/marketing/format"
 import { postDraftForApproval } from "../../src/lib/marketing/slack"
 import type { DraftInput, MarketingDraft } from "../../src/lib/marketing/types"
-
-config({ path: ".env.local" })
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
