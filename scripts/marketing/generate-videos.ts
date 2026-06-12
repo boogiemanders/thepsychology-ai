@@ -44,6 +44,13 @@ const supabase = createClient(
 )
 
 const DRY_RUN = process.argv.includes("--dry-run")
+// --id <uuid>: render exactly that one approved draft, skipping the FIFO queue
+// and the daily cap. For founder-requested single redos (new avatar, prompt
+// change) — regenerates even when video_status is already 'generated'.
+const ID_ARG = (() => {
+  const i = process.argv.indexOf("--id")
+  return i === -1 ? null : process.argv[i + 1] || null
+})()
 const DAILY_CAP = Number(process.env.VIDEO_DAILY_CAP || 12)
 const OUTPUT_DIR =
   process.env.VIDEO_OUTPUT_DIR ||
@@ -438,32 +445,49 @@ async function main() {
     }
   }
 
-  // Daily cap (cost guard): how many videos already generated today (ET)?
-  const { count, error: countErr } = await supabase
-    .from("marketing_drafts")
-    .select("id", { count: "exact", head: true })
-    .eq("type", "tiktok")
-    .eq("video_status", "generated")
-    .gte("video_generated_at", startOfEtDayUtcIso())
-  if (countErr) throw new Error(`Cap count failed: ${countErr.message}`)
-  const generatedToday = count ?? 0
-  if (generatedToday >= DAILY_CAP) {
-    console.log(`Daily cap reached (${generatedToday}/${DAILY_CAP}). Nothing to do.`)
-    return
+  let drafts: MarketingDraft[]
+  let generatedToday = 0
+  if (ID_ARG) {
+    // Explicit single redo: exactly this draft, no queue, no cap.
+    const { data, error } = await supabase
+      .from("marketing_drafts")
+      .select("*")
+      .eq("id", ID_ARG)
+      .eq("type", "tiktok")
+      .eq("status", "approved")
+      .single()
+    if (error || !data) {
+      throw new Error(`--id ${ID_ARG}: ${error?.message || "no approved tiktok draft with that id"}`)
+    }
+    drafts = [data as MarketingDraft]
+  } else {
+    // Daily cap (cost guard): how many videos already generated today (ET)?
+    const { count, error: countErr } = await supabase
+      .from("marketing_drafts")
+      .select("id", { count: "exact", head: true })
+      .eq("type", "tiktok")
+      .eq("video_status", "generated")
+      .gte("video_generated_at", startOfEtDayUtcIso())
+    if (countErr) throw new Error(`Cap count failed: ${countErr.message}`)
+    generatedToday = count ?? 0
+    if (generatedToday >= DAILY_CAP) {
+      console.log(`Daily cap reached (${generatedToday}/${DAILY_CAP}). Nothing to do.`)
+      return
+    }
+
+    // Approved TikTok scripts with no video yet, oldest first.
+    const { data, error } = await supabase
+      .from("marketing_drafts")
+      .select("*")
+      .eq("type", "tiktok")
+      .eq("status", "approved")
+      .is("video_status", null)
+      .order("created_at", { ascending: true })
+      .limit(DAILY_CAP - generatedToday)
+    if (error) throw new Error(`Select failed: ${error.message}`)
+    drafts = (data ?? []) as MarketingDraft[]
   }
 
-  // Approved TikTok scripts with no video yet, oldest first.
-  const { data, error } = await supabase
-    .from("marketing_drafts")
-    .select("*")
-    .eq("type", "tiktok")
-    .eq("status", "approved")
-    .is("video_status", null)
-    .order("created_at", { ascending: true })
-    .limit(DAILY_CAP - generatedToday)
-  if (error) throw new Error(`Select failed: ${error.message}`)
-
-  const drafts = (data ?? []) as MarketingDraft[]
   if (drafts.length === 0) {
     console.log("No approved TikTok scripts awaiting video. Nothing to do.")
     return
