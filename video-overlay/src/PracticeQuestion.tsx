@@ -541,9 +541,18 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         );
       })}
       {titleLine1 || titleLine2 ? (
-        // Persistent for the whole video, so no Sequence. Sits here in the
+        // No Sequence: shown whenever nothing covers it. Sits here in the
         // stack so cards, reveals, strikes, and panels all cover it while up.
-        <TitleBlock line1={titleLine1} line2={titleLine2} />
+        // Clip/art panels float in the same top zone the title now occupies
+        // (thumbnail crop pushed it down), so the title fades out for those
+        // windows instead of colliding.
+        <TitleBlock
+          line1={titleLine1}
+          line2={titleLine2}
+          hideWindows={cueOverlays
+            .filter((o) => o.cue.type === "clip" || o.cue.type === "art")
+            .map((o) => ({ fromMs: o.fromMs, toMs: o.toMs }))}
+        />
       ) : null}
       {cueOverlays.map((o, i) => (
         <Sequence
