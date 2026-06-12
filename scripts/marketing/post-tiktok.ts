@@ -18,7 +18,7 @@
 import { createClient } from "@supabase/supabase-js"
 import { config } from "dotenv"
 import { existsSync, mkdirSync, renameSync } from "fs"
-import { basename, dirname, join } from "path"
+import { basename, join } from "path"
 import { publishTikTokVideo } from "../../src/lib/marketing/publish-tiktok"
 import type { MarketingDraft } from "../../src/lib/marketing/types"
 
@@ -30,6 +30,11 @@ const supabase = createClient(
 )
 
 const DRY_RUN = process.argv.includes("--dry-run")
+// Same Drive root as generate-videos.ts; published work lands in done/ off the
+// root even though in-review files live in "final review/".
+const OUTPUT_DIR =
+  process.env.VIDEO_OUTPUT_DIR ||
+  "/Users/anderschan/Library/CloudStorage/GoogleDrive-dranders@drinzinna.com/My Drive/thepsychology.ai marketing/videos"
 const DAILY_CAP = Number(process.env.TIKTOK_POSTS_PER_DAY || 1)
 
 // Same ET-day convention as drip-blog/drip-linkedin — the cap is per founder
@@ -132,7 +137,7 @@ async function main() {
     // Best-effort — a failed move must not block marking the row posted.
     let newRawPath = draft.video_path!
     try {
-      const doneDir = join(dirname(draft.video_path!), "done")
+      const doneDir = join(OUTPUT_DIR, "done")
       mkdirSync(doneDir, { recursive: true })
       const srtPath = draft.video_path!.replace(/\.mp4$/, ".srt")
       for (const p of [draft.video_path!, srtPath, finalPath]) {

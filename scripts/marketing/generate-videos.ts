@@ -24,9 +24,9 @@
 import { createClient } from "@supabase/supabase-js"
 import { execFileSync } from "child_process"
 import { config } from "dotenv"
-import { copyFileSync, existsSync, mkdirSync, rmSync, writeFileSync } from "fs"
+import { copyFileSync, existsSync, mkdirSync, renameSync, rmSync, writeFileSync } from "fs"
 import { tmpdir } from "os"
-import { join, resolve } from "path"
+import { basename, join, resolve } from "path"
 import {
   extractSpokenScript,
   estimateDurationSeconds,
@@ -114,21 +114,41 @@ async function postVideoReviewCard(draft: MarketingDraft, finalPath: string, spo
   const domain = parseDomain(spoken)
   const caption = draft.tiktok_caption?.trim() || buildFallbackCaption(draft, domain)
 
+  // Move the trio (raw, SRT, final) into videos/final review when the card
+  // goes out (founder ask 2026-06-12): the top-level folder only holds
+  // in-flight renders, final review holds work awaiting the Post/Skip click,
+  // done holds published. Best-effort — a failed move keeps the old paths.
+  const rawPath = finalPath.replace(/_final\.mp4$/, ".mp4")
+  let reviewRaw = rawPath
+  let reviewFinal = finalPath
+  try {
+    const reviewDir = join(OUTPUT_DIR, "final review")
+    mkdirSync(reviewDir, { recursive: true })
+    const srtPath = rawPath.replace(/\.mp4$/, ".srt")
+    for (const p of [rawPath, srtPath, finalPath]) {
+      if (existsSync(p)) renameSync(p, join(reviewDir, basename(p)))
+    }
+    reviewRaw = join(reviewDir, basename(rawPath))
+    reviewFinal = join(reviewDir, basename(finalPath))
+  } catch (moveErr) {
+    console.warn(`[tiktok] move to final review/ failed (files stay put): ${(moveErr as Error).message}`)
+  }
+
   const { error } = await supabase
     .from("marketing_drafts")
-    .update({ tiktok_caption: caption, tiktok_post_status: "review" })
+    .update({ tiktok_caption: caption, tiktok_post_status: "review", video_path: reviewRaw })
     .eq("id", draft.id)
   if (error) {
     console.error(`[tiktok] review-status update failed for ${draft.id.slice(0, 8)}: ${error.message}`)
     return
   }
 
-  const fileName = finalPath.split("/").pop() || finalPath
+  const fileName = reviewFinal.split("/").pop() || reviewFinal
   await notifySlack(`Video ready for TikTok review: ${draft.title}`, [
     { type: "header", text: { type: "plain_text", text: (draft.video_title || draft.title).slice(0, 150) } },
     {
       type: "context",
-      elements: [{ type: "mrkdwn", text: `Final cut ready: *${fileName}* (Drive → thepsychology.ai marketing/videos)` }],
+      elements: [{ type: "mrkdwn", text: `Final cut ready: *${fileName}* (Drive → thepsychology.ai marketing/videos/final review)` }],
     },
     { type: "section", text: { type: "mrkdwn", text: `*TikTok caption*\n${caption.slice(0, 2800)}` } },
     {
