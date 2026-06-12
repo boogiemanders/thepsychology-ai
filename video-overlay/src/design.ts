@@ -54,10 +54,15 @@ export const TEXT_MUTED = "#a1a1aa"; // captions under art, reasons, sublines
 
 // --- Title block (replaces the old domain badge) --------------------------------
 
-// Two-line TikTok-native title pinned top-center for the whole video, styled
-// like TikTok's text tool: bold white line, then a smaller black-on-white
-// label. Sized/positioned to sit below TikTok's own top UI (search bar zone).
-export const TITLE_TOP_PX = 134; // ~7% of 1920, clear of the app's top chrome
+// Two-line TikTok-native title top-center, styled like TikTok's text tool:
+// bold white line, then a smaller black-on-white label. Position is set by the
+// profile-grid thumbnail, not the feed: grid tiles show a 3:4 center crop of
+// the 9:16 frame, cutting the top/bottom 240px (founder caught line 1 fully
+// cropped out at the old 134). 256 keeps the whole block inside the tile with
+// margin, and still clears the feed's top chrome. While a top-zone panel
+// (clip/art) is up the title fades out instead of colliding (TitleBlock
+// hideWindows) — the panel keeps its founder-approved spot.
+export const TITLE_TOP_PX = 272; // 240px tile crop + margin for device variance
 export const TITLE_LINE1_SIZE = 62; // bold white line ("NBA Finals - Game 4")
 export const TITLE_LINE2_SIZE = 40; // black-on-white label ("Social Psychology")
 export const TITLE_SHADOW = "0 1px 4px rgba(0,0,0,0.45)"; // thin, no stroke
@@ -80,10 +85,11 @@ export const CAPTION_STROKE_COLOR = "black";
 // quarter, so stay above ~28. Captions never move from this line.
 export const CAPTION_BOTTOM_PERCENT = 32;
 
-// Floating top-zone panel (clips, founder art): floats between the title
-// block above and the speaker's head below. % padding resolves against width
-// (1080), so 27% (~292px) clears the persistent title (which ends ~280px)
-// while keeping the panel off the face.
+// Floating top-zone panel (clips, founder art): floats above the speaker's
+// head. % padding resolves against width (1080), so 27% = ~292px. The title
+// block now overlaps this zone (it moved down for the thumbnail crop), so the
+// title fades out while a panel is up rather than the panel moving onto the
+// face.
 export const TOP_ZONE_PADDING_TOP = "27%";
 
 // Chest-level row (diagram, wrong-answer strike): % padding resolves against
