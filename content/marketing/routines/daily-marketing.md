@@ -106,7 +106,8 @@ keep the no-fabrication rule (the script's `sources` array must still be non-emp
 `video_title`: the on-screen TikTok title, 2-4 words, founder's taste = a short tension question
 that states the core paradox of the content ("Mistake Or Method?", "Does Scared Straight Work?");
 plain topical works when the subject is itself the hook; no clickbait, no colons, question marks
-welcome. The domain label under it is added automatically as "EPPP: <Domain>". Spoken
+welcome. NEVER put the answer (or anything that gives it away) in the title: the title poses the
+tension, the video resolves it. The domain label under it is added automatically as "EPPP: <Domain>". Spoken
 lines feed a TTS talking-head pipeline, so write pronunciations into the speech: "EPPP" as
 "E triple P", "thepsychology.ai" as "the psychology dot ai", "WAIS-IV" as "ways four", and
 any other test name or initialism the way it is actually said aloud (captions/hashtags keep
