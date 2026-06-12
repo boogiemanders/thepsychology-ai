@@ -24,6 +24,25 @@ import {
 // arrows are pairs of node indexes; only adjacent left-to-right pairs
 // ([0,1], [1,2]) render in this horizontal layout. labels[i] annotates
 // arrows[i].
+// Node boxes fit their text instead of clipping it: a single long word
+// ("Parasympathetic") cannot wrap, and tailwind's border-box sizing means the
+// old fixed maxWidth left it only ~116px of text room, so it spilled over the
+// box edge and shoved the arrow aside (founder screenshot, 2026-06-12). The
+// box stretches first (up to a cap that keeps 3-node rows inside the panel),
+// then the font steps down. ~0.62em average glyph width for Geist 600.
+const NODE_PAD_X = 52; // 26px left + right padding, inside maxWidth (border-box)
+const nodeFit = (text: string) => {
+  const longest = Math.max(...text.split(/\s+/).map((w) => w.length), 1);
+  const widthAt = (f: number) => longest * 0.62 * f + NODE_PAD_X;
+  let fontSize = 33;
+  let maxWidth = 168;
+  if (widthAt(fontSize) > maxWidth) {
+    maxWidth = Math.min(264, Math.ceil(widthAt(fontSize)));
+    while (fontSize > 18 && widthAt(fontSize) > maxWidth) fontSize--;
+  }
+  return { fontSize, maxWidth };
+};
+
 export const ConceptDiagram: React.FC<{
   nodes: string[];
   arrows: [number, number][];
@@ -95,6 +114,8 @@ export const ConceptDiagram: React.FC<{
                     flexDirection: "column",
                     alignItems: "center",
                     margin: "0 6px",
+                    // A too-wide neighbor must shrink the box, never the arrow.
+                    flexShrink: 0,
                   }}
                 >
                   {label ? (
@@ -146,12 +167,12 @@ export const ConceptDiagram: React.FC<{
                   border: "1px solid #3f3f46",
                   borderRadius: 18,
                   padding: "22px 26px",
-                  fontSize: 33,
+                  fontSize: nodeFit(node).fontSize,
                   fontWeight: 600,
                   color: TEXT_PRIMARY,
-                  // Wrap to a second line instead of spilling past the panel:
-                  // node phrases can be 1-3 words, so a fixed width would clip.
-                  maxWidth: 168,
+                  // Wrap to a second line where possible; nodeFit covers the
+                  // unbreakable-long-word case (box grows, font shrinks).
+                  maxWidth: nodeFit(node).maxWidth,
                   textAlign: "center",
                   lineHeight: 1.15,
                   opacity: np,
