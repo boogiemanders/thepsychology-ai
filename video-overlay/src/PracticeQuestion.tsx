@@ -15,7 +15,15 @@ import type { Caption } from "@remotion/captions";
 import { z } from "zod";
 import { applySpellingMap, applySpellingToText } from "./spelling-map";
 import { CAPTION_STYLES, CAPTION_STYLE_IDS } from "./caption-styles";
-import { ACCENT, QuestionCard, SITE_BG } from "./QuestionCard";
+import {
+  ACCENT,
+  FONT_GEIST,
+  PANEL_RADIUS,
+  PANEL_SHADOW,
+  SITE_BG,
+  TEXT_PRIMARY,
+} from "./design";
+import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
 import { EndCard } from "./EndCard";
 import { WrongStrike } from "./WrongStrike";
@@ -23,15 +31,17 @@ import { DomainBadge } from "./DomainBadge";
 import { ConceptDiagram } from "./ConceptDiagram";
 import { IllustrationCue } from "./IllustrationCue";
 import { ClipCue } from "./ClipCue";
+import { AnimatedArt } from "./AnimatedArt";
 
 // Script-authored animation moments. Each cue fires at the transcript cue
 // where its normalized trigger phrase begins (the phrase may span several
 // short HeyGen cues); payload shape depends on type (diagram: {nodes, arrows,
 // labels?}, illustration: {image, caption?}, pullquote: {text}, clip:
-// {video, caption?} where video is a public-relative mp4 path).
+// {video, caption?} where video is a public-relative mp4 path, art:
+// {image, caption?} where image is founder artwork under public/art/).
 export const animationCueSchema = z.object({
   trigger: z.string(),
-  type: z.enum(["diagram", "illustration", "pullquote", "clip"]),
+  type: z.enum(["diagram", "illustration", "pullquote", "clip", "art"]),
   payload: z.record(z.string(), z.any()),
 });
 
@@ -135,15 +145,15 @@ const PullQuote: React.FC<{ text: string }> = ({ text }) => {
       <div
         style={{
           backgroundColor: SITE_BG,
-          borderRadius: 28,
+          borderRadius: PANEL_RADIUS,
           width: "88%",
           padding: "52px 56px",
-          fontFamily: "Geist, -apple-system, sans-serif",
+          fontFamily: FONT_GEIST,
           fontSize: 46,
           fontWeight: 500,
           lineHeight: 1.45,
-          color: "#fafafa",
-          boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
+          color: TEXT_PRIMARY,
+          boxShadow: PANEL_SHADOW,
           opacity: progress,
           transform: `translateY(${(1 - progress) * 24}px)`,
         }}
@@ -457,6 +467,8 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
       if (cue.type === "diagram" && !Array.isArray(cue.payload.nodes)) continue;
       if (cue.type === "illustration" && typeof cue.payload.image !== "string")
         continue;
+      if (cue.type === "art" && typeof cue.payload.image !== "string")
+        continue;
       if (cue.type === "pullquote" && typeof cue.payload.text !== "string")
         continue;
       if (cue.type === "clip" && typeof cue.payload.video !== "string")
@@ -559,6 +571,11 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           ) : o.cue.type === "clip" ? (
             <ClipCue
               video={o.cue.payload.video as string}
+              caption={o.cue.payload.caption as string | undefined}
+            />
+          ) : o.cue.type === "art" ? (
+            <AnimatedArt
+              image={o.cue.payload.image as string}
               caption={o.cue.payload.caption as string | undefined}
             />
           ) : (

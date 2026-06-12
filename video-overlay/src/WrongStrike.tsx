@@ -5,7 +5,16 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { SITE_BG } from "./QuestionCard";
+import {
+  CHEST_ZONE_PADDING_TOP,
+  FONT_GEIST,
+  PANEL_RADIUS,
+  PANEL_SHADOW,
+  SITE_BG,
+  TEXT_BODY,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+} from "./design";
 
 // Shown while the avatar says "<letter> is wrong": one compact choice row
 // (same styling as the question card rows) slides in at the card position,
@@ -58,26 +67,25 @@ export const WrongStrike: React.FC<{
       style={{
         justifyContent: "center",
         alignItems: "center",
-        // % padding resolves against width (1080), so 52% pushes the row's
-        // center to roughly 65% of the 1920 frame height.
-        paddingTop: "52%",
+        // Chest-level row: see CHEST_ZONE_PADDING_TOP in design.ts.
+        paddingTop: CHEST_ZONE_PADDING_TOP,
       }}
     >
       <div
         style={{
           backgroundColor: SITE_BG,
-          borderRadius: 28,
+          borderRadius: PANEL_RADIUS,
           width: "92%",
           padding: "40px 48px",
-          fontFamily: "Geist, -apple-system, sans-serif",
-          boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
+          fontFamily: FONT_GEIST,
+          boxShadow: PANEL_SHADOW,
           opacity: enter,
           transform: `translateY(${(1 - enter) * 24}px)`,
         }}
       >
         <div style={{ position: "relative", opacity: 1 - 0.5 * strike }}>
-          <div style={{ ...row, color: "#d4d4d8" }}>
-            <span style={{ fontWeight: 700, color: "#fafafa" }}>
+          <div style={{ ...row, color: TEXT_BODY }}>
+            <span style={{ fontWeight: 700, color: TEXT_PRIMARY }}>
               {letter}.
             </span>
             <span>{choice}</span>
@@ -96,7 +104,7 @@ export const WrongStrike: React.FC<{
               style={{
                 fontWeight: 700,
                 textDecorationLine: "line-through",
-                textDecorationColor: "#fafafa",
+                textDecorationColor: TEXT_PRIMARY,
                 textDecorationThickness: 4,
               }}
             >
@@ -105,7 +113,7 @@ export const WrongStrike: React.FC<{
             <span
               style={{
                 textDecorationLine: "line-through",
-                textDecorationColor: "#fafafa",
+                textDecorationColor: TEXT_PRIMARY,
                 textDecorationThickness: 4,
               }}
             >
@@ -120,7 +128,7 @@ export const WrongStrike: React.FC<{
               fontSize: 30,
               fontWeight: 400,
               lineHeight: 1.4,
-              color: "#a1a1aa",
+              color: TEXT_MUTED,
               opacity: reasonIn,
             }}
           >

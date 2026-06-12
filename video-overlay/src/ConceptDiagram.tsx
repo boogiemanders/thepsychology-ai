@@ -5,7 +5,16 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { ACCENT, SITE_BG } from "./QuestionCard";
+import {
+  ACCENT,
+  CHEST_ZONE_PADDING_TOP,
+  FONT_GEIST,
+  PANEL_RADIUS,
+  PANEL_SHADOW,
+  SITE_BG,
+  TEXT_MUTED,
+  TEXT_PRIMARY,
+} from "./design";
 
 // Explainer diagram: 2-3 labeled boxes connected by arrows that draw
 // themselves left to right while the avatar talks through a relationship
@@ -51,20 +60,18 @@ export const ConceptDiagram: React.FC<{
       style={{
         justifyContent: "center",
         alignItems: "center",
-        // Push below screen center to chest level (see WrongStrike): % pads
-        // resolve against width (1080), so 52% lands the panel's center
-        // around 65% of the 1920 frame height, same as the strike row.
-        paddingTop: "52%",
+        // Chest-level row: see CHEST_ZONE_PADDING_TOP in design.ts.
+        paddingTop: CHEST_ZONE_PADDING_TOP,
       }}
     >
       <div
         style={{
           backgroundColor: SITE_BG,
-          borderRadius: 28,
+          borderRadius: PANEL_RADIUS,
           width: "92%",
           padding: "48px 34px",
-          fontFamily: "Geist, -apple-system, sans-serif",
-          boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
+          fontFamily: FONT_GEIST,
+          boxShadow: PANEL_SHADOW,
           opacity: panel,
           transform: `translateY(${(1 - panel) * 24}px)`,
           display: "flex",
@@ -95,7 +102,7 @@ export const ConceptDiagram: React.FC<{
                       style={{
                         fontSize: 26,
                         fontWeight: 400,
-                        color: "#a1a1aa",
+                        color: TEXT_MUTED,
                         whiteSpace: "nowrap",
                         marginBottom: 2,
                         // Label trails the line draw.
@@ -141,7 +148,7 @@ export const ConceptDiagram: React.FC<{
                   padding: "22px 26px",
                   fontSize: 33,
                   fontWeight: 600,
-                  color: "#fafafa",
+                  color: TEXT_PRIMARY,
                   // Wrap to a second line instead of spilling past the panel:
                   // node phrases can be 1-3 words, so a fixed width would clip.
                   maxWidth: 168,

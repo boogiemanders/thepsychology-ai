@@ -3,24 +3,22 @@ import {
   Easing,
   interpolate,
   interpolateColors,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { loadFont } from "@remotion/fonts";
+import {
+  ACCENT,
+  FONT_GEIST,
+  PANEL_RADIUS,
+  PANEL_SHADOW,
+  SITE_BG,
+  TEXT_BODY,
+  TEXT_PRIMARY,
+} from "./design";
 
-// Same font as thepsychology.ai (Geist Sans, loaded site-wide via next/font);
-// the variable woff2 ships in the `geist` npm package and is copied into
-// public/fonts/. Background matches the site's dark --background (#18181B).
-loadFont({
-  family: "Geist",
-  url: staticFile("fonts/Geist-Variable.woff2"),
-});
-
-export const SITE_BG = "#18181B";
-// The one accent color (warm coral, Anthropic-adjacent). Used sparingly:
-// the correct-answer highlight and the ".ai" in the end card.
-export const ACCENT = "#d97757";
+// Tokens (and the Geist font load) live in design.ts now; these re-exports
+// keep older imports (`from "./QuestionCard"`) compiling.
+export { ACCENT, SITE_BG };
 
 const LETTERS = ["A", "B", "C", "D", "E"] as const;
 
@@ -70,12 +68,12 @@ export const QuestionPanel: React.FC<{
       <div
         style={{
           backgroundColor: SITE_BG,
-          borderRadius: 28,
+          borderRadius: PANEL_RADIUS,
           width: "92%",
           padding: "56px 48px",
-          fontFamily: "Geist, -apple-system, sans-serif",
-          color: "#fafafa",
-          boxShadow: "0 12px 48px rgba(0,0,0,0.45)",
+          fontFamily: FONT_GEIST,
+          color: TEXT_PRIMARY,
+          boxShadow: PANEL_SHADOW,
         }}
       >
       <div
@@ -113,7 +111,7 @@ export const QuestionPanel: React.FC<{
                 fontSize: 40,
                 fontWeight: 400,
                 lineHeight: 1.4,
-                color: "#d4d4d8",
+                color: TEXT_BODY,
                 opacity: rowOpacity,
               }}
             >
@@ -137,8 +135,8 @@ export const QuestionPanel: React.FC<{
                 style={{
                   fontWeight: 700,
                   color: isCorrect
-                    ? interpolateColors(highlight, [0, 1], ["#fafafa", ACCENT])
-                    : "#fafafa",
+                    ? interpolateColors(highlight, [0, 1], [TEXT_PRIMARY, ACCENT])
+                    : TEXT_PRIMARY,
                 }}
               >
                 {LETTERS[i]}.
@@ -150,7 +148,7 @@ export const QuestionPanel: React.FC<{
                         color: interpolateColors(
                           highlight,
                           [0, 1],
-                          ["#d4d4d8", "#fafafa"]
+                          [TEXT_BODY, TEXT_PRIMARY]
                         ),
                       }
                     : undefined

@@ -13,8 +13,8 @@
  "animationCues": [
   {
    "trigger": "psychology licensure exam",
-   "type": "clip",
-   "payload": { "video": "clips/studying.mp4" }
+   "type": "art",
+   "payload": { "image": "art/studying.png" }
   },
   {
    "trigger": "on the fly",

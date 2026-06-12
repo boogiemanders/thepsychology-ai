@@ -1,62 +1,66 @@
 import {
   AbsoluteFill,
   Easing,
+  Img,
   interpolate,
   staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { Video } from "@remotion/media";
 import {
+  ART_CAPTION_COLOR,
+  ART_PANEL_BG,
   FONT_GEIST,
   PANEL_RADIUS,
   PANEL_SHADOW,
-  SITE_BG,
-  TEXT_MUTED,
   TOP_ZONE_PADDING_TOP,
 } from "./design";
 
-// One motion-graphics moment: a short pre-rendered animation clip (HyperFrames
-// line art from clips-src/) in the same dark chest-level panel as the concept
-// diagram. Clips carry no audio; loop covers cue windows longer than the clip.
-export const ClipCue: React.FC<{
-  video: string;
+// Founder's hand-drawn artwork (public/art/*.png) in the floating top-zone
+// panel — same placement as ClipCue. The drawings ship on white paper, so the
+// panel leans in: white card, subtle shadow, dark caption. Living motion is
+// a one-time calm fade/scale-in plus a gentle vertical bob on a slow sine
+// (deterministic per frame, so renders are reproducible). The art itself is
+// never distorted — the whole panel moves as one.
+export const AnimatedArt: React.FC<{
+  image: string;
   caption?: string;
-}> = ({ video, caption }) => {
+}> = ({ image, caption }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const progress = interpolate(frame, [0, 0.45 * fps], [0, 1], {
+  const progress = interpolate(frame, [0, 0.7 * fps], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.bezier(0.16, 1, 0.3, 1),
   });
+
+  // ~3% vertical bob, one cycle every 2s. Starts at 0 so it blends with the
+  // entrance; % translate resolves against the panel's own height.
+  const bob = Math.sin((frame / fps) * Math.PI) * 1.5;
 
   return (
     <AbsoluteFill
       style={{
         justifyContent: "flex-start",
         alignItems: "center",
-        // Floating top-zone panel: see TOP_ZONE_PADDING_TOP in design.ts.
         paddingTop: TOP_ZONE_PADDING_TOP,
       }}
     >
       <div
         style={{
-          backgroundColor: SITE_BG,
+          backgroundColor: ART_PANEL_BG,
           borderRadius: PANEL_RADIUS,
           width: "50%",
           padding: 22,
           fontFamily: FONT_GEIST,
           boxShadow: PANEL_SHADOW,
           opacity: progress,
-          transform: `translateY(${(1 - progress) * 24}px)`,
+          transform: `translateY(${bob}%) scale(${0.97 + 0.03 * progress})`,
         }}
       >
-        <Video
-          src={staticFile(video)}
-          muted
-          loop
+        <Img
+          src={staticFile(image)}
           style={{ width: "100%", display: "block", borderRadius: 18 }}
         />
         {caption ? (
@@ -64,9 +68,9 @@ export const ClipCue: React.FC<{
             style={{
               fontSize: 30,
               fontWeight: 400,
-              color: TEXT_MUTED,
+              color: ART_CAPTION_COLOR,
               textAlign: "center",
-              marginTop: 20,
+              marginTop: 18,
               marginBottom: 4,
               lineHeight: 1.35,
             }}
