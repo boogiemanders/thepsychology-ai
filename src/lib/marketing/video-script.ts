@@ -72,6 +72,24 @@ export function extractSpokenScript(bodyMd: string): string {
   return spoken.join("\n")
 }
 
+// EPPP domain named in the intro line ("...with a question on X.") of a
+// practice-question script, title-cased for display in the video's title
+// block ("ethics" -> "Ethics"; already-capitalized forms like "I-O
+// Psychology" pass through; connector words like "and" stay lowercase).
+// Returns null when no domain is named (non-question videos).
+export function parseDomain(spokenText: string): string | null {
+  const m = spokenText.match(/question on ([A-Za-z][A-Za-z /-]*?)\s*[.?!]/)
+  if (!m) return null
+  const SMALL_WORDS = new Set(["and", "or", "of", "the", "in", "for"])
+  return m[1]
+    .trim()
+    .split(/\s+/)
+    .map((word, i) =>
+      i > 0 && SMALL_WORDS.has(word) ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(" ")
+}
+
 // ~150 spoken words per minute at a natural pace.
 export function estimateDurationSeconds(spokenText: string): number {
   const words = spokenText.split(/\s+/).filter(Boolean).length

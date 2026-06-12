@@ -81,6 +81,10 @@ export type MarketingDraft = {
   // Optional until the 20260611_add_animation_cues migration is applied —
   // rows selected before then simply lack the key.
   animation_cues?: AnimationCue[]
+  // Punchy on-video title (line 1 of the overlay's title block, e.g.
+  // "Breaking Test Rules?"). Optional until the 20260612_add_video_title
+  // migration is applied. null/empty hides the line.
+  video_title?: string | null
 }
 
 // Input shape the generation agent produces (a JSON file handed to submit-draft.ts).
@@ -97,6 +101,9 @@ export type DraftInput = {
   review_notes?: string
   // TikTok practice-question/explainer scripts only (1-3 cues).
   animation_cues?: AnimationCue[]
+  // TikTok drafts only: short topical hook for the on-video title block
+  // (2-5 words, e.g. "Breaking Test Rules?").
+  video_title?: string | null
 }
 
 export const DEFAULT_AUTHOR = "Dr. Anders Chan, Psy.D."

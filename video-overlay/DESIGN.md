@@ -10,8 +10,9 @@ hard-coded in the components.
 | Token | Current value | What it changes | Where you see it |
 | --- | --- | --- | --- |
 | `SITE_BG` | `#18181B` (near-black) | Background of every dark panel | Question card, reveal, diagram, pullquote, strike row, end card |
-| `ACCENT` | `#d97757` (warm coral) | The one brand pop color | Correct-answer bar + letter, ".ai" in end card, badge ring, diagram arrowheads, "pass" in the hook captions |
+| `ACCENT` | `#d97757` (warm coral) | The one brand pop color | Correct-answer bar + letter, ".ai" in end card, diagram arrowheads, "pass" in the hook captions |
 | `FONT_GEIST` | Geist | Font for all product surfaces | Every panel and card (matches thepsychology.ai) |
+| `FONT_TIKTOK` | TikTok Sans | Font for the title block only | The two-line title at the top (matches TikTok's text tool) |
 | `PANEL_RADIUS` | `28` | Corner roundness of panels | All floating panels |
 | `PANEL_SHADOW` | soft black blur | Drop shadow under panels | All floating panels |
 | `ART_PANEL_BG` | `#ffffff` | Background of the founder-art panel | White card behind the hand-drawn art |
@@ -19,20 +20,27 @@ hard-coded in the components.
 | `TEXT_PRIMARY` | `#fafafa` (white) | Headline/stem text on dark panels | Question stem, choice letters, URL |
 | `TEXT_BODY` | `#d4d4d8` (light gray) | Body text on dark panels | Answer-choice text |
 | `TEXT_MUTED` | `#a1a1aa` (gray) | Secondary text on dark panels | Clip captions, strike reasons, "EPPP Prep" subline, diagram labels |
-| `BADGE_BG` | `SITE_BG` at ~85% | Domain chip background | "ASSESSMENT" style chip at the top |
+| `TITLE_TOP_PX` | `134` (~7% of 1920) | Where the title block starts | Below TikTok's own search-bar zone |
+| `TITLE_LINE1_SIZE` | `58` | Size of the bold white title line | "Breaking Test Rules?" style hook |
+| `TITLE_LINE2_SIZE` | `40` | Size of the domain label line | "Assessment" black-on-white label |
+| `TITLE_SHADOW` | thin black blur | Shadow under title line 1 | Keeps the white line readable, no stroke |
+| `TITLE_LABEL_BG` / `TITLE_LABEL_COLOR` | white / near-black | Label colors for title line 2 | TikTok text-tool "label" look |
+| `TITLE_LABEL_RADIUS` | `10` | Corner roundness of the label | Title line 2 |
 | `CAPTION_FONT_SIZE` | `54` | Caption size (Inter styles) | "clean" and "box" captions |
 | `CAPTION_FONT_SIZE_UPPER` | `58` | Caption size (uppercase styles) | "outline" and "yellow" captions |
 | `CAPTION_COLOR` | white | Caption fill color | All caption styles except "yellow" |
 | `CAPTION_YELLOW` | `#FFE135` | Loud caption color | "yellow" style only |
 | `CAPTION_STROKE_COLOR` | black | Outline around caption letters | Keeps captions readable over bright frames |
 | `CAPTION_BOTTOM_PERCENT` | `32` | How far captions sit above the bottom edge | The caption line, the end card |
-| `TOP_ZONE_PADDING_TOP` | `7%` | Where the floating top panel starts | Founder art and clips, above the head |
+| `TOP_ZONE_PADDING_TOP` | `27%` | Where the floating top panel starts | Founder art and clips, below the title block, above the head |
 | `CHEST_ZONE_PADDING_TOP` | `52%` | Where chest-level rows land | Diagrams and wrong-answer strikes |
 
 ## Typography rules
 
 - **Geist** = product surfaces. Anything that looks like the app (cards,
   panels, badges, end card) uses Geist, same as the website.
+- **TikTok Sans** = the title block. It should read like text the founder
+  typed in TikTok's own text tool, not like our product UI.
 - **Inter** = captions. The spoken-word captions use Inter (heavy weight,
   thin black stroke). The louder alternate styles use Montserrat, but
   "clean" Inter is the founder's pick.
@@ -42,8 +50,16 @@ hard-coded in the components.
 
 - **Captions never move.** They live at 32% from the bottom, above the
   TikTok UI (which covers roughly the bottom quarter of the screen).
+- **The title block never moves either.** Two centered lines pinned at
+  `TITLE_TOP_PX` for the whole video: a bold white hook line (the draft's
+  `video_title`) and a black-on-white domain label. It fades in over 0.3s
+  at the start and stays up; the question card, reveal, strikes, and
+  panels render on top of it, so it quietly disappears while they are up.
+  It replaced the old `DomainBadge` chip (the label line carries the
+  domain now). An empty line is simply hidden.
 - **Art floats above the head.** The founder-art / clip panel pins to the
-  top zone (7% padding) so it never covers the speaker's face or mouth.
+  top zone (27% padding), in the band between the title block and the
+  speaker's head, so it never covers the title, face, or mouth.
 - **Diagrams and strikes sit at chest level** (52% padding) so the face
   stays clear while the avatar talks.
 - **TikTok safe zones:** keep content out of the bottom ~28% (UI) and the

@@ -27,7 +27,7 @@ import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
 import { EndCard } from "./EndCard";
 import { WrongStrike } from "./WrongStrike";
-import { DomainBadge } from "./DomainBadge";
+import { TitleBlock } from "./TitleBlock";
 import { ConceptDiagram } from "./ConceptDiagram";
 import { IllustrationCue } from "./IllustrationCue";
 import { ClipCue } from "./ClipCue";
@@ -60,6 +60,11 @@ export const practiceQuestionSchema = z.object({
   questionStem: z.string(),
   choices: z.array(z.string()),
   animationCues: z.array(animationCueSchema).default([]),
+  // Persistent TikTok-style title block, top-center. Line 1 = the punchy hook
+  // (draft.video_title), line 2 = the EPPP domain label. Empty string = that
+  // line is hidden (both empty = no block at all).
+  titleLine1: z.string().default(""),
+  titleLine2: z.string().default(""),
 });
 
 export type PracticeQuestionProps = z.infer<typeof practiceQuestionSchema>;
@@ -176,6 +181,8 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   // Schema default covers parsed props; the `?? []` covers raw props passed
   // straight to the component (Remotion hands the component the input shape).
   animationCues = [],
+  titleLine1 = "",
+  titleLine2 = "",
 }) => {
   // Card/strike text is parsed from the spoken script, so phonetic spellings
   // ("ways four", "E triple P") must map back to written forms on screen.
@@ -409,21 +416,6 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   const inWrongStrike = (ms: number) =>
     wrongStrikes.some((s) => ms >= s.fromMs && ms < s.toMs);
 
-  // Domain chip: an early cue names the question's domain ("...a question on
-  // ethics."). The chip holds from that moment until the question card takes
-  // over (or ~4s when there is no card to hand off to).
-  const domainBadge = useMemo(() => {
-    for (const c of cues) {
-      if (c.startMs > 15000) break; // "early" cue only — avoid late false hits
-      const m = c.text.match(/question on ([a-z ]+)[.?]/i);
-      if (!m) continue;
-      const toMs = cardWindow ? cardWindow.fromMs : c.startMs + 4000;
-      if (toMs <= c.startMs) return null;
-      return { fromMs: c.startMs, toMs, domain: m[1].trim() };
-    }
-    return null;
-  }, [cues, cardWindow]);
-
   // Script-authored animation cues (diagram / illustration / pullquote).
   // Each fires at the transcript cue containing its trigger phrase and holds
   // until +4.5s or the next overlay window, whichever comes first. Card,
@@ -548,6 +540,11 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           </Sequence>
         );
       })}
+      {titleLine1 || titleLine2 ? (
+        // Persistent for the whole video, so no Sequence. Sits here in the
+        // stack so cards, reveals, strikes, and panels all cover it while up.
+        <TitleBlock line1={titleLine1} line2={titleLine2} />
+      ) : null}
       {cueOverlays.map((o, i) => (
         <Sequence
           key={`anim-${i}`}
@@ -583,17 +580,6 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           )}
         </Sequence>
       ))}
-      {domainBadge ? (
-        <Sequence
-          from={Math.round((domainBadge.fromMs / 1000) * fps)}
-          durationInFrames={Math.max(
-            1,
-            Math.round(((domainBadge.toMs - domainBadge.fromMs) / 1000) * fps)
-          )}
-        >
-          <DomainBadge domain={domainBadge.domain} />
-        </Sequence>
-      ) : null}
       {wrongStrikes.map((s, i) => (
         <Sequence
           key={`strike-${i}`}
