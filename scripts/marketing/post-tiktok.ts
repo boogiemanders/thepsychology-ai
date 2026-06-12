@@ -1,10 +1,11 @@
 // Post founder-approved finals to TikTok via Zernio. Drains marketing_drafts
 // rows with tiktok_post_status='queued' (set by the "Post to TikTok" button on
-// the Slack review card — see handle-interaction.ts), oldest first, capped per
-// run so a clicking spree spreads across the day's runs instead of dumping
-// posts on the feed at once. Runs after generate-videos.ts in
-// ~/.thepsychology-automation/run-video-generate.sh (10am/1pm/4pm/7pm ET), or
-// by hand for an immediate post.
+// the Slack review card — see handle-interaction.ts), oldest first, capped at
+// ONE post per ET day (founder cadence, 2026-06-12) — approvals just fill the
+// queue and posts drip out daily, same idea as drip-blog. The first run of the
+// day (10am) posts; later runs are no-ops once the day's post is out. Runs
+// after generate-videos.ts in ~/.thepsychology-automation/run-video-generate.sh
+// (10am/1pm/4pm/7pm ET), or by hand for an immediate post.
 //
 // Failure policy: mark the row tiktok_post_status='failed' with the error and
 // ping Slack, then keep draining. The review card accepts another Post click
@@ -12,7 +13,7 @@
 //
 // Usage: npx tsx scripts/marketing/post-tiktok.ts [--dry-run]
 // Env (.env.local): ZERNIO_API_KEY, ZERNIO_ACCOUNT_TIKTOK
-// Optional: TIKTOK_POSTS_PER_RUN (default 2)
+// Optional: TIKTOK_POSTS_PER_DAY (default 1)
 
 import { createClient } from "@supabase/supabase-js"
 import { config } from "dotenv"
@@ -28,7 +29,18 @@ const supabase = createClient(
 )
 
 const DRY_RUN = process.argv.includes("--dry-run")
-const PER_RUN_CAP = Number(process.env.TIKTOK_POSTS_PER_RUN || 2)
+const DAILY_CAP = Number(process.env.TIKTOK_POSTS_PER_DAY || 1)
+
+// Same ET-day convention as drip-blog/drip-linkedin — the cap is per founder
+// calendar day, not UTC.
+function startOfEtDayUtcIso(): string {
+  const now = new Date()
+  const etNow = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }))
+  const utcNow = new Date(now.toLocaleString("en-US", { timeZone: "UTC" }))
+  const offsetMs = utcNow.getTime() - etNow.getTime()
+  etNow.setHours(0, 0, 0, 0)
+  return new Date(etNow.getTime() + offsetMs).toISOString()
+}
 
 // Same channel routing as generate-videos.ts: video approvals channel first,
 // #social-approvals as fallback until SLACK_WEBHOOK_VIDEO is configured.
@@ -55,13 +67,27 @@ async function markFailed(draftId: string, label: string, reason: string): Promi
 }
 
 async function main() {
+  // How many already went out today (ET)?
+  const { count, error: countErr } = await supabase
+    .from("marketing_drafts")
+    .select("id", { count: "exact", head: true })
+    .eq("type", "tiktok")
+    .eq("tiktok_post_status", "posted")
+    .gte("tiktok_posted_at", startOfEtDayUtcIso())
+  if (countErr) throw new Error(`Count failed: ${countErr.message}`)
+  const postedToday = count ?? 0
+  if (postedToday >= DAILY_CAP) {
+    console.log(`Daily cap reached (${postedToday}/${DAILY_CAP}). Nothing to do.`)
+    return
+  }
+
   const { data, error } = await supabase
     .from("marketing_drafts")
     .select("*")
     .eq("type", "tiktok")
     .eq("tiktok_post_status", "queued")
     .order("created_at", { ascending: true })
-    .limit(PER_RUN_CAP)
+    .limit(DAILY_CAP - postedToday)
   if (error) throw new Error(`Select failed: ${error.message}`)
 
   const drafts = (data ?? []) as MarketingDraft[]
@@ -69,7 +95,7 @@ async function main() {
     console.log("No queued TikTok posts. Nothing to do.")
     return
   }
-  console.log(`${drafts.length} queued post(s) (cap ${PER_RUN_CAP}/run).`)
+  console.log(`${drafts.length} queued post(s) (${postedToday}/${DAILY_CAP} posted today).`)
 
   for (const draft of drafts) {
     const label = `"${draft.title}" [${draft.id.slice(0, 8)}]`
