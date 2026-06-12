@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "SP Client Reach",
+  "version": "1.0.0",
+  "description": "Pull SimplePractice attendance + client details for a date range, merge into a rater8-ready contact list, and push to the leadership Google Sheet",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": [
+    "https://*.simplepractice.com/*",
+    "https://script.google.com/*",
+    "https://script.googleusercontent.com/*"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    },
+    "default_title": "SP Client Reach"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}
