@@ -54,19 +54,9 @@ export const EndCard: React.FC<{ bottomPercent: number }> = ({
             gap: 22,
           }}
         >
-          {/* Hand-drawn glasses logo. Brown ink needs a light tile to read on
-              the dark panel; warm off-white keeps it in the house palette. */}
-          <div
-            style={{
-              backgroundColor: "#f5efe7",
-              borderRadius: 16,
-              padding: "10px 12px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <Img src={staticFile("logo.png")} style={{ width: 72, height: 36, objectFit: "contain" }} />
-          </div>
+          {/* Full bunny-with-glasses logo: white silhouette on transparent
+              bg, reads directly against the dark panel. */}
+          <Img src={staticFile("logo.png")} style={{ width: 84, height: 130, objectFit: "contain" }} />
           <div
             style={{
               fontSize: 58,
@@ -87,7 +77,7 @@ export const EndCard: React.FC<{ bottomPercent: number }> = ({
             opacity: subProgress,
           }}
         >
-          Free EPPP practice questions
+          EPPP Prep
         </div>
       </div>
     </AbsoluteFill>
