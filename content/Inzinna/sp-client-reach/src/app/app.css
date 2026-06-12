@@ -10,6 +10,17 @@ body {
   padding: 24px 16px 48px;
 }
 
+#logo {
+  display: block;
+  height: 68px;
+  width: auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin-bottom: 16px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
