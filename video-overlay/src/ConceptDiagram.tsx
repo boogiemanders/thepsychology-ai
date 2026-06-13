@@ -55,6 +55,22 @@ export const ConceptDiagram: React.FC<{
   const y = AH / 2;
   const lineLen = x2 - x1;
 
+  // Shrink the label font so the widest word fits inside the box instead of
+  // spilling to the rounded edge (e.g. "Dismissing" at 33px is wider than the
+  // box). One size for all boxes keeps them visually uniform. Dependency-free
+  // fit: Geist 600 runs ~0.64em per char; floor keeps it from getting tiny.
+  const NODE_MAX_W = 196;
+  const longestWord = nodes
+    .slice(0, 3)
+    .flatMap((n) => n.split(/\s+/))
+    .reduce((m, w) => Math.max(m, w.length), 1);
+  // Target ~86% of the box so the widest word keeps side breathing room and
+  // never has to break mid-word (Geist 600 runs ~0.62em per char).
+  const nodeFontSize = Math.max(
+    18,
+    Math.min(33, Math.floor((NODE_MAX_W * 0.86) / (longestWord * 0.62)))
+  );
+
   return (
     <AbsoluteFill
       style={{
@@ -146,12 +162,12 @@ export const ConceptDiagram: React.FC<{
                   border: "1px solid #3f3f46",
                   borderRadius: 18,
                   padding: "22px 26px",
-                  fontSize: 33,
+                  fontSize: nodeFontSize,
                   fontWeight: 600,
                   color: TEXT_PRIMARY,
                   // Wrap to a second line instead of spilling past the panel:
                   // node phrases can be 1-3 words, so a fixed width would clip.
-                  maxWidth: 168,
+                  maxWidth: NODE_MAX_W,
                   textAlign: "center",
                   lineHeight: 1.15,
                   opacity: np,
