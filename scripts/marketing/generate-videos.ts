@@ -483,7 +483,14 @@ async function main() {
     .limit(DAILY_CAP - generatedToday)
   if (error) throw new Error(`Select failed: ${error.message}`)
 
-  const drafts = (data ?? []) as MarketingDraft[]
+  // Optional one-off priority filter: `--only=<substr>` keeps only drafts whose
+  // title contains the substring (case-insensitive). Lets a run target, e.g.,
+  // the time-sensitive Fable scripts ahead of the evergreen practice questions
+  // without touching any other row's status.
+  const onlyArg = process.argv.find((a) => a.startsWith("--only="))?.split("=")[1]?.toLowerCase()
+  const fetched = (data ?? []) as MarketingDraft[]
+  const drafts = onlyArg ? fetched.filter((d) => d.title.toLowerCase().includes(onlyArg)) : fetched
+  if (onlyArg) console.log(`--only="${onlyArg}": ${drafts.length} of ${fetched.length} match.`)
   if (drafts.length === 0) {
     console.log("No approved TikTok scripts awaiting video. Nothing to do.")
     return
@@ -601,7 +608,12 @@ async function main() {
   console.log(`Done: ${ok} generated, ${finals} finals, ${failed} failed.`)
 }
 
-main().catch((err) => {
-  console.error("❌", err.message)
-  process.exit(1)
-})
+// Only auto-run when executed directly (npx tsx generate-videos.ts), so that
+// renderOverlay can be imported by a one-off re-render script without kicking
+// off the whole HeyGen pipeline. tsx runs this as CJS, so require.main applies.
+if (require.main === module) {
+  main().catch((err) => {
+    console.error("❌", err.message)
+    process.exit(1)
+  })
+}
