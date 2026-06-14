@@ -9,8 +9,13 @@ const SPELLING_MAP: [phonetic: string, written: string][] = [
   // article ("go to the thepsychology.ai") — collapse that first.
   ["the thepsychology.ai", "thepsychology.ai"],
   ["the psychology dot ai", "thepsychology.ai"],
-  // ASR misspelling seen in a real transcript ("go to thepsychoology.ai").
+  // ASR misspellings seen in real transcripts. HeyGen's ASR keeps inventing
+  // new spellings of the URL ("thepsychoology.ai", "the psychology.ai"), and
+  // an unmapped variant breaks BOTH the caption and end-card detection
+  // (PracticeQuestion greps mapped captions for the URL). Check new SRT tails.
   ["thepsychoology.ai", "thepsychology.ai"],
+  ["the psychology.ai", "thepsychology.ai"],
+  ["psychology.ai", "thepsychology.ai"],
   ["E triple P", "EPPP"],
   ["ways four", "WAIS-IV"],
   // Display-only grammar fix (founder, 2026-06-12): scripts/audio say
