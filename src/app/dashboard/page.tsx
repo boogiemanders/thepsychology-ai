@@ -95,7 +95,7 @@ const subscriptionTierVisuals = {
 
 export default function DashboardPage() {
   const router = useRouter()
-  const { user, userProfile, loading, signOut, refreshProfile } = useAuth()
+  const { user, userProfile, loading, signOut, refreshProfile, consentPreferences } = useAuth()
   const { startTour, isActive: isTourActive } = useOnboarding()
   const { shouldShow: shouldShowConsentModal, dismiss: dismissConsentModal } = useConsentModal()
   const getBaseUrl = () => {
@@ -294,9 +294,14 @@ export default function DashboardPage() {
     setMounted(true)
   }, [])
 
-  // Auto-start onboarding tour for first-time users
+  // Auto-start onboarding tour for first-time users.
+  // Gate on the consent modal: it must be shown and dismissed first so the
+  // two onboarding overlays never stack. Wait until consent prefs have loaded
+  // (consentPreferences != null) before deciding, and don't start while the
+  // privacy modal is still pending (shouldShowConsentModal).
   useEffect(() => {
     if (!mounted || !user?.id || isTourActive) return
+    if (consentPreferences == null || shouldShowConsentModal) return
 
     const checkAndStartTour = async () => {
       const shouldShow = await shouldShowOnboarding(user.id)
@@ -307,7 +312,7 @@ export default function DashboardPage() {
     }
 
     checkAndStartTour()
-  }, [mounted, user?.id, isTourActive, startTour])
+  }, [mounted, user?.id, isTourActive, startTour, consentPreferences, shouldShowConsentModal])
 
   const storeExamDateLocally = useCallback((dateString: string) => {
     if (typeof window === 'undefined') return
