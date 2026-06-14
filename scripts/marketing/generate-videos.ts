@@ -377,7 +377,11 @@ async function resolveAnimationCues(
 export async function renderOverlay(
   mp4Path: string,
   srtPath: string,
-  draft: MarketingDraft
+  draft: MarketingDraft,
+  // Optional title override for non-practice videos (e.g. pop-culture posts)
+  // that have no EPPP domain to derive line 2 from. Each field falls back to
+  // the default derivation when omitted, so existing callers are unaffected.
+  titleOverride?: { line1?: string; line2?: string }
 ): Promise<string> {
   // The launchd automation checkout (~/thepsychology-ai-marketing) resets via
   // git, so video-overlay/node_modules may not exist on a first run there.
@@ -431,9 +435,12 @@ export async function renderOverlay(
       // (video_title only exists on the row once the 20260612 migration ran);
       // line 2 is the EPPP domain named in the script's intro. Empty string
       // hides a line, so a missing title still shows the domain label.
-      titleLine1: draft.video_title ?? "",
-      // Founder format: the label always reads "EPPP: <Domain>".
-      titleLine2: parseDomain(spoken) ? `EPPP: ${parseDomain(spoken)}` : "",
+      titleLine1: titleOverride?.line1 ?? draft.video_title ?? "",
+      // Founder format: the label always reads "EPPP: <Domain>" unless an
+      // override supplies line 2 (non-EPPP pop-culture videos).
+      titleLine2:
+        titleOverride?.line2 ??
+        (parseDomain(spoken) ? `EPPP: ${parseDomain(spoken)}` : ""),
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.
@@ -483,7 +490,14 @@ async function main() {
     .limit(DAILY_CAP - generatedToday)
   if (error) throw new Error(`Select failed: ${error.message}`)
 
-  const drafts = (data ?? []) as MarketingDraft[]
+  // Optional one-off priority filter: `--only=<substr>` keeps only drafts whose
+  // title contains the substring (case-insensitive). Lets a run target, e.g.,
+  // the time-sensitive Fable scripts ahead of the evergreen practice questions
+  // without touching any other row's status.
+  const onlyArg = process.argv.find((a) => a.startsWith("--only="))?.split("=")[1]?.toLowerCase()
+  const fetched = (data ?? []) as MarketingDraft[]
+  const drafts = onlyArg ? fetched.filter((d) => d.title.toLowerCase().includes(onlyArg)) : fetched
+  if (onlyArg) console.log(`--only="${onlyArg}": ${drafts.length} of ${fetched.length} match.`)
   if (drafts.length === 0) {
     console.log("No approved TikTok scripts awaiting video. Nothing to do.")
     return
@@ -601,7 +615,12 @@ async function main() {
   console.log(`Done: ${ok} generated, ${finals} finals, ${failed} failed.`)
 }
 
-main().catch((err) => {
-  console.error("❌", err.message)
-  process.exit(1)
-})
+// Only auto-run when executed directly (npx tsx generate-videos.ts), so that
+// renderOverlay can be imported by a one-off re-render script without kicking
+// off the whole HeyGen pipeline. tsx runs this as CJS, so require.main applies.
+if (require.main === module) {
+  main().catch((err) => {
+    console.error("❌", err.message)
+    process.exit(1)
+  })
+}

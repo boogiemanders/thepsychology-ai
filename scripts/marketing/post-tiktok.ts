@@ -35,6 +35,11 @@ const DRY_RUN = process.argv.includes("--dry-run")
 const OUTPUT_DIR =
   process.env.VIDEO_OUTPUT_DIR ||
   "/Users/anderschan/Library/CloudStorage/GoogleDrive-dranders@drinzinna.com/My Drive/thepsychology.ai marketing/videos"
+// Folder lifecycle (founder 2026-06-13): clicking "Post to TikTok" in Slack only
+// flips the row to 'queued' (the server can't touch the local Drive), so this
+// LOCAL run is what physically relocates files. Waiting room = queued/, posted =
+// done/, still-in-review = "final review/".
+const QUEUED_DIR = join(OUTPUT_DIR, "queued")
 const DAILY_CAP = Number(process.env.TIKTOK_POSTS_PER_DAY || 1)
 
 // Same ET-day convention as drip-blog/drip-linkedin — the cap is per founder
@@ -72,7 +77,46 @@ async function markFailed(draftId: string, label: string, reason: string): Promi
   ).catch((e) => console.error(`[slack] ${(e as Error).message}`))
 }
 
+// Move every 'queued' row's file trio (raw mp4, SRT, final) into queued/ and
+// repoint video_path. Runs every pipeline tick so files that the Slack button
+// queued land in the waiting-room folder regardless of the daily cap. Skips
+// rows already in queued/ and is best-effort per row (a move failure logs and
+// moves on, never blocks posting).
+async function reconcileQueuedFolder(): Promise<void> {
+  const { data, error } = await supabase
+    .from("marketing_drafts")
+    .select("id,video_path")
+    .eq("type", "tiktok")
+    .eq("tiktok_post_status", "queued")
+  if (error) return console.warn(`[queued-move] select failed: ${error.message}`)
+  for (const row of (data ?? []) as Array<{ id: string; video_path: string | null }>) {
+    const vp = row.video_path
+    if (!vp || vp.includes("/queued/")) continue // no file, or already in queued/
+    if (DRY_RUN) {
+      console.log(`[dry-run] would move ${row.id.slice(0, 8)} to queued/`)
+      continue
+    }
+    try {
+      mkdirSync(QUEUED_DIR, { recursive: true })
+      const finalP = vp.replace(/\.mp4$/, "_final.mp4")
+      const srtP = vp.replace(/\.mp4$/, ".srt")
+      for (const p of [vp, srtP, finalP]) {
+        if (existsSync(p)) renameSync(p, join(QUEUED_DIR, basename(p)))
+      }
+      const newVp = join(QUEUED_DIR, basename(vp))
+      await supabase.from("marketing_drafts").update({ video_path: newVp }).eq("id", row.id)
+      console.log(`→ moved ${row.id.slice(0, 8)} to queued/`)
+    } catch (e) {
+      console.warn(`[queued-move] ${row.id.slice(0, 8)} failed (files stay put): ${(e as Error).message}`)
+    }
+  }
+}
+
 async function main() {
+  // First, migrate any newly-queued rows into the queued/ waiting room. Done
+  // before the cap check so files relocate even on a day that is already capped.
+  await reconcileQueuedFolder()
+
   // How many already went out today (ET)?
   const { count, error: countErr } = await supabase
     .from("marketing_drafts")

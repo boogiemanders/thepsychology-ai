@@ -107,7 +107,7 @@ export async function handleMarketingInteraction(payload: any, supabase: any): P
       .from("marketing_drafts")
       .update({ tiktok_post_status: "queued", tiktok_post_error: null })
       .eq("id", draftId)
-    return await reply(payload, `Queued by ${user} — posts to TikTok on the next pipeline run (10am/1pm/4pm/7pm ET).`)
+    return await reply(payload, `Queued by ${user} — moves to the queued/ folder and posts to TikTok on the next pipeline run (10am/1pm/4pm/7pm ET).`)
   }
 
   if (draft.status !== "pending") return await reply(payload, `Already ${draft.status}.`)

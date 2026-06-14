@@ -75,6 +75,10 @@ const REVEAL_SECONDS = 3.5;
 // short. Long enough to read a 3-node diagram, short enough to stay calm.
 const ANIMATION_CUE_MAX_MS = 4500;
 
+// The end card always covers at least this much of the video's tail, so the
+// avatar's resting face is never the closing frame.
+const END_CARD_MIN_MS = 3000;
+
 // One caption chunk. Pops in with a quick scale/fade. Look comes from the
 // selected entry in CAPTION_STYLES; position from captionBottomPercent.
 // accentPass paints the stakes word "pass" in the accent color (only enabled
@@ -274,15 +278,19 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
 
   // Final CTA cue: the last cue containing the site URL (spoken or written
   // form). The end card runs from there to the end of the video.
+  // Guaranteed full-frame end card. Covers the trailing dead-air (the avatar's
+  // slack resting face) so it is never the closing image — independent of the
+  // spoken outro. Starts when the avatar stops talking (the last caption ends)
+  // or END_CARD_MIN_MS before the end, whichever is EARLIER, so all dead air is
+  // covered with at least a clean N-second sign-off. Replaces the old match on
+  // a "thepsychology.ai" caption that HeyGen often mis-transcribes.
   const endCardFromMs = useMemo(() => {
-    for (let i = cues.length - 1; i >= 0; i--) {
-      const t = norm(cues[i].text);
-      if (t.includes("thepsychology ai") || t.includes("the psychology dot ai")) {
-        return cues[i].startMs;
-      }
-    }
-    return null;
-  }, [cues]);
+    const durationMs = (durationInFrames / fps) * 1000;
+    const floorMs = Math.max(0, durationMs - END_CARD_MIN_MS);
+    if (cues.length === 0) return floorMs;
+    const lastCaptionEndMs = Math.max(...cues.map((c) => c.endMs));
+    return Math.max(0, Math.min(floorMs, lastCaptionEndMs));
+  }, [cues, durationInFrames, fps]);
 
   const endCardFrom =
     endCardFromMs !== null ? Math.round((endCardFromMs / 1000) * fps) : 0;
@@ -629,11 +637,9 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           />
         </Sequence>
       ) : null}
-      {endCardFromMs !== null ? (
-        <Sequence from={endCardFrom} durationInFrames={endCardDuration}>
-          <EndCard bottomPercent={captionBottomPercent} />
-        </Sequence>
-      ) : null}
+      <Sequence from={endCardFrom} durationInFrames={endCardDuration}>
+        <EndCard />
+      </Sequence>
     </AbsoluteFill>
   );
 };
