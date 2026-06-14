@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <p className="text-sm font-medium">Preparing for the EPPP?</p>
           <p className="text-sm text-muted-foreground">
             thePsychology.ai offers AI-adaptive prep with 80+ lessons, practice exams, and personalized study plans.{" "}
-            <Link href={`/#get-started?utm_source=blog&utm_medium=cta&utm_campaign=${slug}`} className="text-primary underline underline-offset-4">
+            <Link href={`/?utm_source=blog&utm_medium=cta&utm_campaign=${slug}#get-started`} className="text-primary underline underline-offset-4">
               Try it free
             </Link>
             .

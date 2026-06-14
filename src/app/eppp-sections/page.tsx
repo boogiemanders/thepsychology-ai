@@ -330,7 +330,7 @@ export default function EpppSectionsPage() {
             thePsychology.ai diagnoses your starting point and builds every
             study session around closing the gap.{" "}
             <Link
-              href="/#get-started?utm_source=eppp-sections&utm_medium=cta"
+              href="/?utm_source=eppp-sections&utm_medium=cta#get-started"
               className="text-primary underline underline-offset-4"
             >
               Start your free trial
