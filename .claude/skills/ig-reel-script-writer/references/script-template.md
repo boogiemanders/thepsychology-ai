@@ -121,12 +121,12 @@ PSYCHOLOGY TRICKS USED: Dream Outcome, Subtle Authority, Mind Read, Risk Reversa
 [DREAM OUTCOME — payoff proves the hook's promise with specific proof]
 
 ## CTA (last 3s)
-"If you want to learn from me and how I do what I do, you can join the free discord in my bio."
-[RECIPROCITY — offering MORE free value, not begging for a follow]
+"Comment CLIP and I'll DM you my exact editing workflow, free."
+[RECIPROCITY + COMMENT-TRIGGER — a comment-gate funnel: the comment drives reach and triggers an auto-DM of the promised asset. Far stronger than "link in bio." Use a single trigger word that matches your auto-DM (e.g. ManyChat) keyword.]
 
 ---
 
-CAPTION: Day in the life making $20k/month as a TikTok clipper. Full breakdown of my exact process 👆 Want to learn more? Free discord link in bio. #contentcreator #sidehustle #makemoneyonline
+CAPTION: Day in the life making $20k/month as a TikTok clipper. Comment CLIP and I'll DM you the full breakdown. #contentcreator #sidehustle #makemoneyonline
 ```
 
 ---

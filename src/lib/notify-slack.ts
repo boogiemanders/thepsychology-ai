@@ -11,6 +11,12 @@ const WEBHOOKS = {
   // Video/graphics publish approvals (review cards + post results). Falls back
   // to social until the dedicated channel webhook is configured.
   video: process.env.SLACK_WEBHOOK_VIDEO || process.env.SLACK_WEBHOOK_SOCIAL,
+  // Per-lane marketing approval channels (3-lane split). Each falls back to
+  // social until the founder makes a dedicated channel + webhook, so the split
+  // degrades to one channel instead of dropping cards.
+  linkedin: process.env.SLACK_WEBHOOK_LINKEDIN || process.env.SLACK_WEBHOOK_SOCIAL,
+  tiktok_eppp: process.env.SLACK_WEBHOOK_TIKTOK_EPPP || process.env.SLACK_WEBHOOK_SOCIAL,
+  tiktok_pop: process.env.SLACK_WEBHOOK_TIKTOK_POP || process.env.SLACK_WEBHOOK_SOCIAL,
   default: process.env.SLACK_WEBHOOK_URL,
 } as const
 

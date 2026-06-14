@@ -1,5 +1,13 @@
 # Daily Marketing Routine (scheduled Claude Code agent)
 
+> DEPRECATED for daily social. The daily social engine is now the 3 lane routines:
+> `linkedin-daily.md` (clinician-first, ONE post/day), `tiktok-eppp.md`, and `tiktok-pop.md`.
+> They supersede this file's "2 LinkedIn + 2 TikTok per day" cadence and its
+> "one LinkedIn post must be EPPP" rule (the LinkedIn scorecard shows that audience is
+> senior clinicians, not candidates). Platform-specific CTA rules live in
+> `voice-learnings.md`. Do NOT re-enable this routine for social without reconciling it
+> with the lanes. The blog logic below is the only part not yet covered by a lane.
+
 You are generating marketing drafts for The Psychology AI — a brand run by Dr. Anders Chan,
 a licensed clinical psychologist, covering EPPP exam prep and AI-for-psychology tools.
 

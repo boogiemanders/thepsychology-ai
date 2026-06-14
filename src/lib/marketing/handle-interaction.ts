@@ -9,6 +9,7 @@ import {
   FEEDBACK_INPUT_ACTION_ID,
 } from "./slack-modal"
 import { sendSlackNotification } from "../notify-slack"
+import { approvalChannel } from "./slack"
 import type { MarketingDraft, MarketingFeedbackKind } from "./types"
 
 const MARKETING_ACTIONS = new Set(["approve_draft", "reject_draft", "post_video", "skip_video"])
@@ -187,10 +188,12 @@ export async function handleFeedbackSubmission(payload: any, supabase: any): Pro
   try {
     const { data: row } = await supabase
       .from("marketing_drafts")
-      .select("title, body_md")
+      .select("title, body_md, type, topic")
       .eq("id", draftId)
       .single()
-    const draft = row as { title: string; body_md: string } | null
+    const draft = row as
+      | { title: string; body_md: string; type: MarketingDraft["type"]; topic: MarketingDraft["topic"] }
+      | null
 
     // Enqueue the rewrite (processed_at stays null = pending). The routine drains this.
     await logSignal(supabase, {
@@ -202,9 +205,12 @@ export async function handleFeedbackSubmission(payload: any, supabase: any): Pro
     })
 
     const title = draft?.title ? `"${draft.title}"` : "the draft"
+    // Post the ack to the same lane the card lives in (so it lands beside the card once
+    // the founder makes real per-lane channels). Falls back to social if type/topic missing.
+    const channel = draft ? approvalChannel(draft) : "social"
     await sendSlackNotification(
       `Feedback from ${user} on ${title}: "${feedback.trim()}". A rewritten draft will post here shortly.`,
-      "social"
+      channel
     )
   } catch (err) {
     console.error("[marketing] feedback submission error:", (err as Error).message)

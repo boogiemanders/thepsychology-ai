@@ -31,6 +31,13 @@ async function main() {
   if (!input.type || !input.topic || !input.title || !input.body_md) {
     throw new Error("Draft missing required fields (type, topic, title, body_md)")
   }
+  // Validate topic against the union: Slack lane routing keys off the exact literal
+  // (e.g. topic === "pop-culture"), so a typo would silently mis-route the card to
+  // the wrong channel. Fail loudly instead. (Mirrors the Topic type in types.ts.)
+  const TOPICS = ["psychology", "eppp", "ai", "psychology-ai", "pop-culture"]
+  if (!TOPICS.includes(input.topic)) {
+    throw new Error(`Invalid topic "${input.topic}" — must be one of: ${TOPICS.join(", ")}`)
+  }
   if (!Array.isArray(input.sources) || input.sources.length === 0) {
     throw new Error("Draft has no sources — every claim must trace to a source")
   }
