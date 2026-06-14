@@ -99,15 +99,17 @@ export default async function BlogPostPage({ params }: PageProps) {
           />
         </article>
 
-        <section className="rounded-xl border border-border bg-accent/40 p-5 space-y-2">
-          <p className="text-sm font-medium">Preparing for the EPPP?</p>
+        <section className="rounded-xl border border-border bg-accent/40 p-5 space-y-3">
+          <p className="text-sm font-medium">Want to try the questions?</p>
           <p className="text-sm text-muted-foreground">
-            thePsychology.ai offers AI-adaptive prep with 80+ lessons, practice exams, and personalized study plans.{" "}
-            <Link href={`/#get-started?utm_source=blog&utm_medium=cta&utm_campaign=${slug}`} className="text-primary underline underline-offset-4">
-              Try it free
-            </Link>
-            .
+            The EPPP costs about $692 every attempt, so you want to pass the first time. Our practice questions are written the way the real exam words them, so your scores actually mean something. Try them free.
           </p>
+          <Link
+            href={`/?utm_source=blog&utm_medium=cta&utm_campaign=${slug}#get-started`}
+            className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
+          >
+            Start free EPPP practice
+          </Link>
         </section>
       </div>
     </main>
