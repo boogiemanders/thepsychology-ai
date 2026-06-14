@@ -31,6 +31,7 @@ import { Switch } from '@/components/ui/switch'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
 import { getPricingInfo } from '@/lib/pricing-tiers'
+import { getTrialDaysRemaining } from '@/lib/subscription-utils'
 import { Check as CheckIcon } from 'lucide-react'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { CHANGELOG_ENTRIES } from '@/lib/changelog'
@@ -141,6 +142,11 @@ export default function DashboardPage() {
   const pricingInfo = getPricingInfo()
   const pricingItems = siteConfig.pricing.pricingItems
   const subscriptionTierKey = userProfile?.subscription_tier ?? 'pro'
+  // Active trial = tier reads 'pro' but no Stripe customer yet. These users have
+  // full access but haven't paid, so the Manage Plan popover must still offer a
+  // way to subscribe early (otherwise Pro shows as "Current" with no pay button).
+  const isOnTrial = subscriptionTierKey === 'pro' && !userProfile?.stripe_customer_id
+  const trialDaysLeft = getTrialDaysRemaining(userProfile)
   const subscriptionTierVisual =
     subscriptionTierKey in subscriptionTierVisuals
       ? subscriptionTierVisuals[subscriptionTierKey as keyof typeof subscriptionTierVisuals]
@@ -1113,13 +1119,18 @@ export default function DashboardPage() {
                               </div>
                               {isCurrent && (
                                 <span className="text-[10px] font-medium text-brand-coral bg-brand-coral/10 px-2 py-0.5 rounded-full">
-                                  Current
+                                  {item.name === 'Pro' && isOnTrial ? 'Trial' : 'Current'}
                                 </span>
                               )}
                             </div>
                             {item.name === 'Pro' && pricingInfo.isFoundingPrice && (
                               <p className="text-[10px] text-muted-foreground mb-2">
                                 Founding price — locks in ${pricingInfo.currentPrice}/mo forever ({pricingInfo.daysUntilPriceIncrease} days left)
+                              </p>
+                            )}
+                            {item.name === 'Pro' && isOnTrial && trialDaysLeft > 0 && (
+                              <p className="text-[10px] font-medium text-brand-coral mb-2">
+                                {trialDaysLeft} day{trialDaysLeft === 1 ? '' : 's'} left in your free trial
                               </p>
                             )}
                             <ul className="space-y-1 mb-2">
@@ -1141,6 +1152,19 @@ export default function DashboardPage() {
                                 disabled={checkoutLoading}
                               >
                                 {checkoutLoading ? 'Redirecting...' : 'Upgrade to Pro'}
+                              </Button>
+                            )}
+                            {item.name === 'Pro' && isCurrent && isOnTrial && (
+                              <Button
+                                size="sm"
+                                className="w-full h-7 text-xs brand-coral-bg text-white hover:opacity-90"
+                                onClick={() => {
+                                  setIsManagePlanOpen(false)
+                                  startCheckout({ source: 'manage-plan-trial' })
+                                }}
+                                disabled={checkoutLoading}
+                              >
+                                {checkoutLoading ? 'Redirecting...' : 'Subscribe now'}
                               </Button>
                             )}
                             {item.name === 'Pro' && isCurrent && userProfile?.stripe_customer_id && (
