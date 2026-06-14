@@ -5,7 +5,18 @@
 
 import type { MarketingDraft } from "./types"
 import { apaReference } from "./format"
-import { sendSlackNotification } from "../notify-slack"
+import { sendSlackNotification, type SlackChannel } from "../notify-slack"
+
+// 3-lane split: route the approval card to a per-lane channel by (type, topic).
+// LinkedIn -> #linkedin, TikTok pop-culture -> #tiktok-pop, any other TikTok
+// (EPPP/psychology/ai) -> #tiktok-eppp. Blogs stay in #social-approvals. Every
+// lane webhook falls back to SLACK_WEBHOOK_SOCIAL (see notify-slack.ts), so this
+// is safe before the founder makes the real channels.
+export function approvalChannel(draft: Pick<MarketingDraft, "type" | "topic">): SlackChannel {
+  if (draft.type === "linkedin") return "linkedin"
+  if (draft.type === "tiktok") return draft.topic === "pop-culture" ? "tiktok_pop" : "tiktok_eppp"
+  return "social"
+}
 
 const TYPE_LABEL: Record<MarketingDraft["type"], string> = {
   blog: "Blog post (auto-publishes on approve)",
@@ -78,17 +89,18 @@ export function buildApprovalBlocks(draft: MarketingDraft): unknown[] {
   return blocks
 }
 
-// Post a draft to #social-approvals (SLACK_WEBHOOK_SOCIAL) for review. Throws if
+// Post a draft to its lane channel for review (see approvalChannel). Throws if
 // delivery fails so the caller (submit-draft) does not report a false success.
 export async function postDraftForApproval(draft: MarketingDraft): Promise<void> {
+  const channel = approvalChannel(draft)
   const delivered = await sendSlackNotification(
     `New draft for review: ${draft.title}`,
-    "social",
+    channel,
     buildApprovalBlocks(draft)
   )
   if (!delivered) {
     throw new Error(
-      "Slack delivery to #social-approvals failed (SLACK_WEBHOOK_SOCIAL missing or webhook returned non-ok)"
+      `Slack delivery to lane "${channel}" failed (its webhook + SLACK_WEBHOOK_SOCIAL fallback both missing or returned non-ok)`
     )
   }
 }

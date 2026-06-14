@@ -13,12 +13,21 @@ they conflict with a strong, repeated signal.
 
 - No em dashes. Commas, periods, or parentheses instead.
 - No emojis.
-- Every claim traces to a real source with an inline (Author, Year) cite and a Sources list.
-- Every post ends with a tracked branded link: `https://www.thepsychology.ai/go/<topic>`
-  (e.g. /go/eppp-cost). The /go route adds the GA UTMs (source=linkedin, medium=social,
-  campaign=<topic>), so use the short /go form in posts, never the raw UTM query string. Use a
-  UNIQUE <topic> slug per post so Google Analytics attributes clicks to the right post. For a
-  non-LinkedIn platform add ?s=<platform> (e.g. /go/eppp-cost?s=tiktok). Required on every post.
+- Every claim traces to a real source. In written body copy (blog, LinkedIn), back it with an
+  inline (Author, Year) cite; in spoken TikTok scripts the cite lives in the `sources[]` array,
+  not the spoken line. Whether a "Sources" list goes in the body is platform-specific (see the
+  CTA + link rules below).
+- **Tracked link + CTA are platform-specific** (use a UNIQUE `<slug>` per post so GA attributes
+  clicks; the /go route adds the GA UTMs, so use the short `/go/<slug>` form, never the raw UTM
+  query string):
+  - **LinkedIn:** NO link and NO "Sources" block in the post body (external links and APA blocks
+    both tank reach with our senior-clinician audience). The body CTA is one specific question only
+    a working clinician can answer. Put the tracked link `https://www.thepsychology.ai/go/<slug>`
+    and any reference in the FIRST COMMENT, not the post.
+  - **TikTok (both lanes):** the spoken CTA is a comment-trigger DM funnel (e.g. "Comment PASS and
+    I'll send you free EPPP practice questions"); the trigger word must match the founder's
+    ManyChat keyword. Put the tracked link in the caption as `/go/<slug>?s=tiktok`.
+  - **Blog:** keep the tracked `/go/<slug>` link inline as before.
 - Keep the founder's voice: a clinical psychologist talking to other clinicians and students, credible but plain-spoken.
 
 ## Learned preferences
