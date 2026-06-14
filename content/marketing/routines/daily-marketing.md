@@ -50,6 +50,8 @@ headlines just to fill a slot.
 
 Read `content/marketing/whats-working.md` if it exists. Bias today's topics and angles toward
 the posts/topics that actually convert. Mirror winning angles; don't repeat a post already live.
+NOTE: `whats-working.md` is built from GA4 **blog** data only — use it to pick blog/SEO topics,
+NOT to pick LinkedIn topics. The LinkedIn topic signal is the self scorecard (see below).
 
 Also read `content/marketing/voice-learnings.md` — the founder's learned writing preferences
 (distilled from every Feedback rewrite and Approve in #social-approvals). Apply those voice rules
@@ -71,16 +73,28 @@ comments + reposts) and let them shape today's hooks. Adapt the winning pattern 
 not copy a competitor's post. If no scorecards exist yet, skip this step and say so in your
 final summary.
 
+**Our own scorecard outranks competitors'.** When a `LinkedIn Scorecard - thepsychology.ai`
+file exists in that folder, it is the PRIMARY signal for LinkedIn topic and hook selection —
+weight it above every competitor scorecard. It carries our real audience response (our
+followers are senior licensed clinicians, not EPPP candidates), so follow its do-more/cut
+rules: clinician-identity topics first, peer-directed open-question CTAs, no product links in
+the post body, no APA reference blocks.
+
 ## Step 3 — Generate drafts (cadence)
 
 - **Every day:** 2 LinkedIn posts + 2 TikTok scripts, drawn from the strongest hooks across the
   five topics (spread the topics; don't do five posts on the same thing).
-- **LinkedIn EPPP rule:** at least one of the two daily LinkedIn posts must be about the EPPP
-  (exam changes and timelines, pass rates, eligibility, or study strategy). For ANY claim about
-  EPPP changes, timelines, or pass rates, use `content/marketing/eppp-news-facts.md` in this
-  repo. It is page-cited from the California Board of Psychology meeting materials of
-  February 13, 2026. Cite it in the draft's `sources` array as "CA Board of Psychology meeting
-  materials, Feb 13, 2026 (p. X)". Do not invent or extrapolate dates beyond that file.
+- **LinkedIn audience rule:** our LinkedIn followers are senior licensed clinicians, not EPPP
+  candidates, so default the LinkedIn mix to clinician-facing topics (AI in practice, assessment,
+  supervision, professional issues). **At most one** of the two daily LinkedIn posts may be about
+  the EPPP, and only when reframed for that senior audience (e.g. "what to tell your postdoc about
+  the EPPP", supervisor/DCT framing, or a field-level fairness/cost debate) — never candidate
+  study-tips addressed to test-takers. Candidate-facing EPPP content belongs on TikTok and the
+  blog, not LinkedIn. For ANY claim about EPPP changes, timelines, or pass rates, use
+  `content/marketing/eppp-news-facts.md` in this repo. It is page-cited from the California Board
+  of Psychology meeting materials of February 13, 2026. Cite it in the draft's `sources` array as
+  "CA Board of Psychology meeting materials, Feb 13, 2026 (p. X)". Do not invent or extrapolate
+  dates beyond that file.
 - **Mondays only:** also produce **one** deeper SEO blog post (~1000–1500 words). Skip the blog
   on other days — thin daily posts hurt SEO.
 - **Blog EPPP/EPPP2 priority:** while the EPPP2 news is current, Monday blogs should prioritize
