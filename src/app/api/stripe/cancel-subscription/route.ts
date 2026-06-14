@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { createClient } from '@supabase/supabase-js'
 import { getSupabaseClient } from '@/lib/supabase-server'
+import { sendNotificationEmail, isNotificationEmailConfigured } from '@/lib/notify-email'
 
 export const dynamic = 'force-dynamic'
 
@@ -37,6 +38,49 @@ const CANCEL_REASONS: Record<string, Stripe.SubscriptionUpdateParams.Cancellatio
   other: 'other',
 }
 
+// Warm check-in email auto-sent on cancel. Passed-the-exam gets a congrats
+// opener; everyone else gets a sorry-to-see-you-go. Both invite a reply,
+// which lands in DrChan@thepsychology.ai (the from address).
+function buildCancelEmail(reason: string | null, fullName: string | null, cancelAt: Date) {
+  const firstName = fullName?.trim().split(/\s+/)[0] || ''
+  const greeting = firstName ? `Hi ${firstName},` : 'Hi,'
+  const accessEnds = cancelAt.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
+
+  if (reason === 'passed_exam') {
+    return {
+      subject: 'congrats on passing the EPPP',
+      text: `${greeting}
+
+Saw you cancelled and that you passed the EPPP. Congratulations, that's the whole point.
+
+You're good through ${accessEnds}. If anything would've made the prep better, just hit reply, it comes straight to me.
+
+All the best,
+
+Anders
+thePsychology.ai`,
+    }
+  }
+
+  return {
+    subject: 'sorry to see you go',
+    text: `${greeting}
+
+Saw you cancelled. Totally fine. You're good through ${accessEnds}.
+
+If there's anything we could've done better, just hit reply, it comes straight to me.
+
+Good luck with everything,
+
+Anders
+thePsychology.ai`,
+  }
+}
+
 export async function POST(req: NextRequest) {
   if (!stripe) {
     return NextResponse.json({ error: 'Stripe is not configured' }, { status: 500 })
@@ -60,7 +104,7 @@ export async function POST(req: NextRequest) {
     // Get user with Stripe customer ID
     const { data: user, error: userError } = await supabase
       .from('users')
-      .select('id, email, stripe_customer_id, subscription_tier')
+      .select('id, email, full_name, stripe_customer_id, subscription_tier')
       .eq('id', userId)
       .single()
 
@@ -108,6 +152,22 @@ export async function POST(req: NextRequest) {
       })
       if (feedbackError) {
         console.error('[Stripe] Failed to store cancellation feedback:', feedbackError)
+      }
+    }
+
+    // Auto-send a warm check-in to the user, CC'd to us. Never block cancel on it.
+    if (user.email && isNotificationEmailConfigured(user.email)) {
+      try {
+        const cancelAt = new Date(updatedSubscription.current_period_end * 1000)
+        const { subject, text } = buildCancelEmail(reason, user.full_name, cancelAt)
+        await sendNotificationEmail({
+          to: user.email,
+          cc: 'DrChan@thepsychology.ai',
+          subject,
+          text,
+        })
+      } catch (emailError) {
+        console.error('[Stripe] Failed to send cancellation email:', emailError)
       }
     }
 
