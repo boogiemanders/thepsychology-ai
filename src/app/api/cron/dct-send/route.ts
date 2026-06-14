@@ -8,8 +8,9 @@ import { getSupabaseClient } from '@/lib/supabase-server'
 // contacts, sends each 1:1 via Resend, and stamps sent_at. Idempotent: a sent row
 // is never re-selected. Suppression-aware: anyone in dct_suppressions is skipped.
 //
-// Email copy, Resend call shape, unsubscribe token, and the RFC 8058 one-click
-// headers are ported VERBATIM from send_dct.py (copy is final, do not edit).
+// Resend call shape, unsubscribe token, and the RFC 8058 one-click headers are
+// ported VERBATIM from send_dct.py. The body copy + CTA were revised 2026-06-14
+// for conversion: single student-centered ask + a free-practice-questions link.
 //
 // Vercel cron fires a GET, so this is a GET (not POST). Manual/canary calls:
 //   curl -H "Authorization: Bearer $CRON_SECRET" \
@@ -34,13 +35,13 @@ const SUBJECT = 'An Affordable EPPP Option for Your Students'
 const BASE_URL = 'https://thepsychology.ai'
 // GA attribution for clicks from this campaign. Used as the href in the HTML
 // link only; the visible link text and the plain-text body stay clean.
-const TRACKED_URL = `${BASE_URL}/?utm_source=dct-outreach&utm_medium=email&utm_campaign=eppp-dct`
+const TRACKED_URL = `${BASE_URL}/eppp-practice-questions?utm_source=dct-outreach&utm_medium=email&utm_campaign=eppp-dct`
 const DIVIDER = '-'.repeat(60)
 
 const PARAS = [
   "I'm Anders Chan, a clinical psychologist (UCLA postdoc, LIU Post PsyD). I built an EPPP prep tool, thepsychology.ai, which helped me pass with a month of preparation, and four postdocs have since passed with it too, most after about two months.",
   "Two reasons it might help your students. It's affordable ($30/month vs. the usual $849 to $1,799), and the questions are written the way the EPPP actually words them, so practice scores mean something. And the exam itself costs about $692 every attempt, so every retake a student avoids is real money saved.",
-  "I'd love to give you free access to look around, plus a free trial for any student who wants to try it. If it's useful, please forward it to your graduating cohort. And if it could help program-wide, I'm glad to talk.",
+  "Here's the easy part for you. Students can try free EPPP practice questions right now, no signup hoops. Would it be alright if I sent you a short blurb with the link to share with your graduating cohort? Just reply yes and I'll send it over.",
 ]
 const FOOTER_LINE = 'thePsychology.ai, 760 Harrison Ave, #HC 603, Boston, MA 02118'
 
@@ -65,7 +66,7 @@ function textBody(greeting: string, url: string): string {
     '\n\n' +
     paras +
     '\n\n' +
-    'You can take a look here: https://thepsychology.ai\n\n' +
+    'Students can start with free practice questions here: https://thepsychology.ai/eppp-practice-questions\n\n' +
     'Thanks for everything you do for our field.\n\n' +
     'Regards,\nAnders\n\n' +
     'Anders Chan, PsyD\nFounder, Licensed Psychologist - thePsychology.ai\n\n' +
@@ -85,7 +86,7 @@ function htmlBody(greeting: string, url: string): string {
     'font-size:15px;line-height:1.55;color:#1a1a2e;max-width:560px">' +
     `<p>${salutationFor(greeting)}</p>` +
     bodyParas +
-    `<p>You can take a look here: <a href="${TRACKED_URL}">https://thepsychology.ai</a></p>` +
+    `<p>Students can start with free practice questions here: <a href="${TRACKED_URL}">thepsychology.ai/eppp-practice-questions</a></p>` +
     '<p>Thanks for everything you do for our field.</p>' +
     '<p>Regards,<br>Anders</p>' +
     '<p>Anders Chan, PsyD<br>Founder, Licensed Psychologist - thePsychology.ai</p>' +
