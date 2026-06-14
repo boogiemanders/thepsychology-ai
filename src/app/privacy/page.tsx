@@ -110,8 +110,14 @@ export default function PrivacyPolicyPage() {
             <p>
               We use Google Analytics 4 to count visits and see which pages
               people use. It sets cookies and records the pages you view and
-              roughly where traffic comes from. We also use cookies to keep you
-              logged in. No ad trackers.
+              roughly where traffic comes from. When you are signed in, we
+              connect that activity to a random account ID (never your name or
+              email) so we can see the path from a first visit to signing up or
+              subscribing. We also tell Google when someone starts checkout or
+              buys a subscription, including the amount paid, so we can measure
+              how well the site works. We never send Google your name, email, or
+              card details. We also use cookies to keep you logged in. No ad
+              trackers.
             </p>
           </section>
 
@@ -174,7 +180,8 @@ export default function PrivacyPolicyPage() {
                 <span className="font-medium text-foreground">
                   Google Analytics
                 </span>
-                : usage measurement.
+                : usage and conversion measurement (receives a random account
+                ID, never your name or email).
               </li>
               <li>
                 <span className="font-medium text-foreground">Resend</span>:
