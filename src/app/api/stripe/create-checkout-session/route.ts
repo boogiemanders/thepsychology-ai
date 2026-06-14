@@ -72,10 +72,11 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const { userId, userEmail } = (await req.json()) as {
+    const { userId, userEmail, gaClientId } = (await req.json()) as {
       planTier?: string
       userId?: string
       userEmail?: string | null
+      gaClientId?: string | null
     }
 
     if (!userId || !userEmail) {
@@ -89,6 +90,11 @@ export async function POST(req: NextRequest) {
     const sessionMetadata = {
       userId,
       planTier: 'pro',
+      // GA4 client_id captured from the browser _ga cookie so the server-side
+      // purchase event can join back to this session in GA4.
+      ...(typeof gaClientId === 'string' && gaClientId.length > 0
+        ? { ga_client_id: gaClientId.slice(0, 64) }
+        : {}),
       ...attribution,
     }
 

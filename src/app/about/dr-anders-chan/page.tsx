@@ -237,7 +237,7 @@ export default function DrAndersChanPage() {
             Dr. Chan built thePsychology.ai around the exact study method that
             took him from 19% to 588 in 30 days.{" "}
             <Link
-              href="/#get-started?utm_source=author-bio&utm_medium=cta"
+              href="/?utm_source=author-bio&utm_medium=cta#get-started"
               className="text-primary underline underline-offset-4"
             >
               Start your free trial

@@ -4,6 +4,7 @@ import Stripe from 'stripe'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { sendSlackNotification } from '@/lib/notify-slack'
 import { sendNotificationEmail, isNotificationEmailConfigured } from '@/lib/notify-email'
+import { sendGa4Event, deterministicClientId } from '@/lib/ga4-measurement-protocol'
 
 export const dynamic = 'force-dynamic'
 
@@ -463,6 +464,38 @@ export async function POST(request: Request) {
         stripeCustomerId,
         sessionId: session.id,
       })
+
+      // GA4 purchase conversion via Measurement Protocol. The Stripe webhook
+      // runs server-side and can't reach the browser gtag, so we POST directly
+      // to GA4. amount_total is in cents; GA4 wants a major-unit number.
+      const purchaseValue = (session.amount_total ?? 0) / 100
+      const purchaseCurrency = (session.currency ?? 'usd').toUpperCase()
+      // Prefer the real GA client_id captured at checkout (if present in
+      // metadata), else fall back to a stable per-user id so the same user
+      // always maps to one GA client.
+      const gaClientId = session.metadata?.ga_client_id || deterministicClientId(userId)
+      await sendGa4Event({
+        clientId: gaClientId,
+        userId,
+        events: [
+          {
+            name: 'purchase',
+            params: {
+              transaction_id: session.id,
+              value: purchaseValue,
+              currency: purchaseCurrency,
+              items: [
+                {
+                  item_id: planTier,
+                  item_name: 'thePsychology.ai Pro',
+                  price: purchaseValue,
+                  quantity: 1,
+                },
+              ],
+            },
+          },
+        ],
+      }).catch((err) => console.error('[Stripe] Failed to send GA4 purchase event:', err))
 
       // Slack notification for new subscription (no PII: name/email intentionally omitted)
       await sendSlackNotification(
