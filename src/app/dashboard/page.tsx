@@ -97,7 +97,7 @@ export default function DashboardPage() {
   const router = useRouter()
   const { user, userProfile, loading, signOut, refreshProfile } = useAuth()
   const { startTour, isActive: isTourActive } = useOnboarding()
-  const { shouldShow: shouldShowConsentModal, dismiss: dismissConsentModal } = useConsentModal()
+  const { shouldShow: shouldShowConsentModal, dismiss: dismissConsentModal, isResolved: consentResolved } = useConsentModal()
   const getBaseUrl = () => {
     if (typeof window !== 'undefined') {
       return window.location.origin
@@ -294,20 +294,35 @@ export default function DashboardPage() {
     setMounted(true)
   }, [])
 
-  // Auto-start onboarding tour for first-time users
+  // Auto-start onboarding tour for first-time users.
+  // Wait until consent prefs have loaded (consentResolved) AND the Privacy & Data
+  // Preferences modal is dismissed, so the tour never renders on top of the consent
+  // modal on first login. shouldShowConsentModal flips false on Skip/Save, which
+  // re-runs this effect and starts the tour then.
   useEffect(() => {
     if (!mounted || !user?.id || isTourActive) return
+    if (!consentResolved || shouldShowConsentModal) return
+
+    let cancelled = false
+    let timer: ReturnType<typeof setTimeout> | undefined
 
     const checkAndStartTour = async () => {
       const shouldShow = await shouldShowOnboarding(user.id)
-      if (shouldShow) {
+      if (shouldShow && !cancelled) {
         // Small delay to let the page fully render
-        setTimeout(() => startTour(), 800)
+        timer = setTimeout(() => {
+          if (!cancelled) startTour()
+        }, 800)
       }
     }
 
     checkAndStartTour()
-  }, [mounted, user?.id, isTourActive, startTour])
+
+    return () => {
+      cancelled = true
+      if (timer) clearTimeout(timer)
+    }
+  }, [mounted, user?.id, isTourActive, startTour, consentResolved, shouldShowConsentModal])
 
   const storeExamDateLocally = useCallback((dateString: string) => {
     if (typeof window === 'undefined') return

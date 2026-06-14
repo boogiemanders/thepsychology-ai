@@ -211,7 +211,12 @@ export function useConsentModal() {
   const shouldShow =
     user && consentPreferences?.is_default && !dismissed
 
+  // consentPreferences is null while the auth context is still fetching. Callers
+  // (e.g. the onboarding tour) need to wait for this before deciding to render,
+  // otherwise they race the modal during the load window.
+  const isResolved = consentPreferences !== null
+
   const dismiss = () => setDismissed(true)
 
-  return { shouldShow, dismiss }
+  return { shouldShow, dismiss, isResolved }
 }
