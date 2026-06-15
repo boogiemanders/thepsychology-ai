@@ -441,6 +441,10 @@ export async function renderOverlay(
       titleLine1: draft.video_title ?? "",
       // Founder format: the label always reads "EPPP: <Domain>".
       titleLine2: parseDomain(spoken) ? `EPPP: ${parseDomain(spoken)}` : "",
+      // Opening credential badge (top-center pill, first ~2s, then the title
+      // takes its spot). EPPP videos only — that's where the exam credential
+      // carries weight; pop-culture and other topics get no badge.
+      credential: draft.topic === "eppp" ? "UCLA-trained psychologist" : "",
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.

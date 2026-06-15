@@ -22,12 +22,14 @@ import {
   PANEL_SHADOW,
   SITE_BG,
   TEXT_PRIMARY,
+  CREDENTIAL_TOTAL_S,
 } from "./design";
 import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
 import { EndCard } from "./EndCard";
 import { WrongStrike } from "./WrongStrike";
 import { TitleBlock } from "./TitleBlock";
+import { CredentialBadge } from "./CredentialBadge";
 import { ConceptDiagram } from "./ConceptDiagram";
 import { IllustrationCue } from "./IllustrationCue";
 import { ClipCue } from "./ClipCue";
@@ -65,6 +67,11 @@ export const practiceQuestionSchema = z.object({
   // line is hidden (both empty = no block at all).
   titleLine1: z.string().default(""),
   titleLine2: z.string().default(""),
+  // Opening credential hook (e.g. "UCLA-trained psychologist"). Fired
+  // automatically as a top-center pill for the first ~2s, then the title takes
+  // its place. Not a per-draft animation cue. Empty string = no badge (e.g.
+  // pop-culture videos).
+  credential: z.string().default(""),
 });
 
 export type PracticeQuestionProps = z.infer<typeof practiceQuestionSchema>;
@@ -183,6 +190,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   animationCues = [],
   titleLine1 = "",
   titleLine2 = "",
+  credential = "",
 }) => {
   // Card/strike text is parsed from the spoken script, so phonetic spellings
   // ("ways four", "E triple P") must map back to written forms on screen.
@@ -558,8 +566,19 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
             // question card).
             ...(cardWindow ? [cardWindow] : []),
             ...(revealWindow ? [revealWindow] : []),
+            // The opening credential badge sits in the title's spot for the
+            // first ~2s; the title fades in right as the badge leaves.
+            ...(credential ? [{ fromMs: 0, toMs: CREDENTIAL_TOTAL_S * 1000 }] : []),
           ]}
         />
+      ) : null}
+      {credential ? (
+        <Sequence
+          from={0}
+          durationInFrames={Math.round(CREDENTIAL_TOTAL_S * fps)}
+        >
+          <CredentialBadge text={credential} />
+        </Sequence>
       ) : null}
       {cueOverlays.map((o, i) => (
         <Sequence
