@@ -72,7 +72,53 @@ async function markFailed(draftId: string, label: string, reason: string): Promi
   ).catch((e) => console.error(`[slack] ${(e as Error).message}`))
 }
 
+// Move a draft's trio (raw .mp4, .srt, _final.mp4) into videos/<subdir> and
+// return the new raw-mp4 path (what video_path stores). Best-effort: on any
+// error the files stay put and the original raw path comes back.
+function moveTrio(rawPath: string, subdir: string): string {
+  try {
+    const destDir = join(OUTPUT_DIR, subdir)
+    mkdirSync(destDir, { recursive: true })
+    const srtPath = rawPath.replace(/\.mp4$/, ".srt")
+    const finalPath = rawPath.replace(/\.mp4$/, "_final.mp4")
+    for (const p of [rawPath, srtPath, finalPath]) {
+      if (existsSync(p)) renameSync(p, join(destDir, basename(p)))
+    }
+    return join(destDir, basename(rawPath))
+  } catch (moveErr) {
+    console.warn(`⚠️  move to ${subdir}/ failed (files stay put): ${(moveErr as Error).message}`)
+    return rawPath
+  }
+}
+
+// Reflect the post queue on disk: every queued draft's files live in
+// videos/queued (founder ask 2026-06-15). The "Post to TikTok" click flips the
+// status on Vercel, which can't reach this Mac's Drive, so we reconcile the
+// folder here on each run (including --dry-run — only the posting is gated).
+// Files then drip out to done/ as they post.
+async function syncQueuedFolder(): Promise<void> {
+  const { data, error } = await supabase
+    .from("marketing_drafts")
+    .select("id, video_path")
+    .eq("type", "tiktok")
+    .eq("tiktok_post_status", "queued")
+  if (error) {
+    console.warn(`[tiktok] queue-folder sync skipped: ${error.message}`)
+    return
+  }
+  for (const row of data ?? []) {
+    if (!row.video_path || row.video_path.includes("/queued/")) continue
+    const newPath = moveTrio(row.video_path, "queued")
+    if (newPath !== row.video_path) {
+      await supabase.from("marketing_drafts").update({ video_path: newPath }).eq("id", row.id)
+      console.log(`→ queued/: ${basename(newPath)}`)
+    }
+  }
+}
+
 async function main() {
+  await syncQueuedFolder()
+
   // How many already went out today (ET)?
   const { count, error: countErr } = await supabase
     .from("marketing_drafts")
@@ -132,21 +178,10 @@ async function main() {
       continue
     }
 
-    // Published: move the draft's trio (raw mp4, SRT, final) into videos/done
-    // so the review folder only holds unposted work (founder ask 2026-06-12).
-    // Best-effort — a failed move must not block marking the row posted.
-    let newRawPath = draft.video_path!
-    try {
-      const doneDir = join(OUTPUT_DIR, "done")
-      mkdirSync(doneDir, { recursive: true })
-      const srtPath = draft.video_path!.replace(/\.mp4$/, ".srt")
-      for (const p of [draft.video_path!, srtPath, finalPath]) {
-        if (existsSync(p)) renameSync(p, join(doneDir, basename(p)))
-      }
-      newRawPath = join(doneDir, basename(draft.video_path!))
-    } catch (moveErr) {
-      console.warn(`⚠️  ${label}: move to done/ failed (files stay put): ${(moveErr as Error).message}`)
-    }
+    // Published: move the trio (raw mp4, SRT, final) from queued/ into videos/done
+    // so the queue folder only holds unposted work. Best-effort — a failed move
+    // must not block marking the row posted.
+    const newRawPath = moveTrio(draft.video_path!, "done")
 
     const { error: updErr } = await supabase
       .from("marketing_drafts")
