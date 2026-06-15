@@ -26,6 +26,9 @@ export interface MergeStats {
 
 export interface MergeResult {
   rows: MergedRow[]
+  // one row per attended (Show) appointment, joined to contact info — this is the
+  // rater8 feed shape (appointment-level, what rater8 asks for)
+  rater8: string[][]
   stats: MergeStats
 }
 
@@ -127,6 +130,13 @@ function lookupClient(
   return { row: null, how: 'not_found' }
 }
 
+// "Anders Chan" -> ["Anders", "Chan"]; single token -> last name blank
+function splitName(full: string): [string, string] {
+  const toks = full.trim().split(/\s+/)
+  if (toks.length <= 1) return [toks[0] ?? '', '']
+  return [toks.slice(0, -1).join(' '), toks[toks.length - 1]]
+}
+
 // "Ann & Bob Smith" -> ["Ann Smith", "Bob Smith"]
 // "Ann Jones & Bob Smith" -> ["Ann Jones", "Bob Smith"]
 export function expandCouple(name: string): string[] | null {
@@ -166,6 +176,7 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
 
   const idx = buildDetailIndex(details)
   const rows: MergedRow[] = []
+  const rater8: string[][] = []
   const stats: MergeStats = {
     appointments: appts.length,
     attendanceClients: byClient.size,
@@ -209,6 +220,24 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
       else stats.notFound++
       if (t.couple && row) stats.coupleMembers++
       if (!phone && !email) stats.missingContact++
+
+      // rater8 feed: one row per attended visit for anyone we can reach
+      if (phone || email) {
+        const [firstName, lastName] = splitName(t.name)
+        for (const a of shows) {
+          rater8.push([
+            firstName,
+            lastName,
+            email,
+            phone,
+            a.clinician,
+            OFFICE_LOCATION[a.office] ?? a.office,
+            fmtDateUs(a.date),
+            a.status,
+          ])
+        }
+      }
+
       rows.push({
         clientName: t.name,
         location,
@@ -229,34 +258,16 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
   }
 
   rows.sort((a, b) => a.location.localeCompare(b.location) || a.clientName.localeCompare(b.clientName))
+  // rater8 feed sorted by visit date, then name (column index: 6=date, 1=last, 0=first)
+  const sortable = (us: string) => us.split('/').reverse().join('')
+  rater8.sort(
+    (a, b) =>
+      sortable(a[6]).localeCompare(sortable(b[6])) ||
+      a[1].localeCompare(b[1]) ||
+      a[0].localeCompare(b[0])
+  )
   stats.rows = rows.length
-  return { rows, stats }
-}
-
-// rater8 wants one row per person with a visit to review and a way to reach them.
-// The same person can appear twice (individual + couple member, or two clinicians);
-// keep only their most recent visit so nobody gets two review requests.
-export function rater8Rows(rows: MergedRow[]): string[][] {
-  const sortable = (us: string) => {
-    const [mm, dd, yyyy] = us.split('/')
-    return `${yyyy}${mm}${dd}`
-  }
-  const byPerson = new Map<string, MergedRow>()
-  for (const r of rows) {
-    if (!r.lastVisit || (!r.phone && !r.email)) continue
-    const key = (r.email || r.phone).toLowerCase().replace(/[^a-z0-9@.]/g, '')
-    const prev = byPerson.get(key)
-    if (!prev || sortable(r.lastVisit) > sortable(prev.lastVisit)) {
-      byPerson.set(key, r)
-    }
-  }
-  return [...byPerson.values()]
-    .map((r) => {
-      const toks = r.clientName.trim().split(/\s+/)
-      const lastName = toks.length > 1 ? toks[toks.length - 1] : ''
-      const firstName = toks.length > 1 ? toks.slice(0, -1).join(' ') : toks[0]
-      return [firstName, lastName, r.email, r.phone, r.provider, r.location, r.lastVisit]
-    })
+  return { rows, rater8, stats }
 }
 
 export const RATER8_HEADER = [
@@ -266,7 +277,8 @@ export const RATER8_HEADER = [
   'Cell Phone',
   'Provider',
   'Location',
-  'Last Visit Date',
+  'Appointment Date',
+  'Appointment Status',
 ]
 
 export const FULL_HEADER = [
