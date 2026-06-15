@@ -12,9 +12,10 @@ wait for approval to draft.
 
 Our LinkedIn followers are **senior licensed clinicians**, NOT EPPP candidates. (Audience data:
 Mental Health Care 37%, Senior seniority 34%, top title Clinical Psychologist, NYC-heavy.)
-Candidates live on TikTok, IG, and search. So LinkedIn defaults to clinician-identity topics:
-AI in clinical practice, assessment, supervision, ethics, professional issues. Write to a peer,
-not to a student.
+Candidates live on TikTok, IG, and search. **Lead with AI + psychology** (AI in clinical practice
+is our proven winner); round it out with other clinician-identity topics (assessment, supervision,
+ethics, professional issues). Write to a peer, not to a student. EPPP has still converted a few
+signups here, so keep a LIGHT dose of it (see the cap below), but it is never the default.
 
 ## Hard rules (non-negotiable — this is a licensed clinician's brand)
 
@@ -57,10 +58,12 @@ supersedes them):
   to trainees (reframe any EPPP material as "what to tell your postdoc," never "if you are
   studying"); re-run the licensure fairness and cost angles as a field-level professional debate,
   no product mention.
-- **CUT:** EPPP candidate-facing how-to (cap EPPP at one post in four, clinician framing only);
-  date-and-acronym news openers ("In October 2024, the ASPPB..."); contradictory headlines week
-  to week; full APA bibliography blocks in the body; "Try it free" links in the body; comment-gate
-  CTAs ("comment X and I'll DM you") — those are TikTok-only.
+- **EPPP stays light:** cap at one post in four, never the lead, never two in a row. Prefer
+  clinician framing ("what to tell your postdoc"), but an occasional candidate-facing EPPP post is
+  OK here since LinkedIn has converted a few signups.
+- **CUT:** date-and-acronym news openers ("In October 2024, the ASPPB..."); contradictory headlines
+  week to week; full APA bibliography blocks in the body; "Try it free" links in the body;
+  comment-gate CTAs ("comment X and I'll DM you") — those are TikTok-only.
 
 ## Step 2 — Don't repeat yourself
 

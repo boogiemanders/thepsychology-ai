@@ -1,8 +1,9 @@
 # Lane 2 — TikTok EPPP daily (scheduled Claude Code agent)
 
 Generate the day's EPPP talking-head scripts for The Psychology AI (Dr. Anders Chan, UCLA-trained
-licensed clinical psychologist) and post each to the TikTok-EPPP approval channel for the founder
-to approve, reject, or give feedback. Audience = EPPP candidates and trainees. Runs unattended:
+licensed clinical psychologist) and post each to its EPPP approval lane (exam or strategy, set by
+topic) for the founder to approve, reject, or give feedback. Audience = EPPP candidates and
+trainees. Runs unattended:
 write the full scripts yourself, do not wait for hook approval.
 
 ## What to produce each day
@@ -10,10 +11,14 @@ write the full scripts yourself, do not wait for hook approval.
 1. **5 EPPP practice-question scripts**, balanced across the 12 EPPP domains (see balance step).
 2. **1 EPPP-news script** IF there is something real in the last 24 to 48 hours (ASPPB / Pearson /
    board / licensure news). If nothing fresh, skip it and say so.
-3. **1 EPPP test-taking-strategy script** (one specific, usable tactic, not generic "study hard").
+3. **1 to 2 EPPP-strategy scripts** (`topic: "eppp-strategy"`, routes to the strat lane): a
+   concrete test-taking tactic, a learning protocol from `oe_ask` tied to the Learning and Memory
+   v4 lesson, or one of Dr. Chan's own prep stories / exam-day experiences. See Step 4.
 
-That is up to 7 talking-head scripts. Each is one `submit-draft` call (`type: "tiktok"`,
-`topic: "eppp"`), so it lands in the TikTok-EPPP lane channel.
+That is up to 8 talking-head scripts, each one `submit-draft` call with `type: "tiktok"`. Topic
+sets the lane: the 5 practice questions and the news script use `topic: "eppp"` (lands in the
+TikTok-EPPP-Exam channel); the 1 to 2 strategy scripts use `topic: "eppp-strategy"` (lands in the
+TikTok-EPPP-Strat channel).
 
 ## Hard rules (non-negotiable)
 
@@ -29,9 +34,12 @@ That is up to 7 talking-head scripts. Each is one `submit-draft` call (`type: "t
 
 - **Saves are the north star**, not likes or views. A save on study content is one step from a
   signup. Clean talking head beats montages and app demos (those die on engagement).
-- **Open in the first 1 to 2 seconds with the UCLA credential or a provocative reframe.** The UCLA
+- **The UCLA credential is a VISUAL hook, rendered in the Remotion animation/overlay layer, NOT a
+  spoken line.** It appears ON SCREEN in the first 1 to 2 seconds (a Remotion overlay, e.g. an
+  `animation_cues` overlay; keep it OUT of `body_md`, the HeyGen script the avatar speaks). The UCLA
   hook out-reached everything ("UCLA-trained psychologist's tips for the EPPP" = our #1 video).
-  The "EPPP sample question with explanation" format is our #2.
+  Carry this visual hook on BOTH exam and strategy scripts; the spoken script opens straight on the
+  question or the tactic. The "EPPP sample question with explanation" format is our #2.
 - Subtitles always on, under 45 seconds, one specific idea per video.
 - Write each script with the `ig-reel-script-writer` skill (vendored at `.claude/skills/`). Give
   it: creator = Dr. Anders Chan, UCLA-trained licensed clinical psychologist; audience = EPPP
@@ -90,21 +98,29 @@ question's `explanation` makes a factual claim you can name a reference for, add
   grounded in `eppp-news-facts.md` for any board/timeline/pass-rate claim. If nothing is fresh,
   skip this script.
 
-## Step 4 — Test-taking strategy + new research (oe_ask, deduped)
+## Step 4 — EPPP-strategy scripts (1 to 2; `topic: "eppp-strategy"` -> strat lane)
 
-- Write one script on a single concrete EPPP test-taking tactic (e.g. how to use the answer
-  options to eliminate distractors, time budgeting per item, managing the "two right answers"
-  trap). Make it specific and usable.
-- Use `oe_ask` (OpenEvidence) to find NEW studying/learning research we have not shared before
-  (e.g. retrieval practice, spacing, interleaving, test anxiety). This research is the GROUNDING
-  and source for the test-taking-strategy script above (not a separate card) — fold the finding
-  into that script and cite it. **Dedup before using it:**
-  - Run `recent-drafts.ts --topic=eppp --days=60` and check the `sources` of recent drafts; do
-    NOT re-share a study already cited there.
-  - Also read `content/marketing/shared-research.md` (the running do-not-repeat list) and skip
-    anything listed.
-  - Cite any new study in `sources` with author + year. (Note: the checkout resets each run, so
-    that file is a manually maintained seed; the durable dedup is the recent-drafts `sources`.)
+Produce one or two strategy scripts. Each is its own `submit-draft` call with `topic:
+"eppp-strategy"` (NOT `eppp`) so it routes to the EPPP-Strategy lane. Rotate the angles day to day:
+
+- **Test-taking tactic** — one concrete, usable move (use the options to eliminate distractors,
+  time budgeting per item, the "two right answers" trap). Specific, not generic "study hard".
+- **Learning protocol (oe_ask + lesson)** — use `oe_ask` (OpenEvidence) to find NEW
+  studying/learning research we have not shared (retrieval practice, spacing, interleaving, test
+  anxiety) and tie it to the matching **Learning and Memory** lesson under
+  `EPPP/content/topic-content-v4/` (that domain is literally the science of how to study). The
+  lesson plus the study are the grounding and the `sources`.
+- **Founder story** — a first-person story of how Dr. Chan actually prepared and what exam day was
+  like. Authentic and specific, no hype. Where it maps to a concept, tie it to its
+  `topic-content-v4` lesson.
+
+**Dedup the research before using it:**
+- Run `recent-drafts.ts --topic=eppp-strategy --days=60` (and `--topic=eppp`) and check the
+  `sources` of recent drafts; do NOT re-share a study already cited there.
+- Also read `content/marketing/shared-research.md` (the running do-not-repeat list) and skip
+  anything listed.
+- Cite any new study in `sources` with author + year. (The checkout resets each run, so that file
+  is a manually maintained seed; the durable dedup is the recent-drafts `sources`.)
 
 ## Step 5 — Fact-check, then submit each script
 
@@ -116,6 +132,7 @@ Cut unsupported claims; flag borderline keepers. Write each script to its own te
 npx tsx scripts/marketing/submit-draft.ts /path/to/script.json
 ```
 
-Each posts an approval card to the TikTok-EPPP lane (`SLACK_WEBHOOK_TIKTOK_EPPP`, falls back to
-`#social-approvals`). Report one line: the 5 domains you covered, whether you shipped a news script,
-and any `needs_review` flags.
+Each posts an approval card to its lane by topic: `eppp` -> TikTok-EPPP-Exam
+(`SLACK_WEBHOOK_TIKTOK_EPPP`), `eppp-strategy` -> TikTok-EPPP-Strat
+(`SLACK_WEBHOOK_TIKTOK_EPPP_STRAT`); both fall back to `#social-approvals`. Report one line: the 5
+domains you covered, whether you shipped a news script, and any `needs_review` flags.
