@@ -16,6 +16,13 @@ const WEBHOOKS = {
   // degrades to one channel instead of dropping cards.
   linkedin: process.env.SLACK_WEBHOOK_LINKEDIN || process.env.SLACK_WEBHOOK_SOCIAL,
   tiktok_eppp: process.env.SLACK_WEBHOOK_TIKTOK_EPPP || process.env.SLACK_WEBHOOK_SOCIAL,
+  // EPPP test-taking-strategy lane. Falls back to the EPPP exam channel (not the
+  // generic social one) so strategy cards still land with EPPP content if its own
+  // channel webhook is missing.
+  tiktok_eppp_strat:
+    process.env.SLACK_WEBHOOK_TIKTOK_EPPP_STRAT ||
+    process.env.SLACK_WEBHOOK_TIKTOK_EPPP ||
+    process.env.SLACK_WEBHOOK_SOCIAL,
   tiktok_pop: process.env.SLACK_WEBHOOK_TIKTOK_POP || process.env.SLACK_WEBHOOK_SOCIAL,
   default: process.env.SLACK_WEBHOOK_URL,
 } as const

@@ -7,14 +7,19 @@ import type { MarketingDraft } from "./types"
 import { apaReference } from "./format"
 import { sendSlackNotification, type SlackChannel } from "../notify-slack"
 
-// 3-lane split: route the approval card to a per-lane channel by (type, topic).
-// LinkedIn -> #linkedin, TikTok pop-culture -> #tiktok-pop, any other TikTok
-// (EPPP/psychology/ai) -> #tiktok-eppp. Blogs stay in #social-approvals. Every
-// lane webhook falls back to SLACK_WEBHOOK_SOCIAL (see notify-slack.ts), so this
-// is safe before the founder makes the real channels.
+// Lane split: route the approval card to a per-lane channel by (type, topic).
+// LinkedIn -> #linkedin. TikTok pop-culture -> #tiktok-pop, TikTok eppp-strategy
+// -> #tiktok-eppp-strat, any other TikTok (eppp/psychology/ai) -> #tiktok-eppp
+// (the exam lane is the default sink for non-pop, non-strategy TikTok). Blogs stay
+// in #social-approvals. Every lane webhook falls back (see notify-slack.ts), so
+// this is safe before the founder makes the real channels.
 export function approvalChannel(draft: Pick<MarketingDraft, "type" | "topic">): SlackChannel {
   if (draft.type === "linkedin") return "linkedin"
-  if (draft.type === "tiktok") return draft.topic === "pop-culture" ? "tiktok_pop" : "tiktok_eppp"
+  if (draft.type === "tiktok") {
+    if (draft.topic === "pop-culture") return "tiktok_pop"
+    if (draft.topic === "eppp-strategy") return "tiktok_eppp_strat"
+    return "tiktok_eppp"
+  }
   return "social"
 }
 

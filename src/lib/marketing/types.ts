@@ -6,6 +6,7 @@ export type DraftType = "blog" | "linkedin" | "tiktok"
 export type Topic =
   | "psychology"
   | "eppp"
+  | "eppp-strategy"
   | "ai"
   | "psychology-ai"
   | "pop-culture"
