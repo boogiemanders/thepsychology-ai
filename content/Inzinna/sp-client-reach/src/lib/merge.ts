@@ -1,7 +1,63 @@
 import { parseCsv, rowsToObjects } from './csv'
 
+// SimplePractice uses the literal string "--" as its blank marker; treat it as empty.
+function clean(v: unknown): string {
+  if (v == null) return ''
+  const s = String(v).trim()
+  return s === '--' ? '' : s
+}
+
+// SP's JSON dates may be ISO (yyyy-mm-dd[...]); normalize to mm/dd/yyyy so the
+// existing US-date tie-breaker (pickDetailRow) keeps working. Anything else is
+// passed through (the only consumer treats unparseable dates as "oldest").
+function normSpDate(s: string): string {
+  if (!s) return ''
+  if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(s)) return s
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s)
+  return m ? `${m[2]}/${m[3]}/${m[1]}` : s
+}
+
+// The client-details report can arrive two ways:
+//  - JSON:API (live pull, .json endpoint) — carries the hashedId (deep link) and,
+//    for minors, the parent/guardian contact in contactName/contactPhone/contactEmail.
+//  - CSV (manual drag of a downloaded report) — no ids, no guardian contact.
+// Both are normalized into the same record keys the merge already consumes
+// (Client / Phone number / Email / Last appointment), plus underscore-prefixed
+// extras (_hashedId, _contact*) that only the JSON path populates.
+export function parseDetailsJson(text: string): Record<string, string>[] {
+  const json = JSON.parse(text)
+  const data = Array.isArray(json?.data) ? json.data : []
+  return data.map((item: any) => {
+    const a = item?.attributes ?? {}
+    // top-level id is "<numericId>-<hashedId>"; attributes.hashedId is authoritative.
+    let hashedId = clean(a.hashedId)
+    if (!hashedId && typeof item?.id === 'string' && item.id.includes('-')) {
+      hashedId = clean(item.id.slice(item.id.indexOf('-') + 1))
+    }
+    return {
+      Client: clean(a.clientName),
+      'Phone number': clean(a.phoneNumber),
+      Email: clean(a.email),
+      'Primary clinician': clean(a.clinicianName),
+      'Last appointment': normSpDate(clean(a.lastAppointmentDate)),
+      'Client type': clean(a.clientType),
+      _hashedId: hashedId,
+      _contactName: clean(a.contactName),
+      _contactPhone: clean(a.contactPhone),
+      _contactEmail: clean(a.contactEmail),
+    }
+  })
+}
+
+function parseDetails(text: string): Record<string, string>[] {
+  const t = text.replace(/^﻿/, '').trimStart()
+  if (t.startsWith('{') || t.startsWith('[')) return parseDetailsJson(t)
+  return rowsToObjects(parseCsv(text))
+}
+
 export interface MergedRow {
   clientName: string
+  clientId: string // SimplePractice hashedId for the client overview deep link ('' if unknown)
   location: string // Manhattan | Virtual | Unknown
   lastVisit: string // mm/dd/yyyy of most recent attended (Show) appointment
   phone: string
@@ -22,6 +78,7 @@ export interface MergeStats {
   notFound: number
   coupleMembers: number
   missingContact: number
+  guardianFallback: number // minors reached through a parent/guardian contact
 }
 
 export interface MergeResult {
@@ -154,12 +211,13 @@ export function expandCouple(name: string): string[] | null {
   })
 }
 
-export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeResult {
+export function mergeReports(attendanceCsv: string, detailsInput: string): MergeResult {
   const attRows = rowsToObjects(parseCsv(attendanceCsv))
   // the attendance export inserts a summary row ("193 clients,11 clinicians,...")
   // right under the header; rows without a real date are skipped
   const appts = attRows.filter((r) => parseDateUs(r['date_of_service'] || ''))
-  const details = rowsToObjects(parseCsv(detailsCsv)).filter((r) => (r['Client'] || '').trim())
+  // details arrive as JSON (live pull) or CSV (manual drag); parseDetails handles both
+  const details = parseDetails(detailsInput).filter((r) => (r['Client'] || '').trim())
 
   const byClient = new Map<string, Appt[]>()
   for (const r of appts) {
@@ -186,6 +244,7 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
     notFound: 0,
     coupleMembers: 0,
     missingContact: 0,
+    guardianFallback: 0,
   }
 
   for (const [name, clientAppts] of byClient) {
@@ -214,14 +273,26 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
     for (const t of targets) {
       const { row, how } = lookupClient(t.name, idx)
       const match = t.couple && row ? 'couple_member' : how
-      const phone = row?.['Phone number'] ?? ''
-      const email = row?.['Email'] ?? ''
+      const clientId = row?.['_hashedId'] ?? ''
+      // For minors, prefer the parent/guardian contact the details JSON carries
+      // (contactName/contactPhone/contactEmail). Minors usually have a phone on file
+      // but no email of their own, so fill EACH channel from the guardian when present
+      // (not only when both are blank) — review requests must reach the parent.
+      // Adults/couples have these fields blank ("--" -> "") so this is a no-op for them.
+      const isMinor = (row?.['Client type'] ?? '') === 'Minor'
+      const gPhone = isMinor ? (row?.['_contactPhone'] ?? '') : ''
+      const gEmail = isMinor ? (row?.['_contactEmail'] ?? '') : ''
+      const phone = gPhone || (row?.['Phone number'] ?? '')
+      const email = gEmail || (row?.['Email'] ?? '')
+      const guardian = gPhone || gEmail ? row!['_contactName'] || 'guardian' : ''
       if (row) stats.matched++
       else stats.notFound++
       if (t.couple && row) stats.coupleMembers++
+      if (guardian) stats.guardianFallback++
       if (!phone && !email) stats.missingContact++
 
       // rater8 feed: one row per attended visit for anyone we can reach
+      // (minors use the guardian's phone/email so the parent gets the request)
       if (phone || email) {
         const [firstName, lastName] = splitName(t.name)
         for (const a of shows) {
@@ -240,6 +311,7 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
 
       rows.push({
         clientName: t.name,
+        clientId,
         location,
         lastVisit,
         phone,
@@ -250,9 +322,11 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
         match,
         note: t.couple
           ? `from couple: ${t.couple}`
-          : row
-            ? ''
-            : 'not in client details export (archived?)',
+          : guardian
+            ? `parent: ${guardian}`
+            : row
+              ? ''
+              : 'not in client details export (archived?)',
       })
     }
   }

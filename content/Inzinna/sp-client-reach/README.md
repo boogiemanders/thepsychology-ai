@@ -12,10 +12,18 @@ No servers. Client data never leaves the browser tab except the rows you send to
 1. Click the extension icon. A page opens.
 2. Pick a period (Last 30 days, This month, custom...).
 3. Click "Pull from SimplePractice". The extension fetches both reports with your logged-in session:
-   - Client attendance (who was seen, where: Manhattan vs Video Office)
-   - Client details (phone + email for all active clients)
+   - Client attendance (who was seen, where: Manhattan vs Video Office) — CSV
+   - Client details (phone + email for all active clients) — JSON, which also carries each client's id (for deep links) and, for minors, the parent/guardian contact
 4. It merges them: each client gets a location (Manhattan / Virtual, based on their most recent attended appointment), last visit date, provider, phone, and email. Couples are split into individual people. Name quirks (nicknames in quotes, middle names) are matched automatically; anyone it can't find is flagged red instead of silently dropped.
 5. Buttons: download the rater8 CSV, download the full CSV, send to the Google Sheet, or copy all emails / phone numbers for the current filter (e.g. just Manhattan clients).
+
+### Clickable client names (deep links)
+
+When pulled live from SimplePractice, each client name in the results table links straight to that client's SP overview page (`/clients/<id>/overview`), opening in a new tab. Manually dropped CSVs don't carry the id, so those names are plain text.
+
+### Minors and guardians
+
+Minors usually have no phone or email of their own in SimplePractice; the contact lives on the parent/guardian. The details JSON exposes that guardian contact (`contactName` / `contactPhone` / `contactEmail`). When a client's own phone and email are both blank, the merge falls back to the guardian's contact, notes `parent: <name>` on that row, and uses the guardian's phone/email in the rater8 feed so the parent receives the review request. The stats line shows how many people were reached this way ("N via guardian"). This only works on the live JSON pull, not the manual CSV drag.
 
 ## Install (load unpacked)
 

@@ -80,6 +80,45 @@
   }
 
   // src/lib/merge.ts
+  function clean(v) {
+    if (v == null) return "";
+    const s = String(v).trim();
+    return s === "--" ? "" : s;
+  }
+  function normSpDate(s) {
+    if (!s) return "";
+    if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(s)) return s;
+    const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s);
+    return m ? `${m[2]}/${m[3]}/${m[1]}` : s;
+  }
+  function parseDetailsJson(text) {
+    const json = JSON.parse(text);
+    const data = Array.isArray(json?.data) ? json.data : [];
+    return data.map((item) => {
+      const a = item?.attributes ?? {};
+      let hashedId = clean(a.hashedId);
+      if (!hashedId && typeof item?.id === "string" && item.id.includes("-")) {
+        hashedId = clean(item.id.slice(item.id.indexOf("-") + 1));
+      }
+      return {
+        Client: clean(a.clientName),
+        "Phone number": clean(a.phoneNumber),
+        Email: clean(a.email),
+        "Primary clinician": clean(a.clinicianName),
+        "Last appointment": normSpDate(clean(a.lastAppointmentDate)),
+        "Client type": clean(a.clientType),
+        _hashedId: hashedId,
+        _contactName: clean(a.contactName),
+        _contactPhone: clean(a.contactPhone),
+        _contactEmail: clean(a.contactEmail)
+      };
+    });
+  }
+  function parseDetails(text) {
+    const t = text.replace(/^﻿/, "").trimStart();
+    if (t.startsWith("{") || t.startsWith("[")) return parseDetailsJson(t);
+    return rowsToObjects(parseCsv(text));
+  }
   var OFFICE_LOCATION = {
     Manhattan: "Manhattan",
     "Video Office": "Virtual"
@@ -162,10 +201,10 @@
       return fallbackLast ? `${s} ${fallbackLast}` : s;
     });
   }
-  function mergeReports(attendanceCsv, detailsCsv) {
+  function mergeReports(attendanceCsv, detailsInput) {
     const attRows = rowsToObjects(parseCsv(attendanceCsv));
     const appts = attRows.filter((r) => parseDateUs(r["date_of_service"] || ""));
-    const details = rowsToObjects(parseCsv(detailsCsv)).filter((r) => (r["Client"] || "").trim());
+    const details = parseDetails(detailsInput).filter((r) => (r["Client"] || "").trim());
     const byClient = /* @__PURE__ */ new Map();
     for (const r of appts) {
       const name = (r["client_name"] || "").trim();
@@ -189,7 +228,8 @@
       matched: 0,
       notFound: 0,
       coupleMembers: 0,
-      missingContact: 0
+      missingContact: 0,
+      guardianFallback: 0
     };
     for (const [name, clientAppts] of byClient) {
       const sorted = clientAppts.slice().sort((a, b) => b.date.getTime() - a.date.getTime());
@@ -212,11 +252,17 @@
       for (const t of targets) {
         const { row, how } = lookupClient(t.name, idx);
         const match = t.couple && row ? "couple_member" : how;
-        const phone = row?.["Phone number"] ?? "";
-        const email = row?.["Email"] ?? "";
+        const clientId = row?.["_hashedId"] ?? "";
+        const isMinor = (row?.["Client type"] ?? "") === "Minor";
+        const gPhone = isMinor ? row?.["_contactPhone"] ?? "" : "";
+        const gEmail = isMinor ? row?.["_contactEmail"] ?? "" : "";
+        const phone = gPhone || (row?.["Phone number"] ?? "");
+        const email = gEmail || (row?.["Email"] ?? "");
+        const guardian = gPhone || gEmail ? row["_contactName"] || "guardian" : "";
         if (row) stats.matched++;
         else stats.notFound++;
         if (t.couple && row) stats.coupleMembers++;
+        if (guardian) stats.guardianFallback++;
         if (!phone && !email) stats.missingContact++;
         if (phone || email) {
           const [firstName, lastName] = splitName(t.name);
@@ -235,6 +281,7 @@
         }
         rows.push({
           clientName: t.name,
+          clientId,
           location,
           lastVisit,
           phone,
@@ -243,7 +290,7 @@
           showsManhattan,
           showsVirtual,
           match,
-          note: t.couple ? `from couple: ${t.couple}` : row ? "" : "not in client details export (archived?)"
+          note: t.couple ? `from couple: ${t.couple}` : guardian ? `parent: ${guardian}` : row ? "" : "not in client details export (archived?)"
         });
       }
     }
@@ -343,7 +390,9 @@
     const f = encodeURIComponent;
     return [
       `${SP}/frontend/client-attendance-report-rows.csv?filter%5BstartsAt%5D=${f(startsAt)}&filter%5BendsAt%5D=${f(endsAt)}&sort=clientName`,
-      `${SP}/frontend/client-details-report-rows.csv?filter%5BclientStatus%5D=Active&sort=clientName`
+      // JSON (not CSV): carries the client hashedId for deep links and the
+      // parent/guardian contact for minors
+      `${SP}/frontend/client-details-report-rows.json?filter%5BclientStatus%5D=Active&sort=clientName`
     ];
   }
   async function pullFromSp() {
@@ -420,6 +469,9 @@
     }
     return merged.rows.filter((r) => r.location === activeFilter);
   }
+  function escapeHtml(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
   function render() {
     if (!merged) return;
     $("results").classList.remove("hidden");
@@ -427,24 +479,27 @@
     const s = merged.stats;
     const manhattan = merged.rows.filter((r) => r.location === "Manhattan").length;
     const virtual = merged.rows.filter((r) => r.location === "Virtual").length;
-    $("stats-line").textContent = `${s.rows} people from ${s.appointments} appointments \xB7 ${manhattan} Manhattan \xB7 ${virtual} Virtual \xB7 ${s.notFound} not in client details \xB7 ${s.missingContact} without contact info \xB7 ${merged.rater8.length} rater8 rows (one per visit)`;
+    const guardianBit = s.guardianFallback ? `${s.guardianFallback} via guardian \xB7 ` : "";
+    $("stats-line").textContent = `${s.rows} people from ${s.appointments} appointments \xB7 ${manhattan} Manhattan \xB7 ${virtual} Virtual \xB7 ${s.notFound} not in client details \xB7 ${s.missingContact} without contact info \xB7 ${guardianBit}${merged.rater8.length} rater8 rows (one per visit)`;
     const tbody = $("results-table").querySelector("tbody");
     tbody.innerHTML = "";
     for (const r of visibleRows()) {
       const tr = document.createElement("tr");
       if (r.match === "not_found" || !r.phone && !r.email) tr.className = "problem";
+      const nameCell = r.clientId ? `<a class="client-link" href="${SP}/clients/${encodeURIComponent(r.clientId)}/overview" target="_blank" rel="noopener noreferrer">${escapeHtml(r.clientName)}</a>` : escapeHtml(r.clientName);
+      const matchCell = r.note && (r.match === "not_found" || r.note.startsWith("parent:")) ? `${r.match} \xB7 ${r.note}` : r.match;
       const cells = [
-        r.clientName,
+        nameCell,
         `<span class="loc-badge loc-${r.location}">${r.location}</span>`,
         r.lastVisit,
         r.phone,
         r.email,
         r.provider,
-        r.match === "not_found" && r.note ? `${r.match} \xB7 ${r.note}` : r.match
+        matchCell
       ];
       cells.forEach((c, i) => {
         const td = document.createElement("td");
-        if (i === 1) td.innerHTML = c;
+        if (i === 0 || i === 1) td.innerHTML = c;
         else td.textContent = c;
         tr.appendChild(td);
       });

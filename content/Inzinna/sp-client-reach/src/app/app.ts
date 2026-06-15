@@ -72,7 +72,9 @@ function reportUrls(startsAt: string, endsAt: string): string[] {
   const f = encodeURIComponent
   return [
     `${SP}/frontend/client-attendance-report-rows.csv?filter%5BstartsAt%5D=${f(startsAt)}&filter%5BendsAt%5D=${f(endsAt)}&sort=clientName`,
-    `${SP}/frontend/client-details-report-rows.csv?filter%5BclientStatus%5D=Active&sort=clientName`,
+    // JSON (not CSV): carries the client hashedId for deep links and the
+    // parent/guardian contact for minors
+    `${SP}/frontend/client-details-report-rows.json?filter%5BclientStatus%5D=Active&sort=clientName`,
   ]
 }
 
@@ -162,6 +164,14 @@ function visibleRows(): MergedRow[] {
   return merged.rows.filter((r) => r.location === activeFilter)
 }
 
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
 function render() {
   if (!merged) return
   $('results').classList.remove('hidden')
@@ -169,9 +179,10 @@ function render() {
   const s = merged.stats
   const manhattan = merged.rows.filter((r) => r.location === 'Manhattan').length
   const virtual = merged.rows.filter((r) => r.location === 'Virtual').length
+  const guardianBit = s.guardianFallback ? `${s.guardianFallback} via guardian · ` : ''
   $('stats-line').textContent =
     `${s.rows} people from ${s.appointments} appointments · ${manhattan} Manhattan · ${virtual} Virtual · ` +
-    `${s.notFound} not in client details · ${s.missingContact} without contact info · ` +
+    `${s.notFound} not in client details · ${s.missingContact} without contact info · ${guardianBit}` +
     `${merged.rater8.length} rater8 rows (one per visit)`
 
   const tbody = $('results-table').querySelector('tbody')!
@@ -179,18 +190,24 @@ function render() {
   for (const r of visibleRows()) {
     const tr = document.createElement('tr')
     if (r.match === 'not_found' || (!r.phone && !r.email)) tr.className = 'problem'
+    // clickable name -> SP client overview when we have the hashedId (JSON pull only)
+    const nameCell = r.clientId
+      ? `<a class="client-link" href="${SP}/clients/${encodeURIComponent(r.clientId)}/overview" target="_blank" rel="noopener noreferrer">${escapeHtml(r.clientName)}</a>`
+      : escapeHtml(r.clientName)
+    const matchCell =
+      r.note && (r.match === 'not_found' || r.note.startsWith('parent:')) ? `${r.match} · ${r.note}` : r.match
     const cells = [
-      r.clientName,
+      nameCell,
       `<span class="loc-badge loc-${r.location}">${r.location}</span>`,
       r.lastVisit,
       r.phone,
       r.email,
       r.provider,
-      r.match === 'not_found' && r.note ? `${r.match} · ${r.note}` : r.match,
+      matchCell,
     ]
     cells.forEach((c, i) => {
       const td = document.createElement('td')
-      if (i === 1) td.innerHTML = c
+      if (i === 0 || i === 1) td.innerHTML = c
       else td.textContent = c
       tr.appendChild(td)
     })

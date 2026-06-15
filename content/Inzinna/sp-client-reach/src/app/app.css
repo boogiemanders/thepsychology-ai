@@ -10,7 +10,13 @@ body {
   padding: 24px 16px 48px;
 }
 
-#logo {
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+#logo, #rater8-logo {
   display: block;
   height: 68px;
   width: auto;
@@ -18,8 +24,8 @@ body {
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 12px 18px;
-  margin-bottom: 16px;
 }
+#rater8-logo { object-fit: contain; }
 
 header {
   display: flex;
@@ -130,6 +136,9 @@ table { width: 100%; border-collapse: collapse; font-size: 13px; }
 th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid #f3f4f6; white-space: nowrap; }
 th { background: #f9fafb; font-weight: 700; position: sticky; top: 0; }
 tr.problem td { background: #fef2f2; }
+
+.client-link { color: #2563eb; text-decoration: none; }
+.client-link:hover { text-decoration: underline; }
 
 .loc-badge {
   display: inline-block;
