@@ -14,7 +14,7 @@
 // booleans are required by Zernio's TikTok integration.
 
 import crypto from "crypto"
-import { createReadStream, readFileSync } from "fs"
+import { createReadStream, statSync } from "fs"
 import { basename } from "path"
 import type { MarketingDraft } from "./types"
 
@@ -71,38 +71,48 @@ export type TikTokPublishResult = { postId: string; url: string | null }
 // Read the video bytes, hardened against Google Drive File Stream offloading.
 // Drive evicts the *content* of files left unread for a few days (the dirent
 // stays, so existsSync passes and `ls` still shows the full size — the file is
-// flagged "dataless" with 0 local blocks). The first readFileSync then forces
-// an on-demand download, and the provider can bail mid-fetch with a libuv read
-// error: "Unknown system error -11: Unknown system error -11, read". A full
-// sequential pre-read materializes the bytes locally (verified: clears the
-// dataless flag), after which readFileSync is a fast local read. Retry with
-// backoff absorbs the transient EAGAIN. Three posts failed this way 2026-06-14/15
-// (finals sit in "final review/" for days awaiting approval, so they go cold).
+// flagged "dataless" with 0 local blocks). Reading then forces an on-demand
+// download, and the provider can bail mid-fetch with a libuv read error:
+// "Unknown system error -11: Unknown system error -11, read". Streaming the
+// whole file forces that download and yields the bytes in a single pass; if a
+// read throws mid-fetch we back off and retry, by which point Drive has cached
+// more (verified: a full read materializes the file and clears the dataless
+// flag). The byte-count check rejects a truncated/stub read before we upload a
+// broken video. Three posts failed this way 2026-06-14/15 (finals sit in
+// "final review/" for days awaiting approval, so they go cold).
 async function readVideoBytes(filePath: string): Promise<Uint8Array> {
   const MAX_ATTEMPTS = 5
+  // These won't fix themselves on retry — fail fast instead of burning backoff.
+  const PERMANENT = new Set(["ENOENT", "EACCES", "EISDIR", "ENOTDIR"])
   let lastErr: unknown
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
-      // Drain a stream over the whole file first — this pulls a dehydrated Drive
-      // file fully local (gentle 64KB reads the provider tolerates) before we
-      // buffer it. A no-op for files already on disk.
+      const expected = statSync(filePath).size
+      const chunks: Buffer[] = []
       await new Promise<void>((resolve, reject) => {
         const s = createReadStream(filePath)
-        s.on("data", () => {})
+        s.on("data", (c: Buffer) => chunks.push(c))
         s.on("end", resolve)
         s.on("error", reject)
       })
-      return new Uint8Array(readFileSync(filePath))
+      const bytes = Buffer.concat(chunks)
+      if (bytes.byteLength !== expected) {
+        throw new Error(`short read: ${bytes.byteLength}/${expected} bytes (not fully materialized)`)
+      }
+      return new Uint8Array(bytes)
     } catch (err) {
       lastErr = err
+      const code = (err as NodeJS.ErrnoException)?.code
+      if (code && PERMANENT.has(code)) throw err
       if (attempt === MAX_ATTEMPTS) break
       // Linear backoff gives Drive time to finish materializing before the retry.
       await new Promise((r) => setTimeout(r, attempt * 3000))
     }
   }
+  const msg = lastErr instanceof Error ? lastErr.message : String(lastErr)
   throw new Error(
     `could not read ${basename(filePath)} after ${MAX_ATTEMPTS} attempts ` +
-      `(Google Drive may not have materialized the file): ${(lastErr as Error).message}`
+      `(Google Drive may not have materialized the file): ${msg}`
   )
 }
 
