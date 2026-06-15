@@ -105,6 +105,7 @@
         "Phone number": clean(a.phoneNumber),
         Email: clean(a.email),
         "Primary clinician": clean(a.clinicianName),
+        "Primary clinician id": clean(a.clinicianId),
         "Last appointment": normSpDate(clean(a.lastAppointmentDate)),
         "Client type": clean(a.clientType),
         _hashedId: hashedId,
@@ -205,6 +206,13 @@
     const attRows = rowsToObjects(parseCsv(attendanceCsv));
     const appts = attRows.filter((r) => parseDateUs(r["date_of_service"] || ""));
     const details = parseDetails(detailsInput).filter((r) => (r["Client"] || "").trim());
+    const clinicianIdByName = /* @__PURE__ */ new Map();
+    for (const r of details) {
+      const cName = (r["Primary clinician"] || "").trim();
+      const cId = (r["Primary clinician id"] || "").trim();
+      if (!cName || !cId) continue;
+      if (!clinicianIdByName.has(cName)) clinicianIdByName.set(cName, cId);
+    }
     const byClient = /* @__PURE__ */ new Map();
     for (const r of appts) {
       const name = (r["client_name"] || "").trim();
@@ -273,6 +281,7 @@
               email,
               phone,
               a.clinician,
+              clinicianIdByName.get(a.clinician) ?? "",
               OFFICE_LOCATION[a.office] ?? a.office,
               fmtDateUs(a.date),
               a.status
@@ -297,7 +306,7 @@
     rows.sort((a, b) => a.location.localeCompare(b.location) || a.clientName.localeCompare(b.clientName));
     const sortable = (us) => us.split("/").reverse().join("");
     rater8.sort(
-      (a, b) => sortable(a[6]).localeCompare(sortable(b[6])) || a[1].localeCompare(b[1]) || a[0].localeCompare(b[0])
+      (a, b) => sortable(a[7]).localeCompare(sortable(b[7])) || a[1].localeCompare(b[1]) || a[0].localeCompare(b[0])
     );
     stats.rows = rows.length;
     return { rows, rater8, stats };
@@ -308,6 +317,7 @@
     "Email",
     "Cell Phone",
     "Provider",
+    "Provider ID",
     "Location",
     "Appointment Date",
     "Appointment Status"

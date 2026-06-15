@@ -39,6 +39,7 @@ export function parseDetailsJson(text: string): Record<string, string>[] {
       'Phone number': clean(a.phoneNumber),
       Email: clean(a.email),
       'Primary clinician': clean(a.clinicianName),
+      'Primary clinician id': clean(a.clinicianId),
       'Last appointment': normSpDate(clean(a.lastAppointmentDate)),
       'Client type': clean(a.clientType),
       _hashedId: hashedId,
@@ -219,6 +220,17 @@ export function mergeReports(attendanceCsv: string, detailsInput: string): Merge
   // details arrive as JSON (live pull) or CSV (manual drag); parseDetails handles both
   const details = parseDetails(detailsInput).filter((r) => (r['Client'] || '').trim())
 
+  // clinician name -> SP clinicianId, harvested from the details JSON (the CSV manual-drag
+  // path has no ids, so this stays empty and Provider ID is blank there by design).
+  // First non-empty id per name wins.
+  const clinicianIdByName = new Map<string, string>()
+  for (const r of details) {
+    const cName = (r['Primary clinician'] || '').trim()
+    const cId = (r['Primary clinician id'] || '').trim()
+    if (!cName || !cId) continue
+    if (!clinicianIdByName.has(cName)) clinicianIdByName.set(cName, cId)
+  }
+
   const byClient = new Map<string, Appt[]>()
   for (const r of appts) {
     const name = (r['client_name'] || '').trim()
@@ -302,6 +314,7 @@ export function mergeReports(attendanceCsv: string, detailsInput: string): Merge
             email,
             phone,
             a.clinician,
+            clinicianIdByName.get(a.clinician) ?? '',
             OFFICE_LOCATION[a.office] ?? a.office,
             fmtDateUs(a.date),
             a.status,
@@ -332,11 +345,11 @@ export function mergeReports(attendanceCsv: string, detailsInput: string): Merge
   }
 
   rows.sort((a, b) => a.location.localeCompare(b.location) || a.clientName.localeCompare(b.clientName))
-  // rater8 feed sorted by visit date, then name (column index: 6=date, 1=last, 0=first)
+  // rater8 feed sorted by visit date, then name (column index: 7=date, 1=last, 0=first)
   const sortable = (us: string) => us.split('/').reverse().join('')
   rater8.sort(
     (a, b) =>
-      sortable(a[6]).localeCompare(sortable(b[6])) ||
+      sortable(a[7]).localeCompare(sortable(b[7])) ||
       a[1].localeCompare(b[1]) ||
       a[0].localeCompare(b[0])
   )
@@ -350,6 +363,7 @@ export const RATER8_HEADER = [
   'Email',
   'Cell Phone',
   'Provider',
+  'Provider ID',
   'Location',
   'Appointment Date',
   'Appointment Status',

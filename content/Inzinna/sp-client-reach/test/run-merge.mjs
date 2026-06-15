@@ -53,6 +53,7 @@ function expect(label, actual, predicate, want) {
           phoneNumber: '(347) 421-9750',
           email: '--',
           clinicianName: 'Dr. Smith',
+          clinicianId: 1428233,
           lastAppointmentDate: '2026-06-09',
         },
       },
@@ -69,6 +70,7 @@ function expect(label, actual, predicate, want) {
           phoneNumber: '(212) 555-0100',
           email: 'jane@example.com',
           clinicianName: 'Dr. Jones',
+          clinicianId: 9999999,
           lastAppointmentDate: '2026-06-03',
         },
       },
@@ -85,6 +87,7 @@ function expect(label, actual, predicate, want) {
           phoneNumber: '--',
           email: '--',
           clinicianName: 'Dr. Jones',
+          clinicianId: 9999999,
           lastAppointmentDate: '2026-06-04',
         },
       },
@@ -117,6 +120,15 @@ function expect(label, actual, predicate, want) {
     aidemRater8[0]?.[2],
     aidemRater8.every((row) => row[2] === 'carinda@gmail.com'),
     'carinda@gmail.com on every row'
+  )
+
+  // Provider ID column: clinicianId joined by the appointment's clinician name (index 5)
+  expect('rater8 has Provider ID column (9 cols)', r.rater8[0]?.length, r.rater8[0]?.length === 9, '9')
+  expect(
+    'Provider ID populated for known provider',
+    aidemRater8[0]?.[5],
+    aidemRater8.every((row) => row[5] === '1428233'),
+    '1428233 on every Aidem (Dr. Smith) row'
   )
   console.log(failures ? '' : 'JSON/guardian unit test: passed')
 }
@@ -178,7 +190,7 @@ console.log('locations:', byLocation)
 console.log('match types:', byMatch)
 console.log('rater8 rows (one per visit):', rater8.length)
 // every rater8 row must be a seen visit with a way to reach the person
-const badStatus = rater8.filter((r) => r[7] !== 'Show').length
+const badStatus = rater8.filter((r) => r[8] !== 'Show').length
 const noContact = rater8.filter((r) => !r[2] && !r[3]).length
 
 // sanity assertions against the known 5/11-6/11 exports (CSV details path)
@@ -204,8 +216,8 @@ expect('rater8 all reachable', noContact, noContact === 0, '0 rows missing phone
 expect(
   'rater8 columns',
   rater8[0]?.length,
-  rater8[0]?.length === 8,
-  '8 (First,Last,Email,Cell,Provider,Location,Date,Status)'
+  rater8[0]?.length === 9,
+  '9 (First,Last,Email,Cell,Provider,Provider ID,Location,Date,Status)'
 )
 
 if (failures) {
