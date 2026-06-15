@@ -14,7 +14,7 @@
 // booleans are required by Zernio's TikTok integration.
 
 import crypto from "crypto"
-import { readFileSync } from "fs"
+import { createReadStream, readFileSync } from "fs"
 import { basename } from "path"
 import type { MarketingDraft } from "./types"
 
@@ -68,6 +68,44 @@ export function buildFallbackCaption(draft: MarketingDraft, domain: string | nul
 
 export type TikTokPublishResult = { postId: string; url: string | null }
 
+// Read the video bytes, hardened against Google Drive File Stream offloading.
+// Drive evicts the *content* of files left unread for a few days (the dirent
+// stays, so existsSync passes and `ls` still shows the full size — the file is
+// flagged "dataless" with 0 local blocks). The first readFileSync then forces
+// an on-demand download, and the provider can bail mid-fetch with a libuv read
+// error: "Unknown system error -11: Unknown system error -11, read". A full
+// sequential pre-read materializes the bytes locally (verified: clears the
+// dataless flag), after which readFileSync is a fast local read. Retry with
+// backoff absorbs the transient EAGAIN. Three posts failed this way 2026-06-14/15
+// (finals sit in "final review/" for days awaiting approval, so they go cold).
+async function readVideoBytes(filePath: string): Promise<Uint8Array> {
+  const MAX_ATTEMPTS = 5
+  let lastErr: unknown
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      // Drain a stream over the whole file first — this pulls a dehydrated Drive
+      // file fully local (gentle 64KB reads the provider tolerates) before we
+      // buffer it. A no-op for files already on disk.
+      await new Promise<void>((resolve, reject) => {
+        const s = createReadStream(filePath)
+        s.on("data", () => {})
+        s.on("end", resolve)
+        s.on("error", reject)
+      })
+      return new Uint8Array(readFileSync(filePath))
+    } catch (err) {
+      lastErr = err
+      if (attempt === MAX_ATTEMPTS) break
+      // Linear backoff gives Drive time to finish materializing before the retry.
+      await new Promise((r) => setTimeout(r, attempt * 3000))
+    }
+  }
+  throw new Error(
+    `could not read ${basename(filePath)} after ${MAX_ATTEMPTS} attempts ` +
+      `(Google Drive may not have materialized the file): ${(lastErr as Error).message}`
+  )
+}
+
 // Upload the local mp4 to Zernio (presign + PUT) and return its public URL.
 async function uploadVideo(apiKey: string, filePath: string): Promise<string> {
   const presignRes = await fetch(`${base()}/media/presign`, {
@@ -88,7 +126,7 @@ async function uploadVideo(apiKey: string, filePath: string): Promise<string> {
   const putRes = await fetch(presign.uploadUrl, {
     method: "PUT",
     headers: { "Content-Type": "video/mp4" },
-    body: new Uint8Array(readFileSync(filePath)),
+    body: await readVideoBytes(filePath),
   })
   if (!putRes.ok) {
     throw new Error(`Zernio media upload failed (${putRes.status}): ${await putRes.text()}`)
