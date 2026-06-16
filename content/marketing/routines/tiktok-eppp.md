@@ -46,10 +46,12 @@ TikTok-EPPP-Strat channel).
   candidates; voice = sharp, plain, credible, no hype; 30 to 45s; the chosen question or angle.
   The skill returns Hook / Build-Up / Value / Payoff / CTA + visual cues; that structured script
   is the `body_md`. Then strip emojis and em dashes.
-- **CTA = comment-trigger DM funnel** (this is the single biggest play and the ONLY place we use a
-  comment-gate). Default: "Comment PASS and I'll send you free EPPP practice questions." The
-  trigger word must match the founder's auto-DM keyword (ManyChat); if unsure, keep PASS. Put the
-  tracked link in the caption, not as the spoken CTA: `https://www.thepsychology.ai/go/<slug>?s=tiktok`.
+- **CTA = like, follow, visit the site** (spoken). Use exactly: "Like, follow, and check the
+  psychology dot ai." ("the psychology dot ai" is the spoken form of thepsychology.ai, and saying it
+  also fires the on-screen end card.) The comment-trigger DM funnel ("Comment PASS...") is ON HOLD
+  until the founder's ManyChat/TikTok auto-DM is set up (US TikTok cannot do comment-to-DM yet); do
+  NOT use a comment-gate CTA until then. Put the tracked link in the caption:
+  `https://www.thepsychology.ai/go/<slug>?s=tiktok`.
 
 ## Hook variety (A/B test these, rotate daily)
 
