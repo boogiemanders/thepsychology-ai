@@ -357,10 +357,10 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   // was not detected, so a compliance line never silently fails to show.
   const disclaimerWindow = useMemo(() => {
     if (!disclaimerLine) return null;
+    // Founder (2026-06-16): the hook title plays first, then the compliance pill
+    // comes up a few seconds in and holds to the end (medical content).
     const durationMs = (durationInFrames / fps) * 1000;
-    const fromMs = cardWindow ? cardWindow.fromMs : 0;
-    const toMs = endCardFromMs ?? ctaFromMs ?? durationMs;
-    return toMs > fromMs ? { fromMs, toMs } : { fromMs: 0, toMs: durationMs };
+    return { fromMs: Math.min(3500, durationMs), toMs: durationMs };
   }, [disclaimerLine, cardWindow, endCardFromMs, ctaFromMs, durationInFrames, fps]);
 
   const inCardWindow = (ms: number) =>

@@ -14,6 +14,7 @@ const SPELLING_MAP: [phonetic: string, written: string][] = [
   // an unmapped variant breaks BOTH the caption and end-card detection
   // (PracticeQuestion greps mapped captions for the URL). Check new SRT tails.
   ["thepsychoology.ai", "thepsychology.ai"],
+  ["thepsycholey.ai", "thepsychology.ai"],
   ["the psychology.ai", "thepsychology.ai"],
   ["psychology.ai", "thepsychology.ai"],
   ["E triple P", "EPPP"],
