@@ -635,7 +635,12 @@ async function main() {
   console.log(`Done: ${ok} generated, ${finals} finals, ${failed} failed.`)
 }
 
-main().catch((err) => {
-  console.error("❌", err.message)
-  process.exit(1)
-})
+// Only run the pipeline when invoked directly. Importing this module to reuse
+// the exported renderOverlay (a hand re-render without touching HeyGen) must
+// not kick off a generation run.
+if (require.main === module) {
+  main().catch((err) => {
+    console.error("❌", err.message)
+    process.exit(1)
+  })
+}
