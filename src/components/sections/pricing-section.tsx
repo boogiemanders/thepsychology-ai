@@ -167,15 +167,9 @@ export function PricingSection() {
         throw new Error(`Failed to create profile: ${errorData?.error || "Please try again"}`)
       }
 
-      // Track sign-up in Google Analytics
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "sign_up", {
-          method: "email",
-          referral_source: finalReferralSource,
-          page_path: window.location.pathname,
-          page_referrer: document.referrer,
-        })
-      }
+      // sign_up is now recorded server-side on the users INSERT (see
+      // src/app/api/webhooks/supabase/route.ts) so every signup path counts and
+      // it can't double-fire. The old client-side gtag call lived only here.
 
       const hasGoalDetails = Boolean(formData.goals.trim() || formData.examDate)
       if (hasGoalDetails) {
