@@ -73,6 +73,9 @@ emojis. Pick the hook that genuinely fits; do not force one that doesn't match t
 - The easiest way to `[outcome]` is to `[solution]`.
 - Is it possible to `[outcome]` in `[X]` minutes?
 - POV: you and your study buddy hit this `[domain]` question.
+- Here's why you should `[solution]`.
+- Here's the only video you'll ever need to watch to `[outcome]`.
+- I `[personal outcome]` literally just from spamming this ONE `[solution]`.
 
 **Structure still holds.** Practice-question scripts: hook first, then go straight into the
 question, the four choices ("A, ..." etc.), the pause, and the answer (the on-screen card needs that
