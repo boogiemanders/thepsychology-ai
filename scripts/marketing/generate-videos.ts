@@ -513,6 +513,10 @@ export async function renderOverlay(
       titleLine2: domain ? `EPPP: ${domain}` : "",
       // Compliance line for medical/clinical videos; "" hides it.
       disclaimerLine,
+      // Opening credential badge (top-center pill, first ~2s, then the title
+      // takes its spot). EPPP videos only — that's where the exam credential
+      // carries weight; pop-culture and other topics get no badge.
+      credential: draft.topic === "eppp" ? "UCLA-trained psychologist" : "",
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.

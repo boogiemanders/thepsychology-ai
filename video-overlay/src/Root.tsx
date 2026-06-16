@@ -6,6 +6,10 @@ import {
   PracticeQuestionProps,
   practiceQuestionSchema,
 } from "./PracticeQuestion";
+import {
+  CredentialBadgePreview,
+  credentialPreviewSchema,
+} from "./CredentialBadgePreview";
 
 const FPS = 30;
 
@@ -28,6 +32,7 @@ const calculateMetadata: CalculateMetadataFunction<
 
 export const RemotionRoot: React.FC = () => {
   return (
+    <>
     <Composition
       id="PracticeQuestion"
       component={PracticeQuestion}
@@ -64,8 +69,25 @@ export const RemotionRoot: React.FC = () => {
         ],
         titleLine1: "Court-Ordered Therapy?",
         titleLine2: "Ethics",
+        credential: "UCLA-trained psychologist",
+        disclaimerLine: "",
       }}
       calculateMetadata={calculateMetadata}
     />
+    <Composition
+      id="CredentialBadgePreview"
+      component={CredentialBadgePreview}
+      fps={FPS}
+      width={1080}
+      height={1920}
+      durationInFrames={90}
+      schema={credentialPreviewSchema}
+      defaultProps={{
+        credential: "UCLA-trained psychologist",
+        titleLine1: "Court-Ordered Therapy?",
+        titleLine2: "Ethics",
+      }}
+    />
+    </>
   );
 };
