@@ -51,6 +51,13 @@ const ID_ARG = (() => {
   const i = process.argv.indexOf("--id")
   return i === -1 ? null : process.argv[i + 1] || null
 })()
+// --disclaimer "<text>": burn a small compliance line into the overlay across
+// the question + payoff beats (medical/clinical content). Empty by default, so
+// the daily auto-run never adds one — only an explicit hand run does.
+const DISCLAIMER_ARG = (() => {
+  const i = process.argv.indexOf("--disclaimer")
+  return i === -1 ? "" : process.argv[i + 1] || ""
+})()
 const DAILY_CAP = Number(process.env.VIDEO_DAILY_CAP || 12)
 const OUTPUT_DIR =
   process.env.VIDEO_OUTPUT_DIR ||
@@ -384,7 +391,8 @@ async function resolveAnimationCues(
 export async function renderOverlay(
   mp4Path: string,
   srtPath: string,
-  draft: MarketingDraft
+  draft: MarketingDraft,
+  disclaimerLine = ""
 ): Promise<string> {
   // The launchd automation checkout (~/thepsychology-ai-marketing) resets via
   // git, so video-overlay/node_modules may not exist on a first run there.
@@ -441,6 +449,8 @@ export async function renderOverlay(
       titleLine1: draft.video_title ?? "",
       // Founder format: the label always reads "EPPP: <Domain>".
       titleLine2: parseDomain(spoken) ? `EPPP: ${parseDomain(spoken)}` : "",
+      // Compliance line for medical/clinical videos; "" hides it.
+      disclaimerLine,
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.
@@ -586,7 +596,7 @@ async function main() {
         console.warn(`⚠️  ${label}: no SRT on Drive, skipping overlay (captions impossible)`)
       } else {
         try {
-          const finalPath = await renderOverlay(filePath, srtPath, draft)
+          const finalPath = await renderOverlay(filePath, srtPath, draft, DISCLAIMER_ARG)
           console.log(`✅ ${label} final → ${finalPath}`)
           finals++
           // .catch guard: same reason as the Slack ping below — a hiccup here
