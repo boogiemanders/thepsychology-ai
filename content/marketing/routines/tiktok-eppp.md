@@ -60,24 +60,37 @@ day (do not reuse the same opener two days running). Keep the UCLA credential as
 visual hook either way. Fill `[outcome]` with an EPPP win (pass the E triple P, stop blanking on
 `[domain]`, answer any `[domain]` question, walk into test day calm) and `[solution]`/`[concept]`
 with the exact tactic or concept the video teaches. Spoken "EPPP" = "E triple P". No em dashes, no
-emojis. Pick the hook that genuinely fits; do not force one that doesn't match the question.
+emojis. Pick the hook that genuinely fits; do not force one that doesn't match the question. Do
+NOT over-hype: no fake guarantees ("instantly pass", "this one video and you're done"), no
+brain-rot filler ("just spamming this"). It still has to sound like a licensed psychologist.
 
-- In 60 seconds I'm going to logically prove you can `[outcome]`.
-- Here's the ONE `[solution]` I used to `[outcome]`.
-- Here's how to `[outcome]`. Stop `[the thing they're doing wrong]`.
-- Today we're talking about how to `[outcome]`.
-- This is the single easiest way to `[outcome]`.
-- If you want to instantly `[outcome]`, this is the only video you'll ever need.
-- Here's exactly how you're gonna `[outcome]` in 2026. You're gonna `[solution]`.
-- Here's the strategy I used to `[outcome]`. I call it `[solution]`.
-- The easiest way to `[outcome]` is to `[solution]`.
-- Is it possible to `[outcome]` in `[X]` minutes?
-- POV: you and your study buddy hit this `[domain]` question.
+Each hook is tagged by lane: **(both)** works for practice-question and strategy videos,
+**(strategy)** only fits strategy, **(practice-Q)** only fits practice-question. The personal
+"a strategy I used" / "the ONE thing I used" framings pre-reveal a personal tactic, which fights a
+neutral practice-question card, so they are strategy-only.
+
+- In 60 seconds I'm going to logically prove you can `[outcome]`. (both)
+- Here's why you should `[solution]`. (both)
+- Here's how to `[outcome]`. Stop `[the thing they're doing wrong]`. (both)
+- Today we're talking about how to `[outcome]`. (both)
+- This is the single easiest way to `[outcome]`. (both)
+- Here's exactly how you're gonna `[outcome]` in 2026. You're gonna `[solution]`. (both)
+- The easiest way to `[outcome]` is to `[solution]`. (both)
+- Is it possible to `[crazy outcome]` in `[X]` (a weekend, 60 seconds)? (both)
+- If you keep `[the thing they're doing wrong]`, this is the one video to start with. (both)
+- Here's the only video you'll ever need to watch to `[outcome]`. (both)
+- Here's the ONE `[solution]` I used to `[outcome]`. (strategy)
+- Here's the strategy I used to `[outcome]`. I call it `[solution]`. (strategy)
+- Like, `[personal outcome]` just from drilling this ONE `[solution]` over and over. (strategy)
+- POV: you and your study buddy hit this `[domain]` question. (practice-Q)
 
 **Structure still holds.** Practice-question scripts: hook first, then go straight into the
-question, the four choices ("A, ..." etc.), the pause, and the answer (the on-screen card needs that
-structure). Strategy scripts: hook, then the one tactic. Note in `review_notes` which hook template
-you used, so we can compare saves later.
+question, the four choices, the pause, and the answer. The on-screen A-D card renders ONLY if each
+choice is on its OWN line starting `A,` / `A.` / `A...` (NOT `A)`, NOT inline), the four are
+consecutive and in A-D order, and the question/stem line ends in `?`. Miss any of that and
+`parsePracticeQuestion` silently returns null, so the card never shows. Strategy scripts: hook,
+then the one tactic. Note in `review_notes` which hook template you used, so we can compare saves
+later.
 
 ## Step 1 — Balance the 12 domains
 
