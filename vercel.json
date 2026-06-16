@@ -54,6 +54,10 @@
     {
       "path": "/api/cron/dct-send?country=Canada",
       "schedule": "0 13 * * 1-5"
+    },
+    {
+      "path": "/api/cron/dct-send?mode=followup&limit=30",
+      "schedule": "0 16 * * 1-5"
     }
   ]
 }
