@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Account has been deleted. Your study data has been preserved.',
+      message: 'Your account has been deleted.',
     })
   } catch (error) {
     console.error('[Account Delete] Error:', error)

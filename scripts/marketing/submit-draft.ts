@@ -34,7 +34,7 @@ async function main() {
   // Validate topic against the union: Slack lane routing keys off the exact literal
   // (e.g. topic === "pop-culture"), so a typo would silently mis-route the card to
   // the wrong channel. Fail loudly instead. (Mirrors the Topic type in types.ts.)
-  const TOPICS = ["psychology", "eppp", "ai", "psychology-ai", "pop-culture"]
+  const TOPICS = ["psychology", "eppp", "eppp-strategy", "ai", "psychology-ai", "pop-culture"]
   if (!TOPICS.includes(input.topic)) {
     throw new Error(`Invalid topic "${input.topic}" — must be one of: ${TOPICS.join(", ")}`)
   }

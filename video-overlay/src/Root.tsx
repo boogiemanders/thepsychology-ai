@@ -70,6 +70,7 @@ export const RemotionRoot: React.FC = () => {
         titleLine1: "Court-Ordered Therapy?",
         titleLine2: "Ethics",
         credential: "UCLA-trained psychologist",
+        disclaimerLine: "",
       }}
       calculateMetadata={calculateMetadata}
     />

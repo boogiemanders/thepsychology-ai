@@ -71,6 +71,7 @@ export function buildBlogMarkdown(draft: MarketingDraft, publishedAt: string): s
 const TOPIC_LABEL: Record<Topic, string> = {
   psychology: "Psychology",
   eppp: "EPPP",
+  "eppp-strategy": "EPPP Strategy",
   ai: "AI",
   "psychology-ai": "Psychology + AI",
   "pop-culture": "Pop Culture",
