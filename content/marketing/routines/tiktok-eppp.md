@@ -51,6 +51,32 @@ TikTok-EPPP-Strat channel).
   trigger word must match the founder's auto-DM keyword (ManyChat); if unsure, keep PASS. Put the
   tracked link in the caption, not as the spoken CTA: `https://www.thepsychology.ai/go/<slug>?s=tiktok`.
 
+## Hook variety (A/B test these, rotate daily)
+
+We are testing spoken hooks. Open most scripts with ONE of the templates below, and vary it day to
+day (do not reuse the same opener two days running). Keep the UCLA credential as the ON-SCREEN
+visual hook either way. Fill `[outcome]` with an EPPP win (pass the E triple P, stop blanking on
+`[domain]`, answer any `[domain]` question, walk into test day calm) and `[solution]`/`[concept]`
+with the exact tactic or concept the video teaches. Spoken "EPPP" = "E triple P". No em dashes, no
+emojis. Pick the hook that genuinely fits; do not force one that doesn't match the question.
+
+- In 60 seconds I'm going to logically prove you can `[outcome]`.
+- Here's the ONE `[solution]` I used to `[outcome]`.
+- Here's how to `[outcome]`. Stop `[the thing they're doing wrong]`.
+- Today we're talking about how to `[outcome]`.
+- This is the single easiest way to `[outcome]`.
+- If you want to instantly `[outcome]`, this is the only video you'll ever need.
+- Here's exactly how you're gonna `[outcome]` in 2026. You're gonna `[solution]`.
+- Here's the strategy I used to `[outcome]`. I call it `[solution]`.
+- The easiest way to `[outcome]` is to `[solution]`.
+- Is it possible to `[outcome]` in `[X]` minutes?
+- POV: you and your study buddy hit this `[domain]` question.
+
+**Structure still holds.** Practice-question scripts: hook first, then go straight into the
+question, the four choices ("A, ..." etc.), the pause, and the answer (the on-screen card needs that
+structure). Strategy scripts: hook, then the one tactic. Note in `review_notes` which hook template
+you used, so we can compare saves later.
+
 ## Step 1 — Balance the 12 domains
 
 The 12 EPPP domains (these are also the question-bank folder names under
@@ -87,8 +113,17 @@ Pick questions from the bank, not your head. Bank: `EPPP/content/questionsGPT/<d
 
 For each: turn the question into a talking-head script. Hook with the credential or a reframe
 ("Most people miss this EPPP question about X"), pose the question, give the answer, and teach the
-WHY from `explanation` in plain language. Cite the source as our question bank / the domain. If the
-question's `explanation` makes a factual claim you can name a reference for, add it to `sources`.
+WHY from `explanation`.
+
+**Keep the explanation short and simple. This is the part to tighten most.** Two to three short
+sentences a tired candidate understands on the first listen. Give the single reason the right
+answer is right, in everyday words, and define any term the moment you use it. Cut hedges, "note
+that", second clauses, and exam jargon. The whole payoff should land in one breath. Shorter
+explanation means a shorter video, which means better retention and more saves. Wrong-answer
+call-outs stay one short clause each (why it is a trap), never a mini-lecture.
+
+Cite the source as our question bank / the domain. If the question's `explanation` makes a factual
+claim you can name a reference for, add it to `sources`.
 
 ## Step 3 — EPPP news (only if fresh in the last 24 to 48h)
 

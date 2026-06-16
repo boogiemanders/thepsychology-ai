@@ -96,18 +96,22 @@ export function estimateDurationSeconds(spokenText: string): number {
   return Math.round((words / 150) * 60)
 }
 
-// Practice-question scripts (post-extractSpokenScript, so plain spoken lines):
+// Practice-question scripts (post-extractSpokenScript, so plain spoken lines).
+// Two authored shapes are supported:
 //
-//   Is it possible to pass the psychology licensure exam? Let's find out with a question on X.
-//   <stem, 1+ lines>
-//   A... <choice>   B... / C... / D... on the next three lines
-//   Pause to think of your answer.
-//   The answer is <letter>. ...
+//   old:  Is it possible to pass the psychology licensure exam? ...with a question on X.
+//         <stem, 1+ lines>
+//         A... <choice>   (B.../C.../D... on the next three lines)
+//   new:  <hook line>   <build-up line>
+//         <stem line, ends with "?">
+//         A, <choice>    (B,/C,/D, on the next three lines)
 //
 // The Remotion overlay shows the stem + choices as an on-screen card, so the
-// text must come out verbatim (only the "X... " prefixes are stripped; the
-// card renders its own letters). Returns null when the script is not this
-// shape (non-question videos get captions but no card).
+// text must come out verbatim (the "A, " / "A... " / "A. " label prefix is
+// stripped; the card renders its own letters). Returns null when the script is
+// not a practice question (non-question videos get captions but no card).
+const CHOICE_LINE = /^([A-D])(?:\.\.\.|[.,])\s+(.+)$/
+
 export function parsePracticeQuestion(
   spokenText: string
 ): { stem: string; choices: string[] } | null {
@@ -115,17 +119,35 @@ export function parsePracticeQuestion(
     .split("\n")
     .map((l) => l.trim())
     .filter(Boolean)
-  // The four choice lines must be consecutive and in A-D order.
+  // The four choice lines must be consecutive and in A-D order. Accept the
+  // spoken "A... text" style and the newer "A, text" / "A. text" label styles.
   const choiceIdx = lines.findIndex((_, i) =>
-    ["A", "B", "C", "D"].every((letter, j) => lines[i + j]?.startsWith(`${letter}... `))
+    ["A", "B", "C", "D"].every((letter, j) => {
+      const m = lines[i + j]?.match(CHOICE_LINE)
+      return !!m && m[1] === letter
+    })
   )
   if (choiceIdx === -1) return null
+  // Stem: the old format slices everything between the "Is it possible" intro
+  // and the choices; the new format has no such marker (hook + build-up are
+  // earlier, separate lines), so take the nearest question line above the
+  // choices (the line that ends with "?").
   const introIdx = lines.findIndex((l) => l.startsWith("Is it possible"))
-  if (introIdx === -1 || introIdx >= choiceIdx) return null
-  const stem = lines.slice(introIdx + 1, choiceIdx).join(" ")
+  let stem = ""
+  if (introIdx !== -1 && introIdx < choiceIdx) {
+    stem = lines.slice(introIdx + 1, choiceIdx).join(" ")
+  } else {
+    for (let i = choiceIdx - 1; i >= 0 && i >= choiceIdx - 3; i--) {
+      if (lines[i].includes("?")) {
+        stem = lines[i]
+        break
+      }
+    }
+    if (!stem) stem = lines[choiceIdx - 1] ?? ""
+  }
   if (!stem) return null
   const choices = lines
     .slice(choiceIdx, choiceIdx + 4)
-    .map((l) => l.slice("A... ".length))
+    .map((l) => l.match(CHOICE_LINE)![2])
   return { stem, choices }
 }

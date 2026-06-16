@@ -22,6 +22,7 @@ import {
   PANEL_SHADOW,
   SITE_BG,
   TEXT_PRIMARY,
+  TITLE_TOP_PX,
 } from "./design";
 import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
@@ -65,6 +66,11 @@ export const practiceQuestionSchema = z.object({
   // line is hidden (both empty = no block at all).
   titleLine1: z.string().default(""),
   titleLine2: z.string().default(""),
+  // Compliance line for medical/clinical content (e.g. medication questions).
+  // Empty = no disclaimer. When set, a small pill stays up across the question
+  // and payoff beats; the title yields the top spot for that span. Burned into
+  // the render, so it survives anywhere the video is reposted.
+  disclaimerLine: z.string().default(""),
 });
 
 export type PracticeQuestionProps = z.infer<typeof practiceQuestionSchema>;
@@ -171,6 +177,51 @@ const PullQuote: React.FC<{ text: string }> = ({ text }) => {
   );
 };
 
+// Compliance line for medical/clinical content: a small persistent pill at the
+// title position, shown across the question and payoff beats (driven by the
+// disclaimerLine prop). Sits exactly where the title would be; the title is
+// hidden for the same window so the two never stack. Small and muted on a
+// translucent dark pill so it reads over the footage without stealing the shot.
+const DisclaimerLine: React.FC<{ text: string }> = ({ text }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const progress = interpolate(frame, [0, 0.3 * fps], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.bezier(0.16, 1, 0.3, 1),
+  });
+  return (
+    <AbsoluteFill>
+      <div
+        style={{
+          position: "absolute",
+          top: TITLE_TOP_PX,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+          opacity: progress,
+        }}
+      >
+        <div
+          style={{
+            fontFamily: FONT_GEIST,
+            fontSize: 30,
+            fontWeight: 500,
+            color: "#fafafa",
+            backgroundColor: "rgba(24,24,27,0.72)",
+            padding: "9px 22px",
+            borderRadius: 999,
+            textShadow: "0 1px 3px rgba(0,0,0,0.5)",
+          }}
+        >
+          {text}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   videoFile,
   srtFile,
@@ -183,6 +234,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   animationCues = [],
   titleLine1 = "",
   titleLine2 = "",
+  disclaimerLine = "",
 }) => {
   // Card/strike text is parsed from the spoken script, so phonetic spellings
   // ("ways four", "E triple P") must map back to written forms on screen.
@@ -288,6 +340,28 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     endCardFromMs !== null ? Math.round((endCardFromMs / 1000) * fps) : 0;
   const endCardDuration =
     endCardFromMs !== null ? Math.max(1, durationInFrames - endCardFrom) : 0;
+
+  // Where the closing CTA begins ("Comment PASS...", "Follow for..."). Used to
+  // close the disclaimer band on videos whose CTA is not the site URL, so they
+  // have no end card to bound it. First cue that opens with "comment"/"follow".
+  const ctaFromMs = useMemo(() => {
+    for (const c of cues) {
+      if (/^(comment|follow)\b/.test(norm(c.text))) return c.startMs;
+    }
+    return null;
+  }, [cues]);
+
+  // The medical/clinical disclaimer band: up from the question through the
+  // payoff explanation, closing as the end card / CTA opens (the closing beat
+  // is not a medical claim). Falls back to the whole video if the question card
+  // was not detected, so a compliance line never silently fails to show.
+  const disclaimerWindow = useMemo(() => {
+    if (!disclaimerLine) return null;
+    const durationMs = (durationInFrames / fps) * 1000;
+    const fromMs = cardWindow ? cardWindow.fromMs : 0;
+    const toMs = endCardFromMs ?? ctaFromMs ?? durationMs;
+    return toMs > fromMs ? { fromMs, toMs } : { fromMs: 0, toMs: durationMs };
+  }, [disclaimerLine, cardWindow, endCardFromMs, ctaFromMs, durationInFrames, fps]);
 
   const inCardWindow = (ms: number) =>
     cardWindow !== null && ms >= cardWindow.fromMs && ms < cardWindow.toMs;
@@ -558,6 +632,8 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
             // question card).
             ...(cardWindow ? [cardWindow] : []),
             ...(revealWindow ? [revealWindow] : []),
+            // The disclaimer pill takes the title's spot while it is up.
+            ...(disclaimerWindow ? [disclaimerWindow] : []),
           ]}
         />
       ) : null}
@@ -632,6 +708,18 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
       {endCardFromMs !== null ? (
         <Sequence from={endCardFrom} durationInFrames={endCardDuration}>
           <EndCard bottomPercent={captionBottomPercent} />
+        </Sequence>
+      ) : null}
+      {disclaimerWindow ? (
+        // Last in the stack so the compliance line sits above every panel.
+        <Sequence
+          from={Math.round((disclaimerWindow.fromMs / 1000) * fps)}
+          durationInFrames={Math.max(
+            1,
+            Math.round(((disclaimerWindow.toMs - disclaimerWindow.fromMs) / 1000) * fps)
+          )}
+        >
+          <DisclaimerLine text={disclaimerLine} />
         </Sequence>
       ) : null}
     </AbsoluteFill>
