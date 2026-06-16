@@ -11,7 +11,12 @@
 // ping Slack, then keep draining. The review card accepts another Post click
 // on failed rows, so retry = click the button again.
 //
-// Usage: npx tsx scripts/marketing/post-tiktok.ts [--dry-run]
+// Usage: npx tsx scripts/marketing/post-tiktok.ts [--dry-run] [--sync-only]
+//   --sync-only: reconcile the Drive videos/queued folder and exit (no posting).
+//   A 1-minute launchd poller (ai.thepsychology.tiktok-sync) runs this so files
+//   move into queued/ within ~60s of the "Post to TikTok" Slack click, which only
+//   flips DB status on Vercel and can't reach this Mac's Drive. Posting itself
+//   stays on the 4x/day video-generate cron (1 post/ET-day).
 // Env (.env.local): ZERNIO_API_KEY, ZERNIO_ACCOUNT_TIKTOK
 // Optional: TIKTOK_POSTS_PER_DAY (default 1)
 
@@ -30,6 +35,7 @@ const supabase = createClient(
 )
 
 const DRY_RUN = process.argv.includes("--dry-run")
+const SYNC_ONLY = process.argv.includes("--sync-only")
 // Same Drive root as generate-videos.ts; published work lands in done/ off the
 // root even though in-review files live in "final review/".
 const OUTPUT_DIR =
@@ -118,6 +124,13 @@ async function syncQueuedFolder(): Promise<void> {
 
 async function main() {
   await syncQueuedFolder()
+
+  // --sync-only: the 1-minute poller just reconciles the queued/ folder and
+  // bails. Posting (cap query + drain) stays on the 4x/day video-generate cron.
+  if (SYNC_ONLY) {
+    console.log("[sync-only] queued/ folder reconciled; skipping posting.")
+    return
+  }
 
   // How many already went out today (ET)?
   const { count, error: countErr } = await supabase
