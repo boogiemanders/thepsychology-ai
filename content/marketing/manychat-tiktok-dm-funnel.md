@@ -1,4 +1,4 @@
-# TikTok DM funnel (ManyChat) — setup + copy
+# TikTok DM funnel (ManyChat): setup + copy
 
 DM-first lead capture for TikTok. A viewer DMs a keyword, ManyChat auto-replies,
 asks for their email, then sends the free practice questions by email (TikTok DM
@@ -25,14 +25,14 @@ supported (ManyChat launched US TikTok automation Nov 2025).
 
 ## ManyChat flow
 
-**Trigger** — keyword `PASS` (case-insensitive). Add aliases if you want: `EPPP`,
+**Trigger**: keyword `PASS` (case-insensitive). Add aliases if you want: `EPPP`,
 `QUESTIONS`. The video/caption tells viewers to DM the word.
 
 **Message 1 (auto-reply):**
 > Hey, glad you reached out. I'll send you free EPPP practice questions, written
 > the way the real exam words them. What is the best email to send them to?
 
-**Capture** — ManyChat's email question step (stores to the system Email field).
+**Capture**: ManyChat's email question step (stores to the system Email field).
 
 **External Request** (ManyChat action, fires after email is captured):
 - Method: `POST`
@@ -51,7 +51,7 @@ supported (ManyChat launched US TikTok automation Nov 2025).
 - Response mapping: map the response field `link` into a ManyChat custom field
   (e.g. `go_link`). The route returns `{ "ok": true, "link": "..." }`.
 
-**Email step (ManyChat email node)** — this is the delivery, because DM links are
+**Email step (ManyChat email node)**. This is the delivery, because DM links are
 not clickable. Send to the captured email:
 > Subject: Your free EPPP practice questions
 >
