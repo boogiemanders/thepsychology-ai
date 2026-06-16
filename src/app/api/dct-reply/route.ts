@@ -66,9 +66,31 @@ async function fetchFullEmail(inboundId: string): Promise<{ text: string | null;
   }
 }
 
+// Low-noise capture monitor: if Resend (svix headers present) delivers but the
+// signature fails, the secret is wrong / rotated and reply capture is silently
+// dead. Alert on THAT, not on random unsigned bot traffic hitting the endpoint.
+async function alertSignatureFailure(): Promise<void> {
+  try {
+    const hook = process.env.SLACK_WEBHOOK_SIGNUPS
+    if (hook) {
+      await fetch(hook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          text: 'DCT reply webhook: signed delivery failed verification. Reply capture is likely down. Check RESEND_WEBHOOK_SECRET vs the Resend webhook signing secret.',
+        }),
+      })
+    }
+  } catch {
+    // non-critical
+  }
+}
+
 export async function POST(request: NextRequest) {
   const rawBody = await request.text()
   if (!verifySignature(rawBody, request.headers)) {
+    // svix-id present => a real (mis-signed) Resend delivery, worth surfacing.
+    if (request.headers.get('svix-id')) await alertSignatureFailure()
     return NextResponse.json({ error: 'Invalid signature' }, { status: 401 })
   }
 
