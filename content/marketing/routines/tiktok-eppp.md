@@ -117,6 +117,14 @@ For each: turn the question into a talking-head script. Hook with the credential
 ("Most people miss this EPPP question about X"), pose the question, give the answer, and teach the
 WHY from `explanation`.
 
+**Vary where the correct answer sits (a viewer flagged "the answer is always C").** The bank often
+lists the right option third, so left as-is every video lands on C. When you lay out the four
+choices, shuffle their order so the correct answer falls in a different slot, and across today's 5
+questions spread the correct letter across A, B, C, and D (aim for four different letters; never all
+the same). When you reorder, also reword any choice that refers to another by position ("both A and
+B"). The choice order on the card, the spoken `The answer is <letter>`, and the wrong-answer
+call-outs must all match the slot you chose.
+
 **Keep the explanation short and simple. This is the part to tighten most.** Two to three short
 sentences a tired candidate understands on the first listen. Give the single reason the right
 answer is right, in everyday words, and define any term the moment you use it. Cut hedges, "note

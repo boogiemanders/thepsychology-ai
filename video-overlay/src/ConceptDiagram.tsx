@@ -33,8 +33,10 @@ import {
 const NODE_PAD_X = 52; // 26px left + right padding, inside maxWidth (border-box)
 const nodeFit = (text: string) => {
   const longest = Math.max(...text.split(/\s+/).map((w) => w.length), 1);
-  const widthAt = (f: number) => longest * 0.62 * f + NODE_PAD_X;
-  let fontSize = 33;
+  // Geist 600 runs ~0.72em per glyph; size the box for that (plus margin) so a
+  // long word ("response", "Reinforced") never spills past the box edge.
+  const widthAt = (f: number) => longest * 0.74 * f + NODE_PAD_X;
+  let fontSize = 27;
   let maxWidth = 168;
   if (widthAt(fontSize) > maxWidth) {
     maxWidth = Math.min(264, Math.ceil(widthAt(fontSize)));
@@ -67,7 +69,7 @@ export const ConceptDiagram: React.FC<{
   const arrowIn = (i: number) => t(0.95 + i * 0.5, 0.55);
 
   // Fixed SVG geometry per arrow cell; the line reveals via dash offset.
-  const AW = 132;
+  const AW = 104;
   const AH = 44;
   const x1 = 8;
   const x2 = AW - 22;
