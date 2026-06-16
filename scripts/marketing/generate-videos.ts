@@ -125,7 +125,7 @@ async function notifySlack(text: string, blocks?: unknown[]): Promise<void> {
 // by design — the video is already in Drive, so a DB or Slack failure here must
 // not mark the draft failed. Pre-migration rows (no tiktok_* columns) just log.
 async function postVideoReviewCard(draft: MarketingDraft, finalPath: string, spoken: string): Promise<void> {
-  const domain = parseDomain(spoken)
+  const domain = parseDomain(spoken) || domainMetaLine(draft.body_md)
   const caption = draft.tiktok_caption?.trim() || buildFallbackCaption(draft, domain)
 
   // Move the trio (raw, SRT, final) into videos/final review when the card
@@ -353,11 +353,56 @@ async function generateIllustration(prompt: string, outPath: string): Promise<vo
   writeFileSync(outPath, Buffer.from(b64, "base64"))
 }
 
-// Illustration cues authored as { prompt } need their art generated before the
-// render; the cue is rewritten to { image } pointing into public/. A failed
-// generation skips just that cue (warn + continue) — the render still happens.
-// Returns the resolved cue list plus the generated files (deleted after render
-// like the job mp4/srt).
+// Founder rule (2026-06-16): pop-culture videos want a REAL photo of the moment
+// (a penalty shootout, a red card), not stylized line art. Illustration cues
+// authored as { query } resolve here via image search. Uses Google Custom Search
+// when its keys are set (GOOGLE_CSE_KEY + GOOGLE_CSE_ID, with searchType=image),
+// otherwise the keyless, CC-licensed Openverse API so the pipeline still produces
+// a real image with zero extra setup. Throws on no result / download failure so
+// the caller can fall back to a generated illustration.
+async function fetchSearchImage(query: string, outPath: string): Promise<void> {
+  const cseKey = process.env.GOOGLE_CSE_KEY
+  const cseId = process.env.GOOGLE_CSE_ID
+  let imageUrl: string | undefined
+  if (cseKey && cseId) {
+    const u =
+      `https://www.googleapis.com/customsearch/v1?searchType=image&num=1&safe=active` +
+      `&key=${encodeURIComponent(cseKey)}&cx=${encodeURIComponent(cseId)}&q=${encodeURIComponent(query)}`
+    const r = await fetch(u)
+    const b = await r.json().catch(() => null)
+    if (!r.ok) throw new Error(`Google CSE failed (${r.status}): ${JSON.stringify(b)?.slice(0, 200)}`)
+    imageUrl = b?.items?.[0]?.link
+  } else {
+    const u =
+      `https://api.openverse.org/v1/images/?page_size=1&license_type=commercial,modification` +
+      `&q=${encodeURIComponent(query)}`
+    const r = await fetch(u, { headers: { "User-Agent": "thepsychology-ai-video/1.0" } })
+    const b = await r.json().catch(() => null)
+    if (!r.ok) throw new Error(`Openverse failed (${r.status}): ${JSON.stringify(b)?.slice(0, 200)}`)
+    imageUrl = b?.results?.[0]?.url
+  }
+  if (!imageUrl) throw new Error(`no image result for "${query}"`)
+  const imgRes = await fetch(imageUrl)
+  if (!imgRes.ok) throw new Error(`image download failed (${imgRes.status}) for ${imageUrl}`)
+  writeFileSync(outPath, Buffer.from(await imgRes.arrayBuffer()))
+}
+
+// Pop-culture / narrative scripts have no "question on X" intro for parseDomain
+// to read, so the founder's "EPPP: <Domain>" title label would drop. Fall back to
+// a `DOMAIN: <name>` line in the script's metadata header (above the first "---",
+// stripped from speech by extractSpokenScript so it is never voiced).
+function domainMetaLine(bodyMd: string): string | null {
+  const head = bodyMd.split("\n---")[0]
+  const m = head.match(/^DOMAIN:\s*(.+)$/m)
+  return m ? m[1].trim() : null
+}
+
+// Illustration cues authored as { query } (real photo) or { prompt } (generated
+// line art) need an image before the render; the cue is rewritten to { image }
+// pointing into public/. { query } is tried first and falls back to { prompt }
+// when both are present, so a failed search still yields art. A cue that produces
+// no image is skipped (warn + continue) — the render still happens. Returns the
+// resolved cue list plus the generated files (deleted after render like the mp4).
 async function resolveAnimationCues(
   cues: AnimationCue[],
   draftId: string
@@ -366,20 +411,35 @@ async function resolveAnimationCues(
   const generatedFiles: string[] = []
   let n = 0
   for (const cue of cues) {
-    const prompt = cue.payload?.prompt
-    if (cue.type === "illustration" && !cue.payload?.image && typeof prompt === "string") {
+    const prompt = typeof cue.payload?.prompt === "string" ? cue.payload.prompt : null
+    const query = typeof cue.payload?.query === "string" ? cue.payload.query : null
+    if (cue.type === "illustration" && !cue.payload?.image && (query || prompt)) {
       n++
       const rel = `illustrations/${draftId.slice(0, 8)}-${n}.png`
       const abs = join(OVERLAY_DIR, "public", rel)
-      try {
-        mkdirSync(join(OVERLAY_DIR, "public", "illustrations"), { recursive: true })
-        await generateIllustration(prompt, abs)
+      mkdirSync(join(OVERLAY_DIR, "public", "illustrations"), { recursive: true })
+      let done = false
+      if (query) {
+        try {
+          await fetchSearchImage(query, abs)
+          done = true
+        } catch (err) {
+          console.warn(`⚠️  image search "${query}" failed: ${(err as Error).message.slice(0, 200)}`)
+        }
+      }
+      if (!done && prompt) {
+        try {
+          await generateIllustration(prompt, abs)
+          done = true
+        } catch (err) {
+          console.warn(`⚠️  illustration gen "${cue.trigger}" failed: ${(err as Error).message.slice(0, 200)}`)
+        }
+      }
+      if (done) {
         generatedFiles.push(abs)
         resolved.push({ ...cue, payload: { ...cue.payload, image: rel } })
-      } catch (err) {
-        console.warn(
-          `⚠️  illustration cue "${cue.trigger}" skipped: ${(err as Error).message.slice(0, 300)}`
-        )
+      } else {
+        console.warn(`⚠️  illustration cue "${cue.trigger}" skipped: no image produced`)
       }
     } else {
       resolved.push(cue)
@@ -418,6 +478,8 @@ export async function renderOverlay(
 
   try {
     const spoken = extractSpokenScript(draft.body_md)
+    // "question on X" intro for practice questions; DOMAIN: meta line otherwise.
+    const domain = parseDomain(spoken) || domainMetaLine(draft.body_md)
     const parsed = parsePracticeQuestion(spoken)
     // Founder-standing rule: every practice-question script opens on the
     // "psychology licensure exam" hook line, so every one of those videos
@@ -448,7 +510,7 @@ export async function renderOverlay(
       // hides a line, so a missing title still shows the domain label.
       titleLine1: draft.video_title ?? "",
       // Founder format: the label always reads "EPPP: <Domain>".
-      titleLine2: parseDomain(spoken) ? `EPPP: ${parseDomain(spoken)}` : "",
+      titleLine2: domain ? `EPPP: ${domain}` : "",
       // Compliance line for medical/clinical videos; "" hides it.
       disclaimerLine,
     }
