@@ -1,17 +1,17 @@
 ---
-title: "EPPP Pass Rates 2026: First-Time, PsyD vs PhD, and By-Program Data"
+title: "EPPP Pass Rates: First-Time, PsyD vs PhD, and By Program"
 slug: eppp-pass-rates
-description: EPPP pass rates by degree type, program, and attempt number. First-time pass rate data on who passes, who fails, and what you can do to beat the odds in 2026.
+description: EPPP pass rates by degree type, program, and attempt number. The real first-time pass data on who passes, who fails, and how to beat the odds.
 author: Anders Chan, Psy.D.
 published_at: 2026-03-17
 tags: EPPP pass rate, EPPP fail rate, how hard is the EPPP, EPPP pass rate PsyD vs PhD, EPPP pass rate by program, EPPP difficulty
 ---
 
-# EPPP Pass Rates 2026: First-Time, PsyD vs PhD, and By-Program Data
+# EPPP Pass Rates: First-Time, PsyD vs PhD, and By Program
 
 The EPPP pass rate is the first thing most people Google when they start thinking about this exam. And the numbers they find are either outdated, misleading, or both.
 
-Here's the truth: the overall first-time pass rate for the EPPP hovers around 76 to 82%, depending on the year and the data source. That sounds manageable until you realize that means roughly 1 in 5 people fail on their first attempt. These are people who completed doctoral programs, clinical internships, and often postdocs. Smart, hardworking people.
+Here's the truth: the overall first-time pass rate for the EPPP hovers around 78 to 82%, depending on the year and the data source. That sounds manageable until you realize that means roughly 1 in 5 people fail on their first attempt. These are people who completed doctoral programs, clinical internships, and often postdocs. Smart, hardworking people.
 
 I know because I was almost one of them. I scored 19% on my first practice diagnostic. If I'd walked into the real exam at that point, I'd be in the fail column.
 
@@ -73,7 +73,7 @@ Based on the available research and what I've seen working with EPPP candidates,
 
 The single biggest factor is not how long you study but how you study. Candidates who use active recall, spaced repetition, and application-based practice questions pass at significantly higher rates than those who primarily read textbooks and review notes.
 
-The EPPP tests application, not recall. If your study method is "read chapter, highlight key terms, re-read highlights," you're training for a different exam than the one you'll actually take.
+The EPPP tests application, not recall. If your study method is "read chapter, highlight key terms, re-read highlights," you're training for a different exam than the one you'll actually take. For the full method I used to go from a 19% diagnostic to a pass, see [how to pass the EPPP on your first try](/blog/how-to-pass-the-eppp-first-try).
 
 ### 2. Practice Exam Performance
 
@@ -83,7 +83,7 @@ Use practice questions that match the actual exam's style. Then use your domain-
 
 ### 3. Diagnostic-Driven Prioritization
 
-Candidates who take a diagnostic exam early and use the results to prioritize study by domain-weighted opportunity score pass at higher rates than those who study in chapter order or by personal preference. This is common sense once you think about it: why spend 20 hours on a domain you're already at 70% in when you're at 20% in a domain with twice the exam weight?
+Candidates who take a diagnostic exam early and use the results to prioritize study by [domain-weighted opportunity score](/blog/eppp-domain-weights) pass at higher rates than those who study in chapter order or by personal preference. This is common sense once you think about it: why spend 20 hours on a domain you're already at 70% in when you're at 20% in a domain with twice the exam weight?
 
 ### 4. Mental Health and Burnout Management
 
@@ -99,7 +99,7 @@ The uncomfortable truth is that effective studying feels hard. If you're comfort
 
 ## EPPP Pass Rates and Racial/Demographic Disparities
 
-This is important data that the field doesn't discuss enough.
+This is important data that the field doesn't discuss enough. Here is the short version; for the full breakdown of the research, the size of the gaps, and what's driving them, see our dedicated analysis of [EPPP pass rates by ethnicity](/blog/eppp-pass-rates-by-ethnicity).
 
 Published research and APA data have documented disparities in EPPP pass rates across racial and ethnic groups. The 2018 APA report on EPPP pass rates found:
 
@@ -117,7 +117,7 @@ These disparities have prompted significant debate about whether the EPPP itself
 
 ## How Hard Is the EPPP, Really?
 
-People ask this constantly. Here's my honest answer.
+People ask this constantly (we go deep on it in [is the EPPP hard?](/blog/is-the-eppp-hard)). Here's my honest answer.
 
 The content isn't harder than what you learned in graduate school. You've already been exposed to virtually everything on the exam. The difficulty comes from three things:
 
@@ -146,7 +146,7 @@ The 2027 content blueprint has since been approved, and ASPPB has also paused th
 
 Pass rate data is useful for two things: calibrating your expectations and motivating your preparation. Here's how to use it:
 
-**If you're in a high-pass-rate category (PhD from APA-accredited program, first attempt):** Don't get complacent. Even at 90 to 95% pass rates, 5 to 10 out of every 100 candidates fail. Take a diagnostic. Follow a structured study plan. The candidates who fail from these programs are usually the ones who assumed their education was sufficient preparation and didn't dedicate focused exam prep time.
+**If you're in a high-pass-rate category (PhD from APA-accredited program, first attempt):** Don't get complacent. Even at 90 to 95% pass rates, 5 to 10 out of every 100 candidates fail. Take a diagnostic. Follow a [structured study plan](/blog/free-eppp-study-plan). The candidates who fail from these programs are usually the ones who assumed their education was sufficient preparation and didn't dedicate focused exam prep time.
 
 **If you're in a lower-pass-rate category (PsyD, retaker, non-accredited program):** Don't despair. The population-level pass rates don't define your individual outcome. They reflect averages that include people who barely studied, people who used ineffective methods, and people who were dealing with burnout or other factors. Candidates from every category pass the EPPP when they use diagnostic-driven, application-based prep methods.
 
