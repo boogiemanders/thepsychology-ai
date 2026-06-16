@@ -87,8 +87,17 @@ Pick questions from the bank, not your head. Bank: `EPPP/content/questionsGPT/<d
 
 For each: turn the question into a talking-head script. Hook with the credential or a reframe
 ("Most people miss this EPPP question about X"), pose the question, give the answer, and teach the
-WHY from `explanation` in plain language. Cite the source as our question bank / the domain. If the
-question's `explanation` makes a factual claim you can name a reference for, add it to `sources`.
+WHY from `explanation`.
+
+**Keep the explanation short and simple. This is the part to tighten most.** Two to three short
+sentences a tired candidate understands on the first listen. Give the single reason the right
+answer is right, in everyday words, and define any term the moment you use it. Cut hedges, "note
+that", second clauses, and exam jargon. The whole payoff should land in one breath. Shorter
+explanation means a shorter video, which means better retention and more saves. Wrong-answer
+call-outs stay one short clause each (why it is a trap), never a mini-lecture.
+
+Cite the source as our question bank / the domain. If the question's `explanation` makes a factual
+claim you can name a reference for, add it to `sources`.
 
 ## Step 3 — EPPP news (only if fresh in the last 24 to 48h)
 
