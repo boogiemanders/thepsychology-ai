@@ -23,12 +23,14 @@ import {
   SITE_BG,
   TEXT_PRIMARY,
   TITLE_TOP_PX,
+  CREDENTIAL_TOTAL_S,
 } from "./design";
 import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
 import { EndCard } from "./EndCard";
 import { WrongStrike } from "./WrongStrike";
 import { TitleBlock } from "./TitleBlock";
+import { CredentialBadge } from "./CredentialBadge";
 import { ConceptDiagram } from "./ConceptDiagram";
 import { IllustrationCue } from "./IllustrationCue";
 import { ClipCue } from "./ClipCue";
@@ -66,6 +68,11 @@ export const practiceQuestionSchema = z.object({
   // line is hidden (both empty = no block at all).
   titleLine1: z.string().default(""),
   titleLine2: z.string().default(""),
+  // Opening credential hook (e.g. "UCLA-trained psychologist"). Fired
+  // automatically as a top-center pill for the first ~2s, then the title takes
+  // its place. Not a per-draft animation cue. Empty string = no badge (e.g.
+  // pop-culture videos).
+  credential: z.string().default(""),
   // Compliance line for medical/clinical content (e.g. medication questions).
   // Empty = no disclaimer. When set, a small pill stays up across the question
   // and payoff beats; the title yields the top spot for that span. Burned into
@@ -234,6 +241,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   animationCues = [],
   titleLine1 = "",
   titleLine2 = "",
+  credential = "",
   disclaimerLine = "",
 }) => {
   // Card/strike text is parsed from the spoken script, so phonetic spellings
@@ -272,10 +280,13 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     });
   }, [captions]);
 
-  // The card covers the window from the first stem cue to the cue that opens
-  // the reveal ("The answer is..."), so question + choices + thinking pause
-  // all show the full exam-style screen. Located by text match against the
-  // transcript, so it survives timing differences between renders.
+  // The card covers the window from the first stem cue until the explanation
+  // begins: the EARLIER of the first wrong-answer call-out ("B is wrong
+  // because...") and the answer reveal ("The answer is..."). Ending at the
+  // first wrong-answer cue (rather than holding the static card all the way to
+  // the reveal) hands the wrong-answer beat to the cross-out strikes, captions,
+  // and payoff animations the founder wants there (2026-06-16). Located by text
+  // match against the transcript, so it survives timing differences.
   const norm = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
   const cardWindow = useMemo(() => {
     if (!questionStem || cues.length === 0) return null;
@@ -283,9 +294,21 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     const start = cues.find(
       (c) => norm(c.text).length > 0 && stemNorm.startsWith(norm(c.text))
     );
-    const end = cues.find((c) => norm(c.text).startsWith("the answer is"));
-    if (!start || !end || end.startMs <= start.startMs) return null;
-    return { fromMs: start.startMs, toMs: end.startMs };
+    if (!start) return null;
+    const firstWrong = cues.find((c) => {
+      const t = norm(c.text);
+      return (
+        /\b[a-d] (?:is wrong|is incorrect|fails?)\b/.test(t) ||
+        /\b[a-d] and [a-d] (?:are|is) /.test(t)
+      );
+    });
+    const answer = cues.find((c) => norm(c.text).startsWith("the answer is"));
+    const ends = [firstWrong, answer]
+      .filter((c): c is NonNullable<typeof c> => Boolean(c))
+      .map((c) => c.startMs)
+      .filter((ms) => ms > start.startMs);
+    if (ends.length === 0) return null;
+    return { fromMs: start.startMs, toMs: Math.min(...ends) };
   }, [cues, questionStem]);
 
   const cardFrom = cardWindow ? Math.round((cardWindow.fromMs / 1000) * fps) : 0;
@@ -327,14 +350,25 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   // Final CTA cue: the last cue containing the site URL (spoken or written
   // form). The end card runs from there to the end of the video.
   const endCardFromMs = useMemo(() => {
+    let detected: number | null = null;
     for (let i = cues.length - 1; i >= 0; i--) {
       const t = norm(cues[i].text);
-      if (t.includes("thepsychology ai") || t.includes("the psychology dot ai")) {
-        return cues[i].startMs;
+      if (
+        t.includes("thepsychology ai") ||
+        t.includes("thepsychology.ai") ||
+        t.includes("the psychology dot ai")
+      ) {
+        detected = cues[i].startMs;
+        break;
       }
     }
-    return null;
-  }, [cues]);
+    // Founder 2026-06-16: the end card must ALWAYS take over the ending, even
+    // when ASR mangles the URL past the spelling map. Cover at least the last
+    // ~3.2s so a stray closing caption never shows instead of the card.
+    const durationMs = (durationInFrames / fps) * 1000;
+    const minFrom = Math.max(0, durationMs - 3200);
+    return detected !== null ? Math.min(detected, minFrom) : minFrom;
+  }, [cues, durationInFrames, fps]);
 
   const endCardFrom =
     endCardFromMs !== null ? Math.round((endCardFromMs / 1000) * fps) : 0;
@@ -487,14 +521,13 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     return out.filter((s) => s.toMs > s.fromMs);
   }, [cues, choices, cardWindow, revealWindow, endCardFromMs]);
 
-  const inWrongStrike = (ms: number) =>
-    wrongStrikes.some((s) => ms >= s.fromMs && ms < s.toMs);
-
   // Script-authored animation cues (diagram / illustration / pullquote).
   // Each fires at the transcript cue containing its trigger phrase and holds
   // until +4.5s or the next overlay window, whichever comes first. Card,
-  // reveal, strikes, and end card all outrank these: a trigger inside one of
-  // those windows is dropped.
+  // strikes, and end card outrank these (a trigger inside one is skipped). The
+  // reveal is the exception: explanation visuals are usually triggered on a
+  // payoff phrase the avatar says during the ~3.5s answer card, so rather than
+  // drop them they slide to start the moment the reveal clears.
   const cueOverlays = useMemo(() => {
     if (animationCues.length === 0 || cues.length === 0) return [];
     const overlayWindows: { fromMs: number; toMs: number }[] = [
@@ -505,11 +538,15 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         ? [{ fromMs: endCardFromMs, toMs: Infinity }]
         : []),
     ];
+    // Block windows skip a trigger occurrence outright (the card/strike/end
+    // card own the screen there); the reveal is handled by deferral below, so
+    // it is NOT a block window.
+    const blockWindows = overlayWindows.filter((w) => w !== revealWindow);
     // HeyGen cues run only 2-5 words, so trigger phrases regularly span cue
     // boundaries. Match against the whole word stream and map the first word
-    // of the match back to its cue. Occurrences inside another overlay's
-    // window are skipped (e.g. the same phrase read aloud inside the card),
-    // so the next clean occurrence still fires.
+    // of the match back to its cue. Occurrences inside a block window are
+    // skipped (e.g. the same phrase read aloud inside the card), so the next
+    // clean occurrence still fires.
     const words: { word: string; cueIndex: number }[] = [];
     cues.forEach((c, cueIndex) => {
       for (const word of norm(c.text).split(" ")) {
@@ -522,7 +559,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
       for (let i = 0; i + target.length <= words.length; i++) {
         if (!target.every((w, j) => words[i + j].word === w)) continue;
         const fromMs = cues[words[i].cueIndex].startMs;
-        if (!overlayWindows.some((w) => fromMs >= w.fromMs && fromMs < w.toMs))
+        if (!blockWindows.some((w) => fromMs >= w.fromMs && fromMs < w.toMs))
           return fromMs;
       }
       return null;
@@ -539,11 +576,27 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         continue;
       if (cue.type === "clip" && typeof cue.payload.video !== "string")
         continue;
-      const fromMs = findTriggerMs(norm(cue.trigger));
+      // The trigger is authored from the spoken (phonetic) script, but cue
+      // text comes from the de-phoneticized ASR captions ("M-A-O-I" spoken ->
+      // "MAOI" transcribed). Normalize the trigger through the same spelling
+      // map so phonetic acronyms still match (a no-op for plain triggers).
+      let fromMs = findTriggerMs(norm(applySpellingToText(cue.trigger)));
       if (fromMs === null) continue;
+      // Trigger landed during the answer reveal: slide it to the reveal's end
+      // so the explanation visual plays right after the answer card clears
+      // (instead of being swallowed by the reveal).
+      if (
+        revealWindow &&
+        fromMs >= revealWindow.fromMs &&
+        fromMs < revealWindow.toMs
+      ) {
+        fromMs = revealWindow.toMs;
+      }
       const nextWindowMs = Math.min(
         fromMs + ANIMATION_CUE_MAX_MS,
-        ...overlayWindows.filter((w) => w.fromMs > fromMs).map((w) => w.fromMs)
+        ...overlayWindows
+          .filter((w) => w.fromMs > fromMs)
+          .map((w) => w.fromMs)
       );
       out.push({ fromMs, toMs: nextWindowMs, cue });
     }
@@ -589,10 +642,14 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
       {captionChunks.map((cue, i) => {
+        // Captions stay up through the wrong-answer beat (founder 2026-06-16:
+        // "the caption should be there when the explanation is happening").
+        // The strike sits chest-level and the caption lower-third, so they do
+        // not collide. The full card and the answer reveal still own the
+        // screen, and the end card takes over the close.
         if (
           inCardWindow(cue.startMs) ||
           inRevealWindow(cue.startMs) ||
-          inWrongStrike(cue.startMs) ||
           inEndCardWindow(cue.startMs)
         )
           return null;
@@ -634,8 +691,19 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
             ...(revealWindow ? [revealWindow] : []),
             // The disclaimer pill takes the title's spot while it is up.
             ...(disclaimerWindow ? [disclaimerWindow] : []),
+            // The opening credential badge sits in the title's spot for the
+            // first ~2s; the title fades in right as the badge leaves.
+            ...(credential ? [{ fromMs: 0, toMs: CREDENTIAL_TOTAL_S * 1000 }] : []),
           ]}
         />
+      ) : null}
+      {credential ? (
+        <Sequence
+          from={0}
+          durationInFrames={Math.round(CREDENTIAL_TOTAL_S * fps)}
+        >
+          <CredentialBadge text={credential} />
+        </Sequence>
       ) : null}
       {cueOverlays.map((o, i) => (
         <Sequence

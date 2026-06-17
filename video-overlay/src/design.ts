@@ -95,3 +95,13 @@ export const TOP_ZONE_PADDING_TOP = "27%";
 // Chest-level row (diagram, wrong-answer strike): % padding resolves against
 // width, so 52% lands the element's center around 65% of the 1920 frame.
 export const CHEST_ZONE_PADDING_TOP = "52%";
+
+// --- Credential badge (opening hook) -----------------------------------------
+
+// Top-center credential pill shown for the first ~2s, then it steps aside and
+// the title takes this spot. Same line as the title (272px) so the badge clears
+// TikTok's top chrome and survives the profile-grid thumbnail crop.
+export const CREDENTIAL_TOP_PX = TITLE_TOP_PX;
+export const CREDENTIAL_IN_S = 0.35; // fade/rise in
+export const CREDENTIAL_OUT_START_S = 1.7; // begin fading out
+export const CREDENTIAL_TOTAL_S = 2.15; // fully gone (title fades in here)

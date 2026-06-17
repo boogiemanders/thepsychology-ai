@@ -125,7 +125,7 @@ async function notifySlack(text: string, blocks?: unknown[]): Promise<void> {
 // by design — the video is already in Drive, so a DB or Slack failure here must
 // not mark the draft failed. Pre-migration rows (no tiktok_* columns) just log.
 async function postVideoReviewCard(draft: MarketingDraft, finalPath: string, spoken: string): Promise<void> {
-  const domain = parseDomain(spoken) || domainMetaLine(draft.body_md)
+  const domain = parseDomain(spoken) || domainMetaLine(draft.body_md) || titleDomain(draft.title)
   const caption = draft.tiktok_caption?.trim() || buildFallbackCaption(draft, domain)
 
   // Move the trio (raw, SRT, final) into videos/final review when the card
@@ -214,6 +214,18 @@ function buildSsml(text: string): { ssml: string; hasPauses: boolean } {
   esc = esc.replace(/(The answer is [A-D]\.)/g, (m) => {
     hasPauses = true
     return `${m} <break time="1s"/>`
+  })
+  // Pace the four answer choices (founder note 2026-06-16): a short beat after
+  // each "A, .. / B... / C. .." option line so HeyGen does not read them in one
+  // breath and run them together. Matches choices regardless of terminal
+  // punctuation; never matches wrong-answer call-outs like "A is wrong" (no
+  // comma/dot/ellipsis right after the letter).
+  esc = esc.replace(/^([A-D])(?:\.\.\.|[.,])\s+.*$/gm, (m) => {
+    hasPauses = true
+    // Break BEFORE each choice so HeyGen does not glue "A" onto the end of the
+    // stem (founder 2026-06-16: a choice with a period gets read as part of the
+    // previous sentence), plus a shorter beat after.
+    return `<break time="0.5s"/> ${m} <break time="0.3s"/>`
   })
   return { ssml: `<speak>${esc}</speak>`, hasPauses }
 }
@@ -397,6 +409,15 @@ function domainMetaLine(bodyMd: string): string | null {
   return m ? m[1].trim() : null
 }
 
+// Last-resort domain for the "EPPP: <Domain>" title line. Practice-question
+// titles always end with "(<Domain> domain)", so derive it from the title when
+// the spoken script and DOMAIN meta both lack it (founder note 2026-06-16: the
+// domain label must show on every exam-question video).
+function titleDomain(title: string): string | null {
+  const m = title.match(/\(([^)]+?)\s+domain\)/i)
+  return m ? m[1].trim() : null
+}
+
 // Illustration cues authored as { query } (real photo) or { prompt } (generated
 // line art) need an image before the render; the cue is rewritten to { image }
 // pointing into public/. { query } is tried first and falls back to { prompt }
@@ -471,15 +492,24 @@ export async function renderOverlay(
   copyFileSync(srtPath, jobSrt)
 
   // animation_cues only exists on the row once the 20260611 migration ran.
+  // Founder 2026-06-16: never render the "UCLA-trained ..." credential pullquote
+  // (it read as weird). Strip it here so it stays off even if a script still
+  // authors one. "UCLA" is specific enough that no real pullquote uses it.
   const { cues: animationCues, generatedFiles } = await resolveAnimationCues(
-    draft.animation_cues ?? [],
+    (draft.animation_cues ?? []).filter(
+      (c) =>
+        !(
+          c.type === "pullquote" &&
+          /\bUCLA\b/i.test(String((c.payload as { text?: unknown })?.text ?? ""))
+        )
+    ),
     draft.id
   )
 
   try {
     const spoken = extractSpokenScript(draft.body_md)
     // "question on X" intro for practice questions; DOMAIN: meta line otherwise.
-    const domain = parseDomain(spoken) || domainMetaLine(draft.body_md)
+    const domain = parseDomain(spoken) || domainMetaLine(draft.body_md) || titleDomain(draft.title)
     const parsed = parsePracticeQuestion(spoken)
     // Founder-standing rule: every practice-question script opens on the
     // "psychology licensure exam" hook line, so every one of those videos
@@ -509,8 +539,19 @@ export async function renderOverlay(
       // line 2 is the EPPP domain named in the script's intro. Empty string
       // hides a line, so a missing title still shows the domain label.
       titleLine1: draft.video_title ?? "",
-      // Founder format: the label always reads "EPPP: <Domain>".
-      titleLine2: domain ? `EPPP: ${domain}` : "",
+      // Founder format: the label reads "EPPP: <Domain>" on exam videos and a
+      // fixed "EPPP: Strategy" on test-taking-tactic videos (no content domain).
+      titleLine2:
+        draft.topic === "eppp-strategy"
+          ? "EPPP: Strategy"
+          : domain
+            ? `EPPP: ${domain}`
+            : "",
+      // Founder 2026-06-16: pull the UCLA credential off the videos entirely
+      // ("just take it out and stop making new videos with that"). The
+      // CredentialBadge component stays wired in PracticeQuestion for easy
+      // re-enable -- put a string here to bring the clean badge back.
+      credential: "",
       // Compliance line for medical/clinical videos; "" hides it.
       disclaimerLine,
     }

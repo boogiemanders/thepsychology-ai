@@ -82,6 +82,18 @@ question, the four choices ("A, ..." etc.), the pause, and the answer (the on-sc
 structure). Strategy scripts: hook, then the one tactic. Note in `review_notes` which hook template
 you used, so we can compare saves later.
 
+**Pronunciation (spoken script).** Spell anything the avatar must say letter-by-letter so HeyGen
+pronounces it: `E triple P` (EPPP), `M-A-O-I` (MAOI), `M-M-P-I two` (MMPI-2), `ways four` (WAIS-IV),
+and `tee test` (t-test). The spelling map (`video-overlay/src/spelling-map.ts`) rewrites these to
+their real form on the card/captions, and it is also what lets animation-cue triggers match the
+transcript. Add a new mapping there whenever you introduce a new letter-spelled term.
+
+**Every practice-question and strategy script needs one explanation animation.** Author an
+`illustration` cue (`payload.prompt`, house style) that visualizes the WHY of the answer, and set
+its `trigger` to a short, distinctive phrase the avatar actually says during the payoff (plain
+words, not a letter-spelled acronym, so it matches the ASR caption). The Remotion stage fires it
+during the explanation beat.
+
 ## Step 1 — Balance the 12 domains
 
 The 12 EPPP domains (these are also the question-bank folder names under
