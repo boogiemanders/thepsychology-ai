@@ -148,6 +148,12 @@ export function parsePracticeQuestion(
   if (!stem) return null
   const choices = lines
     .slice(choiceIdx, choiceIdx + 4)
-    .map((l) => l.match(CHOICE_LINE)![2])
+    .map((l) => {
+      const t = l.match(CHOICE_LINE)![2]
+      // Card display: every choice starts with a capital letter (founder
+      // 2026-06-16), even when the spoken script wrote it lowercase. Display
+      // only; the voiced script (extractSpokenScript) is untouched.
+      return t.charAt(0).toUpperCase() + t.slice(1)
+    })
   return { stem, choices }
 }

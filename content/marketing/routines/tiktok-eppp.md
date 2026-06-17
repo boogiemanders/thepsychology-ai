@@ -73,11 +73,26 @@ emojis. Pick the hook that genuinely fits; do not force one that doesn't match t
 - The easiest way to `[outcome]` is to `[solution]`.
 - Is it possible to `[outcome]` in `[X]` minutes?
 - POV: you and your study buddy hit this `[domain]` question.
+- Here's why you should `[solution]`.
+- Here's the only video you'll ever need to watch to `[outcome]`.
+- I `[personal outcome]` literally just from spamming this ONE `[solution]`.
 
 **Structure still holds.** Practice-question scripts: hook first, then go straight into the
 question, the four choices ("A, ..." etc.), the pause, and the answer (the on-screen card needs that
 structure). Strategy scripts: hook, then the one tactic. Note in `review_notes` which hook template
 you used, so we can compare saves later.
+
+**Pronunciation (spoken script).** Spell anything the avatar must say letter-by-letter so HeyGen
+pronounces it: `E triple P` (EPPP), `M-A-O-I` (MAOI), `M-M-P-I two` (MMPI-2), `ways four` (WAIS-IV),
+and `tee test` (t-test). The spelling map (`video-overlay/src/spelling-map.ts`) rewrites these to
+their real form on the card/captions, and it is also what lets animation-cue triggers match the
+transcript. Add a new mapping there whenever you introduce a new letter-spelled term.
+
+**Every practice-question and strategy script needs one explanation animation.** Author an
+`illustration` cue (`payload.prompt`, house style) that visualizes the WHY of the answer, and set
+its `trigger` to a short, distinctive phrase the avatar actually says during the payoff (plain
+words, not a letter-spelled acronym, so it matches the ASR caption). The Remotion stage fires it
+during the explanation beat.
 
 ## Step 1 — Balance the 12 domains
 
@@ -131,6 +146,28 @@ answer is right, in everyday words, and define any term the moment you use it. C
 that", second clauses, and exam jargon. The whole payoff should land in one breath. Shorter
 explanation means a shorter video, which means better retention and more saves. Wrong-answer
 call-outs stay one short clause each (why it is a trap), never a mini-lecture.
+
+**Phrase wrong-answer call-outs so the cross-out strikes fire (founder 2026-06-17).** The overlay
+draws a strike-through on each wrong choice as you call it out, driven by the transcript. It fires
+most reliably when the call-out STARTS with the letter and reads "X is wrong because ..." (the
+explicit form). The detector now also handles concept-named call-outs that open with the letter and
+a verb ("A is the success-and-failure bias, not this", "C needs the fans explaining their own
+bodies", "D is for groups"), so those work too. Always lead with the bare letter; never bury it
+mid-sentence ("the self-serving option is wrong") or the strike will not land.
+
+**Make the explanation funny, not just short (founder 2026-06-17).** Same length, more bite. Voice =
+the clinician deadpan-diagnosing the fans, pundits, or test-writers, dry and certain. Every joke
+line must survive "why is that true?": airtight internal logic, NO decorative similes, no "it's
+like", no joke-shaped filler (the founder rejects those on sight). The humor lives in the payoff and
+can flavor the wrong-answer call-outs; the hook, question, and choices stay straight. Study the
+voice in `marketing/comedyref/` (comedy-style.md plus the Schulz and Louis CK sets) before writing.
+Money jokes frame the audience's absurd bargain, never therapists getting paid; never imply real
+therapy happened to a crowd. Treat laugh-out-loud as a stretch goal; wry one-liners are the floor.
+
+**No spoken stage directions (founder 2026-06-17).** The body_md is read by HeyGen verbatim, and
+`extractSpokenScript` strips `[brackets]` but NOT `(parens)`, so a line like `(pause)` or a stray
+`POV` gets spoken out loud. Never write `(pause)`, `POV`, or any parenthetical aside in the script;
+for the beat before the answer just leave a blank line. Keep the body pure spoken words.
 
 Cite the source as our question bank / the domain. If the question's `explanation` makes a factual
 claim you can name a reference for, add it to `sources`.

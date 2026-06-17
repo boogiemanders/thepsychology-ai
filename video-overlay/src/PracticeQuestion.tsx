@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   AbsoluteFill,
   Easing,
+  Img,
   Sequence,
   interpolate,
   staticFile,
@@ -22,9 +23,15 @@ import {
   PANEL_SHADOW,
   SITE_BG,
   TEXT_PRIMARY,
-  CREDENTIAL_TOTAL_S,
   TITLE_TOP_PX,
+  CREDENTIAL_TOTAL_S,
 } from "./design";
+import {
+  detectReveal,
+  detectFirstWrongMs,
+  wrongCallOutIndex,
+  choicesListedEndMs,
+} from "./wrong-answer-detect";
 import { QuestionCard } from "./QuestionCard";
 import { AnswerReveal } from "./AnswerReveal";
 import { EndCard } from "./EndCard";
@@ -78,6 +85,12 @@ export const practiceQuestionSchema = z.object({
   // and payoff beats; the title yields the top spot for that span. Burned into
   // the render, so it survives anywhere the video is reposted.
   disclaimerLine: z.string().default(""),
+  // Opening visual-hook image (public-relative path). Rendered as a rounded
+  // panel in the upper zone, directly below the two-line title block, from
+  // frame 0 until the question card opens (or ~6s if there is no card). Sized
+  // and positioned to sit under the title without covering the avatar's face
+  // (face is ~screen center). Empty string = nothing renders.
+  hookImage: z.string().default(""),
 });
 
 export type PracticeQuestionProps = z.infer<typeof practiceQuestionSchema>;
@@ -229,6 +242,65 @@ const DisclaimerLine: React.FC<{ text: string }> = ({ text }) => {
   );
 };
 
+// Opening visual-hook image: a rounded photo panel in the upper zone, sitting
+// directly below the two-line title block. Part of the opening hook (e.g. the
+// pop-culture moment the question is about), so it shows from frame 0 until the
+// question card opens. The panel is a fixed-height window cropping the image
+// (objectFit: cover), positioned high enough that the avatar's face — around
+// screen center — stays clear. Calm fade-in, no other motion.
+const HOOK_IMAGE_TOP_PX = 490; // well below the two-line title (title at 272, ~2 lines), so the full title stays visible above with margin
+const HOOK_IMAGE_WIDTH_PCT = 60; // % of the 1080 frame
+const HOOK_IMAGE_HEIGHT_PX = 440; // crop window height, shrunk so the lower start still clears the avatar's face (~screen center)
+const HookImage: React.FC<{ image: string }> = ({ image }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const progress = interpolate(frame, [0, 0.5 * fps], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.bezier(0.16, 1, 0.3, 1),
+  });
+  return (
+    <AbsoluteFill>
+      <div
+        style={{
+          position: "absolute",
+          top: HOOK_IMAGE_TOP_PX,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+          opacity: progress,
+        }}
+      >
+        <div
+          style={{
+            width: `${HOOK_IMAGE_WIDTH_PCT}%`,
+            height: HOOK_IMAGE_HEIGHT_PX,
+            borderRadius: PANEL_RADIUS,
+            overflow: "hidden",
+            boxShadow: PANEL_SHADOW,
+            transform: `scale(${0.98 + 0.02 * progress})`,
+          }}
+        >
+          <Img
+            src={staticFile(image)}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              // Anchor the crop on the subject (Ariana sits lower-center of the
+              // source, the crowd fills the top), so the cover crop keeps her in
+              // view instead of showing only the audience.
+              objectPosition: "center 55%",
+              display: "block",
+            }}
+          />
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   videoFile,
   srtFile,
@@ -243,6 +315,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   titleLine2 = "",
   credential = "",
   disclaimerLine = "",
+  hookImage = "",
 }) => {
   // Card/strike text is parsed from the spoken script, so phonetic spellings
   // ("ways four", "E triple P") must map back to written forms on screen.
@@ -280,21 +353,42 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     });
   }, [captions]);
 
-  // The card covers the window from the first stem cue to the cue that opens
-  // the reveal ("The answer is..."), so question + choices + thinking pause
-  // all show the full exam-style screen. Located by text match against the
-  // transcript, so it survives timing differences between renders.
+  // Shared transcript normalizer (lowercase, collapse punctuation to spaces).
   const norm = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+  // The reveal ("The answer is X") is detected first because both the card
+  // window and the wrong-answer strikes need the correct-answer letter: the
+  // broadened "named" call-out pattern (e.g. "A is the success and failure
+  // bias") must never fire on the correct row.
+  const reveal = useMemo(
+    () => detectReveal(cues, norm, choices.length),
+    [cues, choices]
+  );
+
+  // The card covers the window from the first stem cue until the explanation
+  // begins: the EARLIER of the first wrong-answer call-out and the answer
+  // reveal ("The answer is..."). Ending at the first wrong-answer cue (rather
+  // than holding the static card all the way to the reveal) hands the
+  // wrong-answer beat to the cross-out strikes, captions, and payoff
+  // animations the founder wants there (2026-06-16). Wrong-answer detection is
+  // shared with wrongStrikes below (wrong-answer-detect.ts), so it also fires
+  // on concept-named call-outs, not just "<L> is wrong". Located by text match
+  // against the transcript, so it survives timing differences.
   const cardWindow = useMemo(() => {
     if (!questionStem || cues.length === 0) return null;
     const stemNorm = norm(questionStem);
     const start = cues.find(
       (c) => norm(c.text).length > 0 && stemNorm.startsWith(norm(c.text))
     );
-    const end = cues.find((c) => norm(c.text).startsWith("the answer is"));
-    if (!start || !end || end.startMs <= start.startMs) return null;
-    return { fromMs: start.startMs, toMs: end.startMs };
-  }, [cues, questionStem]);
+    if (!start) return null;
+    const firstWrongMs = detectFirstWrongMs(cues, norm, reveal);
+    const answer = cues.find((c) => norm(c.text).startsWith("the answer is"));
+    const ends = [firstWrongMs, answer?.startMs]
+      .filter((ms): ms is number => typeof ms === "number")
+      .filter((ms) => ms > start.startMs);
+    if (ends.length === 0) return null;
+    return { fromMs: start.startMs, toMs: Math.min(...ends) };
+  }, [cues, questionStem, reveal]);
 
   const cardFrom = cardWindow ? Math.round((cardWindow.fromMs / 1000) * fps) : 0;
   const cardDuration = cardWindow
@@ -302,19 +396,8 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     : 0;
 
   // The reveal re-shows the card for ~3.5s with the correct row highlighted,
-  // starting at the "The answer is X" cue. The letter comes from the cue text
-  // itself, so it always matches what the avatar says.
-  const reveal = useMemo(() => {
-    if (!questionStem || cues.length === 0) return null;
-    for (const c of cues) {
-      const m = norm(c.text).match(/^the answer is ([a-d])\b/);
-      if (!m) continue;
-      const index = "abcd".indexOf(m[1]);
-      return index < choices.length ? { fromMs: c.startMs, index } : null;
-    }
-    return null;
-  }, [cues, questionStem, choices]);
-
+  // starting at the "The answer is X" cue (detected above). The letter comes
+  // from the cue text itself, so it always matches what the avatar says.
   const revealWindow = useMemo(
     () =>
       reveal
@@ -335,14 +418,25 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
   // Final CTA cue: the last cue containing the site URL (spoken or written
   // form). The end card runs from there to the end of the video.
   const endCardFromMs = useMemo(() => {
+    let detected: number | null = null;
     for (let i = cues.length - 1; i >= 0; i--) {
       const t = norm(cues[i].text);
-      if (t.includes("thepsychology ai") || t.includes("the psychology dot ai")) {
-        return cues[i].startMs;
+      if (
+        t.includes("thepsychology ai") ||
+        t.includes("thepsychology.ai") ||
+        t.includes("the psychology dot ai")
+      ) {
+        detected = cues[i].startMs;
+        break;
       }
     }
-    return null;
-  }, [cues]);
+    // Founder 2026-06-16: the end card must ALWAYS take over the ending, even
+    // when ASR mangles the URL past the spelling map. Cover at least the last
+    // ~3.2s so a stray closing caption never shows instead of the card.
+    const durationMs = (durationInFrames / fps) * 1000;
+    const minFrom = Math.max(0, durationMs - 3200);
+    return detected !== null ? Math.min(detected, minFrom) : minFrom;
+  }, [cues, durationInFrames, fps]);
 
   const endCardFrom =
     endCardFromMs !== null ? Math.round((endCardFromMs / 1000) * fps) : 0;
@@ -370,6 +464,17 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     const durationMs = (durationInFrames / fps) * 1000;
     return { fromMs: Math.min(3500, durationMs), toMs: durationMs };
   }, [disclaimerLine, cardWindow, endCardFromMs, ctaFromMs, durationInFrames, fps]);
+
+  // Opening hook image: up from frame 0 until the question card opens (the card
+  // takes over the screen there). With no card, hold ~6s — long enough to read
+  // the hook, short enough to clear before the explanation. Capped at the video
+  // length so a very short clip never asks for frames past the end.
+  const hookImageWindow = useMemo(() => {
+    if (!hookImage) return null;
+    const durationMs = (durationInFrames / fps) * 1000;
+    const toMs = cardWindow ? cardWindow.fromMs : Math.min(6000, durationMs);
+    return toMs > 0 ? { fromMs: 0, toMs } : null;
+  }, [hookImage, cardWindow, durationInFrames, fps]);
 
   const inCardWindow = (ms: number) =>
     cardWindow !== null && ms >= cardWindow.fromMs && ms < cardWindow.toMs;
@@ -399,6 +504,11 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
     if (choices.length === 0) return [];
     type Strike = { fromMs: number; toMs: number; index: number; reason?: string };
     const out: Strike[] = [];
+
+    // Lower bound for the broadened named call-out: the end of the choices
+    // listing, so a choice row ("A, self-serving bias.") never reads as a
+    // verdict. Shared with the card window via wrong-answer-detect.ts.
+    const choicesEndMs = choicesListedEndMs(cues, norm);
 
     // Words that mark a choice as ruled out. Only used to confirm the
     // "<L> and <L> are <phrase>" pattern, which names two choices without an
@@ -472,14 +582,18 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         }
       }
 
-      // Single verdict.
-      const single = c.text.match(/\b([A-D]) (?:is wrong|is incorrect|fails?)\b/);
-      if (single) {
-        const index = "ABCD".indexOf(single[1]);
-        if (index < 0 || index >= choices.length) continue;
+      // Single verdict: explicit "<L> is wrong/incorrect/fails" OR a named
+      // call-out "<L> <verb> ..." (e.g. "A is the success and failure bias")
+      // that is not the correct answer and sits in the explanation region.
+      // Shared with the card window so both agree on what counts as a verdict.
+      const index = wrongCallOutIndex(c, norm, choicesEndMs, reveal?.index ?? null);
+      if (index >= 0 && index < choices.length) {
+        // Reason = the clause after the letter (and any leading verdict verb,
+        // dropped inside clauseFrom). For a named call-out the whole sentence
+        // after the letter is the reason ("is the success and failure bias...").
         const after = c.text
-          .slice(c.text.indexOf(single[0]) + single[0].length)
-          .replace(/^[,.:;\s]+/, "");
+          .replace(/^\s*[A-D][,.:;\s]+/, "")
+          .replace(/^[A-D]\b[,.:;\s]*/, "");
         const { reason, clauseEndMs } = clauseFrom(after, i);
         out.push({ fromMs: c.startMs, toMs: clauseEndMs, index, reason });
       }
@@ -493,16 +607,15 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
       if (endCardFromMs !== null) out[i].toMs = Math.min(out[i].toMs, endCardFromMs);
     }
     return out.filter((s) => s.toMs > s.fromMs);
-  }, [cues, choices, cardWindow, revealWindow, endCardFromMs]);
-
-  const inWrongStrike = (ms: number) =>
-    wrongStrikes.some((s) => ms >= s.fromMs && ms < s.toMs);
+  }, [cues, choices, cardWindow, revealWindow, endCardFromMs, reveal]);
 
   // Script-authored animation cues (diagram / illustration / pullquote).
   // Each fires at the transcript cue containing its trigger phrase and holds
   // until +4.5s or the next overlay window, whichever comes first. Card,
-  // reveal, strikes, and end card all outrank these: a trigger inside one of
-  // those windows is dropped.
+  // strikes, and end card outrank these (a trigger inside one is skipped). The
+  // reveal is the exception: explanation visuals are usually triggered on a
+  // payoff phrase the avatar says during the ~3.5s answer card, so rather than
+  // drop them they slide to start the moment the reveal clears.
   const cueOverlays = useMemo(() => {
     if (animationCues.length === 0 || cues.length === 0) return [];
     const overlayWindows: { fromMs: number; toMs: number }[] = [
@@ -513,11 +626,15 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         ? [{ fromMs: endCardFromMs, toMs: Infinity }]
         : []),
     ];
+    // Block windows skip a trigger occurrence outright (the card/strike/end
+    // card own the screen there); the reveal is handled by deferral below, so
+    // it is NOT a block window.
+    const blockWindows = overlayWindows.filter((w) => w !== revealWindow);
     // HeyGen cues run only 2-5 words, so trigger phrases regularly span cue
     // boundaries. Match against the whole word stream and map the first word
-    // of the match back to its cue. Occurrences inside another overlay's
-    // window are skipped (e.g. the same phrase read aloud inside the card),
-    // so the next clean occurrence still fires.
+    // of the match back to its cue. Occurrences inside a block window are
+    // skipped (e.g. the same phrase read aloud inside the card), so the next
+    // clean occurrence still fires.
     const words: { word: string; cueIndex: number }[] = [];
     cues.forEach((c, cueIndex) => {
       for (const word of norm(c.text).split(" ")) {
@@ -530,7 +647,7 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
       for (let i = 0; i + target.length <= words.length; i++) {
         if (!target.every((w, j) => words[i + j].word === w)) continue;
         const fromMs = cues[words[i].cueIndex].startMs;
-        if (!overlayWindows.some((w) => fromMs >= w.fromMs && fromMs < w.toMs))
+        if (!blockWindows.some((w) => fromMs >= w.fromMs && fromMs < w.toMs))
           return fromMs;
       }
       return null;
@@ -547,11 +664,27 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         continue;
       if (cue.type === "clip" && typeof cue.payload.video !== "string")
         continue;
-      const fromMs = findTriggerMs(norm(cue.trigger));
+      // The trigger is authored from the spoken (phonetic) script, but cue
+      // text comes from the de-phoneticized ASR captions ("M-A-O-I" spoken ->
+      // "MAOI" transcribed). Normalize the trigger through the same spelling
+      // map so phonetic acronyms still match (a no-op for plain triggers).
+      let fromMs = findTriggerMs(norm(applySpellingToText(cue.trigger)));
       if (fromMs === null) continue;
+      // Trigger landed during the answer reveal: slide it to the reveal's end
+      // so the explanation visual plays right after the answer card clears
+      // (instead of being swallowed by the reveal).
+      if (
+        revealWindow &&
+        fromMs >= revealWindow.fromMs &&
+        fromMs < revealWindow.toMs
+      ) {
+        fromMs = revealWindow.toMs;
+      }
       const nextWindowMs = Math.min(
         fromMs + ANIMATION_CUE_MAX_MS,
-        ...overlayWindows.filter((w) => w.fromMs > fromMs).map((w) => w.fromMs)
+        ...overlayWindows
+          .filter((w) => w.fromMs > fromMs)
+          .map((w) => w.fromMs)
       );
       out.push({ fromMs, toMs: nextWindowMs, cue });
     }
@@ -597,10 +730,14 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
       {captionChunks.map((cue, i) => {
+        // Captions stay up through the wrong-answer beat (founder 2026-06-16:
+        // "the caption should be there when the explanation is happening").
+        // The strike sits chest-level and the caption lower-third, so they do
+        // not collide. The full card and the answer reveal still own the
+        // screen, and the end card takes over the close.
         if (
           inCardWindow(cue.startMs) ||
           inRevealWindow(cue.startMs) ||
-          inWrongStrike(cue.startMs) ||
           inEndCardWindow(cue.startMs)
         )
           return null;
@@ -654,6 +791,19 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
           durationInFrames={Math.round(CREDENTIAL_TOTAL_S * fps)}
         >
           <CredentialBadge text={credential} />
+        </Sequence>
+      ) : null}
+      {hookImageWindow ? (
+        // Below the title in the stack so the card/reveal/strikes still cover it
+        // once it ends; it only owns the upper zone during the opening hook.
+        <Sequence
+          from={Math.round((hookImageWindow.fromMs / 1000) * fps)}
+          durationInFrames={Math.max(
+            1,
+            Math.round(((hookImageWindow.toMs - hookImageWindow.fromMs) / 1000) * fps)
+          )}
+        >
+          <HookImage image={hookImage} />
         </Sequence>
       ) : null}
       {cueOverlays.map((o, i) => (

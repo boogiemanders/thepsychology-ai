@@ -119,35 +119,57 @@ async function syncQueuedFolder(): Promise<void> {
 async function main() {
   await syncQueuedFolder()
 
-  // How many already went out today (ET)?
-  const { count, error: countErr } = await supabase
-    .from("marketing_drafts")
-    .select("id", { count: "exact", head: true })
-    .eq("type", "tiktok")
-    .eq("tiktok_post_status", "posted")
-    .gte("tiktok_posted_at", startOfEtDayUtcIso())
-  if (countErr) throw new Error(`Count failed: ${countErr.message}`)
-  const postedToday = count ?? 0
-  if (postedToday >= DAILY_CAP) {
-    console.log(`Daily cap reached (${postedToday}/${DAILY_CAP}). Nothing to do.`)
+  // Per-topic daily quotas (ET day). The exam/everything-else lane keeps the
+  // existing cap (TIKTOK_POSTS_PER_DAY); strategy videos get their own daily
+  // slot so a test-taking tactic goes out ALONGSIDE the question, not instead
+  // of it (founder 2026-06-16: "post a strategy one a day too").
+  const since = startOfEtDayUtcIso()
+  const examCap = DAILY_CAP
+  const stratCap = Number(process.env.TIKTOK_STRATEGY_POSTS_PER_DAY || 1)
+
+  const countPosted = async (strategy: boolean): Promise<number> => {
+    let q = supabase
+      .from("marketing_drafts")
+      .select("id", { count: "exact", head: true })
+      .eq("type", "tiktok")
+      .eq("tiktok_post_status", "posted")
+      .gte("tiktok_posted_at", since)
+    q = strategy ? q.eq("topic", "eppp-strategy") : q.neq("topic", "eppp-strategy")
+    const { count, error } = await q
+    if (error) throw new Error(`Count failed: ${error.message}`)
+    return count ?? 0
+  }
+  const otherRemaining = Math.max(0, examCap - (await countPosted(false)))
+  const stratRemaining = Math.max(0, stratCap - (await countPosted(true)))
+  if (otherRemaining === 0 && stratRemaining === 0) {
+    console.log("Daily post caps reached. Nothing to do.")
     return
   }
 
-  const { data, error } = await supabase
-    .from("marketing_drafts")
-    .select("*")
-    .eq("type", "tiktok")
-    .eq("tiktok_post_status", "queued")
-    .order("created_at", { ascending: true })
-    .limit(DAILY_CAP - postedToday)
-  if (error) throw new Error(`Select failed: ${error.message}`)
-
-  const drafts = (data ?? []) as MarketingDraft[]
+  const pickQueued = async (strategy: boolean, n: number): Promise<MarketingDraft[]> => {
+    if (n <= 0) return []
+    let q = supabase
+      .from("marketing_drafts")
+      .select("*")
+      .eq("type", "tiktok")
+      .eq("tiktok_post_status", "queued")
+    q = strategy ? q.eq("topic", "eppp-strategy") : q.neq("topic", "eppp-strategy")
+    const { data, error } = await q.order("created_at", { ascending: true }).limit(n)
+    if (error) throw new Error(`Select failed: ${error.message}`)
+    return (data ?? []) as MarketingDraft[]
+  }
+  // Strategy first so its daily slot is never crowded out by a backlog of exams.
+  const drafts = [
+    ...(await pickQueued(true, stratRemaining)),
+    ...(await pickQueued(false, otherRemaining)),
+  ]
   if (drafts.length === 0) {
     console.log("No queued TikTok posts. Nothing to do.")
     return
   }
-  console.log(`${drafts.length} queued post(s) (${postedToday}/${DAILY_CAP} posted today).`)
+  console.log(
+    `${drafts.length} queued post(s) (exam/other up to ${otherRemaining}, strategy up to ${stratRemaining}).`
+  )
 
   for (const draft of drafts) {
     const label = `"${draft.title}" [${draft.id.slice(0, 8)}]`

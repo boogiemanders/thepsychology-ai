@@ -17,8 +17,32 @@ const SPELLING_MAP: [phonetic: string, written: string][] = [
   ["thepsycholey.ai", "thepsychology.ai"],
   ["the psychology.ai", "thepsychology.ai"],
   ["psychology.ai", "thepsychology.ai"],
+  // ASR mangles the spoken "E triple P" into letter-runs (seen on a real SRT:
+  // "ECCC", also "E C C C"). Map them back so captions read EPPP, not ECCC.
+  ["E C C C", "EPPP"],
+  ["ECCC", "EPPP"],
   ["E triple P", "EPPP"],
+  // Founder 2026-06-17: the German lyric "Du bist gut genug" is respelled
+  // phonetically in the spoken script ("Doo bist goot guh-nook") so HeyGen's
+  // English voice says it like German (same trick as "E triple P"). Map it back
+  // so the on-screen card/captions read the real German. Place above the bare
+  // letter maps; this 4-word phrase is longer than the single-token entries.
+  ["Doo bist goot guh-nook", "Du bist gut genug"],
   ["ways four", "WAIS-IV"],
+  // Scripts spell the test phonetically ("M-M-P-I two") so the avatar says the
+  // letters; the ASR caption comes back as "MMPI-2". Both must normalize to the
+  // same token or the on-screen question card never matches its window and is
+  // silently dropped. Longest first ("two" variant before the bare letters).
+  ["M-M-P-I two", "MMPI-2"],
+  ["M-M-P-I", "MMPI"],
+  // Same story for other letter-spelled test/drug names: the script hyphenates
+  // them so the avatar says each letter, the ASR caption collapses them. Map
+  // back so on-screen text reads right AND animation-cue triggers (authored
+  // from the spoken script) match the transcript.
+  ["M-A-O-I", "MAOI"],
+  // Founder 2026-06-16: "t-test" must be spoken "tee test" (scripts write it
+  // that way); show the real term on screen.
+  ["tee test", "t-test"],
   // Display-only grammar fix (founder, 2026-06-12): scripts/audio say
   // "overweights", captions and cards show the correct verb.
   ["overweights", "overweighs"],
