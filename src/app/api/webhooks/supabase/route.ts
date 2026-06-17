@@ -4,6 +4,7 @@ import { sendNotificationEmail } from '@/lib/notify-email'
 import { sendSlackNotification, SlackChannel } from '@/lib/notify-slack'
 import { getSignupProvisioning } from '@/lib/signup-provisioning'
 import { getSupabaseClient } from '@/lib/supabase-server'
+import { sendGa4Event, deterministicClientId } from '@/lib/ga4-measurement-protocol'
 
 type SupabaseWebhookPayload = {
   type?: string
@@ -390,6 +391,31 @@ export async function POST(request: NextRequest) {
 
     const userId = asNonEmptyString(payload.record?.id)
     if (userId && payload.record && typeof payload.record === 'object') {
+      // GA4 sign_up conversion, fired server-side here because this users-INSERT
+      // webhook is the one signal that catches EVERY signup path (email, Google
+      // OAuth, magic link). The old client-side gtag fire lived only in the
+      // pricing form, so most signups never counted. Fired before the (up to 3s)
+      // device-poll below so the hit is delivered promptly and isn't lost if the
+      // rest of the handler runs long. Awaited (not fire-and-forget) so it lands
+      // before the serverless function can freeze; sendGa4Event is fail-safe
+      // (returns false, never throws), so tracking can't break signup. No browser
+      // cookie reaches a webhook, so client_id is derived from the user id and
+      // user_id ties it to the person via GA4 User-ID. Tradeoff: with a synthetic
+      // client_id GA4 reports this sign_up under Direct (it can't see the original
+      // session's source). referral_source is best-effort (the trigger-time row);
+      // the users table holds the authoritative value for attribution.
+      const referralSource = asNonEmptyString(payload.record.referral_source)
+      await sendGa4Event({
+        clientId: deterministicClientId(userId),
+        userId,
+        events: [
+          {
+            name: 'sign_up',
+            params: referralSource ? { referral_source: referralSource } : undefined,
+          },
+        ],
+      })
+
       const deviceFields = await awaitSignupDeviceWrite(userId, payload.record)
       if (deviceFields) {
         payload.record = { ...payload.record, ...deviceFields }

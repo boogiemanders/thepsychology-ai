@@ -777,11 +777,11 @@ export const PracticeQuestion: React.FC<PracticeQuestionProps> = ({
             // question card).
             ...(cardWindow ? [cardWindow] : []),
             ...(revealWindow ? [revealWindow] : []),
-            // The disclaimer pill takes the title's spot while it is up.
-            ...(disclaimerWindow ? [disclaimerWindow] : []),
             // The opening credential badge sits in the title's spot for the
             // first ~2s; the title fades in right as the badge leaves.
             ...(credential ? [{ fromMs: 0, toMs: CREDENTIAL_TOTAL_S * 1000 }] : []),
+            // The disclaimer pill takes the title's spot while it is up.
+            ...(disclaimerWindow ? [disclaimerWindow] : []),
           ]}
         />
       ) : null}
