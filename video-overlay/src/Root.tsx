@@ -66,6 +66,7 @@ export const RemotionRoot: React.FC = () => {
         titleLine2: "Ethics",
         credential: "",
         disclaimerLine: "",
+        hookImage: "",
       }}
       calculateMetadata={calculateMetadata}
     />

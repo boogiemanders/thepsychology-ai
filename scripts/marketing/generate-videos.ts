@@ -58,6 +58,14 @@ const DISCLAIMER_ARG = (() => {
   const i = process.argv.indexOf("--disclaimer")
   return i === -1 ? "" : process.argv[i + 1] || ""
 })()
+// --hook-image "<public-relative-path>": an opening visual-hook photo (e.g.
+// hooks/ariana-xxxx.png under video-overlay/public/) shown as a rounded panel
+// below the title for the opening seconds. Empty by default — only an explicit
+// hand run adds one, so the daily auto-run never attaches an image.
+const HOOK_IMAGE_ARG = (() => {
+  const i = process.argv.indexOf("--hook-image")
+  return i === -1 ? "" : process.argv[i + 1] || ""
+})()
 const DAILY_CAP = Number(process.env.VIDEO_DAILY_CAP || 12)
 const OUTPUT_DIR =
   process.env.VIDEO_OUTPUT_DIR ||
@@ -473,7 +481,8 @@ export async function renderOverlay(
   mp4Path: string,
   srtPath: string,
   draft: MarketingDraft,
-  disclaimerLine = ""
+  disclaimerLine = "",
+  hookImage = ""
 ): Promise<string> {
   // The launchd automation checkout (~/thepsychology-ai-marketing) resets via
   // git, so video-overlay/node_modules may not exist on a first run there.
@@ -554,6 +563,8 @@ export async function renderOverlay(
       credential: "",
       // Compliance line for medical/clinical videos; "" hides it.
       disclaimerLine,
+      // Opening visual-hook photo (public-relative); "" renders nothing.
+      hookImage,
     }
     // execFileSync with an arg array bypasses the shell, so the JSON (quotes,
     // apostrophes in stems) needs no escaping.
@@ -699,7 +710,7 @@ async function main() {
         console.warn(`⚠️  ${label}: no SRT on Drive, skipping overlay (captions impossible)`)
       } else {
         try {
-          const finalPath = await renderOverlay(filePath, srtPath, draft, DISCLAIMER_ARG)
+          const finalPath = await renderOverlay(filePath, srtPath, draft, DISCLAIMER_ARG, HOOK_IMAGE_ARG)
           console.log(`✅ ${label} final → ${finalPath}`)
           finals++
           // .catch guard: same reason as the Slack ping below — a hiccup here

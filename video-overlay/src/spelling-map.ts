@@ -22,6 +22,12 @@ const SPELLING_MAP: [phonetic: string, written: string][] = [
   ["E C C C", "EPPP"],
   ["ECCC", "EPPP"],
   ["E triple P", "EPPP"],
+  // Founder 2026-06-17: the German lyric "Du bist gut genug" is respelled
+  // phonetically in the spoken script ("Doo bist goot guh-nook") so HeyGen's
+  // English voice says it like German (same trick as "E triple P"). Map it back
+  // so the on-screen card/captions read the real German. Place above the bare
+  // letter maps; this 4-word phrase is longer than the single-token entries.
+  ["Doo bist goot guh-nook", "Du bist gut genug"],
   ["ways four", "WAIS-IV"],
   // Scripts spell the test phonetically ("M-M-P-I two") so the avatar says the
   // letters; the ASR caption comes back as "MMPI-2". Both must normalize to the

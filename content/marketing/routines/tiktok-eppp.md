@@ -147,6 +147,28 @@ that", second clauses, and exam jargon. The whole payoff should land in one brea
 explanation means a shorter video, which means better retention and more saves. Wrong-answer
 call-outs stay one short clause each (why it is a trap), never a mini-lecture.
 
+**Phrase wrong-answer call-outs so the cross-out strikes fire (founder 2026-06-17).** The overlay
+draws a strike-through on each wrong choice as you call it out, driven by the transcript. It fires
+most reliably when the call-out STARTS with the letter and reads "X is wrong because ..." (the
+explicit form). The detector now also handles concept-named call-outs that open with the letter and
+a verb ("A is the success-and-failure bias, not this", "C needs the fans explaining their own
+bodies", "D is for groups"), so those work too. Always lead with the bare letter; never bury it
+mid-sentence ("the self-serving option is wrong") or the strike will not land.
+
+**Make the explanation funny, not just short (founder 2026-06-17).** Same length, more bite. Voice =
+the clinician deadpan-diagnosing the fans, pundits, or test-writers, dry and certain. Every joke
+line must survive "why is that true?": airtight internal logic, NO decorative similes, no "it's
+like", no joke-shaped filler (the founder rejects those on sight). The humor lives in the payoff and
+can flavor the wrong-answer call-outs; the hook, question, and choices stay straight. Study the
+voice in `marketing/comedyref/` (comedy-style.md plus the Schulz and Louis CK sets) before writing.
+Money jokes frame the audience's absurd bargain, never therapists getting paid; never imply real
+therapy happened to a crowd. Treat laugh-out-loud as a stretch goal; wry one-liners are the floor.
+
+**No spoken stage directions (founder 2026-06-17).** The body_md is read by HeyGen verbatim, and
+`extractSpokenScript` strips `[brackets]` but NOT `(parens)`, so a line like `(pause)` or a stray
+`POV` gets spoken out loud. Never write `(pause)`, `POV`, or any parenthetical aside in the script;
+for the beat before the answer just leave a blank line. Keep the body pure spoken words.
+
 Cite the source as our question bank / the domain. If the question's `explanation` makes a factual
 claim you can name a reference for, add it to `sources`.
 
