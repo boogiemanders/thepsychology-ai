@@ -21,7 +21,7 @@ supported (ManyChat launched US TikTok automation Nov 2025).
    creates the `tiktok_leads` table) the same way other migrations ship.
 4. **Set the secret in Vercel** (Production): `MANYCHAT_WEBHOOK_SECRET` = a long
    random string. Optional: `MANYCHAT_LEAD_LINK` to override the default link
-   `https://www.thepsychology.ai/go/eppp-dm?s=tiktok`.
+   `https://www.thepsychology.ai/go/practice-questions?s=tiktok`.
 
 ## ManyChat flow
 
@@ -80,5 +80,6 @@ will send you free practice questions"). That is a separate change to
   email-later subscriber updates the same row. Leads land in `tiktok_leads`.
 - Slack pings (`SLACK_WEBHOOK_SIGNUPS`) are PII-free by policy: no name or email,
   just that a lead came in and the keyword.
-- The `/go/eppp-dm?s=tiktok` link tags GA with `utm_source=tiktok`,
-  `utm_campaign=eppp-dm` so DM-funnel traffic is attributable.
+- The `/go/practice-questions?s=tiktok` link 307-redirects to the EPPP
+  practice-questions page and tags GA with `utm_source=tiktok`,
+  `utm_campaign=practice-questions` so DM-funnel traffic is attributable.

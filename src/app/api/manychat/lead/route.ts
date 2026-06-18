@@ -14,10 +14,11 @@ export const runtime = 'nodejs'
 export const maxDuration = 30
 
 const SECRET = process.env.MANYCHAT_WEBHOOK_SECRET || ''
-// The link we hand back for ManyChat to email. /go/<slug>?s=tiktok 307-redirects
-// to the site with GA UTMs (utm_campaign=<slug>, utm_source=tiktok).
+// The link we hand back for ManyChat to email. /go/practice-questions?s=tiktok
+// 307-redirects to the EPPP practice-questions page with GA UTMs
+// (utm_campaign=practice-questions, utm_source=tiktok).
 const LEAD_LINK =
-  process.env.MANYCHAT_LEAD_LINK || 'https://www.thepsychology.ai/go/eppp-dm?s=tiktok'
+  process.env.MANYCHAT_LEAD_LINK || 'https://www.thepsychology.ai/go/practice-questions?s=tiktok'
 
 function secretOk(req: NextRequest): boolean {
   if (!SECRET) return false
