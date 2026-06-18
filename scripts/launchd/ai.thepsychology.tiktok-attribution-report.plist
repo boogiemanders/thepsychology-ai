@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Weekly per-video TikTok attribution digest. Sibling of the signup-source report; runs 5 min
+  after it (Mon 08:05 local) so the two Slack posts don't collide.
+
+  Install (founder follow-up):
+    cp scripts/launchd/ai.thepsychology.tiktok-attribution-report.plist ~/Library/LaunchAgents/
+    launchctl unload ~/Library/LaunchAgents/ai.thepsychology.tiktok-attribution-report.plist 2>/dev/null
+    launchctl load   ~/Library/LaunchAgents/ai.thepsychology.tiktok-attribution-report.plist
+  Test once now:  launchctl start ai.thepsychology.tiktok-attribution-report
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>ai.thepsychology.tiktok-attribution-report</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/anderschan/thepsychology-ai/scripts/tiktok-video-attribution-report.py</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/anderschan/thepsychology-ai</string>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>1</integer>
+    <key>Hour</key>
+    <integer>8</integer>
+    <key>Minute</key>
+    <integer>5</integer>
+  </dict>
+  <key>RunAtLoad</key>
+  <false/>
+  <key>StandardOutPath</key>
+  <string>/tmp/tiktok-attribution-report.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/tiktok-attribution-report.err</string>
+</dict>
+</plist>
