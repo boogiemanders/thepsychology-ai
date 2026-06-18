@@ -118,9 +118,17 @@ welcome. NEVER put the answer (or anything that gives it away) in the title: the
 tension, the video resolves it. The domain label under it is added automatically as "EPPP: <Domain>". Also set
 `tiktok_caption`: the post text used when the finished video auto-posts to TikTok. Format, exactly:
 line 1 = the `video_title`; line 2 = a 1-2 sentence explanation teaser that is genuinely about the
-concept (why it matters, what makes it tricky) and NEVER reveals or hints the answer; line 3 =
-exactly 5 hashtags, always `#eppp #psychology` first plus 3 topic-relevant tags (lowercase, no
-made-up tags). No sales CTA in the caption, no emojis, no em dashes. Spoken
+concept (why it matters, what makes it tricky) and NEVER reveals or hints the answer; line 3 = the
+DM call-to-action `DM <CODE> for 10 free practice questions: https://thepsychology.ai/go/pq?s=tiktok&c=<code>`;
+line 4 = exactly 5 hashtags, always `#eppp #psychology` first plus 3 topic-relevant tags (lowercase, no
+made-up tags). The `<CODE>` is the per-video tracking keyword (shown uppercased in the CTA, lowercased
+as the link's `c=` value): pick a UNIQUE word that is 5-6 characters max, easy to type, relevant to the
+topic, and that does NOT give away the answer (e.g. interleaving=WEAVE, reliability=RELY,
+acculturation=BERRY, Type-I-error=GROUPS). NEVER reuse a code across videos — `c=` -> `utm_content` is how
+signups are attributed per video (report: scripts/tiktok-video-attribution.sql / .py). ManyChat funnel
+reality: US TikTok is DM-first (comment->auto-DM is blocked in the US, IG-only) — on TikTok the code is
+the DM keyword + the link's `c=` tag; on IG you can trigger the auto-DM from a comment and reply `sent!`
+on the comment. No emojis, no em dashes. Spoken
 lines feed a TTS talking-head pipeline, so write pronunciations into the speech: "EPPP" as
 "E triple P", "thepsychology.ai" as "the psychology dot ai", "WAIS-IV" as "ways four", and
 any other test name or initialism the way it is actually said aloud (captions/hashtags keep
