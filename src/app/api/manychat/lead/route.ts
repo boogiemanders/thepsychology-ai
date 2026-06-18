@@ -14,8 +14,9 @@ export const runtime = 'nodejs'
 export const maxDuration = 30
 
 const SECRET = process.env.MANYCHAT_WEBHOOK_SECRET || ''
-// The link we hand back for ManyChat to email. /go/practice-questions?s=tiktok
-// 307-redirects to the EPPP practice-questions page with GA UTMs
+// The link we hand back for ManyChat. /go/practice-questions?s=tiktok 307-redirects
+// to the practice-questions page (the /go route maps the slug; main currently sends
+// it to /resources/practice-questions) with GA UTMs
 // (utm_campaign=practice-questions, utm_source=tiktok).
 const LEAD_LINK =
   process.env.MANYCHAT_LEAD_LINK || 'https://www.thepsychology.ai/go/practice-questions?s=tiktok'
