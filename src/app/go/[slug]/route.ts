@@ -15,6 +15,8 @@ const BASE = 'https://www.thepsychology.ai/'
 // Slug -> on-site path. Add an entry to point a short /go/<slug> link at a specific page.
 const DESTINATIONS: Record<string, string> = {
   'practice-questions': '/resources/practice-questions',
+  // short alias for low-friction DM links (e.g. /go/pq?s=tiktok&c=<videokey>)
+  'pq': '/resources/practice-questions',
 }
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
