@@ -1,6 +1,6 @@
 ---
 tags: [mktg]
-generated: 2026-06-15T09:07:48.691Z
+generated: 2026-06-22T09:04:54.972Z
 ---
 
 #mktg
@@ -12,23 +12,24 @@ bias new drafts toward topics/angles that actually convert. Do not edit by hand.
 
 ## Best topics (by conversions)
 
-- **(unknown — pre-engine post)** — 0 conversions / 556 sessions (0.0%)
-- **eppp** — 0 conversions / 2 sessions (0.0%)
+- **(unknown — pre-engine post)** — 0 conversions / 319 sessions (0.0%)
+- **eppp** — 0 conversions / 4 sessions (0.0%)
+- **psychology-ai** — 0 conversions / 1 sessions (0.0%)
 
 ## Top posts
 
 | slug | sessions | engaged | conversions | conv. rate | keyword |
 | --- | --- | --- | --- | --- | --- |
-| eppp-pass-rates | 273 | 61 | 0 | 0.0% | — |
-| eppp-prep-programs-compared-2026 | 67 | 26 | 0 | 0.0% | — |
-| free-eppp-practice-questions | 74 | 20 | 0 | 0.0% | — |
-| what-to-do-after-failing-the-eppp | 35 | 15 | 0 | 0.0% | — |
-| how-long-to-study-for-the-eppp | 30 | 10 | 0 | 0.0% | — |
-| is-the-eppp-hard | 11 | 6 | 0 | 0.0% | — |
-| eppp-pass-rates-2026-update | 11 | 5 | 0 | 0.0% | — |
-| thepsychology-ai-vs-aatbs | 3 | 3 | 0 | 0.0% | — |
-| thepsychology-ai-vs-prepjet | 6 | 3 | 0 | 0.0% | — |
+| eppp-prep-programs-compared-2026 | 49 | 21 | 0 | 0.0% | — |
+| eppp-pass-rates | 84 | 19 | 0 | 0.0% | — |
+| free-eppp-practice-questions | 71 | 18 | 0 | 0.0% | — |
+| how-long-to-study-for-the-eppp | 29 | 11 | 0 | 0.0% | — |
+| eppp-pass-rates-2026-update | 16 | 8 | 0 | 0.0% | — |
+| is-the-eppp-hard | 6 | 5 | 0 | 0.0% | — |
+| thepsychology-ai-vs-prepjet | 10 | 5 | 0 | 0.0% | — |
+| what-to-do-after-failing-the-eppp | 16 | 5 | 0 | 0.0% | — |
 | free-eppp-study-plan | 26 | 3 | 0 | 0.0% | — |
+| thepsychology-ai-vs-psychprep | 3 | 2 | 0 | 0.0% | — |
 
 ## Guidance for the next round
 
