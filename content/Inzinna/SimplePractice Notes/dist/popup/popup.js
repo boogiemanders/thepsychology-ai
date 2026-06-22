@@ -175,7 +175,7 @@
     defaultLocation: "Video Office",
     firstVisitCPT: "90791",
     followUpCPT: "90837",
-    llmProvider: "ollama",
+    llmProvider: "openai",
     ollamaModel: "llama3.2:3b",
     ollamaEndpoint: "http://localhost:11434",
     openaiApiKey: "",
@@ -3796,9 +3796,13 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     const match = sourceUrl.match(/diagnosis_treatment_plans\/([^/?#]+)/);
     return match?.[1] ?? "";
   }
-  var FALLBACK_NOTICE = "[LLM unavailable \u2014 this is a skeleton draft. Edit manually before submitting.]";
-  function buildSubjective(sessionNotes, intake) {
-    const parts = [FALLBACK_NOTICE];
+  var FALLBACK_NOTICE_GENERIC = "[LLM unavailable \u2014 this is a skeleton draft. Edit manually before submitting.]";
+  function fallbackNotice(reason) {
+    if (!reason) return FALLBACK_NOTICE_GENERIC;
+    return `[LLM unavailable: ${reason} \u2014 this is a skeleton draft. Edit manually before submitting.]`;
+  }
+  function buildSubjective(sessionNotes, intake, reason) {
+    const parts = [fallbackNotice(reason)];
     const notes = sessionNotes.trim();
     if (notes) {
       parts.push(`Clinician session notes (verbatim):
@@ -3874,7 +3878,7 @@ ${goalLines.join("\n")}`);
     items.push("Add session-specific focus, homework, and next appointment manually.");
     return items.join(" ");
   }
-  function buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta = {}) {
+  function buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta = {}, unavailableReason) {
     const transcriptText = buildTranscriptText(transcript);
     const clientName = firstNonEmpty3(
       meta.clientName,
@@ -3894,7 +3898,7 @@ ${goalLines.join("\n")}`);
       clientName,
       sessionDate,
       cptCode: prefs.followUpCPT || "90837",
-      subjective: buildSubjective(sessionNotes, intake),
+      subjective: buildSubjective(sessionNotes, intake, unavailableReason),
       objective: buildObjective(transcript, intake),
       assessment: buildAssessment(treatmentPlan, diagnosticImpressions, intake),
       plan: buildPlan2(treatmentPlan),
@@ -4056,33 +4060,50 @@ Every theme above MUST be reflected in at least one SOAP section matching its "s
     return String(err);
   }
   async function generateSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta = {}) {
-    const provider = prefs.llmProvider || "ollama";
-    if (provider === "openai" && prefs.openaiApiKey) {
-      const healthy2 = await checkOpenAIHealth(prefs.openaiApiKey);
-      if (healthy2) {
-        try {
-          const draft = await generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta);
-          if (draft) return draft;
-        } catch (err) {
-          console.info("[SPN] OpenAI generation failed, falling back:", getErrorMessage(err));
+    const provider = prefs.llmProvider || "openai";
+    const reasons = [];
+    if (provider === "openai") {
+      if (!prefs.openaiApiKey) {
+        reasons.push("OpenAI selected but no API key in popup settings. Click the extension icon, paste your key, and Save.");
+      } else {
+        const healthy = await checkOpenAIHealth(prefs.openaiApiKey);
+        if (!healthy) {
+          reasons.push("OpenAI key rejected by /v1/models (likely invalid or expired).");
+        } else {
+          try {
+            const draft = await generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta);
+            if (draft) return draft;
+            reasons.push("OpenAI returned a response we could not parse as JSON or sections.");
+          } catch (err) {
+            const msg = getErrorMessage(err);
+            console.info("[SPN] OpenAI generation failed, falling back:", msg);
+            reasons.push(`OpenAI call failed: ${msg}`);
+          }
         }
       }
     }
     const endpoint = prefs.ollamaEndpoint || "http://localhost:11434";
     const model = prefs.ollamaModel || "llama3.1:8b";
-    const healthy = await checkOllamaHealth(endpoint);
-    if (healthy) {
+    const ollamaHealthy = await checkOllamaHealth(endpoint);
+    if (!ollamaHealthy) {
+      if (provider === "ollama") {
+        reasons.push(`Ollama not running at ${endpoint}. Start Ollama or switch provider to OpenAI in the popup.`);
+      }
+    } else {
       try {
         const draft = await generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint);
         if (draft) return draft;
+        reasons.push("Ollama returned a response we could not parse as JSON or sections.");
       } catch (err) {
         const message = getErrorMessage(err);
         if (!message.includes("Ollama blocked this Chrome extension")) {
           console.info("[SPN] Ollama generation fell back to regex:", message);
         }
+        reasons.push(`Ollama generation failed: ${message}`);
       }
     }
-    const regexDraft = buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta);
+    const reason = reasons.length ? reasons.join(" ") : void 0;
+    const regexDraft = buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta, reason);
     return { ...regexDraft, generationMethod: "regex" };
   }
   async function generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta) {

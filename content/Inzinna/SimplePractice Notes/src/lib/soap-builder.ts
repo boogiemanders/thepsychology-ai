@@ -53,11 +53,16 @@ function extractTreatmentPlanId(treatmentPlan: TreatmentPlanData | null): string
   return match?.[1] ?? ''
 }
 
-const FALLBACK_NOTICE =
+const FALLBACK_NOTICE_GENERIC =
   '[LLM unavailable — this is a skeleton draft. Edit manually before submitting.]'
 
-function buildSubjective(sessionNotes: string, intake: IntakeData | null): string {
-  const parts: string[] = [FALLBACK_NOTICE]
+function fallbackNotice(reason?: string): string {
+  if (!reason) return FALLBACK_NOTICE_GENERIC
+  return `[LLM unavailable: ${reason} — this is a skeleton draft. Edit manually before submitting.]`
+}
+
+function buildSubjective(sessionNotes: string, intake: IntakeData | null, reason?: string): string {
+  const parts: string[] = [fallbackNotice(reason)]
 
   const notes = sessionNotes.trim()
   if (notes) {
@@ -180,7 +185,8 @@ export function buildSoapDraft(
     apptId?: string
     clientName?: string
     sessionDate?: string
-  } = {}
+  } = {},
+  unavailableReason?: string
 ): SoapDraft {
   const transcriptText = buildTranscriptText(transcript)
   const clientName = firstNonEmpty(
@@ -202,7 +208,7 @@ export function buildSoapDraft(
     clientName,
     sessionDate,
     cptCode: prefs.followUpCPT || '90837',
-    subjective: buildSubjective(sessionNotes, intake),
+    subjective: buildSubjective(sessionNotes, intake, unavailableReason),
     objective: buildObjective(transcript, intake),
     assessment: buildAssessment(treatmentPlan, diagnosticImpressions, intake),
     plan: buildPlan(treatmentPlan),
