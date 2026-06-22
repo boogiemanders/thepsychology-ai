@@ -49,6 +49,8 @@ export async function POST(request: NextRequest) {
       // First-touch landing attribution
       landing_page,
       landing_referrer,
+      // First-touch blog post attribution
+      first_blog_slug,
     } = body
 
     // Validate required fields
@@ -121,6 +123,7 @@ export async function POST(request: NextRequest) {
     let resolvedUtmTerm = (typeof utm_term === 'string' && utm_term.trim().length > 0) ? utm_term.trim() : null
     let resolvedLandingPage = (typeof landing_page === 'string' && landing_page.trim().length > 0) ? landing_page.trim() : null
     let resolvedLandingReferrer = (typeof landing_referrer === 'string' && landing_referrer.trim().length > 0) ? landing_referrer.trim() : null
+    let resolvedFirstBlogSlug = (typeof first_blog_slug === 'string' && first_blog_slug.trim().length > 0) ? first_blog_slug.trim() : null
 
     let resolvedAuthCreatedAt = (typeof authCreatedAt === 'string' && authCreatedAt.trim().length > 0)
       ? authCreatedAt.trim()
@@ -159,6 +162,8 @@ export async function POST(request: NextRequest) {
           resolvedLandingPage = resolvedLandingPage || (typeof meta.landing_page === 'string' ? meta.landing_page : null)
           resolvedLandingReferrer =
             resolvedLandingReferrer || (typeof meta.landing_referrer === 'string' ? meta.landing_referrer : null)
+          resolvedFirstBlogSlug =
+            resolvedFirstBlogSlug || (typeof meta.first_blog_slug === 'string' ? meta.first_blog_slug : null)
           resolvedSignupSource =
             resolvedSignupSource || (typeof meta.signup_source === 'string' ? meta.signup_source : null)
           resolvedSkipTrial =
@@ -212,35 +217,47 @@ export async function POST(request: NextRequest) {
     }
 
     // Create the user profile (upsert to handle race with on_auth_user_created trigger)
-    const { error: profileError, data } = await supabase
+    const profilePayload: Record<string, unknown> = {
+      id: userId,
+      email,
+      full_name: resolvedFullName,
+      subscription_tier: provisioning.subscriptionTier,
+      trial_ends_at: provisioning.skipTrial ? null : trialEndsAt.toISOString(),
+      promo_code_used: promoCodeUsed || null,
+      referral_source: resolvedReferralSource,
+      referred_by: referredBy,
+      referral_code: referralCode,
+      subscription_started_at: provisioning.skipTrial ? null : safeSubscriptionStart.toISOString(),
+      signup_device: signupDevice,
+      signup_user_agent: signupUserAgent,
+      // UTM tracking for marketing attribution
+      utm_source: resolvedUtmSource,
+      utm_medium: resolvedUtmMedium,
+      utm_campaign: resolvedUtmCampaign,
+      utm_content: resolvedUtmContent,
+      utm_term: resolvedUtmTerm,
+      // First-touch landing attribution (which page brought them in)
+      landing_page: resolvedLandingPage,
+      landing_referrer: resolvedLandingReferrer,
+      // First-touch blog post attribution (first /blog/<slug> the visitor saw)
+      first_blog_slug: resolvedFirstBlogSlug,
+    }
+
+    let { error: profileError, data } = await supabase
       .from('users')
-      .upsert(
-        {
-          id: userId,
-          email,
-          full_name: resolvedFullName,
-          subscription_tier: provisioning.subscriptionTier,
-          trial_ends_at: provisioning.skipTrial ? null : trialEndsAt.toISOString(),
-          promo_code_used: promoCodeUsed || null,
-          referral_source: resolvedReferralSource,
-          referred_by: referredBy,
-          referral_code: referralCode,
-          subscription_started_at: provisioning.skipTrial ? null : safeSubscriptionStart.toISOString(),
-          signup_device: signupDevice,
-          signup_user_agent: signupUserAgent,
-          // UTM tracking for marketing attribution
-          utm_source: resolvedUtmSource,
-          utm_medium: resolvedUtmMedium,
-          utm_campaign: resolvedUtmCampaign,
-          utm_content: resolvedUtmContent,
-          utm_term: resolvedUtmTerm,
-          // First-touch landing attribution (which page brought them in)
-          landing_page: resolvedLandingPage,
-          landing_referrer: resolvedLandingReferrer,
-        },
-        { onConflict: 'id' }
-      )
+      .upsert(profilePayload, { onConflict: 'id' })
       .select()
+
+    // If the first_blog_slug migration hasn't been applied yet, never break signup:
+    // strip the unknown column and retry so all other attribution still persists.
+    if (profileError && typeof profileError.message === 'string' && profileError.message.includes('first_blog_slug')) {
+      console.warn('[create-profile] first_blog_slug column missing; retrying upsert without it')
+      delete profilePayload.first_blog_slug
+      ;({ error: profileError, data } = await supabase
+        .from('users')
+        .upsert(profilePayload, { onConflict: 'id' })
+        .select())
+    }
 
     if (profileError) {
       console.error('Profile creation error:', profileError)
