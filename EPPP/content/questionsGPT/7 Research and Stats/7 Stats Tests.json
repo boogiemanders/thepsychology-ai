@@ -25,15 +25,15 @@
       ]
     },
     {
-      "stem": "A researcher uses a chi-square test to examine whether diagnosis type (anxiety disorder, mood disorder, or personality disorder) is associated with treatment preference (medication, psychotherapy, or combined). She collects data by surveying 150 clients at a clinic, where some married couples are both included in the sample. What assumption of the chi-square test is MOST likely violated?",
+      "stem": "A researcher runs a chi-square test of independence to examine whether diagnosis type (anxiety, mood, or personality disorder) is associated with treatment preference (medication, psychotherapy, or combined). To reach 150 responses quickly, she surveys 75 clients and also has each client's cohabiting partner, who attends the same clinic, complete the survey, entering all 150 responses into one contingency table. Which assumption of the chi-square test does this sampling procedure MOST directly violate?",
       "options": [
-        "The assumption of homogeneity of variance across diagnostic groups",
-        "The assumption of normally distributed data within each cell",
-        "The assumption of independence of observations, because married couples' responses may be correlated",
-        "The assumption that all expected cell frequencies must be equal"
+        "Homogeneity of variance, because pairing partners from the same household equalizes response variability across the diagnostic groups",
+        "Independence of observations, because pairing partners from the same household links responses that the test requires to be unrelated",
+        "Normality of the underlying distribution, because pairing partners from the same household skews the distribution of categorical preferences",
+        "Sufficiency of expected frequencies, because pairing partners from the same household drives expected cell counts below the required minimum of five"
       ],
-      "answer": "The assumption of independence of observations, because married couples' responses may be correlated",
-      "explanation": "The chi-square test requires that each observation is independent of every other observation. When married couples are both included, their responses may be correlated — partners often share treatment preferences, diagnostic patterns influenced by shared environment, or may influence each other's responses. This violates independence of observations. Option A is incorrect because homogeneity of variance is an assumption of parametric tests like ANOVA, not chi-square. Option B is wrong because chi-square is a nonparametric test that does not assume normality. Option D is wrong because chi-square does not require equal expected frequencies — it requires adequate expected frequencies (typically at least 5 per cell), not equal ones.",
+      "answer": "Independence of observations, because pairing partners from the same household links responses that the test requires to be unrelated",
+      "explanation": "The chi-square test of independence assumes each observation is independent, meaning each data point comes from a separate, unrelated case. Surveying both members of cohabiting couples produces 75 pairs of correlated responses (partners share environment, treatment exposure, and likely attitudes), so the 150 entries are not 150 independent observations. That is the assumption this design violates. Homogeneity of variance (option 0) is an assumption of ANOVA and t-tests, not the chi-square test of categorical frequencies, so it cannot be the violated assumption. Normality (option 2) concerns continuous data and the sampling distribution of the statistic, not the raw categorical counts; pairing partners does not introduce a normality problem. Sufficiency of expected frequencies (option 3) is a genuine chi-square requirement (commonly stated as at least 80 percent of cells having an expected count of 5 or more), but with 150 responses across a 3x3 table the average expected count is about 16.7, so this rule is not violated by this design. Only independence is actually compromised.",
       "kn": "KN53",
       "kn_explanation": "This question is best aligned with KN53 because it tests Sampling and data collection methods.",
       "difficulty": "medium",

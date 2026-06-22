@@ -1593,15 +1593,15 @@
     },
     {
       "id": 80,
-      "question": "A researcher plots the relationship between a predictor variable (X) and a criterion variable (Y) on a scatterplot. She notices that the spread of Y scores is roughly the same at every level of X, and the data points form a circular cloud with no discernible pattern. Which of the following BEST describes this situation?",
+      "question": "A researcher plots a predictor variable (X) against a criterion variable (Y). Near the low end of X, the Y values sit in a tight, narrow band; as X increases, the points fan outward into an increasingly wide vertical band. Across the whole plot the points still trend clearly and consistently upward from lower-left to upper-right. Which of the following BEST describes this situation?",
       "options": [
-        "The variables show a strong linear relationship with homoscedasticity",
-        "The variables show heteroscedasticity with a moderate positive correlation",
-        "The variables show homoscedasticity with a correlation near zero",
-        "The variables show a curvilinear relationship that Pearson's r would accurately capture"
+        "The data show a strong positive correlation accompanied by heteroscedasticity",
+        "The data show a strong positive correlation accompanied by homoscedasticity",
+        "The data show a correlation near zero accompanied by heteroscedasticity",
+        "The data show a weak positive correlation accompanied by homoscedasticity"
       ],
-      "correct_answer": "The variables show homoscedasticity with a correlation near zero",
-      "explanation": "When the variability in Y scores is similar across all levels of X (homoscedasticity) and the data form a circular cloud with no discernible pattern, the correlation is near zero. Homoscedasticity means the 'variability in your criterion scores should be similar across all levels of your predictor scores.' A circular cloud pattern indicates no systematic linear relationship. Option A is wrong because a strong linear relationship would show an elongated ellipse, not a circular cloud. Option B is wrong because heteroscedasticity would mean unequal variability across predictor levels. Option D is wrong because Pearson's r would not accurately capture curvilinear relationships.",
+      "correct_answer": "The data show a strong positive correlation accompanied by heteroscedasticity",
+      "explanation": "Homoscedasticity and the strength of a correlation are two independent properties of a scatterplot. Homoscedasticity concerns whether the spread (variance) of Y is constant across the levels of X; the correlation concerns how tightly the points cluster around an overall trend and in what direction. The described plot fans out from a narrow band at low X to a wide band at high X, which means the variance of Y is NOT constant across X. That unequal spread is heteroscedasticity. At the same time, the points trend clearly and consistently upward, indicating a strong positive correlation. So the correct pairing is a strong positive correlation with heteroscedasticity (Option 0). Option 1 is wrong because it labels the fanning spread as homoscedasticity, conflating constant variance with the mere presence of a trend; the spread is plainly unequal. Option 2 is wrong because a clear, consistent upward trend cannot be a correlation near zero; a near-zero r would show a patternless cloud, not a directional trend. Option 3 is wrong on both counts: a tight, consistent upward trend reflects a strong (not weak) relationship, and the changing band width is heteroscedastic (not homoscedastic). The item requires recognizing that fanning residual spread defines heteroscedasticity regardless of how strong the underlying relationship is.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN55",
       "source_file": "7-correlation-and-regression.json",
@@ -2015,15 +2015,15 @@
     },
     {
       "id": 101,
-      "question": "A human resources consultant is advising a technology company on strategies to improve employee motivation. She recommends redesigning several positions to include greater decision-making authority, project ownership, and opportunities for professional growth. A colleague suggests instead that the company simply assign additional tasks at the same skill level to keep employees busier. The consultant's recommendation reflects which approach, and how does it differ from her colleague's suggestion?",
+      "question": "A human resources consultant is advising a technology company on improving employee motivation. For the analyst role, she recommends giving each analyst authority to set their own project priorities, sign off on deliverables, and mentor newer staff, while leaving the number of accounts each one handles unchanged. A colleague counters that the company should instead keep each analyst's authority where it is but assign each one several more accounts of the same type they already manage. The consultant's recommendation and the colleague's suggestion, respectively, are best classified as which two approaches?",
       "options": [
-        "Job enrichment (adding depth and meaning) versus job enlargement (adding more tasks at the same level)",
-        "Job enlargement (expanding task variety) versus job rotation (cycling through different positions)",
-        "Job rotation (broadening experience) versus job enrichment (deepening skill requirements)",
-        "Job enrichment (adding more tasks) versus job specialization (narrowing task focus)"
+        "Job enrichment and job enlargement",
+        "Job enlargement and job enrichment",
+        "Job rotation and job enlargement",
+        "Job enrichment and job rotation"
       ],
-      "correct_answer": "Job enrichment (adding depth and meaning) versus job enlargement (adding more tasks at the same level)",
-      "explanation": "Job enrichment involves redesigning jobs to include more motivator factors—meaningful challenges, autonomy, and responsibility (vertical loading). Job enlargement simply adds more tasks at the same level (horizontal loading). The consultant's recommendation of greater decision-making authority, project ownership, and professional growth opportunities exemplifies job enrichment. The colleague's suggestion of adding more same-level tasks is job enlargement. Option B incorrectly labels the consultant's approach as enlargement. Option C introduces job rotation, which is not described. Option D incorrectly defines job enrichment as adding more tasks.",
+      "correct_answer": "Job enrichment and job enlargement",
+      "explanation": "The discriminating knowledge is that job enrichment is vertical loading (it adds responsibility, autonomy, and decision-making authority to a role) while job enlargement is horizontal loading (it adds more tasks at the same level of complexity without adding authority). The consultant's plan gives analysts priority-setting power, sign-off authority, and mentoring duties, all of which deepen responsibility and control, so it is job enrichment. The colleague's plan holds authority constant and simply adds more accounts of the same kind, which is more breadth at the same level, so it is job enlargement. Option A pairs both correctly. Option B reverses the two, mistaking added authority for mere added volume. Option C mislabels the consultant's plan as job rotation; rotation means cycling an employee through different existing jobs, which neither party proposed. Option D mislabels the colleague's plan as job rotation; the colleague adds more of the same work rather than moving analysts into different roles, so it is enlargement, not rotation.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN46",
       "source_file": "2-work-motivation.json",
@@ -3363,15 +3363,15 @@
     },
     {
       "id": 168,
-      "question": "A therapist treating a client with chronic insomnia instructs her: 'Tonight, instead of trying to force yourself to fall asleep, I want you to lie in bed in the dark and deliberately try to stay awake as long as you possibly can. Do not try to sleep.' The therapist explains that attempting to follow this instruction will interrupt the performance anxiety that is perpetuating the insomnia. This intervention is best identified as:",
+      "question": "A therapist treating a client with chronic insomnia gives her the following instruction: \"Tonight, when you get into bed, lie in the dark and keep your eyes open. Make it your goal to remain awake for as long as you can, rather than working at falling asleep.\" The client follows the instruction over the next two weeks and reports that her sleep latency has noticeably decreased. This intervention is best identified as:",
       "options": [
-        "Systematic desensitization, in which graduated exposure to the feared situation of lying awake reduces conditioned anxiety over repeated trials",
-        "Paradoxical intention, in which the client is instructed to deliberately attempt to produce or amplify the very symptom causing distress",
-        "Stimulus control therapy, in which environmental and behavioral cues that have become associated with wakefulness are identified and modified",
-        "Cognitive restructuring, in which the client's dysfunctional beliefs about the consequences of insufficient sleep are explicitly challenged"
+        "Stimulus control therapy",
+        "Paradoxical intention",
+        "Sleep restriction therapy",
+        "Cognitive restructuring"
       ],
-      "correct_answer": "Paradoxical intention, in which the client is instructed to deliberately attempt to produce or amplify the very symptom causing distress",
-      "explanation": "Paradoxical intention, originally developed by Viktor Frankl and later incorporated into strategic and brief therapy models, involves directing clients to intentionally attempt to produce or exaggerate the symptom they dread. For insomnia, prescribing wakefulness paradoxically reduces the anticipatory anxiety and performance pressure around falling asleep, thereby disrupting the self-reinforcing cycle maintaining the disorder. Systematic desensitization (Option A) uses graduated hierarchical exposure paired with relaxation and does not prescribe the symptom. Stimulus control therapy (Option C) restructures behavioral and environmental antecedents of sleep but does not direct symptom production. Cognitive restructuring (Option D) targets and disputes maladaptive beliefs through verbal techniques rather than behavioral prescription.",
+      "correct_answer": "Paradoxical intention",
+      "explanation": "The correct answer is paradoxical intention. This technique directs the client to deliberately engage in the feared or unwanted behavior (here, staying awake). Removing the demand to fall asleep eliminates the performance anxiety and effortful striving that maintain the insomnia, so sleep onset improves. Recognizing the procedure requires knowing that paradoxical intention works by prescribing the symptom itself, not by changing cues, schedules, or beliefs.\\n\\nStimulus control therapy (wrong) re-associates the bed with sleep by having the client use the bed only for sleep and get out of bed when unable to sleep within about 15-20 minutes; it does the opposite of telling the client to lie in bed staying awake. Sleep restriction therapy (wrong) curtails total time in bed to match actual sleep time and then gradually expands it to raise sleep efficiency; the instruction here sets no time-in-bed limit and is about effort, not scheduling. Cognitive restructuring (wrong) targets and challenges dysfunctional beliefs about sleep (for example, catastrophic thoughts about the consequences of a poor night); the therapist here changes the client's behavioral goal rather than examining or disputing any belief.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN44",
       "source_file": "6-brief-therapies.json",
@@ -4008,15 +4008,15 @@
     },
     {
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::51",
-      "question": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The child's parents report significant distress at school, including refusal to use the girls' restroom and daily crying before school. According to DSM-5, which of the following is required in addition to the specified incongruence criteria to diagnose Gender Dysphoria in Children?",
+      "question": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The clinician has confirmed that the marked incongruence between the child's experienced gender and assigned gender meets the indicator criteria. According to DSM-5, what else must be established before the diagnosis of Gender Dysphoria in Children can be made?",
       "options": [
-        "Clinically significant distress or impairment in social, school, or other important areas of functioning",
-        "Documented biological evidence of a sex chromosome variation or hormonal atypicality",
-        "Onset of gender incongruence symptoms prior to age 5",
-        "Presence of co-occurring separation anxiety disorder or oppositional defiant disorder"
+        "The incongruence is associated with clinically significant distress or impairment in important areas of functioning",
+        "The child also expresses a strong desire for the primary or secondary sex characteristics of the experienced gender",
+        "The presentation is not better accounted for by a disorder of sex development, which would otherwise rule out the diagnosis",
+        "The gender incongruence has persisted continuously for at least 12 months"
       ],
-      "correct_answer": "Clinically significant distress or impairment in social, school, or other important areas of functioning",
-      "explanation": "DSM-5 Gender Dysphoria in Children requires two criteria: Criterion A, a marked incongruence between experienced/expressed gender and assigned gender manifested by at least 6 of 8 specified indicators lasting at least 6 months, AND Criterion B, clinically significant distress or impairment. The distress/impairment criterion (Criterion B) is essential because it distinguishes Gender Dysphoria from gender nonconformity that does not cause distress. The 8-month duration in this vignette satisfies the minimum 6-month threshold. Option B is incorrect because biological sex variations are not required; they may be noted as a specifier if present. Option C is incorrect because DSM-5 imposes no age-of-onset requirement before age 5. Option D is incorrect because comorbid diagnoses are not required for the Gender Dysphoria diagnosis.",
+      "correct_answer": "The incongruence is associated with clinically significant distress or impairment in important areas of functioning",
+      "explanation": "DSM-5 Gender Dysphoria requires two things: Criterion A (a marked incongruence, evidenced by a specified number of indicators) AND Criterion B (the condition is associated with clinically significant distress or impairment in social, school, or other important areas of functioning). The stem stipulates that Criterion A is already met, so the remaining requirement is the distress/impairment gate, which is what separates gender dysphoria from gender nonconformity. Option B is wrong because a desire for the other gender's primary or secondary sex characteristics is only one of the optional Criterion A indicators for children, not a mandatory additional requirement, and in children it is rarely present given prepubertal development. Option C is wrong because a disorder of sex development is a diagnostic specifier ('with a disorder of sex development'), not an exclusion; its presence does not rule out the diagnosis. Option D is wrong because the required duration is at least 6 months (built into Criterion A), not 12 months, so '12 months continuous' misstates the timeframe.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
       "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",

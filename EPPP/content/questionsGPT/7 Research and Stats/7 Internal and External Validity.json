@@ -500,15 +500,15 @@
       ]
     },
     {
-      "stem": "During a psychological experiment, a significant political event occurs that influences participants' responses. This scenario demonstrates a threat to validity known as:",
+      "stem": "A researcher uses a single-group pretest-posttest design to evaluate an 8-month workplace stress-reduction program. Employees complete the same anxiety inventory at baseline and again at the end of the program. Midway through the study period, the company announces a large, unexpected round of layoffs. Posttest anxiety scores are higher than pretest scores. Which threat to internal validity is the BEST explanation for the score change?",
       "options": [
-        "Maturation, as participants may change over time.",
-        "History, since an external event has influenced the study.",
-        "Instrumentation, due to changes in measurement tools.",
-        "Attrition, as participants may leave the study due to the event."
+        "Maturation, because changes within participants over an extended period can alter scores independent of the program",
+        "History, because an event unrelated to the program occurred during the study period and could account for the score change",
+        "Testing, because completing the same anxiety inventory twice can sensitize participants and shift their responses",
+        "Regression to the mean, because participants selected for an extreme baseline tend to score closer to average on retest"
       ],
-      "answer": "History, since an external event has influenced the study.",
-      "explanation": "1. The correct answer is \"History, since an external event has influenced the study\" because history refers to events occurring outside the study that can affect participants' responses and the study's results. In this scenario, the significant political event acts as an external influence that alters how participants react, thus threatening the internal validity of the study by introducing confounding variables that are unrelated to the independent variable being tested.\n\n2. The option \"Maturation, as participants may change over time\" is incorrect because maturation involves internal changes within participants over time, rather than external events affecting their responses. \"Instrumentation, due to changes in measurement tools\" is also wrong because instrumentation refers to variations in the tools or methods used to measure the dependent variable, not external influences like a political event. Lastly, \"Attrition, as participants may leave the study due to the event\" is incorrect because attrition focuses on participants dropping out of the study, which is not the primary issue in this scenario; the event itself influences responses rather than causing participants to leave.",
+      "answer": "History, because an event unrelated to the program occurred during the study period and could account for the score change",
+      "explanation": "The defining feature of History is a specific external event that occurs between the pretest and posttest and competes with the intervention as a cause of the observed change. The announced layoffs are exactly that: a discrete, datable event outside the researcher's control that plausibly raised anxiety, so History is the best explanation. Maturation is wrong because maturation refers to gradual internal processes (aging, fatigue, growing experience) that unfold over time on their own, not a discrete external occurrence; an 8-month window allows maturation, but a sudden announced layoff is an event, not a developmental process. Testing is wrong because it concerns reactivity to being measured (practice or sensitization from taking the same instrument twice), which would not specifically explain an increase tied to the layoffs and typically does not raise anxiety. Regression to the mean is wrong because it requires that participants were selected for extreme baseline scores; the stem describes a general employee sample with no extreme-score selection, and regression would pull scores toward the mean rather than systematically raise them.",
       "difficulty": "hard",
       "kn": "KN57",
       "kn_explanation": "Understanding threats to internal validity, such as history effects, is a critical component of research methods and interpretation of study findings.",

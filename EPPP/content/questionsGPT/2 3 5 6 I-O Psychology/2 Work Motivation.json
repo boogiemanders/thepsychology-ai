@@ -262,15 +262,15 @@
       ]
     },
     {
-      "stem": "A human resources consultant is advising a technology company on strategies to improve employee motivation. She recommends redesigning several positions to include greater decision-making authority, project ownership, and opportunities for professional growth. A colleague suggests instead that the company simply assign additional tasks at the same skill level to keep employees busier. The consultant's recommendation reflects which approach, and how does it differ from her colleague's suggestion?",
+      "stem": "A human resources consultant is advising a technology company on improving employee motivation. For the analyst role, she recommends giving each analyst authority to set their own project priorities, sign off on deliverables, and mentor newer staff, while leaving the number of accounts each one handles unchanged. A colleague counters that the company should instead keep each analyst's authority where it is but assign each one several more accounts of the same type they already manage. The consultant's recommendation and the colleague's suggestion, respectively, are best classified as which two approaches?",
       "options": [
-        "Job enrichment (adding depth and meaning) versus job enlargement (adding more tasks at the same level)",
-        "Job enlargement (expanding task variety) versus job rotation (cycling through different positions)",
-        "Job rotation (broadening experience) versus job enrichment (deepening skill requirements)",
-        "Job enrichment (adding more tasks) versus job specialization (narrowing task focus)"
+        "Job enrichment and job enlargement",
+        "Job enlargement and job enrichment",
+        "Job rotation and job enlargement",
+        "Job enrichment and job rotation"
       ],
-      "answer": "Job enrichment (adding depth and meaning) versus job enlargement (adding more tasks at the same level)",
-      "explanation": "Job enrichment involves redesigning jobs to include more motivator factors—meaningful challenges, autonomy, and responsibility (vertical loading). Job enlargement simply adds more tasks at the same level (horizontal loading). The consultant's recommendation of greater decision-making authority, project ownership, and professional growth opportunities exemplifies job enrichment. The colleague's suggestion of adding more same-level tasks is job enlargement. Option B incorrectly labels the consultant's approach as enlargement. Option C introduces job rotation, which is not described. Option D incorrectly defines job enrichment as adding more tasks.",
+      "answer": "Job enrichment and job enlargement",
+      "explanation": "The discriminating knowledge is that job enrichment is vertical loading (it adds responsibility, autonomy, and decision-making authority to a role) while job enlargement is horizontal loading (it adds more tasks at the same level of complexity without adding authority). The consultant's plan gives analysts priority-setting power, sign-off authority, and mentoring duties, all of which deepen responsibility and control, so it is job enrichment. The colleague's plan holds authority constant and simply adds more accounts of the same kind, which is more breadth at the same level, so it is job enlargement. Option A pairs both correctly. Option B reverses the two, mistaking added authority for mere added volume. Option C mislabels the consultant's plan as job rotation; rotation means cycling an employee through different existing jobs, which neither party proposed. Option D mislabels the colleague's plan as job rotation; the colleague adds more of the same work rather than moving analysts into different roles, so it is enlargement, not rotation.",
       "kn": "KN46",
       "kn_explanation": "Consultant recommending job redesign to improve employee motivation is an intervention to enhance performance of individuals and organizations",
       "difficulty": "medium",

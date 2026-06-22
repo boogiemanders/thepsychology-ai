@@ -217,15 +217,15 @@
       ]
     },
     {
-      "stem": "A behavioral therapist instructs a highly distractible adult client to allow himself to browse news websites for 15 minutes, but only after completing 30 minutes of uninterrupted report writing. The therapist explains that this works because the preferred activity is being used as a consequence for completing the less preferred one. Which operant principle most precisely describes this intervention?",
+      "stem": "A behavioral therapist gathers baseline data on a distractible adult client and finds that, left to his own choices, he spends large amounts of time browsing news websites and very little time on report writing. The therapist sets up an arrangement in which the client may browse news websites only after he has written reports for 30 uninterrupted minutes. Which operant principle most precisely describes this intervention?",
       "options": [
-        "Token economy, because the preferred activity serves as an exchangeable backup reinforcer",
-        "Negative reinforcement, because completing the aversive report writing eventually terminates the demand",
-        "The Premack principle, because a high-frequency behavior is used to reinforce a low-frequency behavior",
-        "Differential reinforcement of incompatible behavior, because browsing and writing cannot occur simultaneously"
+        "The Premack principle, because access to a more probable behavior is made contingent on performance of a less probable behavior",
+        "Response cost, because the client forfeits browsing time whenever report writing is interrupted",
+        "Behavioral momentum, because a series of easy high-probability requests builds compliance with a harder request",
+        "The matching law, because the client allocates time across activities in proportion to their relative rates of reinforcement"
       ],
-      "answer": "The Premack principle, because a high-frequency behavior is used to reinforce a low-frequency behavior",
-      "explanation": "The Premack principle specifies that a high-frequency (preferred) behavior can serve as a reinforcer for a low-frequency (less preferred) behavior when access to the preferred behavior is made contingent on performing the non-preferred behavior. Browsing news (high-frequency) is made contingent on report writing (low-frequency), which is the defining feature of the Premack principle. Token economy requires an exchangeable medium; negative reinforcement requires removal of an aversive stimulus to increase behavior; DRI requires topographic incompatibility between the target and alternative behavior. None of those mechanisms are driving this arrangement.",
+      "answer": "The Premack principle, because access to a more probable behavior is made contingent on performance of a less probable behavior",
+      "explanation": "Correct (Premack principle): The data show that browsing is a high-probability (high-frequency) behavior and report writing is a low-probability one. The Premack principle states that access to a higher-probability behavior, when made contingent on performing a lower-probability behavior, will reinforce the lower-probability behavior. That is exactly the contingency the therapist arranged, and the principle is identified by comparing the two behaviors' baseline probabilities, which is the knowledge the stem supplies as data rather than as a conclusion. Response cost is wrong: response cost is the removal of an already-earned reinforcer (or points/tokens) as a penalty for an undesired response; here nothing earned is taken away, browsing is simply withheld until a requirement is met, so this describes a contingency for gaining access, not a loss. Behavioral momentum is wrong: it requires delivering several easy, high-compliance requests immediately before a difficult one to increase the probability the difficult request is followed, which is not the structure here (there is no sequence of pre-requests, only a single contingency between two activities). The matching law is wrong: it is a descriptive principle about how organisms distribute responding across concurrently available schedules in proportion to reinforcement rates, not a contingency-management intervention, and the therapist is not arranging concurrent schedules or predicting proportional allocation, but rather restricting access to one behavior until another is completed.",
       "kn": "KN7",
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "medium",
@@ -433,15 +433,15 @@
       ]
     },
     {
-      "stem": "A teacher reinforces a student for staying seated for 30 minutes, which is incompatible with the student's usual behavior of leaving their seat frequently. This is an example of:",
+      "stem": "A student frequently gets up and wanders during class. To address this, the teacher stops attending to the wandering and instead delivers praise and a token each time the student remains in their seat for a sustained stretch of the lesson. Which differential reinforcement procedure does this intervention most precisely exemplify?",
       "options": [
-        "Differential reinforcement of incompatible behavior (DRI)",
-        "Differential reinforcement of alternative behavior (DRA)",
-        "Differential reinforcement of other behavior (DRO)",
-        "Differential reinforcement of low rates of behavior (DRL)"
+        "Reinforcing a response that is topographically incompatible with the target behavior",
+        "Reinforcing a functionally equivalent replacement that yields the same maintaining consequence as the target behavior",
+        "Reinforcing the omission of the target behavior across a fixed interval, regardless of what else the student does",
+        "Reinforcing the target behavior only when its rate falls at or below a preset criterion"
       ],
-      "answer": "Differential reinforcement of incompatible behavior (DRI)",
-      "explanation": "1. The correct answer is \"Differential reinforcement of incompatible behavior (DRI)\" because the teacher is reinforcing the student for staying seated, a behavior that cannot occur simultaneously with the undesirable behavior of leaving the seat. DRI specifically involves reinforcing a desirable behavior that is incompatible with the target undesirable behavior, effectively reducing the frequency of the latter.\n\n2. \n- **Differential reinforcement of alternative behavior (DRA)** is incorrect because it involves reinforcing an alternative behavior that is not necessarily incompatible with the undesirable behavior; in this case, the student is not being reinforced for an alternative behavior but rather for a behavior that directly opposes the undesired behavior.\n- **Differential reinforcement of other behavior (DRO)** is incorrect because it focuses on reinforcing any behavior other than the undesirable behavior, rather than specifically reinforcing a behavior that is incompatible with it.\n- **Differential reinforcement of low rates of behavior (DRL)** is incorrect because it involves reinforcing the individual for engaging in the target behavior at or below a specified low rate, rather than reinforcing a behavior that is incompatible with the target behavior.",
+      "answer": "Reinforcing a response that is topographically incompatible with the target behavior",
+      "explanation": "The intervention reinforces remaining seated in order to reduce getting up and wandering. The discriminating insight, which the stem does not state, is that sitting in one's seat cannot be physically performed at the same moment as getting up and walking around; the two responses are topographically incompatible. That is the defining feature of differential reinforcement of incompatible behavior (DRI), making option 0 the most precise fit. Option 1 (DRA) is the strong trap: staying seated is also an alternative behavior, and DRA reinforces any functionally equivalent replacement. But DRA does not require physical incompatibility, so it is the broader, less precise label here; the case where the reinforced response literally cannot co-occur with the target is conventionally classified as DRI. Option 2 describes DRO, which reinforces the mere absence of the target behavior across an interval (the student could earn reinforcement by doing anything other than wandering, including non-seated behaviors), which is not what is happening. Option 3 describes DRL, which reinforces the target behavior itself when it occurs at a low rate, the opposite of eliminating it via an incompatible response. Recognizing that the reinforced behavior is incompatible rather than merely alternative is the knowledge being tested.",
       "kn": "KN7",
       "kn_explanation": "Classifying differential reinforcement procedures falls under operant learning models included in KN7.",
       "difficulty": "medium",
@@ -454,15 +454,15 @@
       ]
     },
     {
-      "stem": "Which step in functional behavioral assessment involves collecting information about the antecedents and consequences maintaining a target behavior and forming hypotheses about its function?",
+      "stem": "A school psychologist conducting a functional behavioral assessment of a student's disruptive outbursts has completed indirect interviews and direct ABC observations, which suggest the outbursts are maintained by escape from difficult academic tasks. To establish this maintaining function with the greatest confidence before designing an intervention, what should the psychologist do next?",
       "options": [
-        "Step 2: Collect information about antecedents and consequences and develop hypotheses",
-        "Step 1: Collect information using direct and indirect methods",
-        "Step 4: Identify and implement function-based interventions",
-        "Step 3: Test hypotheses by altering antecedents and consequences"
+        "Systematically present and withdraw the suspected antecedents and consequences across conditions to see whether the behavior changes as predicted",
+        "Implement a function-based intervention that allows the student to request breaks, then monitor whether outbursts decline",
+        "Conduct additional rating-scale interviews with multiple teachers to corroborate the escape hypothesis",
+        "Compute the conditional probability of the outburst given task demands from the existing observational data"
       ],
-      "answer": "Step 2: Collect information about antecedents and consequences and develop hypotheses",
-      "explanation": "1. **Correct Answer Explanation**: \"Step 2: Collect information about antecedents and consequences and develop hypotheses\" is the correct answer because this step specifically focuses on gathering information about what triggers (antecedents) and follows (consequences) the target behavior. This information is crucial for forming hypotheses about why the behavior occurs, which is essential for developing effective interventions.\n\n2. **Incorrect Options**:\n   - **Step 1: Collect information using direct and indirect methods**: This step involves gathering general information about the target behavior but does not specifically address the antecedents and consequences or the formation of hypotheses.\n   - **Step 4: Identify and implement function-based interventions**: This step occurs after hypotheses have been formed and focuses on applying interventions based on the identified functions of the behavior, not on collecting antecedent and consequence data.\n   - **Step 3: Test hypotheses by altering antecedents and consequences**: This step involves experimenting with changes to the antecedents and consequences to see if the behavior changes, but it does not focus on the initial collection of information or the development of hypotheses.",
+      "answer": "Systematically present and withdraw the suspected antecedents and consequences across conditions to see whether the behavior changes as predicted",
+      "explanation": "The correct answer is to systematically manipulate the suspected antecedents and consequences across conditions, which is a functional analysis. Descriptive methods (interviews and ABC observation) can only generate a hypothesis about function because they reveal correlation, not causation; the only way to demonstrate the maintaining function with confidence is to experimentally arrange conditions (e.g., demand vs. no-demand, escape vs. no-escape) and observe whether the behavior changes as predicted. Implementing a break-based intervention skips verification and treats the unconfirmed hypothesis as established, so if the function is misidentified the intervention may fail or worsen the behavior. Gathering more rating-scale interviews adds more indirect, correlational data and cannot establish causation no matter how many informants agree. Computing conditional probabilities from existing observations is a useful descriptive-analysis technique but still relies on naturally occurring (correlational) data and cannot confirm a causal maintaining function, which is precisely what experimental manipulation provides.",
       "kn": "KN7",
       "kn_explanation": "This question addresses the behavioral assessment process fundamental to designing operant interventions, consistent with KN7.",
       "difficulty": "medium",

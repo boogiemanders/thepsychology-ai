@@ -25,15 +25,15 @@
       ]
     },
     {
-      "stem": "A researcher plots the relationship between a predictor variable (X) and a criterion variable (Y) on a scatterplot. She notices that the spread of Y scores is roughly the same at every level of X, and the data points form a circular cloud with no discernible pattern. Which of the following BEST describes this situation?",
+      "stem": "A researcher plots a predictor variable (X) against a criterion variable (Y). Near the low end of X, the Y values sit in a tight, narrow band; as X increases, the points fan outward into an increasingly wide vertical band. Across the whole plot the points still trend clearly and consistently upward from lower-left to upper-right. Which of the following BEST describes this situation?",
       "options": [
-        "The variables show a strong linear relationship with homoscedasticity",
-        "The variables show heteroscedasticity with a moderate positive correlation",
-        "The variables show homoscedasticity with a correlation near zero",
-        "The variables show a curvilinear relationship that Pearson's r would accurately capture"
+        "The data show a strong positive correlation accompanied by heteroscedasticity",
+        "The data show a strong positive correlation accompanied by homoscedasticity",
+        "The data show a correlation near zero accompanied by heteroscedasticity",
+        "The data show a weak positive correlation accompanied by homoscedasticity"
       ],
-      "answer": "The variables show homoscedasticity with a correlation near zero",
-      "explanation": "When the variability in Y scores is similar across all levels of X (homoscedasticity) and the data form a circular cloud with no discernible pattern, the correlation is near zero. Homoscedasticity means the 'variability in your criterion scores should be similar across all levels of your predictor scores.' A circular cloud pattern indicates no systematic linear relationship. Option A is wrong because a strong linear relationship would show an elongated ellipse, not a circular cloud. Option B is wrong because heteroscedasticity would mean unequal variability across predictor levels. Option D is wrong because Pearson's r would not accurately capture curvilinear relationships.",
+      "answer": "The data show a strong positive correlation accompanied by heteroscedasticity",
+      "explanation": "Homoscedasticity and the strength of a correlation are two independent properties of a scatterplot. Homoscedasticity concerns whether the spread (variance) of Y is constant across the levels of X; the correlation concerns how tightly the points cluster around an overall trend and in what direction. The described plot fans out from a narrow band at low X to a wide band at high X, which means the variance of Y is NOT constant across X. That unequal spread is heteroscedasticity. At the same time, the points trend clearly and consistently upward, indicating a strong positive correlation. So the correct pairing is a strong positive correlation with heteroscedasticity (Option 0). Option 1 is wrong because it labels the fanning spread as homoscedasticity, conflating constant variance with the mere presence of a trend; the spread is plainly unequal. Option 2 is wrong because a clear, consistent upward trend cannot be a correlation near zero; a near-zero r would show a patternless cloud, not a directional trend. Option 3 is wrong on both counts: a tight, consistent upward trend reflects a strong (not weak) relationship, and the changing band width is heteroscedastic (not homoscedastic). The item requires recognizing that fanning residual spread defines heteroscedasticity regardless of how strong the underlying relationship is.",
       "kn": "KN55",
       "kn_explanation": "Analyzing spread of residuals in a scatterplot (heteroscedasticity) is a quantitative analytic/statistical method",
       "difficulty": "medium",
@@ -277,15 +277,15 @@
       ]
     },
     {
-      "stem": "A researcher creates a scatterplot showing the relationship between therapist experience (X) and client outcome ratings (Y). She notices that clients of therapists with fewer than 5 years of experience show highly variable outcome ratings (ranging from very poor to excellent), while clients of therapists with more than 15 years of experience show consistently high ratings with little variability. This pattern MOST directly indicates a violation of which assumption?",
+      "stem": "A researcher fits a linear regression predicting client outcome ratings (Y) from therapist years of experience (X). When she plots the residuals against the predicted values, the points form a fan shape: the residuals are widely scattered at low predicted values and cluster tightly near zero at high predicted values. Which assumption of ordinary least squares regression does this residual pattern MOST directly indicate has been violated?",
       "options": [
-        "Linearity, suggesting a curvilinear relationship between the variables",
-        "Unrestricted range, indicating that extreme scores have been excluded from the sample",
-        "Homoscedasticity, meaning the variability in criterion scores differs across levels of the predictor",
-        "Normality, indicating that the distribution of outcome ratings is skewed"
+        "Homoscedasticity",
+        "Linearity",
+        "Normality of residuals",
+        "Independence of errors"
       ],
-      "answer": "Homoscedasticity, meaning the variability in criterion scores differs across levels of the predictor",
-      "explanation": "Homoscedasticity requires that the variability in criterion (Y) scores is similar across all levels of the predictor (X) scores. In this scenario, outcome rating variability is high for low-experience therapists but low for high-experience therapists — a classic violation of homoscedasticity. The lesson states: 'the variability in your criterion scores should be similar across all levels of your predictor scores' and provides a similar example about therapy sessions and satisfaction. Linearity concerns the shape of the relationship, not differential variability. Unrestricted range concerns whether the full range of scores is represented. Normality is not one of the three stated correlation assumptions.",
+      "answer": "Homoscedasticity",
+      "explanation": "A fan- or cone-shaped residual plot, where the spread of residuals changes systematically across the range of predicted values, is the textbook signature of heteroscedasticity, which is a violation of the homoscedasticity assumption that the variance of the errors is constant across all levels of the predictor. Linearity is wrong because that assumption concerns whether the relationship's form is straight versus curved; its violation shows up as a curved or U-shaped pattern in the residuals, not a change in spread. Normality of residuals is wrong because that assumption concerns the shape of the residual distribution (assessed with a histogram or Q-Q plot) and a violation does not produce a systematic funnel in a residuals-versus-fitted plot. Independence of errors is wrong because that assumption concerns correlation among residuals (for example, autocorrelation in time-ordered or clustered data) and its violation appears as patterning or runs across the order of observations, not as unequal vertical spread.",
       "kn": "KN55",
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",

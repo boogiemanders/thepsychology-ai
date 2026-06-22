@@ -138,15 +138,15 @@
     },
     {
       "id": 6,
-      "question": "Dr. Okafor is a clinical psychologist who also serves as the clinical director at a community mental health center. One of her direct supervisees has requested that she also provide individual clinical supervision for licensure hours. Which factor from Gottlieb's decision-making model would be MOST relevant in evaluating this arrangement?",
+      "question": "A licensed psychologist who already holds an ongoing professional relationship with a less-experienced colleague is weighing whether to take on an additional, second professional role with that same person. The psychologist decides to work through Gottlieb's decision-making model before agreeing. Across which set of dimensions does Gottlieb's model direct the psychologist to evaluate each of the two relationships when deciding whether the added role is likely to be harmful?",
       "options": [
-        "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
-        "Whether the supervisee has given informed consent to the dual relationship",
-        "The geographic availability of alternative supervisors in the community",
-        "Whether Dr. Okafor has previously supervised other employees at the center"
+        "The degree of power held over the other person, the expected duration of the relationship, and the clarity with which the relationship will eventually terminate",
+        "The voluntariness of the other person's consent, the documentation of that consent, and the availability of a less-conflicted alternative provider",
+        "The foreseeable risk of exploitation, the likelihood of impaired objectivity, and the potential for harm to the professional relationship",
+        "The incompatibility of expectations between the two roles, the divergence of the obligations each role imposes, and the resulting role conflict"
       ],
-      "correct_answer": "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
-      "explanation": "Gottlieb's decision-making model evaluates multiple relationships along three dimensions: power differential, duration, and clarity of termination. In this scenario, the most salient concern is the compounded power differential—Dr. Okafor already holds administrative authority over the supervisee as clinical director, and adding clinical supervision creates an even larger power gap. The lesson specifically identifies 'Large gap (supervisor-supervisee)' as higher risk. Option A, while relevant to ethical practice generally, is not one of Gottlieb's three factors. Option C is irrelevant to the model. Option D addresses practical concerns but not the ethical framework.",
+      "correct_answer": "The degree of power held over the other person, the expected duration of the relationship, and the clarity with which the relationship will eventually terminate",
+      "explanation": "Gottlieb's (1993) model for deciding whether to enter an additional relationship evaluates each relationship along three dimensions: the amount of power the psychologist holds over the other person, the expected duration of the relationship, and the clarity of termination (how definitely and predictably the relationship will end). Greater power, longer duration, and lower clarity of termination each raise the risk of harm and argue against adding the second role, so option 0 is correct. Option 1 lists informed-consent and referral-management considerations, which are sound general practices for handling multiple relationships but are not the dimensions Gottlieb's model assesses. Option 2 restates the APA Ethics Code Standard 3.05 / 3.06 test for impermissible multiple relationships (foreseeable exploitation, impaired objectivity, and risk of harm); it is the regulatory standard, not Gottlieb's decision dimensions. Option 3 names Kitchener's (1988) role-theory framework for role conflict (incompatibility of expectations, divergence of obligations, and power differential), a different model that is easily confused with Gottlieb's but is not the triad Gottlieb specifies.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
       "source_file": "8 Standards 3 and 4.json",
@@ -2700,15 +2700,15 @@
     },
     {
       "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::32",
-      "question": "A 4-year-old watches as an experimenter pours water from a short, wide beaker into a tall, narrow cylinder and asks whether the amount of water changed. The child says 'there's more now because it's taller,' ignoring that the cylinder is narrower. According to Piaget, the specific cognitive limitation most directly responsible for this error is:",
+      "question": "A 4-year-old watches an experimenter pour water from a short, wide beaker into a tall, narrow cylinder, then asks whether the amount of water is the same. The child looks at the cylinder, points to the high water line, and says, \"There's more now.\" According to Piaget, which preoperational limitation most directly accounts for the child's judgment?",
       "options": [
-        "Egocentrism, because the child cannot take the experimenter's physical perspective on the containers",
-        "Irreversibility, because the child cannot mentally reverse the pouring action to infer the original amount",
-        "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
-        "Animism, because the child attributes the water's movement to intentional self-directed action"
+        "Centration: the child attends to one salient feature of the display at a time rather than coordinating multiple features simultaneously",
+        "Irreversibility: the child cannot mentally undo a transformation to return the array to its prior state",
+        "Egocentrism: the child judges the display from a single fixed viewpoint and cannot adopt another observer's perspective",
+        "Transductive reasoning: the child links two co-occurring particular events as cause and effect without general logical rules"
       ],
-      "correct_answer": "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
-      "explanation": "Centration is Piaget's term for the preoperational tendency to focus attention on one salient perceptual dimension of a stimulus while failing to simultaneously consider other relevant dimensions. In this conservation task, the child centers on the height of the water column — the most visually salient change — while ignoring that the narrower width compensates for the increased height. The result is an incorrect judgment about quantity. Egocentrism (A) involves difficulty understanding that others hold different perspectives than oneself, not a failure to integrate multiple physical dimensions. Irreversibility (B) refers to the inability to mentally undo an action and is also implicated in conservation failures, but the specific error described — focusing exclusively on height — is most directly attributed to centration rather than irreversibility. Animism (D) involves attributing life or intention to inanimate objects, which is unrelated to this quantity judgment task.",
+      "correct_answer": "Centration: the child attends to one salient feature of the display at a time rather than coordinating multiple features simultaneously",
+      "explanation": "The child bases the \"more\" judgment on a single perceptual feature (the higher water line) and fails to simultaneously coordinate it with the offsetting change in width. That selective focus on one dimension at the expense of others is exactly centration, the limitation Piaget identified as central to conservation failure, so option 0 is correct. Irreversibility (option 1) is a real preoperational deficit, but it explains why the child cannot recover the original amount by imagining the pour reversed; it does not by itself account for the child actively concluding there is MORE based on the visible display, which is a centration error. Egocentrism (option 2) concerns the inability to take another person's spatial or mental perspective and is irrelevant here, because the conservation error has nothing to do with viewpoint. Transductive reasoning (option 3) is the preoperational tendency to reason from particular to particular and infer faulty causal links, which describes a different class of error and does not fit a one-dimensional perceptual judgment about quantity.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN23",
       "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
@@ -4086,15 +4086,15 @@
     },
     {
       "id": 194,
-      "question": "An industrial-organizational psychologist reviews exit interview data and employee satisfaction surveys from a large healthcare organization. She finds that units with the lowest mean job satisfaction scores show the highest rates of voluntary employee turnover. Which of the following best characterizes this statistical relationship?",
+      "question": "An industrial-organizational psychologist is consulting with a large healthcare organization that wants to reduce voluntary employee turnover. Leadership asks her to summarize what the empirical research literature establishes about the link between employees' job satisfaction and their decision to quit. Which statement most accurately reflects the findings on this relationship?",
       "options": [
-        "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
-        "A positive correlation, indicating that higher satisfaction predicts greater likelihood of leaving",
-        "A U-shaped curvilinear relationship, in which both very low and very high satisfaction predict elevated turnover rates",
-        "An absence of a reliable relationship, because turnover is primarily determined by external labor market conditions rather than internal satisfaction"
+        "Job satisfaction shows a modest negative association with voluntary turnover, and its influence operates largely through withdrawal cognitions such as intention to quit",
+        "Job satisfaction is the single strongest and most direct predictor of voluntary turnover, accounting for the majority of variance in who leaves",
+        "Job satisfaction is unrelated to voluntary turnover once compensation and external labor-market opportunities are statistically controlled",
+        "Job satisfaction predicts voluntary turnover only among low-performing employees, because high performers leave for reasons unrelated to how they feel about the job"
       ],
-      "correct_answer": "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
-      "explanation": "The established finding in I/O psychology is that job satisfaction and voluntary turnover are negatively correlated: as job satisfaction decreases, the probability of an employee voluntarily leaving the organization increases. This relationship is one of the most replicated findings in organizational behavior research. The positive correlation option reverses the established direction. While labor market conditions moderate the relationship, satisfaction remains a reliable independent predictor, contradicting the 'no relationship' option. A U-shaped relationship is not supported by the literature for this outcome.",
+      "correct_answer": "Job satisfaction shows a modest negative association with voluntary turnover, and its influence operates largely through withdrawal cognitions such as intention to quit",
+      "explanation": "Correct (option 0): Meta-analytic and process-model research (e.g., Mobley, Hom & Griffeth) shows job satisfaction is reliably but only modestly negatively related to voluntary turnover, and its effect is largely indirect, channeled through withdrawal cognitions such as turnover intentions and job-search behavior rather than producing quitting directly. Option 1 is wrong: although intuitively appealing, satisfaction is a relatively weak direct predictor; turnover intentions and organizational commitment typically predict actual quitting as well or better, and satisfaction explains only a small share of variance. Option 2 is wrong: the satisfaction–turnover association persists beyond pay and market factors; those variables are additional contributors, not full confounds that erase the relationship. Option 3 is wrong: it confuses this with the performance–turnover literature; dissatisfaction raises quit likelihood across performance levels, and if anything dissatisfied high performers (who have more alternatives) are especially likely to leave, so the relationship is not limited to low performers.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
       "source_file": "2 Work Motivation.json",

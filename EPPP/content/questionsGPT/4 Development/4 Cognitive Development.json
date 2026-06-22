@@ -574,15 +574,15 @@
       ]
     },
     {
-      "stem": "A 4-year-old watches as an experimenter pours water from a short, wide beaker into a tall, narrow cylinder and asks whether the amount of water changed. The child says 'there's more now because it's taller,' ignoring that the cylinder is narrower. According to Piaget, the specific cognitive limitation most directly responsible for this error is:",
+      "stem": "A 4-year-old watches an experimenter pour water from a short, wide beaker into a tall, narrow cylinder, then asks whether the amount of water is the same. The child looks at the cylinder, points to the high water line, and says, \"There's more now.\" According to Piaget, which preoperational limitation most directly accounts for the child's judgment?",
       "options": [
-        "Egocentrism, because the child cannot take the experimenter's physical perspective on the containers",
-        "Irreversibility, because the child cannot mentally reverse the pouring action to infer the original amount",
-        "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
-        "Animism, because the child attributes the water's movement to intentional self-directed action"
+        "Centration: the child attends to one salient feature of the display at a time rather than coordinating multiple features simultaneously",
+        "Irreversibility: the child cannot mentally undo a transformation to return the array to its prior state",
+        "Egocentrism: the child judges the display from a single fixed viewpoint and cannot adopt another observer's perspective",
+        "Transductive reasoning: the child links two co-occurring particular events as cause and effect without general logical rules"
       ],
-      "answer": "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
-      "explanation": "Centration is Piaget's term for the preoperational tendency to focus attention on one salient perceptual dimension of a stimulus while failing to simultaneously consider other relevant dimensions. In this conservation task, the child centers on the height of the water column — the most visually salient change — while ignoring that the narrower width compensates for the increased height. The result is an incorrect judgment about quantity. Egocentrism (A) involves difficulty understanding that others hold different perspectives than oneself, not a failure to integrate multiple physical dimensions. Irreversibility (B) refers to the inability to mentally undo an action and is also implicated in conservation failures, but the specific error described — focusing exclusively on height — is most directly attributed to centration rather than irreversibility. Animism (D) involves attributing life or intention to inanimate objects, which is unrelated to this quantity judgment task.",
+      "answer": "Centration: the child attends to one salient feature of the display at a time rather than coordinating multiple features simultaneously",
+      "explanation": "The child bases the \"more\" judgment on a single perceptual feature (the higher water line) and fails to simultaneously coordinate it with the offsetting change in width. That selective focus on one dimension at the expense of others is exactly centration, the limitation Piaget identified as central to conservation failure, so option 0 is correct. Irreversibility (option 1) is a real preoperational deficit, but it explains why the child cannot recover the original amount by imagining the pour reversed; it does not by itself account for the child actively concluding there is MORE based on the visible display, which is a centration error. Egocentrism (option 2) concerns the inability to take another person's spatial or mental perspective and is irrelevant here, because the conservation error has nothing to do with viewpoint. Transductive reasoning (option 3) is the preoperational tendency to reason from particular to particular and infer faulty causal links, which describes a different class of error and does not fit a one-dimensional perceptual judgment about quantity.",
       "kn": "KN23",
       "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "medium",

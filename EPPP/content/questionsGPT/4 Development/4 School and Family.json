@@ -514,15 +514,15 @@
       ]
     },
     {
-      "stem": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The child's parents report significant distress at school, including refusal to use the girls' restroom and daily crying before school. According to DSM-5, which of the following is required in addition to the specified incongruence criteria to diagnose Gender Dysphoria in Children?",
+      "stem": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The clinician has confirmed that the marked incongruence between the child's experienced gender and assigned gender meets the indicator criteria. According to DSM-5, what else must be established before the diagnosis of Gender Dysphoria in Children can be made?",
       "options": [
-        "Clinically significant distress or impairment in social, school, or other important areas of functioning",
-        "Documented biological evidence of a sex chromosome variation or hormonal atypicality",
-        "Onset of gender incongruence symptoms prior to age 5",
-        "Presence of co-occurring separation anxiety disorder or oppositional defiant disorder"
+        "The incongruence is associated with clinically significant distress or impairment in important areas of functioning",
+        "The child also expresses a strong desire for the primary or secondary sex characteristics of the experienced gender",
+        "The presentation is not better accounted for by a disorder of sex development, which would otherwise rule out the diagnosis",
+        "The gender incongruence has persisted continuously for at least 12 months"
       ],
-      "answer": "Clinically significant distress or impairment in social, school, or other important areas of functioning",
-      "explanation": "DSM-5 Gender Dysphoria in Children requires two criteria: Criterion A, a marked incongruence between experienced/expressed gender and assigned gender manifested by at least 6 of 8 specified indicators lasting at least 6 months, AND Criterion B, clinically significant distress or impairment. The distress/impairment criterion (Criterion B) is essential because it distinguishes Gender Dysphoria from gender nonconformity that does not cause distress. The 8-month duration in this vignette satisfies the minimum 6-month threshold. Option B is incorrect because biological sex variations are not required; they may be noted as a specifier if present. Option C is incorrect because DSM-5 imposes no age-of-onset requirement before age 5. Option D is incorrect because comorbid diagnoses are not required for the Gender Dysphoria diagnosis.",
+      "answer": "The incongruence is associated with clinically significant distress or impairment in important areas of functioning",
+      "explanation": "DSM-5 Gender Dysphoria requires two things: Criterion A (a marked incongruence, evidenced by a specified number of indicators) AND Criterion B (the condition is associated with clinically significant distress or impairment in social, school, or other important areas of functioning). The stem stipulates that Criterion A is already met, so the remaining requirement is the distress/impairment gate, which is what separates gender dysphoria from gender nonconformity. Option B is wrong because a desire for the other gender's primary or secondary sex characteristics is only one of the optional Criterion A indicators for children, not a mandatory additional requirement, and in children it is rarely present given prepubertal development. Option C is wrong because a disorder of sex development is a diagnostic specifier ('with a disorder of sex development'), not an exclusion; its presence does not rule out the diagnosis. Option D is wrong because the required duration is at least 6 months (built into Criterion A), not 12 months, so '12 months continuous' misstates the timeframe.",
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",

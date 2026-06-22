@@ -3969,15 +3969,15 @@
       "scored": false
     },
     {
-      "stem": "Which step in functional behavioral assessment involves collecting information about the antecedents and consequences maintaining a target behavior and forming hypotheses about its function?",
+      "stem": "A school psychologist conducting a functional behavioral assessment of a student's disruptive outbursts has completed indirect interviews and direct ABC observations, which suggest the outbursts are maintained by escape from difficult academic tasks. To establish this maintaining function with the greatest confidence before designing an intervention, what should the psychologist do next?",
       "options": [
-        "Step 2: Collect information about antecedents and consequences and develop hypotheses",
-        "Step 1: Collect information using direct and indirect methods",
-        "Step 4: Identify and implement function-based interventions",
-        "Step 3: Test hypotheses by altering antecedents and consequences"
+        "Systematically present and withdraw the suspected antecedents and consequences across conditions to see whether the behavior changes as predicted",
+        "Implement a function-based intervention that allows the student to request breaks, then monitor whether outbursts decline",
+        "Conduct additional rating-scale interviews with multiple teachers to corroborate the escape hypothesis",
+        "Compute the conditional probability of the outburst given task demands from the existing observational data"
       ],
-      "answer": "Step 2: Collect information about antecedents and consequences and develop hypotheses",
-      "explanation": "1. **Correct Answer Explanation**: \"Step 2: Collect information about antecedents and consequences and develop hypotheses\" is the correct answer because this step specifically focuses on gathering information about what triggers (antecedents) and follows (consequences) the target behavior. This information is crucial for forming hypotheses about why the behavior occurs, which is essential for developing effective interventions.\n\n2. **Incorrect Options**:\n   - **Step 1: Collect information using direct and indirect methods**: This step involves gathering general information about the target behavior but does not specifically address the antecedents and consequences or the formation of hypotheses.\n   - **Step 4: Identify and implement function-based interventions**: This step occurs after hypotheses have been formed and focuses on applying interventions based on the identified functions of the behavior, not on collecting antecedent and consequence data.\n   - **Step 3: Test hypotheses by altering antecedents and consequences**: This step involves experimenting with changes to the antecedents and consequences to see if the behavior changes, but it does not focus on the initial collection of information or the development of hypotheses.",
+      "answer": "Systematically present and withdraw the suspected antecedents and consequences across conditions to see whether the behavior changes as predicted",
+      "explanation": "The correct answer is to systematically manipulate the suspected antecedents and consequences across conditions, which is a functional analysis. Descriptive methods (interviews and ABC observation) can only generate a hypothesis about function because they reveal correlation, not causation; the only way to demonstrate the maintaining function with confidence is to experimentally arrange conditions (e.g., demand vs. no-demand, escape vs. no-escape) and observe whether the behavior changes as predicted. Implementing a break-based intervention skips verification and treats the unconfirmed hypothesis as established, so if the function is misidentified the intervention may fail or worsen the behavior. Gathering more rating-scale interviews adds more indirect, correlational data and cannot establish causation no matter how many informants agree. Computing conditional probabilities from existing observations is a useful descriptive-analysis technique but still relies on naturally occurring (correlational) data and cannot confirm a causal maintaining function, which is precisely what experimental manipulation provides.",
       "kn": "KN7",
       "kn_explanation": "This question addresses the behavioral assessment process fundamental to designing operant interventions, consistent with KN7.",
       "difficulty": "medium",
