@@ -46,14 +46,26 @@ if (!stripeSecretKey) {
 
 const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null
 
-// Founding ($20/mo) and standard ($30/mo) price IDs
+// Founding ($20/mo, legacy), standard ($30/mo), and current ($40/mo from July 1) price IDs
 const FALLBACK_PRO_PRICE = 'price_1SWv6wAHUPMmLYsCy5yObtDu'
 
 function getProPriceId(): string {
-  const { isFoundingPrice } = getPricingInfo()
+  const { isFoundingPrice, priceHasIncreased } = getPricingInfo()
 
   if (isFoundingPrice) {
     return process.env.STRIPE_PRICE_ID_PRO_FOUNDING || FALLBACK_PRO_PRICE
+  }
+
+  if (priceHasIncreased) {
+    // $40 current price. If STRIPE_PRICE_ID_PRO_CURRENT is unset, fall back to
+    // standard ($30) so the most-likely misconfig (forgetting the freshly-added
+    // env) degrades to the prior price. FALLBACK_PRO_PRICE is the legacy $20 id,
+    // so it only ever applies if STANDARD is also missing.
+    return (
+      process.env.STRIPE_PRICE_ID_PRO_CURRENT ||
+      process.env.STRIPE_PRICE_ID_PRO_STANDARD ||
+      FALLBACK_PRO_PRICE
+    )
   }
 
   return process.env.STRIPE_PRICE_ID_PRO_STANDARD || FALLBACK_PRO_PRICE

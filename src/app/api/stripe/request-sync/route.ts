@@ -15,9 +15,10 @@ const PRICE_TO_TIER: Record<string, 'pro'> = {
   // Test price IDs
   'price_1SaZCyAHUPMmLYsChA0LhNDs': 'pro',
   'price_1SxOOQAHUPMmLYsCIsVx16ln': 'pro', // was coaching, now pro
-  // Founding price ($20/mo) and standard price ($30/mo)
+  // Founding price ($20/mo), standard price ($30/mo), current price ($40/mo)
   ...(process.env.STRIPE_PRICE_ID_PRO_FOUNDING ? { [process.env.STRIPE_PRICE_ID_PRO_FOUNDING]: 'pro' as const } : {}),
   ...(process.env.STRIPE_PRICE_ID_PRO_STANDARD ? { [process.env.STRIPE_PRICE_ID_PRO_STANDARD]: 'pro' as const } : {}),
+  ...(process.env.STRIPE_PRICE_ID_PRO_CURRENT ? { [process.env.STRIPE_PRICE_ID_PRO_CURRENT]: 'pro' as const } : {}),
 }
 
 // In-memory rate limiting: one sync per user per minute
