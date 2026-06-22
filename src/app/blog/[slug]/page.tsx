@@ -93,7 +93,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     : null
 
   const topCta = PAID_LANDING_SLUGS.has(slug) ? (
-    <div className="not-prose mb-8 flex flex-col gap-3 rounded-xl border border-primary/30 bg-accent/40 p-5 sm:flex-row sm:items-center">
+    <div key="paid-top-cta" className="not-prose mb-8 flex flex-col gap-3 rounded-xl border border-primary/30 bg-accent/40 p-5 sm:flex-row sm:items-center">
       <div className="flex-1 space-y-1">
         <p className="text-base font-semibold text-foreground">Adaptive EPPP prep, free for 7 days.</p>
         <p className="text-sm text-muted-foreground">
