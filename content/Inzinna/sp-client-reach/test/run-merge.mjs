@@ -24,7 +24,7 @@ if (!existsSync(attPath) || !existsSync(detPath)) {
   process.exit(0)
 }
 
-const { rows, stats } = mergeReports(readFileSync(attPath, 'utf8'), readFileSync(detPath, 'utf8'))
+const { rows, rater8, stats } = mergeReports(readFileSync(attPath, 'utf8'), readFileSync(detPath, 'utf8'))
 
 const byLocation = {}
 for (const r of rows) byLocation[r.location] = (byLocation[r.location] ?? 0) + 1
@@ -34,7 +34,10 @@ for (const r of rows) byMatch[r.match] = (byMatch[r.match] ?? 0) + 1
 console.log('stats:', stats)
 console.log('locations:', byLocation)
 console.log('match types:', byMatch)
-console.log('rater8-ready rows:', rater8Rows(rows).length)
+console.log('rater8 rows (one per visit):', rater8.length)
+// every rater8 row must be a seen visit with a way to reach the person
+const badStatus = rater8.filter((r) => r[7] !== 'Show').length
+const noContact = rater8.filter((r) => !r[2] && !r[3]).length
 
 // sanity assertions against the known 5/11-6/11 exports
 let failures = 0
@@ -60,6 +63,14 @@ expect(
   stats.rows,
   stats.rows >= 193,
   '>=193 (couples expand to more rows, never fewer)'
+)
+expect('rater8 all seen', badStatus, badStatus === 0, '0 rows with status != Show')
+expect('rater8 all reachable', noContact, noContact === 0, '0 rows missing phone+email')
+expect(
+  'rater8 columns',
+  rater8[0]?.length,
+  rater8[0]?.length === 8,
+  '8 (First,Last,Email,Cell,Provider,Location,Date,Status)'
 )
 
 if (failures) {

@@ -1,7 +1,6 @@
 import { toCsv } from '../lib/csv'
 import {
   mergeReports,
-  rater8Rows,
   fullRows,
   RATER8_HEADER,
   FULL_HEADER,
@@ -173,7 +172,7 @@ function render() {
   $('stats-line').textContent =
     `${s.rows} people from ${s.appointments} appointments · ${manhattan} Manhattan · ${virtual} Virtual · ` +
     `${s.notFound} not in client details · ${s.missingContact} without contact info · ` +
-    `${rater8Rows(merged.rows).length} ready for rater8`
+    `${merged.rater8.length} rater8 rows (one per visit)`
 
   const tbody = $('results-table').querySelector('tbody')!
   tbody.innerHTML = ''
@@ -290,7 +289,7 @@ async function init() {
 
   $('dl-rater8').addEventListener('click', () => {
     if (!merged) return
-    downloadCsv(`rater8_${safeLabel()}.csv`, toCsv(RATER8_HEADER, rater8Rows(merged.rows)))
+    downloadCsv(`rater8_${safeLabel()}.csv`, toCsv(RATER8_HEADER, merged.rater8))
   })
   $('dl-full').addEventListener('click', () => {
     if (!merged) return

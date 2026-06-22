@@ -33,9 +33,11 @@ Each "Send to Google Sheet" creates (or refreshes) a tab named after the period,
 
 ## rater8 CSV columns
 
-`First Name, Last Name, Email, Cell Phone, Provider, Location, Last Visit Date`
+`First Name, Last Name, Email, Cell Phone, Provider, Location, Appointment Date, Appointment Status`
 
-Only clients with at least one attended ("Show") appointment in the period AND a phone or email are included. rater8 has no public spec for upload files; if their rep wants different columns, change `RATER8_HEADER` / `rater8Rows` in `src/lib/merge.ts` (one place).
+One row **per attended visit** (rater8's appointment-level model), not one per person. A client seen 5 times in the period gets 5 rows. Only attended ("Show") appointments where the person has a phone or email are included, so Appointment Status is always "Show" (rater8 accepts either a status column or a report pre-filtered to seen patients; this gives both).
+
+Fields rater8 also asks for but SimplePractice does NOT export in these two reports: secondary phone, provider ID, location ID, appointment ID, appointment type. The names are the required fields and are present. To change columns, edit `RATER8_HEADER` and the `rater8.push([...])` block in `mergeReports` (`src/lib/merge.ts`).
 
 ## Troubleshooting
 
