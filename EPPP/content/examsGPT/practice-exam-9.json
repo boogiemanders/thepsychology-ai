@@ -285,15 +285,15 @@
     },
     {
       "id": 13,
-      "question": "At which stage of moral development does Kohlberg suggest individuals begin to understand that rules can be changed through mutual agreement?",
+      "question": "At which stage of moral development does Kohlberg suggest individuals begin to understand that laws are social contracts that can be changed through mutual agreement?",
       "options": [
         "Preconventional",
         "Conventional",
         "Postconventional",
         "Autonomous"
       ],
-      "correct_answer": "Autonomous",
-      "explanation": "Kohlberg's Autonomous Stage indicates that individuals understand rules are created through mutual agreement and can be changed. The other stages do not reflect this understanding.",
+      "correct_answer": "Postconventional",
+      "explanation": "Kohlberg's postconventional level (specifically Stage 5, the social-contract orientation) is where people understand that laws are social agreements that can be changed through democratic, mutual consent when they no longer serve justice. 'Autonomous' is the trap here: it is a stage in Piaget's moral theory, not one of Kohlberg's levels. Preconventional and conventional reasoning still treat rules and laws as externally fixed.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN23",
       "source_file": "4 Morality.json",
