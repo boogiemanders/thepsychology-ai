@@ -3,10 +3,21 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getAllBlogPosts, getBlogPostMarkdown, getPlainTextExcerpt } from "@/lib/seo/blog-content.server"
 import { BlogArticleWithAudio } from "@/components/blog/blog-article-with-audio"
+import { Button } from "@/components/ui/button"
 
 type PageProps = {
   params: Promise<{ slug: string }>
 }
+
+// Posts used as paid-search landing pages get a hard "Start free trial" CTA above the fold.
+const PAID_LANDING_SLUGS = new Set([
+  "eppp-prep-programs-compared-2026",
+  "free-eppp-practice-questions",
+  "eppp-pass-rates",
+  "thepsychology-vs-aatbs",
+  "thepsychology-vs-psychprep",
+  "thepsychology-vs-prepjet",
+])
 
 export function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({
@@ -81,6 +92,22 @@ export default async function BlogPostPage({ params }: PageProps) {
       })
     : null
 
+  const topCta = PAID_LANDING_SLUGS.has(slug) ? (
+    <div key="paid-top-cta" className="not-prose mb-8 flex flex-col gap-3 rounded-xl border border-primary/30 bg-accent/40 p-5 sm:flex-row sm:items-center">
+      <div className="flex-1 space-y-1">
+        <p className="text-base font-semibold text-foreground">Adaptive EPPP prep, free for 7 days.</p>
+        <p className="text-sm text-muted-foreground">
+          Full question bank and practice exams. No credit card. $30/month through June, $40 from July 1.
+        </p>
+      </div>
+      <Button asChild size="lg" className="shrink-0">
+        <Link href={`/?utm_source=blog&utm_medium=cta&utm_campaign=${slug}#get-started`}>
+          Start free trial
+        </Link>
+      </Button>
+    </div>
+  ) : null
+
   return (
     <main className="w-full px-6 py-16">
       <script
@@ -96,6 +123,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             author={entry.author}
             publishedDate={publishedDate}
             tags={entry.tags}
+            topCta={topCta}
           />
         </article>
 

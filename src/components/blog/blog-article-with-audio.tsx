@@ -31,9 +31,10 @@ interface BlogArticleWithAudioProps {
   author: string
   publishedDate: string | null
   tags: string[]
+  topCta?: React.ReactNode
 }
 
-export function BlogArticleWithAudio({ content, slug, title, author, publishedDate, tags }: BlogArticleWithAudioProps) {
+export function BlogArticleWithAudio({ content, slug, title, author, publishedDate, tags, topCta }: BlogArticleWithAudioProps) {
   const rootRef = useRef<HTMLDivElement>(null)
   const spansRef = useRef<HTMLSpanElement[]>([])
   const prevWordRef = useRef<number | null>(null)
@@ -129,6 +130,8 @@ export function BlogArticleWithAudio({ content, slug, title, author, publishedDa
             </div>
           )}
         </div>
+
+        {topCta}
 
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
