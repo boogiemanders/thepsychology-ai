@@ -193,3 +193,61 @@ export function getStoredLandingAttribution(): LandingAttribution {
     return empty
   }
 }
+
+const BLOG_STORAGE_KEY = 'thepsychology_blog_attribution'
+const BLOG_EXPIRY_KEY = 'thepsychology_blog_expiry'
+
+/**
+ * Extract the blog slug from a /blog/<slug> path, or null if not a blog post.
+ */
+export function blogSlugFromPath(pathname: string): string | null {
+  const m = pathname.match(/^\/blog\/([^/?#]+)/)
+  return m ? m[1] : null
+}
+
+/**
+ * Store first-touch blog attribution: the FIRST blog post the visitor lands on
+ * (in a 30-day window), independent of whether they click the in-blog CTA.
+ * This is the durable per-post signal — unlike landing_page, it survives the
+ * visitor navigating off the blog to the pricing/signup page before converting.
+ * Called on every page mount; only acts when on a /blog/<slug> page.
+ */
+export function storeBlogAttribution(): void {
+  if (typeof window === 'undefined') return
+
+  const slug = blogSlugFromPath(window.location.pathname)
+  if (!slug) return
+
+  // First-touch: keep the original blog post if it hasn't expired
+  const existingExpiry = localStorage.getItem(BLOG_EXPIRY_KEY)
+  if (existingExpiry && new Date(existingExpiry) > new Date()) return
+
+  localStorage.setItem(BLOG_STORAGE_KEY, slug)
+
+  const expiryDate = new Date()
+  expiryDate.setDate(expiryDate.getDate() + UTM_EXPIRY_DAYS)
+  localStorage.setItem(BLOG_EXPIRY_KEY, expiryDate.toISOString())
+}
+
+/**
+ * Get the stored first-touch blog slug (or null).
+ */
+export function getStoredBlogSlug(): string | null {
+  if (typeof window === 'undefined') return null
+
+  try {
+    const slug = localStorage.getItem(BLOG_STORAGE_KEY)
+    if (!slug) return null
+
+    const expiry = localStorage.getItem(BLOG_EXPIRY_KEY)
+    if (expiry && new Date(expiry) < new Date()) {
+      localStorage.removeItem(BLOG_STORAGE_KEY)
+      localStorage.removeItem(BLOG_EXPIRY_KEY)
+      return null
+    }
+
+    return slug
+  } catch {
+    return null
+  }
+}
