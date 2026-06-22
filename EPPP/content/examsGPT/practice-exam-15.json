@@ -3099,15 +3099,15 @@
     },
     {
       "id": 147,
-      "question": "A therapist treating a client with chronic insomnia instructs her: 'Tonight, instead of trying to force yourself to fall asleep, I want you to lie in bed in the dark and deliberately try to stay awake as long as you possibly can. Do not try to sleep.' The therapist explains that attempting to follow this instruction will interrupt the performance anxiety that is perpetuating the insomnia. This intervention is best identified as:",
+      "question": "A therapist treating a client with chronic insomnia gives her the following instruction: \"Tonight, when you get into bed, lie in the dark and keep your eyes open. Make it your goal to remain awake for as long as you can, rather than working at falling asleep.\" The client follows the instruction over the next two weeks and reports that her sleep latency has noticeably decreased. This intervention is best identified as:",
       "options": [
-        "Cognitive restructuring, in which the client's dysfunctional beliefs about the consequences of insufficient sleep are explicitly challenged",
-        "Systematic desensitization, in which graduated exposure to the feared situation of lying awake reduces conditioned anxiety over repeated trials",
-        "Paradoxical intention, in which the client is instructed to deliberately attempt to produce or amplify the very symptom causing distress",
-        "Stimulus control therapy, in which environmental and behavioral cues that have become associated with wakefulness are identified and modified"
+        "Stimulus control therapy",
+        "Paradoxical intention",
+        "Sleep restriction therapy",
+        "Cognitive restructuring"
       ],
-      "correct_answer": "Paradoxical intention, in which the client is instructed to deliberately attempt to produce or amplify the very symptom causing distress",
-      "explanation": "Paradoxical intention, originally developed by Viktor Frankl and later incorporated into strategic and brief therapy models, involves directing clients to intentionally attempt to produce or exaggerate the symptom they dread. For insomnia, prescribing wakefulness paradoxically reduces the anticipatory anxiety and performance pressure around falling asleep, thereby disrupting the self-reinforcing cycle maintaining the disorder. Systematic desensitization (Option A) uses graduated hierarchical exposure paired with relaxation and does not prescribe the symptom. Stimulus control therapy (Option C) restructures behavioral and environmental antecedents of sleep but does not direct symptom production. Cognitive restructuring (Option D) targets and disputes maladaptive beliefs through verbal techniques rather than behavioral prescription.",
+      "correct_answer": "Paradoxical intention",
+      "explanation": "The correct answer is paradoxical intention. This technique directs the client to deliberately engage in the feared or unwanted behavior (here, staying awake). Removing the demand to fall asleep eliminates the performance anxiety and effortful striving that maintain the insomnia, so sleep onset improves. Recognizing the procedure requires knowing that paradoxical intention works by prescribing the symptom itself, not by changing cues, schedules, or beliefs.\\n\\nStimulus control therapy (wrong) re-associates the bed with sleep by having the client use the bed only for sleep and get out of bed when unable to sleep within about 15-20 minutes; it does the opposite of telling the client to lie in bed staying awake. Sleep restriction therapy (wrong) curtails total time in bed to match actual sleep time and then gradually expands it to raise sleep efficiency; the instruction here sets no time-in-bed limit and is about effort, not scheduling. Cognitive restructuring (wrong) targets and challenges dysfunctional beliefs about sleep (for example, catastrophic thoughts about the consequences of a poor night); the therapist here changes the client's behavioral goal rather than examining or disputing any belief.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN44",
       "source_file": "6 Brief Therapies.json",
@@ -4191,15 +4191,15 @@
     },
     {
       "id": 199,
-      "question": "Dr. Okafor is a clinical psychologist who also serves as the clinical director at a community mental health center. One of her direct supervisees has requested that she also provide individual clinical supervision for licensure hours. Which factor from Gottlieb's decision-making model would be MOST relevant in evaluating this arrangement?",
+      "question": "A licensed psychologist who already holds an ongoing professional relationship with a less-experienced colleague is weighing whether to take on an additional, second professional role with that same person. The psychologist decides to work through Gottlieb's decision-making model before agreeing. Across which set of dimensions does Gottlieb's model direct the psychologist to evaluate each of the two relationships when deciding whether the added role is likely to be harmful?",
       "options": [
-        "Whether the supervisee has given informed consent to the dual relationship",
-        "The geographic availability of alternative supervisors in the community",
-        "Whether Dr. Okafor has previously supervised other employees at the center",
-        "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority"
+        "The degree of power held over the other person, the expected duration of the relationship, and the clarity with which the relationship will eventually terminate",
+        "The voluntariness of the other person's consent, the documentation of that consent, and the availability of a less-conflicted alternative provider",
+        "The foreseeable risk of exploitation, the likelihood of impaired objectivity, and the potential for harm to the professional relationship",
+        "The incompatibility of expectations between the two roles, the divergence of the obligations each role imposes, and the resulting role conflict"
       ],
-      "correct_answer": "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
-      "explanation": "Gottlieb's decision-making model evaluates multiple relationships along three dimensions: power differential, duration, and clarity of termination. In this scenario, the most salient concern is the compounded power differential—Dr. Okafor already holds administrative authority over the supervisee as clinical director, and adding clinical supervision creates an even larger power gap. The lesson specifically identifies 'Large gap (supervisor-supervisee)' as higher risk. Option A, while relevant to ethical practice generally, is not one of Gottlieb's three factors. Option C is irrelevant to the model. Option D addresses practical concerns but not the ethical framework.",
+      "correct_answer": "The degree of power held over the other person, the expected duration of the relationship, and the clarity with which the relationship will eventually terminate",
+      "explanation": "Gottlieb's (1993) model for deciding whether to enter an additional relationship evaluates each relationship along three dimensions: the amount of power the psychologist holds over the other person, the expected duration of the relationship, and the clarity of termination (how definitely and predictably the relationship will end). Greater power, longer duration, and lower clarity of termination each raise the risk of harm and argue against adding the second role, so option 0 is correct. Option 1 lists informed-consent and referral-management considerations, which are sound general practices for handling multiple relationships but are not the dimensions Gottlieb's model assesses. Option 2 restates the APA Ethics Code Standard 3.05 / 3.06 test for impermissible multiple relationships (foreseeable exploitation, impaired objectivity, and risk of harm); it is the regulatory standard, not Gottlieb's decision dimensions. Option 3 names Kitchener's (1988) role-theory framework for role conflict (incompatibility of expectations, divergence of obligations, and power differential), a different model that is easily confused with Gottlieb's but is not the triad Gottlieb specifies.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
       "source_file": "8 Standards 3 and 4.json",

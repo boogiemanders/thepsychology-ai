@@ -810,15 +810,15 @@
     },
     {
       "id": 38,
-      "question": "Dr. Okafor is a clinical psychologist who also serves as the clinical director at a community mental health center. One of her direct supervisees has requested that she also provide individual clinical supervision for licensure hours. Which factor from Gottlieb's decision-making model would be MOST relevant in evaluating this arrangement?",
+      "question": "A licensed psychologist who already holds an ongoing professional relationship with a less-experienced colleague is weighing whether to take on an additional, second professional role with that same person. The psychologist decides to work through Gottlieb's decision-making model before agreeing. Across which set of dimensions does Gottlieb's model direct the psychologist to evaluate each of the two relationships when deciding whether the added role is likely to be harmful?",
       "options": [
-        "Whether the supervisee has given informed consent to the dual relationship",
-        "Whether Dr. Okafor has previously supervised other employees at the center",
-        "The geographic availability of alternative supervisors in the community",
-        "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority"
+        "The degree of power held over the other person, the expected duration of the relationship, and the clarity with which the relationship will eventually terminate",
+        "The voluntariness of the other person's consent, the documentation of that consent, and the availability of a less-conflicted alternative provider",
+        "The foreseeable risk of exploitation, the likelihood of impaired objectivity, and the potential for harm to the professional relationship",
+        "The incompatibility of expectations between the two roles, the divergence of the obligations each role imposes, and the resulting role conflict"
       ],
-      "correct_answer": "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
-      "explanation": "Gottlieb's decision-making model evaluates multiple relationships along three dimensions: power differential, duration, and clarity of termination. In this scenario, the most salient concern is the compounded power differential—Dr. Okafor already holds administrative authority over the supervisee as clinical director, and adding clinical supervision creates an even larger power gap. The lesson specifically identifies 'Large gap (supervisor-supervisee)' as higher risk. Option A, while relevant to ethical practice generally, is not one of Gottlieb's three factors. Option C is irrelevant to the model. Option D addresses practical concerns but not the ethical framework.",
+      "correct_answer": "The degree of power held over the other person, the expected duration of the relationship, and the clarity with which the relationship will eventually terminate",
+      "explanation": "Gottlieb's (1993) model for deciding whether to enter an additional relationship evaluates each relationship along three dimensions: the amount of power the psychologist holds over the other person, the expected duration of the relationship, and the clarity of termination (how definitely and predictably the relationship will end). Greater power, longer duration, and lower clarity of termination each raise the risk of harm and argue against adding the second role, so option 0 is correct. Option 1 lists informed-consent and referral-management considerations, which are sound general practices for handling multiple relationships but are not the dimensions Gottlieb's model assesses. Option 2 restates the APA Ethics Code Standard 3.05 / 3.06 test for impermissible multiple relationships (foreseeable exploitation, impaired objectivity, and risk of harm); it is the regulatory standard, not Gottlieb's decision dimensions. Option 3 names Kitchener's (1988) role-theory framework for role conflict (incompatibility of expectations, divergence of obligations, and power differential), a different model that is easily confused with Gottlieb's but is not the triad Gottlieb specifies.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
       "source_file": "8 Standards 3 and 4.json",
@@ -2448,15 +2448,15 @@
     },
     {
       "id": 116,
-      "question": "A researcher uses a chi-square test to examine whether diagnosis type (anxiety disorder, mood disorder, or personality disorder) is associated with treatment preference (medication, psychotherapy, or combined). She collects data by surveying 150 clients at a clinic, where some married couples are both included in the sample. What assumption of the chi-square test is MOST likely violated?",
+      "question": "A researcher runs a chi-square test of independence to examine whether diagnosis type (anxiety, mood, or personality disorder) is associated with treatment preference (medication, psychotherapy, or combined). To reach 150 responses quickly, she surveys 75 clients and also has each client's cohabiting partner, who attends the same clinic, complete the survey, entering all 150 responses into one contingency table. Which assumption of the chi-square test does this sampling procedure MOST directly violate?",
       "options": [
-        "The assumption that all expected cell frequencies must be equal",
-        "The assumption of homogeneity of variance across diagnostic groups",
-        "The assumption of independence of observations, because married couples' responses may be correlated",
-        "The assumption of normally distributed data within each cell"
+        "Homogeneity of variance, because pairing partners from the same household equalizes response variability across the diagnostic groups",
+        "Independence of observations, because pairing partners from the same household links responses that the test requires to be unrelated",
+        "Normality of the underlying distribution, because pairing partners from the same household skews the distribution of categorical preferences",
+        "Sufficiency of expected frequencies, because pairing partners from the same household drives expected cell counts below the required minimum of five"
       ],
-      "correct_answer": "The assumption of independence of observations, because married couples' responses may be correlated",
-      "explanation": "The chi-square test requires that each observation is independent of every other observation. When married couples are both included, their responses may be correlated — partners often share treatment preferences, diagnostic patterns influenced by shared environment, or may influence each other's responses. This violates independence of observations. Option A is incorrect because homogeneity of variance is an assumption of parametric tests like ANOVA, not chi-square. Option B is wrong because chi-square is a nonparametric test that does not assume normality. Option D is wrong because chi-square does not require equal expected frequencies — it requires adequate expected frequencies (typically at least 5 per cell), not equal ones.",
+      "correct_answer": "Independence of observations, because pairing partners from the same household links responses that the test requires to be unrelated",
+      "explanation": "The chi-square test of independence assumes each observation is independent, meaning each data point comes from a separate, unrelated case. Surveying both members of cohabiting couples produces 75 pairs of correlated responses (partners share environment, treatment exposure, and likely attitudes), so the 150 entries are not 150 independent observations. That is the assumption this design violates. Homogeneity of variance (option 0) is an assumption of ANOVA and t-tests, not the chi-square test of categorical frequencies, so it cannot be the violated assumption. Normality (option 2) concerns continuous data and the sampling distribution of the statistic, not the raw categorical counts; pairing partners does not introduce a normality problem. Sufficiency of expected frequencies (option 3) is a genuine chi-square requirement (commonly stated as at least 80 percent of cells having an expected count of 5 or more), but with 150 responses across a 3x3 table the average expected count is about 16.7, so this rule is not violated by this design. Only independence is actually compromised.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN53",
       "source_file": "7 Stats Tests.json",
@@ -2553,15 +2553,15 @@
     },
     {
       "id": 121,
-      "question": "An industrial-organizational psychologist reviews exit interview data and employee satisfaction surveys from a large healthcare organization. She finds that units with the lowest mean job satisfaction scores show the highest rates of voluntary employee turnover. Which of the following best characterizes this statistical relationship?",
+      "question": "An industrial-organizational psychologist is consulting with a large healthcare organization that wants to reduce voluntary employee turnover. Leadership asks her to summarize what the empirical research literature establishes about the link between employees' job satisfaction and their decision to quit. Which statement most accurately reflects the findings on this relationship?",
       "options": [
-        "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
-        "A positive correlation, indicating that higher satisfaction predicts greater likelihood of leaving",
-        "A U-shaped curvilinear relationship, in which both very low and very high satisfaction predict elevated turnover rates",
-        "An absence of a reliable relationship, because turnover is primarily determined by external labor market conditions rather than internal satisfaction"
+        "Job satisfaction shows a modest negative association with voluntary turnover, and its influence operates largely through withdrawal cognitions such as intention to quit",
+        "Job satisfaction is the single strongest and most direct predictor of voluntary turnover, accounting for the majority of variance in who leaves",
+        "Job satisfaction is unrelated to voluntary turnover once compensation and external labor-market opportunities are statistically controlled",
+        "Job satisfaction predicts voluntary turnover only among low-performing employees, because high performers leave for reasons unrelated to how they feel about the job"
       ],
-      "correct_answer": "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
-      "explanation": "The established finding in I/O psychology is that job satisfaction and voluntary turnover are negatively correlated: as job satisfaction decreases, the probability of an employee voluntarily leaving the organization increases. This relationship is one of the most replicated findings in organizational behavior research. The positive correlation option reverses the established direction. While labor market conditions moderate the relationship, satisfaction remains a reliable independent predictor, contradicting the 'no relationship' option. A U-shaped relationship is not supported by the literature for this outcome.",
+      "correct_answer": "Job satisfaction shows a modest negative association with voluntary turnover, and its influence operates largely through withdrawal cognitions such as intention to quit",
+      "explanation": "Correct (option 0): Meta-analytic and process-model research (e.g., Mobley, Hom & Griffeth) shows job satisfaction is reliably but only modestly negatively related to voluntary turnover, and its effect is largely indirect, channeled through withdrawal cognitions such as turnover intentions and job-search behavior rather than producing quitting directly. Option 1 is wrong: although intuitively appealing, satisfaction is a relatively weak direct predictor; turnover intentions and organizational commitment typically predict actual quitting as well or better, and satisfaction explains only a small share of variance. Option 2 is wrong: the satisfaction–turnover association persists beyond pay and market factors; those variables are additional contributors, not full confounds that erase the relationship. Option 3 is wrong: it confuses this with the performance–turnover literature; dissatisfaction raises quit likelihood across performance levels, and if anything dissatisfied high performers (who have more alternatives) are especially likely to leave, so the relationship is not limited to low performers.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
       "source_file": "2 Work Motivation.json",
@@ -4548,15 +4548,15 @@
     },
     {
       "id": 216,
-      "question": "An industrial-organizational psychologist reviewing the empirical literature on job satisfaction reports to leadership that satisfaction is moderately correlated with job performance and is more strongly associated with turnover and absenteeism than with output quality. She cautions that the relationship with performance should not be interpreted as demonstrating that improving satisfaction will cause proportional performance gains. Her caution reflects which empirical and interpretive consideration?",
+      "question": "Leadership at a large firm is preparing to fund a company-wide initiative to raise employee job satisfaction, on the premise that happier workers will directly drive up individual task output. They ask an industrial-organizational psychologist where, according to the empirical literature, increases in job satisfaction are most likely to show measurable effects on work outcomes. Which response is best supported by the research?",
       "options": [
-        "Job satisfaction is entirely determined by hygiene factors, making performance improvements dependent only on extrinsic working conditions",
-        "Satisfaction and performance are causally linked, so raising satisfaction reliably increases performance above baseline levels",
-        "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
-        "Satisfaction is orthogonal to performance because intrinsic motivation fully mediates any apparent relationship between the two variables"
+        "Higher satisfaction is most reliably associated with reduced withdrawal behaviors such as turnover and absenteeism, and only weakly associated with individual task performance",
+        "Higher satisfaction is most reliably associated with gains in individual task performance, with smaller and less consistent effects on turnover and absenteeism",
+        "Higher satisfaction is most reliably associated with improved performance on objective production quotas, while its links to attendance and retention are negligible",
+        "Higher satisfaction is most reliably associated with increased organizational tenure because satisfied employees are systematically promoted into higher-performing roles"
       ],
-      "correct_answer": "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
-      "explanation": "The research literature consistently shows a modest positive correlation between job satisfaction and performance (meta-analytic estimates typically around r = .30), but the relationship is correlational and causality is difficult to establish. Satisfaction shows stronger and more consistent relationships with turnover intention, absenteeism, and organizational citizenship behaviors than with objective performance outputs. Option A overstates the causal and predictive power of satisfaction on performance. Option C incorrectly invokes Herzberg's hygiene factors as the exclusive determinant of satisfaction. Option D incorrectly claims orthogonality; the established modest positive correlation rules out a zero relationship.",
+      "correct_answer": "Higher satisfaction is most reliably associated with reduced withdrawal behaviors such as turnover and absenteeism, and only weakly associated with individual task performance",
+      "explanation": "The empirical I-O literature shows that job satisfaction's strongest, most consistent links are to withdrawal behaviors: dissatisfied employees are more likely to leave (turnover) and to miss work (absenteeism). Satisfaction's relationship with individual task performance, by contrast, is real but modest and far less consistent (meta-analytic estimates around r = .30). So the most defensible answer is that satisfaction gains will show up most reliably in retention and attendance, not in raw output. Option 1 (index 0) is correct. Option 2 inverts the actual pattern, claiming performance is the stronger and more consistent correlate; this is the common lay assumption (\"happy workers work harder\") that the data do not support as the primary effect. Option 3 overstates the satisfaction-performance link by tying it to objective quotas while wrongly calling the attendance and retention links negligible, which reverses the best-supported finding. Option 4 substitutes a spurious mechanism: it attributes longer tenure to satisfied employees being promoted into high-performing roles, which is not the established withdrawal-behavior finding and confuses a selection/promotion story with satisfaction's direct effect on staying versus leaving.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN9",
       "source_file": "2 Work Motivation.json",

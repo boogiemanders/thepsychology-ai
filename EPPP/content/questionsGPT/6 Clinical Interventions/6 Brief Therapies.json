@@ -25,15 +25,15 @@
       ]
     },
     {
-      "stem": "A therapist treating a client with chronic insomnia instructs her: 'Tonight, instead of trying to force yourself to fall asleep, I want you to lie in bed in the dark and deliberately try to stay awake as long as you possibly can. Do not try to sleep.' The therapist explains that attempting to follow this instruction will interrupt the performance anxiety that is perpetuating the insomnia. This intervention is best identified as:",
+      "stem": "A therapist treating a client with chronic insomnia gives her the following instruction: \"Tonight, when you get into bed, lie in the dark and keep your eyes open. Make it your goal to remain awake for as long as you can, rather than working at falling asleep.\" The client follows the instruction over the next two weeks and reports that her sleep latency has noticeably decreased. This intervention is best identified as:",
       "options": [
-        "Systematic desensitization, in which graduated exposure to the feared situation of lying awake reduces conditioned anxiety over repeated trials",
-        "Paradoxical intention, in which the client is instructed to deliberately attempt to produce or amplify the very symptom causing distress",
-        "Stimulus control therapy, in which environmental and behavioral cues that have become associated with wakefulness are identified and modified",
-        "Cognitive restructuring, in which the client's dysfunctional beliefs about the consequences of insufficient sleep are explicitly challenged"
+        "Stimulus control therapy",
+        "Paradoxical intention",
+        "Sleep restriction therapy",
+        "Cognitive restructuring"
       ],
-      "answer": "Paradoxical intention, in which the client is instructed to deliberately attempt to produce or amplify the very symptom causing distress",
-      "explanation": "Paradoxical intention, originally developed by Viktor Frankl and later incorporated into strategic and brief therapy models, involves directing clients to intentionally attempt to produce or exaggerate the symptom they dread. For insomnia, prescribing wakefulness paradoxically reduces the anticipatory anxiety and performance pressure around falling asleep, thereby disrupting the self-reinforcing cycle maintaining the disorder. Systematic desensitization (Option A) uses graduated hierarchical exposure paired with relaxation and does not prescribe the symptom. Stimulus control therapy (Option C) restructures behavioral and environmental antecedents of sleep but does not direct symptom production. Cognitive restructuring (Option D) targets and disputes maladaptive beliefs through verbal techniques rather than behavioral prescription.",
+      "answer": "Paradoxical intention",
+      "explanation": "The correct answer is paradoxical intention. This technique directs the client to deliberately engage in the feared or unwanted behavior (here, staying awake). Removing the demand to fall asleep eliminates the performance anxiety and effortful striving that maintain the insomnia, so sleep onset improves. Recognizing the procedure requires knowing that paradoxical intention works by prescribing the symptom itself, not by changing cues, schedules, or beliefs.\\n\\nStimulus control therapy (wrong) re-associates the bed with sleep by having the client use the bed only for sleep and get out of bed when unable to sleep within about 15-20 minutes; it does the opposite of telling the client to lie in bed staying awake. Sleep restriction therapy (wrong) curtails total time in bed to match actual sleep time and then gradually expands it to raise sleep efficiency; the instruction here sets no time-in-bed limit and is about effort, not scheduling. Cognitive restructuring (wrong) targets and challenges dysfunctional beliefs about sleep (for example, catastrophic thoughts about the consequences of a poor night); the therapist here changes the client's behavioral goal rather than examining or disputing any belief.",
       "kn": "KN44",
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "medium",

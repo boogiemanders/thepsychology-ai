@@ -3502,15 +3502,15 @@
     },
     {
       "id": 175,
-      "question": "A clinical treatment team individually favors a moderately conservative approach to a complex case. After extensive group discussion, they collectively decide on an even more cautious plan than any individual member originally endorsed. This outcome is best explained by:",
+      "question": "Before a case conference, each member of a clinical treatment team privately rates how aggressive a treatment plan they would recommend for a complex patient, and the ratings cluster on one side of the scale. The team then discusses the case at length and reaches a consensus recommendation. Based on the research on group decision-making, the team's consensus is most likely to:",
       "options": [
-        "Groupthink, because the team suppressed dissenting opinions to maintain harmony",
-        "Group polarization, because discussion amplified the group's initial cautious inclination",
-        "Social loafing, because team members deferred decision-making responsibility to others",
-        "Risky shift, because groups tend to make more extreme decisions in the direction of risk"
+        "Become more extreme than the members' average pre-discussion rating, in the same direction the members already leaned",
+        "Converge toward the midpoint of the members' pre-discussion ratings as discussion averages out individual positions",
+        "Shift toward a riskier recommendation than the members' average rating, regardless of their initial leaning",
+        "Match the recommendation of the highest-status member as lower-status members suppress their own views"
       ],
-      "correct_answer": "Group polarization, because discussion amplified the group's initial cautious inclination",
-      "explanation": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone—shifting toward a more intense version of the average initial position. Since team members initially leaned toward caution, group discussion amplified that cautious tendency. Groupthink (A) involves suppression of dissent and pressure toward uniformity, but the scenario describes a natural amplification of an existing tendency, not suppression of disagreement. Social loafing (C) involves reduced individual effort in groups, not decision-making shifts. Risky shift (D) is incorrect because it specifically refers to polarization toward riskier decisions, whereas this scenario shows a shift toward greater caution—demonstrating that polarization can go in either direction.",
+      "correct_answer": "Become more extreme than the members' average pre-discussion rating, in the same direction the members already leaned",
+      "explanation": "Correct (index 0): Group polarization is the finding that group discussion strengthens the members' pre-existing average leaning, so the consensus ends up MORE extreme than the mean of the members' initial positions, in whatever direction they already leaned. Because the ratings clustered on one side before discussion, the predicted consensus is an intensified version of that same leaning. Distractor 1 (converge toward the midpoint) is the intuitive but incorrect 'averaging/moderation' belief that group polarization research specifically refutes; discussion does not pull members to a compromise mean, it pushes the group further out. Distractor 2 (always shift toward risk) describes the older 'risky shift' overgeneralization; group polarization shows shifts go toward caution just as readily as toward risk, depending on the members' initial leaning, so claiming risk 'regardless of their initial leaning' is wrong. Distractor 3 (defer to the highest-status member as others suppress views) describes a status/conformity or groupthink-style dynamic, not the polarization effect, which is driven by persuasive arguments and social comparison rather than by capitulation to a dominant member.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
       "source_file": "3-group-influences.json",
@@ -3604,15 +3604,15 @@
     },
     {
       "id": 180,
-      "question": "A researcher creates a scatterplot showing the relationship between therapist experience (X) and client outcome ratings (Y). She notices that clients of therapists with fewer than 5 years of experience show highly variable outcome ratings (ranging from very poor to excellent), while clients of therapists with more than 15 years of experience show consistently high ratings with little variability. This pattern MOST directly indicates a violation of which assumption?",
+      "question": "A researcher fits a linear regression predicting client outcome ratings (Y) from therapist years of experience (X). When she plots the residuals against the predicted values, the points form a fan shape: the residuals are widely scattered at low predicted values and cluster tightly near zero at high predicted values. Which assumption of ordinary least squares regression does this residual pattern MOST directly indicate has been violated?",
       "options": [
-        "Linearity, suggesting a curvilinear relationship between the variables",
-        "Unrestricted range, indicating that extreme scores have been excluded from the sample",
-        "Homoscedasticity, meaning the variability in criterion scores differs across levels of the predictor",
-        "Normality, indicating that the distribution of outcome ratings is skewed"
+        "Homoscedasticity",
+        "Linearity",
+        "Normality of residuals",
+        "Independence of errors"
       ],
-      "correct_answer": "Homoscedasticity, meaning the variability in criterion scores differs across levels of the predictor",
-      "explanation": "Homoscedasticity requires that the variability in criterion (Y) scores is similar across all levels of the predictor (X) scores. In this scenario, outcome rating variability is high for low-experience therapists but low for high-experience therapists — a classic violation of homoscedasticity. The lesson states: 'the variability in your criterion scores should be similar across all levels of your predictor scores' and provides a similar example about therapy sessions and satisfaction. Linearity concerns the shape of the relationship, not differential variability. Unrestricted range concerns whether the full range of scores is represented. Normality is not one of the three stated correlation assumptions.",
+      "correct_answer": "Homoscedasticity",
+      "explanation": "A fan- or cone-shaped residual plot, where the spread of residuals changes systematically across the range of predicted values, is the textbook signature of heteroscedasticity, which is a violation of the homoscedasticity assumption that the variance of the errors is constant across all levels of the predictor. Linearity is wrong because that assumption concerns whether the relationship's form is straight versus curved; its violation shows up as a curved or U-shaped pattern in the residuals, not a change in spread. Normality of residuals is wrong because that assumption concerns the shape of the residual distribution (assessed with a histogram or Q-Q plot) and a violation does not produce a systematic funnel in a residuals-versus-fitted plot. Independence of errors is wrong because that assumption concerns correlation among residuals (for example, autocorrelation in time-ordered or clustered data) and its violation appears as patterning or runs across the order of observations, not as unequal vertical spread.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN55",
       "source_file": "7-correlation-and-regression.json",

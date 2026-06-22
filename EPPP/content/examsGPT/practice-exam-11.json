@@ -747,15 +747,15 @@
     },
     {
       "id": 35,
-      "question": "Dr. Okafor is a clinical psychologist who also serves as the clinical director at a community mental health center. One of her direct supervisees has requested that she also provide individual clinical supervision for licensure hours. Which factor from Gottlieb's decision-making model would be MOST relevant in evaluating this arrangement?",
+      "question": "A licensed psychologist who already holds an ongoing professional relationship with a less-experienced colleague is weighing whether to take on an additional, second professional role with that same person. The psychologist decides to work through Gottlieb's decision-making model before agreeing. Across which set of dimensions does Gottlieb's model direct the psychologist to evaluate each of the two relationships when deciding whether the added role is likely to be harmful?",
       "options": [
-        "The geographic availability of alternative supervisors in the community",
-        "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
-        "Whether the supervisee has given informed consent to the dual relationship",
-        "Whether Dr. Okafor has previously supervised other employees at the center"
+        "The degree of power held over the other person, the expected duration of the relationship, and the clarity with which the relationship will eventually terminate",
+        "The voluntariness of the other person's consent, the documentation of that consent, and the availability of a less-conflicted alternative provider",
+        "The foreseeable risk of exploitation, the likelihood of impaired objectivity, and the potential for harm to the professional relationship",
+        "The incompatibility of expectations between the two roles, the divergence of the obligations each role imposes, and the resulting role conflict"
       ],
-      "correct_answer": "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
-      "explanation": "Gottlieb's decision-making model evaluates multiple relationships along three dimensions: power differential, duration, and clarity of termination. In this scenario, the most salient concern is the compounded power differential—Dr. Okafor already holds administrative authority over the supervisee as clinical director, and adding clinical supervision creates an even larger power gap. The lesson specifically identifies 'Large gap (supervisor-supervisee)' as higher risk. Option A, while relevant to ethical practice generally, is not one of Gottlieb's three factors. Option C is irrelevant to the model. Option D addresses practical concerns but not the ethical framework.",
+      "correct_answer": "The degree of power held over the other person, the expected duration of the relationship, and the clarity with which the relationship will eventually terminate",
+      "explanation": "Gottlieb's (1993) model for deciding whether to enter an additional relationship evaluates each relationship along three dimensions: the amount of power the psychologist holds over the other person, the expected duration of the relationship, and the clarity of termination (how definitely and predictably the relationship will end). Greater power, longer duration, and lower clarity of termination each raise the risk of harm and argue against adding the second role, so option 0 is correct. Option 1 lists informed-consent and referral-management considerations, which are sound general practices for handling multiple relationships but are not the dimensions Gottlieb's model assesses. Option 2 restates the APA Ethics Code Standard 3.05 / 3.06 test for impermissible multiple relationships (foreseeable exploitation, impaired objectivity, and risk of harm); it is the regulatory standard, not Gottlieb's decision dimensions. Option 3 names Kitchener's (1988) role-theory framework for role conflict (incompatibility of expectations, divergence of obligations, and power differential), a different model that is easily confused with Gottlieb's but is not the triad Gottlieb specifies.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
       "source_file": "8 Standards 3 and 4.json",
@@ -2952,15 +2952,15 @@
     },
     {
       "id": 140,
-      "question": "In a psychological experiment, participants are asked to identify shapes presented briefly on a screen. Which processing method would most likely help them recognize familiar shapes based on previous experiences?",
+      "question": "Participants in a tachistoscope study briefly view degraded line drawings of objects. In one block, each drawing is preceded by a category word (for example, \"kitchen item\"); in another block, no word precedes the drawing. Identification is markedly faster and more accurate when a category word precedes the image. Which account of perception best explains this pattern of results?",
       "options": [
-        "Bottom-up processing is faster than top-down processing in all recognition tasks.",
-        "Bottom-up processing enables participants to analyze each shape individually without prior knowledge.",
-        "Top-down processing allows participants to use their knowledge of shapes to interpret the visual input.",
-        "Top-down processing is irrelevant in recognizing shapes as it relies solely on sensory input."
+        "Top-down processing, in which stored expectations and context shape how incoming sensory data are interpreted",
+        "Bottom-up processing, in which the percept is assembled entirely from the stimulus features registered by the sensory receptors",
+        "Perceptual constancy, in which the perceived identity of an object is held stable across changes in its retinal image",
+        "Feature integration, in which separately detected attributes such as color and orientation are bound together by focused attention"
       ],
-      "correct_answer": "Top-down processing allows participants to use their knowledge of shapes to interpret the visual input.",
-      "explanation": "1. The correct answer, \"Top-down processing allows participants to use their knowledge of shapes to interpret the visual input,\" is accurate because top-down processing involves the brain's use of preexisting knowledge and expectations to interpret sensory information. In this experiment, participants rely on their familiarity with shapes, drawing from past experiences to quickly recognize and interpret the shapes presented on the screen.\n\n2. The option \"Bottom-up processing enables participants to analyze each shape individually without prior knowledge\" is incorrect because bottom-up processing is data-driven and starts with sensory information, meaning it does not utilize prior knowledge or experiences. The statement \"Top-down processing is irrelevant in recognizing shapes as it relies solely on sensory input\" is also wrong, as top-down processing specifically involves the use of prior knowledge, making it highly relevant in recognizing familiar shapes. Lastly, the claim \"Bottom-up processing is faster than top-down processing in all recognition tasks\" is misleading because the speed of recognition can vary based on the context and familiarity with the shapes; top-down processing can often be quicker when prior knowledge is applicable.",
+      "correct_answer": "Top-down processing, in which stored expectations and context shape how incoming sensory data are interpreted",
+      "explanation": "The cue word supplies a conceptual context that biases interpretation of an ambiguous stimulus, which is the signature of top-down (conceptually driven) processing: higher-level knowledge, expectations, and context guide how raw sensory input is parsed, producing faster and more accurate identification when the category is primed. Option B (bottom-up/data-driven processing) is wrong because pure stimulus-driven analysis builds the percept from features alone and would be unaffected by a preceding word, so it cannot explain the facilitation. Option C (perceptual constancy) is a real phenomenon but addresses why an object looks the same despite changes in distance, lighting, or angle; it does not concern priming by a verbal category. Option D (feature integration) describes how attention binds separately registered features into a unified object and predicts effects of attentional load and conjunction search, not facilitation from semantic context. Only top-down processing accounts for prior expectation speeding recognition of degraded input.",
       "domain": "Domain 1: Biological Bases of Behavior",
       "knId": "KN1",
       "source_file": "1 Sensory Perception.json",

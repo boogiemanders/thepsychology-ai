@@ -485,15 +485,15 @@
       ]
     },
     {
-      "stem": "A researcher develops a performance appraisal instrument for hospital-based clinical psychologists that measures only session count, client symptom reduction scores, and therapy completion rates. An expert review panel notes that the measure omits supervisory competence, interdisciplinary consultation skills, administrative contributions, and training program involvement—all of which are established components of the performance domain for this role. The panel's primary psychometric concern regarding this instrument is best described as:",
+      "stem": "A researcher develops a performance appraisal instrument for hospital-based clinical psychologists. Each psychologist is scored only on session count, client symptom reduction scores, and therapy completion rates. In this hospital, the formal duties of the role also include providing clinical supervision, participating in interdisciplinary consultation, handling administrative responsibilities, and contributing to training programs. An expert review panel examines how the instrument functions as a measure of overall job performance. The psychometric concern the panel should raise is best described as:",
       "options": [
-        "Criterion contamination, because extraneous variables have been introduced into the criterion measure",
-        "Criterion deficiency, because the criterion measure fails to capture the full scope of the performance construct",
-        "Predictive bias, because the instrument will underpredict performance for some demographic subgroups",
-        "Convergent invalidity, because the measure correlates too highly with a single dimension of performance"
+        "Criterion contamination",
+        "Criterion deficiency",
+        "Criterion relevance",
+        "Criterion reliability"
       ],
-      "answer": "Criterion deficiency, because the criterion measure fails to capture the full scope of the performance construct",
-      "explanation": "Criterion deficiency occurs when a criterion measure does not assess all relevant dimensions of the construct it is intended to represent, leaving important aspects of the performance domain unmeasured. In this case, supervisory competence, consultation, administrative duties, and training contributions are legitimate components of a clinical psychologist's role that are absent from the appraisal. Option A (criterion contamination) is the opposite problem—variance in the criterion attributable to factors unrelated to true performance, not missing dimensions. Option C (predictive bias) refers to differential prediction of criterion scores across demographic groups, which is a validity generalization issue rather than a domain-coverage issue. Option D is incorrect because convergent invalidity involves pattern-of-correlations evidence and does not describe incomplete domain sampling.",
+      "answer": "Criterion deficiency",
+      "explanation": "Criterion deficiency occurs when the criterion measure fails to capture parts of the performance construct it is meant to represent. Here the instrument scores only three task metrics while the role actually spans several additional performance dimensions (supervision, consultation, administration, training), so the criterion underrepresents the construct: this is criterion deficiency. Criterion contamination is the opposite defect, where the criterion reflects systematic variance unrelated to true performance, but nothing irrelevant has been added here. Criterion relevance is the degree of correspondence between the criterion measure and the actual performance construct (a property to be maximized, not a named defect). Criterion reliability concerns consistency of scores across raters and occasions, which the scenario gives no information about. The options are bare terms, so selecting the answer requires knowing that omitting relevant performance dimensions defines deficiency rather than any of the other three concepts.",
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",

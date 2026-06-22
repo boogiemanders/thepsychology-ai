@@ -94,15 +94,15 @@
       ]
     },
     {
-      "stem": "A clinical treatment team individually favors a moderately conservative approach to a complex case. After extensive group discussion, they collectively decide on an even more cautious plan than any individual member originally endorsed. This outcome is best explained by:",
+      "stem": "Before a case conference, each member of a clinical treatment team privately rates how aggressive a treatment plan they would recommend for a complex patient, and the ratings cluster on one side of the scale. The team then discusses the case at length and reaches a consensus recommendation. Based on the research on group decision-making, the team's consensus is most likely to:",
       "options": [
-        "Groupthink, because the team suppressed dissenting opinions to maintain harmony",
-        "Group polarization, because discussion amplified the group's initial cautious inclination",
-        "Social loafing, because team members deferred decision-making responsibility to others",
-        "Risky shift, because groups tend to make more extreme decisions in the direction of risk"
+        "Become more extreme than the members' average pre-discussion rating, in the same direction the members already leaned",
+        "Converge toward the midpoint of the members' pre-discussion ratings as discussion averages out individual positions",
+        "Shift toward a riskier recommendation than the members' average rating, regardless of their initial leaning",
+        "Match the recommendation of the highest-status member as lower-status members suppress their own views"
       ],
-      "answer": "Group polarization, because discussion amplified the group's initial cautious inclination",
-      "explanation": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone—shifting toward a more intense version of the average initial position. Since team members initially leaned toward caution, group discussion amplified that cautious tendency. Groupthink (A) involves suppression of dissent and pressure toward uniformity, but the scenario describes a natural amplification of an existing tendency, not suppression of disagreement. Social loafing (C) involves reduced individual effort in groups, not decision-making shifts. Risky shift (D) is incorrect because it specifically refers to polarization toward riskier decisions, whereas this scenario shows a shift toward greater caution—demonstrating that polarization can go in either direction.",
+      "answer": "Become more extreme than the members' average pre-discussion rating, in the same direction the members already leaned",
+      "explanation": "Correct (index 0): Group polarization is the finding that group discussion strengthens the members' pre-existing average leaning, so the consensus ends up MORE extreme than the mean of the members' initial positions, in whatever direction they already leaned. Because the ratings clustered on one side before discussion, the predicted consensus is an intensified version of that same leaning. Distractor 1 (converge toward the midpoint) is the intuitive but incorrect 'averaging/moderation' belief that group polarization research specifically refutes; discussion does not pull members to a compromise mean, it pushes the group further out. Distractor 2 (always shift toward risk) describes the older 'risky shift' overgeneralization; group polarization shows shifts go toward caution just as readily as toward risk, depending on the members' initial leaning, so claiming risk 'regardless of their initial leaning' is wrong. Distractor 3 (defer to the highest-status member as others suppress views) describes a status/conformity or groupthink-style dynamic, not the polarization effect, which is driven by persuasive arguments and social comparison rather than by capitulation to a dominant member.",
       "kn": "KN16",
       "kn_explanation": "Group polarization is a classic group process phenomenon",
       "difficulty": "hard",

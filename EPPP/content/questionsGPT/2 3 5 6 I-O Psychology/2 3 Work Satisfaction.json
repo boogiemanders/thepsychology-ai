@@ -371,15 +371,15 @@
       ]
     },
     {
-      "stem": "An industrial-organizational psychologist reviews exit interview data and employee satisfaction surveys from a large healthcare organization. She finds that units with the lowest mean job satisfaction scores show the highest rates of voluntary employee turnover. Which of the following best characterizes this statistical relationship?",
+      "stem": "An industrial-organizational psychologist is consulting with a large healthcare organization that wants to reduce voluntary employee turnover. Leadership asks her to summarize what the empirical research literature establishes about the link between employees' job satisfaction and their decision to quit. Which statement most accurately reflects the findings on this relationship?",
       "options": [
-        "A positive correlation, indicating that higher satisfaction predicts greater likelihood of leaving",
-        "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
-        "An absence of a reliable relationship, because turnover is primarily determined by external labor market conditions rather than internal satisfaction",
-        "A U-shaped curvilinear relationship, in which both very low and very high satisfaction predict elevated turnover rates"
+        "Job satisfaction shows a modest negative association with voluntary turnover, and its influence operates largely through withdrawal cognitions such as intention to quit",
+        "Job satisfaction is the single strongest and most direct predictor of voluntary turnover, accounting for the majority of variance in who leaves",
+        "Job satisfaction is unrelated to voluntary turnover once compensation and external labor-market opportunities are statistically controlled",
+        "Job satisfaction predicts voluntary turnover only among low-performing employees, because high performers leave for reasons unrelated to how they feel about the job"
       ],
-      "answer": "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
-      "explanation": "The established finding in I/O psychology is that job satisfaction and voluntary turnover are negatively correlated: as job satisfaction decreases, the probability of an employee voluntarily leaving the organization increases. This relationship is one of the most replicated findings in organizational behavior research. The positive correlation option reverses the established direction. While labor market conditions moderate the relationship, satisfaction remains a reliable independent predictor, contradicting the 'no relationship' option. A U-shaped relationship is not supported by the literature for this outcome.",
+      "answer": "Job satisfaction shows a modest negative association with voluntary turnover, and its influence operates largely through withdrawal cognitions such as intention to quit",
+      "explanation": "Correct (option 0): Meta-analytic and process-model research (e.g., Mobley, Hom & Griffeth) shows job satisfaction is reliably but only modestly negatively related to voluntary turnover, and its effect is largely indirect, channeled through withdrawal cognitions such as turnover intentions and job-search behavior rather than producing quitting directly. Option 1 is wrong: although intuitively appealing, satisfaction is a relatively weak direct predictor; turnover intentions and organizational commitment typically predict actual quitting as well or better, and satisfaction explains only a small share of variance. Option 2 is wrong: the satisfaction–turnover association persists beyond pay and market factors; those variables are additional contributors, not full confounds that erase the relationship. Option 3 is wrong: it confuses this with the performance–turnover literature; dissatisfaction raises quit likelihood across performance levels, and if anything dissatisfied high performers (who have more alternatives) are especially likely to leave, so the relationship is not limited to low performers.",
       "kn": "KN8",
       "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
       "difficulty": "medium",
@@ -395,19 +395,19 @@
       ]
     },
     {
-      "stem": "An industrial-organizational psychologist reviewing the empirical literature on job satisfaction reports to leadership that satisfaction is moderately correlated with job performance and is more strongly associated with turnover and absenteeism than with output quality. She cautions that the relationship with performance should not be interpreted as demonstrating that improving satisfaction will cause proportional performance gains. Her caution reflects which empirical and interpretive consideration?",
+      "stem": "Leadership at a large firm is preparing to fund a company-wide initiative to raise employee job satisfaction, on the premise that happier workers will directly drive up individual task output. They ask an industrial-organizational psychologist where, according to the empirical literature, increases in job satisfaction are most likely to show measurable effects on work outcomes. Which response is best supported by the research?",
       "options": [
-        "Satisfaction and performance are causally linked, so raising satisfaction reliably increases performance above baseline levels",
-        "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
-        "Job satisfaction is entirely determined by hygiene factors, making performance improvements dependent only on extrinsic working conditions",
-        "Satisfaction is orthogonal to performance because intrinsic motivation fully mediates any apparent relationship between the two variables"
+        "Higher satisfaction is most reliably associated with reduced withdrawal behaviors such as turnover and absenteeism, and only weakly associated with individual task performance",
+        "Higher satisfaction is most reliably associated with gains in individual task performance, with smaller and less consistent effects on turnover and absenteeism",
+        "Higher satisfaction is most reliably associated with improved performance on objective production quotas, while its links to attendance and retention are negligible",
+        "Higher satisfaction is most reliably associated with increased organizational tenure because satisfied employees are systematically promoted into higher-performing roles"
       ],
-      "answer": "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
-      "explanation": "The research literature consistently shows a modest positive correlation between job satisfaction and performance (meta-analytic estimates typically around r = .30), but the relationship is correlational and causality is difficult to establish. Satisfaction shows stronger and more consistent relationships with turnover intention, absenteeism, and organizational citizenship behaviors than with objective performance outputs. Option A overstates the causal and predictive power of satisfaction on performance. Option C incorrectly invokes Herzberg's hygiene factors as the exclusive determinant of satisfaction. Option D incorrectly claims orthogonality; the established modest positive correlation rules out a zero relationship.",
+      "answer": "Higher satisfaction is most reliably associated with reduced withdrawal behaviors such as turnover and absenteeism, and only weakly associated with individual task performance",
+      "explanation": "The empirical I-O literature shows that job satisfaction's strongest, most consistent links are to withdrawal behaviors: dissatisfied employees are more likely to leave (turnover) and to miss work (absenteeism). Satisfaction's relationship with individual task performance, by contrast, is real but modest and far less consistent (meta-analytic estimates around r = .30). So the most defensible answer is that satisfaction gains will show up most reliably in retention and attendance, not in raw output. Option 1 (index 0) is correct. Option 2 inverts the actual pattern, claiming performance is the stronger and more consistent correlate; this is the common lay assumption (\"happy workers work harder\") that the data do not support as the primary effect. Option 3 overstates the satisfaction-performance link by tying it to objective quotas while wrongly calling the attendance and retention links negligible, which reverses the best-supported finding. Option 4 substitutes a spurious mechanism: it attributes longer tenure to satisfied employees being promoted into high-performing roles, which is not the established withdrawal-behavior finding and confuses a selection/promotion story with satisfaction's direct effect on staying versus leaving.",
       "kn": "KN9",
       "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
       "difficulty": "hard",
-      "quality_comment": "Tests both substantive knowledge and methodological reasoning (correlation vs. causation); appropriate doctoral-level demand.",
+      "quality_comment": "Tests correlation-vs-causation reasoning and the differential prediction of withdrawal behaviors versus output. Revised so the correct interpretation is no longer stated in the stem (the stem gives only the r = .30 datum and leadership's expectation).",
       "suggestedLesson": "2-3-work-satisfaction",
       "suggestedParagraph": "## Job Satisfaction and Organizational Outcomes",
       "lessonExcerpt": "**Job performance**: The correlation ranges from .17 to .30 depending on the study. Statistically significant but not enormous",
