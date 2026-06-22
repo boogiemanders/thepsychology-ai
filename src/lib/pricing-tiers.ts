@@ -1,7 +1,7 @@
-// Founding price logic: $20/month before cutoff, $30/month after
-// March 2026 subscribers lock in $20/month forever via Stripe
+// Price step-up logic: $30/month before cutoff, $40/month after
+// June 2026 subscribers lock in $30/month forever via Stripe (earlier $20 founders keep $20)
 
-const FOUNDING_PRICE_ENDS_AT = process.env.FOUNDING_PRICE_ENDS_AT || '2026-04-01T04:00:00.000Z'
+const FOUNDING_PRICE_ENDS_AT = process.env.FOUNDING_PRICE_ENDS_AT || '2026-07-01T04:00:00.000Z'
 
 export interface PricingInfo {
   currentPrice: number
@@ -18,8 +18,8 @@ export function getPricingInfo(now: Date = new Date()): PricingInfo {
   const daysUntilPriceIncrease = Math.ceil(msRemaining / (1000 * 60 * 60 * 24))
 
   return {
-    currentPrice: isFoundingPrice ? 20 : 30,
-    standardPrice: 30,
+    currentPrice: isFoundingPrice ? 30 : 40,
+    standardPrice: 40,
     isFoundingPrice,
     daysUntilPriceIncrease,
     foundingPriceEndsAt: endsAt,
