@@ -183,13 +183,13 @@ Here's how all six programs stack up across the features that matter most:
 | Feature | AATBS | PsychPrep | Taylor Study | Academic Review | PrepJet | thePsychology.ai |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Starting Price** | $999 | $499 | $199/mo | $99/mo | $159/mo | $30/mo |
-| **Question Bank** | 3,000+ | 2,000+ | 1,000+ | 1,500+ | Not disclosed | 2,000+ (unlimited after 4 practice exams) |
+| **Question Bank** | 3,000+ | 2,000+ | 1,000+ | 1,500+ | Not disclosed | 2,200+ plus unlimited adaptive |
 | **Adaptive Learning** | No | No | No | Basic (one-time assessment) | Basic (readiness score) | Yes (continuous) |
 | **Content Quality** | Dense but thorough | Good with detailed rationales | Mixed accuracy reports | Adequate | Mixed reviews on question clarity | High-yield, psychologist-written |
 | **Mobile App** | No | No | No | No | No | No (mobile-responsive web) |
 | **Wellness Features** | No | No | No | No | No | Yes (integrated) |
 | **Coaching Available** | Yes (add-on) | No | Yes (included) | No | Message experts | Yes (Pro tier) |
-| **Exam Simulation** | Yes | Yes | Limited | Yes | Yes | Yes |
+| **Exam Simulation** | Yes | Yes | Limited | Yes | Yes | Yes (16 full-length) |
 | **Study Plan** | Static | Static | Coach-directed | Assessment-based (static) | Readiness-based | AI-adaptive (dynamic) |
 
 A few things jump out from this matrix. First, nobody has a native mobile app. The whole industry is behind on this. Second, adaptive learning (the kind that actually adjusts continuously) is still rare. Most programs give you a fixed path and call it personalized. Third, wellness features are essentially nonexistent outside of thePsychology.ai. For a field built on understanding human behavior and mental health, that's ironic.
@@ -206,7 +206,7 @@ There's no single best EPPP prep program. There's the best one *for your situati
 
 **If you want a human coach:** thePsychology.ai's Pro + Coaching tier pairs AI-adaptive studying with real coaching support. Taylor Study Method also offers coaching, though user reviews on coaching reliability have been mixed. AATBS offers coaching as a paid add-on at their higher tiers.
 
-**If you need maximum practice question volume:** AATBS (3,000+ questions) or PsychPrep (2,000+ with detailed explanations) give you the largest fixed question banks. thePsychology.ai has 2,000+ questions across all domains, and after you complete 4 full practice exams, the platform unlocks unlimited additional questions so you never run out of fresh material.
+**If you need maximum practice question volume:** AATBS (3,000+ questions) or PsychPrep (2,000+ with detailed explanations) give you the largest fixed question banks. thePsychology.ai has 2,200+ questions across all domains plus 16 full-length practice exams, and its adaptive engine generates unlimited fresh questions so you never run out of material.
 
 **If test anxiety is a factor:** thePsychology.ai is the only program with built-in wellness and mindfulness tools. If anxiety has historically affected your test performance, integrated support matters more than most people realize. You can always use a separate mindfulness app alongside another program, but the integration makes a difference.
 
