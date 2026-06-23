@@ -1,6 +1,6 @@
-# Google Ads Launch Checklist: EPPP Prep (US)
+# Google Ads Launch Checklist: EPPP Prep (US + Canada)
 
-Campaign: **EPPP Prep - Search - US** (add Canada later if sold there).
+Campaign: **EPPP Prep - Search - US+CA**. Targets both the United States and Canada (the EPPP is used in both).
 Everything below is paste-ready for the Google Ads UI. The repo work (above-the-fold CTAs + 3 conquest landing pages) ships in a separate PR; **the conquest landing pages only go live once that PR is merged and deployed**, so do not point ads at them until then.
 
 ---
@@ -37,13 +37,17 @@ Everything below is paste-ready for the Google Ads UI. The repo work (above-the-
 ## 2. Campaign settings
 
 - **Type:** Search. Networks: **uncheck Search Partners and Display Network** (cleaner data to start).
-- **Locations:** United States (add Canada only if you sell there). Target = "Presence: people in your targeted locations" (not "interest").
+- **Locations:** United States AND Canada. Target both countries in the one campaign.
+  - **Location options:** set to "Presence: people in or regularly in your targeted locations" (NOT "presence or interest"). This keeps spend on people actually in the US/Canada, not people merely searching about them.
+  - **Exclude Quebec, Canada:** add Quebec as an excluded location. Psychologists there license through the OPQ, not the EPPP, so those clicks will not convert. The rest of Canada uses the EPPP.
 - **Languages:** English.
 - **Bidding:** Start **Manual CPC (enhanced off)** or **Maximize Conversions WITHOUT a target CPA**. Do not set tCPA until ~15-30 purchases have logged.
 - **Budget (small test):** split roughly
   - **40%** -> AG1 (Comparison/Best) + AG5 (Practice Questions)
   - **35%** -> AG2 + AG3 + AG4 (Conquest)
   - **25%** -> AG6 (Pass Rate)
+- **US + CA budget note:** in a single shared US+CA campaign, Google tends to spend mostly on the US (bigger, cheaper search volume). Split into separate US and Canada campaigns later only if you want guaranteed Canada budget. Check the Locations report after a week to see the real US/CA split.
+- **Currency / pricing:** prices are in **USD** ($40/mo after the July 1 step-up). Canadian buyers are billed in USD and Stripe handles the conversion. You can optionally show "$40/mo USD" in ad copy so CA searchers know the currency up front. (Until July 1 checkout charges $30; it becomes $40/mo on 2026-07-01. A separate routine handles that price rewrite, do not edit it here.)
 - **Ad rotation:** Optimize. **Ad schedule:** all day to start.
 - **Match types:** launch **Exact + Phrase** only. Add Broad later, one term at a time, once you trust the data.
 
