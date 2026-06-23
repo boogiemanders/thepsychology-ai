@@ -20,6 +20,7 @@
     "gads:create-ag234": "tsx scripts/google-ads/create-ag234.ts",
     "gads:fix-ag1": "tsx scripts/google-ads/fix-ag1-phrase.ts",
     "gads:add-ag5": "tsx scripts/google-ads/add-ag5-keywords.ts",
+    "gads:fix-demographics": "tsx scripts/google-ads/fix-demographics.ts",
     "lint": "eslint .",
     "start": "next start",
     "typecheck": "npm run typecheck:app",
