@@ -17,6 +17,7 @@
     "exams:validate": "tsx scripts/dedupe-practice-exams.ts --validate",
     "gads:report": "tsx scripts/google-ads/report.ts",
     "gads:create-ag6": "tsx scripts/google-ads/create-ag6.ts",
+    "gads:create-ag234": "tsx scripts/google-ads/create-ag234.ts",
     "lint": "eslint .",
     "start": "next start",
     "typecheck": "npm run typecheck:app",
