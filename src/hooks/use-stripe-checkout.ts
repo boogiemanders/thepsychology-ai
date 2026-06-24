@@ -66,6 +66,12 @@ export function useStripeCheckout() {
           })
         }
 
+        // Meta InitiateCheckout (client-side). The matching Purchase fires
+        // server-side from the Stripe webhook via CAPI.
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'InitiateCheckout')
+        }
+
         // Pass the GA client_id (from the _ga cookie) so the server-side
         // purchase event joins back to this browser session in GA4.
         const gaClientId = readGaClientId()
