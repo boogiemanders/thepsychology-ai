@@ -13,6 +13,7 @@ import "./globals.css"
 import { SessionWarningDialog } from "@/components/session-warning-dialog"
 import { Analytics } from "@vercel/analytics/next"
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { MetaPixel } from "@/components/meta-pixel"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -72,6 +73,7 @@ export default function RootLayout({
 }>) {
   const baseUrl = siteConfig.url.replace(/\/$/, "")
   const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -128,6 +130,7 @@ export default function RootLayout({
           </ActivityProvider>
         </AuthProvider>
         {googleAnalyticsId ? <GoogleAnalytics measurementId={googleAnalyticsId} /> : null}
+        {metaPixelId ? <MetaPixel pixelId={metaPixelId} /> : null}
         <Analytics />
         <UTMCapture />
       </body>

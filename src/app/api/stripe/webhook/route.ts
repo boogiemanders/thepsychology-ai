@@ -5,6 +5,7 @@ import { getSupabaseClient } from '@/lib/supabase-server'
 import { sendSlackNotification } from '@/lib/notify-slack'
 import { sendNotificationEmail, isNotificationEmailConfigured } from '@/lib/notify-email'
 import { sendGa4Event, deterministicClientId } from '@/lib/ga4-measurement-protocol'
+import { sendMetaCapiEvent } from '@/lib/meta-capi'
 
 export const dynamic = 'force-dynamic'
 
@@ -497,6 +498,22 @@ export async function POST(request: Request) {
           },
         ],
       }).catch((err) => console.error('[Stripe] Failed to send GA4 purchase event:', err))
+
+      // Meta CAPI Purchase. Fires server-side so it survives ad blockers and
+      // iOS14 restrictions. Email is hashed inside sendMetaCapiEvent.
+      const contactForMeta = await loadUserContact(userId).catch(() => ({ email: null, name: null, createdAt: null }))
+      sendMetaCapiEvent({
+        events: [{
+          name: 'Purchase',
+          eventId: session.id,
+          email: contactForMeta.email,
+          sourceUrl: 'https://thepsychology.ai/dashboard',
+          customData: {
+            value: purchaseValue,
+            currency: purchaseCurrency,
+          },
+        }],
+      }).catch((err) => console.error('[Stripe] Failed to send Meta CAPI purchase event:', err))
 
       // Slack notification for new subscription (no PII: name/email intentionally omitted)
       await sendSlackNotification(

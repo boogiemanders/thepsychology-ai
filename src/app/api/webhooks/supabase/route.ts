@@ -5,6 +5,7 @@ import { sendSlackNotification, SlackChannel } from '@/lib/notify-slack'
 import { getSignupProvisioning } from '@/lib/signup-provisioning'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { sendGa4Event, deterministicClientId } from '@/lib/ga4-measurement-protocol'
+import { sendMetaCapiEvent } from '@/lib/meta-capi'
 
 type SupabaseWebhookPayload = {
   type?: string
@@ -415,6 +416,20 @@ export async function POST(request: NextRequest) {
           },
         ],
       })
+
+      // Meta CAPI CompleteRegistration — mirrors the GA4 sign_up above.
+      // Email is hashed inside sendMetaCapiEvent. Fired fire-and-forget so it
+      // doesn't block the email/Slack notifications below.
+      const userEmail = asNonEmptyString(payload.record.email)
+      sendMetaCapiEvent({
+        events: [{
+          name: 'CompleteRegistration',
+          eventId: `signup-${userId}`,
+          email: userEmail,
+          sourceUrl: 'https://thepsychology.ai',
+          customData: referralSource ? { referral_source: referralSource } : undefined,
+        }],
+      }).catch((err) => console.error('[supabase-webhook] Failed to send Meta CAPI registration event:', err))
 
       const deviceFields = await awaitSignupDeviceWrite(userId, payload.record)
       if (deviceFields) {
