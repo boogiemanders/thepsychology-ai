@@ -73,27 +73,27 @@
       ]
     },
     {
-      "stem": "At which stage of moral development does Kohlberg suggest individuals begin to understand that rules can be changed through mutual agreement?",
+      "stem": "At which stage of moral development does Kohlberg suggest individuals begin to understand that laws are social contracts that can be changed through mutual agreement?",
       "options": [
         "Preconventional",
         "Conventional",
         "Postconventional",
         "Autonomous"
       ],
-      "answer": "Autonomous",
-      "explanation": "Kohlberg's Autonomous Stage indicates that individuals understand rules are created through mutual agreement and can be changed. The other stages do not reflect this understanding.",
+      "answer": "Postconventional",
+      "explanation": "Kohlberg's postconventional level (specifically Stage 5, the social-contract orientation) is where people understand that laws are social agreements that can be changed through democratic, mutual consent when they no longer serve justice. 'Autonomous' is the trap here: it is a stage in Piaget's moral theory, not one of Kohlberg's levels. Preconventional and conventional reasoning still treat rules and laws as externally fixed.",
       "kn": "KN23",
       "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "hard",
       "quality_comment": "The question accurately tests knowledge of Kohlberg's moral development stages.",
       "suggestedLesson": "4-morality",
       "suggestedParagraph": "## The Expansion: Kohlberg's Six-Stage Theory",
-      "lessonExcerpt": "More importantly, they begin judging actions based on intentions rather than just outcomes.",
+      "lessonExcerpt": "At this highest level, people can think about morality abstractly and may even critique existing laws based on higher principles.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 7,
       "relatedSections": [
-        "The Foundation: Piaget's Three-Stage Theory"
+        "The Expansion: Kohlberg's Six-Stage Theory"
       ]
     },
     {
@@ -591,7 +591,7 @@
       ]
     },
     {
-      "stem": "According to Piaget's theory of cognitive development, which stage is characterized by children's understanding of rules as fixed and unchangeable, primarily judging actions by their consequences rather than intentions?",
+      "stem": "According to Piaget's theory of moral development, which stage is characterized by children's understanding of rules as fixed and unchangeable, primarily judging actions by their consequences rather than intentions?",
       "options": [
         "Premoral Stage",
         "Heteronomous Stage",
