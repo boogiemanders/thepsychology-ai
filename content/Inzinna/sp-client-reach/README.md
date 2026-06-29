@@ -33,7 +33,9 @@ Each "Send to Google Sheet" creates (or refreshes) a tab named after the period,
 
 ## rater8 CSV columns
 
-`First Name, Last Name, Email, Cell Phone, Provider, Location, Appointment Date, Appointment Status`
+`First Name, Last Name, Email, Cell Phone, Provider, Review Profile, Location, Appointment Date, Appointment Status`
+
+**Review Profile** tags each row `Individual` or `Practice` so you can split the file by where the review should land. Individual = Greg (Inzinna), Bret (Boatwright), Lorin (Singh), Anders (Chan), Filomena (DiFranco), Carlos (Juan Carlos Espinal). Everyone else — Karen, Joelle, Rachel, Izzy (Isabelle), Emily, and every future intern/extern/new hire — defaults to `Practice`. Edit `INDIVIDUAL_PROVIDER_TOKENS` in `src/lib/merge.ts` to move someone.
 
 One row **per attended visit** (rater8's appointment-level model), not one per person. A client seen 5 times in the period gets 5 rows. Only attended ("Show") appointments where the person has a phone or email are included, so Appointment Status is always "Show" (rater8 accepts either a status column or a report pre-filtered to seen patients; this gives both).
 

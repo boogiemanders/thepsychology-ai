@@ -130,6 +130,23 @@ function lookupClient(
   return { row: null, how: 'not_found' }
 }
 
+// Reviews for these providers go to their own individual rater8 profile.
+// Everyone else — Karen, Joelle, Rachel, Izzy (Isabelle), Emily, and all future
+// interns/externs/new hires — routes to the practice profile (the default).
+const INDIVIDUAL_PROVIDER_TOKENS = new Set([
+  'inzinna', // Gregory Inzinna (Greg)
+  'boatwright', // Bret Boatwright
+  'singh', // Lorin Singh
+  'chan', // Anders Chan
+  'difranco', // Filomena DiFranco
+  'espinal', // Juan Carlos Espinal (Carlos)
+])
+
+function reviewProfile(clinician: string): string {
+  const tokens = clinician.toLowerCase().replace(/[.,]/g, '').split(/\s+/)
+  return tokens.some((t) => INDIVIDUAL_PROVIDER_TOKENS.has(t)) ? 'Individual' : 'Practice'
+}
+
 // "Anders Chan" -> ["Anders", "Chan"]; single token -> last name blank
 function splitName(full: string): [string, string] {
   const toks = full.trim().split(/\s+/)
@@ -231,6 +248,7 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
             email,
             phone,
             a.clinician,
+            reviewProfile(a.clinician),
             OFFICE_LOCATION[a.office] ?? a.office,
             fmtDateUs(a.date),
             a.status,
@@ -258,11 +276,11 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
   }
 
   rows.sort((a, b) => a.location.localeCompare(b.location) || a.clientName.localeCompare(b.clientName))
-  // rater8 feed sorted by visit date, then name (column index: 6=date, 1=last, 0=first)
+  // rater8 feed sorted by visit date, then name (column index: 7=date, 1=last, 0=first)
   const sortable = (us: string) => us.split('/').reverse().join('')
   rater8.sort(
     (a, b) =>
-      sortable(a[6]).localeCompare(sortable(b[6])) ||
+      sortable(a[7]).localeCompare(sortable(b[7])) ||
       a[1].localeCompare(b[1]) ||
       a[0].localeCompare(b[0])
   )
@@ -276,6 +294,7 @@ export const RATER8_HEADER = [
   'Email',
   'Cell Phone',
   'Provider',
+  'Review Profile',
   'Location',
   'Appointment Date',
   'Appointment Status',
