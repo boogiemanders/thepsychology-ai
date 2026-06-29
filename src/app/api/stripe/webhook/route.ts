@@ -95,6 +95,7 @@ const ATTRIBUTION_KEYS = [
   'utm_campaign',
   'utm_content',
   'utm_term',
+  'gclid',
 ] as const
 
 async function loadAttribution(
@@ -113,9 +114,10 @@ async function loadAttribution(
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
   if (!supabase) return out
 
+  // select('*') (not a column list) so a not-yet-migrated gclid column can't throw.
   const { data } = await supabase
     .from('users')
-    .select(ATTRIBUTION_KEYS.join(','))
+    .select('*')
     .eq('id', userId)
     .maybeSingle()
   if (!data) return out
@@ -179,6 +181,7 @@ function formatAttributionLines(a: Record<string, string | null>): string[] {
           ...(a.utm_term ? [`- UTM term: ${a.utm_term}`] : []),
         ]
       : ['- UTM attribution: none (direct / organic)']),
+    ...(a.gclid ? [`- Google Ads click (gclid): ${a.gclid}`] : []),
   ]
 }
 

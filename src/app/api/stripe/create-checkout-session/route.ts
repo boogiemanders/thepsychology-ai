@@ -14,15 +14,18 @@ const ATTRIBUTION_FIELDS = [
   'referral_code',
   'landing_page',
   'landing_referrer',
+  'gclid',
 ] as const
 
 async function loadAttributionMetadata(userId: string): Promise<Record<string, string>> {
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
   if (!supabase) return {}
 
+  // select('*') (not a column list) so a not-yet-migrated gclid column can't throw
+  // and drop ALL attribution from the checkout metadata.
   const { data, error } = await supabase
     .from('users')
-    .select(ATTRIBUTION_FIELDS.join(','))
+    .select('*')
     .eq('id', userId)
     .single()
 
