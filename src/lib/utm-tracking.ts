@@ -251,3 +251,53 @@ export function getStoredBlogSlug(): string | null {
     return null
   }
 }
+
+const GCLID_STORAGE_KEY = 'thepsychology_gclid'
+const GCLID_EXPIRY_KEY = 'thepsychology_gclid_expiry'
+
+/**
+ * Store first-touch Google Ads click id (gclid). Kept separate from UTMs because
+ * Google auto-tagging can deliver a gclid-only URL with no UTM params (and
+ * storeUTMParams early-returns when no UTM is present). gclid is rewrite-proof
+ * and is the 1:1 link to a paid click used for offline-conversion upload.
+ * Called on every page mount; only acts when ?gclid is present. 30-day first-touch.
+ */
+export function storeGclid(): void {
+  if (typeof window === 'undefined') return
+
+  const gclid = new URLSearchParams(window.location.search).get('gclid')
+  if (!gclid) return
+
+  // First-touch: keep the original gclid if it hasn't expired
+  const existingExpiry = localStorage.getItem(GCLID_EXPIRY_KEY)
+  if (existingExpiry && new Date(existingExpiry) > new Date()) return
+
+  localStorage.setItem(GCLID_STORAGE_KEY, gclid)
+
+  const expiryDate = new Date()
+  expiryDate.setDate(expiryDate.getDate() + UTM_EXPIRY_DAYS)
+  localStorage.setItem(GCLID_EXPIRY_KEY, expiryDate.toISOString())
+}
+
+/**
+ * Get the stored first-touch gclid (or null).
+ */
+export function getStoredGclid(): string | null {
+  if (typeof window === 'undefined') return null
+
+  try {
+    const gclid = localStorage.getItem(GCLID_STORAGE_KEY)
+    if (!gclid) return null
+
+    const expiry = localStorage.getItem(GCLID_EXPIRY_KEY)
+    if (expiry && new Date(expiry) < new Date()) {
+      localStorage.removeItem(GCLID_STORAGE_KEY)
+      localStorage.removeItem(GCLID_EXPIRY_KEY)
+      return null
+    }
+
+    return gclid
+  } catch {
+    return null
+  }
+}

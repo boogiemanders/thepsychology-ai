@@ -127,15 +127,37 @@ async function repairIncompleteSignupRecord(
     const metadataValue = asNonEmptyString(metadata.utm_term)
     if (metadataValue) updateData.utm_term = metadataValue
   }
+  if (!asNonEmptyString(record.gclid)) {
+    const metadataValue = asNonEmptyString(metadata.gclid)
+    if (metadataValue) updateData.gclid = metadataValue
+  }
 
   if (Object.keys(updateData).length === 0) return null
 
-  const { data: updatedUser, error: updateError } = await supabase
+  let { data: updatedUser, error: updateError } = await supabase
     .from('users')
     .update(updateData)
     .eq('id', userId)
     .select('*')
     .maybeSingle()
+
+  // gclid is applied manually and may lag deploy; if its column is missing, strip
+  // it and retry so the rest of the repair (UTMs, trial, name) still lands.
+  if (
+    updateError &&
+    typeof updateError.message === 'string' &&
+    updateError.message.includes('gclid') &&
+    'gclid' in updateData
+  ) {
+    delete updateData.gclid
+    if (Object.keys(updateData).length === 0) return null
+    ;({ data: updatedUser, error: updateError } = await supabase
+      .from('users')
+      .update(updateData)
+      .eq('id', userId)
+      .select('*')
+      .maybeSingle())
+  }
 
   if (updateError) {
     console.warn('[supabase-webhook] Failed to repair incomplete signup row:', {
@@ -317,6 +339,7 @@ const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
       `- Subscription tier: ${(record.subscription_tier as string | null | undefined) ?? 'unknown'}`,
       `- Referral source (self-reported): ${(record.referral_source as string | null | undefined) ?? 'unknown'}`,
       ...utmText,
+      `- Google Ads click (gclid): ${(record.gclid as string | null | undefined) ?? 'none'}`,
       `- Promo code: ${(record.promo_code_used as string | null | undefined) ?? 'none'}`,
       `- Stripe customer id: ${(record.stripe_customer_id as string | null | undefined) ?? 'none'}`,
       `- Exam date: ${(record.exam_date as string | null | undefined) ?? 'not set'}`,
@@ -336,6 +359,7 @@ const buildEmailPayload = (payload: SupabaseWebhookPayload) => {
           <li><strong>Subscription tier:</strong> ${(record.subscription_tier as string | null | undefined) ?? 'unknown'}</li>
           <li><strong>Referral source (self-reported):</strong> ${(record.referral_source as string | null | undefined) ?? 'unknown'}</li>
           ${utmHtml.join('\n          ')}
+          <li><strong>Google Ads click (gclid):</strong> ${(record.gclid as string | null | undefined) ?? 'none'}</li>
           <li><strong>Promo code:</strong> ${(record.promo_code_used as string | null | undefined) ?? 'none'}</li>
           <li><strong>Stripe customer id:</strong> ${(record.stripe_customer_id as string | null | undefined) ?? 'none'}</li>
           <li><strong>Exam date:</strong> ${(record.exam_date as string | null | undefined) ?? 'not set'}</li>
