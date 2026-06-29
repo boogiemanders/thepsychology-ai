@@ -9,6 +9,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { supabase } from "@/lib/supabase"
 import { CATEGORY_LABELS, getReferralSourcesByCategory } from "@/lib/referral-sources"
 import { storeUTMParams, getStoredUTMParams, clearStoredUTMParams, formatUTMForAPI, getStoredLandingAttribution, getStoredBlogSlug, getStoredGclid } from "@/lib/utm-tracking"
+import { isEduEmail } from "@/lib/edu-email"
 
 // Retry helper for critical API calls (profile creation)
 async function fetchWithRetry(url: string, options: RequestInit, retries = 3): Promise<Response> {
@@ -319,6 +320,18 @@ export function PricingSection() {
                       required
                       className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                     />
+                    <p
+                      className={cn(
+                        "mt-2 text-xs transition-colors",
+                        isEduEmail(formData.email)
+                          ? "text-brand-soft-blue font-medium"
+                          : "text-muted-foreground",
+                      )}
+                    >
+                      {isEduEmail(formData.email)
+                        ? siteConfig.eduOffer.formDetected
+                        : siteConfig.eduOffer.formDefault}
+                    </p>
                   </div>
 
                   <motion.div

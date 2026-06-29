@@ -110,6 +110,11 @@ export const siteConfig = {
       secondary: { text: "Login", href: "/login" },
     },
   },
+  eduOffer: {
+    heroLine: "A free month on your .edu email",
+    formDefault: "On a .edu email? Your free trial becomes a full month, not 7 days.",
+    formDetected: "Your .edu email unlocks a full month free, not 7 days. No credit card.",
+  },
   companyShowcase: {
     title: "Built by psychologists, neuroscientists & researchers trained at:",
     subtitle: null,

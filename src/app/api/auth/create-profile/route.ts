@@ -1,6 +1,7 @@
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { sendSlackNotification } from '@/lib/notify-slack'
 import { getSignupProvisioning } from '@/lib/signup-provisioning'
+import { trialDaysForEmail } from '@/lib/edu-email'
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 
@@ -183,11 +184,13 @@ export async function POST(request: NextRequest) {
 
     const { device: signupDevice, userAgent: signupUserAgent } = inferSignupDevice(request.headers)
 
-    // Default signups get the standard 7-day Pro trial unless the signup flow opts out.
+    // Trial length: standard 7 days, or a full month for .edu / academic signups
+    // (the student offer), unless the signup flow opts out of a trial entirely.
     const now = new Date()
     const subscriptionStart = resolvedAuthCreatedAt ? new Date(resolvedAuthCreatedAt) : now
     const safeSubscriptionStart = Number.isNaN(subscriptionStart.getTime()) ? now : subscriptionStart
-    const trialEndsAt = new Date(safeSubscriptionStart.getTime() + 7 * 24 * 60 * 60 * 1000)
+    const trialDays = trialDaysForEmail(email)
+    const trialEndsAt = new Date(safeSubscriptionStart.getTime() + trialDays * 24 * 60 * 60 * 1000)
     const provisioning = getSignupProvisioning({
       subscriptionTier,
       signupSource: resolvedSignupSource,
