@@ -19,7 +19,14 @@ import {
 } from './wais5-config'
 import { SCRIPTS, SUBTEST_INTROS, GENERAL_TEST_INTRO } from './wais5-scripts'
 import { supabase } from '@/lib/supabase'
+import { useAuth } from '@/context/auth-context'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
+
+type CloudSession = {
+  id: string
+  client_label: string
+  updated_at: string
+}
 
 const STORAGE_KEY = 'wais5-form-v1'
 
@@ -135,6 +142,7 @@ function BdTrialRow({
 }
 
 export default function Wais5Form() {
+  const { user } = useAuth()
   const [data, setData] = useState<FormData>({})
   const [activeItemKey, setActiveItemKey] = useState<string | null>(null)
   const [stimUrls, setStimUrls] = useState<Record<string, string>>({})
@@ -143,6 +151,24 @@ export default function Wais5Form() {
   const toastTimer = useRef<number | null>(null)
   const importInputRef = useRef<HTMLInputElement | null>(null)
   const hydrated = useRef(false)
+
+  // cloud save
+  const [cloudSessions, setCloudSessions] = useState<CloudSession[]>([])
+  const [cloudLabel, setCloudLabel] = useState('')
+  const [cloudSelectedId, setCloudSelectedId] = useState<string>('')
+  const [cloudBusy, setCloudBusy] = useState(false)
+
+  const refreshCloudSessions = useCallback(async () => {
+    if (!user) return
+    const { data: rows, error } = await supabase
+      .from('wais5_sessions')
+      .select('id, client_label, updated_at')
+      .order('updated_at', { ascending: false })
+    if (error || !rows) return
+    setCloudSessions(rows as CloudSession[])
+  }, [user])
+
+  useEffect(() => { refreshCloudSessions() }, [refreshCloudSessions])
 
   useEffect(() => {
     try {
@@ -339,6 +365,53 @@ export default function Wais5Form() {
     try { localStorage.removeItem(STORAGE_KEY) } catch {}
     setData({})
     showToast('Cleared')
+  }
+
+  const handleCloudSave = async () => {
+    if (!user) { showToast('Sign in first'); return }
+    const label = cloudLabel.trim()
+    if (!label) { showToast('Enter a client label first'); return }
+    setCloudBusy(true)
+    const { error } = await supabase
+      .from('wais5_sessions')
+      .upsert(
+        { clinician_id: user.id, client_label: label, data, updated_at: new Date().toISOString() },
+        { onConflict: 'clinician_id,client_label' }
+      )
+    setCloudBusy(false)
+    if (error) { showToast(`Save failed: ${error.message}`); return }
+    showToast(`Saved "${label}"`)
+    refreshCloudSessions()
+  }
+
+  const handleCloudLoad = async () => {
+    if (!cloudSelectedId) { showToast('Pick a session to load'); return }
+    setCloudBusy(true)
+    const { data: row, error } = await supabase
+      .from('wais5_sessions')
+      .select('client_label, data')
+      .eq('id', cloudSelectedId)
+      .single()
+    setCloudBusy(false)
+    if (error || !row) { showToast(`Load failed: ${error?.message || 'not found'}`); return }
+    if (Object.keys(data).length > 0 && !confirm('This will replace the current form. Continue?')) return
+    setData((row.data as FormData) || {})
+    setCloudLabel(row.client_label)
+    showToast(`Loaded "${row.client_label}"`)
+  }
+
+  const handleCloudDelete = async () => {
+    if (!cloudSelectedId) { showToast('Pick a session to delete'); return }
+    const session = cloudSessions.find(s => s.id === cloudSelectedId)
+    if (!session) return
+    if (!confirm(`Delete cloud session "${session.client_label}"? This cannot be undone.`)) return
+    setCloudBusy(true)
+    const { error } = await supabase.from('wais5_sessions').delete().eq('id', cloudSelectedId)
+    setCloudBusy(false)
+    if (error) { showToast(`Delete failed: ${error.message}`); return }
+    setCloudSelectedId('')
+    showToast(`Deleted "${session.client_label}"`)
+    refreshCloudSessions()
   }
 
   // ---------- shared input/control components ----------
@@ -1144,6 +1217,49 @@ export default function Wais5Form() {
         <input ref={importInputRef} type="file" accept="application/json" className="hidden" onChange={handleImport} />
         <button type="button" onClick={() => window.print()} className="rounded border border-zinc-300 dark:border-zinc-700 px-3 py-1 text-[12px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800">Print</button>
         <button type="button" onClick={handleClear} className="rounded border border-[#E7437D] bg-[#E7437D] px-3 py-1 text-[12px] text-white hover:opacity-90">New</button>
+      </div>
+
+      {/* cloud save row */}
+      <div className="sticky top-[42px] z-30 -mx-4 flex flex-wrap items-center gap-2 border-b border-zinc-200 bg-white/95 dark:border-zinc-800 dark:bg-zinc-950/95 backdrop-blur px-4 py-2 print:hidden">
+        <p className="mr-1 text-[10px] font-mono uppercase tracking-[0.16em] text-slate-500 dark:text-zinc-400">Client</p>
+        <input
+          type="text"
+          value={cloudLabel}
+          onChange={e => setCloudLabel(e.target.value)}
+          placeholder="e.g. JD-2026-06"
+          className="w-36 rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-2 py-1 text-[12px] text-zinc-900 dark:text-zinc-100"
+        />
+        <button
+          type="button"
+          onClick={handleCloudSave}
+          disabled={cloudBusy || !user}
+          className="rounded border border-zinc-300 dark:border-zinc-700 px-3 py-1 text-[12px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-50"
+        >Save to cloud</button>
+        <span className="mx-1 h-4 w-px bg-zinc-300 dark:bg-zinc-700" />
+        <select
+          value={cloudSelectedId}
+          onChange={e => setCloudSelectedId(e.target.value)}
+          className="w-56 rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-2 py-1 text-[12px] text-zinc-900 dark:text-zinc-100"
+        >
+          <option value="">{cloudSessions.length ? 'Load saved...' : 'No saved sessions'}</option>
+          {cloudSessions.map(s => (
+            <option key={s.id} value={s.id}>
+              {s.client_label} ({new Date(s.updated_at).toLocaleDateString()})
+            </option>
+          ))}
+        </select>
+        <button
+          type="button"
+          onClick={handleCloudLoad}
+          disabled={cloudBusy || !cloudSelectedId}
+          className="rounded border border-zinc-300 dark:border-zinc-700 px-3 py-1 text-[12px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-50"
+        >Load</button>
+        <button
+          type="button"
+          onClick={handleCloudDelete}
+          disabled={cloudBusy || !cloudSelectedId}
+          className="rounded border border-zinc-300 dark:border-zinc-700 px-3 py-1 text-[12px] text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-50"
+        >Delete</button>
       </div>
 
       {/* jump nav — fixed on left, hover/focus expands */}
