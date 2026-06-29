@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import { usePathname } from "next/navigation"
-import { storeUTMParams, storeLandingAttribution, storeBlogAttribution } from "@/lib/utm-tracking"
+import { storeUTMParams, storeLandingAttribution, storeBlogAttribution, storeGclid } from "@/lib/utm-tracking"
 
 export function UTMCapture() {
   const pathname = usePathname()
@@ -14,6 +14,7 @@ export function UTMCapture() {
       storeUTMParams()
       storeLandingAttribution()
       storeBlogAttribution()
+      storeGclid()
     } catch {
       // ignore
     }

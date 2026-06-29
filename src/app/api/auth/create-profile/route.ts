@@ -51,6 +51,8 @@ export async function POST(request: NextRequest) {
       landing_referrer,
       // First-touch blog post attribution
       first_blog_slug,
+      // Google Ads click id (rewrite-proof paid-click signal)
+      gclid,
     } = body
 
     // Validate required fields
@@ -124,6 +126,7 @@ export async function POST(request: NextRequest) {
     let resolvedLandingPage = (typeof landing_page === 'string' && landing_page.trim().length > 0) ? landing_page.trim() : null
     let resolvedLandingReferrer = (typeof landing_referrer === 'string' && landing_referrer.trim().length > 0) ? landing_referrer.trim() : null
     let resolvedFirstBlogSlug = (typeof first_blog_slug === 'string' && first_blog_slug.trim().length > 0) ? first_blog_slug.trim() : null
+    let resolvedGclid = (typeof gclid === 'string' && gclid.trim().length > 0) ? gclid.trim() : null
 
     let resolvedAuthCreatedAt = (typeof authCreatedAt === 'string' && authCreatedAt.trim().length > 0)
       ? authCreatedAt.trim()
@@ -164,6 +167,7 @@ export async function POST(request: NextRequest) {
             resolvedLandingReferrer || (typeof meta.landing_referrer === 'string' ? meta.landing_referrer : null)
           resolvedFirstBlogSlug =
             resolvedFirstBlogSlug || (typeof meta.first_blog_slug === 'string' ? meta.first_blog_slug : null)
+          resolvedGclid = resolvedGclid || (typeof meta.gclid === 'string' ? meta.gclid : null)
           resolvedSignupSource =
             resolvedSignupSource || (typeof meta.signup_source === 'string' ? meta.signup_source : null)
           resolvedSkipTrial =
@@ -216,6 +220,23 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    // Write-once first-touch attribution: never overwrite a populated value on a
+    // later upsert. This upsert re-runs on retries and could re-run with expired/
+    // empty localStorage; without this, a second call would null out good
+    // first-touch data. select('*') (not a column list) so a not-yet-migrated
+    // gclid column can't throw; the row may not exist yet (the on_auth_user_created
+    // trigger races this call) -> existing is {} and we write the resolved value.
+    const { data: existingRow } = await supabase
+      .from('users')
+      .select('*')
+      .eq('id', userId)
+      .maybeSingle()
+    const existing = (existingRow ?? {}) as Record<string, unknown>
+    const keepFirst = (col: string, resolved: string | null): string | null => {
+      const prior = existing[col]
+      return typeof prior === 'string' && prior.length > 0 ? prior : resolved
+    }
+
     // Create the user profile (upsert to handle race with on_auth_user_created trigger)
     const profilePayload: Record<string, unknown> = {
       id: userId,
@@ -224,23 +245,25 @@ export async function POST(request: NextRequest) {
       subscription_tier: provisioning.subscriptionTier,
       trial_ends_at: provisioning.skipTrial ? null : trialEndsAt.toISOString(),
       promo_code_used: promoCodeUsed || null,
-      referral_source: resolvedReferralSource,
+      referral_source: keepFirst('referral_source', resolvedReferralSource),
       referred_by: referredBy,
       referral_code: referralCode,
       subscription_started_at: provisioning.skipTrial ? null : safeSubscriptionStart.toISOString(),
       signup_device: signupDevice,
       signup_user_agent: signupUserAgent,
-      // UTM tracking for marketing attribution
-      utm_source: resolvedUtmSource,
-      utm_medium: resolvedUtmMedium,
-      utm_campaign: resolvedUtmCampaign,
-      utm_content: resolvedUtmContent,
-      utm_term: resolvedUtmTerm,
+      // UTM tracking for marketing attribution (write-once first-touch)
+      utm_source: keepFirst('utm_source', resolvedUtmSource),
+      utm_medium: keepFirst('utm_medium', resolvedUtmMedium),
+      utm_campaign: keepFirst('utm_campaign', resolvedUtmCampaign),
+      utm_content: keepFirst('utm_content', resolvedUtmContent),
+      utm_term: keepFirst('utm_term', resolvedUtmTerm),
       // First-touch landing attribution (which page brought them in)
-      landing_page: resolvedLandingPage,
-      landing_referrer: resolvedLandingReferrer,
+      landing_page: keepFirst('landing_page', resolvedLandingPage),
+      landing_referrer: keepFirst('landing_referrer', resolvedLandingReferrer),
       // First-touch blog post attribution (first /blog/<slug> the visitor saw)
-      first_blog_slug: resolvedFirstBlogSlug,
+      first_blog_slug: keepFirst('first_blog_slug', resolvedFirstBlogSlug),
+      // Google Ads click id (rewrite-proof paid-click signal, write-once first-touch)
+      gclid: keepFirst('gclid', resolvedGclid),
     }
 
     let { error: profileError, data } = await supabase
@@ -248,15 +271,19 @@ export async function POST(request: NextRequest) {
       .upsert(profilePayload, { onConflict: 'id' })
       .select()
 
-    // If the first_blog_slug migration hasn't been applied yet, never break signup:
-    // strip the unknown column and retry so all other attribution still persists.
-    if (profileError && typeof profileError.message === 'string' && profileError.message.includes('first_blog_slug')) {
-      console.warn('[create-profile] first_blog_slug column missing; retrying upsert without it')
-      delete profilePayload.first_blog_slug
-      ;({ error: profileError, data } = await supabase
-        .from('users')
-        .upsert(profilePayload, { onConflict: 'id' })
-        .select())
+    // If an optional attribution column hasn't been migrated yet, never break
+    // signup: strip the unknown column and retry so all other attribution still
+    // persists. first_blog_slug and gclid are applied manually and may lag deploy;
+    // if both are missing the loop strips each across two retries.
+    for (const col of ['first_blog_slug', 'gclid'] as const) {
+      if (profileError && typeof profileError.message === 'string' && profileError.message.includes(col)) {
+        console.warn(`[create-profile] ${col} column missing; retrying upsert without it`)
+        delete profilePayload[col]
+        ;({ error: profileError, data } = await supabase
+          .from('users')
+          .upsert(profilePayload, { onConflict: 'id' })
+          .select())
+      }
     }
 
     if (profileError) {
