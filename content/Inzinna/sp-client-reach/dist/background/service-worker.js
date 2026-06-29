@@ -2,9 +2,12 @@
 (() => {
   // src/background/service-worker.ts
   var SP_ORIGIN = "https://secure.simplepractice.com";
-  chrome.action.onClicked.addListener(() => {
+  function openApp() {
     chrome.tabs.create({ url: chrome.runtime.getURL("app/app.html") });
-  });
+  }
+  if (chrome.action?.onClicked) {
+    chrome.action.onClicked.addListener(openApp);
+  }
   async function fetchCsvsInPage(urls) {
     const out = [];
     for (const url of urls) {

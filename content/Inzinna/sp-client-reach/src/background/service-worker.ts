@@ -3,9 +3,15 @@
 
 const SP_ORIGIN = 'https://secure.simplepractice.com'
 
-chrome.action.onClicked.addListener(() => {
+function openApp() {
   chrome.tabs.create({ url: chrome.runtime.getURL('app/app.html') })
-})
+}
+
+// Guard so a missing chrome.action (stale load / odd boot) can't throw at the
+// top of the worker and stop the FETCH_REPORTS listener below from registering.
+if (chrome.action?.onClicked) {
+  chrome.action.onClicked.addListener(openApp)
+}
 
 interface FetchReportsRequest {
   type: 'FETCH_REPORTS'
