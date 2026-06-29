@@ -158,15 +158,16 @@ export default function Wais5Form() {
   const [cloudSelectedId, setCloudSelectedId] = useState<string>('')
   const [cloudBusy, setCloudBusy] = useState(false)
 
+  const userId = user?.id
   const refreshCloudSessions = useCallback(async () => {
-    if (!user) return
+    if (!userId) return
     const { data: rows, error } = await supabase
       .from('wais5_sessions')
       .select('id, client_label, updated_at')
       .order('updated_at', { ascending: false })
     if (error || !rows) return
     setCloudSessions(rows as CloudSession[])
-  }, [user])
+  }, [userId])
 
   useEffect(() => { refreshCloudSessions() }, [refreshCloudSessions])
 
