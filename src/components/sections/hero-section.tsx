@@ -75,21 +75,28 @@ export function HeroSection({
 
         {/* CTA Buttons */}
         <div
-          className="shrink-0 flex items-center gap-2.5 flex-wrap justify-center"
+          className="shrink-0 flex flex-col items-center gap-3"
           style={ctaYOffset ? { transform: `translateY(${ctaYOffset}px)` } : undefined}
         >
-          <button
-            onClick={handleStartFree}
-            className="brand-soft-blue-bg h-9 flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-white w-32 px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.35),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-[#4e7ba4] hover:brightness-95 transition-all ease-out active:scale-95 focus-visible:outline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/70"
-          >
-            {hero.cta.primary.text}
-          </button>
-          <Link
-            href={hero.cta.secondary.href}
-            className="h-10 flex items-center justify-center w-32 px-5 text-sm font-normal tracking-wide text-primary rounded-full transition-all ease-out active:scale-95 bg-white dark:bg-background border border-[#E5E7EB] dark:border-[#27272A] hover:bg-white/80 dark:hover:bg-background/80"
-          >
-            {hero.cta.secondary.text}
-          </Link>
+          <div className="flex items-center gap-2.5 flex-wrap justify-center">
+            <button
+              onClick={handleStartFree}
+              className="brand-soft-blue-bg h-9 flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-white w-32 px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.35),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-[#4e7ba4] hover:brightness-95 transition-all ease-out active:scale-95 focus-visible:outline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-soft-blue/70"
+            >
+              {hero.cta.primary.text}
+            </button>
+            <Link
+              href={hero.cta.secondary.href}
+              className="h-10 flex items-center justify-center w-32 px-5 text-sm font-normal tracking-wide text-primary rounded-full transition-all ease-out active:scale-95 bg-white dark:bg-background border border-[#E5E7EB] dark:border-[#27272A] hover:bg-white/80 dark:hover:bg-background/80"
+            >
+              {hero.cta.secondary.text}
+            </Link>
+          </div>
+          {siteConfig.eduOffer?.heroLine ? (
+            <span className="rounded-full border border-white/25 bg-white/5 px-3 py-1 text-xs md:text-sm font-normal tracking-wide text-white/85">
+              {siteConfig.eduOffer.heroLine}
+            </span>
+          ) : null}
         </div>
 
         {/* Ticker */}
