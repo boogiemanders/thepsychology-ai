@@ -36,12 +36,8 @@ console.log('locations:', byLocation)
 console.log('match types:', byMatch)
 console.log('rater8 rows (one per visit):', rater8.length)
 // every rater8 row must be a seen visit with a way to reach the person
-const badStatus = rater8.filter((r) => r[8] !== 'Show').length
+const badStatus = rater8.filter((r) => r[7] !== 'Show').length
 const noContact = rater8.filter((r) => !r[2] && !r[3]).length
-const badProfile = rater8.filter((r) => r[5] !== 'Individual' && r[5] !== 'Practice').length
-// Karen/Joelle/Rachel/Izzy/Emily route to Practice; the 6 named providers to Individual
-const terryPractice = rater8.filter((r) => /Terry|Gill|Beyer|Feinstein|Underwood/.test(r[4]) && r[5] !== 'Practice').length
-const inzinnaIndividual = rater8.filter((r) => /Inzinna|Boatwright|Singh|Chan|DiFranco|Espinal/.test(r[4]) && r[5] !== 'Individual').length
 
 // sanity assertions against the known 5/11-6/11 exports
 let failures = 0
@@ -73,12 +69,9 @@ expect('rater8 all reachable', noContact, noContact === 0, '0 rows missing phone
 expect(
   'rater8 columns',
   rater8[0]?.length,
-  rater8[0]?.length === 9,
-  '9 (First,Last,Email,Cell,Provider,Review Profile,Location,Date,Status)'
+  rater8[0]?.length === 8,
+  '8 (First,Last,Email,Cell,Provider,Location,Date,Status)'
 )
-expect('review profile valid', badProfile, badProfile === 0, '0 rows with profile != Individual/Practice')
-expect('practice providers routed', terryPractice, terryPractice === 0, '0 Terry/Gill/Beyer/Feinstein/Underwood rows mis-tagged')
-expect('individual providers routed', inzinnaIndividual, inzinnaIndividual === 0, '0 Inzinna/Boatwright/Singh/Chan/DiFranco/Espinal rows mis-tagged')
 
 if (failures) {
   console.error(`\n${failures} check(s) failed`)
