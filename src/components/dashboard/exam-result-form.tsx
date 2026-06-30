@@ -154,6 +154,34 @@ export function ExamResultForm({ open, onOpenChange, userId, userEmail, existing
           .insert(data)
         if (error) throw error
       }
+
+      // Also file the written testimonial into the rewards pool (admin-reviewable, the same pool the
+      // win-back emails draw from, and where approval grants +14 days). Best-effort: a failure here
+      // must never block the exam-result save.
+      if (passed && testimonialInterest && testimonialText.trim().length >= 20) {
+        try {
+          const { data: { session } } = await supabase.auth.getSession()
+          if (session?.access_token) {
+            await fetch('/api/rewards/submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${session.access_token}` },
+              body: JSON.stringify({
+                rewardType: 'testimonial',
+                data: {
+                  text: testimonialText.trim(),
+                  name: testimonialDisplayName.trim() || undefined,
+                  source: 'passed_eppp',
+                  passed: true,
+                  consent: true,
+                },
+              }),
+            })
+          }
+        } catch (e) {
+          console.error('testimonial -> rewards pool (non-blocking):', e)
+        }
+      }
+
       setSubmitState('success')
     } catch (err) {
       console.error('Error submitting exam result:', err)

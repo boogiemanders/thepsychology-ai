@@ -43,7 +43,18 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { rewardType, data } = body as { rewardType: RewardType; data: { video_url?: string; text?: string } }
+    const { rewardType, data } = body as {
+      rewardType: RewardType
+      data: {
+        video_url?: string
+        text?: string
+        name?: string
+        role?: string
+        source?: string
+        passed?: boolean
+        consent?: boolean
+      }
+    }
 
     if (!VALID_REWARD_TYPES.includes(rewardType)) {
       return NextResponse.json({ error: 'Invalid reward type. Must be "video" or "testimonial".' }, { status: 400 })
@@ -89,7 +100,19 @@ export async function POST(request: NextRequest) {
     // Insert reward
     const submissionData = rewardType === 'video'
       ? { video_url: data.video_url }
-      : { text: data.text!.trim() }
+      : {
+          text: data.text!.trim(),
+          // Optional attribution captured by the dashboard "I passed the EPPP" flow. Enriches the
+          // testimonial pool (a named, pass-tagged story is far more usable in win-back emails).
+          ...(data.name?.trim() ? { name: data.name.trim() } : {}),
+          ...(data.role?.trim() ? { role: data.role.trim() } : {}),
+          // Keep the schema consistent across BOTH entry points (this route + RewardsPanel) so the
+          // testimonial pool is reliably queryable. consent defaults to false (never publish a story
+          // publicly without an explicit opt-in); source records which flow it came from.
+          source: data.source || 'rewards_panel',
+          consent: typeof data.consent === 'boolean' ? data.consent : false,
+          ...(data.passed ? { passed: true } : {}),
+        }
 
     const { error: insertError } = await supabase
       .from('user_rewards')
@@ -106,7 +129,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Slack + email notification
-    const label = rewardType === 'video' ? 'Video' : 'Testimonial'
+    const label = rewardType === 'video'
+      ? 'Video'
+      : data.source === 'passed_eppp'
+        ? 'Testimonial · I passed the EPPP 🎉'
+        : 'Testimonial'
     const detail = rewardType === 'video' ? data.video_url : `"${data.text!.trim().slice(0, 80)}..."`
     await sendSlackNotification(
       `🎁 New Pro reward submission (${label}) from ${user.email}\n${detail}`,
