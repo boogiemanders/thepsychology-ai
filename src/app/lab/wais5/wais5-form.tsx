@@ -416,37 +416,43 @@ export default function Wais5Form() {
   }
 
   // ---------- shared input/control components ----------
+  // Defined via useCallback with stable [set] deps so React keeps the DOM
+  // node across re-renders (otherwise typing one letter unmounts the input
+  // and focus is lost). Current value is read through dataRef so we don't
+  // need `data` in deps.
+  const dataRef = useRef(data)
+  dataRef.current = data
 
-  const TextField = ({ name, placeholder, className }: { name: string; placeholder?: string; className?: string }) => (
+  const TextField = useCallback(({ name, placeholder, className }: { name: string; placeholder?: string; className?: string }) => (
     <input
-      value={data[name] || ''}
+      value={dataRef.current[name] || ''}
       onChange={e => set(name, e.target.value)}
       placeholder={placeholder}
       className={`rounded border border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-2 py-1 text-[13px] outline-none focus:border-zinc-900 dark:focus:border-zinc-100 ${className || ''}`}
     />
-  )
+  ), [set])
 
-  const NumField = ({ name, placeholder, className, step }: { name: string; placeholder?: string; className?: string; step?: string }) => (
+  const NumField = useCallback(({ name, placeholder, className, step }: { name: string; placeholder?: string; className?: string; step?: string }) => (
     <input
       type="number"
       step={step}
-      value={data[name] || ''}
+      value={dataRef.current[name] || ''}
       onChange={e => set(name, e.target.value)}
       placeholder={placeholder}
       className={`rounded border border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-2 py-1 text-[13px] outline-none focus:border-zinc-900 dark:focus:border-zinc-100 ${className || ''}`}
     />
-  )
+  ), [set])
 
-  const TextArea = ({ name, className, onFocus, onKeyDown }: { name: string; className?: string; onFocus?: () => void; onKeyDown?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void }) => (
+  const TextArea = useCallback(({ name, className, onFocus, onKeyDown }: { name: string; className?: string; onFocus?: () => void; onKeyDown?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void }) => (
     <textarea
-      value={data[name] || ''}
+      value={dataRef.current[name] || ''}
       onChange={e => set(name, e.target.value)}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
       data-form-name={name}
       className={`w-full resize-y rounded border border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-2 py-1 text-[13px] outline-none focus:border-zinc-900 dark:focus:border-zinc-100 min-h-[28px] ${className || ''}`}
     />
-  )
+  ), [set])
 
   const TinyInput = ({ name, placeholder, className }: { name: string; placeholder?: string; className?: string }) => (
     <input
