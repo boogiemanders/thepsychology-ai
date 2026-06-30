@@ -1,11 +1,11 @@
 'use client'
 
 import Link from "next/link"
-import { Linkedin, Mail, ExternalLink } from "lucide-react"
+import { Linkedin, Mail, ExternalLink, CalendarCheck } from "lucide-react"
 import { motion } from "motion/react"
 import Image from "next/image"
 import { ResumeCard } from "@/components/resume-card"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useSearchParams } from "next/navigation"
 
 const BLUR_FADE_DELAY = 0.04
@@ -31,6 +31,104 @@ const BlurFade = ({ children, delay }: { children: React.ReactNode; delay: numbe
   </motion.div>
 )
 
+// Psychology Today verified seal. Three quirks of their loader script drive this:
+// (1) it injects the seal into its OWN <script> tag's previousElementSibling, so the
+//     anchor must sit immediately before the script as a sibling;
+// (2) it renders from a DOMContentLoaded handler -- we inject after the page already
+//     loaded (client effect), so that event never fires again. We briefly patch
+//     document.addEventListener so the handler PT registers runs right away (a
+//     DOMContentLoaded listener added post-load would never fire anyway, so replaying
+//     it is safe and scoped to the script's load window); and
+// (3) the script self-guards against re-running once loaded, so on a tab switch back
+//     the re-injected script paints nothing. We cache the rendered badge the first
+//     time and restore it directly on later mounts.
+let cachedSeal: { backgroundImage: string; width: string; height: string; title: string } | null = null
+
+const PsychologyTodaySeal = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const anchor = document.createElement("a")
+    anchor.href = "https://www.psychologytoday.com/profile/1696714"
+    anchor.target = "_blank"
+    anchor.rel = "noopener noreferrer"
+    anchor.className = "sx-verified-seal"
+    anchor.setAttribute("aria-label", "Verified by Psychology Today")
+    container.appendChild(anchor)
+
+    // Re-mount (e.g. tab switch back): restore the badge PT already rendered.
+    if (cachedSeal) {
+      anchor.style.display = "block"
+      anchor.style.backgroundImage = cachedSeal.backgroundImage
+      anchor.style.width = cachedSeal.width
+      anchor.style.height = cachedSeal.height
+      anchor.style.backgroundRepeat = "no-repeat"
+      if (cachedSeal.title) anchor.setAttribute("title", cachedSeal.title)
+      return () => {
+        anchor.remove()
+      }
+    }
+
+    const realAdd = document.addEventListener.bind(document)
+    const patched: typeof document.addEventListener = (type: any, listener: any, options?: any) => {
+      if (type === "DOMContentLoaded") {
+        Promise.resolve().then(() => {
+          const evt = new Event("DOMContentLoaded")
+          if (typeof listener === "function") listener.call(document, evt)
+          else listener?.handleEvent?.(evt)
+        })
+        return
+      }
+      return realAdd(type, listener, options)
+    }
+    const restore = () => {
+      if (document.addEventListener === patched) document.addEventListener = realAdd
+    }
+    document.addEventListener = patched
+
+    // Capture the painted badge so later mounts can skip the (self-guarding) script.
+    const observer = new MutationObserver(() => {
+      const bg = anchor.style.backgroundImage
+      if (bg && bg !== "none") {
+        cachedSeal = {
+          backgroundImage: anchor.style.backgroundImage,
+          width: anchor.style.width,
+          height: anchor.style.height,
+          title: anchor.getAttribute("title") || "",
+        }
+        observer.disconnect()
+      }
+    })
+    observer.observe(anchor, { attributes: true, attributeFilter: ["style", "title"] })
+
+    const script = document.createElement("script")
+    script.type = "text/javascript"
+    script.src = "https://member.psychologytoday.com/verified-seal.js"
+    script.setAttribute("data-badge", "13")
+    script.setAttribute("data-id", "1696714")
+    script.setAttribute(
+      "data-code",
+      "aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzE2OTY3MTQ/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+    )
+    script.addEventListener("load", restore)
+    script.addEventListener("error", restore)
+
+    container.appendChild(script)
+
+    return () => {
+      restore()
+      observer.disconnect()
+      anchor.remove()
+      script.remove()
+    }
+  }, [])
+
+  return <div ref={containerRef} aria-label="Verified by Psychology Today" />
+}
+
 interface TeamMember {
   id: string
   name: string
@@ -49,17 +147,15 @@ const teamMembers: TeamMember[] = [
     name: "Anders H. Chan, PsyD",
     title: "Clinical Psychologist",
     photo: "/images/profilepic.png",
-    about: `Right after finishing my postdoc, I took my first EPPP diagnostic. I scored a 19%.
+    about: `I'm a licensed clinical psychologist seeing clients in New York, and I'm currently accepting new patients through Headway.
 
-Even with years of schooling and wide clinical experience, the traditional study model was not enough.
+My training runs through some of the country's top hospitals and clinics: a postdoctoral fellowship at the David Geffen School of Medicine at UCLA, an internship at NYU Langone Health, and years of therapy work across Brooklyn. My doctoral research focused on adapting proven, evidence-based treatment to fit who a person actually is, including their culture and background. That's still how I practice: warm, direct, and grounded in what the research supports.
 
-A month later, I passed on my first try with a 588.
+Therapy with me isn't about being fixed. You're not broken. It's about understanding what keeps you stuck and building real skills to move forward.
 
-Here's the brutal truth: The EPPP industry is built on friction. The "traditional" way of studying is designed to be miserable, and paid programs are often built on "misdirected calculations" that lead you to study the wrong material. They waste the money you don't have after paying the f*cking registration fee, and time between sessions and at home. That is a miserable scam. Life happens. People get sick, they transition, they experience loss. You don't have time for a broken system.
+I'm also the founder of thepsychology.ai. After passing the EPPP on my first attempt, I rebuilt the study method that worked for me into an adaptive learning platform, so the next generation of psychologists can train smarter and burn out less.
 
-I used LLMs to accelerate my learning. I built a blueprint that allowed me to pass in 30 days, live a full life outside of psychology, and still gain knowledge that makes me a better clinician because I didn't burn out.
-
-I give away this entire blueprint for free on TikTok. I built an AI to execute it even more efficiently. If I can go from 19% to a 588 in one month, I have a feeling that so can others.`,
+If you're looking for a therapist, you can book with me through Headway below.`,
     workExperience: [
       {
         company: "David Geffen School of Medicine at UCLA",
@@ -385,6 +481,22 @@ export default function PortfolioClient() {
               {member.about}
             </p>
           </BlurFade>
+          {member.id === "anders" && (
+            <BlurFade key={`patient-cta-${member.id}`} delay={BLUR_FADE_DELAY * 5.5}>
+              <div className="mt-5 flex flex-wrap items-center gap-4">
+                <a
+                  href="https://care.headway.co/providers/anders-chan?state=NEW_YORK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-all duration-300 hover:opacity-90"
+                >
+                  <CalendarCheck className="h-4 w-4" />
+                  Book a session
+                </a>
+                <PsychologyTodaySeal />
+              </div>
+            </BlurFade>
+          )}
         </section>
 
         {/* Work Experience Section */}
