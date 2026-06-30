@@ -145,6 +145,24 @@
     }
     return { row: null, how: "not_found" };
   }
+  var MAIN_PROVIDER_TOKENS = /* @__PURE__ */ new Set([
+    "inzinna",
+    // Gregory Inzinna (Greg)
+    "boatwright",
+    // Bret Boatwright
+    "singh",
+    // Lorin Singh
+    "chan",
+    // Anders Chan
+    "difranco",
+    // Filomena DiFranco
+    "espinal"
+    // Juan Carlos Espinal (Carlos)
+  ]);
+  function providerOrTrainee(clinician) {
+    const tokens = clinician.toLowerCase().replace(/[.,]/g, "").split(/\s+/);
+    return tokens.some((t) => MAIN_PROVIDER_TOKENS.has(t)) ? clinician : "Trainee";
+  }
   function splitName(full) {
     const toks = full.trim().split(/\s+/);
     if (toks.length <= 1) return [toks[0] ?? "", ""];
@@ -226,7 +244,7 @@
               lastName,
               email,
               phone,
-              a.clinician,
+              providerOrTrainee(a.clinician),
               OFFICE_LOCATION[a.office] ?? a.office,
               fmtDateUs(a.date),
               a.status

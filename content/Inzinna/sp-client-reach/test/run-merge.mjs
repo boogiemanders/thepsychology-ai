@@ -38,6 +38,11 @@ console.log('rater8 rows (one per visit):', rater8.length)
 // every rater8 row must be a seen visit with a way to reach the person
 const badStatus = rater8.filter((r) => r[7] !== 'Show').length
 const noContact = rater8.filter((r) => !r[2] && !r[3]).length
+// Provider column (idx 4): the 6 main providers show their name, everyone else "Trainee"
+const MAIN = /Inzinna|Boatwright|Singh|Chan|DiFranco|Espinal/
+const badProvider = rater8.filter((r) => r[4] !== 'Trainee' && !MAIN.test(r[4])).length
+const traineeRows = rater8.filter((r) => r[4] === 'Trainee').length
+const mainRows = rater8.filter((r) => r[4] !== 'Trainee').length
 
 // sanity assertions against the known 5/11-6/11 exports
 let failures = 0
@@ -72,6 +77,9 @@ expect(
   rater8[0]?.length === 8,
   '8 (First,Last,Email,Cell,Provider,Location,Date,Status)'
 )
+expect('provider is main-name or Trainee', badProvider, badProvider === 0, '0 rows that are neither')
+expect('some trainees bucketed', traineeRows, traineeRows > 0, '>0 rows labeled Trainee')
+expect('main providers kept', mainRows, mainRows > 0, '>0 rows with a main provider name')
 
 if (failures) {
   console.error(`\n${failures} check(s) failed`)

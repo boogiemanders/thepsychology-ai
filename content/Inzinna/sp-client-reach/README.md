@@ -35,6 +35,8 @@ Each "Send to Google Sheet" creates (or refreshes) a tab named after the period,
 
 `First Name, Last Name, Email, Cell Phone, Provider, Location, Appointment Date, Appointment Status`
 
+The **Provider** column shows the provider's name only for the 6 main providers (Greg/Inzinna, Bret/Boatwright, Lorin/Singh, Anders/Chan, Filomena/DiFranco, Carlos/Espinal); for everyone else (practice clinicians and all current/future trainees, interns, externs, new hires) it shows the literal `Trainee`. rater8 maps each main provider to their own resource and `Trainee` to the generic Inzinna Therapy Group resource, so new staff never need mapping. Edit `MAIN_PROVIDER_TOKENS` in `src/lib/merge.ts` to promote someone out of the Trainee bucket.
+
 One row **per attended visit** (rater8's appointment-level model), not one per person. A client seen 5 times in the period gets 5 rows. Only attended ("Show") appointments where the person has a phone or email are included, so Appointment Status is always "Show" (rater8 accepts either a status column or a report pre-filtered to seen patients; this gives both).
 
 Fields rater8 also asks for but SimplePractice does NOT export in these two reports: secondary phone, provider ID, location ID, appointment ID, appointment type. The names are the required fields and are present. To change columns, edit `RATER8_HEADER` and the `rater8.push([...])` block in `mergeReports` (`src/lib/merge.ts`).

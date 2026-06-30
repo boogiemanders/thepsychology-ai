@@ -130,6 +130,24 @@ function lookupClient(
   return { row: null, how: 'not_found' }
 }
 
+// rater8 maps each of the 6 main providers to their own resource and everyone
+// else to the generic Inzinna Therapy Group resource. Per rater8 (Darryl),
+// label the whole non-main group "Trainee" in the Provider column so no new
+// hire/intern/extern ever needs mapping — they all route to the generic resource.
+const MAIN_PROVIDER_TOKENS = new Set([
+  'inzinna', // Gregory Inzinna (Greg)
+  'boatwright', // Bret Boatwright
+  'singh', // Lorin Singh
+  'chan', // Anders Chan
+  'difranco', // Filomena DiFranco
+  'espinal', // Juan Carlos Espinal (Carlos)
+])
+
+function providerOrTrainee(clinician: string): string {
+  const tokens = clinician.toLowerCase().replace(/[.,]/g, '').split(/\s+/)
+  return tokens.some((t) => MAIN_PROVIDER_TOKENS.has(t)) ? clinician : 'Trainee'
+}
+
 // "Anders Chan" -> ["Anders", "Chan"]; single token -> last name blank
 function splitName(full: string): [string, string] {
   const toks = full.trim().split(/\s+/)
@@ -230,7 +248,7 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
             lastName,
             email,
             phone,
-            a.clinician,
+            providerOrTrainee(a.clinician),
             OFFICE_LOCATION[a.office] ?? a.office,
             fmtDateUs(a.date),
             a.status,
