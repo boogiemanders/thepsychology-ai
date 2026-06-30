@@ -41,6 +41,7 @@ import { UpgradeBanner } from '@/components/upgrade-banner'
 import { NewExamsBanner } from '@/components/new-exams-banner'
 import { RewardsPanel } from '@/components/rewards-panel'
 import { ExamResultForm } from '@/components/dashboard/exam-result-form'
+import { trackFunnelEvent } from '@/lib/funnel-events'
 
 type ApiChangelogEntry = {
   id: string
@@ -137,6 +138,19 @@ export default function DashboardPage() {
   const [isManagePlanOpen, setIsManagePlanOpen] = useState(false)
   const [isExamResultOpen, setIsExamResultOpen] = useState(false)
   const [existingExamResult, setExistingExamResult] = useState<any>(null)
+
+  // Win-back email CTA (/passed -> /dashboard?share=passed) drops them straight into the
+  // result/testimonial modal (no extra "Report My Score" click) and logs the open in Supabase so
+  // the share funnel (opened -> testimonial submitted) is queryable per variant alongside GA4.
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('share') !== 'passed') return
+    setIsExamResultOpen(true)
+    if (user?.id) {
+      trackFunnelEvent(user.id, 'winback_share_opened', { utm_campaign: params.get('utm_campaign') })
+    }
+  }, [user?.id])
   const { startCheckout, checkoutLoading } = useStripeCheckout()
   const pricingInfo = getPricingInfo()
   const pricingItems = siteConfig.pricing.pricingItems
