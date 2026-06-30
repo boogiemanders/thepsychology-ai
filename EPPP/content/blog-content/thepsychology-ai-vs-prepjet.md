@@ -19,7 +19,7 @@ I built thePsychology.ai, so yes, I'm biased. Here's my attempt at an honest com
 
 | | thePsychology.ai | PrepJet |
 |---|---|---|
-| **Price** | $30/month | $159 – $429/month |
+| **Price** | $40/month | $159 – $429/month |
 | **Free trial** | 7 days, no credit card | Free trial available |
 | **Model** | Monthly subscription | Monthly subscription |
 
@@ -41,7 +41,7 @@ Both platforms use subscriptions with free trials, which is a better model than 
 
 **Narrower focus.** PrepJet's strength is law and ethics content. The EPPP covers 8 full domains, and the three highest-weighted domains (Assessment, Ethics, Treatment) make up 47% of the exam. You need comprehensive coverage.
 
-**Higher price for less breadth.** At $159-$429/month, you're paying significantly more but getting less domain coverage than our $30/month.
+**Higher price for less breadth.** At $159-$429/month, you're paying significantly more but getting less domain coverage than our $40/month.
 
 **No audio lessons.** PrepJet is primarily text and quiz-based.
 
@@ -61,7 +61,7 @@ Both platforms use subscriptions with free trials, which is a better model than 
 
 **Recover feature.** Evidence-based mental resets for test anxiety.
 
-**Price.** $30/month vs $159-$429/month.
+**Price.** $40/month vs $159-$429/month.
 
 ---
 
@@ -82,7 +82,7 @@ Both platforms use subscriptions with free trials, which is a better model than 
 
 **Choose thePsychology.ai if:**
 - You need comprehensive coverage across all 8 EPPP domains
-- Budget matters ($30/month vs $159-$429/month)
+- Budget matters ($40/month vs $159-$429/month)
 - You want audio lessons, case vignettes, and adaptive practice
 - You want test anxiety support built in
 

@@ -17,7 +17,7 @@ You should know something up front. I built thePsychology.ai, and I have a stake
 
 | | thePsychology.ai | PsychPrep |
 |---|---|---|
-| Price | $30/mo now, $40 in July 2026 | $499 to $1,369 |
+| Price | $40/mo | $499 to $1,369 |
 | Pricing model | Monthly subscription | One-time purchase |
 | Adaptive learning | Continuous AI loop that recalibrates every session | None |
 | Question bank | 2,000+, plus unlimited after 4 full-length exams | 2,000+, fixed bank |
@@ -37,7 +37,7 @@ That said, some users have reported a few things worth knowing. A number feel th
 ## Where thePsychology.ai is different
 
 - A continuous adaptive loop. The platform recalibrates every session and resurfaces the concepts you missed with new angles, so you actually learn them instead of just rereading.
-- The lowest monthly price in the category. At $30 now, or $40 for members joining in July 2026, it is the lowest monthly cost of anything here.
+- The lowest monthly price in the category. At $40, it is the lowest monthly cost of anything here.
 - A free 7-day trial with no credit card. You can try the whole thing before you decide.
 - Integrated wellness. Mindfulness and stress tools are built into the study flow, which no other option in this comparison has.
 - Built by psychologists who took the exam. I scored 588, and 80+ of our lessons are written by licensed psychologists and organized by EPPP content domain.
@@ -46,7 +46,7 @@ Fair warning, since I promised honesty. We are newer, so we have a shorter track
 
 ## A quick note on price
 
-If you start now, in June 2026, you lock in $30/month. For new members joining in July 2026, the standard price goes to $40/month. Existing members keep whatever rate they signed up at. So if cost matters to you, starting in June locks in the lower rate for as long as you study. No pressure, just the honest timing.
+thePsychology.ai is $40/month after the free trial. That is still the lowest monthly price in this comparison by a wide margin.
 
 ## Who should pick what
 
@@ -56,4 +56,4 @@ Pick thePsychology.ai if you want a system that adapts to your weak spots over t
 
 ## Try it free
 
-The easiest way to know is to use it. You can [start a free 7-day trial](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=thepsychology-vs-psychprep) with no credit card, study the way you actually would, and decide for yourself. If you start in June 2026, you lock in $30/month before it rises to $40 in July 2026. If it is not for you, you walk away having lost nothing.
+The easiest way to know is to use it. You can [start a free 7-day trial](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=thepsychology-vs-psychprep) with no credit card, study the way you actually would, and decide for yourself. If it is not for you, you walk away having lost nothing.
