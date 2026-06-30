@@ -996,7 +996,7 @@ const RAW = {
       "corrective": null
     },
     "8": {
-      "prompt": "Figure Weights",
+      "prompt": "CURIOUS. What does curious mean?",
       "scoring": {
         "2": [],
         "1": [],
