@@ -123,7 +123,7 @@ No pitch wall. Lead human, offer help, mention the free trial once, never push.
 > Thanks for connecting, [First]. Quick context in case it's ever useful: the #1 complaint about EPPP prep is questions that don't sound like the real exam. I built mine to word questions the way the EPPP actually does, application style, not definition recall. There's a free 7-day trial, no credit card, if you ever want to see for yourself.
 
 **Variant C (cost angle, on-brand):**
-> Thanks for connecting, [First]. You already carry six figures of training debt, and then the exam is the last toll on top. The big programs run $849 to $1,799. Mine is $30 a month and there's a free week with no card. Sharing in case it saves you some money down the line, not trying to sell you today.
+> Thanks for connecting, [First]. You already carry six figures of training debt, and then the exam is the last toll on top. The big programs run $849 to $1,799. Mine is $40 a month and there's a free week with no card. Sharing in case it saves you some money down the line, not trying to sell you today.
 
 **Variant D (.edu / still-a-student angle):** see Section 6.
 
@@ -174,7 +174,7 @@ Rules:
 **The cohort invite (frame as mutual aid, never a growth hack):**
 > If your study group's all in the same boat, you can invite them and everyone gets free months. Not a referral thing, more just trying to get a whole cohort a fair shot at this without the $849 tax.
 
-Keep the math honest: current price is $30/mo (a July step-up to $40 is planned, so $30 is the better-and-current number). Trial is 7 days free, no credit card. Do not invent numbers for the .edu extension until product confirms them.
+Keep the math honest: current price is $40/mo. Trial is 7 days free, no credit card. Do not invent numbers for the .edu extension until product confirms them.
 
 ---
 

@@ -17,7 +17,7 @@ I should be upfront. I am Anders Chan, a licensed psychologist. I built thePsych
 
 | | thePsychology.ai | AATBS |
 | --- | --- | --- |
-| Price | $30/mo now, $40 in July | $999 to $1,649 |
+| Price | $40/mo | $999 to $1,649 |
 | Pricing model | Monthly subscription | One-time purchase |
 | Adaptive learning | Continuous AI loop that recalibrates every session | Static study plans, no adapting |
 | Question bank | 2,000+, unlimited after 4 full exams | Over 3,000 |
@@ -33,7 +33,7 @@ I should be upfront. I am Anders Chan, a licensed psychologist. I built thePsych
 ## Where thePsychology.ai is different
 
 - A continuous adaptive loop. It recalibrates every session and brings back missed concepts from new angles until the material actually sticks.
-- The lowest monthly price in this comparison, at either $30 or $40.
+- The lowest monthly price in this comparison, at $40.
 - A free 7-day trial with no credit card. You can try the whole thing before you pay a cent.
 - Mindfulness and wellness tools built right into the study flow. This is unique in the category, and the EPPP is stressful enough to need it.
 - Built by licensed psychologists who took the exam. I scored 588. The 80+ lessons are written by people who sat in the same chair you will.
@@ -42,7 +42,7 @@ I will also name my own weak spots. thePsychology.ai is newer, so the track reco
 
 ## A quick note on price
 
-Right now in June 2026, thePsychology.ai is $30/month. In July the price for new members goes to $40/month. Existing members keep whatever rate they joined at. So if you start now, you lock in $30. No pressure, just the honest math.
+thePsychology.ai is $40/month after the free trial. That is still the lowest monthly price in this comparison by a wide margin.
 
 ## Who should pick what
 
@@ -54,4 +54,4 @@ Either way, the right answer is the one that actually gets you to study and pass
 
 ## Try it yourself
 
-The easiest way to know if thePsychology.ai fits you is to use it. You can [start a free 7-day trial](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=thepsychology-vs-aatbs) with no credit card, see how the adaptive loop feels, and decide from there. If you start in June, you lock in $30/month before it rises to $40 in July.
+The easiest way to know if thePsychology.ai fits you is to use it. You can [start a free 7-day trial](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=thepsychology-vs-aatbs) with no credit card, see how the adaptive loop feels, and decide from there.
