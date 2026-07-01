@@ -99,7 +99,7 @@ export default async function Home({
       priceCurrency: "USD",
       priceValidUntil: "2027-12-31",
       availability: "https://schema.org/InStock",
-      description: "7-day free trial, then $30/month through June ($40 from July 1). No credit card required to start.",
+      description: "7-day free trial, no credit card. Join in July and lock in $40/month. Price rises to $50/month on August 1.",
     },
     hasCourseInstance: {
       "@type": "CourseInstance",

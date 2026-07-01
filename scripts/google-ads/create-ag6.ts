@@ -35,16 +35,16 @@ const HEADLINES = [
   "Try EPPP Prep, 7-Day Trial",
   "7-Day Trial, No Card",
   "No Credit Card to Start",
-  "Lock In $30/mo Before July",
-  "Join in June for $30/mo",
-  "$40/mo Starting July 2026",
+  "Lock In $40/mo in July",
+  "Join in July for $40/mo",
+  "$50/mo Starting August",
   "EPPP Prep in One Place",
 ]
 
 const DESCRIPTIONS = [
   "EPPP study materials that adapt to you. Full-length exams and a deep question bank.",
   "Start a 7-day free trial, no credit card. See if adaptive EPPP study fits you.",
-  "Lock in $30/mo before the July 2026 rise to $40/mo. Cancel anytime.",
+  "Lock in $40/mo in July before the $50/mo rise on Aug 1, 2026. Cancel anytime.",
   "One place for EPPP study guides, practice exams, and adaptive questions.",
 ]
 

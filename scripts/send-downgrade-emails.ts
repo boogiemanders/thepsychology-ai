@@ -167,8 +167,8 @@ function renderHtml(firstName: string, v: Variant, email: string): string {
     </p>
 
     <div style="background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 16px; margin: 24px 0;">
-      <p style="color: #92400e; margin: 0; font-weight: 600;">Pro is $30/mo for early members.</p>
-      <p style="color: #92400e; margin: 4px 0 0 0; font-size: 14px;">That price steps up to $40/mo in July, so now is the moment to lock it in.</p>
+      <p style="color: #92400e; margin: 0; font-weight: 600;">Join in July and lock in Pro at $40/mo.</p>
+      <p style="color: #92400e; margin: 4px 0 0 0; font-size: 14px;">That price steps up to $50/mo on August 1, 2026, so now is the moment to lock it in.</p>
     </div>
 
     <div style="text-align: center; margin: 32px 0;">

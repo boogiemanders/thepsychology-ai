@@ -19,14 +19,14 @@ I built thePsychology.ai, so I have an obvious bias. I'll be upfront about that.
 
 | | thePsychology.ai | AATBS |
 |---|---|---|
-| **Price** | $30/month | $999 – $1,649 one-time |
+| **Price** | $40/mo (July), $50/mo from Aug 1 | $999 – $1,649 one-time |
 | **Free trial** | 7 days, no credit card | No free trial |
-| **Total cost (3 months)** | $90 | $999 – $1,649 |
-| **Total cost (6 months)** | $180 | $999 – $1,649 |
+| **Total cost (3 months)** | $120 | $999 – $1,649 |
+| **Total cost (6 months)** | $240 | $999 – $1,649 |
 
 AATBS is a one-time purchase, which some people prefer because it feels "done." But if you're a postdoc making $45K with student loans, $1,649 is a lot to drop before you even know if the materials work for you.
 
-We charge $30/month after a free week. If you pass in two months (which three of our users have), your total cost is $60.
+We charge $40/month after a free week if you join in July, then $50/month from August 1. Join in July to lock in $40/month before it rises to $50 on August 1. If you pass in two months at the $40 rate (which three of our users have), your total cost is $80.
 
 ---
 

@@ -1,0 +1,313 @@
+---
+type: blog
+topic: eppp
+status: pending
+tags: [mktg]
+created: 2026-07-01T14:24:23.002133+00:00
+---
+
+#mktg
+
+# Best EPPP Prep Programs Compared (2026 Update): AATBS, PsychPrep, PrepJet, TSM & thePsychology.ai
+
+**Blog post · EPPP**
+
+> [!warning] Needs human review
+> Confirm the live Stripe price: $40/mo for July signups, $50/mo from Aug 1 (new price price_1ToOfxAHUPMmLYsCp4PGwTLr; repoint STRIPE_PRICE_ID_PRO_CURRENT on Aug 1). Verify checkout matches before approving.
+
+## Draft
+
+# Best EPPP Prep Programs Compared (2026 Update): AATBS, PsychPrep, PrepJet, TSM & thePsychology.ai
+
+*Updated July 2026.*
+
+You're probably here because you've spent the last 45 minutes scrolling through r/psychologystudents, reading contradictory advice about which EPPP prep program to buy. One person swears by AATBS. The next person says it's overpriced. Someone recommends PsychPrep, and the reply underneath says the questions don't match the real exam. You close the tab more confused than when you opened it.
+
+I get it. I was there. When I was prepping for the EPPP, I burned hours comparing programs instead of actually studying. That's time you don't get back, especially when you're juggling a postdoc, supervision hours, and whatever remains of your personal life.
+
+So here's what I did: I pulled together everything (pricing, features, real user feedback, and my own experience) into one place. Six programs, side by side. No affiliate links. No sponsored content. Just a direct comparison so you can pick something and get back to studying.
+
+For context: I'm Dr. Anders Chan. I scored 588 on the EPPP and went on to build [thePsychology.ai](https://thepsychology.ai), so yes, I have a horse in this race. I'll be upfront about that. But I'll also be upfront about where our platform falls short. You deserve honest information, not a sales pitch disguised as a review.
+
+[try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-prep-programs-compared-2026)
+
+---
+
+## Pricing at a Glance
+
+Before we get into features and content quality, let's start with what most people actually care about first: what this is going to cost.
+
+| Program | Price | Model |
+|---------|-------|-------|
+| **AATBS** | $1,099 – $1,349 | One-time purchase (6-mo access) |
+| **PsychPrep** | $199 – $1,419 | One-time package |
+| **Taylor Study Method** | $199 – $299/mo | Monthly subscription |
+| **Academic Review** | $139/mo or $599/6-mo | Monthly or prepaid |
+| **PrepJet** | $159 – $429/mo | Monthly subscription |
+| **thePsychology.ai** | Free → $40/mo (July), $50/mo from Aug 1 | 7-day free trial, then $40/mo for July signups, $50/mo from Aug 1 |
+
+The range matters here. Most programs tier their pricing based on whether you want just the question bank, or the full package with coaching, study plans, and supplemental materials. We'll break down what you actually get at each price point below.
+
+---
+
+## Best Value: Cost Per Outcome
+
+Here's the trap almost nobody warns you about. The cheapest sticker price is not the same as the cheapest EPPP prep. What actually matters is cost per outcome: what you pay from the day you start until the day you pass.
+
+Monthly subscriptions look cheap on the shelf. PrepJet starts at $159/month, Taylor Study Method at $199/month, Academic Review at $139/month. But those are per month. If you study slowly, or life gets in the way, or you take a couple months longer than you planned, the meter keeps running.
+
+Do the math. Six months of Academic Review at $139 is $834. Six months of Taylor Study Method Full at $299 is $1,794. That quietly passes AATBS, which is a flat one-time $1,099 to $1,349 for 6 months of access. So the "affordable monthly" option can end up costing more than the "expensive" one-time option. The cheapest sticker is not always the cheapest outcome.
+
+This is why I built thePsychology.ai the way I did. It is the lowest monthly price in this comparison, and the adaptive engine is designed to make each hour count more, so you finish faster. Join in July to lock in $40/month before it rises to $50 on August 1. Study less, score higher. Lower price times fewer months is the actual math of the most affordable EPPP prep, not whichever number is smallest on the pricing page.
+
+If your only goal is the lowest possible spend and you already have strong foundations, a book like Mometrix (about $70 to $75) is technically the cheapest thing on the market, but it is a study guide, not a course or a question engine. For most people the real question is which full program gets you to a pass for the least total cost, and that is a subscription-length problem, not a sticker-price problem.
+
+---
+
+## AATBS Review
+
+### The Legacy Player
+
+AATBS (Association for Advanced Training in the Behavioral Sciences) has been around since 1976. In EPPP prep, that's basically forever. They're the name most people hear first, usually from a supervisor or program director who used them a decade ago.
+
+One honest aside: AATBS and Academic Review (further down this list) are sister brands under the same parent company. If you're comparing the two thinking they're independent second opinions, they're not. Same house, two doors.
+
+**What they do well:**
+
+- **Massive question bank.** Over 4,000 practice questions. If you're the type who learns by doing as many practice items as possible, AATBS gives you volume.
+- **Name recognition.** There's a psychological comfort in going with the established option. Your program director has heard of them. Your supervisor probably used them. That social proof counts for something.
+- **Structured study plans.** They give you a clear schedule. Open the book, do the readings, take the quizzes, move to the next chapter. If you want someone to hand you a plan and say "follow this," AATBS delivers that.
+- **Pass guarantee.** AATBS offers a pass guarantee (a free 3-month extension if you fail, terms apply). That's real peace of mind if you're worried about a retake.
+
+**Where they fall short:**
+
+- **The materials are dry.** This is the single most consistent complaint across every forum and review site. One Reddit user put it bluntly: *"Reading AATBS felt like being punished for wanting to be a psychologist."* Another described the study guides as *"a textbook that somehow made interesting topics boring."* When your study material is painful to read, you study less. And less studying means lower scores.
+- **Static study plans.** The plan you get on day one is the plan you follow through the end. It doesn't adapt to your strengths and weaknesses. If you're already solid on biological bases but struggling with social psychology, AATBS doesn't adjust. You study everything at the same pace regardless.
+- **The price.** At $1,099 for self-study up to $1,349 for the live online package (both 6-month access), AATBS is one of the most expensive options. For postdocs making $40-50K (if you're lucky), that's a real financial hit.
+- **The UX feels dated.** The platform interface hasn't kept pace with modern learning tools. It works, but it doesn't feel good to use. When you're spending 200+ hours on a platform, the user experience matters more than people think.
+
+**Bottom line:** AATBS is the safe, established choice. If you want a large question bank, a traditional study structure, and a pass guarantee, and price isn't your primary concern, it gets the job done. Plenty of people pass with AATBS. But you're paying a premium for a product that hasn't evolved much. We break the two down head to head in [thePsychology.ai vs AATBS](/blog/thepsychology-ai-vs-aatbs).
+
+---
+
+## PsychPrep Review
+
+### Strong on Questions, Divisive on Style
+
+PsychPrep positions itself as a more modern alternative to AATBS, with a focus on practice questions and detailed explanations.
+
+**What they do well:**
+
+- **Detailed explanations.** Each practice question comes with a rationale that breaks down why the correct answer is correct and why the distractors are wrong. If you learn well from immediate feedback, this is genuinely useful.
+- **Clean interface.** Compared to AATBS, the platform looks and feels more modern. It's a better studying experience from a pure usability standpoint.
+
+**Where they fall short:**
+
+- **Question style concerns.** This is where PsychPrep gets polarizing. Multiple users have reported that the questions feel *"designed to trick you"* rather than matching the actual wording and style of EPPP items. One user on a psychology forum wrote: *"PsychPrep questions made me second-guess everything. Then I sat for the actual exam and realized the real questions were way more straightforward."* If practice questions train you to overthink, they're doing more harm than good.
+- **Fixed question bank.** The questions you get are the questions you get. There's no way to generate new items, so if you work through the bank, you start seeing repeats. That's a problem because recognition memory and actual knowledge are different things, and you might "remember" the right answer without truly understanding the concept.
+- **No pass guarantee.** PsychPrep advertises roughly a 90% pass rate, but that's a marketing claim, not a guarantee. If you fail, there's no built-in extension the way AATBS or the Taylor Full program offer.
+- **Pricing.** At $199 for the Basic 1-month package up to $1,419 for the 9-month Premium, PsychPrep spans a wide range. The lower tier gives you limited access and time, and the full package edges past AATBS territory.
+
+**Bottom line:** PsychPrep is a solid option if you're someone who learns through high-volume practice and detailed feedback. But the question-style issue is worth paying attention to. If their questions train you to expect tricks that aren't on the real exam, your practice scores won't translate to test day. For a direct comparison, see [thePsychology.ai vs PsychPrep](/blog/thepsychology-ai-vs-psychprep).
+
+---
+
+## Taylor Study Method Review
+
+### Monthly Model, Mixed Results
+
+Taylor Study Method takes a different approach with monthly subscription pricing and a focus on coaching and mentorship.
+
+**What they do well:**
+
+- **Monthly pricing.** At $199/month (Exams Only) up to $299/month (Full Program), you're not committing a lump sum upfront. If you pass quickly, you spend less overall. This is genuinely helpful for people who can't float a $1,000+ charge.
+- **Coaching component.** Coaching is included on the Full Program, which can be valuable for accountability and targeted guidance.
+- **Pass guarantee (Full only).** The Full Program carries a pass guarantee (a free 3-month extension, subject to six conditions). Read those conditions carefully before you count on it.
+
+**Where they fall short:**
+
+- **Content accuracy concerns.** This one is serious. Multiple users have reported finding inaccurate content in the study materials. When you're preparing for a licensing exam, content errors don't just waste your time. They actively teach you wrong information. One user noted: *"I cross-referenced some of their material with my grad school textbooks and found several errors. That shook my confidence in the whole program."*
+- **Coaching reliability.** Several reviews mention coaches canceling appointments or being difficult to schedule with. If coaching is a main selling point and the coaching isn't reliable, the value proposition breaks down.
+- **Cost adds up over time.** Because it's monthly, a slow study timeline gets expensive fast. At $299/month, six months is nearly $1,800, which quietly passes AATBS's one-time price. See the cost-per-outcome section above.
+- **Overall reviews.** Compared to other options, Taylor Study Method has a noticeably higher rate of negative reviews. That pattern is hard to ignore.
+
+**Bottom line:** The monthly pricing model is appealing, and if you get a good coach, the personalized support can help. But the reports of content inaccuracies and inconsistent coaching are red flags. If you go this route, cross-reference everything with established textbooks.
+
+---
+
+## Academic Review Review
+
+### Affordable and Assessment-Based
+
+Academic Review offers a subscription entry point with a study approach that starts with a diagnostic assessment. Worth knowing up front: Academic Review is a sister brand of AATBS, sharing the same parent company. Same house, different door.
+
+**What they do well:**
+
+- **Reasonable price point.** At $139/month, or $599 prepaid for 6 months, Academic Review is one of the more budget-friendly subscription options. For postdocs watching every dollar, this matters.
+- **Initial assessment.** They start with a diagnostic that identifies your strengths and weaknesses, then build a study plan around the results. In principle, this is the right idea: study what you don't know, not what you already do.
+- **Pass guarantee (6-month prepaid only).** The $599 prepaid 6-month plan carries a pass guarantee. The month-to-month plan does not.
+
+**Where they fall short:**
+
+- **"Adaptive" is a stretch.** The initial assessment is useful, but the personalization mostly ends there. You take one assessment, you get one plan. It doesn't continuously adapt as you learn. True adaptive learning means the system is constantly recalibrating based on your performance. Academic Review's approach is more like a placement test followed by a static curriculum.
+- **Limited content depth.** Users have noted that the study materials, while organized, don't go deep enough on certain content areas. If you're weak in a specific domain, you might need to supplement with other resources.
+
+**Bottom line:** Academic Review is a reasonable choice if budget is your top priority and you want some level of personalized guidance. Just know that the personalization is front-loaded, the system won't keep adjusting as you progress, and the guarantee only applies to the prepaid plan.
+
+---
+
+## PrepJet Review
+
+### Subscription-Based with Targeted Drilling
+
+PrepJet (prepjet.net) is a newer entrant with a monthly subscription model. Plans run $159/$269/$429 per month (Basic/Plus/Premium), and are cheaper if you commit to 3 or 6 months. That puts it above Academic Review and on par with the Taylor Study Method range.
+
+**What they do well:**
+
+- **No large upfront cost.** The month-to-month subscription means you're not locked into a $1,000+ purchase. You can cancel when you pass, which limits your exposure if you study efficiently.
+- **Sub-domain drill-down.** The platform lets you target specific content areas within each domain, which is useful for zeroing in on your weakest topics rather than reviewing entire domains.
+- **Readiness score.** PrepJet provides a readiness assessment that attempts to detect your deficiencies and guide your studying. Users can also mark and highlight questions for later review and message exam experts with questions.
+- **Self-reported 97% pass rate.** PrepJet claims a 97% pass rate among their users, though this figure is not independently verified. Treat it as a marketing claim, not a guarantee (there is no pass guarantee).
+
+**Where they fall short:**
+
+- **Pricing is on the higher end.** PrepJet runs $159 to $429/month depending on the plan, more expensive than Academic Review and in the Taylor Study Method range. For a product that markets itself as an affordable option, the upper tiers can add up quickly, especially across a multi-month study window.
+- **Question quality concerns.** Some users have described the questions as "awkward and purposefully ambiguous," with practice scores in the 40s-50s after a month of studying. Ambiguous questions can train you to second-guess yourself in ways that don't match the actual EPPP format.
+- **Audio materials are limited.** PrepJet offers audio study materials, but user feedback describes them as "pretty monotone." If audio is a key part of your study strategy, the quality may not hold your attention.
+- **Very few independent reviews.** Compared to AATBS, PsychPrep, or even Taylor Study Method, PrepJet has a noticeably smaller footprint of online reviews and user discussions. That makes it harder to get a reliable read on the experience before committing.
+
+**Bottom line:** PrepJet may work for candidates who want a subscription-based option with sub-domain targeting. The readiness score is a useful feature. But at $159 to $429/month, it's not the bargain it positions itself as, and the limited reviews and concerns about question quality make it harder to recommend with confidence. Pay attention to whether their question style matches the real exam before committing. Full breakdown in [thePsychology.ai vs PrepJet](/blog/thepsychology-ai-vs-prepjet).
+
+---
+
+## thePsychology.ai Review
+
+### Full Disclosure: This Is Our Platform
+
+I built thePsychology.ai, so I'm going to be extra transparent here. I'll tell you what we do well, what we don't do well yet, and who we're actually a good fit for.
+
+**What we do well:**
+
+- **Price.** You can start for free with a 7-day trial, no credit card required (a .edu email gets a full month). After the trial, it's $40/month if you join in July (locked in for as long as you study), then $50/month from August 1. (Heads up: it was $30/month through June 2026, so join in July to lock in $40/month before it rises to $50 on August 1.) Even at $50, that's still the lowest monthly price of any program in this comparison, and you get the full adaptive platform for it.
+- **AI-adaptive learning loop.** This is the core of what makes us different. The platform continuously adapts to your performance. Miss a question on classical conditioning? The system notes that, adjusts your study plan, and resurfaces that concept with different question angles until you've actually learned it, not just memorized one specific question. Every session recalibrates.
+- **Application-based questions, not flashcards.** Our questions are built like the real exam: clinical vignettes that ask "what is the most appropriate next step," not definition-and-recall trivia. You practice thinking like a psychologist, which is what the EPPP actually tests. You can try a set of our [free EPPP practice questions](/blog/free-eppp-practice-questions) or browse [EPPP practice questions by domain](/blog/eppp-practice-questions-by-domain) to see the style.
+- **80+ structured lessons.** Content is organized by EPPP content domain, written by psychologists, and designed to be high-yield. We focus on what actually shows up on the exam rather than trying to cover every edge case in a 900-page textbook. Backed by 2,200+ questions plus the adaptive engine that generates unlimited fresh items, and 16 full-length practice exams.
+- **Built by psychologists who took the exam.** I scored 588 on the EPPP. Our content team includes licensed psychologists who've been through this process. We know what the exam feels like, and we built the platform around that experience. This isn't an EdTech company that decided psychology licensing was a market opportunity. It started from the actual problem.
+- **Built-in wellness features.** This is something no other EPPP prep program offers, and I think that's a blind spot in the industry. EPPP prep is stressful. Anxiety tanks performance. We built mindfulness and wellness tools directly into the study experience, not as an afterthought or a separate app, but integrated into the flow. You're studying to become a psychologist; your prep tool should reflect that.
+- **Modern UX.** The platform is designed for how people actually study in 2026: clean interface, responsive design, distraction-free environment.
+
+**Where we fall short (honestly):**
+
+- **We're newer.** thePsychology.ai doesn't have decades of track record. AATBS has been around since 1976. We launched recently. That means our user base is smaller, and we have fewer testimonials and long-term data points. If a long track record is important to you, that's a legitimate concern.
+- **Smaller user community.** With fewer users, there's less peer discussion and community activity compared to platforms that have been around longer. We're growing, but we're not there yet.
+- **No dedicated mobile app yet.** The platform is mobile-responsive (it works well in mobile browsers), but we don't have a native iOS or Android app. If you specifically want to study through an app, this is a limitation. It's on our roadmap, but it's not here today.
+
+**Bottom line:** thePsychology.ai is built for people who want adaptive, efficient studying at a price that doesn't hurt. Free trial, then $40/month if you join in July (locked in), $50/month from August 1, the lowest monthly price in this comparison. But if you want a program with a 20-year track record or a native mobile app, we're not there yet. I'd rather you know that upfront than find out after you've committed.
+
+---
+
+## Feature Comparison Matrix
+
+Here's how all six programs stack up across the features that matter most:
+
+| Feature | AATBS | PsychPrep | Taylor Study | Academic Review | PrepJet | thePsychology.ai |
+|---------|-------|-----------|-------------|-----------------|---------|-------------------|
+| **Starting Price** | $1,099 (one-time) | $199 | $199/mo | $139/mo | $159/mo | $40/mo (July), $50/mo from Aug 1 |
+| **Question Bank** | 4,000+ | 2,000+ | 1,000+ | 1,500+ | Not disclosed | 2,200+ plus unlimited adaptive |
+| **Adaptive Learning** | No | No | No | Basic (one-time assessment) | Basic (readiness score) | Yes (continuous) |
+| **Content Quality** | Dense but thorough | Good with detailed rationales | Mixed accuracy reports | Adequate | Mixed reviews on question clarity | High-yield, psychologist-written |
+| **Question Style** | Recall + application | Detailed rationales | Mixed | Assessment-driven | Reported ambiguous | Application (clinical vignettes) |
+| **Mobile App** | No | No | No | No | No | No (mobile-responsive web) |
+| **Wellness Features** | No | No | No | No | No | Yes (integrated) |
+| **Pass Guarantee** | Yes (terms apply) | No | Full plan only | 6-mo prepaid only | No | No |
+| **Coaching Available** | Yes (add-on) | No | Yes (included) | No | Message experts | Yes (Pro tier) |
+| **Exam Simulation** | Yes | Yes | Limited | Yes | Yes | Yes (16 full-length) |
+| **Study Plan** | Static | Static | Coach-directed | Assessment-based (static) | Readiness-based | AI-adaptive (dynamic) |
+
+A few things jump out from this matrix. First, nobody has a native mobile app. The whole industry is behind on this. Second, adaptive learning (the kind that actually adjusts continuously) is still rare. Most programs give you a fixed path and call it personalized. Third, wellness features are essentially nonexistent outside of thePsychology.ai. For a field built on understanding human behavior and mental health, that's ironic.
+
+If you're weighing us against a study guide book rather than a full course, see [thePsychology.ai vs Mometrix](/blog/thepsychology-ai-vs-mometrix).
+
+---
+
+## Which Program Is Right for You?
+
+There's no single best EPPP prep program. There's the best one *for your situation*. Here's how I'd break it down:
+
+**If budget is your primary concern:** Start with [thePsychology.ai](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-prep-programs-compared-2026). Free trial, no credit card, then $40/month if you join in July (locked in), $50/month from August 1, the lowest monthly price in this comparison. Join in July to lock in $40/month before it rises to $50 on August 1. Academic Review is next at $139/month (or $599 prepaid for 6 months); PrepJet starts at $159/month. Remember the cost-per-outcome math: a low monthly price only stays cheap if you finish in a reasonable number of months.
+
+**If you want traditional, structured studying:** AATBS is the established choice. You get a textbook-style experience with a large question bank, a clear schedule, and a pass guarantee. It's not exciting, but it's predictable. Some people study best with that kind of structure.
+
+**If you want a human coach:** thePsychology.ai's Pro coaching tier pairs AI-adaptive studying with real coaching support. Taylor Study Method includes coaching on the Full Program, though user reviews on coaching reliability have been mixed. AATBS offers coaching as a paid add-on at their higher tiers.
+
+**If you need maximum practice question volume:** AATBS (4,000+ questions) or PsychPrep (2,000+ with detailed explanations) give you the largest fixed question banks. thePsychology.ai has 2,200+ questions across all domains plus 16 full-length practice exams, and its adaptive engine generates unlimited fresh questions so you never run out of material.
+
+**If test anxiety is a factor:** thePsychology.ai is the only program with built-in wellness and mindfulness tools. If anxiety has historically affected your test performance, integrated support matters more than most people realize. You can always use a separate mindfulness app alongside another program, but the integration makes a difference.
+
+**If you've already failed the EPPP and need to retake:** An adaptive program that identifies and targets your specific weak areas is probably more useful than re-reading the same static material. thePsychology.ai's adaptive loop or Academic Review's diagnostic assessment are both designed to pinpoint gaps. Repeating the exact same study approach that didn't work the first time usually doesn't produce different results. We wrote a full playbook on [what to do after failing the EPPP](/blog/what-to-do-after-failing-the-eppp).
+
+---
+
+## Frequently Asked Questions
+
+### Is AATBS worth it?
+
+AATBS is worth it if you want a large question bank (4,000+ items), a traditional structured study plan, a pass guarantee, and the comfort of a brand that's been around since 1976, and the $1,099 to $1,349 one-time price fits your budget. Its flat one-time cost can actually beat monthly subscriptions if your study timeline runs long. Where it loses value is on user experience (the materials read as dry) and on personalization (the plan is static and doesn't adapt to your weak domains). If you want adaptive, application-based studying at a lower monthly cost, compare it against us in [thePsychology.ai vs AATBS](/blog/thepsychology-ai-vs-aatbs).
+
+### What is the cheapest EPPP prep?
+
+The cheapest single product is a study guide book like Mometrix (about $70 to $75), but that's a book, not a course or a question engine. Among full prep programs, thePsychology.ai is the most affordable EPPP prep at $40/month for July signups (locked in), $50/month from August 1, with a free trial and still the lowest monthly price of any program here. Join in July to lock in $40/month before it rises to $50 on August 1. Just remember that with any monthly plan, total cost equals price times the number of months you study, so the cheapest sticker isn't always the cheapest outcome. See the cost-per-outcome section above for the math.
+
+### What is the best EPPP prep app for 2026?
+
+For 2026, the strongest option for adaptive, application-based prep is thePsychology.ai: it uses a continuous adaptive engine that finds and drills your weakest domains, application-style clinical vignettes instead of recall flashcards, 16 full-length practice exams, and integrated wellness tools, all at $40/month if you join in July (locked in), then $50/month from August 1. One honest caveat: it's mobile-responsive web, not a native iOS or Android app yet. If a native app is a hard requirement, no program in this comparison has one, so you'd be choosing between mobile browsers either way.
+
+### What is the pass rate for the EPPP?
+
+National first-time pass rates vary by year, so we don't quote a single hard number here. For the authoritative, up-to-date figure and how it breaks down by degree type, see our [EPPP pass rates](/blog/eppp-pass-rates) data breakdown. One thing to keep in mind across every program: no EPPP prep company publishes independently verified pass rates for their users, so treat any pass-rate claim (including the 90% and 97% claims some competitors advertise) with healthy skepticism.
+
+### How long should I study for the EPPP?
+
+Most people who pass spend 3-6 months studying, averaging 10-15 hours per week. But the right timeline depends on how recently you graduated, how strong your foundational knowledge is, and how many hours per week you can realistically commit. The key word is *realistically*. Planning 25 hours per week of studying while working a full-time postdoc is a plan that fails by week two. Study less, score higher. That's not a slogan, it's about efficiency. Focused, high-yield studying beats grinding through material you already know.
+
+### Is the EPPP changing in 2026?
+
+Here's the current, correct picture. Today you take EPPP Part 1, the Knowledge exam (225 items, 175 scored plus 50 unscored pretest, 8 content domains, scaled score 200-800, with ASPPB's recommended passing score of 500 for independent practice). EPPP Part 2, the Skills exam, still exists and is required only if your specific state or provincial board requires it, since not all boards do. What ASPPB paused in October 2024 was the mandate that every jurisdiction adopt both parts, not Part 2 itself. Separately, ASPPB is developing a single integrated EPPP (6 competency domains, mixing multiple-choice, scenario clusters, audio and video stimuli, and situational judgment, scored pass or fail): it goes live in Q4 2027 and becomes the only exam on April 1, 2028. For the full timeline and what it means for you, read [EPPP vs EPPP-2](/blog/eppp-vs-eppp-2). Always confirm requirements with your own licensing board.
+
+---
+
+## Final Thoughts
+
+Here's what I wish someone had told me when I was in your position: the program you choose matters less than whether you actually use it consistently. The best prep program is the one you'll stick with. A $1,349 program you abandon after three weeks loses to a free program you use every day.
+
+That said, not all study hours are equal. Adaptive learning, where the system focuses your time on what you don't know instead of what you already do, makes each hour count more. That's the principle thePsychology.ai was built on.
+
+If you're ready to start, you can [try thePsychology.ai free for 7 days](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=eppp-prep-programs-compared-2026), no credit card required. And if you decide another program is a better fit for you, that's fine too. The goal is the same either way: pass the EPPP, get licensed, and start doing the work you trained for.
+
+Study less, score higher. That's the whole idea.
+
+---
+
+## Sources
+
+- AATBS EPPP study packages: https://aatbs.com/psychology/eppp/study-packages
+- PsychPrep packages and pricing: https://www.psychprep.com/packages-and-pricing
+- PrepJet: https://www.prepjet.net/
+- Taylor Study Method EPPP exam prep: https://www.taylorstudymethod.com/eppp-exam-prep
+- Academic Review EPPP exam prep programs: https://www.academicreview.com/psychology/eppp-exam-prep-programs
+- Mometrix EPPP study guide: https://www.mometrix.com/studyguides/eppp/
+- ASPPB 2027 EPPP content specifications: https://asppb.net/insights-advocacy/asppb-announces-2027-eppp-content-specifications/
+- ASPPB eligibility and cost update: https://asppb.net/news/eppp-eligibility-updates-professional-practice-cost/
+- ASPPB EPPP Candidate Handbook (domain weights, passing score, fees, retakes): https://asppb.net/wp-content/uploads/EPPP-Candidate-Handbook.pdf
+
+## Sources
+
+- AATBS. (2026). AATBS EPPP Study Packages. <https://aatbs.com/psychology/eppp/study-packages>
+- PsychPrep. (2026). PsychPrep Packages and Pricing. <https://www.psychprep.com/packages-and-pricing>
+- PrepJet. (2026). PrepJet EPPP Prep. <https://www.prepjet.net/>
+- Taylor Study Method. (2026). Taylor Study Method EPPP Exam Prep. <https://www.taylorstudymethod.com/eppp-exam-prep>
+- Academic Review. (2026). Academic Review EPPP Exam Prep Programs. <https://www.academicreview.com/psychology/eppp-exam-prep-programs>
+- Mometrix. (2026). Mometrix EPPP Study Guide. <https://www.mometrix.com/studyguides/eppp/>
+- ASPPB. (2026). ASPPB Announces 2027 EPPP Content Specifications. <https://asppb.net/insights-advocacy/asppb-announces-2027-eppp-content-specifications/>
+- ASPPB. (2026). ASPPB EPPP Eligibility, Professional Practice, and Cost Update. <https://asppb.net/news/eppp-eligibility-updates-professional-practice-cost/>
+- ASPPB. (2026). ASPPB EPPP Candidate Handbook. <https://asppb.net/wp-content/uploads/EPPP-Candidate-Handbook.pdf>

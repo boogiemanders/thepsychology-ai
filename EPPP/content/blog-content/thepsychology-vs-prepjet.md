@@ -17,7 +17,7 @@ Full honesty up front: I am Dr. Anders Chan, and I built thePsychology.ai. I hav
 
 | Feature | thePsychology.ai | PrepJet |
 | --- | --- | --- |
-| Price | $30/mo now, $40 in July | $159 to $429/mo |
+| Price | $40/mo (July), $50/mo from Aug 1 | $159 to $429/mo |
 | Pricing model | Monthly subscription | Monthly subscription |
 | Adaptive learning | Continuous loop that recalibrates every session | Basic (a readiness score) |
 | Question bank | 2,000+, unlimited after 4 full exams | Not disclosed |
@@ -42,7 +42,7 @@ It is also worth knowing what users report on the downside. Some describe the qu
 Here is where my approach splits from PrepJet.
 
 - Continuous adaptive loop. The platform recalibrates every session and resurfaces the concepts you missed with new angles, so you keep seeing them until you actually learn them. PrepJet's adaptivity is basically a readiness score.
-- Lowest monthly price in this comparison. At $30 (or $40 later) it is far below PrepJet's $159 to $429 range.
+- Lowest monthly price in this comparison. At $40/month for July signups (then $50/month from August 1) it is far below PrepJet's $159 to $429 range. Join in July to lock in $40/month before it rises to $50 on August 1.
 - Free 7-day trial with no credit card. You can try the whole thing before you pay a cent.
 - Integrated wellness. Mindfulness and stress tools are built into the study flow. No one else in this category does this, and burnout is real when you are grinding for this exam.
 - Built by psychologists who took the exam. I scored 588, and our 80+ lessons are written by licensed psychologists, not anonymous content writers.
@@ -51,7 +51,7 @@ I will also be straight about the weak spots. thePsychology.ai is newer, so the 
 
 ## A quick note on price
 
-If you start in June 2026, you lock in $30/month. The standard price goes to $40/month for new members who join in July. Existing members keep whatever rate they signed up at. So if the price matters to you, joining this month locks in the lower rate. No pressure, just the honest timing.
+thePsychology.ai is $40/month after a free 7-day trial if you sign up in July, then $50/month from August 1. Join in July to lock in $40/month before it rises to $50 on August 1. Whatever rate you sign up at is the rate you keep for as long as you study. No long-term contract, cancel anytime. No pressure, just the honest math.
 
 ## Who should pick what
 
@@ -61,4 +61,4 @@ Pick thePsychology.ai if you want a continuously adaptive study loop, the lowest
 
 ## Try it yourself
 
-The best way to judge any prep tool is to use it. You can [start a free 7-day trial](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=thepsychology-vs-prepjet) with no credit card, so there is zero risk in seeing whether the adaptive loop works for you. If it clicks, join in June to lock in $30/month before it rises to $40 in July. If it does not, you walk away having lost nothing but a little time.
+The best way to judge any prep tool is to use it. You can [start a free 7-day trial](https://thepsychology.ai?utm_source=blog&utm_medium=cta&utm_campaign=thepsychology-vs-prepjet) with no credit card, so there is zero risk in seeing whether the adaptive loop works for you. If it clicks, join in July to lock in $40/month before it rises to $50 on August 1. If it does not, you walk away having lost nothing but a little time.

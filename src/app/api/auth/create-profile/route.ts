@@ -182,6 +182,15 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    // Fallback: Google auto-tagging can leave gclid only in the landing URL. If the
+    // dedicated gclid key was lost (localStorage cleared/expired independently of the
+    // landing key) but landing_page still holds the raw ?gclid=..., recover it here.
+    if (!resolvedGclid && resolvedLandingPage) {
+      const q = resolvedLandingPage.includes('?') ? resolvedLandingPage.split('?')[1] : ''
+      const fromLanding = new URLSearchParams(q).get('gclid')
+      if (fromLanding && fromLanding.trim().length > 0) resolvedGclid = fromLanding.trim()
+    }
+
     const { device: signupDevice, userAgent: signupUserAgent } = inferSignupDevice(request.headers)
 
     // Trial length: standard 7 days, or a full month for .edu / academic signups
