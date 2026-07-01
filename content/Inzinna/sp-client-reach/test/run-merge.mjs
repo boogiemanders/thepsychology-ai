@@ -38,9 +38,9 @@ console.log('rater8 rows (one per visit):', rater8.length)
 // every rater8 row must be a seen visit with a way to reach the person
 const badStatus = rater8.filter((r) => r[7] !== 'Show').length
 const noContact = rater8.filter((r) => !r[2] && !r[3]).length
-// Provider column (idx 4): the 6 main providers show their name, everyone else "Trainee"
-const MAIN = /Inzinna|Boatwright|Singh|Chan|DiFranco|Espinal/
-const badProvider = rater8.filter((r) => r[4] !== 'Trainee' && !MAIN.test(r[4])).length
+// Provider column (idx 4): the 6 main providers show their clinician ID, everyone else "Trainee"
+const MAIN_IDS = new Set(['1428233', '1486605', '1726930', '1973632', '1717850', '1822167'])
+const badProvider = rater8.filter((r) => r[4] !== 'Trainee' && !MAIN_IDS.has(r[4])).length
 const traineeRows = rater8.filter((r) => r[4] === 'Trainee').length
 const mainRows = rater8.filter((r) => r[4] !== 'Trainee').length
 
@@ -77,7 +77,7 @@ expect(
   rater8[0]?.length === 8,
   '8 (First,Last,Email,Cell,Provider,Location,Date,Status)'
 )
-expect('provider is main-name or Trainee', badProvider, badProvider === 0, '0 rows that are neither')
+expect('provider is main-ID or Trainee', badProvider, badProvider === 0, '0 rows that are neither')
 expect('some trainees bucketed', traineeRows, traineeRows > 0, '>0 rows labeled Trainee')
 expect('main providers kept', mainRows, mainRows > 0, '>0 rows with a main provider name')
 

@@ -130,22 +130,26 @@ function lookupClient(
   return { row: null, how: 'not_found' }
 }
 
-// rater8 maps each of the 6 main providers to their own resource and everyone
-// else to the generic Inzinna Therapy Group resource. Per rater8 (Darryl),
-// label the whole non-main group "Trainee" in the Provider column so no new
-// hire/intern/extern ever needs mapping — they all route to the generic resource.
-const MAIN_PROVIDER_TOKENS = new Set([
-  'inzinna', // Gregory Inzinna (Greg)
-  'boatwright', // Bret Boatwright
-  'singh', // Lorin Singh
-  'chan', // Anders Chan
-  'difranco', // Filomena DiFranco
-  'espinal', // Juan Carlos Espinal (Carlos)
-])
+// rater8 maps each of the 6 main providers to their own resource by their
+// SimplePractice clinician ID; everyone else (practice clinicians + all current
+// and future trainees, interns, externs, new hires) is labeled "Trainee" so
+// they route to the generic Inzinna Therapy Group resource with no new mapping.
+// Keyed by a distinctive last-name token in the clinician's name.
+const MAIN_PROVIDER_IDS: Record<string, string> = {
+  inzinna: '1428233', // Gregory Inzinna (Greg)
+  boatwright: '1486605', // Bret Boatwright
+  singh: '1726930', // Lorin Singh
+  chan: '1973632', // Anders Chan
+  difranco: '1717850', // Filomena DiFranco
+  espinal: '1822167', // Juan Carlos Espinal (Carlos)
+}
 
 function providerOrTrainee(clinician: string): string {
   const tokens = clinician.toLowerCase().replace(/[.,]/g, '').split(/\s+/)
-  return tokens.some((t) => MAIN_PROVIDER_TOKENS.has(t)) ? clinician : 'Trainee'
+  for (const t of tokens) {
+    if (MAIN_PROVIDER_IDS[t]) return MAIN_PROVIDER_IDS[t]
+  }
+  return 'Trainee'
 }
 
 // "Anders Chan" -> ["Anders", "Chan"]; single token -> last name blank

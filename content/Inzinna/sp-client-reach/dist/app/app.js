@@ -145,23 +145,26 @@
     }
     return { row: null, how: "not_found" };
   }
-  var MAIN_PROVIDER_TOKENS = /* @__PURE__ */ new Set([
-    "inzinna",
+  var MAIN_PROVIDER_IDS = {
+    inzinna: "1428233",
     // Gregory Inzinna (Greg)
-    "boatwright",
+    boatwright: "1486605",
     // Bret Boatwright
-    "singh",
+    singh: "1726930",
     // Lorin Singh
-    "chan",
+    chan: "1973632",
     // Anders Chan
-    "difranco",
+    difranco: "1717850",
     // Filomena DiFranco
-    "espinal"
+    espinal: "1822167"
     // Juan Carlos Espinal (Carlos)
-  ]);
+  };
   function providerOrTrainee(clinician) {
     const tokens = clinician.toLowerCase().replace(/[.,]/g, "").split(/\s+/);
-    return tokens.some((t) => MAIN_PROVIDER_TOKENS.has(t)) ? clinician : "Trainee";
+    for (const t of tokens) {
+      if (MAIN_PROVIDER_IDS[t]) return MAIN_PROVIDER_IDS[t];
+    }
+    return "Trainee";
   }
   function splitName(full) {
     const toks = full.trim().split(/\s+/);
