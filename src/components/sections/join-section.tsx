@@ -120,7 +120,7 @@ export function JoinSection() {
                 onChange={() => togglePlan("pro-20")}
                 className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary rounded"
               />
-              <span className="text-sm">Pro - $30/month through June, then $40</span>
+              <span className="text-sm">Pro - $40/month if you join in July, then $50</span>
             </label>
 
             <label

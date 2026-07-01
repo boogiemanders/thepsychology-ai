@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <div className="flex-1 space-y-1">
         <p className="text-base font-semibold text-foreground">Adaptive EPPP prep, free for 7 days.</p>
         <p className="text-sm text-muted-foreground">
-          Full question bank and practice exams. No credit card. $30/month through June, $40 from July 1.
+          Full question bank and practice exams. No credit card. $40/month if you join in July (locked in), $50/month from August 1.
         </p>
       </div>
       <Button asChild size="lg" className="shrink-0">
