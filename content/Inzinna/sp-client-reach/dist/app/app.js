@@ -145,6 +145,32 @@
     }
     return { row: null, how: "not_found" };
   }
+  var MAIN_PROVIDER_IDS = {
+    inzinna: "1428233",
+    // Gregory Inzinna (Greg)
+    boatwright: "1486605",
+    // Bret Boatwright
+    singh: "1726930",
+    // Lorin Singh
+    chan: "1973632",
+    // Anders Chan
+    difranco: "1717850",
+    // Filomena DiFranco
+    espinal: "1822167"
+    // Juan Carlos Espinal (Carlos)
+  };
+  function providerOrTrainee(clinician) {
+    const tokens = clinician.toLowerCase().replace(/[.,]/g, "").split(/\s+/);
+    for (const t of tokens) {
+      if (MAIN_PROVIDER_IDS[t]) return MAIN_PROVIDER_IDS[t];
+    }
+    return "Trainee";
+  }
+  function splitName(full) {
+    const toks = full.trim().split(/\s+/);
+    if (toks.length <= 1) return [toks[0] ?? "", ""];
+    return [toks.slice(0, -1).join(" "), toks[toks.length - 1]];
+  }
   function expandCouple(name) {
     if (!name.includes(" & ")) return null;
     const sides = name.split(" & ").map((s) => s.trim()).filter(Boolean);
@@ -175,6 +201,7 @@
     }
     const idx = buildDetailIndex(details);
     const rows = [];
+    const rater8 = [];
     const stats = {
       appointments: appts.length,
       attendanceClients: byClient.size,
@@ -212,6 +239,22 @@
         else stats.notFound++;
         if (t.couple && row) stats.coupleMembers++;
         if (!phone && !email) stats.missingContact++;
+        if (phone || email) {
+          const [firstName, lastName] = splitName(t.name);
+          for (const a of shows) {
+            rater8.push([
+              firstName,
+              lastName,
+              email,
+              phone,
+              a.clinician,
+              providerOrTrainee(a.clinician),
+              OFFICE_LOCATION[a.office] ?? a.office,
+              fmtDateUs(a.date),
+              a.status
+            ]);
+          }
+        }
         rows.push({
           clientName: t.name,
           location,
@@ -227,29 +270,12 @@
       }
     }
     rows.sort((a, b) => a.location.localeCompare(b.location) || a.clientName.localeCompare(b.clientName));
+    const sortable = (us) => us.split("/").reverse().join("");
+    rater8.sort(
+      (a, b) => sortable(a[7]).localeCompare(sortable(b[7])) || a[1].localeCompare(b[1]) || a[0].localeCompare(b[0])
+    );
     stats.rows = rows.length;
-    return { rows, stats };
-  }
-  function rater8Rows(rows) {
-    const sortable = (us) => {
-      const [mm, dd, yyyy] = us.split("/");
-      return `${yyyy}${mm}${dd}`;
-    };
-    const byPerson = /* @__PURE__ */ new Map();
-    for (const r of rows) {
-      if (!r.lastVisit || !r.phone && !r.email) continue;
-      const key = (r.email || r.phone).toLowerCase().replace(/[^a-z0-9@.]/g, "");
-      const prev = byPerson.get(key);
-      if (!prev || sortable(r.lastVisit) > sortable(prev.lastVisit)) {
-        byPerson.set(key, r);
-      }
-    }
-    return [...byPerson.values()].map((r) => {
-      const toks = r.clientName.trim().split(/\s+/);
-      const lastName = toks.length > 1 ? toks[toks.length - 1] : "";
-      const firstName = toks.length > 1 ? toks.slice(0, -1).join(" ") : toks[0];
-      return [firstName, lastName, r.email, r.phone, r.provider, r.location, r.lastVisit];
-    });
+    return { rows, rater8, stats };
   }
   var RATER8_HEADER = [
     "First Name",
@@ -257,8 +283,10 @@
     "Email",
     "Cell Phone",
     "Provider",
+    "Provider ID",
     "Location",
-    "Last Visit Date"
+    "Appointment Date",
+    "Appointment Status"
   ];
   var FULL_HEADER = [
     "Client",
@@ -422,7 +450,7 @@
     const s = merged.stats;
     const manhattan = merged.rows.filter((r) => r.location === "Manhattan").length;
     const virtual = merged.rows.filter((r) => r.location === "Virtual").length;
-    $("stats-line").textContent = `${s.rows} people from ${s.appointments} appointments \xB7 ${manhattan} Manhattan \xB7 ${virtual} Virtual \xB7 ${s.notFound} not in client details \xB7 ${s.missingContact} without contact info \xB7 ${rater8Rows(merged.rows).length} ready for rater8`;
+    $("stats-line").textContent = `${s.rows} people from ${s.appointments} appointments \xB7 ${manhattan} Manhattan \xB7 ${virtual} Virtual \xB7 ${s.notFound} not in client details \xB7 ${s.missingContact} without contact info \xB7 ${merged.rater8.length} rater8 rows (one per visit)`;
     const tbody = $("results-table").querySelector("tbody");
     tbody.innerHTML = "";
     for (const r of visibleRows()) {
@@ -529,7 +557,7 @@
     });
     $("dl-rater8").addEventListener("click", () => {
       if (!merged) return;
-      downloadCsv(`rater8_${safeLabel()}.csv`, toCsv(RATER8_HEADER, rater8Rows(merged.rows)));
+      downloadCsv(`rater8_${safeLabel()}.csv`, toCsv(RATER8_HEADER, merged.rater8));
     });
     $("dl-full").addEventListener("click", () => {
       if (!merged) return;
