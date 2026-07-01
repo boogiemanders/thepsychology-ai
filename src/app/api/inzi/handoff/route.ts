@@ -5,67 +5,46 @@ import { sendNotificationEmail, isNotificationEmailConfigured } from '@/lib/noti
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-type Intent = 'scheduling' | 'billing' | 'clinical' | 'general'
-type Urgency = 'low' | 'normal' | 'urgent'
+// Interim HIPAA posture (BAAs pending): this endpoint accepts ONLY click-intake
+// callback requests (a preset topic plus a phone number). It deliberately
+// rejects everything else so no free text, name, or email can reach storage,
+// even from a stale client or a hand-crafted request. Revert to the full
+// free-text handoff shape once OpenAI/AWS/Neon BAAs are signed.
 
-interface HandoffBody {
-  intent: Intent
-  patient: { name: string; email: string; phone?: string }
-  summary: string
-  payload?: Record<string, unknown>
-  urgency?: Urgency
-  assignedClinician?: string
+type Topic = 'scheduling' | 'insurance' | 'general'
+
+const TOPIC_LABEL: Record<Topic, string> = {
+  scheduling: 'Scheduling',
+  insurance: 'Insurance / billing',
+  general: 'General',
 }
 
-function intentLabel(i: Intent): string {
-  if (i === 'scheduling') return 'Scheduling request'
-  if (i === 'billing') return 'Billing question'
-  if (i === 'clinical') return 'Message to clinician'
-  return 'General question'
-}
-
-function renderBodyText(b: HandoffBody, id: string): string {
-  const lines: string[] = []
-  lines.push(`${intentLabel(b.intent).toUpperCase()}`)
-  lines.push('')
-  lines.push(`Patient: ${b.patient.name} <${b.patient.email}>`)
-  if (b.patient.phone) lines.push(`Phone: ${b.patient.phone}`)
-  if (b.assignedClinician) lines.push(`For: ${b.assignedClinician}`)
-  if (b.urgency && b.urgency !== 'normal') lines.push(`Urgency: ${b.urgency.toUpperCase()}`)
-  lines.push('')
-  lines.push('Summary:')
-  lines.push(b.summary)
-  if (b.payload && Object.keys(b.payload).length > 0) {
-    lines.push('')
-    lines.push('Details:')
-    for (const [k, v] of Object.entries(b.payload)) {
-      const value = Array.isArray(v) ? v.join(', ') : String(v)
-      lines.push(`  ${k}: ${value}`)
-    }
-  }
-  lines.push('')
-  lines.push(`Inbox ID: ${id}`)
-  lines.push(`View at: /lab/inzinna/inbox`)
-  return lines.join('\n')
+// Reuses the existing inzi_messages intent enum so the inbox filters keep working.
+const TOPIC_INTENT: Record<Topic, 'scheduling' | 'billing' | 'general'> = {
+  scheduling: 'scheduling',
+  insurance: 'billing',
+  general: 'general',
 }
 
 export async function POST(req: Request) {
-  let body: HandoffBody
+  let body: { topic?: string; phone?: string }
   try {
     body = await req.json()
   } catch {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
   }
 
-  const allowed: Intent[] = ['scheduling', 'billing', 'clinical', 'general']
-  if (!body || !body.intent || !allowed.includes(body.intent)) {
-    return NextResponse.json({ error: 'Missing or invalid intent' }, { status: 400 })
+  const topics: Topic[] = ['scheduling', 'insurance', 'general']
+  const topic = body?.topic as Topic
+  if (!topic || !topics.includes(topic)) {
+    return NextResponse.json({ error: 'Missing or invalid topic' }, { status: 400 })
   }
-  if (!body.patient?.name?.trim() || !body.patient?.email?.trim()) {
-    return NextResponse.json({ error: 'Patient name and email required' }, { status: 400 })
-  }
-  if (!body.summary?.trim()) {
-    return NextResponse.json({ error: 'Summary required' }, { status: 400 })
+
+  // Digits-only validation so nothing but a phone number can be smuggled in.
+  const raw = String(body?.phone || '')
+  const digits = raw.replace(/[\s().+-]/g, '')
+  if (!/^\d{10,15}$/.test(digits)) {
+    return NextResponse.json({ error: 'Valid phone number required' }, { status: 400 })
   }
 
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
@@ -74,14 +53,13 @@ export async function POST(req: Request) {
   const { data, error } = await supabase
     .from('inzi_messages')
     .insert({
-      intent: body.intent,
-      patient_name: body.patient.name.trim(),
-      patient_email: body.patient.email.trim(),
-      patient_phone: body.patient.phone?.trim() || null,
-      summary: body.summary.trim(),
-      payload: body.payload || {},
-      urgency: body.urgency || 'normal',
-      assigned_clinician: body.assignedClinician?.trim() || null,
+      intent: TOPIC_INTENT[topic],
+      patient_name: null,
+      patient_email: null,
+      patient_phone: digits,
+      summary: `Callback request: ${TOPIC_LABEL[topic]}`,
+      payload: { topic, source: 'click-intake' },
+      urgency: 'normal',
       status: 'new',
     })
     .select('id')
@@ -89,15 +67,22 @@ export async function POST(req: Request) {
 
   if (error || !data) {
     console.error('inzi handoff insert failed:', error)
-    return NextResponse.json({ error: 'Failed to record message', detail: error?.message }, { status: 500 })
+    return NextResponse.json({ error: 'Failed to record request', detail: error?.message }, { status: 500 })
   }
 
+  // The notification email intentionally carries no phone number or any other
+  // identifying info: Resend has no HIPAA BAA. The phone lives only in Supabase.
   let emailSent = false
   if (isNotificationEmailConfigured()) {
     try {
       await sendNotificationEmail({
-        subject: `[Inzi] ${intentLabel(body.intent)} from ${body.patient.name}`,
-        text: renderBodyText(body, data.id),
+        subject: `[Inzi] Callback request (${TOPIC_LABEL[topic]})`,
+        text: [
+          `A visitor requested a callback about: ${TOPIC_LABEL[topic]}.`,
+          '',
+          'Their phone number is in the Inzi inbox: /lab/inzinna/inbox',
+          `Inbox ID: ${data.id}`,
+        ].join('\n'),
       })
       emailSent = true
     } catch (e) {

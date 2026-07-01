@@ -1,7 +1,9 @@
 'use client'
 import { useEffect, useMemo, useState } from 'react'
-import { INZ_STATES, INZINNA_THERAPISTS, type AccentName, type ContactClinicianSubmit, type InziState, type LauncherStyle, type Message, type SchedulingSubmit, type Variation } from './inzi-data'
+import { CLINIC_PHONE, INZ_STATES, type AccentName, type CallbackSubmit, type InziState, type LauncherStyle, type Message, type Variation } from './inzi-data'
+import { trackEvent } from './inzi-analytics'
 import { ChatPanel } from './inzi-panel'
+import type { IntakeOptionId } from './inzi-cards'
 import { HomepageBackdrop, Launcher } from './inzi-launcher'
 import { TweaksPanel } from './inzi-tweaks'
 import { VoiceCall } from './voice-call'
@@ -68,21 +70,50 @@ export function InziApp() {
     if (initial) setLiveMessages([LIVE_INTRO, initial])
   }
 
-  const startScheduling = () => {
-    enterLive({ from: 'bot', text: "let's get you booked. fill this out and our scheduling team will reach out within one business day." } as Message)
-    setLiveMessages(prev => [...prev, { from: 'bot', kind: 'scheduling-form' }])
+  // Interim HIPAA posture: intake is click-only. No free text, no name/email.
+  // A callback request collects a phone number and nothing else.
+  const onPickIntakeOption = (id: IntakeOptionId) => {
+    trackEvent('inzi_intake_option_selected', { option: id })
+    if (id === 'schedule') {
+      setLiveMessages(prev => [...prev,
+        { from: 'user', text: 'Schedule an appointment' },
+        { from: 'bot', text: `the fastest way to book is to call us at ${CLINIC_PHONE}. or leave your number below and our scheduling team will call you back within one business day.` },
+        { from: 'bot', kind: 'callback-form', topic: 'scheduling' },
+      ])
+    } else if (id === 'insurance') {
+      setLiveMessages(prev => [...prev,
+        { from: 'user', text: 'Insurance question' },
+        { from: 'bot', text: "ask me your insurance or billing question right here. I answer from the clinic's own materials, and this chat isn't stored. if you'd rather talk to a person, tap 'Request a callback' above." },
+      ])
+    } else if (id === 'general') {
+      setLiveMessages(prev => [...prev,
+        { from: 'user', text: 'General question' },
+        { from: 'bot', text: "ask me anything below: hours, location, how sessions work. I answer from the clinic's own materials, and this chat isn't stored. if you'd rather talk to a person, tap 'Request a callback' above." },
+      ])
+    } else {
+      setLiveMessages(prev => [...prev,
+        { from: 'user', text: 'Request a callback' },
+        { from: 'bot', kind: 'callback-form', topic: 'general' },
+      ])
+    }
   }
 
-  const startContactClinician = (preselect?: string) => {
-    const list = INZINNA_THERAPISTS.map(t => t.name)
-    enterLive({ from: 'bot', text: "of course. write your message below and pick who it's going to. they'll get an email." } as Message)
-    setLiveMessages(prev => [...prev, { from: 'bot', kind: 'contact-clinician-form', clinicians: preselect ? [preselect, ...list.filter(n => n !== preselect)] : list }])
+  const startIntake = (preselect?: IntakeOptionId) => {
+    trackEvent('inzi_intake_opened', preselect ? { preselect } : {})
+    if (preselect) {
+      enterLive()
+      onPickIntakeOption(preselect)
+      return
+    }
+    enterLive({ from: 'bot', text: "happy to get you to the right person. what do you need?" } as Message)
+    setLiveMessages(prev => [...prev, { from: 'bot', kind: 'intake-options' }])
   }
 
   const onPickChip = (label: string) => {
     const t = label.toLowerCase()
-    if (t.includes('schedule') || t.includes('book a session') || t.includes('book an appointment')) return startScheduling()
-    if (t.includes('message my') || t.includes('message a clinician') || t.includes('contact my therapist') || t.includes('send a message')) return startContactClinician()
+    if (t.includes('schedule') || t.includes('book a session') || t.includes('book an appointment')) return startIntake('schedule')
+    if (t.includes('message my') || t.includes('message a clinician') || t.includes('contact my therapist') || t.includes('send a message')) return startIntake()
+    if (t.includes('callback') || t.includes('call me')) return startIntake('callback')
     if (liveActive) {
       askLive(label)
       return
@@ -99,66 +130,29 @@ export function InziApp() {
     return setStateId('bot-typing')
   }
 
-  const onSchedulingSubmit = async (data: SchedulingSubmit) => {
-    setLiveMessages(prev => prev.map(m => 'kind' in m && m.kind === 'scheduling-form' ? { from: 'bot', kind: 'handoff-loading', text: 'sending to scheduling...' } : m))
+  const onCallbackSubmit = async (data: CallbackSubmit) => {
+    setLiveMessages(prev => prev.map(m => 'kind' in m && m.kind === 'callback-form' ? { from: 'bot', kind: 'handoff-loading', text: 'sending...' } : m))
     try {
       const res = await fetch('/api/inzi/handoff', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          intent: 'scheduling',
-          patient: { name: data.name, email: data.email, phone: data.phone },
-          summary: `${data.modality} session. Times: ${data.preferredTimes.join(', ')}. Concerns: ${data.concerns}`,
-          payload: {
-            modality: data.modality,
-            preferredTimes: data.preferredTimes,
-            insurance: data.insurance,
-            concerns: data.concerns,
-          },
-        }),
+        body: JSON.stringify({ topic: data.topic, phone: data.phone }),
       })
       if (!res.ok) throw new Error('Handoff failed')
+      trackEvent('inzi_callback_submitted', { topic: data.topic })
+      const intent = data.topic === 'scheduling' ? 'scheduling' : data.topic === 'insurance' ? 'billing' : 'general'
       setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'handoff-loading').concat([
-        { from: 'bot', kind: 'handoff-success', intent: 'scheduling', etaText: "we'll confirm your appointment via email within 1 business day." },
+        { from: 'bot', kind: 'handoff-success', intent, etaText: "we'll call you back within one business day." },
       ]))
     } catch (e) {
       setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'handoff-loading').concat([
-        { from: 'bot', text: "something went wrong sending that. mind trying again, or call the clinic directly?" },
-      ]))
-    }
-  }
-
-  const onContactClinicianSubmit = async (data: ContactClinicianSubmit) => {
-    setLiveMessages(prev => prev.map(m => 'kind' in m && m.kind === 'contact-clinician-form' ? { from: 'bot', kind: 'handoff-loading', text: 'sending message...' } : m))
-    try {
-      const res = await fetch('/api/inzi/handoff', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          intent: 'clinical',
-          patient: { name: data.name, email: data.email, phone: data.phone },
-          summary: data.message,
-          urgency: data.urgency,
-          assignedClinician: data.clinician,
-          payload: { clinician: data.clinician, urgency: data.urgency },
-        }),
-      })
-      if (!res.ok) throw new Error('Handoff failed')
-      const eta = data.urgency === 'urgent'
-        ? `${data.clinician.split(' ').slice(0, 2).join(' ')} will see this today. for emergencies call 911 or 988.`
-        : `${data.clinician.split(' ').slice(0, 2).join(' ')} will reply by next business day.`
-      setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'handoff-loading').concat([
-        { from: 'bot', kind: 'handoff-success', intent: 'clinical', etaText: eta },
-      ]))
-    } catch (e) {
-      setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'handoff-loading').concat([
-        { from: 'bot', text: "couldn't send that. try again, or call the clinic if it's urgent." },
+        { from: 'bot', text: `couldn't send that. mind trying again, or call us at ${CLINIC_PHONE}?` },
       ]))
     }
   }
 
   const onCancelHandoff = () => {
-    setLiveMessages(prev => prev.filter(m => !('kind' in m) || (m.kind !== 'scheduling-form' && m.kind !== 'contact-clinician-form')).concat([
+    setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'callback-form').concat([
       { from: 'bot', text: 'no worries. anything else I can help with?' },
     ]))
   }
@@ -174,6 +168,20 @@ export function InziApp() {
         body: JSON.stringify({ question: q }),
       })
       const data = await res.json()
+
+      if (data.crisis) {
+        trackEvent('inzi_crisis_shown')
+        setLiveMessages(prev => [...prev,
+          { from: 'bot', kind: 'crisis', text: "I hear you, and I'm really glad you said that out loud.", sub: "what you're feeling deserves more support than I can give you in a chat. you're not alone, and there are people trained for exactly this moment, right now." },
+          { from: 'bot', kind: 'crisis-actions', actions: [
+            { label: 'Call or text 988', sub: 'Suicide & Crisis Lifeline. 24/7, free.', cta: 'tel:988', primary: true },
+            { label: 'Text HOME to 741741', sub: 'Crisis Text Line. Confidential.', cta: 'sms:741741' },
+            { label: 'Call the Inzinna office', sub: `${CLINIC_PHONE} · during business hours`, cta: `tel:${CLINIC_PHONE.replace(/\D/g, '')}` },
+          ] },
+        ])
+        return
+      }
+
       const rawAnswer: string = data.answer || "I don't have that in the manual."
       const allSources: { title: string; doc: string }[] = data.sources || []
 
@@ -238,8 +246,8 @@ export function InziApp() {
             onComposerChange={setComposerValue}
             onComposerSend={onComposerSend}
             onCall={() => { setLiveActive(true); setCallOpen(true) }}
-            onSchedulingSubmit={onSchedulingSubmit}
-            onContactClinicianSubmit={onContactClinicianSubmit}
+            onPickIntakeOption={onPickIntakeOption}
+            onCallbackSubmit={onCallbackSubmit}
             onCancelHandoff={onCancelHandoff}
           />
         </div>

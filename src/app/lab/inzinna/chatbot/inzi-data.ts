@@ -42,24 +42,17 @@ export interface SourceTag { title: string; doc: string }
 
 export type HandoffIntent = 'scheduling' | 'billing' | 'clinical' | 'general'
 
-export interface SchedulingSubmit {
-  name: string
-  email: string
-  phone?: string
-  modality: 'telehealth' | 'in-person' | 'either'
-  preferredTimes: string[]
-  insurance: string
-  concerns: string
+// Interim HIPAA posture: intake is click-only. The only thing a visitor can
+// type into the intake path is a phone number (callback requests). Free-text
+// intake returns once BAAs are signed.
+export type IntakeTopic = 'scheduling' | 'insurance' | 'general'
+
+export interface CallbackSubmit {
+  topic: IntakeTopic
+  phone: string
 }
 
-export interface ContactClinicianSubmit {
-  name: string
-  email: string
-  phone?: string
-  clinician: string
-  message: string
-  urgency: 'low' | 'normal' | 'urgent'
-}
+export const CLINIC_PHONE = '914-785-7742'
 
 export type Message =
   | { from: 'bot'; text: string; kind?: undefined; sub?: undefined; sources?: SourceTag[] }
@@ -70,8 +63,8 @@ export type Message =
   | { from: 'bot'; kind: 'results'; score: number; max: number; level: 'Mild' | 'Moderate' | 'Severe'; summary: string; recommendations: Recommendation[] }
   | { from: 'bot'; kind: 'clinician-card'; clinician: Clinician }
   | { from: 'bot'; kind: 'handoff-loading'; text: string }
-  | { from: 'bot'; kind: 'scheduling-form' }
-  | { from: 'bot'; kind: 'contact-clinician-form'; clinicians: string[] }
+  | { from: 'bot'; kind: 'intake-options' }
+  | { from: 'bot'; kind: 'callback-form'; topic: IntakeTopic }
   | { from: 'bot'; kind: 'handoff-success'; intent: HandoffIntent; etaText: string }
   | { from: 'user'; text: string }
   | { from: 'human'; name: string; text: string; avatar: string }
