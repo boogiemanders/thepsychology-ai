@@ -201,106 +201,47 @@ export function HandoffLoading({ text }: { text: string }) {
 }
 
 import { useState } from 'react'
-import type { SchedulingSubmit, ContactClinicianSubmit, HandoffIntent } from './inzi-data'
+import type { CallbackSubmit, HandoffIntent, IntakeTopic } from './inzi-data'
 
-const TIME_CHIPS = ['weekday mornings', 'weekday afternoons', 'weekday evenings', 'saturdays', 'flexible']
+// Interim HIPAA posture: intake is click-only, no free text, no name/email.
+// The four preset options below are the whole intake surface.
+export type IntakeOptionId = 'schedule' | 'insurance' | 'general' | 'callback'
 
-export function SchedulingForm({ onSubmit, onCancel }: { onSubmit: (data: SchedulingSubmit) => Promise<void>; onCancel: () => void }) {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [modality, setModality] = useState<'telehealth' | 'in-person' | 'either'>('either')
-  const [times, setTimes] = useState<string[]>([])
-  const [insurance, setInsurance] = useState('')
-  const [concerns, setConcerns] = useState('')
-  const [submitting, setSubmitting] = useState(false)
+const INTAKE_OPTIONS: { id: IntakeOptionId; label: string; sub: string }[] = [
+  { id: 'schedule', label: 'Schedule an appointment', sub: 'call us, or have us call you' },
+  { id: 'insurance', label: 'Insurance question', sub: 'coverage, billing, fees' },
+  { id: 'general', label: 'General question', sub: 'hours, location, how therapy works' },
+  { id: 'callback', label: 'Request a callback', sub: 'leave a number, we call you' },
+]
 
-  const toggleTime = (t: string) => {
-    setTimes(prev => prev.includes(t) ? prev.filter(x => x !== t) : [...prev, t])
-  }
-
-  const ready = name.trim() && email.trim() && times.length > 0 && concerns.trim()
-
-  const handleSubmit = async () => {
-    if (!ready || submitting) return
-    setSubmitting(true)
-    try {
-      await onSubmit({ name: name.trim(), email: email.trim(), phone: phone.trim() || undefined, modality, preferredTimes: times, insurance: insurance.trim(), concerns: concerns.trim() })
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
+export function IntakeOptions({ onPick }: { onPick: (id: IntakeOptionId) => void }) {
   return (
-    <div className="inz-form">
-      <div className="inz-form__head">
-        <div className="inz-form__title">Book a session</div>
-        <div className="inz-form__sub">our scheduling team will confirm within 1 business day.</div>
-      </div>
-      <div className="inz-form__row">
-        <label className="inz-form__field">
-          <span>Your name</span>
-          <input value={name} onChange={e => setName(e.target.value)} placeholder="Jane Doe" />
-        </label>
-        <label className="inz-form__field">
-          <span>Email</span>
-          <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" />
-        </label>
-      </div>
-      <label className="inz-form__field">
-        <span>Phone (optional)</span>
-        <input value={phone} onChange={e => setPhone(e.target.value)} placeholder="555 123 4567" />
-      </label>
-      <div className="inz-form__field">
-        <span>Modality</span>
-        <div className="inz-form__radio">
-          {(['telehealth', 'in-person', 'either'] as const).map(m => (
-            <button type="button" key={m} className={'inz-form__radio-btn' + (modality === m ? ' is-active' : '')} onClick={() => setModality(m)}>{m}</button>
-          ))}
-        </div>
-      </div>
-      <div className="inz-form__field">
-        <span>Times that work (pick any)</span>
-        <div className="inz-form__chips">
-          {TIME_CHIPS.map(t => (
-            <button type="button" key={t} className={'inz-form__chip' + (times.includes(t) ? ' is-active' : '')} onClick={() => toggleTime(t)}>{t}</button>
-          ))}
-        </div>
-      </div>
-      <label className="inz-form__field">
-        <span>Insurance (optional)</span>
-        <input value={insurance} onChange={e => setInsurance(e.target.value)} placeholder="e.g. Aetna, BCBS, self-pay" />
-      </label>
-      <label className="inz-form__field">
-        <span>Briefly, what brings you in?</span>
-        <textarea rows={3} value={concerns} onChange={e => setConcerns(e.target.value)} placeholder="anxiety at work, relationship stress, ADHD eval..." />
-      </label>
-      <div className="inz-form__actions">
-        <button type="button" className="inz-form__cancel" onClick={onCancel} disabled={submitting}>cancel</button>
-        <button type="button" className="inz-form__submit" onClick={handleSubmit} disabled={!ready || submitting}>
-          {submitting ? 'sending...' : 'send to scheduling'}
+    <div className="inz-intake">
+      {INTAKE_OPTIONS.map(o => (
+        <button key={o.id} type="button" className="inz-intake__btn" onClick={() => onPick(o.id)}>
+          <div>
+            <div className="inz-intake__btn-title">{o.label}</div>
+            <div className="inz-intake__btn-sub">{o.sub}</div>
+          </div>
+          <Ico.ArrowRight size={16} />
         </button>
-      </div>
+      ))}
     </div>
   )
 }
 
-export function ContactClinicianForm({ clinicians, onSubmit, onCancel }: { clinicians: string[]; onSubmit: (data: ContactClinicianSubmit) => Promise<void>; onCancel: () => void }) {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
+export function CallbackForm({ topic, onSubmit, onCancel }: { topic: IntakeTopic; onSubmit: (data: CallbackSubmit) => Promise<void>; onCancel: () => void }) {
   const [phone, setPhone] = useState('')
-  const [clinician, setClinician] = useState(clinicians[0] || '')
-  const [message, setMessage] = useState('')
-  const [urgency, setUrgency] = useState<'low' | 'normal' | 'urgent'>('normal')
   const [submitting, setSubmitting] = useState(false)
 
-  const ready = name.trim() && email.trim() && message.trim() && clinician
+  const digits = phone.replace(/\D/g, '')
+  const ready = digits.length >= 10 && digits.length <= 15
 
   const handleSubmit = async () => {
     if (!ready || submitting) return
     setSubmitting(true)
     try {
-      await onSubmit({ name: name.trim(), email: email.trim(), phone: phone.trim() || undefined, clinician, message: message.trim(), urgency })
+      await onSubmit({ topic, phone: phone.trim() })
     } finally {
       setSubmitting(false)
     }
@@ -309,45 +250,24 @@ export function ContactClinicianForm({ clinicians, onSubmit, onCancel }: { clini
   return (
     <div className="inz-form">
       <div className="inz-form__head">
-        <div className="inz-form__title">Message your clinician</div>
-        <div className="inz-form__sub">they'll get an email and respond by next business day. for emergencies call 911 or 988.</div>
-      </div>
-      <div className="inz-form__row">
-        <label className="inz-form__field">
-          <span>Your name</span>
-          <input value={name} onChange={e => setName(e.target.value)} placeholder="Jane Doe" />
-        </label>
-        <label className="inz-form__field">
-          <span>Email</span>
-          <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" />
-        </label>
+        <div className="inz-form__title">Request a callback</div>
+        <div className="inz-form__sub">we'll call you back within one business day. your number is the only thing we ask for.</div>
       </div>
       <label className="inz-form__field">
-        <span>Phone (optional)</span>
-        <input value={phone} onChange={e => setPhone(e.target.value)} placeholder="555 123 4567" />
-      </label>
-      <label className="inz-form__field">
-        <span>Send to</span>
-        <select value={clinician} onChange={e => setClinician(e.target.value)}>
-          {clinicians.map(c => <option key={c} value={c}>{c}</option>)}
-        </select>
-      </label>
-      <div className="inz-form__field">
-        <span>Urgency</span>
-        <div className="inz-form__radio">
-          {(['low', 'normal', 'urgent'] as const).map(u => (
-            <button type="button" key={u} className={'inz-form__radio-btn' + (urgency === u ? ' is-active' : '')} onClick={() => setUrgency(u)}>{u}</button>
-          ))}
-        </div>
-      </div>
-      <label className="inz-form__field">
-        <span>Message</span>
-        <textarea rows={4} value={message} onChange={e => setMessage(e.target.value)} placeholder="hi Dr. X, I wanted to ask about..." />
+        <span>Phone number</span>
+        <input
+          type="tel"
+          inputMode="tel"
+          value={phone}
+          onChange={e => setPhone(e.target.value.replace(/[^\d\s().+-]/g, ''))}
+          onKeyDown={e => { if (e.key === 'Enter' && ready) handleSubmit() }}
+          placeholder="555 123 4567"
+        />
       </label>
       <div className="inz-form__actions">
         <button type="button" className="inz-form__cancel" onClick={onCancel} disabled={submitting}>cancel</button>
         <button type="button" className="inz-form__submit" onClick={handleSubmit} disabled={!ready || submitting}>
-          {submitting ? 'sending...' : 'send message'}
+          {submitting ? 'sending...' : 'request callback'}
         </button>
       </div>
     </div>

@@ -800,3 +800,23 @@ body.inzi-page-active { background: #101032; margin: 0; }
 }
 .inz-success__title { font-size: 14px; font-weight: 800; }
 .inz-success__sub { font-size: 12.5px; opacity: 0.75; line-height: 1.4; margin-top: 2px; }
+
+/* ---- Click-only intake options (interim HIPAA posture) ---- */
+.inz-intake { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.inz-intake__btn {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--inz-snow); border: 1.5px solid var(--inz-cloud);
+  border-radius: var(--r-md); padding: 12px 14px;
+  color: var(--inz-oxford); font-family: inherit; text-align: left;
+  transition: all 160ms ease; cursor: pointer;
+}
+.inz-intake__btn:hover { transform: translateY(-1px); border-color: var(--accent, var(--inz-royal)); color: var(--accent, var(--inz-royal)); }
+.inz-intake__btn-title { font-size: 14px; font-weight: 700; }
+.inz-intake__btn-sub { font-size: 12px; opacity: 0.65; margin-top: 2px; }
+.is-dark .inz-intake__btn { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); color: var(--inz-creme); }
+.is-dark .inz-intake__btn:hover { border-color: var(--inz-peri); color: #fff; }
+
+/* Crisis bubble must stay readable in every variation: per-variation
+   .inz-bubble--bot rules above otherwise override its background and
+   leave white text on a white bubble. */
+.inz-panel .inz-bubble--bot.inz-bubble--crisis { background: var(--inz-plum); color: #fff; border-color: var(--inz-plum); }

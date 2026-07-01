@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import OpenAI from 'openai'
 import { getSupabaseClient } from '@/lib/supabase-server'
+import { regexCrisisCheck, miniCrisisCheck } from '@/lib/therapy/safety-classifier'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -49,6 +50,17 @@ export async function POST(req: Request) {
 
   const openai = new OpenAI({ apiKey: openaiKey })
 
+  // 0. Safety: regex crisis check (deterministic), then the mini classifier
+  // for indirect wordings. The mini call overlaps with embed+retrieve so it
+  // costs no extra latency, but its verdict gates the response before any
+  // answer is generated. `answer` carries a speakable fallback for voice mode.
+  const CRISIS_ANSWER = "It sounds like you might be going through something serious. Please call or text 988, the Suicide and Crisis Lifeline. It's free and available 24/7. You can also text HOME to 741741, or call our office at 914-785-7742."
+  const regexCrisis = regexCrisisCheck(question)
+  if (regexCrisis.hit) {
+    return NextResponse.json({ crisis: true, answer: CRISIS_ANSWER, sources: [] })
+  }
+  const miniCrisisPromise = miniCrisisCheck(question)
+
   // 1. Embed the question.
   const emb = await openai.embeddings.create({
     model: 'text-embedding-3-small',
@@ -62,6 +74,11 @@ export async function POST(req: Request) {
     query_text: question,
     match_count: 6,
   })
+
+  const miniCrisis = await miniCrisisPromise
+  if (miniCrisis.crisis) {
+    return NextResponse.json({ crisis: true, answer: CRISIS_ANSWER, sources: [] })
+  }
 
   if (error) {
     console.error('match_kb_chunks rpc failed:', error)

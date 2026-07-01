@@ -1,11 +1,13 @@
 # Inzi Chatbot — Privacy & Data Flow
 
 **For:** Greg, compliance reviewer, legal
-**Last updated:** 2026-05-11
+**Last updated:** 2026-07-01 (interim click-only intake, per plan agreed with Tidal Health Group)
 
 ## TL;DR
 
-Inzi is a knowledge-base chatbot. It answers visitor questions using a clinic-approved corpus (Clinic Manual, Employee Handbook, Brand Strategy) and lets visitors submit contact requests to clinicians or scheduling. No clinical advice. No PHI exchanged in the chat itself unless the visitor volunteers it in the contact form.
+Inzi is a knowledge-base chatbot. It answers visitor questions using a clinic-approved corpus (Clinic Manual, Employee Handbook, Brand Strategy). No clinical advice.
+
+While Business Associate Agreements (BAAs) with our vendors are pending, the intake path is **click-only**: visitors pick from preset options instead of writing messages. There is no free-text contact form, and we do not ask for name or email. The only thing a visitor can submit is a **phone number** for a callback request. This removes PHI risk at the source. Once BAAs are signed (OpenAI, AWS, Neon), the full free-text intake returns.
 
 This document explains exactly what data is captured, where it goes, and how long it lives.
 
@@ -23,24 +25,33 @@ This document explains exactly what data is captured, where it goes, and how lon
 
 OpenAI processes the question through its API. Per OpenAI's API terms (as of 2026), API inputs are **not used to train OpenAI models** and are retained for up to 30 days for abuse monitoring only, then deleted.
 
-### 2. Contact / scheduling form submissions
+**Safety layer:** every chat question passes through a two-stage crisis check before answering: a deterministic keyword screen, then a small LLM classifier for indirect wordings. If either flags the message, Inzi skips the normal answer and shows crisis resources (988 Lifeline, Crisis Text Line, the clinic's phone line). Flagged messages are handled exactly like other chat questions: processed in-flight, not stored.
 
-When a visitor fills out the booking form or "message a clinician" form, we store:
+### 2. Intake (click-only, interim)
+
+The old free-text "message a clinician" and booking forms are removed while BAAs are pending. In their place, visitors pick from four preset options:
+
+- **Schedule an appointment**: shows the clinic phone number and offers a callback
+- **Insurance question**: routes to the (not stored) knowledge-base chat
+- **General question**: routes to the (not stored) knowledge-base chat
+- **Request a callback**: asks for a phone number, and nothing else
+
+Only a callback request stores anything:
 
 | Field | Purpose | Storage |
 |---|---|---|
-| Name | Identification | Supabase table `inzi_messages` |
-| Email | Reply contact | Supabase table `inzi_messages` |
-| Phone (optional) | Reply contact | Supabase table `inzi_messages` |
-| Summary / message | What they're asking | Supabase table `inzi_messages` |
-| Intent (scheduling / clinical / billing / general) | Routing | Supabase table `inzi_messages` |
-| Urgency, assigned clinician (if applicable) | Routing | Supabase table `inzi_messages` |
+| Phone number (digits only, validated) | Callback contact | Supabase table `inzi_messages` |
+| Topic (one of the preset options) | Routing | Supabase table `inzi_messages` |
 | Submitted timestamp | Operations | Supabase table `inzi_messages` |
 
-A notification email is sent to the clinic team via Resend so staff can respond promptly.
+There is no name field, no email field, and no message field. The server rejects any submission that is not exactly a preset topic plus a valid phone number, so free text cannot reach storage even from a modified client.
+
+A notification email is sent to the clinic team via Resend so staff can respond promptly. **The email contains no phone number and no identifying information** (Resend does not offer a BAA). It only says a callback was requested and points staff to the secure inbox.
 
 ### 3. What we do NOT collect
 
+- Names or email addresses (interim design; removed 2026-07-01)
+- Free-text messages to clinicians (interim design; removed 2026-07-01)
 - IP addresses (not logged)
 - Device fingerprints
 - Cookies (Inzi does not set its own — Greg's site GA4 may, separately)
@@ -51,12 +62,12 @@ A notification email is sent to the clinic team via Resend so staff can respond 
 
 ## Where everything lives (sub-processors)
 
-| Service | Role | Region |
-|---|---|---|
-| Vercel | App hosting | US |
-| Supabase | Vector DB + `inzi_messages` storage | US (configurable) |
-| OpenAI API | Embeddings + completions | US |
-| Resend | Notification email | US |
+| Service | Role | Region | BAA status |
+|---|---|---|---|
+| Vercel | App hosting | US | Interim (migration to AWS planned; AWS BAA is free via AWS Artifact) |
+| Supabase | Vector DB + `inzi_messages` storage | US (configurable) | Interim (migration to Neon planned; Neon BAA on Scale plan) |
+| OpenAI API | Embeddings + completions + safety classifier | US | Requested 2026-07-01, pending |
+| Resend | Notification email (no PHI, no identifiers) | US | None offered; emails deliberately carry no identifying info |
 
 All in-transit data uses TLS. Supabase data is encrypted at rest.
 
@@ -64,14 +75,9 @@ All in-transit data uses TLS. Supabase data is encrypted at rest.
 
 ## HIPAA posture
 
-**Inzi is NOT currently configured as a HIPAA-compliant covered service.**
+**Interim posture (current):** the click-only intake means Inzi does not solicit or accept any message content from visitors. The only stored identifier is a phone number, volunteered specifically to receive a callback, kept in one table, and never included in notification emails.
 
-- Visitor questions in the chat are generic FAQ-level (e.g., "do you take Aetna?"). Inzi explicitly does not give clinical opinions and routes those to "consult Greg or Bret."
-- The contact form does capture name + email + a free-text summary, which **could** include PHI if a visitor volunteers symptoms or diagnostic info. We do not solicit PHI.
-- Recommended path before launch:
-  1. Add a notice above the contact form: "Please don't include sensitive medical details here. A clinician will follow up to discuss in a secure setting."
-  2. Sign Business Associate Agreements (BAAs) with OpenAI (available on their enterprise tier), Supabase (paid plan), and Resend if Inzi will handle PHI at scale.
-  3. If full HIPAA posture is required for launch — flag this and we'll discuss the upgrade scope.
+**Target posture:** hosting on AWS (BAA signed via AWS Artifact), database on Neon (BAA on Scale plan), OpenAI API BAA with Zero Data Retention enabled. Once all three are in place, the free-text intake returns under full BAA coverage.
 
 ---
 
@@ -81,7 +87,7 @@ All in-transit data uses TLS. Supabase data is encrypted at rest.
 |---|---|
 | Chat questions / answers | Not stored |
 | OpenAI API inputs | 30 days (OpenAI policy, abuse monitoring) |
-| `inzi_messages` (contact form submissions) | Retained until manually deleted by clinic admin via inbox UI |
+| `inzi_messages` (callback requests: phone + topic) | Retained until manually deleted by clinic admin via inbox UI |
 | Knowledge base content | Until updated by Greg / Inzinna team |
 
 Visitors can request deletion of their submission by emailing dranders@drinzinna.com.
@@ -92,7 +98,7 @@ Visitors can request deletion of their submission by emailing dranders@drinzinna
 
 Recommend adding to the site footer or chat panel:
 
-> "Inzi is an AI assistant. It answers using our published clinic materials and is not a substitute for clinical advice. Messages you send may be used to help our team respond to you — please don't share sensitive medical details here."
+> "Inzi is an AI assistant. It answers using our published clinic materials and is not a substitute for clinical advice. Chat questions are processed in the moment and not stored. If you request a callback, we save only your phone number so we can reach you."
 
 ---
 

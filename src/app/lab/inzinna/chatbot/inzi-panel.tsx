@@ -3,8 +3,8 @@ import { useEffect, useRef } from 'react'
 import ReactMarkdown from 'react-markdown'
 import type { InziState, Message, Variation, AccentName } from './inzi-data'
 import { BrainAnim, Ico, LoopSquiggle, TypingDots } from './inzi-icons'
-import { AssessmentQuestion, Chips, ClinicianCard, Composer, CrisisActions, HandoffLoading, HistoryList, ResultsCard, SchedulingForm, ContactClinicianForm, HandoffSuccess } from './inzi-cards'
-import type { SchedulingSubmit, ContactClinicianSubmit, HandoffIntent } from './inzi-data'
+import { AssessmentQuestion, Chips, ClinicianCard, Composer, CrisisActions, HandoffLoading, HistoryList, ResultsCard, IntakeOptions, CallbackForm, HandoffSuccess, type IntakeOptionId } from './inzi-cards'
+import type { CallbackSubmit } from './inzi-data'
 
 function iconMonoFor(variation: Variation, dark: boolean, accent: AccentName): string {
   const accentColor = ({ royal: '#3362FF', peach: '#D67263', plum: '#5F396D', mint: '#3F8E45' } as const)[accent] || '#3362FF'
@@ -100,12 +100,12 @@ interface BubbleProps {
   dark: boolean
   variation: Variation
   accent: AccentName
-  onSchedulingSubmit?: (data: SchedulingSubmit) => Promise<void>
-  onContactClinicianSubmit?: (data: ContactClinicianSubmit) => Promise<void>
+  onPickIntakeOption?: (id: IntakeOptionId) => void
+  onCallbackSubmit?: (data: CallbackSubmit) => Promise<void>
   onCancelHandoff?: () => void
 }
 
-function Bubble({ msg, dark, variation, accent, onSchedulingSubmit, onContactClinicianSubmit, onCancelHandoff }: BubbleProps) {
+function Bubble({ msg, dark, variation, accent, onPickIntakeOption, onCallbackSubmit, onCancelHandoff }: BubbleProps) {
   const mono = iconMonoFor(variation, dark, accent)
   if (msg.from === 'system') {
     return (
@@ -157,27 +157,24 @@ function Bubble({ msg, dark, variation, accent, onSchedulingSubmit, onContactCli
       </div>
     )
   }
-  if (msg.from === 'bot' && msg.kind === 'scheduling-form') {
+  if (msg.from === 'bot' && msg.kind === 'intake-options') {
     return (
       <div className="inz-msg inz-msg--wide">
         <div className="inz-msg__avatar"><BrainAnim size={28} mono={mono} /></div>
         <div className="inz-msg__body">
-          <SchedulingForm
-            onSubmit={async d => { if (onSchedulingSubmit) await onSchedulingSubmit(d) }}
-            onCancel={() => onCancelHandoff?.()}
-          />
+          <IntakeOptions onPick={id => onPickIntakeOption?.(id)} />
         </div>
       </div>
     )
   }
-  if (msg.from === 'bot' && msg.kind === 'contact-clinician-form') {
+  if (msg.from === 'bot' && msg.kind === 'callback-form') {
     return (
       <div className="inz-msg inz-msg--wide">
         <div className="inz-msg__avatar"><BrainAnim size={28} mono={mono} /></div>
         <div className="inz-msg__body">
-          <ContactClinicianForm
-            clinicians={msg.clinicians}
-            onSubmit={async d => { if (onContactClinicianSubmit) await onContactClinicianSubmit(d) }}
+          <CallbackForm
+            topic={msg.topic}
+            onSubmit={async d => { if (onCallbackSubmit) await onCallbackSubmit(d) }}
             onCancel={() => onCancelHandoff?.()}
           />
         </div>
@@ -298,12 +295,12 @@ interface ChatPanelProps {
   onComposerChange: (v: string) => void
   onComposerSend: () => void
   onCall?: () => void
-  onSchedulingSubmit?: (data: SchedulingSubmit) => Promise<void>
-  onContactClinicianSubmit?: (data: ContactClinicianSubmit) => Promise<void>
+  onPickIntakeOption?: (id: IntakeOptionId) => void
+  onCallbackSubmit?: (data: CallbackSubmit) => Promise<void>
   onCancelHandoff?: () => void
 }
 
-export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickChip, composerValue, onComposerChange, onComposerSend, onCall, onSchedulingSubmit, onContactClinicianSubmit, onCancelHandoff }: ChatPanelProps) {
+export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickChip, composerValue, onComposerChange, onComposerSend, onCall, onPickIntakeOption, onCallbackSubmit, onCancelHandoff }: ChatPanelProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight
@@ -358,8 +355,8 @@ export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickCh
                 dark={dark}
                 variation={variation}
                 accent={accent}
-                onSchedulingSubmit={onSchedulingSubmit}
-                onContactClinicianSubmit={onContactClinicianSubmit}
+                onPickIntakeOption={onPickIntakeOption}
+                onCallbackSubmit={onCallbackSubmit}
                 onCancelHandoff={onCancelHandoff}
               />
             ))}

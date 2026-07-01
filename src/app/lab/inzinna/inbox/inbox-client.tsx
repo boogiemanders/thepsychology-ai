@@ -5,8 +5,9 @@ import './inbox.css'
 export interface InziMessage {
   id: string
   intent: 'scheduling' | 'billing' | 'clinical' | 'general'
-  patient_name: string
-  patient_email: string
+  // Null for click-intake callback requests: those store a phone number only.
+  patient_name: string | null
+  patient_email: string | null
   patient_phone: string | null
   summary: string
   payload: Record<string, any>
@@ -145,7 +146,7 @@ export function InboxClient({ initialMessages }: { initialMessages: InziMessage[
                 {m.urgency === 'urgent' && <span className="inbox-tag inbox-tag--urgent">urgent</span>}
                 <span className="inbox-item__when">{timeAgo(m.created_at)}</span>
               </div>
-              <div className="inbox-item__name">{m.patient_name}</div>
+              <div className="inbox-item__name">{m.patient_name || m.patient_phone || 'Callback request'}</div>
               <div className="inbox-item__preview">{m.summary}</div>
               {m.assigned_clinician && (
                 <div className="inbox-item__to">to: {m.assigned_clinician}</div>
@@ -165,10 +166,12 @@ export function InboxClient({ initialMessages }: { initialMessages: InziMessage[
                   {selected.urgency === 'urgent' && <span className="inbox-tag inbox-tag--urgent">urgent</span>}
                   <span className={`inbox-tag inbox-tag--status status-${selected.status}`}>{selected.status}</span>
                 </div>
-                <div className="inbox-detail__name">{selected.patient_name}</div>
+                <div className="inbox-detail__name">{selected.patient_name || selected.patient_phone || 'Callback request'}</div>
                 <div className="inbox-detail__contact">
-                  <a href={`mailto:${selected.patient_email}`}>{selected.patient_email}</a>
-                  {selected.patient_phone && <span> · {selected.patient_phone}</span>}
+                  {selected.patient_email && <a href={`mailto:${selected.patient_email}`}>{selected.patient_email}</a>}
+                  {selected.patient_phone && (
+                    <span>{selected.patient_email ? ' · ' : ''}<a href={`tel:${selected.patient_phone.replace(/\D/g, '')}`}>{selected.patient_phone}</a></span>
+                  )}
                 </div>
                 {selected.assigned_clinician && (
                   <div className="inbox-detail__to">to: {selected.assigned_clinician}</div>
@@ -196,9 +199,15 @@ export function InboxClient({ initialMessages }: { initialMessages: InziMessage[
               )}
 
               <div className="inbox-detail__actions">
-                <a className="inbox-action inbox-action--reply" href={`mailto:${selected.patient_email}?subject=Re: ${INTENT_LABEL[selected.intent]} request`}>
-                  reply by email
-                </a>
+                {selected.patient_email ? (
+                  <a className="inbox-action inbox-action--reply" href={`mailto:${selected.patient_email}?subject=Re: ${INTENT_LABEL[selected.intent]} request`}>
+                    reply by email
+                  </a>
+                ) : selected.patient_phone ? (
+                  <a className="inbox-action inbox-action--reply" href={`tel:${selected.patient_phone.replace(/\D/g, '')}`}>
+                    call back
+                  </a>
+                ) : null}
                 {selected.status !== 'responded' && (
                   <button className="inbox-action inbox-action--resolve" onClick={() => updateStatus(selected.id, 'responded')}>
                     mark as responded

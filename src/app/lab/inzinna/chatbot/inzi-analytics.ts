@@ -16,10 +16,13 @@
  * inzi_first_message_sent       — First user message in a live session
  * inzi_intent_reached           — State changed to a meaningful intent
  *                                  params: { intent: 'crisis' | 'assessment' | 'booking' | 'handoff' }
- * inzi_scheduling_started       — Booking/scheduling form shown
- * inzi_scheduling_submitted     — Booking form POSTed successfully  ★ conversion
- * inzi_clinician_message_started — Contact-clinician form shown
- * inzi_clinician_message_submitted — Clinician message sent          ★ conversion
+ * inzi_intake_opened            — Click-only intake started
+ *                                  params: { preselect?: 'schedule' | 'callback' }
+ * inzi_intake_option_selected   — Intake preset option clicked
+ *                                  params: { option: 'schedule' | 'insurance' | 'general' | 'callback' }
+ * inzi_callback_submitted       — Callback request (phone only) POSTed  ★ conversion
+ *                                  params: { topic: 'scheduling' | 'insurance' | 'general' }
+ * inzi_crisis_shown             — Safety classifier flagged a message; crisis resources shown
  * inzi_voice_call_started       — Voice call modal opened
  *
  * ★ = mark as Conversion in GA4 admin once live.
@@ -30,10 +33,10 @@ export type InziEvent =
   | 'inzi_chat_opened'
   | 'inzi_first_message_sent'
   | 'inzi_intent_reached'
-  | 'inzi_scheduling_started'
-  | 'inzi_scheduling_submitted'
-  | 'inzi_clinician_message_started'
-  | 'inzi_clinician_message_submitted'
+  | 'inzi_intake_opened'
+  | 'inzi_intake_option_selected'
+  | 'inzi_callback_submitted'
+  | 'inzi_crisis_shown'
   | 'inzi_voice_call_started'
 
 type Params = Record<string, string | number | boolean | undefined>
