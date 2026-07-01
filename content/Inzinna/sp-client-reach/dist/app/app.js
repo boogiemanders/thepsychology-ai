@@ -247,6 +247,7 @@
               lastName,
               email,
               phone,
+              a.clinician,
               providerOrTrainee(a.clinician),
               OFFICE_LOCATION[a.office] ?? a.office,
               fmtDateUs(a.date),
@@ -271,7 +272,7 @@
     rows.sort((a, b) => a.location.localeCompare(b.location) || a.clientName.localeCompare(b.clientName));
     const sortable = (us) => us.split("/").reverse().join("");
     rater8.sort(
-      (a, b) => sortable(a[6]).localeCompare(sortable(b[6])) || a[1].localeCompare(b[1]) || a[0].localeCompare(b[0])
+      (a, b) => sortable(a[7]).localeCompare(sortable(b[7])) || a[1].localeCompare(b[1]) || a[0].localeCompare(b[0])
     );
     stats.rows = rows.length;
     return { rows, rater8, stats };
@@ -282,6 +283,7 @@
     "Email",
     "Cell Phone",
     "Provider",
+    "Provider ID",
     "Location",
     "Appointment Date",
     "Appointment Status"

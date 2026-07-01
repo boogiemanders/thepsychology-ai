@@ -36,13 +36,14 @@ console.log('locations:', byLocation)
 console.log('match types:', byMatch)
 console.log('rater8 rows (one per visit):', rater8.length)
 // every rater8 row must be a seen visit with a way to reach the person
-const badStatus = rater8.filter((r) => r[7] !== 'Show').length
+const badStatus = rater8.filter((r) => r[8] !== 'Show').length
 const noContact = rater8.filter((r) => !r[2] && !r[3]).length
-// Provider column (idx 4): the 6 main providers show their clinician ID, everyone else "Trainee"
+// Provider (idx 4) = real clinician name; Provider ID (idx 5) = clinician ID for the 6 main, else "Trainee"
 const MAIN_IDS = new Set(['1428233', '1486605', '1726930', '1973632', '1717850', '1822167'])
-const badProvider = rater8.filter((r) => r[4] !== 'Trainee' && !MAIN_IDS.has(r[4])).length
-const traineeRows = rater8.filter((r) => r[4] === 'Trainee').length
-const mainRows = rater8.filter((r) => r[4] !== 'Trainee').length
+const badName = rater8.filter((r) => !/[A-Za-z]/.test(r[4]) || r[4] === 'Trainee').length
+const badProvider = rater8.filter((r) => r[5] !== 'Trainee' && !MAIN_IDS.has(r[5])).length
+const traineeRows = rater8.filter((r) => r[5] === 'Trainee').length
+const mainRows = rater8.filter((r) => r[5] !== 'Trainee').length
 
 // sanity assertions against the known 5/11-6/11 exports
 let failures = 0
@@ -74,10 +75,11 @@ expect('rater8 all reachable', noContact, noContact === 0, '0 rows missing phone
 expect(
   'rater8 columns',
   rater8[0]?.length,
-  rater8[0]?.length === 8,
-  '8 (First,Last,Email,Cell,Provider,Location,Date,Status)'
+  rater8[0]?.length === 9,
+  '9 (First,Last,Email,Cell,Provider,Provider ID,Location,Date,Status)'
 )
-expect('provider is main-ID or Trainee', badProvider, badProvider === 0, '0 rows that are neither')
+expect('provider name is a real name', badName, badName === 0, '0 rows with empty/Trainee in Provider name')
+expect('provider ID is main-ID or Trainee', badProvider, badProvider === 0, '0 rows that are neither')
 expect('some trainees bucketed', traineeRows, traineeRows > 0, '>0 rows labeled Trainee')
 expect('main providers kept', mainRows, mainRows > 0, '>0 rows with a main provider name')
 

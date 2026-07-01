@@ -252,6 +252,7 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
             lastName,
             email,
             phone,
+            a.clinician,
             providerOrTrainee(a.clinician),
             OFFICE_LOCATION[a.office] ?? a.office,
             fmtDateUs(a.date),
@@ -280,11 +281,11 @@ export function mergeReports(attendanceCsv: string, detailsCsv: string): MergeRe
   }
 
   rows.sort((a, b) => a.location.localeCompare(b.location) || a.clientName.localeCompare(b.clientName))
-  // rater8 feed sorted by visit date, then name (column index: 6=date, 1=last, 0=first)
+  // rater8 feed sorted by visit date, then name (column index: 7=date, 1=last, 0=first)
   const sortable = (us: string) => us.split('/').reverse().join('')
   rater8.sort(
     (a, b) =>
-      sortable(a[6]).localeCompare(sortable(b[6])) ||
+      sortable(a[7]).localeCompare(sortable(b[7])) ||
       a[1].localeCompare(b[1]) ||
       a[0].localeCompare(b[0])
   )
@@ -298,6 +299,7 @@ export const RATER8_HEADER = [
   'Email',
   'Cell Phone',
   'Provider',
+  'Provider ID',
   'Location',
   'Appointment Date',
   'Appointment Status',

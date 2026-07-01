@@ -33,9 +33,9 @@ Each "Send to Google Sheet" creates (or refreshes) a tab named after the period,
 
 ## rater8 CSV columns
 
-`First Name, Last Name, Email, Cell Phone, Provider, Location, Appointment Date, Appointment Status`
+`First Name, Last Name, Email, Cell Phone, Provider, Provider ID, Location, Appointment Date, Appointment Status`
 
-The **Provider** column shows the SimplePractice clinician ID for the 6 main providers (Greg/Inzinna 1428233, Bret/Boatwright 1486605, Lorin/Singh 1726930, Anders/Chan 1973632, Filomena/DiFranco 1717850, Carlos/Espinal 1822167); for everyone else (practice clinicians and all current/future trainees, interns, externs, new hires) it shows the literal `Trainee`. rater8 maps each ID to that provider's own resource and `Trainee` to the generic Inzinna Therapy Group resource, so new staff never need mapping. Edit `MAIN_PROVIDER_IDS` in `src/lib/merge.ts` to add/change a provider's ID.
+The **Provider** column is the real clinician name (provider or trainee). The **Provider ID** column is the SimplePractice clinician ID for the 6 main providers (Greg/Inzinna 1428233, Bret/Boatwright 1486605, Lorin/Singh 1726930, Anders/Chan 1973632, Filomena/DiFranco 1717850, Carlos/Espinal 1822167) and the literal `Trainee` for everyone else (practice clinicians and all current/future trainees, interns, externs, new hires). rater8 maps each ID to that provider's own resource and `Trainee` to the generic Inzinna Therapy Group resource, so new staff never need mapping. Edit `MAIN_PROVIDER_IDS` in `src/lib/merge.ts` to add/change a provider's ID.
 
 One row **per attended visit** (rater8's appointment-level model), not one per person. A client seen 5 times in the period gets 5 rows. Only attended ("Show") appointments where the person has a phone or email are included, so Appointment Status is always "Show" (rater8 accepts either a status column or a report pre-filtered to seen patients; this gives both).
 
