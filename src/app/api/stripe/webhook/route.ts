@@ -152,6 +152,36 @@ async function loadUserContact(
   }
 }
 
+// Was this subscriber part of the win-back resurrection campaign? (a winback_sent funnel_event)
+async function loadWinbackInfo(
+  userId: string
+): Promise<{ variant: string; sentAt: string } | null> {
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) return null
+  const { data } = await supabase
+    .from('funnel_events')
+    .select('metadata, created_at')
+    .eq('user_id', userId)
+    .eq('event_name', 'winback_sent')
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+  if (!data) return null
+  const variant = ((data.metadata as Record<string, unknown> | null)?.variant as string) || '?'
+  return { variant, sentAt: data.created_at as string }
+}
+
+function formatWinbackLine(wb: { variant: string; sentAt: string } | null): string[] {
+  if (!wb) return []
+  const sent = new Date(wb.sentAt)
+  let when = 'recently'
+  if (!Number.isNaN(sent.getTime())) {
+    const mins = Math.max(0, Math.round((Date.now() - sent.getTime()) / 60_000))
+    when = mins < 60 ? `${mins} min ago` : mins < 1440 ? `${Math.round(mins / 60)}h ago` : `${Math.round(mins / 1440)}d ago`
+  }
+  return ['', `Win-back campaign: YES (variant ${wb.variant}, emailed ${when})`]
+}
+
 function formatSignupDate(createdAt: string | null): string {
   if (!createdAt) return 'unknown'
   const date = new Date(createdAt)
@@ -528,7 +558,7 @@ export async function POST(request: Request) {
       // PII (email, signup date) is included here but stays out of Slack: this email
       // goes only to the founder's inbox, Slack goes to a shared channel.
       if (isNotificationEmailConfigured()) {
-        const [attribution, contact] = await Promise.all([
+        const [attribution, contact, winback] = await Promise.all([
           loadAttribution(session.metadata ?? null, userId).catch((err) => {
             console.error('[Stripe] Failed to load attribution for payment email:', err)
             return {} as Record<string, string | null>
@@ -536,6 +566,10 @@ export async function POST(request: Request) {
           loadUserContact(userId).catch((err) => {
             console.error('[Stripe] Failed to load user contact for payment email:', err)
             return { email: null, name: null, createdAt: null }
+          }),
+          loadWinbackInfo(userId).catch((err) => {
+            console.error('[Stripe] Failed to load win-back info for payment email:', err)
+            return null
           }),
         ])
         const customerEmail =
@@ -552,6 +586,7 @@ export async function POST(request: Request) {
             `User ID: ${userId}`,
             `Stripe Customer: ${stripeCustomerId || 'N/A'}`,
             `Session: ${session.id}`,
+            ...formatWinbackLine(winback),
             '',
             'Attribution:',
             ...formatAttributionLines(attribution),
