@@ -53,7 +53,7 @@ struct LessonReaderView: View {
                 }
             }
             .padding(.horizontal, Theme.Spacing.lg)
-            .padding(.bottom, 96) // clear the floating quiz CTA
+            .padding(.bottom, Theme.Spacing.xl)
         }
         .safeAreaInset(edge: .bottom) {
             quizCTA
@@ -77,7 +77,10 @@ struct LessonReaderView: View {
             .shadow(color: Theme.Colors.cardShadow, radius: 8, y: 3)
         }
         .padding(.horizontal, Theme.Spacing.lg)
+        .padding(.top, Theme.Spacing.md)
         .padding(.bottom, Theme.Spacing.sm)
+        // Solid backing so lesson text doesn't scroll through the CTA row.
+        .background(Theme.Colors.background)
     }
 
     // MARK: - Loading / error

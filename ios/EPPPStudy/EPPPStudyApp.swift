@@ -41,7 +41,7 @@ struct EPPPStudyApp: App {
                 }
             }
             // Follows the phone's light/dark setting; Theme tokens resolve per-mode.
-            .tint(.white)
+            .tint(Theme.Colors.accent)
             .onChange(of: authService.isAuthenticated) { _, isAuthenticated in
                 if isAuthenticated {
                     initializeServices()

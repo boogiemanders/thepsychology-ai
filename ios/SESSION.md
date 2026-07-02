@@ -1,46 +1,43 @@
 # iOS App Session
 
-## Status: Phase 2 quiz sync shipped. Study tab shows real progress.
+## Status: Native study loop + site-true adaptive theme shipped (2026-07-01, branch worktree-ios-native-polish)
 
-## What's Working (2026-04-15)
-- Build succeeds on iPhone simulator
-- Sign-in works (Supabase auth)
-- Study tab shows real quiz progress from Supabase `quiz_results` table
-- Web dual-writes quiz results to localStorage + Supabase
-- iOS `QuizProgressService` fetches progress via Supabase REST, refreshes on appear + webview dismiss
-- One-time backfill pushes localStorage quiz data to Supabase on sign-in
-- Realtime subscription on web (topic-selector) refreshes when quiz_results change from another device
-- Fixed doubled letter prefix bug in quiz options ("A. D. Anomic" -> "A. Anomic")
+## What's Working (2026-07-01)
+- Both targets (EPPPStudy, EPPPStudyWidget) build clean via `xcodegen generate` + `xcodebuild`
+- Theme.swift: adaptive light+dark tokens ported from web globals.css; app follows
+  the phone appearance setting. Coral #D87758 = CTA accent (matches web), blue = link only.
+- Study tab: NATIVE lesson reader (LessonReaderView, fetches /api/get-topic-content,
+  serif body, themed tables) -> coral pill CTA -> NativeQuizView (fetches /api/quizzer,
+  saves to /api/save-quiz-results + Supabase quiz_results). Topic-teacher webview DELETED.
+- Quick Study endpoint exists now: GET /api/mobile/questions/quick (was 404).
+- Supabase URL + anon key are real (were placeholders; sign-in works on fresh installs).
+- WebViewOriginGuard on all webviews (Prioritize/Recover/WebApp): session tokens can't
+  leak to third-party pages; external links open Safari.
+- Verified visually in simulator, light + dark: sign-in, dashboard, study accordion,
+  lesson reader, native quiz. Screenshots in the 7/1 PR.
 
-## Next Session — Two Tasks
-
-### Task 1: Build native iOS quiz view
-Replace WKWebView quiz with native SwiftUI. Currently tapping a topic in StudyView opens TopicTeacherView (WKWebView loading /topic-teacher). User wants it native.
-
-**Build:**
-- `ios/EPPPStudy/Views/Study/NativeQuizView.swift` — question display, radio answers, progress bar, score screen
-- Fetch questions via APIClient (add endpoint or hit existing `/api/quiz?topic={topicName}`)
-- On completion, write to Supabase `quiz_results` via REST (same pattern as QuizProgressService)
-- Match Theme.swift (dark, sage/coral, clean type)
-- Use /frontend-design + /minimalist-ui skills for design
-
-**After building:** `cd ios && xcodegen generate` then `xcodebuild -target EPPPStudy` (no schemes after xcodegen)
-
-### Task 2: Audit question banks for doubled letter prefixes
-Rendering fix is in place (`stripOptionLetterPrefix` in quizzer-content.tsx:111). Root cause is question data.
-
-**Audit:**
-- Scan `exams/` JSON files for options matching `^[A-D]\.\s`
-- Grep for `questionsGPT`, `examsGPT`, `generateQuestion`, `generateExam` to find generation code
-- If generation code embeds letter prefixes: fix the prompt/template
-- If existing JSON has them: batch-strip from data files
-
-### Lower priority follow-ups
-- Wire `useQuizProgress` hook into dashboard + prioritize pages (still localStorage-only)
-- Supabase Realtime on iOS (skipped — refresh-on-appear is enough for now)
+## Known issues (from 7/1 full code review; the big ones)
+1. SyncEngine push/pull protocol MISMATCHED with /api/mobile/sync/* (camelCase vs
+   snake_case, wrong op type names, iso8601 millis). Every sync silently fails; cursor
+   advances anyway. Cross-device sync = 0%. Fix or cut before TestFlight.
+2. Delete Account is fake (just signs out) — App Store 5.1.1(v) rejection risk.
+3. ExamSessionView never persists in-flight sessions; long exam lost on eviction.
+   Timer leaks on swipe-back; timed mode not enforced.
+4. Domain-name mismatch ("Domain 5" vs "Assessment & Diagnosis") zeroes
+   PriorityEngine/readiness scores + widgets.
+5. AuthService.refreshAccessToken signs out on ANY refresh failure incl. 5xx; two
+   parallel 401s race the rotating refresh token.
+6. ReviewScheduler question keys (djb2) never match web sha256 keys; server
+   review_queue_updates dropped on pull.
+7. Widget deep links (epppstudy://question/...) have no onOpenURL handler; Info.plist
+   declares background modes with no BGTaskScheduler code.
+8. Offline content flow (ContentManager /manifest, /lessons, /exams, /bundles paths)
+   still points at nonexistent routes; Downloads/Library views not in tab bar. Cut or fix.
+9. Monetization: web-only Pro gating needs a 3.1.3(b) companion-app story or StoreKit.
 
 ## Build Context
 - Run: `cd ios && xcodegen generate` after editing `project.yml`
 - Active target must be `EPPPStudy` (not `EPPPStudyWidget`) — no schemes after xcodegen
-- Next.js dev on :3000 for content/sync endpoints
+- Widget target compiles Theme.swift via project.yml sources (keep it listed there)
+- Next.js dev on :3000 for content/sync endpoints (DEBUG builds hit localhost:3000)
 - Memory file: `project_eppp_ios_xcode_gotchas.md` has Xcode traps

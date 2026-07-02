@@ -37,8 +37,8 @@ struct MainTabView: View {
         let item = appearance.stackedLayoutAppearance
         item.normal.iconColor = UIColor(Theme.Colors.dimForeground)
         item.normal.titleTextAttributes = [.foregroundColor: UIColor(Theme.Colors.dimForeground)]
-        item.selected.iconColor = UIColor(Theme.Colors.sage)
-        item.selected.titleTextAttributes = [.foregroundColor: UIColor(Theme.Colors.sage)]
+        item.selected.iconColor = UIColor(Theme.Colors.accent)
+        item.selected.titleTextAttributes = [.foregroundColor: UIColor(Theme.Colors.accent)]
 
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
@@ -77,7 +77,7 @@ struct MainTabView: View {
                 .tag(Tab.recover)
                 .tabItem { Label(Tab.recover.title, systemImage: Tab.recover.icon) }
         }
-        .tint(Theme.Colors.sage)
+        .tint(Theme.Colors.accent)
     }
 }
 
