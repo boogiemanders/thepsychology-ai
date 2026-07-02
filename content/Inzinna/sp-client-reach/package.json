@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node build.mjs",
     "watch": "node build.mjs --watch",
-    "test": "node test/run-merge.mjs"
+    "test": "node test/run-merge.mjs && node test/run-rater8-upload.mjs"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.287",
