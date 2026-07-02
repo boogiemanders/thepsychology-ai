@@ -9,16 +9,16 @@ struct NextActionCard: View {
                 .font(.title3)
                 .foregroundStyle(.white)
                 .frame(width: 44, height: 44)
-                .background(Color(.systemGray5))
+                .background(Theme.Colors.accent)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(action.title)
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
                 Text(action.subtitle)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                     .lineLimit(1)
             }
 
@@ -26,11 +26,9 @@ struct NextActionCard: View {
 
             Image(systemName: "chevron.right")
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
-        .padding()
-        .background(Color(.systemGray6))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .themedCard()
     }
 
     private var iconName: String {

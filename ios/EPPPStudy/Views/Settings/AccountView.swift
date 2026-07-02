@@ -15,7 +15,7 @@ struct AccountView: View {
                     Spacer()
                     Text(authService.currentUserId ?? "Unknown")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                         .lineLimit(1)
                 }
             } header: {
@@ -37,7 +37,7 @@ struct AccountView: View {
                 } label: {
                     HStack {
                         Label("Delete Account", systemImage: "trash")
-                            .foregroundStyle(.red)
+                            .foregroundStyle(Theme.Colors.destructive)
                         Spacer()
                     }
                 }

@@ -50,10 +50,10 @@ struct ExamDateView: View {
                     VStack(spacing: 8) {
                         Text("\(daysUntilExam)")
                             .font(.system(size: 48, weight: .bold, design: .rounded))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(Theme.Colors.foreground)
                         Text("days until your exam")
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Theme.Colors.mutedForeground)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
@@ -80,11 +80,11 @@ struct ExamDateView: View {
     private func milestoneRow(days: Int, label: String, passed: Bool) -> some View {
         HStack(spacing: 10) {
             Image(systemName: passed ? "checkmark.circle.fill" : "circle")
-                .foregroundStyle(passed ? .green : .secondary)
+                .foregroundStyle(passed ? Theme.Colors.success : Theme.Colors.mutedForeground)
                 .font(.caption)
             Text(label)
                 .font(.subheadline)
-                .foregroundStyle(passed ? Color.secondary : .white)
+                .foregroundStyle(passed ? Theme.Colors.mutedForeground : Theme.Colors.foreground)
             Spacer()
         }
     }

@@ -83,6 +83,7 @@ targets:
       # Keep this list tight — only what the widget actually imports.
       - path: EPPPStudy/Models
       - path: EPPPStudy/Utilities/Constants.swift
+      - path: EPPPStudy/Views/Theme/Theme.swift  # Widget views use Theme tokens
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: ai.thepsychology.eppp.widget

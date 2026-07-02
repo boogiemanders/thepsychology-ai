@@ -116,9 +116,9 @@ struct NativeQuizView: View {
                 progressBar
 
                 Text(question.question)
-                    .font(Theme.Typography.body)
+                    .font(Theme.Typography.question)
                     .foregroundStyle(Theme.Colors.foreground)
-                    .lineSpacing(4)
+                    .lineSpacing(6)
 
                 if question.isScored == false {
                     HStack(spacing: Theme.Spacing.xs) {
@@ -228,11 +228,11 @@ struct NativeQuizView: View {
             Button(action: advanceToNext) {
                 Text(currentIndex < questions.count - 1 ? "Next Question" : "See Results")
                     .font(Theme.Typography.captionBold)
-                    .foregroundStyle(Theme.Colors.background)
+                    .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .frame(height: 48)
-                    .background(Theme.Colors.sage)
-                    .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.md))
+                    .background(Theme.Colors.accent)
+                    .clipShape(Capsule())
             }
             .padding(.top, Theme.Spacing.sm)
         }
@@ -292,11 +292,11 @@ struct NativeQuizView: View {
             Button(action: { dismiss() }) {
                 Text("Done")
                     .font(Theme.Typography.captionBold)
-                    .foregroundStyle(Theme.Colors.background)
+                    .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .frame(height: 48)
-                    .background(Theme.Colors.sage)
-                    .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.md))
+                    .background(Theme.Colors.accent)
+                    .clipShape(Capsule())
             }
             .padding(.horizontal, Theme.Spacing.lg)
             .padding(.bottom, Theme.Spacing.xxl)

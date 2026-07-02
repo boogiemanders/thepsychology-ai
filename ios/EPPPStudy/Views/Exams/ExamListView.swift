@@ -14,14 +14,14 @@ struct ExamListView: View {
                     NavigationLink(destination: QuickStudyView(mode: .sprint)) {
                         HStack(spacing: 12) {
                             Image(systemName: "bolt.fill")
-                                .foregroundStyle(.yellow)
+                                .foregroundStyle(Theme.Colors.coral)
                                 .frame(width: 32)
                             VStack(alignment: .leading, spacing: 2) {
                                 Text("5-Question Sprint")
                                     .font(.subheadline.weight(.medium))
                                 Text("Quick practice across all domains")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(Theme.Colors.mutedForeground)
                             }
                         }
                         .padding(.vertical, 4)
@@ -30,14 +30,14 @@ struct ExamListView: View {
                     NavigationLink(destination: QuickStudyView(mode: .tenMinute)) {
                         HStack(spacing: 12) {
                             Image(systemName: "timer")
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(Theme.Colors.softBlue)
                                 .frame(width: 32)
                             VStack(alignment: .leading, spacing: 2) {
                                 Text("10-Minute Mode")
                                     .font(.subheadline.weight(.medium))
                                 Text("Timed practice session")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(Theme.Colors.mutedForeground)
                             }
                         }
                         .padding(.vertical, 4)
@@ -106,7 +106,7 @@ private struct ExamRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(exam.title)
                     .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
                 HStack(spacing: 8) {
                     Text("\(exam.questionCount) questions")
                     if let time = exam.timeLimitMinutes {
@@ -115,11 +115,11 @@ private struct ExamRow: View {
                     Text(exam.domain)
                 }
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
             }
             Spacer()
             Image(systemName: "arrow.down.circle.fill")
-                .foregroundStyle(.green.opacity(0.7))
+                .foregroundStyle(Theme.Colors.success.opacity(0.7))
         }
         .padding(.vertical, 4)
     }
@@ -135,14 +135,14 @@ private struct ExamAvailableRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(entry.title)
                     .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
                 HStack(spacing: 8) {
                     Text("\(entry.questionCount) questions")
                     Text(entry.domain)
                     Text(ByteCountFormatter.string(fromByteCount: entry.bundleSize, countStyle: .file))
                 }
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
             }
             Spacer()
             Button {
@@ -156,7 +156,7 @@ private struct ExamAvailableRow: View {
                     ProgressView()
                 } else {
                     Image(systemName: "arrow.down.to.line")
-                        .foregroundStyle(.white)
+                        .foregroundStyle(Theme.Colors.accent)
                 }
             }
             .disabled(isDownloading)
@@ -173,15 +173,15 @@ private struct ResultRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("\(result.correctCount)/\(result.totalQuestions)")
                     .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
                 Text(result.completedAt.formatted(date: .abbreviated, time: .shortened))
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
             }
             Spacer()
             Text("\(Int(result.score * 100))%")
                 .font(.subheadline.bold().monospacedDigit())
-                .foregroundStyle(result.score >= 0.7 ? .green : result.score >= 0.5 ? .yellow : .red)
+                .foregroundStyle(result.score >= 0.7 ? Theme.Colors.success : result.score >= 0.5 ? .yellow : Theme.Colors.destructive)
         }
         .padding(.vertical, 2)
     }

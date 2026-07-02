@@ -24,16 +24,16 @@ struct SignInView: View {
                     } else {
                         Image(systemName: "pawprint.fill")
                             .font(.system(size: 56))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(Theme.Colors.sage)
                     }
 
                     Text("thePsychology.ai")
                         .font(.custom("HelveticaNeue-Bold", size: 28))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(Theme.Colors.foreground)
 
                     Text("EPPP Prep")
                         .font(.custom("HelveticaNeue", size: 14))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
                 .padding(.bottom, 48)
 
@@ -42,7 +42,7 @@ struct SignInView: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Email")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Theme.Colors.mutedForeground)
                         TextField("you@example.com", text: $email)
                             .textFieldStyle(.plain)
                             .textContentType(.emailAddress)
@@ -50,26 +50,34 @@ struct SignInView: View {
                             .keyboardType(.emailAddress)
                             .autocorrectionDisabled()
                             .padding(12)
-                            .background(Color(.systemGray6))
+                            .background(Theme.Colors.card)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Theme.Colors.border, lineWidth: 1)
+                            )
                     }
 
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Password")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Theme.Colors.mutedForeground)
                         SecureField("Password", text: $password)
                             .textFieldStyle(.plain)
                             .textContentType(.password)
                             .padding(12)
-                            .background(Color(.systemGray6))
+                            .background(Theme.Colors.card)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Theme.Colors.border, lineWidth: 1)
+                            )
                     }
 
                     if let errorMessage {
                         Text(errorMessage)
                             .font(.caption)
-                            .foregroundStyle(.red)
+                            .foregroundStyle(Theme.Colors.destructive)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
 
@@ -79,7 +87,7 @@ struct SignInView: View {
                         Group {
                             if isLoading {
                                 ProgressView()
-                                    .tint(.black)
+                                    .tint(.white)
                             } else {
                                 Text("Sign In")
                                     .fontWeight(.semibold)
@@ -88,10 +96,7 @@ struct SignInView: View {
                         .frame(maxWidth: .infinity)
                         .frame(height: 48)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.white)
-                    .foregroundStyle(.black)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .buttonStyle(PillButtonStyle())
                     .disabled(isLoading || email.isEmpty || password.isEmpty)
                 }
                 .padding(.horizontal, 24)
@@ -101,16 +106,17 @@ struct SignInView: View {
                 // Sign up link
                 HStack(spacing: 4) {
                     Text("Don't have an account?")
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                     Button("Create one") {
                         showSignUp = true
                     }
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.link)
                     .fontWeight(.medium)
                 }
                 .font(.subheadline)
                 .padding(.bottom, 32)
             }
+            .background(Theme.Colors.background.ignoresSafeArea())
             .navigationDestination(isPresented: $showSignUp) {
                 SignUpView()
             }

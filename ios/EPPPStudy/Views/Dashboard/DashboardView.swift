@@ -62,7 +62,7 @@ struct DashboardView: View {
         VStack(spacing: 12) {
             Text("Exam Readiness")
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
 
             Text("\(Int(progress?.readinessScore ?? 0))%")
                 .font(.system(size: 56, weight: .bold, design: .rounded))
@@ -70,19 +70,17 @@ struct DashboardView: View {
 
             Text(readinessLabel)
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 24)
-        .background(Color(.systemGray6))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .themedCard(padding: 24, radius: 16)
     }
 
     private var readinessColor: Color {
         let score = progress?.readinessScore ?? 0
-        if score >= 70 { return .green }
+        if score >= 70 { return Theme.Colors.success }
         if score >= 50 { return .yellow }
-        return .red
+        return Theme.Colors.destructive
     }
 
     private var readinessLabel: String {
@@ -101,19 +99,17 @@ struct DashboardView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Exam in")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                 Text("\(days) days")
                     .font(.title2.bold())
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
             }
             Spacer()
             Image(systemName: "calendar")
                 .font(.title2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
-        .padding()
-        .background(Color(.systemGray6))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .themedCard()
     }
 
     // MARK: - Quick Stats
@@ -142,18 +138,16 @@ struct DashboardView: View {
         VStack(spacing: 8) {
             Image(systemName: icon)
                 .font(.title3)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
             Text(value)
                 .font(.title3.bold().monospacedDigit())
-                .foregroundStyle(.white)
+                .foregroundStyle(Theme.Colors.foreground)
             Text(label)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 16)
-        .background(Color(.systemGray6))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .themedCard()
     }
 
     // MARK: - Review Banner
@@ -167,17 +161,17 @@ struct DashboardView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text("\(dueReviewCount) questions due for review")
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
                 Text("Spaced repetition keeps knowledge fresh")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
             }
 
             Spacer()
 
             Image(systemName: "chevron.right")
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
         .padding()
         .background(Color.purple.opacity(0.12))

@@ -60,6 +60,7 @@ struct ExamSessionView: View {
                 }
             }
         }
+        .background(Theme.Colors.background.ignoresSafeArea())
         .navigationTitle(exam.title)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
@@ -77,11 +78,11 @@ struct ExamSessionView: View {
 
             Text(exam.title)
                 .font(.title2.bold())
-                .foregroundStyle(.white)
+                .foregroundStyle(Theme.Colors.foreground)
 
             Text("\(exam.questionCount) questions")
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
 
             Spacer()
 
@@ -118,17 +119,15 @@ struct ExamSessionView: View {
                         .font(.subheadline.weight(.semibold))
                     Text(subtitle)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
             }
-            .foregroundStyle(.white)
-            .padding()
-            .background(Color(.systemGray6))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .foregroundStyle(Theme.Colors.foreground)
+            .themedCard()
         }
     }
 
@@ -138,10 +137,10 @@ struct ExamSessionView: View {
         HStack {
             Image(systemName: "timer")
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
             Text(formatTime(timerSeconds))
                 .font(.system(.caption, design: .monospaced))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
             Spacer()
             if let session {
                 let flagCount = session.flaggedQuestionIds.count
@@ -158,7 +157,7 @@ struct ExamSessionView: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 8)
-        .background(Color(.systemGray6))
+        .background(Theme.Colors.card)
     }
 
     // MARK: - Navigation
@@ -186,7 +185,7 @@ struct ExamSessionView: View {
                             let answered = session.answers.contains { $0.questionId == exam.questions[index].id }
                             let isCurrent = index == session.currentQuestionIndex
                             Circle()
-                                .fill(isCurrent ? Color.white : answered ? Color(.systemGray4) : Color(.systemGray6))
+                                .fill(isCurrent ? Theme.Colors.accent : answered ? Theme.Colors.mutedForeground : Theme.Colors.border)
                                 .frame(width: 8, height: 8)
                         }
                     }
@@ -199,9 +198,7 @@ struct ExamSessionView: View {
                 Button("Finish") {
                     finishExam()
                 }
-                .font(.subheadline.weight(.semibold))
-                .foregroundStyle(.white)
-                .frame(height: 44)
+                .buttonStyle(PillButtonStyle())
             } else {
                 Button {
                     advanceQuestion()
@@ -211,10 +208,10 @@ struct ExamSessionView: View {
                 }
             }
         }
-        .foregroundStyle(.white)
+        .foregroundStyle(Theme.Colors.foreground)
         .padding(.horizontal)
         .padding(.vertical, 8)
-        .background(Color(.systemGray6).opacity(0.5))
+        .background(Theme.Colors.card.opacity(0.5))
     }
 
     // MARK: - Logic

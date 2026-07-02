@@ -52,7 +52,7 @@ struct CountdownWidgetView: View {
             VStack(spacing: 6) {
                 Text("EPPP Exam")
                     .font(.caption2.weight(.medium))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
 
                 Text("\(days)")
                     .font(.system(size: 44, weight: .bold, design: .rounded))
@@ -60,7 +60,7 @@ struct CountdownWidgetView: View {
 
                 Text(days == 1 ? "day left" : "days left")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
 
                 Spacer(minLength: 4)
 
@@ -69,7 +69,7 @@ struct CountdownWidgetView: View {
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
                             RoundedRectangle(cornerRadius: 2)
-                                .fill(Color(.systemGray5))
+                                .fill(Theme.Colors.border)
                                 .frame(height: 4)
                             RoundedRectangle(cornerRadius: 2)
                                 .fill(readinessColor(data.readinessScore))
@@ -80,7 +80,7 @@ struct CountdownWidgetView: View {
 
                     Text("\(Int(data.readinessScore))% ready")
                         .font(.system(size: 9))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
             }
             .padding(4)
@@ -88,24 +88,24 @@ struct CountdownWidgetView: View {
             VStack(spacing: 8) {
                 Image(systemName: "calendar")
                     .font(.title2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                 Text("Set your exam date")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                     .multilineTextAlignment(.center)
             }
         }
     }
 
     private func daysColor(_ days: Int) -> Color {
-        if days <= 7 { return .red }
+        if days <= 7 { return Theme.Colors.destructive }
         if days <= 30 { return .orange }
-        return .white
+        return Theme.Colors.foreground
     }
 
     private func readinessColor(_ score: Double) -> Color {
-        if score >= 70 { return .green }
+        if score >= 70 { return Theme.Colors.success }
         if score >= 50 { return .yellow }
-        return .red
+        return Theme.Colors.destructive
     }
 }

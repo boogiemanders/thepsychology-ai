@@ -54,6 +54,7 @@ struct ExamGeneratorView: View {
                 }
                 .padding(.vertical, 16)
             }
+            .background(Theme.Colors.background.ignoresSafeArea())
             .navigationTitle("Practice")
             .navigationBarTitleDisplayMode(.large)
             .sheet(item: $selectedType) { type in
@@ -87,10 +88,10 @@ struct ExamGeneratorView: View {
         VStack(alignment: .leading, spacing: 6) {
             Text("Choose your exam")
                 .font(.title3.weight(.semibold))
-                .foregroundStyle(.white)
+                .foregroundStyle(Theme.Colors.foreground)
             Text("Diagnostic is a quick readiness check. Practice mirrors the full 225-question EPPP.")
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
         .padding(.horizontal)
     }
@@ -141,23 +142,23 @@ struct ExamGeneratorView: View {
                 HStack(alignment: .center, spacing: 12) {
                     Image(systemName: type.icon)
                         .font(.title2)
-                        .foregroundStyle(locked ? Color.secondary : Color.white)
+                        .foregroundStyle(locked ? Theme.Colors.mutedForeground : Theme.Colors.foreground)
                         .frame(width: 36)
 
                     VStack(alignment: .leading, spacing: 2) {
                         HStack(spacing: 8) {
                             Text(type.title)
                                 .font(.headline)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(Theme.Colors.foreground)
                             if locked {
                                 Image(systemName: "lock.fill")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(Theme.Colors.mutedForeground)
                             }
                         }
                         Text(subtitle)
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Theme.Colors.mutedForeground)
                     }
 
                     Spacer()
@@ -165,7 +166,7 @@ struct ExamGeneratorView: View {
                     if !locked {
                         Image(systemName: "chevron.right")
                             .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Theme.Colors.mutedForeground)
                     }
                 }
 
@@ -174,10 +175,10 @@ struct ExamGeneratorView: View {
                         HStack(spacing: 6) {
                             Image(systemName: locked ? "circle" : "checkmark.circle.fill")
                                 .font(.caption)
-                                .foregroundStyle(locked ? .secondary : Color.green.opacity(0.8))
+                                .foregroundStyle(locked ? Theme.Colors.mutedForeground : Theme.Colors.success.opacity(0.8))
                             Text(item)
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(Theme.Colors.mutedForeground)
                         }
                     }
                 }
@@ -194,14 +195,8 @@ struct ExamGeneratorView: View {
                         .padding(.leading, 48)
                 }
             }
-            .padding(16)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color(.systemGray6))
-            .clipShape(RoundedRectangle(cornerRadius: 14))
-            .overlay(
-                RoundedRectangle(cornerRadius: 14)
-                    .stroke(Color.white.opacity(locked ? 0.04 : 0.08), lineWidth: 1)
-            )
+            .themedCard(radius: 14)
             .opacity(locked ? 0.6 : 1.0)
         }
         .buttonStyle(.plain)
@@ -214,10 +209,10 @@ struct ExamGeneratorView: View {
             VStack(spacing: 6) {
                 Text(type.title)
                     .font(.title3.bold())
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
                 Text("Choose how you want to take it")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
             }
             .padding(.top, 24)
 
@@ -244,7 +239,7 @@ struct ExamGeneratorView: View {
                     ProgressView()
                     Text("Loading exam…")
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
                 .padding(.top, 8)
             }
@@ -252,14 +247,14 @@ struct ExamGeneratorView: View {
             if let errorMessage {
                 Text(errorMessage)
                     .font(.footnote)
-                    .foregroundStyle(.red)
+                    .foregroundStyle(Theme.Colors.destructive)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
             }
 
             Spacer()
         }
-        .presentationBackground(Color(.systemBackground))
+        .presentationBackground(Theme.Colors.background)
     }
 
     private func modeButton(
@@ -279,19 +274,17 @@ struct ExamGeneratorView: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(title)
                         .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(Theme.Colors.foreground)
                     Text(subtitle)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
             }
-            .padding()
-            .background(Color(.systemGray6))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .themedCard()
         }
         .buttonStyle(.plain)
         .disabled(isGenerating)
@@ -303,7 +296,7 @@ struct ExamGeneratorView: View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Quick Practice")
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
                 .padding(.horizontal)
 
             VStack(spacing: 10) {
@@ -312,7 +305,7 @@ struct ExamGeneratorView: View {
                 } label: {
                     quickStudyRow(
                         icon: "bolt.fill",
-                        tint: .yellow,
+                        tint: Theme.Colors.coral,
                         title: "5-Question Sprint",
                         subtitle: "Quick check across all domains"
                     )
@@ -324,7 +317,7 @@ struct ExamGeneratorView: View {
                 } label: {
                     quickStudyRow(
                         icon: "timer",
-                        tint: .blue,
+                        tint: Theme.Colors.softBlue,
                         title: "10-Minute Mode",
                         subtitle: "As many as you can in 10"
                     )
@@ -343,19 +336,17 @@ struct ExamGeneratorView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
                 Text(subtitle)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
             }
             Spacer()
             Image(systemName: "chevron.right")
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
-        .padding(14)
-        .background(Color(.systemGray6))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .themedCard(padding: 14)
     }
 
     // MARK: - Recent Results
@@ -364,7 +355,7 @@ struct ExamGeneratorView: View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Recent Results")
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
                 .padding(.horizontal)
 
             VStack(spacing: 6) {
@@ -376,19 +367,17 @@ struct ExamGeneratorView: View {
                             VStack(alignment: .leading, spacing: 2) {
                                 Text("\(result.correctCount)/\(result.totalQuestions)")
                                     .font(.subheadline.weight(.medium))
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(Theme.Colors.foreground)
                                 Text(result.completedAt.formatted(date: .abbreviated, time: .shortened))
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(Theme.Colors.mutedForeground)
                             }
                             Spacer()
                             Text("\(Int(result.score * 100))%")
                                 .font(.subheadline.bold().monospacedDigit())
                                 .foregroundStyle(scoreColor(result.score))
                         }
-                        .padding(14)
-                        .background(Color(.systemGray6))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .themedCard(padding: 14)
                     }
                     .buttonStyle(.plain)
                 }
@@ -398,9 +387,9 @@ struct ExamGeneratorView: View {
     }
 
     private func scoreColor(_ score: Double) -> Color {
-        if score >= 0.7 { return .green }
+        if score >= 0.7 { return Theme.Colors.success }
         if score >= 0.5 { return .yellow }
-        return .red
+        return Theme.Colors.destructive
     }
 
     // MARK: - Generate

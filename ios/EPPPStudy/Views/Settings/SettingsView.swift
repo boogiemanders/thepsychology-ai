@@ -26,11 +26,11 @@ struct SettingsView: View {
                         if let lastSync = syncEngine.lastSyncDate {
                             Text(lastSync.formatted(date: .abbreviated, time: .shortened))
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(Theme.Colors.mutedForeground)
                         } else {
                             Text("Never")
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(Theme.Colors.mutedForeground)
                         }
                     }
 
@@ -76,7 +76,7 @@ struct SettingsView: View {
                         Text("Version")
                         Spacer()
                         Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Theme.Colors.mutedForeground)
                     }
                 }
             }
