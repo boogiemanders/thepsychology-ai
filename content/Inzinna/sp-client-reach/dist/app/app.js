@@ -380,7 +380,7 @@
       if (!lastUploadedThrough) {
         const y = /* @__PURE__ */ new Date();
         y.setDate(y.getDate() - 1);
-        await chrome.storage.local.set({ lastUploadedThrough: iso(y) });
+        await chrome.storage.local.set({ lastUploadedThrough: iso(y), autoUploadFloor: iso(y) });
       }
     }
   }
@@ -435,6 +435,8 @@
       const res = await chrome.runtime.sendMessage({ type: "RUN_RATER8_UPLOAD" });
       if (res?.ok) setStatus("auto-status", `Done: ${res.detail}.`, "ok");
       else setStatus("auto-status", `Not uploaded: ${res?.detail ?? "unknown error"}`, "error");
+    } catch {
+      setStatus("auto-status", "Something interrupted the run. Click the button to try again.", "error");
     } finally {
       btn.disabled = false;
     }

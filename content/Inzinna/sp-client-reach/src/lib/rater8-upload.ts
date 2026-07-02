@@ -23,14 +23,21 @@ function parseIso(s: string): Date {
 }
 
 // The date range still owed to rater8: the day after the last successful
-// upload through yesterday, capped at the trailing 7 days (a lost sent-log
-// must never resend weeks of visits). null = nothing owed.
+// upload through yesterday, widened to at least a 2-day trailing overlap so
+// re-scan catches sessions marked Show up to 2 days late (the hashed
+// sent-log dedupes the re-scanned rows), capped at the trailing 7 days (a
+// lost sent-log must never resend weeks of visits). `notBefore` is the
+// enable-time seed (autoUploadFloor): a hard floor so the re-scan never
+// crosses into days the founder already uploaded manually. null = nothing
+// owed.
 export function owedWindow(
   lastUploadedThrough: string | null,
-  now: Date
+  now: Date,
+  notBefore: string | null = null
 ): { start: string; end: string } | null {
   const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1)
   const floor = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7)
+  const overlapFloor = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 3)
   let start: Date
   if (lastUploadedThrough) {
     start = parseIso(lastUploadedThrough)
@@ -38,8 +45,14 @@ export function owedWindow(
   } else {
     start = new Date(yesterday.getTime())
   }
-  if (start.getTime() < floor.getTime()) start = floor
   if (start.getTime() > yesterday.getTime()) return null
+  if (start.getTime() > overlapFloor.getTime()) start = overlapFloor
+  if (notBefore) {
+    const notBeforeStart = parseIso(notBefore)
+    notBeforeStart.setDate(notBeforeStart.getDate() + 1)
+    if (start.getTime() < notBeforeStart.getTime()) start = notBeforeStart
+  }
+  if (start.getTime() < floor.getTime()) start = floor
   return { start: isoDate(start), end: isoDate(yesterday) }
 }
 
@@ -127,8 +140,11 @@ export function evaluateUpload(steps: UploadStep[]): UploadVerdict {
     const j = parseJson(s.body)
     if (j === null) return { ok: false, loggedOut: true, detail: `${s.step}: got a login page instead of JSON` }
     if (j.unAuthorizedRequest) return { ok: false, loggedOut: true, detail: `${s.step}: not signed in` }
-    if (s.status < 200 || s.status >= 300 || !j.success) {
+    if (s.status < 200 || s.status >= 300) {
       return { ok: false, loggedOut: false, detail: `${s.step}: HTTP ${s.status}` }
+    }
+    if (!j.success) {
+      return { ok: false, loggedOut: false, detail: `${s.step}: rater8 answered success false` }
     }
   }
   const process = steps.find((s) => s.step === 'process')

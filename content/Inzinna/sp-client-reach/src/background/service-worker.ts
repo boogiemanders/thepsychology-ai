@@ -232,9 +232,9 @@ async function doRun(trigger: 'alarm' | 'ridealong' | 'manual'): Promise<RunOutc
   if (trigger !== 'manual' && !settings.autoUploadEnabled) {
     return { ok: false, detail: 'auto-upload is switched off' }
   }
-  const store = await chrome.storage.local.get(['lastUploadedThrough', 'sentLog', 'lastAttemptAt'])
+  const store = await chrome.storage.local.get(['lastUploadedThrough', 'sentLog', 'lastAttemptAt', 'autoUploadFloor'])
   const now = new Date()
-  const window = owedWindow(store.lastUploadedThrough ?? null, now)
+  const window = owedWindow(store.lastUploadedThrough ?? null, now, store.autoUploadFloor ?? null)
   if (!window) return { ok: true, detail: 'nothing owed, already up to date' }
   // ride-along fires on every SP page load; don't hammer a failing pipeline
   if (trigger === 'ridealong' && store.lastAttemptAt && Date.now() - store.lastAttemptAt < 3 * 60 * 1000) {
@@ -329,12 +329,14 @@ async function postSlack(webhook: string | undefined, text: string) {
   }
 }
 
-// one nudge and one success message per day, max
+// one nudge and one success message per day, max (tracked per site so a
+// SimplePractice nudge doesn't swallow a same-day rater8 nudge)
 async function nudgeOnce(webhook: string | undefined, now: Date, site: 'SimplePractice' | 'rater8') {
   const today = isoDate(now)
-  const { lastNudgeDate } = await chrome.storage.local.get('lastNudgeDate')
-  if (lastNudgeDate === today) return
-  await chrome.storage.local.set({ lastNudgeDate: today })
+  const key = site === 'SimplePractice' ? 'lastNudgeDateSp' : 'lastNudgeDateR8'
+  const store = await chrome.storage.local.get(key)
+  if (store[key] === today) return
+  await chrome.storage.local.set({ [key]: today })
   await postSlack(webhook, `rater8 upload waiting: sign into ${site} and I'll do the rest.`)
 }
 

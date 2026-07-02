@@ -304,9 +304,10 @@
     const [y, m, d] = s.split("-").map(Number);
     return new Date(y, m - 1, d);
   }
-  function owedWindow(lastUploadedThrough, now) {
+  function owedWindow(lastUploadedThrough, now, notBefore = null) {
     const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
     const floor = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7);
+    const overlapFloor = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 3);
     let start;
     if (lastUploadedThrough) {
       start = parseIso(lastUploadedThrough);
@@ -314,8 +315,14 @@
     } else {
       start = new Date(yesterday.getTime());
     }
-    if (start.getTime() < floor.getTime()) start = floor;
     if (start.getTime() > yesterday.getTime()) return null;
+    if (start.getTime() > overlapFloor.getTime()) start = overlapFloor;
+    if (notBefore) {
+      const notBeforeStart = parseIso(notBefore);
+      notBeforeStart.setDate(notBeforeStart.getDate() + 1);
+      if (start.getTime() < notBeforeStart.getTime()) start = notBeforeStart;
+    }
+    if (start.getTime() < floor.getTime()) start = floor;
     return { start: isoDate(start), end: isoDate(yesterday) };
   }
   function reportUrls(startsAt, endsAt) {
@@ -369,8 +376,11 @@
       const j = parseJson(s.body);
       if (j === null) return { ok: false, loggedOut: true, detail: `${s.step}: got a login page instead of JSON` };
       if (j.unAuthorizedRequest) return { ok: false, loggedOut: true, detail: `${s.step}: not signed in` };
-      if (s.status < 200 || s.status >= 300 || !j.success) {
+      if (s.status < 200 || s.status >= 300) {
         return { ok: false, loggedOut: false, detail: `${s.step}: HTTP ${s.status}` };
+      }
+      if (!j.success) {
+        return { ok: false, loggedOut: false, detail: `${s.step}: rater8 answered success false` };
       }
     }
     const process = steps.find((s) => s.step === "process");
@@ -547,9 +557,9 @@
     if (trigger !== "manual" && !settings.autoUploadEnabled) {
       return { ok: false, detail: "auto-upload is switched off" };
     }
-    const store = await chrome.storage.local.get(["lastUploadedThrough", "sentLog", "lastAttemptAt"]);
+    const store = await chrome.storage.local.get(["lastUploadedThrough", "sentLog", "lastAttemptAt", "autoUploadFloor"]);
     const now = /* @__PURE__ */ new Date();
-    const window = owedWindow(store.lastUploadedThrough ?? null, now);
+    const window = owedWindow(store.lastUploadedThrough ?? null, now, store.autoUploadFloor ?? null);
     if (!window) return { ok: true, detail: "nothing owed, already up to date" };
     if (trigger === "ridealong" && store.lastAttemptAt && Date.now() - store.lastAttemptAt < 3 * 60 * 1e3) {
       return { ok: false, detail: "tried a few minutes ago" };
@@ -634,9 +644,10 @@
   }
   async function nudgeOnce(webhook, now, site) {
     const today = isoDate(now);
-    const { lastNudgeDate } = await chrome.storage.local.get("lastNudgeDate");
-    if (lastNudgeDate === today) return;
-    await chrome.storage.local.set({ lastNudgeDate: today });
+    const key = site === "SimplePractice" ? "lastNudgeDateSp" : "lastNudgeDateR8";
+    const store = await chrome.storage.local.get(key);
+    if (store[key] === today) return;
+    await chrome.storage.local.set({ [key]: today });
     await postSlack(webhook, `rater8 upload waiting: sign into ${site} and I'll do the rest.`);
   }
   async function successOnce(webhook, now, text) {

@@ -14,12 +14,14 @@ const lib = await import('./.rater8-upload.bundle.mjs')
 const now = new Date(2026, 6, 1) // Jul 1 2026 (month is 0-based)
 
 // ---- owedWindow ----
-assert.deepEqual(lib.owedWindow('2026-06-29', now), { start: '2026-06-30', end: '2026-06-30' })
-assert.deepEqual(lib.owedWindow(null, now), { start: '2026-06-30', end: '2026-06-30' }) // first run = yesterday only
+assert.deepEqual(lib.owedWindow('2026-06-29', now), { start: '2026-06-28', end: '2026-06-30' }) // widened to the 2-day overlap
+assert.deepEqual(lib.owedWindow(null, now), { start: '2026-06-28', end: '2026-06-30' }) // first run also widened
 assert.deepEqual(lib.owedWindow('2026-06-01', now), { start: '2026-06-24', end: '2026-06-30' }) // capped at 7 days
-assert.deepEqual(lib.owedWindow('2026-06-25', now), { start: '2026-06-26', end: '2026-06-30' }) // catch-up
+assert.deepEqual(lib.owedWindow('2026-06-25', now), { start: '2026-06-26', end: '2026-06-30' }) // catch-up, already earlier than the overlap
 assert.equal(lib.owedWindow('2026-06-30', now), null) // up to date
 assert.equal(lib.owedWindow('2026-07-05', now), null) // future-safe
+assert.deepEqual(lib.owedWindow('2026-06-29', now, '2026-06-29'), { start: '2026-06-30', end: '2026-06-30' }) // floor beats overlap
+assert.deepEqual(lib.owedWindow('2026-06-29', now, '2026-06-27'), { start: '2026-06-28', end: '2026-06-30' }) // floor earlier than overlap, overlap wins
 
 // ---- hashRow / filterUnsent ----
 const rowA = ['Ann', 'Smith', 'ann@example.com', '(555) 555-0100', 'Gregory Inzinna', '1428233', 'Manhattan', '06/30/2026', 'Show']
@@ -64,6 +66,12 @@ assert.equal(lib.evaluateUpload([{ step: 'error', status: 0, body: 'TypeError: F
 assert.equal(lib.evaluateUpload([store(ok1)]).ok, false) // stored but processing never triggered
 assert.equal(lib.evaluateUpload([store(ok1, 500)]).ok, false) // bad HTTP status
 assert.equal(lib.evaluateUpload([]).ok, false)
+
+const successFalse = JSON.stringify({ success: false, unAuthorizedRequest: false })
+const successFalseVerdict = lib.evaluateUpload([store(successFalse, 200)])
+assert.equal(successFalseVerdict.ok, false)
+assert.equal(successFalseVerdict.loggedOut, false)
+assert.ok(successFalseVerdict.detail.includes('success false')) // 2xx but success:false gets honest copy, not "HTTP 200"
 
 // ---- filenames + report urls ----
 assert.equal(lib.csvFilename('2026-06-30', '2026-06-30'), 'rater8_2026-06-30_to_2026-06-30.csv')

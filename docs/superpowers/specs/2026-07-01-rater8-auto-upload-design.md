@@ -14,6 +14,7 @@ The SP Client Reach Chrome extension (`content/Inzinna/sp-client-reach`) already
 - Dedupe handled on our side (sent-log). rater8's own duplicate behavior is unknown; question pending with Darryl (rater8 ticket #157526). Also asked him for an official SFTP/API channel; if he offers one, only the send step gets swapped.
 - Slack gets both a daily success one-liner and failure alerts.
 - rater8 login persistence is unknown ("not sure"); design assumes usually-logged-in and makes logged-out loud and recoverable.
+- Late-marked attendance: every run re-scans a 2-day trailing overlap (approved 7/1); the hashed sent-log dedupes re-scanned rows. A hard floor (autoUploadFloor, seeded at first enable) keeps the re-scan out of days the founder uploaded manually. Known tradeoff: a contact-info correction inside the overlap re-hashes a sent row and can re-send it, bounded once Darryl confirms rater8-side dedupe.
 
 ## Captured upload protocol (from a real manual upload, 2026-07-01)
 
@@ -68,7 +69,7 @@ At most one success message and one nudge per day (tracked in storage).
 ### Pipeline
 
 1. A trigger fires and the owed-check passes.
-2. Compute window: `lastUploadedThrough + 1 day` through yesterday (local dates), capped at the trailing 7 days. First run ever: yesterday only. Window empty → nothing to do.
+2. Compute window: `lastUploadedThrough + 1 day` through yesterday (local dates), widened so the start is at least a 2-day trailing overlap before yesterday (catches attendance marked Show up to 2 days late), floored by `autoUploadFloor` (never re-scans days the founder uploaded manually), capped at the trailing 7 days. First run ever: yesterday only, still widened by the overlap. Window empty → nothing to do.
 3. Pull the two SP reports for the window via the existing `fetchReports` (find-or-create background SP tab, page-context fetch, `LOGIN_REQUIRED` detection).
 4. `mergeReports` → `rater8Rows` → drop rows whose hash is in the sent-log. 0 rows left → record success (advance `lastUploadedThrough`), Slack "0 new visits".
 5. Build CSV text (`RATER8_HEADER` + rows), filename `rater8_<start>_to_<end>.csv` (same shape as the manual download).
@@ -123,7 +124,7 @@ CSV is built in memory and posted directly to rater8; never written to disk by t
 
 - `npm test` (Node): new unit tests for window math (normal, catch-up, 7-day cap, first run), row hashing/dedupe against the sent-log, and upload-response parsing (success, `filesFailed > 0`, `unAuthorizedRequest`, non-JSON login HTML). Existing merge reference test untouched.
 - `tsc` clean, `npm run build` clean.
-- Live verification (founder-side, automation Chrome is logged into neither site): reload unpacked extension, click "Upload to rater8 now" with auto-upload off, confirm the file lands in the rater8 dashboard and the Slack line arrives, then flip the toggle on. First alarm run checked the next morning.
+- Live verification (founder-side, automation Chrome is logged into neither site): reload unpacked extension, paste the Slack webhook into settings, tick the auto-upload toggle, and Save (seeds the ledger and the floor). Then run the supervised "Upload to rater8 now" test, confirm the file lands in the rater8 dashboard and the Slack line arrives. First alarm run checked the next morning.
 
 ## Rollout
 
