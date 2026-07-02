@@ -25,6 +25,13 @@
       <input type="text" id="webapp-token">
     </label>
     <p class="hint">From the Apps Script deployment on the leadership sheet. See README for the one-time setup.</p>
+    <label>Auto-upload to rater8 daily
+      <input type="checkbox" id="auto-upload-enabled">
+    </label>
+    <label>Slack webhook for upload alerts
+      <input type="url" id="slack-webhook" placeholder="https://hooks.slack.com/services/...">
+    </label>
+    <p class="hint">When on: the upload runs by itself whenever you sign into SimplePractice, and a 7 AM check nudges you on Slack if a sign-in is needed.</p>
     <button id="save-settings" class="btn secondary">Save</button>
     <span id="settings-status" class="status"></span>
   </section>
@@ -45,6 +52,10 @@
       <button id="fetch-btn" class="btn primary">Pull from SimplePractice</button>
     </div>
     <p id="fetch-status" class="status"></p>
+    <div class="range-row">
+      <button id="run-rater8" class="btn secondary">Upload to rater8 now</button>
+    </div>
+    <p id="auto-status" class="status"></p>
     <details class="manual">
       <summary>Or use already-downloaded CSVs</summary>
       <div id="drop-zone">
