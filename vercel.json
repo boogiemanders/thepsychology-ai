@@ -48,6 +48,10 @@
       "schedule": "0 7 * * *"
     },
     {
+      "path": "/api/cron/score-request-drip",
+      "schedule": "0 17 * * *"
+    },
+    {
       "path": "/api/cron/dct-send?limit=30",
       "schedule": "0 12 * * 1-5"
     },
