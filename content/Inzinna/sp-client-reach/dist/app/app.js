@@ -315,8 +315,17 @@
     ]);
   }
 
-  // src/app/app.ts
+  // src/lib/rater8-upload.ts
   var SP = "https://secure.simplepractice.com";
+  function reportUrls(startsAt, endsAt) {
+    const f = encodeURIComponent;
+    return [
+      `${SP}/frontend/client-attendance-report-rows.csv?filter%5BstartsAt%5D=${f(startsAt)}&filter%5BendsAt%5D=${f(endsAt)}&sort=clientName`,
+      `${SP}/frontend/client-details-report-rows.csv?filter%5BclientStatus%5D=Active&sort=clientName`
+    ];
+  }
+
+  // src/app/app.ts
   var DEFAULT_TOKEN = "inz-r8-93kx7q4ftn2m";
   var $ = (id) => document.getElementById(id);
   var hasChrome = typeof chrome !== "undefined" && !!chrome.runtime?.id;
@@ -349,25 +358,36 @@
     }
   }
   async function loadSettings() {
-    if (!hasChrome) return { url: "", token: DEFAULT_TOKEN };
-    const got = await chrome.storage.sync.get(["webAppUrl", "webAppToken"]);
-    return { url: got.webAppUrl ?? "", token: got.webAppToken ?? DEFAULT_TOKEN };
+    if (!hasChrome) return { url: "", token: DEFAULT_TOKEN, autoUploadEnabled: false, slackWebhookUrl: "" };
+    const got = await chrome.storage.sync.get(["webAppUrl", "webAppToken", "autoUploadEnabled", "slackWebhookUrl"]);
+    return {
+      url: got.webAppUrl ?? "",
+      token: got.webAppToken ?? DEFAULT_TOKEN,
+      autoUploadEnabled: !!got.autoUploadEnabled,
+      slackWebhookUrl: got.slackWebhookUrl ?? ""
+    };
   }
-  async function saveSettings(url, token) {
+  async function saveSettings(s) {
     if (!hasChrome) return;
-    await chrome.storage.sync.set({ webAppUrl: url, webAppToken: token });
+    await chrome.storage.sync.set({
+      webAppUrl: s.url,
+      webAppToken: s.token,
+      autoUploadEnabled: s.autoUploadEnabled,
+      slackWebhookUrl: s.slackWebhookUrl
+    });
+    if (s.autoUploadEnabled) {
+      const { lastUploadedThrough } = await chrome.storage.local.get("lastUploadedThrough");
+      if (!lastUploadedThrough) {
+        const y = /* @__PURE__ */ new Date();
+        y.setDate(y.getDate() - 1);
+        await chrome.storage.local.set({ lastUploadedThrough: iso(y), autoUploadFloor: iso(y) });
+      }
+    }
   }
   function setStatus(id, msg, kind = "") {
     const el = $(id);
     el.textContent = msg;
     el.className = `status ${kind}`.trim();
-  }
-  function reportUrls(startsAt, endsAt) {
-    const f = encodeURIComponent;
-    return [
-      `${SP}/frontend/client-attendance-report-rows.csv?filter%5BstartsAt%5D=${f(startsAt)}&filter%5BendsAt%5D=${f(endsAt)}&sort=clientName`,
-      `${SP}/frontend/client-details-report-rows.csv?filter%5BclientStatus%5D=Active&sort=clientName`
-    ];
   }
   async function pullFromSp() {
     const startsAt = $("start-date").value;
@@ -399,6 +419,24 @@
       const [attendance, details] = res.reports;
       runMerge(attendance, details, `${startsAt} to ${endsAt}`);
       setStatus("fetch-status", "Reports pulled.", "ok");
+    } finally {
+      btn.disabled = false;
+    }
+  }
+  async function runRater8Now() {
+    if (!hasChrome) {
+      setStatus("auto-status", "Open this page through the extension icon to upload.", "error");
+      return;
+    }
+    const btn = $("run-rater8");
+    btn.disabled = true;
+    setStatus("auto-status", "Running: pulling from SimplePractice, uploading to rater8...");
+    try {
+      const res = await chrome.runtime.sendMessage({ type: "RUN_RATER8_UPLOAD" });
+      if (res?.ok) setStatus("auto-status", `Done: ${res.detail}.`, "ok");
+      else setStatus("auto-status", `Not uploaded: ${res?.detail ?? "unknown error"}`, "error");
+    } catch {
+      setStatus("auto-status", "Something interrupted the run. Click the button to try again.", "error");
     } finally {
       btn.disabled = false;
     }
@@ -535,9 +573,16 @@
     const settings = await loadSettings();
     $("webapp-url").value = settings.url;
     $("webapp-token").value = settings.token;
+    $("auto-upload-enabled").checked = settings.autoUploadEnabled;
+    $("slack-webhook").value = settings.slackWebhookUrl;
     $("settings-toggle").addEventListener("click", () => $("settings").classList.toggle("hidden"));
     $("save-settings").addEventListener("click", async () => {
-      await saveSettings($("webapp-url").value.trim(), $("webapp-token").value.trim());
+      await saveSettings({
+        url: $("webapp-url").value.trim(),
+        token: $("webapp-token").value.trim(),
+        autoUploadEnabled: $("auto-upload-enabled").checked,
+        slackWebhookUrl: $("slack-webhook").value.trim()
+      });
       setStatus("settings-status", "Saved.", "ok");
     });
     const dz = $("drop-zone");
@@ -555,6 +600,18 @@
       const input = e.target;
       if (input.files) handleFiles(input.files);
     });
+    $("run-rater8").addEventListener("click", runRater8Now);
+    if (hasChrome) {
+      const { lastRunResult } = await chrome.storage.local.get("lastRunResult");
+      if (lastRunResult) {
+        const when = new Date(lastRunResult.when).toLocaleString();
+        setStatus(
+          "auto-status",
+          `Last auto-upload: ${lastRunResult.ok ? "" : "FAILED, "}${lastRunResult.detail} (${when})`,
+          lastRunResult.ok ? "ok" : "error"
+        );
+      }
+    }
     $("dl-rater8").addEventListener("click", () => {
       if (!merged) return;
       downloadCsv(`rater8_${safeLabel()}.csv`, toCsv(RATER8_HEADER, merged.rater8));

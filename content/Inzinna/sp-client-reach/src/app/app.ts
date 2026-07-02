@@ -7,8 +7,8 @@ import {
   MergedRow,
   MergeResult,
 } from '../lib/merge'
+import { reportUrls } from '../lib/rater8-upload'
 
-const SP = 'https://secure.simplepractice.com'
 const DEFAULT_TOKEN = 'inz-r8-93kx7q4ftn2m'
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T
@@ -49,15 +49,42 @@ function applyPreset(preset: string) {
 }
 
 // ---------- settings ----------
-async function loadSettings(): Promise<{ url: string; token: string }> {
-  if (!hasChrome) return { url: '', token: DEFAULT_TOKEN }
-  const got = await chrome.storage.sync.get(['webAppUrl', 'webAppToken'])
-  return { url: got.webAppUrl ?? '', token: got.webAppToken ?? DEFAULT_TOKEN }
+interface Settings {
+  url: string
+  token: string
+  autoUploadEnabled: boolean
+  slackWebhookUrl: string
 }
 
-async function saveSettings(url: string, token: string) {
+async function loadSettings(): Promise<Settings> {
+  if (!hasChrome) return { url: '', token: DEFAULT_TOKEN, autoUploadEnabled: false, slackWebhookUrl: '' }
+  const got = await chrome.storage.sync.get(['webAppUrl', 'webAppToken', 'autoUploadEnabled', 'slackWebhookUrl'])
+  return {
+    url: got.webAppUrl ?? '',
+    token: got.webAppToken ?? DEFAULT_TOKEN,
+    autoUploadEnabled: !!got.autoUploadEnabled,
+    slackWebhookUrl: got.slackWebhookUrl ?? '',
+  }
+}
+
+async function saveSettings(s: Settings) {
   if (!hasChrome) return
-  await chrome.storage.sync.set({ webAppUrl: url, webAppToken: token })
+  await chrome.storage.sync.set({
+    webAppUrl: s.url,
+    webAppToken: s.token,
+    autoUploadEnabled: s.autoUploadEnabled,
+    slackWebhookUrl: s.slackWebhookUrl,
+  })
+  // seed the ledger on first enable so the first auto window starts AFTER
+  // the founder's last manual upload day instead of overlapping it
+  if (s.autoUploadEnabled) {
+    const { lastUploadedThrough } = await chrome.storage.local.get('lastUploadedThrough')
+    if (!lastUploadedThrough) {
+      const y = new Date()
+      y.setDate(y.getDate() - 1)
+      await chrome.storage.local.set({ lastUploadedThrough: iso(y), autoUploadFloor: iso(y) })
+    }
+  }
 }
 
 // ---------- status helpers ----------
@@ -68,14 +95,6 @@ function setStatus(id: string, msg: string, kind: '' | 'error' | 'ok' = '') {
 }
 
 // ---------- fetch from SimplePractice ----------
-function reportUrls(startsAt: string, endsAt: string): string[] {
-  const f = encodeURIComponent
-  return [
-    `${SP}/frontend/client-attendance-report-rows.csv?filter%5BstartsAt%5D=${f(startsAt)}&filter%5BendsAt%5D=${f(endsAt)}&sort=clientName`,
-    `${SP}/frontend/client-details-report-rows.csv?filter%5BclientStatus%5D=Active&sort=clientName`,
-  ]
-}
-
 async function pullFromSp() {
   const startsAt = $<HTMLInputElement>('start-date').value
   const endsAt = $<HTMLInputElement>('end-date').value
@@ -106,6 +125,26 @@ async function pullFromSp() {
     const [attendance, details] = res.reports as string[]
     runMerge(attendance, details, `${startsAt} to ${endsAt}`)
     setStatus('fetch-status', 'Reports pulled.', 'ok')
+  } finally {
+    btn.disabled = false
+  }
+}
+
+// ---------- manual rater8 upload ----------
+async function runRater8Now() {
+  if (!hasChrome) {
+    setStatus('auto-status', 'Open this page through the extension icon to upload.', 'error')
+    return
+  }
+  const btn = $<HTMLButtonElement>('run-rater8')
+  btn.disabled = true
+  setStatus('auto-status', 'Running: pulling from SimplePractice, uploading to rater8...')
+  try {
+    const res = await chrome.runtime.sendMessage({ type: 'RUN_RATER8_UPLOAD' })
+    if (res?.ok) setStatus('auto-status', `Done: ${res.detail}.`, 'ok')
+    else setStatus('auto-status', `Not uploaded: ${res?.detail ?? 'unknown error'}`, 'error')
+  } catch {
+    setStatus('auto-status', 'Something interrupted the run. Click the button to try again.', 'error')
   } finally {
     btn.disabled = false
   }
@@ -265,9 +304,16 @@ async function init() {
   const settings = await loadSettings()
   $<HTMLInputElement>('webapp-url').value = settings.url
   $<HTMLInputElement>('webapp-token').value = settings.token
+  $<HTMLInputElement>('auto-upload-enabled').checked = settings.autoUploadEnabled
+  $<HTMLInputElement>('slack-webhook').value = settings.slackWebhookUrl
   $('settings-toggle').addEventListener('click', () => $('settings').classList.toggle('hidden'))
   $('save-settings').addEventListener('click', async () => {
-    await saveSettings($<HTMLInputElement>('webapp-url').value.trim(), $<HTMLInputElement>('webapp-token').value.trim())
+    await saveSettings({
+      url: $<HTMLInputElement>('webapp-url').value.trim(),
+      token: $<HTMLInputElement>('webapp-token').value.trim(),
+      autoUploadEnabled: $<HTMLInputElement>('auto-upload-enabled').checked,
+      slackWebhookUrl: $<HTMLInputElement>('slack-webhook').value.trim(),
+    })
     setStatus('settings-status', 'Saved.', 'ok')
   })
 
@@ -286,6 +332,19 @@ async function init() {
     const input = e.target as HTMLInputElement
     if (input.files) handleFiles(input.files)
   })
+
+  $('run-rater8').addEventListener('click', runRater8Now)
+  if (hasChrome) {
+    const { lastRunResult } = await chrome.storage.local.get('lastRunResult')
+    if (lastRunResult) {
+      const when = new Date(lastRunResult.when).toLocaleString()
+      setStatus(
+        'auto-status',
+        `Last auto-upload: ${lastRunResult.ok ? '' : 'FAILED, '}${lastRunResult.detail} (${when})`,
+        lastRunResult.ok ? 'ok' : 'error'
+      )
+    }
+  }
 
   $('dl-rater8').addEventListener('click', () => {
     if (!merged) return
