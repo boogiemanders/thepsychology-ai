@@ -84,7 +84,7 @@ struct ExamDateView: View {
                 .font(.caption)
             Text(label)
                 .font(.subheadline)
-                .foregroundStyle(passed ? .secondary : .white)
+                .foregroundStyle(passed ? Color.secondary : .white)
             Spacer()
         }
     }

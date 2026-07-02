@@ -105,7 +105,7 @@ struct QuestionView: View {
 
                 Text(choice.text)
                     .font(.subheadline)
-                    .foregroundStyle(isStruck ? .secondary : .white)
+                    .foregroundStyle(isStruck ? Color.secondary : .white)
                     .strikethrough(isStruck, color: .secondary)
                     .multilineTextAlignment(.leading)
 

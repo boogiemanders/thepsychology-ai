@@ -1,5 +1,7 @@
 import Foundation
+import Observation
 
+@Observable
 final class LocalStore: @unchecked Sendable {
     private let fileManager = FileManager.default
     private let encoder = JSONEncoder()
