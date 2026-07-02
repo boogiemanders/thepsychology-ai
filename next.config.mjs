@@ -6,6 +6,12 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // The score-request drip cron reads the first-name dictionary at runtime for name guessing.
+  // Force it into that function's bundle (Next won't trace a readFileSync'd .txt otherwise).
+  // If absent, guessing degrades gracefully to "there" (see loadFirstNames), so this is best-effort.
+  outputFileTracingIncludes: {
+    '/api/cron/score-request-drip': ['./scripts/data/first-names.txt'],
+  },
   outputFileTracingExcludes: {
     '*': [
       '**/.next/cache/**',

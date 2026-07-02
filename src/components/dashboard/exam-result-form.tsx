@@ -182,6 +182,20 @@ export function ExamResultForm({ open, onOpenChange, userId, userEmail, existing
         }
       }
 
+      // Notify the founder of EVERY submission (pass/fail, testimonial or not) via email + Slack.
+      // Best-effort: never block the user's success on it.
+      try {
+        const { data: { session } } = await supabase.auth.getSession()
+        if (session?.access_token) {
+          void fetch('/api/exam-result/notify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${session.access_token}` },
+          })
+        }
+      } catch (e) {
+        console.error('exam-result notify (non-blocking):', e)
+      }
+
       setSubmitState('success')
     } catch (err) {
       console.error('Error submitting exam result:', err)
