@@ -65,16 +65,16 @@ struct ContinueStudyWidgetView: View {
             HStack {
                 Image(systemName: "brain.head.profile")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                 Spacer()
                 // Streak
                 HStack(spacing: 2) {
                     Image(systemName: "flame.fill")
                         .font(.caption2)
-                        .foregroundStyle(.orange)
+                        .foregroundStyle(Theme.Colors.coral)
                     Text("\(data.streakDays)")
                         .font(.caption2.bold().monospacedDigit())
-                        .foregroundStyle(.orange)
+                        .foregroundStyle(Theme.Colors.coral)
                 }
             }
 
@@ -87,7 +87,7 @@ struct ContinueStudyWidgetView: View {
 
             Text(data.subtitle)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
                 .lineLimit(1)
         }
         .padding(2)
@@ -102,7 +102,7 @@ struct ContinueStudyWidgetView: View {
                     Text("EPPP Study")
                         .font(.caption.weight(.medium))
                 }
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
 
                 Text(data.title)
                     .font(.subheadline.weight(.semibold))
@@ -111,7 +111,7 @@ struct ContinueStudyWidgetView: View {
 
                 Text(data.subtitle)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                     .lineLimit(1)
 
                 Spacer()
@@ -119,16 +119,16 @@ struct ContinueStudyWidgetView: View {
                 HStack(spacing: 12) {
                     HStack(spacing: 3) {
                         Image(systemName: "flame.fill")
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(Theme.Colors.coral)
                         Text("\(data.streakDays)")
                             .bold()
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(Theme.Colors.coral)
                     }
                     .font(.caption2)
 
                     Text("\(Int(data.readinessScore))% ready")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
             }
 
@@ -136,7 +136,7 @@ struct ContinueStudyWidgetView: View {
 
             Image(systemName: "chevron.right.circle.fill")
                 .font(.title2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
         .padding(4)
     }
@@ -145,10 +145,10 @@ struct ContinueStudyWidgetView: View {
         VStack(spacing: 8) {
             Image(systemName: "brain.head.profile")
                 .font(.title2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
             Text("Start studying")
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
     }
 }

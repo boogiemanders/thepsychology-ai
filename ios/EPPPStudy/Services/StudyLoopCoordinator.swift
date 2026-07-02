@@ -15,6 +15,7 @@ final class StudyLoopCoordinator {
     var nextExamSlug: String? = nil
     var isDownloadingRecommendations: Bool = false
 
+    @ObservationIgnored
     private lazy var studyPath = StudyPathManager(localStore: localStore, contentManager: contentManager)
 
     enum StudyPhase: Sendable {
@@ -62,13 +63,8 @@ final class StudyLoopCoordinator {
         }
 
         // Enqueue sync for exam result
-        let syncOp = SyncOperation(
-            type: .examResult,
-            payload: try? JSONEncoder().encode(result),
-            resourceId: result.id
-        )
-        localStore.saveSyncOperation(syncOp)
-        await syncEngine.syncIfNeeded()
+        syncEngine.enqueueExamResult(result)
+        await syncEngine.sync()
     }
 
     // MARK: - Post-Lesson

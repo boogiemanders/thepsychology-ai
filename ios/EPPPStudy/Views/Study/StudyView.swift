@@ -1,12 +1,11 @@
 import SwiftUI
-import WebKit
 
 /// Study tab — native accordion view of all EPPP domains + topics, mirroring
-/// `thepsychology.ai/topic-selector`. Tapping a topic opens the web lesson
-/// (`/topic-teacher`) in a WKWebView with the Supabase session injected.
+/// `thepsychology.ai/topic-selector`. Tapping a topic opens the NATIVE lesson
+/// reader (LessonReaderView), which links into the native quiz.
 ///
 /// Progress bars read from Supabase `quiz_results` via `QuizProgressService`.
-/// Refreshes on appear and when returning from a topic webview.
+/// Refreshes on appear and when returning from a topic.
 struct StudyView: View {
     @Environment(LocalStore.self) private var localStore
     @Environment(AuthService.self) private var authService
@@ -71,7 +70,6 @@ struct StudyView: View {
                     domainProgress: overallProgress(for: domain),
                     topicProgress: { topic in progress(for: topic, in: domain) },
                     onToggle: { toggle(domain: domain) },
-                    authService: authService,
                     onTopicDismiss: { Task { await quizProgress.refresh() } }
                 )
             }
@@ -109,7 +107,6 @@ private struct DomainAccordion: View {
     let domainProgress: Int
     let topicProgress: (EPPPTopic) -> Int
     let onToggle: () -> Void
-    let authService: AuthService
     var onTopicDismiss: (() -> Void)?
 
     var body: some View {
@@ -162,7 +159,7 @@ private struct DomainAccordion: View {
         VStack(spacing: Theme.Spacing.md) {
             ForEach(domain.topics) { topic in
                 NavigationLink {
-                    TopicTeacherView(domainId: domain.id, topicName: topic.name, authService: authService, onDismiss: onTopicDismiss)
+                    LessonReaderView(domainId: domain.id, topicName: topic.name, onDismiss: onTopicDismiss)
                 } label: {
                     TopicRow(
                         name: topic.name,
@@ -226,86 +223,4 @@ private struct ProgressBar: View {
         if value >= 40 { return Theme.Colors.sage }
         return Theme.Colors.coral.opacity(0.65)
     }
-}
-
-// MARK: - Topic-teacher webview
-
-/// Pushes the `/topic-teacher?domain=...&topic=...` web page inside a WKWebView,
-/// with Supabase session injected so the user stays signed in.
-private struct TopicTeacherView: View {
-    let domainId: String
-    let topicName: String
-    let authService: AuthService
-    var onDismiss: (() -> Void)?
-
-    var body: some View {
-        ZStack {
-            Theme.Colors.background.ignoresSafeArea()
-            TopicTeacherWebViewRepresentable(
-                url: Self.url(domainId: domainId, topicName: topicName),
-                authService: authService
-            )
-        }
-        .onDisappear { onDismiss?() }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                Text(topicName)
-                    .font(Theme.Typography.captionBold)
-                    .foregroundStyle(Theme.Colors.foreground)
-                    .lineLimit(1)
-            }
-        }
-    }
-
-    private static func url(domainId: String, topicName: String) -> URL {
-        var components = URLComponents(string: baseURL)!
-        components.path = "/topic-teacher"
-        components.queryItems = [
-            URLQueryItem(name: "domain", value: domainId),
-            URLQueryItem(name: "topic", value: topicName),
-        ]
-        return components.url!
-    }
-
-    private static var baseURL: String {
-        #if DEBUG
-        "http://localhost:3000"
-        #else
-        "https://thepsychology.ai"
-        #endif
-    }
-}
-
-private struct TopicTeacherWebViewRepresentable: UIViewRepresentable {
-    let url: URL
-    let authService: AuthService
-
-    func makeUIView(context: Context) -> WKWebView {
-        let config = WKWebViewConfiguration()
-        let controller = WKUserContentController()
-
-        if let tokens = authService.currentTokensForWebView(),
-           let script = SupabaseWebSessionInjector.script(
-               accessToken: tokens.accessToken,
-               refreshToken: tokens.refreshToken
-           ) {
-            controller.addUserScript(
-                WKUserScript(source: script, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-            )
-        }
-
-        config.userContentController = controller
-        config.allowsInlineMediaPlayback = true
-
-        let webView = WKWebView(frame: .zero, configuration: config)
-        webView.isOpaque = false
-        webView.backgroundColor = UIColor(Theme.Colors.background)
-        webView.scrollView.backgroundColor = UIColor(Theme.Colors.background)
-        webView.allowsBackForwardNavigationGestures = true
-        webView.load(URLRequest(url: url))
-        return webView
-    }
-
-    func updateUIView(_ uiView: WKWebView, context: Context) {}
 }

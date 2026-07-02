@@ -59,7 +59,7 @@ struct QuickQuestionWidgetView: View {
                     }
                     Text(question.domain)
                         .font(.caption2.weight(.medium))
-                        .foregroundStyle(question.domain == "Review" ? .purple : .secondary)
+                        .foregroundStyle(question.domain == "Review" ? Color.purple : Theme.Colors.mutedForeground)
                 }
 
                 // Question stem (truncated)
@@ -77,7 +77,7 @@ struct QuickQuestionWidgetView: View {
                             HStack(spacing: 6) {
                                 Text(choice.label)
                                     .font(.caption2.bold().monospacedDigit())
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(Theme.Colors.mutedForeground)
                                 Text(choice.text)
                                     .font(.caption2)
                                     .foregroundStyle(.primary)
@@ -86,7 +86,7 @@ struct QuickQuestionWidgetView: View {
                             }
                             .padding(.horizontal, 8)
                             .padding(.vertical, 5)
-                            .background(Color(.systemGray5).opacity(0.5))
+                            .background(Theme.Colors.border.opacity(0.5))
                             .clipShape(RoundedRectangle(cornerRadius: 6))
                         }
                     }
@@ -97,10 +97,10 @@ struct QuickQuestionWidgetView: View {
             VStack(spacing: 8) {
                 Image(systemName: "brain.head.profile")
                     .font(.title2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                 Text("Open the app to load a practice question")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                     .multilineTextAlignment(.center)
             }
         }

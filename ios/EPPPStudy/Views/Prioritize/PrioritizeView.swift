@@ -69,6 +69,7 @@ private struct PrioritizeWebViewRepresentable: UIViewRepresentable {
         config.allowsInlineMediaPlayback = true
 
         let webView = WKWebView(frame: .zero, configuration: config)
+        webView.navigationDelegate = WebViewOriginGuard.shared
         webView.isOpaque = false
         webView.backgroundColor = UIColor(Theme.Colors.background)
         webView.scrollView.backgroundColor = UIColor(Theme.Colors.background)

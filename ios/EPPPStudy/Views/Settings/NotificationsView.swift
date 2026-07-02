@@ -32,7 +32,7 @@ struct NotificationsView: View {
                             Spacer()
                             Image(systemName: "chevron.right")
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(Theme.Colors.mutedForeground)
                         }
                     }
                 } else {
@@ -68,7 +68,7 @@ struct NotificationsView: View {
                     Spacer()
                     Text(notificationService.isAuthorized ? "Enabled" : "Disabled")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
             } footer: {
                 if !notificationService.isAuthorized {

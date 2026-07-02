@@ -25,11 +25,11 @@ struct SignUpView: View {
             VStack(spacing: 16) {
                 Text("Create Account")
                     .font(.system(size: 28, weight: .bold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Theme.Colors.foreground)
 
                 Text("Start your EPPP preparation")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
             }
             .padding(.bottom, 40)
 
@@ -37,52 +37,65 @@ struct SignUpView: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Email")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
-                    TextField("you@example.com", text: $email)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
+                    TextField("", text: $email, prompt: Text("you@example.com").foregroundStyle(Theme.Colors.dimForeground))
                         .textFieldStyle(.plain)
+                        .foregroundStyle(Theme.Colors.foreground)
                         .textContentType(.emailAddress)
                         .textInputAutocapitalization(.never)
                         .keyboardType(.emailAddress)
                         .autocorrectionDisabled()
                         .padding(12)
-                        .background(Color(.systemGray6))
+                        .background(Theme.Colors.card)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Theme.Colors.border, lineWidth: 1)
+                        )
                 }
 
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Password")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                     SecureField("At least 8 characters", text: $password)
                         .textFieldStyle(.plain)
                         .textContentType(.newPassword)
                         .padding(12)
-                        .background(Color(.systemGray6))
+                        .background(Theme.Colors.card)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Theme.Colors.border, lineWidth: 1)
+                        )
                 }
 
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Confirm Password")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                     SecureField("Confirm password", text: $confirmPassword)
                         .textFieldStyle(.plain)
                         .textContentType(.newPassword)
                         .padding(12)
-                        .background(Color(.systemGray6))
+                        .background(Theme.Colors.card)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Theme.Colors.border, lineWidth: 1)
+                        )
 
                     if !confirmPassword.isEmpty && !passwordsMatch {
                         Text("Passwords don't match")
                             .font(.caption)
-                            .foregroundStyle(.red)
+                            .foregroundStyle(Theme.Colors.destructive)
                     }
                 }
 
                 if let errorMessage {
                     Text(errorMessage)
                         .font(.caption)
-                        .foregroundStyle(.red)
+                        .foregroundStyle(Theme.Colors.destructive)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
@@ -92,7 +105,7 @@ struct SignUpView: View {
                     Group {
                         if isLoading {
                             ProgressView()
-                                .tint(.black)
+                                .tint(.white)
                         } else {
                             Text("Create Account")
                                 .fontWeight(.semibold)
@@ -101,16 +114,14 @@ struct SignUpView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 48)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(.white)
-                .foregroundStyle(.black)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .buttonStyle(PillButtonStyle())
                 .disabled(isLoading || !isFormValid)
             }
             .padding(.horizontal, 24)
 
             Spacer()
         }
+        .background(Theme.Colors.background.ignoresSafeArea())
         .navigationBarBackButtonHidden(false)
     }
 

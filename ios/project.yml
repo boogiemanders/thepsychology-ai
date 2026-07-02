@@ -29,6 +29,19 @@ settings:
     ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_EXTENSIONS: YES
 
 # =============================================================================
+# Schemes — so Xcode has something selected on open (no more "No Scheme")
+# =============================================================================
+schemes:
+  EPPPStudy:
+    build:
+      targets:
+        EPPPStudy: all
+    run:
+      config: Debug
+    archive:
+      config: Release
+
+# =============================================================================
 # Targets
 # =============================================================================
 targets:
@@ -83,6 +96,7 @@ targets:
       # Keep this list tight — only what the widget actually imports.
       - path: EPPPStudy/Models
       - path: EPPPStudy/Utilities/Constants.swift
+      - path: EPPPStudy/Views/Theme/Theme.swift  # Widget views use Theme tokens
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: ai.thepsychology.eppp.widget

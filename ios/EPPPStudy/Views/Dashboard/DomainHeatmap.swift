@@ -12,7 +12,7 @@ struct DomainHeatmap: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Domain Mastery")
                 .font(.headline)
-                .foregroundStyle(.white)
+                .foregroundStyle(Theme.Colors.foreground)
 
             LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(Constants.Domain.allCases) { domain in
@@ -27,17 +27,15 @@ struct DomainHeatmap: View {
 
             // Legend
             HStack(spacing: 16) {
-                legendItem(color: .red, label: "< 50%")
+                legendItem(color: Theme.Colors.destructive, label: "< 50%")
                 legendItem(color: .yellow, label: "50-70%")
-                legendItem(color: .green, label: "> 70%")
+                legendItem(color: Theme.Colors.success, label: "> 70%")
             }
             .font(.caption2)
-            .foregroundStyle(.secondary)
+            .foregroundStyle(Theme.Colors.mutedForeground)
             .frame(maxWidth: .infinity)
         }
-        .padding()
-        .background(Color(.systemGray6))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .themedCard(radius: 16)
     }
 
     private func legendItem(color: Color, label: String) -> some View {
@@ -69,13 +67,13 @@ private struct DomainCell: View {
 
             Text(domain.shortName)
                 .font(.subheadline.weight(.medium))
-                .foregroundStyle(.white)
+                .foregroundStyle(Theme.Colors.foreground)
 
             // Progress bar
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 2)
-                        .fill(Color(.systemGray5))
+                        .fill(Theme.Colors.border)
                         .frame(height: 4)
 
                     RoundedRectangle(cornerRadius: 2)
@@ -87,7 +85,7 @@ private struct DomainCell: View {
 
             Text("\(questionsAttempted) questions")
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
         .padding(12)
         .background(masteryColor.opacity(0.08))
@@ -95,9 +93,9 @@ private struct DomainCell: View {
     }
 
     private var masteryColor: Color {
-        if percentage >= 70 { return .green }
+        if percentage >= 70 { return Theme.Colors.success }
         if percentage >= 50 { return .yellow }
-        return .red
+        return Theme.Colors.destructive
     }
 }
 

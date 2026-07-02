@@ -23,13 +23,13 @@ struct QuestionView: View {
                 HStack {
                     Text("Question \(questionNumber) of \(totalQuestions)")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                     Spacer()
                     Button {
                         onToggleFlag()
                     } label: {
                         Image(systemName: isFlagged ? "flag.fill" : "flag")
-                            .foregroundStyle(isFlagged ? .orange : .secondary)
+                            .foregroundStyle(isFlagged ? .orange : Theme.Colors.mutedForeground)
                     }
                 }
 
@@ -40,14 +40,14 @@ struct QuestionView: View {
                         .frame(width: 6, height: 6)
                     Text(question.difficulty.rawValue.capitalized)
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
 
                 // Stem
                 Text(question.stem)
-                    .font(.body)
-                    .foregroundStyle(.white)
-                    .lineSpacing(4)
+                    .font(Theme.Typography.question)
+                    .foregroundStyle(Theme.Colors.foreground)
+                    .lineSpacing(6)
 
                 // Choices
                 VStack(spacing: 10) {
@@ -64,15 +64,15 @@ struct QuestionView: View {
                         HStack(spacing: 6) {
                             Image(systemName: selectedChoiceId == question.correctChoiceId
                                   ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                .foregroundStyle(selectedChoiceId == question.correctChoiceId ? .green : .red)
+                                .foregroundStyle(selectedChoiceId == question.correctChoiceId ? Theme.Colors.success : Theme.Colors.destructive)
                             Text(selectedChoiceId == question.correctChoiceId ? "Correct" : "Incorrect")
                                 .font(.subheadline.bold())
-                                .foregroundStyle(selectedChoiceId == question.correctChoiceId ? .green : .red)
+                                .foregroundStyle(selectedChoiceId == question.correctChoiceId ? Theme.Colors.success : Theme.Colors.destructive)
                         }
 
                         Text(question.explanation)
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Theme.Colors.mutedForeground)
                             .lineSpacing(3)
                     }
                     .padding(.top, 4)
@@ -105,18 +105,18 @@ struct QuestionView: View {
 
                 Text(choice.text)
                     .font(.subheadline)
-                    .foregroundStyle(isStruck ? .secondary : .white)
-                    .strikethrough(isStruck, color: .secondary)
+                    .foregroundStyle(isStruck ? Theme.Colors.mutedForeground : Theme.Colors.foreground)
+                    .strikethrough(isStruck, color: Theme.Colors.mutedForeground)
                     .multilineTextAlignment(.leading)
 
                 Spacer()
 
                 if showResult && isCorrect {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.green)
+                        .foregroundStyle(Theme.Colors.success)
                 } else if showResult && isSelected && !isCorrect {
                     Image(systemName: "xmark.circle.fill")
-                        .foregroundStyle(.red)
+                        .foregroundStyle(Theme.Colors.destructive)
                 }
             }
             .padding(14)
@@ -144,31 +144,31 @@ struct QuestionView: View {
     }
 
     private func choiceLabelColor(isSelected: Bool, isCorrect: Bool) -> Color {
-        if showResult && isCorrect { return .green }
-        if showResult && isSelected && !isCorrect { return .red }
-        if isSelected { return .white }
-        return .secondary
+        if showResult && isCorrect { return Theme.Colors.success }
+        if showResult && isSelected && !isCorrect { return Theme.Colors.destructive }
+        if isSelected { return Theme.Colors.accent }
+        return Theme.Colors.mutedForeground
     }
 
     private func choiceBG(isSelected: Bool, isCorrect: Bool) -> Color {
-        if showResult && isCorrect { return .green.opacity(0.1) }
-        if showResult && isSelected && !isCorrect { return .red.opacity(0.1) }
-        if isSelected { return Color(.systemGray5) }
-        return Color(.systemGray6)
+        if showResult && isCorrect { return Theme.Colors.success.opacity(0.1) }
+        if showResult && isSelected && !isCorrect { return Theme.Colors.destructive.opacity(0.1) }
+        if isSelected { return Theme.Colors.accent.opacity(0.1) }
+        return Theme.Colors.card
     }
 
     private func choiceStroke(isSelected: Bool, isCorrect: Bool) -> Color {
-        if showResult && isCorrect { return .green.opacity(0.3) }
-        if showResult && isSelected && !isCorrect { return .red.opacity(0.3) }
-        if isSelected { return .white.opacity(0.2) }
-        return .clear
+        if showResult && isCorrect { return Theme.Colors.success.opacity(0.3) }
+        if showResult && isSelected && !isCorrect { return Theme.Colors.destructive.opacity(0.3) }
+        if isSelected { return Theme.Colors.accent.opacity(0.5) }
+        return Theme.Colors.border
     }
 
     private var difficultyColor: Color {
         switch question.difficulty {
-        case .easy: return .green
+        case .easy: return Theme.Colors.success
         case .medium: return .yellow
-        case .hard: return .red
+        case .hard: return Theme.Colors.destructive
         }
     }
 }

@@ -9,10 +9,10 @@ struct StreakCard: View {
             VStack(spacing: 4) {
                 Text("\(streak.currentStreak)")
                     .font(.system(size: 36, weight: .bold, design: .rounded))
-                    .foregroundStyle(streak.currentStreak > 0 ? .orange : .secondary)
+                    .foregroundStyle(streak.currentStreak > 0 ? Theme.Colors.coral : Theme.Colors.mutedForeground)
                 Text("day streak")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
             }
             .frame(width: 80)
 
@@ -23,7 +23,7 @@ struct StreakCard: View {
             VStack(alignment: .leading, spacing: 6) {
                 Text("Last 7 days")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
 
                 HStack(spacing: 6) {
                     ForEach(0..<7, id: \.self) { daysAgo in
@@ -31,7 +31,7 @@ struct StreakCard: View {
                         let studied = streak.studyDates.contains { Calendar.current.isDate($0, inSameDayAs: date) }
 
                         Circle()
-                            .fill(studied ? Color.orange : Color(.systemGray5))
+                            .fill(studied ? Theme.Colors.coral : Theme.Colors.border)
                             .frame(width: 12, height: 12)
                     }
                 }
@@ -39,15 +39,13 @@ struct StreakCard: View {
                 if streak.longestStreak > 0 {
                     Text("Best: \(streak.longestStreak) days")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
             }
 
             Spacer()
         }
-        .padding()
-        .background(Color(.systemGray6))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .themedCard()
     }
 }
 

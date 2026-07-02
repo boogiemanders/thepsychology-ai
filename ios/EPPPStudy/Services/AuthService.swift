@@ -120,6 +120,13 @@ final class AuthService: @unchecked Sendable {
         return token
     }
 
+    /// Both tokens, for injecting the session into first-party webviews.
+    /// Returns nil when signed out so callers can skip injection entirely.
+    func currentTokensForWebView() -> (accessToken: String, refreshToken: String)? {
+        guard let accessToken, let refreshToken else { return nil }
+        return (accessToken, refreshToken)
+    }
+
     // MARK: - Session Management
 
     private func saveSession(_ response: AuthTokenResponse) {

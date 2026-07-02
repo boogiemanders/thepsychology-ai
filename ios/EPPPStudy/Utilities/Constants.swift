@@ -11,8 +11,9 @@ enum Constants {
     static let keychainService = "ai.thepsychology.eppp"
     static let bundleID = "ai.thepsychology.eppp"
 
-    static let supabaseURL = "https://your-project.supabase.co"
-    static let supabaseAnonKey = "" // Set via build config, never hardcode
+    static let supabaseURL = "https://hwkuxietvwvbgdowxzkw.supabase.co"
+    // Public anon key — same value the website ships to every browser. RLS is the security boundary.
+    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3a3V4aWV0dnd2Ymdkb3d4emt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI4OTM1NTMsImV4cCI6MjA3ODQ2OTU1M30.ElDXc-JBYORsA4MGZ53y0NZfgGh9tpa81Yax9fENT6U"
 
     enum Keychain {
         static let accessToken = "access_token"

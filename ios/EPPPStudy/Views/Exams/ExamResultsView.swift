@@ -14,11 +14,11 @@ struct ExamResultsView: View {
 
                     Text("\(result.correctCount) of \(result.totalQuestions) correct")
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
 
                     Text(scoreLabel)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.Colors.mutedForeground)
                 }
                 .padding(.top, 16)
 
@@ -30,24 +30,20 @@ struct ExamResultsView: View {
                     Divider().frame(height: 32)
                     statItem(label: "Avg/Q", value: "\(result.totalTimeSeconds / max(result.totalQuestions, 1))s")
                 }
-                .padding()
-                .background(Color(.systemGray6))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .themedCard()
 
                 // Domain Breakdown
                 if !result.domainScores.isEmpty {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Domain Breakdown")
                             .font(.headline)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(Theme.Colors.foreground)
 
                         ForEach(result.domainScores.sorted(by: { $0.percentage < $1.percentage })) { score in
                             domainRow(score)
                         }
                     }
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .themedCard()
                 }
 
                 // Weak Areas
@@ -58,23 +54,21 @@ struct ExamResultsView: View {
                                 .foregroundStyle(.orange)
                             Text("Focus Areas")
                                 .font(.headline)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(Theme.Colors.foreground)
                         }
 
                         ForEach(result.weakAreas, id: \.self) { area in
                             HStack(spacing: 8) {
                                 Circle()
-                                    .fill(Color.red.opacity(0.7))
+                                    .fill(Theme.Colors.destructive.opacity(0.7))
                                     .frame(width: 6, height: 6)
                                 Text(area)
                                     .font(.subheadline)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(Theme.Colors.mutedForeground)
                             }
                         }
                     }
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .themedCard()
                 }
 
                 // Recommended Lessons
@@ -82,34 +76,33 @@ struct ExamResultsView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         HStack(spacing: 8) {
                             Image(systemName: "arrow.down.circle")
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(Theme.Colors.link)
                             Text("Recommended Study")
                                 .font(.headline)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(Theme.Colors.foreground)
                         }
 
                         Text("Lessons for your weak areas are being downloaded for offline study.")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Theme.Colors.mutedForeground)
 
                         ForEach(result.recommendedLessons.prefix(5), id: \.self) { slug in
                             HStack(spacing: 8) {
                                 Image(systemName: "book.closed")
                                     .font(.caption)
-                                    .foregroundStyle(.blue.opacity(0.7))
+                                    .foregroundStyle(Theme.Colors.link.opacity(0.7))
                                 Text(slug.replacingOccurrences(of: "-", with: " ").capitalized)
                                     .font(.subheadline)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(Theme.Colors.mutedForeground)
                             }
                         }
                     }
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .themedCard()
                 }
             }
             .padding()
         }
+        .background(Theme.Colors.background.ignoresSafeArea())
         .navigationTitle("Results")
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -118,10 +111,10 @@ struct ExamResultsView: View {
         VStack(spacing: 4) {
             Text(value)
                 .font(.subheadline.bold().monospacedDigit())
-                .foregroundStyle(.white)
+                .foregroundStyle(Theme.Colors.foreground)
             Text(label)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.Colors.mutedForeground)
         }
         .frame(maxWidth: .infinity)
     }
@@ -131,12 +124,12 @@ struct ExamResultsView: View {
             HStack {
                 Text(score.domain)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                     .lineLimit(1)
                 Spacer()
                 Text("\(score.correct)/\(score.total)")
                     .font(.caption.monospacedDigit())
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.Colors.mutedForeground)
                 Text("\(Int(score.percentage * 100))%")
                     .font(.caption.bold().monospacedDigit())
                     .foregroundStyle(domainColor(score.percentage))
@@ -146,7 +139,7 @@ struct ExamResultsView: View {
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 2)
-                        .fill(Color(.systemGray5))
+                        .fill(Theme.Colors.border)
                         .frame(height: 4)
                     RoundedRectangle(cornerRadius: 2)
                         .fill(domainColor(score.percentage))
@@ -158,9 +151,9 @@ struct ExamResultsView: View {
     }
 
     private var scoreColor: Color {
-        if result.score >= 0.7 { return .green }
+        if result.score >= 0.7 { return Theme.Colors.success }
         if result.score >= 0.5 { return .yellow }
-        return .red
+        return Theme.Colors.destructive
     }
 
     private var scoreLabel: String {
@@ -171,9 +164,9 @@ struct ExamResultsView: View {
     }
 
     private func domainColor(_ percentage: Double) -> Color {
-        if percentage >= 0.7 { return .green }
+        if percentage >= 0.7 { return Theme.Colors.success }
         if percentage >= 0.5 { return .yellow }
-        return .red
+        return Theme.Colors.destructive
     }
 
     private func formatTime(_ seconds: Int) -> String {
