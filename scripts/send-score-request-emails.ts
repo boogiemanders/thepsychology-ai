@@ -13,9 +13,11 @@
  * this pool never gave a name), we guess a first name from the email address, HIGH CONFIDENCE ONLY:
  *   - "meagan.krieger@..."  -> first token is a known name  -> "Meagan"
  *   - "lorin9494@gmail.com" -> whole token (digits stripped) is a known name -> "Lorin"
+ *   - "drwendybaker@..." / "dr.roldan@..." -> "dr" prefix -> "Dr. Wendy" / "Dr. Roldan" (clinician audience)
  *   - "coolgirl22 / jsmith / send2mollyc" -> not a whole/first-token name -> no guess -> "there"
- * No prefix-matching (that produced junk like send2molly -> "Sen"). A wrong name is worse than none,
- * so everything uncertain falls back to "there". Dictionary: scripts/data/first-names.txt (~33k names).
+ * No general prefix-matching (that produced junk like send2molly -> "Sen"); the ONLY prefix split is
+ * behind a "dr" anchor, which reliably marks a person's name. A wrong name is worse than none, so
+ * everything uncertain falls back to "there". Dictionary: scripts/data/first-names.txt (~33k names).
  *
  * Usage (run from repo root):
  *   npx tsx scripts/send-score-request-emails.ts --preview          # render the email to a file; no DB, no send
@@ -100,28 +102,52 @@ const NAMES: Set<string> = (() => {
 const titleCase = (s: string) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
 const stripEdgeDigits = (s: string) => s.replace(/^\d+|\d+$/g, '')
 
-// High-confidence only: a separated first token that is a known name, or a single token that is
-// wholly a known name once edge digits are stripped. Anything else returns null (no guess).
-function guessNameFromEmail(email: string): string | null {
+type Guess = { name: string; doctor: boolean }
+
+// High-confidence only. Returns null unless we're confident. Doctor detection is deliberate:
+// clinical users often email as dr<name> / dr.<name>, so "dr" is a strong "this is a person" anchor.
+function guessNameFromEmail(email: string): Guess | null {
   const local = (email.split('@')[0] || '').toLowerCase().replace(/\+.*$/, '')
   const tokens = local.split(/[._-]/).filter(Boolean)
-  if (tokens.length >= 2) {
-    const t = stripEdgeDigits(tokens[0])
-    return t.length >= 3 && NAMES.has(t) ? titleCase(t) : null
+  const first = stripEdgeDigits(tokens[0] || '')
+
+  // A) explicit title token: "dr.sarah" / "dr_chan" / "dr-harutyunian". The separator confirms
+  //    the next token is the person's name (first OR last) -> "Dr. X".
+  if (tokens.length >= 2 && first === 'dr') {
+    const t = stripEdgeDigits(tokens[1])
+    return /^[a-z]{2,}$/.test(t) ? { name: titleCase(t), doctor: true } : null
   }
-  const t = stripEdgeDigits(local)
-  return t.length >= 3 && NAMES.has(t) ? titleCase(t) : null
+
+  // B) token is itself a known name -> plain name. Checked BEFORE the glued-dr rule so "drew",
+  //    "drake" resolve to the name, not "Dr. ew". Covers single-token and first-of-many.
+  if (first.length >= 3 && NAMES.has(first)) return { name: titleCase(first), doctor: false }
+
+  // C) glued "dr" + firstname + lastname, no separator: "drsarahhill24" -> "Dr. Sarah". Require a
+  //    trailing lastname (>=2 chars after the name) so English words don't match: "drama"/"dream"/
+  //    "drive"/"driver" leave no valid name+lastname split and fall through to no-guess.
+  if (first.startsWith('dr') && first.length >= 6) {
+    const rem = first.slice(2)
+    for (let i = Math.min(rem.length - 2, 12); i >= 3; i--) {
+      if (NAMES.has(rem.slice(0, i))) return { name: titleCase(rem.slice(0, i)), doctor: true }
+    }
+  }
+  return null
 }
 
 type NameSource = 'profile' | 'guess' | 'fallback'
 function resolveGreeting(fullName: string | null, email: string): { name: string; source: NameSource } {
   const fn = (fullName || '').trim()
   if (fn) {
-    const first = fn.split(/\s+/)[0].replace(/[^a-zA-Z]/g, '')
-    if (first.length >= 2) return { name: titleCase(first), source: 'profile' }
+    const parts = fn.split(/\s+/).map((p) => p.replace(/[^a-zA-Z]/g, '')).filter(Boolean)
+    if (parts.length) {
+      // Profile name may itself carry a title, e.g. "Dr. Sarah Hill" -> greet "Dr. Sarah".
+      const doctor = /^drs?$/i.test(parts[0])
+      const nameTok = (doctor ? parts[1] : parts[0]) || parts[0]
+      if (nameTok && nameTok.length >= 2) return { name: (doctor ? 'Dr. ' : '') + titleCase(nameTok), source: 'profile' }
+    }
   }
   const guess = guessNameFromEmail(email)
-  if (guess) return { name: guess, source: 'guess' }
+  if (guess) return { name: (guess.doctor ? 'Dr. ' : '') + guess.name, source: 'guess' }
   return { name: 'there', source: 'fallback' }
 }
 
@@ -186,7 +212,7 @@ async function main() {
   // Preview: render the email to a file and sanity-check it. No DB, no network.
   if (isPreview) {
     console.log('Preview mode — rendering the email (no DB, no sends).\n')
-    for (const [label, name] of [['profile', 'Jordan'], ['guess', 'Lorin'], ['fallback', 'there']] as const) {
+    for (const [label, name] of [['profile', 'Jordan'], ['guess', 'Lorin'], ['doctor', 'Dr. Wendy'], ['fallback', 'there']] as const) {
       const html = renderHtml(name, 'preview@example.com')
       const path = join(tmpdir(), `score-request-${label}.html`)
       writeFileSync(path, html)
