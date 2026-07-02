@@ -29,6 +29,19 @@ settings:
     ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_EXTENSIONS: YES
 
 # =============================================================================
+# Schemes — so Xcode has something selected on open (no more "No Scheme")
+# =============================================================================
+schemes:
+  EPPPStudy:
+    build:
+      targets:
+        EPPPStudy: all
+    run:
+      config: Debug
+    archive:
+      config: Release
+
+# =============================================================================
 # Targets
 # =============================================================================
 targets:
