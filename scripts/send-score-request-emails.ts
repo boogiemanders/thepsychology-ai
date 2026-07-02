@@ -13,9 +13,9 @@
  *
  * Requires: RESEND_API_KEY, NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, UNSUBSCRIBE_SECRET
  *
- * Recipients: free + (had-trial OR ex-stripe) + not deleted, MINUS suppressed, already-reported, and
- * anyone who already received ANY resurrection email (win-back or score-request) — the founder's
- * "no more than 1 email per person, ever" rule. Tracked via funnel_events 'score_request_sent'.
+ * Recipients: free + (had-trial OR ex-stripe) + not deleted, MINUS suppressed, already-reported,
+ * anyone already sent THIS campaign, and anyone who got any campaign email TODAY (founder's "1 email
+ * per person per day" cap). Tracked via funnel_events 'score_request_sent'.
  */
 
 import { createClient } from '@supabase/supabase-js'
@@ -95,7 +95,7 @@ async function main() {
   const r = await runScoreRequestBatch({ supabase, limit: LIMIT, dryRun: isDryRun })
 
   console.log(`Candidate pool (free + had-trial-or-stripe + not deleted): ${r.pool}`)
-  console.log(`Eligible recipients (after 1-per-person cap + reported + suppressed): ${r.eligible}`)
+  console.log(`Eligible recipients (after 1/day cap + already-sent + reported + suppressed): ${r.eligible}`)
   console.log(`  variant A: ${r.byVariant.A}   B: ${r.byVariant.B}   C: ${r.byVariant.C}`)
   console.log(`  greeting from profile: ${r.nameSrc.profile}   guessed from email: ${r.nameSrc.guess}   generic "there": ${r.nameSrc.fallback}`)
   console.log('Skipped:')

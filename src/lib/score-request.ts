@@ -194,11 +194,12 @@ export function renderHtml(firstName: string, email: string, v: ScoreVariant): s
   </div>`
 }
 
-// "No more than 1 email from me ever" (founder rule): a person is off-limits for the score-request
-// if they've received ANY prior resurrection campaign. Win-back already emailed ~222 of this pool,
-// so this deliberately shrinks the score-request to people win-back never reached + future churners.
-// Extend this list when new one-per-person campaigns are added.
-export const PRIOR_CAMPAIGN_EVENTS = ['winback_sent', 'score_request_sent']
+// Founder rule: no more than 1 email per person PER DAY. Not a lifetime cap — someone who got the
+// win-back weeks ago is fine to email now, we just never send two campaign emails to the same person
+// on the same day. So the drip skips anyone who received ANY campaign email TODAY. (The score-request
+// itself is still once-per-person via the score_request_sent idempotency below — we don't re-ask the
+// same "how did it go?" twice.) Extend this list when new campaigns are added.
+export const CAMPAIGN_SEND_EVENTS = ['winback_sent', 'score_request_sent']
 
 export type Skip = { email: string; reason: string }
 export type BatchResult = {
@@ -237,15 +238,20 @@ export async function runScoreRequestBatch(opts: {
     .or('trial_ends_at.not.is.null,stripe_customer_id.not.is.null')
   if (error) throw new Error(`pool query failed: ${error.message}`)
 
-  // 2) Suppressions, 3) already-reported, 4) 1-email-ever cap (any prior resurrection campaign).
-  const [{ data: supp }, { data: reported }, { data: priorSent }] = await Promise.all([
+  // 2) Suppressions, 3) already-reported, 4) already got THIS campaign (idempotency), 5) got ANY
+  //    campaign email today (1-per-day cap).
+  const todayStart = new Date()
+  todayStart.setUTCHours(0, 0, 0, 0)
+  const [{ data: supp }, { data: reported }, { data: sentThis }, { data: sentToday }] = await Promise.all([
     supabase.from('dct_suppressions').select('email'),
     supabase.from('eppp_exam_results').select('user_id'),
-    supabase.from('funnel_events').select('user_id').in('event_name', PRIOR_CAMPAIGN_EVENTS),
+    supabase.from('funnel_events').select('user_id').eq('event_name', 'score_request_sent'),
+    supabase.from('funnel_events').select('user_id').in('event_name', CAMPAIGN_SEND_EVENTS).gte('created_at', todayStart.toISOString()),
   ])
   const suppressed = new Set((supp || []).map((s: { email: string }) => (s.email || '').toLowerCase()))
   const alreadyReported = new Set((reported || []).map((r: { user_id: string }) => r.user_id))
-  const alreadyEmailed = new Set((priorSent || []).map((r: { user_id: string }) => r.user_id))
+  const alreadySent = new Set((sentThis || []).map((r: { user_id: string }) => r.user_id))
+  const emailedToday = new Set((sentToday || []).map((r: { user_id: string }) => r.user_id))
 
   // 5) Filter + classify.
   const recipients: { id: string; email: string; full_name: string | null; variant: ScoreVariant }[] = []
@@ -259,7 +265,8 @@ export async function runScoreRequestBatch(opts: {
     if (name && SKIP_NAME_SUBSTRINGS.some((s) => name.includes(s))) { skips.push({ email, reason: 'excluded (name match)' }); continue }
     if (suppressed.has(lc)) { skips.push({ email, reason: 'suppressed (unsubscribed)' }); continue }
     if (alreadyReported.has(u.id)) { skips.push({ email, reason: 'already-reported' }); continue }
-    if (alreadyEmailed.has(u.id)) { skips.push({ email, reason: 'already-emailed (1-per-person cap)' }); continue }
+    if (alreadySent.has(u.id)) { skips.push({ email, reason: 'already-sent this campaign (idempotent)' }); continue }
+    if (emailedToday.has(u.id)) { skips.push({ email, reason: 'emailed-today (1/day cap)' }); continue }
     recipients.push({ id: u.id, email, full_name: u.full_name, variant: pickVariant(email) })
   }
 
