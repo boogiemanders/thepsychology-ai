@@ -22,6 +22,8 @@ assert.equal(lib.owedWindow('2026-06-30', now), null) // up to date
 assert.equal(lib.owedWindow('2026-07-05', now), null) // future-safe
 assert.deepEqual(lib.owedWindow('2026-06-29', now, '2026-06-29'), { start: '2026-06-30', end: '2026-06-30' }) // floor beats overlap
 assert.deepEqual(lib.owedWindow('2026-06-29', now, '2026-06-27'), { start: '2026-06-28', end: '2026-06-30' }) // floor earlier than overlap, overlap wins
+assert.equal(lib.owedWindow('2026-06-01', now, '2026-06-30'), null) // floor consumes the whole window
+assert.equal(lib.owedWindow('2026-06-01', now, '2026-07-03'), null) // floor beyond yesterday, never inverted
 
 // ---- hashRow / filterUnsent ----
 const rowA = ['Ann', 'Smith', 'ann@example.com', '(555) 555-0100', 'Gregory Inzinna', '1428233', 'Manhattan', '06/30/2026', 'Show']

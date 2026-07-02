@@ -129,5 +129,5 @@ CSV is built in memory and posted directly to rater8; never written to disk by t
 ## Rollout
 
 1. PR into `main`, rebuild `dist/`, founder re-copies to `~/Desktop/sp-client-reach-plugin` and reloads at `chrome://extensions`.
-2. Founder pastes Slack webhook (a #rater8 channel webhook, or an existing ops one) into settings.
-3. Supervised "Upload now" run, verify in rater8 dashboard, enable the toggle.
+2. Founder pastes the Slack webhook into settings, ticks "Auto-upload to rater8 daily", and hits Save (this seeds the ledger and the re-scan floor to yesterday). Enable BEFORE the first supervised run, never after.
+3. Next morning: supervised "Upload to rater8 now" run, verify the file in the rater8 dashboard, then leave the alarm and ride-along to it.

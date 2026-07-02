@@ -52,6 +52,7 @@ export function owedWindow(
     notBeforeStart.setDate(notBeforeStart.getDate() + 1)
     if (start.getTime() < notBeforeStart.getTime()) start = notBeforeStart
   }
+  if (start.getTime() > yesterday.getTime()) return null
   if (start.getTime() < floor.getTime()) start = floor
   return { start: isoDate(start), end: isoDate(yesterday) }
 }
