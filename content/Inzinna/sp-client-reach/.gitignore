@@ -1,3 +1,4 @@
 node_modules/
 test/.merge.bundle.mjs
 dist/**/*.map
+test/.rater8-upload.bundle.mjs
