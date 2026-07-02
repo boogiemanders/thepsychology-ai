@@ -139,16 +139,20 @@ export default function DashboardPage() {
   const [isExamResultOpen, setIsExamResultOpen] = useState(false)
   const [existingExamResult, setExistingExamResult] = useState<any>(null)
 
-  // Win-back email CTA (/passed -> /dashboard?share=passed) drops them straight into the
-  // result/testimonial modal (no extra "Report My Score" click) and logs the open in Supabase so
-  // the share funnel (opened -> testimonial submitted) is queryable per variant alongside GA4.
+  // Resurrection email CTAs drop the user straight into the score/testimonial modal (no extra
+  // "Report My Score" click) and log the open in Supabase so the share funnel (opened -> submitted)
+  // is queryable per campaign alongside GA4. Two entry points, one form (it forks on pass/fail):
+  //   share=passed  -> win-back "share your story" + score-request "I passed the EPPP"
+  //   share=result  -> score-request "I'm still working on it" (not-passed / still-studying branch)
   useEffect(() => {
     if (typeof window === 'undefined') return
     const params = new URLSearchParams(window.location.search)
-    if (params.get('share') !== 'passed') return
+    const share = params.get('share')
+    if (share !== 'passed' && share !== 'result') return
     setIsExamResultOpen(true)
     if (user?.id) {
-      trackFunnelEvent(user.id, 'winback_share_opened', { utm_campaign: params.get('utm_campaign') })
+      const event = share === 'passed' ? 'winback_share_opened' : 'score_request_opened'
+      trackFunnelEvent(user.id, event, { utm_campaign: params.get('utm_campaign') })
     }
   }, [user?.id])
   const { startCheckout, checkoutLoading } = useStripeCheckout()
