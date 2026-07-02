@@ -892,7 +892,17 @@ And register it plus the last-run display inside `init()` (next to the other but
   }
 ```
 
-- [ ] **Step 5: Verify compile + build + tests**
+- [ ] **Step 5: Deduplicate reportUrls**
+
+`src/lib/rater8-upload.ts` (Task 1) now owns the SP report URLs. In `src/app/app.ts`, delete the local `reportUrls` function and add `reportUrls` to the imports:
+
+```ts
+import { reportUrls } from '../lib/rater8-upload'
+```
+
+(`pullFromSp` keeps calling `reportUrls(startsAt, endsAt)` unchanged.)
+
+- [ ] **Step 6: Verify compile + build + tests**
 
 Run: `npx tsc --noEmit`
 Expected: clean.
@@ -903,7 +913,7 @@ Expected: `Build complete.`
 Run: `npm test`
 Expected: both scripts pass.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 7: Commit**
 
 ```bash
 git add src/app/app.html src/app/app.ts
